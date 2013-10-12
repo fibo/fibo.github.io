@@ -1,0 +1,14 @@
+
+#dflow-demo {
+  width: 960px;
+  height: 500px;
+}
+
+.dflow-edge {
+  stroke: gray;
+  stroke-width: 5;
+}
+
+.vvvv-node-label {
+  font-size: 10px;
+}
