@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html ng-app>
-  <head>
-    <link rel="stylesheet" type="text/css" href="dflow-view.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="/dflow-ng-controllers.js"></script>
-    <script src="/dflow-svg-drag.js"></script>
-  </head>
-  <body>
-    <div ng-controller="Graph">
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-       <g class="vvvv-node"
-          ng-repeat="node in nodes"
-          id="vvvv-node-{{node.id}}"
-          onmousedown="selectElement(evt)"
-          transform="translate({{node.x}},{{node.y}})"
-       >
-         <rect class="vvvv-node-background" height="18" width="84" fill="#cdcdcd"></rect>
-         <rect class="vvvv-node-pinbar" height="4" fill="#9a9a9a" width="84"></rect>
-         <rect class="vvvv-node-pinbar" y="14" height="4" fill="#9a9a9a" width="84"></rect>
-         <text class="vvvv-node-descriptive-name" shape-rendering="crispEdges" dy="30" font-size="10" font-family="Lucida Sans Unicode"></text>
-	 <text class="vvvv-node-label" shape-rendering="crispEdges" dy="12" dx="4" font-family="Lucida Sans Unicode">{{node.label}}</text>
-         <g class="vvvv-input-pin"
-            ng-repeat="inputPin in node.inputPins"
-            transform="translate({{inputPin.x}}, {{inputPin.y}})"
-            transform="translate(0, 0)"
-          >
-           <rect width="4" height="4" fill="#666666"></rect>
-          </g>
-         <g class="vvvv-output-pin"
-            ng-repeat="outputPin in node.outputPins"
-            transform="translate({{outputPin.x}}, {{outputPin.y}})"
-         >
-           <rect width="4" height="4" fill="#666666"></rect>
-         </g>
-       </g>
-      </svg>
-    </div>
-  </body>
+<html>
+ <head>
+ </head>
+ <body>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <a xlink:href="http://blog.g14n.info">
+    <rect x="10" y="10" width="60" height="30" rx="10" ry="10" style="fill:lightgrey"/>
+    <text x="30" y="30" font-size="12">Blog</text>
+   </a>
+
+   <a xlink:href="http://github.com/fibo">
+    <rect x="20" y="50" width="80" height="30" rx="10" ry="10" style="fill:lightgrey"/>
+    <text x="40" y="70" font-size="12">GitHub</text>
+   </a>
+
+   <a xlink:href="http://vvvv.org/users/fibo">
+    <rect x="150" y="30" width="70" height="30" rx="10" ry="10" style="fill:lightgrey"/>
+    <text x="170" y="50" font-size="12">VVVV</text>
+   </a>
+  </svg>
+
+  <!-- Start of Google Analytics tracking code -->
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12635045-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  <!-- End of Google Analytics tracking code -->
+
+ </body>
 </html>
