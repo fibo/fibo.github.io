@@ -16,8 +16,8 @@
 </head>
 <body>
   <div class="container">
-     <div class="page">
-       <div class="header">
+     <div class="row">
+       <!-- div class="header">
          <% if (hasTitle) { %>
          <% var section = sections.shift(); %>
          <%= section.docsHtml %>
@@ -30,44 +30,47 @@
 
          <% } %>
 
-         <% if (sources.length > 1) { %>
+       </div -->
 
-         <div class="toc">
-           <h3>Table of Contents</h3>
-           <ol>
+       <div class="col-md-3">
+         <h3>Table of Contents</h3>
+         <ol>
 
-             <% for (var i=0, l = sources.length; i < l; i++) { %>
-               <% var source = sources[i]; %>
-               <% var sourceName = path.basename(source, '.js') %>
-               <% if (sourceName === 'index') continue; %>
+           <% for (var i=0, l = sources.length; i < l; i++) { %>
+             <% var source = sources[i]; %>
+             <% var sourceName = path.basename(source, '.js') %>
+             <% /* Do not display index */ %>
+             <% if (sourceName === 'index') continue; %>
 
-             <li>
-               <a class="source" href="<%= path.basename(destination(source)) %>">
+           <li>
+             <a class="source" href="<%= path.basename(destination(source)) %>">
 
-                 <%= sourceName %>
+               <%= sourceName %>
 
-               </a>
-             </li>
+             </a>
+           </li>
 
-             <% } %>
+           <% } %>
 
-           </ol>
-         </div>
+         </ol>
+       </div>
 
+
+       <div class="col-md-9">
+
+         <% for (var i = 0, l = sections.length; i<l; i++) { %>
+           <% var section = sections[i]; %>
+           <%= section.docsHtml %>
+           <% if (!(/^\s*$/).test(section.codeText)) { %>
+             <%= section.codeHtml %>
+           <% } %>
          <% } %>
 
-        </div>
+       </div>
 
-      <% for (var i = 0, l = sections.length; i<l; i++) { %>
-        <% var section = sections[i]; %>
-        <%= section.docsHtml %>
-        <% if (!(/^\s*$/).test(section.codeText)) { %>
-          <%= section.codeHtml %>
-        <% } %>
-      <% } %>
+     </div> <!-- div class="row" -->
 
-     </div>
-   </div>
+  </div> <!-- div class="container" -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://code.jquery.com/jquery.js"></script>
