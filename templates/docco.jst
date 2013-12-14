@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title><%= title %></title>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <div class="container">
+     <div class="page">
+       <div class="header">
+         <% if (hasTitle) { %>
+         <% var section = sections.shift(); %>
+         <%= section.docsHtml %>
+         <% if (!(/^\s*$/).test(section.codeText)) { %>
+         <%= section.codeHtml %>
+         <% } %>
+         <% } else { %>
+
+         <h1><%= title %></h1>
+
+         <% } %>
+
+         <% if (sources.length > 1) { %>
+
+         <div class="toc">
+           <h3>Table of Contents</h3>
+           <ol>
+
+             <% for (var i=0, l = sources.length; i < l; i++) { %>
+               <% var source = sources[i]; %>
+               <% var sourceName = path.basename(source, '.js') %>
+               <% if (sourceName === 'index') continue; %>
+
+             <li>
+               <a class="source" href="<%= path.basename(destination(source)) %>">
+
+                 <%= sourceName %>
+
+               </a>
+             </li>
+
+             <% } %>
+
+           </ol>
+         </div>
+
+         <% } %>
+
+        </div>
+
+      <% for (var i = 0, l = sections.length; i<l; i++) { %>
+        <% var section = sections[i]; %>
+        <%= section.docsHtml %>
+        <% if (!(/^\s*$/).test(section.codeText)) { %>
+          <%= section.codeHtml %>
+        <% } %>
+      <% } %>
+
+     </div>
+   </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+  <!-- Start of Google Analytics tracking code -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12635045-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- End of Google Analytics tracking code -->
+
+</body>
+</html>
