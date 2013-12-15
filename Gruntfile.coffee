@@ -23,11 +23,19 @@ module.exports = (grunt) ->
       index:
         path: 'http://localhost:3000'
         app: 'chrome'
+    concat:
+      templates:
+        'templates/classes.jst': [
+          'templates/_includes/header.jst',
+          'templates/_partials/classes.jst',
+          'templates/_includes/footer.jst'
+        ]
 
+  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-open'
 
-  grunt.registerTask 'default', ['connect', 'open', 'watch']
+  grunt.registerTask 'default', ['concat', 'connect', 'open', 'watch']
 
 
