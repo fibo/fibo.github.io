@@ -25,11 +25,22 @@ module.exports = (grunt) ->
         app: 'chrome'
     concat:
       templates:
-        'templates/classes.jst': [
-          'templates/_includes/header.jst',
-          'templates/_partials/classes.jst',
-          'templates/_includes/footer.jst'
-        ]
+        files:
+          'templates/classes.jst': [
+            'templates/_includes/header.jst',
+            'templates/_partials/classes.jst',
+            'templates/_includes/footer.jst'
+          ],
+          'templates/examples.jst': [
+            'templates/_includes/header.jst',
+            'templates/_partials/examples.jst',
+            'templates/_includes/footer.jst'
+          ]
+          'templates/index.jst': [
+            'templates/_includes/header.jst',
+            'templates/_partials/index.jst',
+            'templates/_includes/footer.jst'
+          ]
 
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-connect'
