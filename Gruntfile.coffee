@@ -28,16 +28,19 @@ module.exports = (grunt) ->
         files:
           'templates/classes.jst': [
             'templates/_includes/header.jst',
+            'templates/_includes/navbar2.jst',
             'templates/_partials/classes.jst',
             'templates/_includes/footer.jst'
           ],
           'templates/examples.jst': [
             'templates/_includes/header.jst',
+            'templates/_includes/navbar2.jst',
             'templates/_partials/examples.jst',
             'templates/_includes/footer.jst'
           ]
           'templates/index.jst': [
             'templates/_includes/header.jst',
+            'templates/_includes/navbar1.jst',
             'templates/_partials/index.jst',
             'templates/_includes/footer.jst'
           ]
@@ -48,5 +51,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-open'
 
   grunt.registerTask 'default', ['concat', 'connect', 'open', 'watch']
-
 
