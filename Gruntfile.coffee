@@ -4,11 +4,15 @@ livereloadPort = 35729
 module.exports = (grunt) ->
   grunt.initConfig
     watch:
+      Gruntfile:
+        files: ['Gruntfile.coffee']
+        tasks: 'watch'
+
       index:
         files: ['index.html']
         tasks: []
         options:
-          livereload: 35729
+          livereload: livereloadPort
       js:
         files: ['js/*.js']
         tasks: []
@@ -45,10 +49,8 @@ module.exports = (grunt) ->
             'templates/_includes/footer.jst'
           ]
 
-  grunt.loadNpmTasks 'grunt-contrib-concat'
-  grunt.loadNpmTasks 'grunt-contrib-connect'
-  grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-open'
+  # autoload grunt npmTasks
+  grunt.loadNpmTasks npmTask for npmTask in require('matchdep').filterDev('grunt-*')
 
   grunt.registerTask 'default', ['concat', 'connect', 'open', 'watch']
 
