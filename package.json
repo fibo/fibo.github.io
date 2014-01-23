@@ -4,13 +4,9 @@
   "version": "0.0.0",
   "description": "My personal site",
   "main": "index.js",
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-open": "~0.2.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.5.0",
     "matchdep": "~0.3.0",
@@ -25,7 +21,8 @@
     "url": "git://github.com/fibo/fibo.github.io.git"
   },
   "author": "fibo",
-  "license": "MIT",
-  "gitHead": "b05db3fdfd399032e6a78c295436dc6be24b0fd4",
-  "readmeFilename": "README.md"
+  "license": [ {
+    "type": "MIT",
+    "url": "http://fibo.mit-license.org/"
+  } ]
 }
