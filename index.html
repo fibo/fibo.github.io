@@ -4,26 +4,54 @@
  </head>
  <body>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <style type="text/css"><![CDATA[
+    rect {
+      fill: none;
+      stroke: black;
+    }
+
+    text {
+     font-size: 24px;
+     text-anchor: start;
+     fill: gray;
+    }
+
+   ]]></style>
+
    <a xlink:href="http://blog.g14n.info">
-    <rect x="10" y="10" width="60" height="30" rx="10" ry="10" style="fill:lightgrey"/>
-    <text x="30" y="30" font-size="12">Blog</text>
+    <g transform="translate(80,240)">
+     <rect x="-20" y="-22" width="85" height="30" rx="5" ry="5"/>
+     <text>Blog</text>
+    </g>
    </a>
 
-   <image xlink:href="http://gravatar.com/avatar/e8b1967a7daac7e79352cd9447567e09" x="100" y="100" height="50px" width="50px"/>
+   <image xlink:href="http://gravatar.com/avatar/e8b1967a7daac7e79352cd9447567e09" x="100" y="100" height="80px" width="80px"/>
 
    <a xlink:href="http://github.com/fibo">
-    <rect x="20" y="50" width="80" height="30" rx="10" ry="10" style="fill:lightgrey"/>
-    <text x="40" y="70" font-size="12">GitHub</text>
+    <g transform="translate(40,70)">
+     <rect x="-20" y="-22" width="110" height="30" rx="5" ry="5"/>
+     <text>GitHub</text>
+    </g>
    </a>
 
    <a xlink:href="http://vvvv.org/users/fibo">
-    <rect x="150" y="30" width="70" height="30" rx="10" ry="10" style="fill:lightgrey"/>
-    <text x="170" y="50" font-size="12">VVVV</text>
+    <g transform="translate(170,50)">
+     <rect x="-20" y="-22" width="100" height="30" rx="5" ry="5"/>
+     <text>VVVV</text>
+    </g>
    </a>
 
    <a xlink:href="http://www.linkedin.com/in/gianlucacasati">
-    <rect x="250" y="130" width="117" height="30" rx="10" ry="10" style="fill:lightgrey"/>
-    <text x="270" y="150" font-size="12">Linkedin</text>
+    <g transform="translate(270,150)">
+     <rect x="-20" y="-22" width="125" height="30" rx="5" ry="5"/>
+    <text>Linkedin</text>
+    </g>
+   </a>
+
+   <a xlink:href="https://npmjs.org/~fibo">
+    <g transform="translate(260,170)">
+     <image xlink:href="https://npmjs.org/static/npm.png" height="200px" width="78px"/>
+    </g>
    </a>
   </svg>
 
