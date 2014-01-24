@@ -26,7 +26,7 @@ blog.translate(40, 140)
 
 // github
 
-draw.link('https://npmjs.org/~fibo')
+draw.link('https://github.com/fibo')
     .image('https://github.global.ssl.fastly.net/images/modules/contact/heartocat.png', 115, 115)
     .move(25,25)
 
