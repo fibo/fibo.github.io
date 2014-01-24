@@ -1,86 +1,27 @@
 <!DOCTYPE html>
 <html>
- <head>
- </head>
- <body>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <style type="text/css"><![CDATA[
-      rect {
-        fill: none;
-        stroke: black;
-      }
+  <head>
+    <script src="/js/svg-v0.35.min.js"></script>
+  </head>
+  <body>
+    <div id="mind-map"></div>
 
-      text {
-        font-size: 24px;
-        text-anchor: start;
-        fill: gray;
-      }
+    <script src="/js/draw-mind-map.js"></script>
 
-    ]]></style>
+    <!-- Start of Google Analytics tracking code -->
+    <script type="text/javascript">
 
-    <a xlink:href="http://blog.g14n.info">
-      <g transform="translate(80,240)">
-        <rect x="-20" y="-22" width="85" height="30" rx="5" ry="5"/>
-        <text>Blog</text>
-      </g>
-    </a>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12635045-12']);
+    _gaq.push(['_trackPageview']);
 
-    <image
-      xlink:href="http://gravatar.com/avatar/e8b1967a7daac7e79352cd9447567e09"
-      x="100" y="100"
-      height="80px" width="80px"
-    />
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-    <a xlink:href="http://github.com/fibo">
-      <g transform="translate(40,70)">
-        <rect x="-20" y="-22" width="110" height="30" rx="5" ry="5"/>
-        <text>GitHub</text>
-      </g>
-    </a>
-
-    <a xlink:href="http://vvvv.org/users/fibo">
-      <g transform="translate(170,50)">
-        <rect x="-20" y="-22" width="100" height="30" rx="5" ry="5"/>
-        <text>VVVV</text>
-      </g>
-    </a>
-
-    <a xlink:href="http://www.linkedin.com/in/gianlucacasati">
-      <g transform="translate(270,150)">
-        <image
-          xlink:href="http://s.c.lnkd.licdn.com/scds/common/u/img/logos/logo_linkedin_92x22.png"
-          xlink:title="Linkedin"
-          height="22px" width="92px"
-        />
-      </g>
-    </a>
-
-    <a xlink:href="https://npmjs.org/~fibo">
-      <g transform="translate(260,170)">
-        <image
-          xlink:href="https://npmjs.org/static/npm.png"
-          xlink:title="npm"
-          height="200px" width="78px"
-        />
-      </g>
-    </a>
-  </svg>
-
-  <!-- Start of Google Analytics tracking code -->
-  <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-12635045-12']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-  </script>
-  <!-- End of Google Analytics tracking code -->
-
- </body>
+    </script>
+    <!-- End of Google Analytics tracking code -->
+  </body>
 </html>
