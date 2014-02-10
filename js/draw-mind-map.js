@@ -33,15 +33,11 @@ draw.link('https://github.com/fibo')
 
 // npm
 
-var npm = draw.group()
-  , npmLink = draw.link('https://npmjs.org/~fibo')
+draw.link('https://npmjs.org/~fibo')
     .image('https://npmjs.org/static/npm.png', 100, 39)
-
-npm.add(npmLink)
-
-npm.translate(250, 250)
-   .animate({ease: '>', delay: 1000})
-   .rotate(-360)
+    .move(250, 250)
+    .animate({ease: '>', delay: 1000})
+    .rotate(-360)
 
 // linkedin
 
