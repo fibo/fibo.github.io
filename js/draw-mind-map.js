@@ -1,5 +1,5 @@
 
-var draw = SVG('mind-map').fixSubPixelOffset()
+var draw = SVG('mind-map').size(400, 320).fixSubPixelOffset()
 
 // avatar
 draw.image('http://gravatar.com/avatar/e8b1967a7daac7e79352cd9447567e09', 80, 80)
