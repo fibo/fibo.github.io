@@ -25,11 +25,16 @@ blog.translate(40, 140)
     .animate({ease: '>', delay: 2710})
     .move(40, 240)
 
-// github
+// GitHub
 
 draw.link('https://github.com/fibo')
     .image('https://github.global.ssl.fastly.net/images/modules/contact/heartocat.png', 115, 115)
     .move(25,25)
+
+// Perl
+draw.link('https://metacpan.org/author/FIBO')
+    .image('http://st.pimg.net/perlweb/images/camel_head.v25e738a.png', 60, 65)
+    .move(275,25)
 
 // npm
 
