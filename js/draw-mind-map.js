@@ -29,7 +29,10 @@ blog.translate(40, 140)
 
 draw.link('https://github.com/fibo')
     .image('https://github.global.ssl.fastly.net/images/modules/contact/heartocat.png', 115, 115)
-    .move(25,25)
+    .move(-3,-20)
+    .animate({ease: '<', delay: 1777})
+    .scale(1.7)
+    //.loop(5)
 
 // Perl
 draw.link('https://metacpan.org/author/FIBO')
@@ -55,4 +58,7 @@ draw.link("http://www.linkedin.com/in/gianlucacasati")
 draw.link("http://vvvv.org/users/fibo")
     .image("http://vvvv.org/sites/default/files/imagecache/list_preview/grey.png", 50, 50)
     .move(170,50)
+    .animate({ease: '<>', delay: 2010})
+    .move(190,75)
+
 
