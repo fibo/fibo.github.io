@@ -1,0 +1,17 @@
+
+/* humanstxt.org */
+
+/* TEAM */
+
+Mathematician + Coder: Casati Gianluca
+Site                 : g14n.info
+Contact              : casati_gianluca {at|chiocciola|arroba} yàh0o
+Location             : Milan, Italy
+
+/* THANKS */
+GitHub
+Vim
+Slackware
+
+/* SITE */
+Standards: HTML5, SVG
