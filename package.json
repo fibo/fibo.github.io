@@ -4,7 +4,11 @@
   "version": "0.1.0",
   "description": "Casati Gianluca's personal site",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
@@ -22,8 +26,10 @@
     "url": "git://github.com/fibo/fibo.github.io.git"
   },
   "author": "fibo",
-  "license": [ {
-    "type": "MIT",
-    "url": "http://fibo.mit-license.org/"
-  } ]
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://fibo.mit-license.org/"
+    }
+  ]
 }

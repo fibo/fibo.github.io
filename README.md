@@ -7,5 +7,5 @@ Install deps
 
 Start local server
 
-   grunt
+   npm start
 

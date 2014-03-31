@@ -8,6 +8,11 @@ module.exports = (grunt) ->
         files: ['Gruntfile.coffee']
         tasks: 'watch'
 
+      css:
+        files: ['css/*.css']
+        tasks: []
+        options:
+          livereload: livereloadPort
       index:
         files: ['index.html']
         tasks: []

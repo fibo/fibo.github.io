@@ -13,7 +13,7 @@ var meny = Meny.create({
     height: 200,
 
     // The width of the menu (when using left/right position)
-    width: 260,
+    width: 400,
 
     // The mouse distance from menu position which can trigger menu to open.
     threshold: 40,
