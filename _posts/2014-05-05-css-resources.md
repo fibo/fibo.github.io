@@ -2,11 +2,9 @@
 title: CSS resources
 tags:
   - Web
+description: >
+    Collection of links about CSS
 ---
-
-Collection of links about CSS.
-
-<!--more-->
 
 ## Sites
 

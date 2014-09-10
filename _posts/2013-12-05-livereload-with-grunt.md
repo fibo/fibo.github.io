@@ -2,11 +2,9 @@
 title: Livereload with grunt
 tags:
   - Node
+description: >
+    Instructions to configure [Grunt][1] to interact with a [Livereload][2] server.
 ---
-
-Read these instructions to configure [Grunt][1] to interact with a [Livereload][2] server.
-
-<!--more-->
 
 ## What you get
 

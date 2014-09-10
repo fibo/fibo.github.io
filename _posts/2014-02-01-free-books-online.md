@@ -2,13 +2,13 @@
 title: Free books online
 tags:
   - IWTBF
+description: >
+    My list of eBooks and eLibraries
 ---
 
-My list of eBooks and eLibraries: everytime I find a good book online I add it to the list. Why I do that? 'Cause
+Everytime I find a good book online I add it to the list. Why I do that? 'Cause
 
 > Information Wants To Be Free
-
-<!-- more -->
 
 ## eLibraries
 

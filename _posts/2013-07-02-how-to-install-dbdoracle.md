@@ -3,11 +3,10 @@ title: How to install DBD::Oracle
 tags:
   - Perl
   - Oracle
+description: >
+  I'm going to put here all the steps required to install DBD::Oracle CPAN module, which is not a straightforward installation.
+  The purpose is to reduce headache and turn it into a <strong>repeatable process</strong>.
 ---
-
-I'm going to put here all the steps required to install [DBD::Oracle][1] CPAN module, which is not a straightforward installation.
-
-The purpose is to reduce headache and turn it into a **repeatable process**.
 
 ## Requirements
 
@@ -163,5 +162,5 @@ $ prove oracle.t
 
 
   [1]: https://metacpan.org/release/DBD-Oracle
-  [2]: http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html
+  [2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
   

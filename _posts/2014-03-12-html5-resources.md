@@ -2,11 +2,9 @@
 title: HTML5 resources
 tags:
   - Web
+description: >
+    Collection of links related to HTML5.
 ---
-
-Collection of links related to HTML5.
-
-<!--more-->
 
 ## Sites
 

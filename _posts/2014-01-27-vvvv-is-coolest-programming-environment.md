@@ -3,11 +3,10 @@ title: VVVV is the coolest programming environment on planet Earth
 tags:
   - Software
   - VVVV
+description: >
+    About the VVVV ecosystem
 ---
 
-About the VVVV ecosystem
-
-<!--more-->
 
 ## VVVV is ...
 
