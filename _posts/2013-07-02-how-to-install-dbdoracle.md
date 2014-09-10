@@ -1,0 +1,167 @@
+---
+title: How to install DBD::Oracle
+tags:
+  - Perl
+  - Oracle
+---
+
+I'm going to put here all the steps required to install [DBD::Oracle][1] CPAN module, which is not a straightforward installation.
+
+The purpose is to reduce headache and turn it into a **repeatable process**.
+
+## Requirements
+
+### Use Oracle Instant Client
+
+I really recommend to use your own Oracle lib, cause if your DBAs upgrade or dismiss or whatever the official Oracle installation, you will need to be warned and to reinstall [DBD::Oracle][1] since it links to the Oracle shared libs. Trust me, use *Oracle Instant Client*, at the time of this writing you can download it from [here](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html) or just [google it](https://www.google.com/?q=Oracle+Instant+Client+download).
+
+Select your platform, download the files and put them somewhere in your home dir or some other path you can read/write. Check also the right version for your installation: latest is *12.1.0.1* right now, but I had to use an older one, for instance, *10.2.0.5*.
+
+Ask your DBAs which version you should use, **probably the safe choice** is to pick up the same version as the remote database. So **don't guess**, login to the database server and launch
+
+```
+$ sqlplus /nolog
+
+SQL*Plus: Release 10.2.0.5.0 - Production on Mar Mar 25 15:25:03 2014
+
+Copyright (c) 1982, 2010, Oracle.  All Rights Reserved.
+
+SQL>
+```
+
+Type `quit` to exit. But remember that,
+
+<div class="alert alert-info">Oracle Instant Client right version depends only on your host Operating System version.</div>
+
+I'm going to put files under `$HOME/opt/Oracle` and store the *.zip* in the packages folder, so here there are my files
+
+```bash
+$ ls $HOME/opt/Oracle/packages
+basic-10.2.0.5.0-linux-x64.zip
+sdk-10.2.0.5.0-linux-x64.zip
+sqlplus-10.2.0.5.0-linux-x64.zip
+```
+
+```bash
+$ cd $HOME/opt/Oracle
+$ unzip packages/basic-10.2.0.5.0-linux-x64.zip
+$ unzip packages/sdk-10.2.0.5.0-linux-x64.zip
+$ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
+```
+
+### Setup your environment
+
+I use to create a *.oracle_profile* with environment variables I need, so I can source it from *.bash_profile* or from another session (for example from a CPAN shell, see below). 
+
+<div class="alert alert-warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
+
+```bash
+$ cat $HOME/.oracle_profile
+
+export ORACLE_BASE=$HOME/opt/Oracle
+export ORACLE_HOME=$ORACLE_BASE/instantclient_10_2
+export PATH=$ORACLE_HOME:$PATH
+export TNS_ADMIN=$HOME/etc
+export NLS_LANG=ITALIAN_ITALY.WE8ISO8859P15
+export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
+```
+
+Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn' t complete a working installation without it.
+
+Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European charset).  
+
+`TNS_ADMIN` is the directory where you put your *tnsadmin.ora*, since we are not pointing to an Oracle server installation, we probably need also our own tns configuration.
+
+
+<div class="alert alert-danger">Don' t forget to source it from your <em>.bash_profile</em>!</div>
+
+## Latest DBI
+
+Configure [A CPAN client that works like a charm][2] and install latest DBI
+
+```bash
+$ cpan DBI
+```
+
+## Installation
+
+### Get DBD::Oracle CPAN module
+
+Download latest version of [DBD::Oracle][1] CPAN module, right now it is *DBD-Oracle-1.64.tar.gz*: you can download it manually from CPAN, untar it and cd into it
+
+```bash
+$ wget http://search.cpan.org/CPAN/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.64.tar.gz
+$ tar xzf DBD-Oracle-1.64.tar.gz
+$ cd DBD-Oracle-1.64
+```
+
+or just open a cpan shell and type
+
+```bash
+$ cpan
+...
+cpan> look DBD::Oracle
+...
+Working directory is /home/wa/.cpan/build/DBD-Oracle-1.64-KIWHyH
+```
+
+Now you can source the *.oracle_profile* you created, to load the environment variables.
+
+```bash
+$ source $HOME/.oracle_profile
+```
+
+Check at least that sqlplus is working 
+
+```bash
+$ sqlplus /nolog
+```
+
+If you see a `SQL> prompt`, it means your installation have good chances to complete successfully. If not, probably you picked up an Oracle Instant Client version that is not compatible with your Operating System. 
+Create a log dir in your `$ORACLE_HOME`, otherwise you will find Oracle logs in your home dir.
+
+```bash
+$ mkdir $ORACLE_HOME/log
+```
+
+Now, clean your mind and pray the mantra 
+
+```bash
+$ perl Makefile.PL
+$ make
+```
+
+Run tests, it is always a good idea! But set the `ORACLE_USERID` and  `ORACLE_DSN` env vars, otherwise it probably will default to `scott/tiger` and `dbi:Oracle:testdb` hence will fail (unless you have a brand new Oracle installation with the famous `scott/tiger` still around :).
+
+```bash
+$ export ORACLE_USERID=pippo/password123
+$ export ORACLE_DSN='dbi:Oracle:mydsn'
+
+$ make test
+```
+
+And finally
+
+```bash
+$ make install
+```
+
+### A final test
+
+If some tests fails or you want to check connectivity to one or more databases to be sure the installation will not be useless, here it is a simple test you can fill with your credentials and run launching
+
+```bash
+$ prove oracle.t
+```
+
+{% gist fibo/5901819 oracle.t %}
+
+## See also
+
+* [sqlplus tips](http://blog.g14n.info/2013/10/sqlplus-tips.html)
+* [A CPAN client that works like a charm][2]
+
+
+  [1]: https://metacpan.org/release/DBD-Oracle
+  [2]: http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html
+  
