@@ -1,8 +1,16 @@
+
 {% include header.html %}
+
 <div class="container">
-<article>
-<h1> {{ title }}</h1>
-{{ content }}
-</article>
+  <article>
+    <header>
+      <h1> {{ page.title }}</h1>
+      <h2> {{ page.description }}</h2>
+    </header>
+
+    {{ content }}
+  </article>
 </div>
+
 {% include footer.html %}
+

@@ -2,21 +2,16 @@
 title: A CPAN client that works like a charm
 tags:
   - Perl
+description: >
+    How to use and configure properly a CPAN client.
 ---
-
-The [Comprehensive Perl Archive Network][1]  *CPAN* is a collection of freely available [Perl][2] modules.
-
-
-Read this article to know how to configure and use a *CPAN* client.
-
-<!--more-->
 
 ## cpan
 
+The [Comprehensive Perl Archive Network][1]  *CPAN* is a collection of freely available [Perl][2] modules.
 Perl comes with a builtin CPAN client, named ehm *cpan*.
 
 Be aware that your configuration is stored in the  *~/.cpan/CPAN/MyConfig.pm* file.
-
 
 
 Do not edit that file, use `o conf` instead from the *cpan* interactive shell, see below.
@@ -358,10 +353,8 @@ Note that also *cpan* has the [upgrade modules feature](#upgrade-modules) but *c
 ## See also
 
 * [Learn Perl - CPAN and Perl Configuration Howto](http://learnperl.scratchcomputing.com/tutorials/configuration/)
-* [The camel survives!](http://blog.g14n.info/2014/06/the-camel-survives.html)
+* [The camel survives!]({% post_url 2014-06-18-the-camel-survives %})
 
-
-
-  [1]: http://www.cpan.org/
-  [2]: http://www.perl.org/
+  [1]: http://www.cpan.org/ "CPAN"
+  [2]: http://www.perl.org/ "Perl"
 
