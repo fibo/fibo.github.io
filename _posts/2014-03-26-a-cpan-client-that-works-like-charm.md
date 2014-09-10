@@ -38,16 +38,11 @@ and hit enter (two times) to accept defaults. It will be enough to let you promp
 
 Give it a try installing  [Perl::Tidy](http://search.cpan.org/~shancock/Perl-Tidy/lib/Perl/Tidy.pod)
 
-
-
-
 ```
 cpan[1] install Perl::Tidy
 ```
 
 If it ends with an **OK** you are done, just type *q* to exit interactive shell.
-
-
 
 ```
 ...
@@ -59,19 +54,11 @@ Terminal does not support GetHistory.
 Lockfile removed.
 ```
 
-
-
 Continue with [Configuration](#configuration) if *cpan* is working  and you want to configure it to achieve greater user experience
-
-
 
 or go to [cpanminus](#cpanminus) if you want a zero config, minimal and efficient *CPAN* client
 
-
-
 otherwise read [Troubleshooting](#troubleshooting) if you had problems during installation.
-
-
 
 ### Troubleshooting
 
@@ -100,20 +87,15 @@ $ perl -Mlocal::lib >> ~/.bash_profile
 $ source ~/.bash_profile # or reconnect
 ```
  
-
 ### Help
 
-
-
 Just type **h** in a *cpan* shell
-
 
 ```
 h
 ```
 
 ### Configuration
-
 
 You can reconfigure **all** *cpan* client options by launching
 
@@ -128,9 +110,6 @@ Would you like to configure as much as possible automatically? [yes] no
 ```
 
 type **no** and follow instructions.
-
-
-
 
 In particular, if you need *cpan* pick mirrors for you, launch
 
@@ -156,7 +135,6 @@ install CPAN
 ...
 reload CPAN
 ```
-
 
 #### Autocommit
 

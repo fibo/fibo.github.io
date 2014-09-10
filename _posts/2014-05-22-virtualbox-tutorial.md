@@ -137,6 +137,5 @@ It can be useful have a mouse in your terminal, specially for cut and paste. Jus
 $ sudo apt-get install gpm
 ```
 
-
   [1]: https://www.virtualbox.org/
   [2]: https://lh6.googleusercontent.com/-g_JMklUTFFo/U33Ftrs-mbI/AAAAAAAABI4/ziuJU4pzzeo/s0/2014-03-07+13_45_37-VirtualBox.png "MountIsoImageOnVirtualbox.png"

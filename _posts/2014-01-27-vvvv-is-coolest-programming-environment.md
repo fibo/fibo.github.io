@@ -16,7 +16,11 @@ description: >
 
 *you've been warned!*
 
+--------
+
 <iframe src="//player.vimeo.com/video/62894232" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+--------
 
 [VVVV][1] is a hybrid graphical/textual programming environment for easy prototyping and development.
 
