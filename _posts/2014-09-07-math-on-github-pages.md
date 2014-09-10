@@ -5,8 +5,7 @@ tags:
 ---
 
 GitHub Pages uses [kramdown](http://kramdown.gettalong.org/) by default.
-
-Set the following entries in your *_config.html*
+If you want to enable [GitHub Flavored Markdown][3], that is the same used by GitHub Wikis, set the following entries in your *_config.html*
 
 ```
 markdown: kramdown
@@ -14,10 +13,16 @@ kramdown:
   input: GFM
 ```
 
+Edit your pages to add MathJax support adding the following snippet
+
 ```
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
 
+Now you can use a double dollar to include [LaTex][1] code block that will be rendered by [MathJax][2]!
+
+For example, the following code
+
 ```
 $$
 \begin{align*}
@@ -37,6 +42,8 @@ $$
 $$
 ```
 
+will render like this
+
 $$
 \begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
@@ -54,7 +61,7 @@ $$
 \end{align*}
 $$
 
-## See also
-
-[kramdown Quick Reference](http://kramdown.gettalong.org/quickref.html)
+  [1]: http://www.latex-project.org/ "LaTeX"
+  [2]: http://www.mathjax.org/ "MathJax"
+  [3]: https://help.github.com/articles/github-flavored-markdown "GitHub Flavored Markdown"
 
