@@ -1,9 +1,3 @@
 User-agent: *
-Disallow: js/
-Disallow: node_modules/
-Disallow: templates/
-Disallow: .gitignore
-Disallow: CNAME
-Disallow: Gruntfile.coffee
-Disallow: README.md
-Disallow: package.json
+Disallow: humans.txt
+Disallow: robots.txt
