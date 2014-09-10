@@ -44,10 +44,7 @@ I like to use [coffee-script][3] to edit configuration, i.e. I use a *Gruntfile.
 
 Here it is a working configuration
 
-<div class="gistLoad" data-id="7054215" id="gist-7054215">Loading .... gist https://gist.github.com/fibo/7054215</div>
-
-
-----------
+{% gist fibo/7054215 %}
 
 
 Now, if you launch

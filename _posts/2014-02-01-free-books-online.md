@@ -149,5 +149,5 @@ Everytime I find a good book online I add it to the list. Why I do that? 'Cause
 
 [Street fighting mathematics](http://mitpress.mit.edu/sites/default/files/titles/content/9780262514293_Creative_Commons_Edition.pdf)
 
-
   [1]: http://it.wikipedia.org/wiki/Eric_Steven_Raymond
+
