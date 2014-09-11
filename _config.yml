@@ -1,17 +1,9 @@
 markdown: kramdown
 pygments: true
-permalink: ./:year/:month/:title.html
 name: My digital copybook
-description: "a random topic blog ..."
-url: http://blog.g14n.info
+description: "Gianluca Casati's personal website"
+url: http://www.g14n.info
 encoding: UTF-8
 exclude: ["README.md"]
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "post"
-    values:
-      layout: "article"
 kramdown:
   input: GFM
