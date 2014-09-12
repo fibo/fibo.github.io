@@ -1,5 +1,4 @@
 markdown: kramdown
-pygments: true
 name: My digital copybook
 description: "Gianluca Casati's personal website"
 url: http://www.g14n.info
