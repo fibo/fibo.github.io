@@ -1,8 +1,10 @@
 
-name: Gianluca Casati
-description: My digital copybook
+name: My digital copybook
+author: Gianluca Casati
 url: http://www.g14n.info
 encoding: utf-8
+
+permalink: ./:year/:month/:title.html
 
 exclude: 
   - README.md
@@ -20,7 +22,6 @@ defaults:
     values:
       author: Gianluca Casati
       layout: post
-      permalink: ./:year/:month/:title.html
 
 # Custom vars
 

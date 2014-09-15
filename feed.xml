@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -22,7 +23,7 @@
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
+      <link>{{ site.url }}/{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <dc:creator>{{ post.author }}</dc:creator>
       {% for tag in post.tags %}
@@ -31,7 +32,7 @@
       {% for cat in post.categories %}
       <category>{{ cat | xml_escape }}</category>
       {% endfor %}
-      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
       <description>{{ post.description | xml_escape }}</description>
     </item>
     {% endfor %}
