@@ -3,10 +3,9 @@ title: Getting started with Git shell on Windows
 tags:
   - Git
   - Windows
+description: >
+   This is a step by step guide to help you getting started with git on Windows.
 ---
-
-
-This is a step by step guide to help you getting started with git on Windows.
 
 ![Git logo][1]
 

@@ -8,6 +8,7 @@ exclude:
   - Gemfile
 
 markdown: kramdown
+kramdown:
   input: GFM
 
 defaults:
@@ -16,5 +17,5 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: post
       permalink: ./:year/:month/:title.html

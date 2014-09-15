@@ -1,4 +1,4 @@
-i---
+---
 title: Install Node.js without sudo
 tags:
   - Node

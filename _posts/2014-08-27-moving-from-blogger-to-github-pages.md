@@ -1,9 +1,9 @@
 ---
 title: Moving from Blogger to GitHub Pages
-description: >
-    Migrate your blog from Blogger to GitHub Pages to gain full control on your content
 tags:
   - Blogger
+description: >
+    Migrate your blog from Blogger to GitHub Pages to gain full control on your content
 ---
 
 Here it is, another meta post like the one I wrote about [How to use Markdown to edit Blogger posts](http://blog.g14n.info/2013/12/how-to-use-markdown-to-edit-blogger.html).
