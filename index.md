@@ -3,7 +3,7 @@ layout: default
 title: Home page
 ---
 
-> Gianluca Casati personal website
+> My digital copybook
 
 ## Projects
 
