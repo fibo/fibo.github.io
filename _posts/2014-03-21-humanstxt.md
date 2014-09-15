@@ -2,7 +2,7 @@
 title: humans.txt
 tags:
   - Web
-description:>
+description: >
     Discover humans.txt and add it to your site.
 ---
 

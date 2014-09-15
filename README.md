@@ -6,19 +6,10 @@
 Import repo, for instance *dflow*
 
 ```
-git subtree add --prefix _includes/dflow https://github.com/fibo/dflow.git master --squash
+git subtree add --prefix dflow https://github.com/fibo/dflow.git master --squash
 ```
 
-Create *dflow/index.html* filling it with *README.md* content
-
-```
----
-title: dflow
-layout: default
----
-
-{% include dflow/README.md | markdownify %}
-```
+Create *dflow/index.md* and other pages, without modifying existing ones.
 
 ## Debug
 
