@@ -1,8 +1,9 @@
-markdown: kramdown
+
 name: My digital copybook
 description: "Gianluca Casati's personal website"
 url: http://www.g14n.info
 encoding: UTF-8
 exclude: ["README.md"]
-kramdown:
-  input: GFM
+
+markdown: kramdown
+
