@@ -1,9 +1,9 @@
 ---
 title: Math on GitHub Pages
-description: >
-    Display math formulas on your free website
 tags:
   - Math
+description: >
+    Display math formulas on your free website
 ---
 
 GitHub Pages uses [kramdown](http://kramdown.gettalong.org/) by default.
