@@ -11,13 +11,19 @@ git subtree add --prefix dflow https://github.com/fibo/dflow.git master --squash
 
 Create *dflow/index.md* and other pages, without modifying existing ones.
 
+To update projects from source run
+
+```
+git subtree pull --prefix dflow https://github.com/fibo/dflow.git master --squash
+```
+
 ## Debug
 
 It is highly recommended to install [Jekyll][3] to preview your site and avoid build errors before publishing it.
 
 ### Install Jekyll
 
-Instructions work great on a [Codio](https://codio.com) box like [this](https://codio.com/fibo/jekyll-boilerplate).
+Instructions work great on a [Codio](https://codio.com) box like [this](https://codio.com/fibo/g14n-info).
 
 1. Create a *Gemfile* with the following content
 
