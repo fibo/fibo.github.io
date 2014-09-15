@@ -1,0 +1,8 @@
+<dl class="posts">
+{% for post in site.posts %}
+  <dt>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <dd>{{ post.description }}</dd>
+  </dt>
+{% endfor %}
+</dl>
