@@ -21,3 +21,10 @@ defaults:
       author: Gianluca Casati
       layout: post
       permalink: ./:year/:month/:title.html
+
+# Custom vars
+
+bootstrap:
+  baseurl: https://maxcdn.bootstrapcdn.com/bootstrap
+  version: 3.2.0
+
