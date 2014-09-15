@@ -5,9 +5,7 @@ title: Home page
 
 > My digital copybook
 
-## Projects
-
-* [Blog](http://blog.g14n.info)
+{% include post-list.html %}
 
 ### Nodejs
 
