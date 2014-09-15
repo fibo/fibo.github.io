@@ -25,6 +25,10 @@ defaults:
 # Custom vars
 
 bootstrap:
-  baseurl: https://maxcdn.bootstrapcdn.com/bootstrap
+  base_url: https://maxcdn.bootstrapcdn.com/bootstrap
   version: 3.2.0
+
+jquery:
+  base_url: https://ajax.googleapis.com/ajax/libs/jquery
+  version: 1.11.1
 
