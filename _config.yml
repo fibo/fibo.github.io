@@ -3,7 +3,18 @@ name: My digital copybook
 description: "Gianluca Casati's personal website"
 url: http://www.g14n.info
 encoding: UTF-8
-exclude: ["README.md"]
+exclude: 
+  - README.md
+  - Gemfile
 
 markdown: kramdown
+  input: GFM
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: ./:year/:month/:title.html
