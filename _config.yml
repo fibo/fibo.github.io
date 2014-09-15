@@ -1,8 +1,9 @@
 
-name: My digital copybook
-description: "Gianluca Casati's personal website"
+name: Gianluca Casati
+description: My digital copybook
 url: http://www.g14n.info
-encoding: UTF-8
+encoding: utf-8
+
 exclude: 
   - README.md
   - Gemfile
@@ -17,5 +18,6 @@ defaults:
       path: ""
       type: "posts"
     values:
+      author: Gianluca Casati
       layout: post
       permalink: ./:year/:month/:title.html
