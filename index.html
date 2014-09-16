@@ -1,14 +1,17 @@
 ---
 layout: default
-title: Home page
+title: Gianluca Casati
 ---
 
-<dl class="posts">
-{% for post in site.posts %}
-  <dt>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <dd>{{ post.description }}</dd>
-  </dt>
-{% endfor %}
-</dl>
+<section>
+  <h2>Latest posts</h2>
 
+  <dl class="posts">
+  {% for post in site.posts %}
+    <dt>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <dd>{{ post.description }}</dd>
+    </dt>
+  {% endfor %}
+  </dl>
+</section>

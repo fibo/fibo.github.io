@@ -1,27 +1,16 @@
-  <meta charset="{{ site.encoding }}">
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="{{ site.encoding }}">
 
-  <meta name="description" content="{{ site.description }}">
-  <meta name="author" content="{{ site.author }}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="description" content="{{ site.description }}">
+<meta name="author" content="{{ site.author }}">
 
-  <title>
-    {% if page.url == site.baseurl %}
-      {{ site.author }} &middot; {{ site.name }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.name }}
-    {% endif %}
-  </title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap-theme.min.css">
+<title>{{ page.title }}</title>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap-theme.min.css">
 

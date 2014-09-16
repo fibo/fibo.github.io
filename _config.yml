@@ -1,8 +1,9 @@
 
-name: My digital copybook
-author: Gianluca Casati
 url: http://www.g14n.info
 encoding: utf-8
+
+author: Gianluca Casati
+description: My digital copybook
 
 permalink: ./:year/:month/:title.html
 
@@ -13,6 +14,8 @@ exclude:
 markdown: kramdown
 kramdown:
   input: GFM
+
+# Defaults
 
 defaults:
   -
@@ -25,18 +28,17 @@ defaults:
 
 # Custom vars
 
-libs:
-  bootstrap:
-    base_url: https://maxcdn.bootstrapcdn.com/bootstrap
-    version: 3.2.0
+bootstrap:
+  base_url: https://maxcdn.bootstrapcdn.com/bootstrap
+  version: 3.2.0
 
-  jquery:
-    base_url: https://ajax.googleapis.com/ajax/libs/jquery
-    version: 1.11.1
+jquery:
+  base_url: https://ajax.googleapis.com/ajax/libs/jquery
+  version: 1.11.1
 
-  mathjax:
-    base_url: http://cdn.mathjax.org/mathjax
-    version: latest
+mathjax:
+  base_url: http://cdn.mathjax.org/mathjax
+  version: latest
 
 google-analytics:
   id: UA-12635045-12
