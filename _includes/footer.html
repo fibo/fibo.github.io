@@ -2,8 +2,10 @@
 <footer>
   <div class="container">
     <ul>
-      <li>Licensed under <a href="{{ site.url}}/mit-license.html">MIT</a></li>
-      </li>
+    {% if page.title != "MIT License" %}
+      <li>Licensed under <a href="{{ site.url }}/mit-license.html">MIT</a></li>
+    {% endif %}
+      <li>About me<a href="{{ site.url }}/about-me.html">MIT</a></li>
     </ul>
   </div>
 </footer>
@@ -17,17 +19,5 @@
 <!-- Bootstrap compiled plugins -->
 <script type="text/javascript" src="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/js/bootstrap.min.js"></script>
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ site.google-analytics.id }}']);
-  _gaq.push(['_trackPageview']);
+  {{ include analytics.html }}
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-  </body>
-</html>
