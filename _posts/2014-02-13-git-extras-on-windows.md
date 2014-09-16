@@ -4,7 +4,7 @@ tags:
   - Git
   - Windows
 description: >
-    I tryed on Windows Git shell the [git-extras][3] set of utilities from the prolific [visionmedia][2] (a.k.a. TJ Holowaychuk).
+    I tryed on Windows Git shell the <a href="https://github.com/visionmedia/git-extras">git-extras</a> set of utilities from the prolific <a href="https://github.com/visionmedia">visionmedia</a> (a.k.a. TJ Holowaychuk).
 ---
 
 ## Installation
