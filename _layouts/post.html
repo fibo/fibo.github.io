@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include header.html %}
-
+  <head>
+    {% include header.html %}
+  </head>
   <body>
     <div class="container">
       <article>
         <header>
           <h1> {{ page.title }}</h1>
-          <h3> {{ page.description | markdownify }}</h3>
-          <div>
-            <span>{{ post.date | date: "%-d %B %Y" }}</span>
-          </div>
+          <p> {{ page.description }} </p>
         </header>
 
         {{ content }}

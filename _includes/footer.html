@@ -1,21 +1,33 @@
-    <!-- JQuery -->
-    <script src="{{ site.jquery.base_url }}/{{ site.jquery.version }}/jquery.min.js"></script>
+    
+<footer>
+  <div class="container">
+    <ul>
+      <li>Licensed under <a href="{{ site.url}}/mit-license.html">MIT</a></li>
+      </li>
+    </ul>
+  </div>
+</footer>
 
-    <!-- Bootstrap compiled plugins -->
-    <script src="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/js/bootstrap.min.js"></script>
+<!-- MathJax -->
+<script type="text/javascript" src="{{ site.mathjax.base_url }}/{{ site.mathjax.version }}/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+<!-- JQuery -->
+<script type="text/javascript" src="{{ site.jquery.base_url }}/{{ site.jquery.version }}/jquery.min.js"></script>
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-12635045-12']);
-      _gaq.push(['_trackPageview']);
+<!-- Bootstrap compiled plugins -->
+<script type="text/javascript" src="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/js/bootstrap.min.js"></script>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.google-analytics.id }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
   </body>
 </html>
