@@ -1,0 +1,12 @@
+<section>
+  <h2>Latest posts</h2>
+
+  <dl class="posts">
+  {% for post in site.posts limit:10 %}
+    <dt>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <dd>{{ post.description }}</dd>
+    </dt>
+  {% endfor %}
+  </dl>
+</section>
