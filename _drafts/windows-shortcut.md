@@ -6,7 +6,7 @@ tags:
 description: Shortcuts I use to enhance productivity
 ---
 
-A friend of mine had a workshop with the creator on dynebolic: that guy is a real geek and he hate mouse! He uses only the keyboard.
+A friend of mine had a workshop with the creator on [dynebolic][1]: that guy is a real geek and he hate mouse! He uses only the keyboard.
 Well maybe it is an extreme approach but for sure using more your keyboard can increase productivity
 
 ** TODO ** Usa <kbd>ALT</kbd>
@@ -26,4 +26,6 @@ CTRL Q chiude il programma
 Host num apre il programma alla posizione num pinned on the task bar
 
 
+
+  [1] http://www.dynebolic.org/ "Dynebolic"
 
