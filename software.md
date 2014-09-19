@@ -1,5 +1,6 @@
 ---
 title: Software
+layout: default
 ---
 
 > I ❤ coding!
