@@ -22,7 +22,8 @@ layout: default
 ## Perl
 
 [Sweet::Home](https://metacpan.org/pod/Sweet::Home)
-[![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/Sweet::Home) [![Build Status](https://travis-ci.org/fibo/Sweet-Home-pm.png?branch=master)](https://travis-ci.org/fibo/Sweet-Home-pm) [![Coverage Status](https://coveralls.io/repos/fibo/Sweet-Home-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/Sweet-Home-pm?branch=master)
+[![CPAN version](https://badge.fury.io/pl/Sweet-Home.svg)](http://badge.fury.io/pl/Sweet-Home) [![Build Status](https://travis-ci.org/fibo/Sweet-Home-pm.png?branch=master)](https://travis-ci.org/fibo/Sweet-Home-pm) [![Coverage Status](https://coveralls.io/repos/fibo/Sweet-Home-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/Sweet-Home-pm?branch=master)
+
 
 [Task::BeLike::FIBO](https://metacpan.org/pod/Task::BeLike::FIBO)
 [![CPAN version](https://badge.fury.io/pl/Task-BeLike-FIBO-pm.svg)](https://metacpan.org/pod/Task::BeLike::FIBO) [![Build Status](https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master)](https://travis-ci.org/fibo/Task-BeLike-FIBO-pm)
