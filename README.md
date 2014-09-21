@@ -3,6 +3,8 @@
 
 ## Include projects
 
+Use git subtree to import repo [^1].
+
 Import repo, for instance *dflow*
 
 ```
@@ -62,8 +64,15 @@ Test content generation running
 jekyll serve
 ```
 
+[^1]:
+
+See [Alternatives To Git Submodule: Git Subtree][4] as a reference
+
+
   [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"
+  [5]: http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/ "Alternatives To Git Submodule: Git Subtree"
+
 
