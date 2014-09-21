@@ -1,0 +1,43 @@
+{
+  "name": "algebra",
+  "homepage": "http://g14n.info/algebra",
+  "author": {
+    "name": "fibo",
+    "url": "http://g14n.info"
+  },
+  "version": "0.2.0",
+  "description": "Vectors, Matrices, Tensors",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --bail --require should --reporter min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fibo/algebra.git"
+  },
+  "keywords": [
+    "algebra",
+    "matrix",
+    "vector",
+    "math"
+  ],
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://g14n.info/mit-license"
+    }
+  ],
+  "devDependencies": {
+    "should": "~4.0.4",
+    "mocha": "~1.20.1"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "inherits": "~2.0.1",
+    "strict-mode": "~0.1.4"
+  }
+}
