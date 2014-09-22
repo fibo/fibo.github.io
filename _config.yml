@@ -26,6 +26,13 @@ defaults:
       author: Gianluca Casati
       layout: post
 
+    scope:
+      path: "README.md"
+      type: "pages"
+    values:
+      permalink: "./index.html"
+      layout: default
+
 # Custom vars
 
 bootstrap:
