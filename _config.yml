@@ -8,8 +8,8 @@ description: My digital copybook
 permalink: ./:year/:month/:title.html
 
 exclude: 
-  - README.md
   - Gemfile
+  - README.md
 
 markdown: kramdown
 kramdown:
@@ -25,13 +25,6 @@ defaults:
     values:
       author: Gianluca Casati
       layout: post
-
-    scope:
-      path: "README.md"
-      type: "pages"
-    values:
-      permalink: "./index.html"
-      layout: default
 
 # Custom vars
 

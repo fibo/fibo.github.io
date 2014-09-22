@@ -19,6 +19,28 @@ To update projects from source run
 git subtree pull --prefix dflow https://github.com/fibo/dflow.git master --squash
 ```
 
+## Documentation projects
+
+Turn *README.md* into *index.html*: just add a YAML front with project title
+
+```
+---
+title: dflow
+---
+```
+
+then set defaults in *_config.yml* 
+
+```
+    scope:
+      path: "dflow"
+    values:
+      permalink: "./dflow/index.html"
+      layout: default
+```
+
+so *README.md* will generate project homepage.
+
 ## Debug
 
 It is highly recommended to install [Jekyll][3] to preview your site and avoid build errors before publishing it.
