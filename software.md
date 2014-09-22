@@ -19,6 +19,9 @@ layout: default
 [tris3d](http://www.g14n.info/tris3d)
 [![NPM version](https://badge.fury.io/js/tris3d.png)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.png?branch=master)](https://travis-ci.org/fibo/tris3d.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.png)](https://gemnasium.com//tris3d)
 
+[strict-mode](http://www.g14n.info/strict-mode)
+[![NPM version](https://badge.fury.io/js/strict-mode.png)](http://badge.fury.io/js/strict-mode) [![Build Status](https://travis-ci.org/fibo/strict-mode.png?branch=master)](https://travis-ci.org/fibo/strict-mode.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/strict-mode.png)](https://gemnasium.com/fibo/strict-mode)
+
 ## Perl
 
 [Sweet::Home](https://metacpan.org/pod/Sweet::Home)
