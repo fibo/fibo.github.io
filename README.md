@@ -3,7 +3,7 @@
 
 ## Include projects
 
-Use git subtree to import repo [^1].
+Use git subtree to import repo[^1].
 
 Import repo, for instance *dflow*
 
