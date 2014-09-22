@@ -1,5 +1,6 @@
---nz-util
---=======
+-----
+--title: nz-util
+-----
 --
 --> Netezza utility procedures
 --
@@ -8,37 +9,37 @@
 COMMENT ON DATABASE util
 --
 --**Version 2014-01-21**
-IS 'Version 2014-01-21, http://documentup.com/fibo/nz-util, MIT License';
+IS 'Version 2014-01-21, http://www.g14n.info/nz-util, MIT License';
 --
---    See [online docs](http://documentup.com/fibo/nz-util) for latest version.
+--    See [online docs](http://www.g14n.info/nz-util) for latest version.
 --
 --
---# Installation
+--## Installation
 --
---## Download the code
+--### Download the code
 --
 --If you are on a Linux box (for example the Netezza frontend itself), you can try with this command
 --
 --```bash
---wget --no-check-certificate --timestamping https://raw.github.com/fibo/nz-util/master/nz_util.sql
+--wget --timestamping http://www.g14n.info/nz-util/nz_util.sql
 --```
 --
 --If it does not work, just point your browser to
 --
 --```
---https://raw.github.com/fibo/nz-util/master/nz_util.sql
+--http://www.g14n.info/nz-util/nz_util.sql
 --```
 --
 --and use copy and paste, dude!
 --
---## Install
+--### Install
 --
 --```bash
 --nzsql -u admin -d system -c 'CREATE DATABASE util COLLECT HISTORY OFF'
 --nzsql -u admin -d util -f nz_util.sql 1> /dev/null
 --```
 --
---## Update
+--### Update
 --
 --Check current version
 --
@@ -54,11 +55,11 @@ IS 'Version 2014-01-21, http://documentup.com/fibo/nz-util, MIT License';
 --
 
 --
---# Utilities
+--## Utilities
 --
 
 --
---## Type checking
+--### Type checking
 --
 
 
@@ -199,7 +200,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_table
+--#### is_table
 --
 --Returns true if given object is a *TABLE*, otherwise false.
 --
@@ -229,7 +230,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_view
+--#### is_view
 --
 --Returns true if given object is a *VIEW*, otherwise false.
 --
@@ -259,7 +260,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_sequence
+--#### is_sequence
 --
 --Returns true if given object is a *SEQUENCE*, otherwise false.
 --
@@ -289,7 +290,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_group
+--#### is_group
 --
 --Returns true if given object is a *GROUP*, otherwise false.
 --
@@ -319,7 +320,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_user
+--#### is_user
 --
 --Returns true if given object is a *USER*, otherwise false.
 --
@@ -349,7 +350,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### is_user_or_raise_exception
+--#### is_user_or_raise_exception
 --
 --Check if given object is a *USER* and return true, otherwise raise an exception.
 --
@@ -382,11 +383,11 @@ BEGIN_PROC
   END;
 END_PROC;
 --
---## Misc utilities
+--### Misc utilities
 --
 
 --
---### drop_table
+--#### drop_table
 --
 --Drop a *table* safely. If *table* does not exists, it will manage it to avoid
 --displaying an error message, so your logs will be cleaner.
@@ -460,7 +461,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---## Groups and grants management
+--### Groups and grants management
 --
 
 /* grant_object_privilege is private */
@@ -507,7 +508,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### create_or_update_group
+--#### create_or_update_group
 --
 --Create a group safely. If group already exists, it will be granted to list current catalog.
 --
@@ -554,7 +555,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_readonly
+--#### grant_readonly
 --
 --Grant a group to read data in current catalog.
 --
@@ -589,7 +590,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_external
+--#### grant_external
 --
 --Grant a group to create, read and write external tables in current catalog.
 --
@@ -621,7 +622,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_systemview
+--#### grant_systemview
 --
 --Grant a group to read system views in current catalog.
 --
@@ -650,7 +651,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_systemtable
+--#### grant_systemtable
 --
 --Grant a group to read system tables in current catalog.
 --
@@ -679,7 +680,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_readwrite
+--#### grant_readwrite
 --
 --Grant a group to read and write data in current catalog.
 --
@@ -719,7 +720,7 @@ BEGIN_PROC
 END_PROC;
 
 --
---### grant_execute
+--#### grant_execute
 --
 --Grant a group to edit and call stored procedures and functions in current catalog.
 --
@@ -755,7 +756,7 @@ BEGIN_PROC
 END_PROC;
 
 
---### transfer_objects_owned_by
+--#### transfer_objects_owned_by
 --
 --Transfer object ownership from given *USER_NAME* to *NEW_OWNER*.
 --
@@ -805,7 +806,7 @@ END_PROC;
 
 
 --
---### objects_owned_by
+--#### objects_owned_by
 --
 --When you want to delete a user you need to know which objects he owns.
 --See [How to drop a user on Netezza](http://blog.g14n.info/2013/12/how-to-drop-user-on-netezza.html)
@@ -852,9 +853,9 @@ BEGIN_PROC
 END_PROC;
 
 --
---# Development
+--## Development
 --
---## Generate docs
+--### Generate docs
 --
 --Documentation is generated extracting comments from lines that starts with a `--`.
 --
@@ -871,8 +872,8 @@ END_PROC;
 --grep -E '^--' nz_util.sql | sed -e 's/--//' > README.md
 --```
 --
+--## License
 --
+-- Code released under [MIT License](http://www.g14n.info/mit-license.html).
 --
---[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fibo/nz-util/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
---
---
+
