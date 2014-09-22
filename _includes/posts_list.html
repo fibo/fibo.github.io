@@ -1,5 +1,5 @@
 <dl class="posts">
-{% for post in site.posts {{ include.limit }} %}
+{% for post in site.posts limit:{{include.limit}} %}
   <dt>
     <a href="{{ post.url }}">{{ post.title }}</a>
     <dd>{{ post.description }}</dd>
