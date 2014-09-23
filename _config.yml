@@ -15,6 +15,11 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+collections:
+  projects:
+    output: true
+    permalink: ./:path
+
 # Defaults
 
 defaults:
