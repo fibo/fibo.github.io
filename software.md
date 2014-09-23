@@ -11,16 +11,16 @@ layout: default
 [![NPM version](https://badge.fury.io/js/algebra.png)](http://badge.fury.io/js/algebra) [![Build Status](https://travis-ci.org/fibo/algebra.png?branch=master)](https://travis-ci.org/fibo/algebra?branch=master) [![Dependency Status](https://gemnasium.com/fibo/algebra.png)](https://gemnasium.com/fibo/algebra)
 
 [iper](http://www.g14n.info/iper)
-[![Build Status](https://travis-ci.org/fibo/iper.png?branch=master)](https://travis-ci.org/fibo/iper.png?branch=master) [![NPM version](https://badge.fury.io/js/iper.png)](http://badge.fury.io/js/iper) [![Dependency Status](https://gemnasium.com/fibo/iper.png)](https://gemnasium.com/fibo/iper)
+[![NPM version](https://badge.fury.io/js/iper.png)](http://badge.fury.io/js/iper) [![Build Status](https://travis-ci.org/fibo/iper.png?branch=master)](https://travis-ci.org/fibo/iper?branch=master) [![Dependency Status](https://gemnasium.com/fibo/iper.png)](https://gemnasium.com/fibo/iper)
 
 [dflow](http://www.g14n.info/dflow)
-[![NPM version](https://badge.fury.io/js/dflow.png)](http://badge.fury.io/js/dflow) [![Build Status](https://travis-ci.org/fibo/dflow.png?branch=master)](https://travis-ci.org/fibo/dflow.png?branch=master)[![Dependency Status](https://gemnasium.com/fibo/dflow.png)](https://gemnasium.com/fibo/dflow)
+[![NPM version](https://badge.fury.io/js/dflow.png)](http://badge.fury.io/js/dflow) [![Build Status](https://travis-ci.org/fibo/dflow.png?branch=master)](https://travis-ci.org/fibo/dflow?branch=master) [![Dependency Status](https://gemnasium.com/fibo/dflow.png)](https://gemnasium.com/fibo/dflow)
 
 [tris3d](http://www.g14n.info/tris3d)
-[![NPM version](https://badge.fury.io/js/tris3d.png)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.png?branch=master)](https://travis-ci.org/fibo/tris3d.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.png)](https://gemnasium.com//tris3d)
+[![NPM version](https://badge.fury.io/js/tris3d.png)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.png?branch=master)](https://travis-ci.org/fibo/tris3d?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.png)](https://gemnasium.com/fibo/tris3d)
 
 [strict-mode](http://www.g14n.info/strict-mode)
-[![NPM version](https://badge.fury.io/js/strict-mode.png)](http://badge.fury.io/js/strict-mode) [![Build Status](https://travis-ci.org/fibo/strict-mode.png?branch=master)](https://travis-ci.org/fibo/strict-mode.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/strict-mode.png)](https://gemnasium.com/fibo/strict-mode)
+[![NPM version](https://badge.fury.io/js/strict-mode.png)](http://badge.fury.io/js/strict-mode) [![Build Status](https://travis-ci.org/fibo/strict-mode.png?branch=master)](https://travis-ci.org/fibo/strict-mode?branch=master) [![Dependency Status](https://gemnasium.com/fibo/strict-mode.png)](https://gemnasium.com/fibo/strict-mode)
 
 ## Perl
 
