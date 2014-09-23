@@ -1,9 +1,16 @@
-<dl class="dl-horizontal">
+<div class="list-group">
 {% for post in site.posts limit:{{include.limit}} %}
-  <dt>
-    <span class="badge">{{ post.date | date: "%-d %B %Y" }}</span>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </dt>
-  <dd>{{ post.description }}</dd>
+    <a href="{{ post.url }}" class="list-group-item">
+        <article>
+            <header>
+                <h1> {{ post.title }}  </h1>
+              
+                <p class="lead">{{ post.description }}</p>
+                
+                <time datetime="{{ post.date }}" class="badge">{{ post.date | date: "%F" }}</time>
+            </header>
+        </article>
+    </a>
+    
 {% endfor %}
-</dl>
+</div>
