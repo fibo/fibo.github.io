@@ -18,7 +18,7 @@ kramdown:
 collections:
   projects:
     output: true
-    permalink: ./:path
+    permalink: ./:path.html
 
 # Defaults
 

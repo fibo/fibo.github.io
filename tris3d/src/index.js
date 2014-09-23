@@ -1,3 +1,0 @@
-
-exports.algorithm = require('./algorithm')
-
