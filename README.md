@@ -43,11 +43,13 @@ See [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with
 Test content generation running
 
 ```bash
-jekyll serve
+jekyll serve --watch
 ```
+
+Static content is served [here][5].
 
   [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"
-
+  [5]: http://rider-rufus.codio.io:4000/ "Static content on codio box"
