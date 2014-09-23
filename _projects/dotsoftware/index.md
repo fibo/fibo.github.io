@@ -1,5 +1,5 @@
 ---
-title: .software
+title: dotsoftware
 layout: default
 ---
 
