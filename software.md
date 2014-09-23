@@ -35,3 +35,7 @@ layout: default
 
 [nz-util](http://www.g14n.info/nz-util)
 
+## Bash
+
+[dotsoftware](http://www.g14n.info/dotsoftware)
+
