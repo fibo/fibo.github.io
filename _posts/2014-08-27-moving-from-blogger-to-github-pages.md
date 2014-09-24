@@ -33,7 +33,7 @@ See here more [sites using Jekyll](http://jekyllrb.com/docs/sites/).
 
 ### Basic structure
 
-{% highlight bash %}
+```bash
 ├── _config.yml
 ├── index.html
 ├── _includes/
@@ -44,7 +44,7 @@ See here more [sites using Jekyll](http://jekyllrb.com/docs/sites/).
 |   └── _layouts/post.html
 └── _posts/
     └── _posts/2014-08-27-moving-from-blogger-to-github-pages.md
-{% highlight bash %}
+```
 
 ### Porting a post
 
