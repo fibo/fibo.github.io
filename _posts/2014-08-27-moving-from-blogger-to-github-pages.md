@@ -26,25 +26,23 @@ See here more [sites using Jekyll](http://jekyllrb.com/docs/sites/).
 
 ## Cons
 
-* Loose out of the box Google Ads integration: it is ok for me, cause I will will remove ads.
+* Loose out of the box Google Ads integration: it is ok for me, cause I will remove ads.
 * Loose comments feature: I will implement it with disqus or facebook. By the way I got three type of comments while my blog was on Blogger: spam, that I had to moderate; hints, that I would like to redirect to a collaboration via GitHub, maybe using the site's repo issues tracker; thanks, that I would like to redirect to donations.
  
 ## Steps
 
-### Clone a repo on Github
-
 ### Basic structure
 
-* _config.yml
-* _includes/footer.html
-* _includes/header.html
-* _layouts/default.html
-* _layouts/post.html
-* feed.xml
-* index.html
-* _posts/2014-08-27-moving-from-blogger-to-github-pages.md
-
-### Create a post
+├── _config.yml
+├── index.html
+├── _includes/
+|   ├── _includes/footer.html
+|   └── _includes/header.html
+├── _layouts/
+|   ├── _layouts/default.html
+|   └── _layouts/post.html
+└── _posts/
+    └── _posts/2014-08-27-moving-from-blogger-to-github-pages.md
 
 
 ### Porting a post
@@ -76,11 +74,12 @@ tags:
 ---
 ```
 
-## Social integration
+<!--## Social integration
 
-## Comments
+## Comments-->
 
 ## See also
 
-[Dependencies and versions used by GitHub Pages](https://pages.github.com/versions/)
+* [Dependencies and versions used by GitHub Pages][1]
 
+  [1]: https://pages.github.com/versions/ "Dependencies and versions used by GitHub Pages"
