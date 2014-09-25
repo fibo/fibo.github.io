@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/fibo/algebra.png?branch=master)](https://travis-ci.org/fibo/algebra?branch=master) [![NPM version](https://badge.fury.io/js/algebra.png)](http://badge.fury.io/js/algebra)
