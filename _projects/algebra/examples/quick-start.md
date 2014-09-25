@@ -3,7 +3,7 @@ title: Quick start
 layout: default
 ---
 
-This is a 60 seconds tutorial to get your hands dirty with `algebra`.
+This is a 60 seconds tutorial to get your hands dirty with *algebra*.
 
 ## Complex numbers
 
@@ -15,8 +15,8 @@ var Complex = algebra.ComplexElement;
 // Create two complex numbers
 // z1 = 1 + 2i
 // z2 = 3 + 4i
-var z1 = new Complex(1, 2);
-var z2 = new Complex(3, 4);
+var z1 = new Complex([1, 2]);
+var z2 = new Complex([3, 4]);
 
 // Multiply z1 by z2.
 z1.mul(z2); // (1 + 2i) * (3 + 4i) = -5 + 10i
@@ -43,8 +43,8 @@ var R2 = new Rn(2);
 // Create two vectors
 // v1 = (1, 1)
 // v2 = (2, 4)
-var v1 = new R2.Vector(1, 1);
-var v2 = new R2.Vector(2, 4);
+var v1 = new R2.Vector([1, 1]);
+var v2 = new R2.Vector([2, 4]);
 
 // Add v2 to v1
 v1.add(v2); // (1, 1) + (2, 4) = (3, 5)
@@ -68,11 +68,11 @@ var GL2R = new GLnR(2);
 //       | 1 2 |         | -1 0 |
 //       | 3 4 |   and   |  0 1 |
 //
-var m1 = new GL2R.Matrix(1, 2,
-                         3, 4);
+var m1 = new GL2R.Matrix([1, 2,
+                          3, 4]);
 
-var m2 = new GL2R.Matrix(-1, 0,
-                          0, 1);
+var m2 = new GL2R.Matrix([-1, 0,
+                           0, 1]);
 
 // Multiply m1 by m2 at right side
 //       | 1 2 | * | -1 0 | = | -1 2 |
