@@ -35,10 +35,11 @@ console.log(z1.data); // [-10, 20]
 var algebra = require('algebra');
 
 // Rn is a class representing a real vector space of dimension = n
-var Rn = algebra.RealVectorSpace;
+var V = algebra.VectorSpace;
+var R = algebra.Real;
 
 // Create a real vector space with dimension = 2, a.k.a. the cartesian plane
-var R2 = new Rn(2);
+var R2 = new V(R, 2);
 
 // Create two vectors
 // v1 = (1, 1)

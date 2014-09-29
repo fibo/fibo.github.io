@@ -17,7 +17,7 @@ yum install openldap-servers
 Provo ad installare un server LDAP, vedi http://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-ldap-quickstart.html
 
 [root@localhost ~]# slappasswd
-New password:                          (ho messo ICare)
+New password:
 Re-enter new password:
 {SSHA}epKf086HBhR1Z2CGMOcxWOPRN08wbuhe
 
