@@ -3,7 +3,7 @@ title: Livereload with grunt
 tags:
   - Node
 description: >
-    Instructions to configure <em>Grunt</em> to interact with a <em>Livereload</em> server.
+    Instructions to configure *Grunt* to interact with a *Livereload* server.
 ---
 
 ## What you get
@@ -46,7 +46,6 @@ Here it is a working configuration
 
 {% gist fibo/7054215 %}
 
-
 Now, if you launch
 
 ```bash
@@ -54,7 +53,6 @@ $ grunt
 ```
 
 <div class="alert alert-success">Your browser will open, and the window will change <strong>as soon as</strong> you modify your files.</div>
-
 
 ## See also
 

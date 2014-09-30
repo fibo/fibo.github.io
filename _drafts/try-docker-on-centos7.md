@@ -1,25 +1,14 @@
 
 
+From CentOS project [site](http://www.centos.org/)
+
+> The CentOS Project is pleased to [announce](http://lists.centos.org/pipermail/centos-announce/2014-July/020393.html) the immediate availability of CentOS 7 for x86_64, including images for [docker](https://registry.hub.docker.com/_/centos/) , and various cloud providers.
 
 installo Centos7 su macchina virtuale
 
-faccio yum docker install che ora è nei repo extras di default
-
-e seguo il tutorial di docker
-
-The best way to understand Docker is to try it!
-
-https://www.docker.com/tryit/
-
-
-Welcome to the interactive Docker tutorial
-$ docker version
-$ docker search tutorial
-
-ok ma sono su centos
-
 yum docker install
 service docker start
+chkconfig docker on
 docker pull centos
 docker images centos
 
@@ -46,5 +35,9 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 mmh, come faccio a far partire il container con la centos6 ?
 Inoltre voglio partire installando Oracle express
+
+
+Ok, ho la centos6
+come faccio a copiare dei file per installare Oracle? Ho gli rpm da eseguire e anche i file da modificare
 
 
