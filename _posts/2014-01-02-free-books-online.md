@@ -47,6 +47,10 @@ description: >
 
 [Guide to Advanced Programming in C](http://pfacka.binaryparadise.com/articles/guide-to-advanced-programming-in-C.html)
 
+### Erlang
+
+[Stuff Goes Bad: ERLANG IN ANGER](http://www.erlang-in-anger.com/)
+
 ### Go
 
 [Effective go](http://golang.org/doc/effective_go.html)
@@ -78,6 +82,10 @@ description: >
 [Understanding ECMAScript 6](https://github.com/nzakas/understandinges6)
 
 [Human JavaScript](http://read.humanjavascript.com/)
+
+### Lisp
+
+[The Roots of Lisp](http://www.cs.uml.edu/ecg/pub/uploads/OPLspr09/genesis-of-lisp-jmc.pdf)
 
 ### R
 
