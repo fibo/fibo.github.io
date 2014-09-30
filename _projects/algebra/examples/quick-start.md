@@ -58,11 +58,11 @@ console.log(v1.data); // [3, 5]
 ```js
 var algebra = require('algebra');
 
-// GLnR is the Real General Linear Group of invertible matrices of order n
-var GLnR = algebra.RealGeneralLinearGroup;
+var M = algebra.MatrixSpace;
+var R = algebra.Real;
 
 // Create the group of 2x2 invertible matrices
-var GL2R = new GLnR(2);
+var M2 = new M(R, 2);
 
 // Create two invertible matrices:
 //
