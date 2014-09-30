@@ -5,7 +5,7 @@
             <header>
                 <h1> {{ post.title }}  </h1>
               
-                <p class="lead">{{ post.description }}</p>
+                <p class="lead">{{ post.description | markdownify }}</p>
                 
                 <time datetime="{{ post.date }}" class="badge">{{ post.date | date: "%F" }}</time>
             </header>
