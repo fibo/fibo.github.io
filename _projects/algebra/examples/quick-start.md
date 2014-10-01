@@ -80,9 +80,9 @@ var m2 = new GL2R.Matrix([-1, 0,
 //       | 3 4 |   |  0 1 |   | -3 4 |
 m1.mul(m2);
 
-console.log(m1.data); // [1, 2, 3, 4]
+console.log(m1.data); // [-1, 2, -3, 4]
 
-// Check out m1 determinant, should be 2 = (1 * 4 - 3 * 2) * (-1 * 1 - 0 * 0)
+// Check out m1 determinant, should be 2 = (-1) * 4 - (-3) * 2
 console.log(m1.determinant.data); // 2
 ```
 
