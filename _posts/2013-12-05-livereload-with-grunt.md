@@ -3,7 +3,7 @@ title: Livereload with grunt
 tags:
   - Node
 description: >
-    Instructions to configure *Grunt* to interact with a *Livereload* server.
+    Instructions to configure Grunt to interact with a Livereload server.
 ---
 
 ## What you get

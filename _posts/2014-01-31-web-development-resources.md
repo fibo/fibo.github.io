@@ -3,7 +3,7 @@ title: Web development resources
 tags:
   - Web
 description: >
-    Collection of links I find on my way about [Web development](http://en.wikipedia.org/wiki/Web_development).
+    Collection of links I find on my way about Web development.
 ---
 
 ## Sites
