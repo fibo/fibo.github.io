@@ -4,7 +4,7 @@ tags:
   - Git
   - Windows
 description: >
-    This is a step by step set of instructions on how to use github to contribute to your favourite creative coding project (that is [vvvv](http://vvvv.org) of course) so you can help, improve it, and maybe add features you need for your own projects.
+    This is a step by step set of instructions on how to use github to contribute to your favourite creative coding project (that is vvvv of course) so you can help, improve it, and maybe add features you need for your own projects.
 ---
 
 ## Why using GitHub is a must?

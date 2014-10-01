@@ -3,8 +3,7 @@ title: How to collect Netezza history
 tags:
   - Netezza
 description: >
-    Collecting your Netezza query history is a mandatory step before optimization.
-    Read this article to know how to collect Netezza history easily.
+    Collecting your Netezza query history is a mandatory step before optimization. Read this article to know how to collect Netezza history easily.
 ---
 
 ## Netezza query history setup

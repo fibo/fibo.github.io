@@ -1,10 +1,20 @@
 ---
 title: Article template
 description: >
-    Guidelines to post creation
+    Guidelines to post creation, verbatim
 tags:
   - Blog
 ---
 
+## Section
 
-<div class="alert alert-info">Oracle Instant Client right version depends only on your host Operating System version.</div>
+All sections start with an **h2**.
+
+<div class="alert alert-info">This is an alert</div>
+
+## References
+
+[ref1][1]
+
+  [1] http://link.com/ "link"
+
