@@ -37,7 +37,7 @@ Another motivation was to implements something similar to a Tensor, that is like
 
 ## Features
 
-* Algebra over Real, Complex and Quaternions plus ∞. See also [Alexandroff compactification](http://en.wikipedia.org/wiki/Alexandroff_extension).
+* Expressive api
 * Vectors and Vector Spaces
 * Invertible Matrices and the General Linear Group
 * [Tensors](http://en.wikipedia.org/wiki/Tensor): scalars, vectors and matrices are also implemented as tensors.
@@ -45,5 +45,12 @@ Another motivation was to implements something similar to a Tensor, that is like
 
 ## Examples
 
-Go to [algebra quick start](http://www.g14n.info/algebra/examples/quick-start).
+Begin with [algebra quick start](http://www.g14n.info/algebra/examples/quick-start).
+
+Other examples:
+
+  * [Real number](http://www.g14n.info/algebra/examples/real-number)  
+  * [Real vector](http://www.g14n.info/algebra/examples/real-vector)  
+  * [Complex number](http://www.g14n.info/algebra/examples/complex-number)  
+  * [Custom field](http://www.g14n.info/algebra/examples/custom-field)  
 
