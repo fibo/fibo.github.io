@@ -3,7 +3,9 @@ title: algebra
 layout: default
 ---
 
-{% include algebra/badges.md %}
+> Vectors, Matrices, Tensors
+
+{% include node_badges.md package='algebra' %}
 
 ![on-quaternions-and-octonions!](http://www.g14n.info/images/algebra/Cover-OnQuaternionsAndOctonions.png) ![Algebra!](http://www.g14n.info/images/algebra/Cover-Algebra.png)
 
