@@ -53,6 +53,8 @@ v1.add(v2); // (1, 1) + (2, 4) = (3, 5)
 console.log(v1.data); // [3, 5]
 ```
 
+See also [real vector example](http://www.g14n.info/algebra/examples/real-vector).
+
 ## Matrices
 
 ```js
@@ -61,18 +63,18 @@ var algebra = require('algebra');
 var M = algebra.MatrixSpace;
 var R = algebra.Real;
 
-// Create the group of 2x2 invertible matrices
-var M2 = new M(R, 2);
+// Create the space of 2x2 real matrices
+var R2x2 = new M(R, 2);
 
 // Create two invertible matrices:
 //
 //       | 1 2 |         | -1 0 |
 //       | 3 4 |   and   |  0 1 |
 //
-var m1 = new GL2R.Matrix([1, 2,
+var m1 = new R2x2.Matrix([1, 2,
                           3, 4]);
 
-var m2 = new GL2R.Matrix([-1, 0,
+var m2 = new R2x2.Matrix([-1, 0,
                            0, 1]);
 
 // Multiply m1 by m2 at right side
@@ -80,9 +82,8 @@ var m2 = new GL2R.Matrix([-1, 0,
 //       | 3 4 |   |  0 1 |   | -3 4 |
 m1.mul(m2);
 
-console.log(m1.data); // [1, 2, 3, 4]
+console.log(m1.data); // [-1, 2, -3, 4]
 
-// Check out m1 determinant, should be 2 = (1 * 4 - 3 * 2) * (-1 * 1 - 0 * 0)
+// Check out m1 determinant, should be 2 = (-1) * 4 - (-3) * 2
 console.log(m1.determinant.data); // 2
 ```
-

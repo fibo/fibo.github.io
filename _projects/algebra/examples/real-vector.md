@@ -1,3 +1,7 @@
+---
+title: Real vector
+layout: default
+---
 
 ```
 var algebra = require('algebra')
