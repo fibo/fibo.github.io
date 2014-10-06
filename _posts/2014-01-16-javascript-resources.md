@@ -76,6 +76,9 @@ See my [book collection](http://blog.g14n.info/2014/01/free-books-online.html#ja
 [QUnit](https://qunitjs.com/)
 : A JavaScript Unit Testing framework
 
+[Benchmark.js](http://benchmarkjs.com/)
+: A robust benchmarking library that works on nearly all JavaScript platforms, supports high-resolution timers, and returns statistically significant results.
+
 ### Data visualization
 
 [D3](http://d3js.org/)
