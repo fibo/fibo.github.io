@@ -158,12 +158,12 @@ docs/
 
 ### Other articles
 
-* [Node ecosystem](http://blog.g14n.info/2014/01/node-ecosystem.html)
+* [Node ecosystem](http://www.g14n.info/2014/01/node-ecosystem.html)
 * [Install Node.js without sudo]()
-* [Livereload with grunt](http://blog.g14n.info/2013/12/livereload-with-grunt.html)
-* [Badges everywhere](http://blog.g14n.info/2014/01/badges-everywhere.html)
-* [NodeICO badges](http://blog.g14n.info/2013/12/nodeico-badges.html)
-* [Node class template](http://blog.g14n.info/2014/01/node-class-template.html)
+* [Livereload with grunt](http://www.g14n.info/2013/12/livereload-with-grunt.html)
+* [Badges everywhere](http://www.g14n.info/2014/01/badges-everywhere.html)
+* [NodeICO badges](http://www.g14n.info/2013/12/nodeico-badges.html)
+* [Node class template](http://www.g14n.info/2014/01/node-class-template.html)
 
 
   [1]: https://npmjs.org/

@@ -160,9 +160,9 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 ## See also
 
-[HTML5 resources](http://blog.g14n.info/2014/03/html5-resources.html)
+[HTML5 resources](http://www.g14n.info/2014/03/html5-resources.html)
 
-[CSS resources](http://blog.g14n.info/2014/05/css-resources.html)
+[CSS resources](http://www.g14n.info/2014/05/css-resources.html)
 
-[JavaScript resources](http://blog.g14n.info/2014/01/javascript-resources.html)
+[JavaScript resources](http://www.g14n.info/2014/01/javascript-resources.html)
 

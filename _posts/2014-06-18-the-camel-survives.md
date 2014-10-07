@@ -122,7 +122,7 @@ Now you can choose, to keep *cpanm* or get the official CPAN client
 $ cpanm CPAN
 ```
 
-Then maybe you want [A CPAN client that works like a charm](http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html).
+Then maybe you want [A CPAN client that works like a charm](http://www.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html).
 
 # Upgrade Perl
 
@@ -174,7 +174,7 @@ $ perlbrew switch perl-5.16.0
 
 ## See also
 
-* [A CPAN client that works like a charm](http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html)
+* [A CPAN client that works like a charm](http://www.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html)
 
   [1]: http://search.cpan.org/~bingos/ExtUtils-MakeMaker/lib/ExtUtils/MakeMaker.pm "ExtUtils::MakeMaker"
   [2]: http://search.cpan.org/~haarg/local-lib/lib/local/lib.pm "local::lib"

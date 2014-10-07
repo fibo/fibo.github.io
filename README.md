@@ -1,6 +1,13 @@
 
 # My digital copybook
 
+This is my web book! Gianluca Casati writes here :)
+
+## Domain
+
+The domain for this site is **g14n.info** which redirects to the only subdomain **www.g14n.info**.
+Use the naked domain url `http://g14n.info` only as an entry point, `http://www.g14n.info/path/to/resource` for canonical links.
+
 ## Debug
 
 It is highly recommended to install [Jekyll][3] to preview your site and avoid build errors before publishing it.

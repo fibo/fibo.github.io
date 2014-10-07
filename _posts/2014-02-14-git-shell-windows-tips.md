@@ -180,9 +180,9 @@ For more information see: [Using SSH over the HTTPS port](https://help.github.co
 
 ## See also
 
-* [Git extras on Windows](http://blog.g14n.info/2014/02/git-extras-on-windows.html)
-* [Git resources](http://blog.g14n.info/2014/03/git-resources.html)
+* [Git extras on Windows](http://www.g14n.info/2014/02/git-extras-on-windows.html)
+* [Git resources](http://www.g14n.info/2014/03/git-resources.html)
 
-  [1]: http://blog.g14n.info/2013/04/getting-started-with-git-shell-on.html
+  [1]: http://www.g14n.info/2013/04/getting-started-with-git-shell-on.html
   [2]: https://github.com/
 

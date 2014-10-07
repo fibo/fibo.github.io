@@ -162,7 +162,7 @@ Now you can access **really quickly** to your connection: <kbd>HOST + user@serv 
 
 ## See also
 
-* [Roll your Windows](http://blog.g14n.info/2013/04/roll-your-windows.html)
+* [Roll your Windows](http://www.g14n.info/2013/04/roll-your-windows.html)
 
 
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
