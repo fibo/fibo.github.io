@@ -138,8 +138,6 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [Generators in Node.js: Common Misconceptions and Three Good Use Cases](http://strongloop.com/strongblog/how-to-generators-node-js-yield-use-cases/)
 
-[Building Secure Node.js Applications](http://blog.safaribooksonline.com/2014/03/12/building-secure-node-js-applications/)
-
 [Node.js: managing child processes](http://tech.pro/tutorial/2074/nodejs-managing-child-processes)
 
 [Better logging in Node.js](https://medium.com/on-coding/better-logging-in-node-js-b3cc6fd0dafd)
@@ -164,6 +162,12 @@ Despite it is so young, node ecosystem is pretty rich!
 [An Introduction to Node Streams (video)](http://tagtree.tv/intro-to-node-streams)
 : In 8 minutes, Hendrik Swanepoel demonstrates how to create your own read, write, and transform stream, complete with written notes accompanying the video. 
 
+### Security
+
+[Building Secure Node.js Applications](http://blog.safaribooksonline.com/2014/03/12/building-secure-node-js-applications/)
+
+[Node.js Security Tips](http://blog.risingstack.com/node-js-security-tips/)
+
 ### Promises
 
 [Promise nuggets](http://promise-nuggets.github.io/)
@@ -171,16 +175,17 @@ Despite it is so young, node ecosystem is pretty rich!
 ## Paas hosting
 
 [heroku](https://www.heroku.com/)
-[nodejitsu](https://www.nodejitsu.com/)
-[cloudno.de](http://cloudno.de/)
 
+[nodejitsu](https://www.nodejitsu.com/)
+
+[cloudno.de](http://cloudno.de/)
 
 ## See also
 
-* [Install Node.js without sudo]()
-* [Create an npm package](http://blog.g14n.info/2014/01/create-npm-package.html)
-* [Livereload with grunt](http://blog.g14n.info/2013/12/livereload-with-grunt.html)
-* [Badges everywhere](http://blog.g14n.info/2014/01/badges-everywhere.html)
-* [NodeICO badges](http://blog.g14n.info/2013/12/nodeico-badges.html)
-* [Node class template](http://blog.g14n.info/2014/01/node-class-template.html)
+* [Install Node.js without sudo](http://www.g14n.info/2013/01/install-nodejs-without-sudo.html)
+* [Create an npm package](http://www.g14n.info/2014/01/create-npm-package.html)
+* [Livereload with grunt](http://www.g14n.info/2013/12/livereload-with-grunt.html)
+* [Badges everywhere](http://www.g14n.info/2014/01/badges-everywhere.html)
+* [NodeICO badges](http://www.g14n.info/2013/12/nodeico-badges.html)
+* [Node class template](http://www.g14n.info/2014/01/node-class-template.html)
 

@@ -64,8 +64,8 @@ Click on the command to read its documentation on [git-extras][3] *Readme.md*.
 
 * [Git Extras - Introduction](http://vimeo.com/45506445) screencast
 
-* [Git shell Windows tips](http://blog.g14n.info/2014/02/git-shell-windows-tips.html)
-* [Git for dummies](http://blog.g14n.info/2014/01/git-for-dummies.html)
+* [Git shell Windows tips](http://www.g14n.info/2014/02/git-shell-windows-tips.html)
+* [Git for dummies](http://www.g14n.info/2014/01/git-for-dummies.html)
 
   [2]: https://github.com/visionmedia
   [3]: https://github.com/visionmedia/git-extras

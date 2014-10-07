@@ -129,11 +129,11 @@ You can copy the *postId* entering the *Manage publication* menu section, so YAM
 
 ## See also
 
-[Blogger style tips](http://blog.g14n.info/2014/01/blogger-style-tips.html)
+[Blogger style tips](http://www.g14n.info/2014/01/blogger-style-tips.html)
 
 
   [1]: https://stackedit.io/
-  [2]: http://blog.g14n.info/2013/10/the-definitive-markdown-editor.html
+  [2]: http://www.g14n.info/2013/10/the-definitive-markdown-editor.html
   [3]: https://stackedit.io/
   [4]: https://www.dropbox.com
   [6]: https://lh6.googleusercontent.com/-ggHYwDvHR-U/UmVtLYafvRI/AAAAAAAAA5M/NmOKzndTpr8/s0/%255BUNSET%255D "Publish on Blogger"

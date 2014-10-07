@@ -110,9 +110,9 @@ description: >
 
 ## See also
 
-* [CSS resources](http://blog.g14n.info/2014/05/css-resources.html)
-* [Web development resources](http://blog.g14n.info/2014/01/web-development-resources.html)
-* [JavaScript resources](http://blog.g14n.info/2014/01/javascript-resources.html)
+* [CSS resources](http://www.g14n.info/2014/05/css-resources.html)
+* [Web development resources](http://www.g14n.info/2014/01/web-development-resources.html)
+* [JavaScript resources](http://www.g14n.info/2014/01/javascript-resources.html)
 
   [1]: http://www.html5rocks.com
 

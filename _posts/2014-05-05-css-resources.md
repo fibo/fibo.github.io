@@ -71,11 +71,11 @@ Unsemantic is a fluid grid system that is the successor to the [960 Grid System]
 
 ## See also
 
-[HTML5 resources](http://blog.g14n.info/2014/03/html5-resources.html)
+[HTML5 resources](http://www.g14n.info/2014/03/html5-resources.html)
 
-[Web development resources](http://blog.g14n.info/2014/01/web-development-resources.html)
+[Web development resources](http://www.g14n.info/2014/01/web-development-resources.html)
 
-[JavaScript resources](http://blog.g14n.info/2014/01/javascript-resources.html)
+[JavaScript resources](http://www.g14n.info/2014/01/javascript-resources.html)
 
 
   [1]: https://twitter.com/mdo

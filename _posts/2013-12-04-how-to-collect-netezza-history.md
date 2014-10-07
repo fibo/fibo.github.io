@@ -136,9 +136,9 @@ GROUP BY clienthost,clientip,sessionusername,clienttype
 
 ## See also
 
-* [How to drop a user on Netezza](http://blog.g14n.info/2013/12/how-to-drop-user-on-netezza.html)
-* [Use nzpassword !](http://blog.g14n.info/2013/10/use-nzpassword.html)
-* [SQL client for Netezza](http://blog.g14n.info/2013/05/sql-client-for-netezza.html)
+* [How to drop a user on Netezza](http://www.g14n.info/2013/12/how-to-drop-user-on-netezza.html)
+* [Use nzpassword !](http://www.g14n.info/2013/10/use-nzpassword.html)
+* [SQL client for Netezza](http://www.g14n.info/2013/05/sql-client-for-netezza.html)
 
   [1]: http://documentup.com/fibo/nz-util/
 
