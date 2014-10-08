@@ -12,6 +12,9 @@ Despite it is so young, node ecosystem is pretty rich!
 
 ## Popular packages and frameworks
 
+[Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
+: A curated list of delightful Node.js packages and resources.
+
 ### Automation
 
 [Gulp](http://gulpjs.com/)
