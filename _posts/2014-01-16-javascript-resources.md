@@ -34,7 +34,6 @@ See my [book collection](http://www.g14n.info/2014/01/free-books-online.html#jav
 [JavaScript, JavaScript ...](http://javascriptweblog.wordpress.com/)
 : by Angus Croll
 
-
 ## Libraries
 
 ### Functional programming
@@ -50,23 +49,6 @@ See my [book collection](http://www.g14n.info/2014/01/free-books-online.html#jav
 
 [Bacon.js](http://baconjs.github.io/)
 : A small functional reactive programming lib for JavaScript.
-
-### Web application framework
-
-[Backbone](http://backbonejs.org/)
-
-[Vue](http://vuejs.org/)
-
-[Ember](http://emberjs.com/)
-
-[Angular](http://angularjs.org/)
-
-[Knockout](http://knockoutjs.com/)
-
-[Mithril](http://lhorie.github.io/mithril/)
-
-[Hamlet](http://hamlet.coffee/)
-: Simple and powerful reactive templating
 
 ### Testing
 
