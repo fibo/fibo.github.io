@@ -37,6 +37,8 @@ description: >
 
 [HTTP/1.1: Status Code Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 
+[HTTP/2 FAQ](http://http2.github.io/faq/)
+
 ## Frameworks
 
 ### Client side
@@ -47,10 +49,37 @@ description: >
 [Semantic UI](http://semantic-ui.com/)
 : UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
 
+#### Application framework
+
+[Backbone](http://backbonejs.org/)
+
+[Vue](http://vuejs.org/)
+
+[Ember](http://emberjs.com/)
+
+[Angular](http://angularjs.org/)
+
+[Knockout](http://knockoutjs.com/)
+
+[Mithril](http://lhorie.github.io/mithril/)
+
+[Hamlet](http://hamlet.coffee/)
+: Simple and powerful reactive templating
+
 ### Server side
 
 [Hacklang](http://hacklang.org/)
 : Hack is a programming language for HHVM that interoperates seamlessly with PHP.
+
+## Tools
+
+### Browser testing
+
+[BrowserSync](http://www.browsersync.io/)
+: Time-saving synchronised browser testing.
+
+[LiveReload](http://livereload.com/)
+: The Web Developer Wonderland
 
 ## Fonts
 

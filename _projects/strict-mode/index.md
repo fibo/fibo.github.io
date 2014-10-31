@@ -5,7 +5,7 @@ layout: default
 
 > enables strict mode in your package
 
-{% include node_badges.md package='strixt-mode' %}
+{% include node_badges.md package='strict-mode' %}
 
 ## Installation
 
@@ -25,16 +25,16 @@ just wrap your *index.js* this way
 ```js
 require('strict-mode')(function () {
 
-// your index.js content
+  // your index.js content
 
-// every *require* call inside this function will have strict mode enabled
+  // every *require* call inside this function will have strict mode enabled
 
 })
 ```
 
 ## Motivation
 
-[Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) is a best practice but adding a `"use strict";` on top of every *.js* file in your package could
+[Strict mode][2] is a best practice but adding a `"use strict";` on top of every *.js* file in your package could
 
 * require a big effort
 * be error proning
@@ -48,5 +48,6 @@ it applies strictness to **all** future modules loaded.
 
 Code **stolen** from isaacs' [use-strict][1].
 
-[1]: https://npmjs.org/package/use-strict
+  [1]: https://npmjs.org/package/use-strict
+  [2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode "Strict mode on MDN
 
