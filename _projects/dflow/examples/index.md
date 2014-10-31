@@ -1,46 +1,39 @@
-# Examples
+---
+title: dflow examples
+layout: default
+---
 
-Clone repo to run examples
+## Synopsis
 
-```bash
-$ git clone https://github.com/fibo/dflow
-$ cd dflow
-```
-## Hello world
+Start from [dflow synopsis](https://www.npmjs.org/package/dflow#synopsis).
 
+## Sample graphs
 
-```bash
-$ node examples/helloWorld.js
-```
+The following examples context is defined in [funcs.js]().
 
-For instance, here it is [Hello world source](https://github.com/fibo/dflow/blob/master/examples/helloWorld.js)
+Every example has a *graph* and a set of expected *results* that are used by dflow [test/examples.js]()
 
-```js
-var dflow = require('dflow')
+### empty
 
-// Create a graph with a single task and say "Hello world"
+[graph]() | [results]()
 
-var graph = {
-  tasks: [
-    {
-      name: 'console.log',
-      arg: ['Hello', 'world']
-    }
-  ],
-  pipes: []
-}
+Just an empty graph, `{}` for instance. It is expected that *dflow* has nothing to do.
 
-dflow.evaluate(graph)
-// Hello world
-```
+### sum
 
-## Graphs
+[graph]() | [results]()
 
-Graphs can be stored in JSON format. Run [examples/graphs](https://github.com/fibo/dflow/blob/master/examples/graphs)
-using [examples/evaluateGraph.js](https://github.com/fibo/dflow/blob/master/examples/evaluateGraph.js) passing the graph filename as a parameter, for example
+Takes two operands as arguments and returns its sum.
 
-```bash
-$ node examples/evaluateGraph.js graph2
-The typeof Math.PI is number
-```
+### apply
+
+[graph]() | [results]()
+
+Implements the apply operator.
+
+### dotOperator
+
+[graph]() | [results]()
+
+Like the `.` opretor, takes an object and a prop as arguments and returns `object[prop]` value.
 

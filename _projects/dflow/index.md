@@ -7,46 +7,36 @@ layout: default
 
 {% include node_badges.md package='dflow' %}
 
-[![NPM version](https://badge.fury.io/js/dflow.png)](http://badge.fury.io/js/dflow) [![Build Status](https://travis-ci.org/fibo/dflow.png?branch=master)](https://travis-ci.org/fibo/dflow.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/dflow.png)](https://gemnasium.com/fibo/dflow)
-
-** NOTA BENE **
-
-`dflow` can run from command line, but, it is intended to be used with a GUI.
-See [dflow.it](http://dflow.it), for a **work in progress** demo using [springy](http://getspringy.com).
- 
-
 ## Description
 
-*dflow* is a very simple, minimal and natural idea that could be implemented in any programming language.
+*dflow* is a minimal [Dataflow programming](http://en.wikipedia.org/wiki/Dataflow_programming) engine.
 
-A *dflow* **graph** is a collection of **tasks** and **pipes**. A *graph* is stored in JSON format.
-Every task refers to a function which output can be piped as an argument to other tasks.
-A *task* can have **input pipes** and **output pipes**.
+For a **work in progress** demo, see [dflow.it](http://dflow.it).
 
-A *task* can have 
-* **parents**
-: tasks which output is piped to the task arguments
-* **children**
-: tasks that has an argument piped from the task output
+## Concept
 
-Every task has a **level** from 0 to n. A task with no input pipes has *level* 0.
-A task with *parents* has level = max(level of its parents) + 1
+A *dflow* **graph** is a collection of **tasks** and **pipes** that can be stored in JSON format.
 
-The `dflow.evaluate()` is a filter function that
-  * takes a *graph* as argument
-  * order its *tasks* by their *level*
-  * executes the tasks and store their output
-  * return the evaluated *graph*
+Every task refers to a function which output can be piped as an argument to another other task.
 
-# Examples
+A **context** is a collection of functions.
 
-See online [examples](https://github.com/fibo/dflow/blob/master/examples/README.md)
+`dflow.fun(context, graph)` returns a function that executes the *graph* on given *context*.
 
-# Installation
+Note that *dflow* is **context agnostic**. For example a *context* can be one of the following:
 
-With [npm](https://npmjs.org/) do
+  * [process](http://nodejs.org/api/process.html).
+  * [window](https://developer.mozilla.org/en-US/docs/Web/API/Window).
+  * [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) or any other built-in object.
+  * Any object which properties are functions.
 
-```bash
-$ npm install dflow
-```
+In order to mimic common functions behaviour, dflow provides few built-in tasks:
+
+  * return
+  * arguments
+  * arguments[0] ... arguments[N]
+
+## Examples
+
+See online [examples](http://www.g14n.info/dflow/examples/).
 
