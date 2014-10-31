@@ -16,7 +16,7 @@ Every example has a *graph* and a set of expected *results* that are used by dfl
 ### empty
 
 [graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty.json)
-[results]https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty-results.json)
+[results](https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty-results.json)
 
 Just an empty graph, `{}` for instance. It is expected that *dflow* has nothing to do.
 
