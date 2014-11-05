@@ -83,7 +83,7 @@ $ clip < $HOME/.ssh/id_rsa.pub
 
 which will copy your public key to the clipboard so you can edit your hosting service's account preferences and paste it after you add a new ssh key.
 
-For example, on [GitHub][5] is under the [SSH keys profile settings menu](https://github.com/settings/ssh). 
+For example, on [GitHub][4] is under the [SSH keys profile settings menu](https://github.com/settings/ssh). 
 
 #### Check it
 
@@ -110,20 +110,18 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
 
 <div class="alert alert-warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
  
-Read [Bypass restrictive firewall settings](http://www.g14n.info/2014/02/git-shell-windows-tips.html#bypass-restrictive-firewall-settings) instructions to work around it.
+Read [Bypass restrictive firewall settings](http://g14n.info/2014/02/git-shell-windows-tips#bypass-restrictive-firewall-settings) instructions to work around it.
 
 ## See also
 
-* [Git for dummies](http://www.g14n.info/2014/01/git-for-dummies.html)
-* [Git shell Windows tips](http://www.g14n.info/2014/02/git-shell-windows-tips.html)
-* [Git extras on Windows](http://www.g14n.info/2014/02/git-extras-on-windows.html)
-* [Git resources](http://www.g14n.info/2014/03/git-resources.html)
-
+* [Git for dummies](http://g14n.info/2014/01/git-for-dummies)
+* [Git shell Windows tips](http://g14n.info/2014/02/git-shell-windows-tips)
+* [Git extras on Windows](http://g14n.info/2014/02/git-extras-on-windows)
+* [Git resources](http://g14n.info/2014/03/git-resources)
 
 
   [1]: http://git-scm.com/images/logo@2x.png
   [2]: https://lh6.googleusercontent.com/_O0nduo4l74xVtUf_0kvwdo1x5S5LKUIUPkJrJIuxJ8=s0 "Git setup"
   [3]: https://lh6.googleusercontent.com/0CCA8zW8bPiL4238EDEpIfLvxQGKlW50zumiH7YxFKQ=s0 "Git bash properties"
   [4]: https://github.com/
-  [5]: https://github.com/
 

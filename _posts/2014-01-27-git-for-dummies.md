@@ -16,20 +16,20 @@ description: >
 
 <div class="alert alert-info">If you feel more like a creative, and you like to use a graphic user interface.</div>
  
-Go to [Creative people using GitHub](http://www.g14n.info/2013/08/creative-people-using-github.html), and you are done!
+Go to [Creative people using GitHub](http://g14n.info/2013/08/creative-people-using-github), and you are done!
  
 ### Red pill
 
 <div class="alert alert-danger">If you feel more like a coder and want the power of a shell.</div>
 
-Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/getting-started-with-git-shell-on.html).  
+Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/getting-started-with-git-shell).  
 
 ... and continue with the following articles:
 
-* [Git shell Windows tips](http://www.g14n.info/2014/02/git-shell-windows-tips.html)
-* [Git extras on Windows](http://www.g14n.info/2014/02/git-extras-on-windows.html)
-* [Working with git branches](http://www.g14n.info/2013/11/working-with-git-branches.html)
-* [Git resources](http://www.g14n.info/2014/03/git-resources.html)
+* [Git shell Windows tips](http://g14n.info/2014/02/git-shell-windows-tips)
+* [Git extras on Windows](http://g14n.info/2014/02/git-extras-on-windows)
+* [Working with git branches](http://g14n.info/2013/11/working-with-git-branches)
+* [Git resources](http://g14n.info/2014/03/git-resources)
 
 
   [1]: https://lh6.googleusercontent.com/uRJgqB77ubdAcaZ3ZwodHboPLu4FWjz-1AKgS2i45E8=s0 "Choose your pill"

@@ -119,6 +119,6 @@ Note that this will not remove your *develop* local branch.
 
 ## See also
 
-* [Git shell Windows tips](http://www.g14n.info/2014/02/git-shell-windows-tips.html)
-* [Git extras on Windows](http://www.g14n.info/2014/02/git-extras-on-windows.html)
+* [Git shell Windows tips](http://g14n.info/2014/02/git-shell-windows-tips)
+* [Git extras on Windows](http://g14n.info/2014/02/git-extras-on-windows)
 

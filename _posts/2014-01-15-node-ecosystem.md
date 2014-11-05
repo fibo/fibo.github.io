@@ -185,10 +185,10 @@ Despite it is so young, node ecosystem is pretty rich!
 
 ## See also
 
-* [Install Node.js without sudo](http://www.g14n.info/2013/01/install-nodejs-without-sudo.html)
-* [Create an npm package](http://www.g14n.info/2014/01/create-npm-package.html)
-* [Livereload with grunt](http://www.g14n.info/2013/12/livereload-with-grunt.html)
-* [Badges everywhere](http://www.g14n.info/2014/01/badges-everywhere.html)
-* [NodeICO badges](http://www.g14n.info/2013/12/nodeico-badges.html)
-* [Node class template](http://www.g14n.info/2014/01/node-class-template.html)
+* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
+* [Create an npm package](http://g14n.info/2014/01/create-npm-package)
+* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
+* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
+* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
+* [Node class template](http://g14n.info/2014/01/node-class-template)
 

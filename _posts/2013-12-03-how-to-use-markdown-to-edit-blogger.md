@@ -64,7 +64,7 @@ First of all, I add a first introduction an then a *jump break* with this code
 
 ### Insert a table of contents
 
-It is really easy, just add `[TOC]` and [Stackedit][3] will generate a table of contents.
+It is really easy, just add `[TOC]` and [Stackedit][1] will generate a table of contents.
 
 I use to add it just after the jump break. A great benefit is that every section will gain an internal link, that is very useful if you want to point an anchor to a specific section of your article.
 
@@ -119,22 +119,20 @@ If you are using synchronization feature, it is worth to annotate the *postId* i
 
 You can copy the *postId* entering the *Manage publication* menu section, so YAML will looking something like this.
 
-    ---
-    title: How to use Markdown to edit Blogger posts
-    tags:
-      - Blogger
-      - Markdown
-    postId: 1766129362942319202
-    ---
+```
+---
+title: How to use Markdown to edit Blogger posts
+tags:
+  - Blogger
+  - Markdown
+postId: 1766129362942319202
+---
+```
 
-## See also
-
-[Blogger style tips](http://www.g14n.info/2014/01/blogger-style-tips.html)
 
 
   [1]: https://stackedit.io/
-  [2]: http://www.g14n.info/2013/10/the-definitive-markdown-editor.html
-  [3]: https://stackedit.io/
+  [2]: http://g14n.info/2013/10/the-definitive-markdown-editor
   [4]: https://www.dropbox.com
   [6]: https://lh6.googleusercontent.com/-ggHYwDvHR-U/UmVtLYafvRI/AAAAAAAAA5M/NmOKzndTpr8/s0/%255BUNSET%255D "Publish on Blogger"
   [7]: https://lh6.googleusercontent.com/HMa8DjTjDXl57RbqhO61KdTpseKDylk5i2vw5fiU7h4=s0 "Update document publication"

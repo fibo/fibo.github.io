@@ -7,7 +7,7 @@ layout: default
 
 {% include node_badges.md package='algebra' %}
 
-![on-quaternions-and-octonions!](http://www.g14n.info/images/algebra/Cover-OnQuaternionsAndOctonions.png) ![Algebra!](http://www.g14n.info/images/algebra/Cover-Algebra.png)
+![on-quaternions-and-octonions!](http://g14n.info/images/algebra/Cover-OnQuaternionsAndOctonions.png) ![Algebra!](http://g14n.info/images/algebra/Cover-Algebra.png)
 
 ## Installation
 
@@ -47,12 +47,12 @@ Another motivation was to implements something similar to a Tensor, that is like
 
 ## Examples
 
-Begin with [algebra quick start](http://www.g14n.info/algebra/examples/quick-start).
+Begin with [algebra quick start](http://g14n.info/algebra/examples/quick-start).
 
 Other examples:
 
-  * [Real number](http://www.g14n.info/algebra/examples/real-number)  
-  * [Real vector](http://www.g14n.info/algebra/examples/real-vector)  
-  * [Complex number](http://www.g14n.info/algebra/examples/complex-number)  
-  * [Custom field](http://www.g14n.info/algebra/examples/custom-field)  
+  * [Real number](http://g14n.info/algebra/examples/real-number)  
+  * [Real vector](http://g14n.info/algebra/examples/real-vector)  
+  * [Complex number](http:/g14n.info/algebra/examples/complex-number)  
+  * [Custom field](http://g14n.info/algebra/examples/custom-field)  
 

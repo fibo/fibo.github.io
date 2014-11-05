@@ -128,7 +128,7 @@ and I add the following content
 It is also a good idea to add a link to your project homepage, so it will showed by [npm site][6].
 
 ```json
-"homepage": "http://www.g14n.info/tris3d",
+"homepage": "http://g14n.info/tris3d",
 ```
 
 ## Do your first commit
@@ -158,12 +158,12 @@ docs/
 
 ### Other articles
 
-* [Node ecosystem](http://www.g14n.info/2014/01/node-ecosystem.html)
-* [Install Node.js without sudo]()
-* [Livereload with grunt](http://www.g14n.info/2013/12/livereload-with-grunt.html)
-* [Badges everywhere](http://www.g14n.info/2014/01/badges-everywhere.html)
-* [NodeICO badges](http://www.g14n.info/2013/12/nodeico-badges.html)
-* [Node class template](http://www.g14n.info/2014/01/node-class-template.html)
+* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
+* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
+* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
+* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
+* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
+* [Node class template](http://g14n.info/2014/01/node-class-template)
 
 
   [1]: https://npmjs.org/

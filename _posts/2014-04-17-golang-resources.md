@@ -43,6 +43,6 @@ description: >
 
 ## Free books online
 
-See my [book collection](http://www.g14n.info/2014/01/free-books-online.html#go)
+See my [book collection](http://g14n.info/2014/01/free-books-online#go)
 
 

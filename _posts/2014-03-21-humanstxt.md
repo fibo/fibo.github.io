@@ -17,5 +17,5 @@ It is just a *txt* file, so if you have a website, **just use it!** to tell the 
 
 ... ah, and you can also [record you in the list of Humans](http://humanstxt.org/Im-human.html)!
 
-By the way, here it is [my humans.txt](http://www.g14n.info/humans.txt).
+By the way, here it is [my humans.txt](http://g14n.info/humans.txt).
 

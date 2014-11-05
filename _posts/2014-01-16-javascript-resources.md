@@ -10,7 +10,7 @@ description: >
 
 ## Free books online
 
-See my [book collection](http://www.g14n.info/2014/01/free-books-online.html#javascript)
+See my [book collection](http://g14n.info/2014/01/free-books-online#javascript)
 
 ## Sites
 
@@ -164,11 +164,11 @@ See my [book collection](http://www.g14n.info/2014/01/free-books-online.html#jav
 
 ## See also
 
-* [Node ecosystem](http://www.g14n.info/2014/01/node-ecosystem.html)
-* [HTML5 resources](http://www.g14n.info/2014/03/html5-resources.html)
-* [CSS resources](http://www.g14n.info/2014/05/css-resources.html)
-* [Web development resources](http://www.g14n.info/2014/01/web-development-resources.html)
-* [JavaScript resources](http://www.g14n.info/2014/01/javascript-resources.html)
+* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
+* [HTML5 resources](http://g14n.info/2014/03/html5-resources)
+* [CSS resources](http://g14n.info/2014/05/css-resources)
+* [Web development resources](http://g14n.info/2014/01/web-development-resources)
+* [JavaScript resources](http://g14n.info/2014/01/javascript-resources)
 
 
   [1]: http://www.2ality.com

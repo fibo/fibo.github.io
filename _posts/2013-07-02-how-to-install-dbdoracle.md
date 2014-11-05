@@ -157,7 +157,7 @@ $ prove oracle.t
 
 ## See also
 
-* [sqlplus tips](http://www.g14n.info/2013/10/sqlplus-tips.html)
+* [sqlplus tips](http://g14n.info/2013/10/sqlplus-tips)
 * [A CPAN client that works like a charm][2]
 
 

@@ -36,7 +36,7 @@ cd $NODEJS_CURRENT
 cd $NODEJS_ROOT
 rm current 2> /dev/null # Removes current symbolic link, if any
 ln -s $NODEJS_CURRENT current
-echo Do not forget to edit your environment http://www.g14n.info/2013/01/install-nodejs-without-sudo.html#edit-your-environment
+echo Do not forget to edit your environment http://g14n.info/2013/01/install-nodejs-without-sudo#edit-your-environment
 echo Happy coding!
 ```
 
@@ -102,12 +102,11 @@ $ source $HOME/.bash_profile # reload your env, so you can use node right now
 
 ## See also
 
-* [Node ecosystem](http://www.g14n.info/2014/01/node-ecosystem.html)
-* [Create an npm package](http://www.g14n.info/2014/01/create-npm-package.html)
-* [Livereload with grunt](http://www.g14n.info/2013/12/livereload-with-grunt.html)
-* [Badges everywhere](http://www.g14n.info/2014/01/badges-everywhere.html)
-* [NodeICO badges](http://www.g14n.info/2013/12/nodeico-badges.html)
-* [Node class template](http://www.g14n.info/2014/01/node-class-template.html)
+* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
+* [Create an npm package](http://g14n.info/2014/01/create-npm-package)
+* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
+* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
+* [Node class template](http://g14n.info/2014/01/node-class-template)
 
 
   [1]: http://nodejs.org/

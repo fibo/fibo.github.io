@@ -70,7 +70,7 @@ Two things could not work: network *or* permissions.
 
 The quickest workaround is to check your network configuration and launch commands using sudo.
 
-I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [.software](http://www.g14n.info/.software) to know how to install Perl in some location your user owns.
+I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [.software](http://g14n.info/.software) to know how to install Perl in some location your user owns.
 
 #### local::lib approach
 
