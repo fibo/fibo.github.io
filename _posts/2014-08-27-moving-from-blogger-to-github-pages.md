@@ -75,6 +75,12 @@ tags:
 ---
 ```
 
+## Extras
+
+### Naked domain and SSL
+
+I used [Cloudfare](https://www.cloudflare.com/) to get a naked domain and SSL: it was really easy and took no more than 30 minutes. Now my homepage is **https://g14n.info**.
+
 <!--## Social integration
 
 ## Comments-->
