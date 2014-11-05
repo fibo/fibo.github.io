@@ -53,7 +53,7 @@ v1.add(v2); // (1, 1) + (2, 4) = (3, 5)
 console.log(v1.data); // [3, 5]
 ```
 
-See also [real vector example](http://www.g14n.info/algebra/examples/real-vector).
+See also [real vector example](http://g14n.info/algebra/examples/real-vector).
 
 ## Matrices
 

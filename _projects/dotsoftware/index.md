@@ -136,5 +136,5 @@ $ ssh host1.example.com rm dotsoftware.tar.gz
 
 * __Author    :__ [G. Casati](http://g14n.info)
 * __Repository:__ the repo of this software is hosted [here](https://github.com/fibo/.software)
-* __License   :__ [MIT](http://g14n.info/mit-license/)
+* __License   :__ [MIT](http://g14n.info/mit-license)
 

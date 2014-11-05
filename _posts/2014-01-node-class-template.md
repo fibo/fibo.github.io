@@ -1,0 +1,162 @@
+---
+title: Node class template
+tags:
+  - Node
+description: >
+    Waiting for ES6 class implementation, this article shows how I create an ES5 class with Node.
+---
+
+
+## Conventions
+
+First of all, *Foo* class is defined in a *Foo.js* file:
+
+> every class has a file
+
+Here it is classic *Point2d* class example.
+
+```js
+
+function Point2d (x, y) {
+  Object.defineProperty(this, 'x', {value: x})
+  Object.defineProperty(this, 'y', {value: y})
+}
+
+module.exports = Point2d
+
+```
+
+Note that constructor should contain at least once a `this` keyword.
+
+The file ends with the [node convention][1] for exporting data from one file to another.
+
+## Attributes
+
+When I discovered `Object.defineProperty()` I was really galvanized, cause it is an excelent way to do [OOP][2] in JavaScript IMHO.
+
+See [Object.defineProperty on MDN][3] for a reference.
+
+### Static attribute
+
+In *Point3d.js* add a *dimension* attribute to *Point3d* constructor.
+
+```js
+
+function Point3d () {
+ ...
+ 
+}
+ 
+Point3d.dimension = 3
+
+```
+
+## Inheritance
+
+Let's create a *Point3d* class that inherits from *Point2d*.
+You can use Node's `util.inherits`, but I recommend [inherits][4].
+
+```js
+
+var Point2d  = require('./Point2d.js')
+  , inherits = require('inherits')
+
+function Point3d (x, y, z) {
+  Point2d.apply(this, arguments)
+
+  Object.defineProperty(this, 'z', {value: z})
+}
+
+inherits(Point3d, Point2d)
+
+module.exports = Point3d
+
+```
+
+## Methods
+
+A method can be implemented easily adding a function to `prototype`.
+In *Poin2D.js* after constructor definition
+
+```js
+
+function length () {
+  var x = this.x
+    , y = this.y
+    
+  return Math.sqrt(x * x + y * y)
+}
+
+Point2d.prototype.length = length
+
+```
+
+### Abstract method
+
+Something like
+
+```js
+
+Point2d.prototype.anAbstractMethod = function () {
+  throw new Error('unimplemented abstract method')
+}
+
+```
+
+### Overridden method
+
+In *Point3d.js* add a *length* method to prototype.
+
+```js
+
+inherits(Point3d, Point2d)
+
+...
+
+function length () {
+  var x = this.x
+    , y = this.y
+    , z = this.z
+    
+  return Math.sqrt(x * x + y * y + z * z)
+}
+
+Point3d.prototype.length = length
+
+```
+
+Note that it must be exported after *inherits* call.
+
+### Static method
+
+In *Point3d.js* add a *length* method to *Point3d* constructor.
+
+```js
+
+function Point3d () {
+ ...
+ 
+}
+
+function length (x, y, z) {
+  return Math.sqrt(x * x, y * y, z * z)
+}
+
+Point3d.length = length
+
+```
+
+## See also
+
+* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem.html)
+* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
+* [Create an npm package](http://g14n.info/2014/01/create-npm-package)
+* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
+* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
+* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
+
+
+  [1]: http://nodejs.org/docs/latest/api/modules.html#modules_module_exports
+  [2]: http://en.wikipedia.org/wiki/Object-oriented_programming
+  [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+  [4]: https://npmjs.org/package/inherits

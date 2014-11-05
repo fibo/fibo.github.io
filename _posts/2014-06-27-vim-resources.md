@@ -70,7 +70,7 @@ description: >
 
 ## See also
 
-* [My Vim configuration](http://www.g14n.info/2013/07/my-vim-configuration)
+* [My Vim configuration](http://g14n.info/2013/07/my-vim-configuration)
 
   [1]: http://web.cs.swarthmore.edu/help/vim/home.html
   [2]: http://vim.wikia.com/wiki/Vim_Tips_Wiki

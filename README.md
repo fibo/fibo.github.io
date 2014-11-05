@@ -5,8 +5,8 @@ This is my web book! Gianluca Casati writes here :)
 
 ## Domain
 
-The domain for this site is **g14n.info** which redirects to the only subdomain **www.g14n.info**.
-Use the naked domain url `http://g14n.info` only as an entry point, `http://www.g14n.info/path/to/resource` for canonical links.
+The domain for this site is **g14n.info** registered on [namecheap](https://www.namecheap.com);
+thanks to [CloudFlare](https://www.cloudflare.com/) it is a naked domain and has SSL: both *http* and *https* schemes are available.
 
 ## Debug
 

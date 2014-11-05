@@ -6,7 +6,7 @@ description: >
     Migrate your blog from Blogger to GitHub Pages to gain full control on your content.
 ---
 
-Here it is, another meta post like the one I wrote about [How to use Markdown to edit Blogger posts](http://www.g14n.info/2013/12/how-to-use-markdown-to-edit-blogger.html).
+Here it is, another meta post like the one I wrote about [How to use Markdown to edit Blogger posts](http://g14n.info/2013/12/how-to-use-markdown-to-edit-blogger).
 Yes, this post traits about its creation, infact I am moving from Blogger to Github Pages. 
 
 I started looking these examples:
@@ -48,7 +48,7 @@ See here more [sites using Jekyll](http://jekyllrb.com/docs/sites/).
 
 ### Porting a post
 
-I will focus on post http://www.g14n.info/2013/07/how-to-install-dbdoracle.html, that is the most visited of my blog.
+I will focus on post [How to install DBD::Oracle](http://g14n.info/2013/07/how-to-install-dbdoracle), that is the most visited of my blog.
 
 See [Jekyll docs about how to write a post](http://jekyllrb.com/docs/posts/).
 

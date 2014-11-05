@@ -5,7 +5,7 @@ encoding: utf-8
 author: Gianluca Casati
 description: My digital copybook
 
-permalink: ./:year/:month/:title.html
+permalink: ./:year/:month/:title
 
 exclude: 
   - Gemfile

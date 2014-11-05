@@ -38,5 +38,5 @@ In order to mimic common functions behaviour, dflow provides few built-in tasks:
 
 ## Examples
 
-See online [examples](http://www.g14n.info/dflow/examples/).
+See online [examples](http://g14n.info/dflow/examples/).
 
