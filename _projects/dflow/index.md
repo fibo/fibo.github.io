@@ -11,7 +11,7 @@ layout: default
 
 *dflow* is a minimal [Dataflow programming](http://en.wikipedia.org/wiki/Dataflow_programming) engine.
 
-For a **work in progress** demo, see [dflow.it](http://dflow.it).
+For a **work in progress** editor, see [dflow.it](http://dflow.it).
 
 ## Installation
 
@@ -63,32 +63,6 @@ f('Hello World') // prints "Hello World"
 
 ```
 
-Use builtin `Math` functions. Graphs could be executed on different *contexts* (read `funcs`).
-
-```js
-
-var dflow = require('dflow')
-
-// A simple graph: arguments[0] ==> cos ==> return
-var graph = {
-  task: {
-    'a': 'arguments[0]',
-    'b': 'cos',
-    'c': 'return'
-  },
-  pipe: {
-    '1': ['a', 'b'],
-    '2': ['b', 'c']
-  }
-}
-
-// Create a function that run graph on Math context.
-var f = dflow.fun(Math, graph)
-
-console.log(f(0.5)) // 0.8775825618903728
-
-```
-
 ## Concept
 
 A *dflow* **graph** is a collection of **tasks** and **pipes** that can be stored in JSON format.
@@ -97,22 +71,42 @@ Every task refers to a function which output can be piped as an argument to anot
 
 A **context** is a collection of functions.
 
-`dflow.fun(context, graph)` returns a function that executes the *graph* on given *context*.
+`dflow.fun(context, graph)` returns a function **f** that executes the *graph* on given *context*.
 
 Note that *dflow* is **context agnostic**. For example a *context* can be one of the following:
 
   * [process](http://nodejs.org/api/process.html).
   * [window](https://developer.mozilla.org/en-US/docs/Web/API/Window).
-  * [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) or any other built-in object.
-  * Any object which properties are functions.
+  * Any object: properties of *function* type will be used.
 
 In order to mimic common functions behaviour, dflow provides few built-in tasks:
 
-  * return
-  * arguments
-  * arguments[0] ... arguments[N]
+  * `return`: a task that accepts one argument and behaves like a [Return statement](http://en.wikipedia.org/wiki/Return_statement). 
+  * `arguments`: task that returns the *arguments* of *f*. 
+  * `arguments[0]` ... `arguments[N]`: tasks that return the *arguments[i]* of *f*. 
+  * `.foo`: accessor/mutator to *graph.data.foo*.
+  * `&bar`: returns *context.bar* function.
 
 ## Examples
+
+### page.html
+
+See [test/page.html](https://github.com/fibo/dflow/blob/master/test/page.html) for a working example of *dflow* in a browser context.
+
+### Stream playground
+
+[Node.js Stream Playground](http://ejohn.org/blog/node-js-stream-playground/) first example is
+
+```js
+var fs = require("fs");
+
+// Read File
+fs.createReadStream("input/people.json")
+    // Write File
+    .pipe(fs.createWriteStream("output/people.json"));
+```
+
+Given this [context](https://github.com/fibo/dflow/blob/master/test/examples/stream-playground/funcs.js), the [stream.json graph](https://github.com/fibo/dflow/blob/master/test/examples/stream-playground/stream.json) is evaluated by [stream.js](https://github.com/fibo/dflow/blob/master/test/examples/stream-playground/stream.js) and works.
 
 ### Sample graphs
 
