@@ -10,6 +10,8 @@ permalink: ./:year/:month/:title
 exclude: 
   - Gemfile
   - README.md
+  - _projects/_repos
+  - _projects/README.md
 
 markdown: kramdown
 kramdown:
