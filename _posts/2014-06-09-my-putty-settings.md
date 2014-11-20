@@ -10,7 +10,7 @@ description: >
 
 ## Get Putty
 
-[Putty][2] is a free (MIT-licensed) Win32 Telnet and SSH client. You need it if you want to use a terminal on Windows, I mean a **real** terminal, *MS/DOS* is not decent.
+[Putty][1] is a free (MIT-licensed) Win32 Telnet and SSH client. You need it if you want to use a terminal on Windows, I mean a **real** terminal, *MS/DOS* is not decent.
 
 Check also [PuttyTray](https://puttytray.goeswhere.com/).
 
@@ -25,7 +25,7 @@ Windows Registry Editor Version 5.00
 
 ; This is a comment
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Default%20settings]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Default%20Settings]
 "FullScreenOnAltEnter"=dword:00000001
 "Font"="Consolas"
 "FontIsBold"=dword:00000000
@@ -89,7 +89,7 @@ Choose *UTF-8* encoding.
 
 #### Colours
 
-[Putty][3] default colours are not the best choice. Since folders are *blue* on a *black* background, the output of a simple `ls` is really hard to see.
+[Putty][1] default colours are not the best choice. Since folders are *blue* on a *black* background, the output of a simple `ls` is really hard to see.
 
 The fastest workaround is to flag *Use system colours*.
 
@@ -137,7 +137,7 @@ Install some X Server for Windows. For example you can use [XMing](http://www.st
 
 Then start XMing and connect with PuTTY to the remote server: now you can launch any graphic application, try with *Xeyes*.
 
-![Xeyes][4]
+![Xeyes][2]
 
 ## Tips
 
@@ -166,7 +166,5 @@ Now you can access **really quickly** to your connection: <kbd>HOST + user@serv 
 
 
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-  [2]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-  [3]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-  [4]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
+  [2]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
 
