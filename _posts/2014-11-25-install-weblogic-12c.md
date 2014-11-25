@@ -78,9 +78,7 @@ then source it
 $ source $HOME/.bash_profile
 ```
 
-Note that the *USER_MEM_ARGS* depends on how many RAM your host has. The configuration above worked for me, but, remember that 
-
-<div class="alert alert-warning">I am a WebLogic newbie.</div>
+<div class="alert alert-warning">Note that the <em>USER_MEM_ARGS</em> depends on how many RAM your host has. The configuration above worked for me, but, remember that I am a WebLogic newbie.</div>
 
 Launch WebLogic *configure.sh*
 
@@ -89,7 +87,7 @@ $ export MW_HOME=/opt/weblogic/wls12130
 $ cd $MW_HOME
 $ . ./configure.sh
 
-Do ```you want to configure a new domain?  [y/n]? n
+Do you want to configure a new domain?  [y/n]? n
 ```
 
 Answer **n** otherwise it will be created a domain under the *MW_HOME* which is not recommended (see $MW_HOME/README.txt).
@@ -137,8 +135,11 @@ Check that it starts *RUNNING mode*
 $ tail -f $HOME/start_weblogic.nohup
 ```
 
-Press <kbd>CTRL-C</kbd> to exit.
+Press <kbd>CTRL-C</kbd> to exit. Now you can exit your ssh session.
 
+<div class="alert alert-warning">
+Your WebLogic server is up and running!
+</div>
 
   [1]: http://ant.apache.org/bindownload.cgi "Apache Ant download"
   [2]: http://www.oracle.com/technetwork/indexes/downloads/index.html "Oracle downloads"
