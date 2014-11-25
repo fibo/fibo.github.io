@@ -119,7 +119,7 @@ and I add the following content
 ```json
 "license": [ {
   "type": "MIT",
-  "url": "http://fibo.mit-license.org/"
+  "url": "http://g14n.info/mit-license"
 } ],
 ```
 
