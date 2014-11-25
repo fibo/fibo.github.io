@@ -137,7 +137,7 @@ $ tail -f $HOME/start_weblogic.nohup
 
 Press <kbd>CTRL-C</kbd> to exit. Now you can exit your ssh session.
 
-<div class="alert alert-warning">
+<div class="alert alert-info">
 Your WebLogic server is up and running!
 </div>
 
