@@ -3,7 +3,7 @@ title: Create an npm package
 tags:
   - Node
 description: >
-    Ok, you love Node! but, how to create an npm package?
+    Ok, you ❤ Node! but, how to create an npm package?
 ---
 
 ## Get an account

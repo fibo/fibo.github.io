@@ -5,7 +5,7 @@ tags:
   - Windows
   - Virtualization
 description: > 
-    Setup an Ubuntu Server virtual machine on Windows using VirtualBox
+    Setup an Ubuntu Server virtual machine on Windows using VirtualBox.
 ---
 
 ## Requirements

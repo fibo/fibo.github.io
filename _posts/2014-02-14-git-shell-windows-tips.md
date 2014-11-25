@@ -4,7 +4,7 @@ tags:
   - Git
   - Windows
 description: >
-    There are a lot of goodies and tips it is worth to know when you install Git shell on Windows
+    There are a lot of goodies and tips it is worth to know when you install Git shell on Windows.
 ---
 
 ## Requirements

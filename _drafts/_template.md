@@ -1,9 +1,9 @@
 ---
 title: Article template
-description: >
-    Guidelines to post creation, verbatim
 tags:
   - Blog
+description: >
+    Guidelines to post creation, verbatim. Use punctuation!
 ---
 
 ## Section

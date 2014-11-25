@@ -1,9 +1,9 @@
 ---
 title: How to drop a user on Netezza
-description: >
-    You are trying to drop a user but Netezza complains cause it "owns objects"? This article shows how to solve this problem.
 tags:
   - Netezza
+description: >
+    You are trying to drop a user but Netezza complains cause it "owns objects"? This article shows how to solve this problem.
 ---
 
 ## Problem

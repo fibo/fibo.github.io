@@ -4,7 +4,7 @@ tags:
   - Web
   - JavaScript
 description: >
-    Collection of links and resources about JavaScript
+    Collection of links and resources about JavaScript.
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: Install WebLogic 12c
-description: >
-    How to install WebLogic 12c development version on Linux RedHat
 tags:
   - Web development
   - Software
+description: >
+    How to install WebLogic 12c development version on Linux RedHat.
 ---
 
 ## Goal
@@ -116,8 +116,8 @@ Check that it starts *RUNNING mode*
 $ tail -f $HOME/start_weblogic.nohup
 ```
 
-Press <kbd>CTRL-C</kbd>> to exit.
+Press <kbd>CTRL-C</kbd> to exit.
 
 
-  [1] http://ant.apache.org/bindownload.cgi "Apache Ant download"
-  [2] http://www.oracle.com/technetwork/indexes/downloads/index.html "Oracle downloads"
+  [1]: http://ant.apache.org/bindownload.cgi "Apache Ant download"
+  [2]: http://www.oracle.com/technetwork/indexes/downloads/index.html "Oracle downloads"
