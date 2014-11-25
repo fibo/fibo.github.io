@@ -13,9 +13,28 @@ Reading this article you will be able to perform a WebLogic 12c installation on 
 
 ## Requirements
 
+I assume the installation will be in */opt* folder and there is enough space, at least 1Gb
+
+```bash
+# du -sh /opt/*
+0       /opt/java
+26M     /opt/JDBC
+286M    /opt/jdk1.7.0_71
+20K     /opt/lost+found
+539M    /opt/weblogic
+```
+
+I also assume *Java JDK 1.7* is installed and a symbolic link */opt/java* points to the current version, something like
+
+```bash
+$ ls -l /opt/|grep jdk
+lrwxrwxrwx. 1 root     root        11 Nov 19 12:34 java -> jdk1.7.0_71
+drwxr-xr-x. 8 root     root      4096 Sep 27 02:14 jdk1.7.0_71
+```
+
 Get files from [Apache Ant][1] and [Oracle][2] download pages. You will need an Oracle account, note also that, WebLogic is licensed **only for development** purpouse. For production environment you will need to purchase a license.
 
-Copy files *apache-ant-1.9.4-bin.zip* and *wls1213_dev.zip* to */tmp* path on target host, for instance *s-ng-cmunica-dev.premiere.de* and create folders *weblogic* user will own.
+Copy files *apache-ant-1.9.4-bin.zip* and *wls1213_dev.zip* to */tmp* path on target host, for instance *host.example.com* and create folders *weblogic* user will own.
 
 ```bash
 $ sudo su -
@@ -95,7 +114,7 @@ When you see message
 Server state changed to RUNNING
 ```
 
-login to http://s-ng-cmunica-dev.premiere.de:7001/console with *weblogic* user credentials.
+login to http://host.example.com:7001/console with *weblogic* user credentials.
 *weblogic* user.
 
 Finally login with another session as *weblogic* Unix user and launch
