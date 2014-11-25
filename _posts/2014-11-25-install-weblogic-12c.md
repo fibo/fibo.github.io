@@ -32,7 +32,7 @@ lrwxrwxrwx. 1 root     root        11 Nov 19 12:34 java -> jdk1.7.0_71
 drwxr-xr-x. 8 root     root      4096 Sep 27 02:14 jdk1.7.0_71
 ```
 
-Get files from [Apache Ant][1] and [Oracle][2] download pages. You will need an Oracle account, note also that, WebLogic is licensed **only for development** purpouse. For production environment you will need to purchase a license.
+Get files from [Apache Ant][1] and [Oracle][2] download pages. You will need an Oracle account: available WebLogic download is licensed **only for development** purpouse. For production environment you will need to purchase a license.
 
 Copy files *apache-ant-1.9.4-bin.zip* and *wls1213_dev.zip* to */tmp* path on target host, for instance *host.example.com* and create folders *weblogic* user will own.
 
@@ -43,7 +43,7 @@ $ sudo su -
 # mkdir /opt/weblogic/mydomain
 ```
 
-Note that the domain folder must be a subfolder of a folder the *weblogic* user can read/write or the domain creation will fail.
+If you want a different location for the domain folder, you should know that it must be a subfolder of a folder the *weblogic* user can read/write or the domain creation will fail.
 
 ## Installation
 
@@ -78,7 +78,9 @@ then source it
 $ source $HOME/.bash_profile
 ```
 
-Note the *USER_MEM_ARGS* depends on how many RAM your host has. The configuration above worked for me, but, remember that <div class="alert alert-warning">I am a WebLogic newbie</div>.
+Note that the *USER_MEM_ARGS* depends on how many RAM your host has. The configuration above worked for me, but, remember that 
+
+<div class="alert alert-warning">I am a WebLogic newbie.</div>
 
 Launch WebLogic *configure.sh*
 
