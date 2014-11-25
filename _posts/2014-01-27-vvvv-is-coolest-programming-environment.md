@@ -4,7 +4,7 @@ tags:
   - Software
   - VVVV
 description: >
-    About the VVVV ecosystem
+    About the VVVV ecosystem.
 ---
 
 

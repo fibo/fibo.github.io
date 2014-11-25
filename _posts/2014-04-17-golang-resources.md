@@ -3,7 +3,7 @@ title: Golang resources
 tags:
   - Go
 description: >
-    Collection of links and resources about Golang
+    Collection of links and resources about Golang.
 ---
 
 ## Sites

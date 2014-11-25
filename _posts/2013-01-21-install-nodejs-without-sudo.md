@@ -3,7 +3,7 @@ title: Install Node.js without sudo
 tags:
   - Node
 description: >
-    This is a straightforward Node.js installation, just copy and paste the commands in your shell prompt. Root permissions are not required
+    This is a straightforward Node.js installation, just copy and paste the commands in your shell prompt. Root permissions are not required!
 ---
 
 <div class="alert alert-warning">The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
@@ -110,5 +110,3 @@ $ source $HOME/.bash_profile # reload your env, so you can use node right now
 
 
   [1]: http://nodejs.org/
-
-

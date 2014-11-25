@@ -3,7 +3,7 @@ title: My favourite Firefox addons
 tags:
   - Software
 description: >
-    Firefox addons that simplify my life    
+    Firefox addons that simplify my life.
 ---
 
 Firefox saved us from Internet Explorer nightmare. It was the example that Google followed to create the successful [Chromium projects](http://www.chromium.org/).

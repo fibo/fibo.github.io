@@ -3,7 +3,7 @@ title: Working with git branches
 tags:
   - Git
 description: >
-    Learn how to perform basic tasks with git local and remote branches
+    Learn how to perform basic tasks with git local and remote branches.
 ---
 
 <div class="alert alert-info">Launch all the commands in this tutorial, from the first to the last, and you will cover almost all operations on branches.</div>
