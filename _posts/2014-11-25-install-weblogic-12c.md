@@ -141,6 +141,19 @@ Press <kbd>CTRL-C</kbd> to exit. Now you can exit your ssh session.
 Your WebLogic server is up and running!
 </div>
 
+## Configuration
+
+Follows some extra tip about WebLogic configuration.
+
+### Log4j
+
+Create a *log4j.xml* file, for instance */opt/weblogic/domain/config/log4j.xml*, and add this line to your *.bash_profile*
+
+```bash
+export LOG4J_CONFIG_FILE=/opt/weblogic/domain/config/log4j.xml
+```
+
+
   [1]: http://ant.apache.org/bindownload.cgi "Apache Ant download"
   [2]: http://www.oracle.com/technetwork/indexes/downloads/index.html "Oracle downloads"
 
