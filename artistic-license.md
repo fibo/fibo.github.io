@@ -5,12 +5,7 @@ layout: license
 
 ## Preamble
 
-The intent of this document is to state the conditions under which a
-Package may be copied, such that the Copyright Holder maintains some
-semblance of artistic control over the development of the package,
-while giving the users of the package the right to use and distribute
-the Package in a more-or-less customary fashion, plus the right to make
-reasonable modifications.
+The intent of this document is to state the conditions under which a Package may be copied, such that the Copyright Holder maintains some semblance of artistic control over the development of the package, while giving the users of the package the right to use and distribute the Package in a more-or-less customary fashion, plus the right to make reasonable modifications.
 
 ## Definitions:
 
