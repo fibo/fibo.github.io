@@ -47,7 +47,7 @@ Get root permissions and install it, on Centos just launch
 $ yum install perl-ExtUtils-MakeMaker
 ```
 
-If you can't do it, go straight and compile your own Perl: see [.software](http://g14n.info/.software). <!--- link ad articolo compila Perl oppure .software -->
+If you can't do it, go straight and compile your own Perl: see [.software](http://g14n.info/dotsoftware).
 
 ### Choose your target
 
@@ -102,7 +102,7 @@ At this point you have your system Perl with a *cpanm* that can install locally
 Give it a try it, install [Perl::Tidy][5]
 
 
-```
+```bash
 $ cpanm Perl::Tidy
    Working on Perl::Tidy
 Fetching http://www.cpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-20140328.tar.gz ... OK
@@ -135,7 +135,7 @@ $ echo export PERLBREW_ROOT=$PERLBREW_ROOT >> ~/.perl_profile
 
 Install it
 
-```
+```bash
 $ cpanm App::perlbrew
 ```
 
