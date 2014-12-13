@@ -17,7 +17,7 @@ It has interesting features, a clean ecosystem, it runs on GAE: it is very attra
 
 ### Installation
 
-Get your installer from [go downloads](http://code.google.com/p/go/downloads/list), at the time o this writing I downloaded *go1.2.1.windows-amd64.msi*.
+Get your installer from [Go Downloads][2].
 
 ### Environment
 
@@ -58,5 +58,5 @@ Inspiered by [Why Go is elegant and makes my code elegant](http://filippo.io/why
 
 * [Golang resources](http://g14n.info/2014/04/golang-resources)
 
-  [1]: http://golang.org/
-
+  [1]: http://golang.org/ "The Go Programming Language"
+  [2]: https://golang.org/dl/ "Go Downloads"
