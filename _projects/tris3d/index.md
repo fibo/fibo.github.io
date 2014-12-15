@@ -1,6 +1,6 @@
 ---
 title: tris3d
-layout: default
+layout: project
 ---
 
 > 3d tic tac toe

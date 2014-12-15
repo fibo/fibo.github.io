@@ -1,6 +1,6 @@
 ---
 title: nz-util
-layout: default
+layout: project
 ---
 
 > Netezza utility procedures

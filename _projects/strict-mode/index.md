@@ -1,6 +1,6 @@
 ---
 title: strict-mode
-layout: default
+layout: project
 ---
 
 > enables strict mode in your package

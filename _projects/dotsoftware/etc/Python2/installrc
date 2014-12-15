@@ -1,3 +1,0 @@
-
-SOURCES_URI=https://python.org/ftp/python/${PYTHON2_VERSION}/Python-${PYTHON2_VERSION}.tgz
-
