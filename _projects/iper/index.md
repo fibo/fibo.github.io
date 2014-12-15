@@ -1,6 +1,6 @@
 ---
 title: iper
-layout: default
+layout: project
 ---
 
 > Hypergraphs

@@ -1,7 +1,8 @@
 ---
 title: dflow
-layout: default
+layout: project
 ---
+# dflow
 
 > Dataflow programming
 
@@ -76,7 +77,7 @@ A *graph* has the following properties
   * data: (optional) persistence.
   * func: (optional) collection of subgraphs.
 
-*dflow* provides few [builtin functions](https://github.com/fibo/dflow/blob/master/src/builtinFunctions) and injects the following ones
+*dflow* provides few [builtin functions](https://github.com/fibo/dflow/blob/master/src/builtinFunctions.js) and injects the following ones
 
   * `return`: a task that accepts one argument and behaves like a [Return statement](http://en.wikipedia.org/wiki/Return_statement). 
   * `arguments`: task that returns the *arguments* of *dflowFun*. 
@@ -111,31 +112,31 @@ Every example has a *graph* and a set of expected *results* that are required by
 
 #### empty
 
-[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty.json)
+[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty.json) |
 [results](https://github.com/fibo/dflow/blob/master/test/examples/graphs/empty-results.json)
 
 Just an empty graph, `{}` for instance. It is expected that *dflow* has nothing to do.
 
 #### sum
 
-[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/sum.json)
+[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/sum.json) |
 [results](https://github.com/fibo/dflow/blob/master/test/examples/graphs/sum-results.json)
 
 Takes two operands as arguments and returns its sum.
 
 #### apply
 
-[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/apply.json)
+[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/apply.json) |
 [results](https://github.com/fibo/dflow/blob/master/test/examples/graphs/apply-results.json)
 
 Implements the apply operator.
 
 #### dotOperator
 
-[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/dotOperator.json)
+[graph](https://github.com/fibo/dflow/blob/master/test/examples/graphs/dotOperator.json) |
 [results](https://github.com/fibo/dflow/blob/master/test/examples/graphs/dotOperator-results.json)
 
-Like the `.` opretor, takes an object and a prop as arguments and returns `object[prop]` value.
+Like the `.` operator, takes an object and a prop as arguments and returns `object[prop]` value.
 
 ## License
 

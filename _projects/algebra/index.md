@@ -1,6 +1,6 @@
 ---
 title: algebra
-layout: default
+layout: project
 ---
 
 > Vectors, Matrices, Tensors

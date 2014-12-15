@@ -1,3 +1,0 @@
-
-SOURCES_URI=http://ftp.gnu.org/gnu/make/make-${MAKE_VERSION}.tar.gz
-

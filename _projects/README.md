@@ -1,9 +1,9 @@
 
 # Readme driven development
 
-Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their realtive README.md.
+Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their README.md file.
 
-The *_repos* folder contains relative reports.
+The *_repos* folder contains my repositories.
 
 
 The *_repos* folder and this *README.md* is ignored by Jekyll.
@@ -32,4 +32,6 @@ cat _repos/foo/README.md >> foo/index.md
 ```
 
 Remove `# foo` heading from foo/index.md
+
+TODO: automate index.md update with some git hook or updateREADME.sh script
 

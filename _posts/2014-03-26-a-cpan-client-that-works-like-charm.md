@@ -18,10 +18,7 @@ Do not edit that file, use `o conf` instead from the *cpan* interactive shell, s
 
 ### First run
 
-
-
 It is really easy to start, just launch 
-
 
 ```bash
 $ cpan
@@ -32,7 +29,6 @@ configuration option instead.
 
 Would you like to configure as much as possible automatically? [yes]
 ```
-
 
 and hit enter (two times) to accept defaults. It will be enough to let you prompt into an interactive shell so you can start install modules.
 
@@ -62,9 +58,7 @@ otherwise read [Troubleshooting](#troubleshooting) if you had problems during in
 
 ### Troubleshooting
 
-
 <span class="label label-danger">ATTENTION</span>
-
 
 Two things could not work: network *or* permissions.
 
@@ -73,7 +67,6 @@ The quickest workaround is to check your network configuration and launch comman
 I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [.software](http://g14n.info/.software) to know how to install Perl in some location your user owns.
 
 #### local::lib approach
-
 
 By the way, *cpan* will realize if you have not write permission and will ask what approach do you want: default is [local::lib](http://search.cpan.org/dist/local-lib/lib/local/lib.pm) that is a good idea if you don't want to build your own Perl.
 
@@ -92,7 +85,7 @@ $ source ~/.bash_profile # or reconnect
 Just type **h** in a *cpan* shell
 
 ```
-h
+cpan> h
 ```
 
 ### Configuration
@@ -100,7 +93,7 @@ h
 You can reconfigure **all** *cpan* client options by launching
 
 ```
-o conf init
+cpan> o conf init
 
 CPAN.pm requires configuration, but most of it can be done automatically.
 If you answer 'no' below, you will enter an interactive dialog for each
@@ -114,26 +107,19 @@ type **no** and follow instructions.
 In particular, if you need *cpan* pick mirrors for you, launch
 
 ```
-o conf init urllist
+cpan> o conf init urllist
 ```
 
-
-and hit enter.
-
-
 #### Get CPAN latest version
-
-
 
 <span class="label label-danger">STRONGLY RECOMMENDED</span>
 
 First of all, make sure you have *CPAN.pm* module updated to latest version
 
-
 ```
-install CPAN
+cpan> install CPAN
 ...
-reload CPAN
+cpan> reload CPAN
 ```
 
 #### Autocommit
@@ -143,7 +129,7 @@ reload CPAN
 Always commit changes to config variables to disk.
 
 ```
-o conf auto_commit 1
+cpan> o conf auto_commit 1
 ```
 
 <div class="alert alert-warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
@@ -154,26 +140,22 @@ Note that <em>auto_commit</em> is disabled by default, so you should launch <str
 
 #### Command number in prompt
 
-
-
 <span class="label label-default">PERSONAL</span>
 
 Disable the command number in the prompt.
 
 ```
-o conf commandnumber_in_prompt 0
+cpan> o conf commandnumber_in_prompt 0
 ```
 
-
 #### Enable history
-
 
 <span class="label label-warning">RECOMMENDED</span>
 
 You need to install the following modules
 
 ```
-install Term::ReadLine::Perl Term::ReadKey
+cpan> install Term::ReadLine::Perl Term::ReadKey
 ```
 
 #### YAML
@@ -183,40 +165,34 @@ install Term::ReadLine::Perl Term::ReadKey
 Install [YAML](http://search.cpan.org/~ingy/YAML/) Perl module
 
 ```
-install YAML
+cpan> install YAML
 ```
 
 and try to install a faster *YAML* implementation
 
 ```
-install YAML::XS
+cpan> install YAML::XS
 ```
 
 It will need a C compiler installed on your system. If installation is successful, tell *cpan* which YAML implementation you prefer.
 
 ```
-o conf yaml_module YAML::XS
+cpan> o conf yaml_module YAML::XS
 ```
 
-
-
 #### LWP
-
 
 <span class="label label-warning">RECOMMENDED</span>
 
 Make sure [LWP](http://search.cpan.org/~gaas/libwww-perl/) is installed and up to date
 
 ```bash
-install LWP
+$ install LWP
 ```
 
 so *cpan* will use it to fetch files from Internet.
 
-
 #### CPAN::SQLite
-
-
 
 <span class="label label-info">OPTIONAL</span>
 
@@ -230,12 +206,10 @@ install CPAN::SQLite
 ```
 
 ```
-o conf use_sqlite yes
+cpan> o conf use_sqlite yes
 ```
 
-
 #### Build prerequisites automatically
-
 
 <span class="label label-warning">RECOMMENDED</span>
 
@@ -244,59 +218,58 @@ The *CPAN.pm* module can detect when a module which you are trying to build depe
 I prefer to install prerequisites also when it is only needed for building or testing in order to save time on future installations.
 
 ```
-o conf prerequisites_policy follow
-o conf build_requires_install_policy yes
+cpan> o conf prerequisites_policy follow
+cpan> o conf build_requires_install_policy yes
 ```
 
 #### Enable colors
 
-
 <span class="label label-default">PERSONAL</span>
 
 ```
-o conf colorize_output yes
-o conf colorize_print bold white on_black
-o conf colorize_warn bold red on_black
-o conf colorize_debug green on_black
+cpan> o conf colorize_output yes
+cpan> o conf colorize_print bold white on_black
+cpan> o conf colorize_warn bold red on_black
+cpan> o conf colorize_debug green on_black
 ```
 
 or choose your favourite colors
 
 ```
-o conf init /colorize/
+cpan> o conf init /colorize/
 ```
 
-
 #### Character set
-
 
 <span class="label label-default">PERSONAL</span>
 
 In general, *CPAN* is English speaking territory, so the character set does not matter much but some modules have names that are outside the ASCII range. Since my terminal supports *UTF-8*, I set
 
 ```
-o conf term_is_latin no
+cpan> o conf term_is_latin no
 ```
-
 
 ### Upgrade modules
 
 Print modules that can be upgraded.
 
 ```
-r
+cpan> r
 ```
 
 and
 
 ```
-upgrade
+cpan> upgrade
 ```
 
 Both commands accept a `/regexp/` as argument. See [Help](#help).
 
-## cpanminus
+## Distroprefs
 
+[Distroprefs][3] is a great feature that let you customize module building.
+
+## cpanminus
 
 [App::cpanminus](http://search.cpan.org/~miyagawa/App-cpanminus/lib/App/cpanminus.pm) is a gift from Perl community angel [Tatsuhiko Miyagawa](http://search.cpan.org/~miyagawa/).
 
@@ -309,6 +282,8 @@ $ cpan App::cpanminus
 ```
 
 and use `cpanm` instead of `cpan` from now on. It is **light, fast and minimal** CPAN client, but, it has many features too: see [cpanm](http://search.cpan.org/~miyagawa/App-cpanminus/bin/cpanm) or `cpanm -h` to see what *cpanminus* can do.
+
+Remember that you should probably pick a mirror and set mirror-only to get consistent results. `PERL_CPANM_OPT` is your friend for such things.
 
 You can use [App::cpanoutdated](http://search.cpan.org/dist/App-cpanoutdated/bin/cpan-outdated) to detect outdated CPAN modules in your environment.
 
@@ -324,15 +299,15 @@ then update all modules with
 $ cpan-outdated | cpanm
 ```
 
-
 Note that also *cpan* has the [upgrade modules feature](#upgrade-modules) but *cpan-outdated* is faster, uses less memory and is integrated with *cpanm*.
-
 
 ## See also
 
 * [Learn Perl - CPAN and Perl Configuration Howto](http://learnperl.scratchcomputing.com/tutorials/configuration/)
-* [The camel survives!]({% post_url 2014-06-18-the-camel-survives %})
+* [The camel survives!]({% post_url 2014-06-18-the-camel-survives %}).
+* Matt Trout's [Library deployment](http://shadow.cat/blog/matt-s-trout/mstpan-9/) article.
 
   [1]: http://www.cpan.org/ "CPAN"
   [2]: http://www.perl.org/ "Perl"
+  [3]: https://metacpan.org/pod/CPAN#Configuration-for-individual-distributions-Distroprefs "Distroprefs"
 
