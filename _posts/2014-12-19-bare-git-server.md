@@ -36,6 +36,7 @@ $ cd
 $ mkdir repofoo.git
 $ cd repofoo.git
 $ git init --bare
+Initialized empty Git repository in /home/jsmith/repofoo.git/
 ```
 
 ### Clone repo locally
@@ -60,11 +61,12 @@ $ git clone jsmith@gitbox.example.org:~/repofoo.git
 A common scenario is init a repo locally, and then put it on git server lately.
 First [create master git repo](#create-master-git-repo), *repobar* for instance.
 I assume you already created *repobar* locally with `git init`.
-Then go into your local *repobar* folder and add the **remote origin**.
+Then go into your local *repobar* folder and add the **remote origin** and set **upstream master**.
 
 ```bash
 $ cd ~/gitbox.example.org/jsmith/repobar
 $ git remote add origin jsmith@gitbox.example.org:~/repofoo.git
+$ git push --set-upstream origin master
 ```
 
 Now you can push *repobar* commits from your laptop to *gitbox.example.org*
