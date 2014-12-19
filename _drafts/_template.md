@@ -20,5 +20,5 @@ All sections start with an **h2**.
 
 [ref1][1]
 
-  [1] http://link.com/ "link"
+  [1]: http://link.com/ "link"
 
