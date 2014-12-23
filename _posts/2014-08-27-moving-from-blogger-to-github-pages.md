@@ -81,12 +81,38 @@ tags:
 
 I used [Cloudfare](https://www.cloudflare.com/) to get a naked domain and SSL: it was really easy and took no more than 30 minutes. Now my homepage is **https://g14n.info**.
 
-<!--## Social integration
+### Comments
 
-## Comments-->
+On blogger you have comments and moderation out of the box. To achieve the same feature in a modular way, I chose [Disqus](https://disqus.com/).
+
+Basically I added an `{% include disqus.html %}` to my *_layouts/posts.html* and created an *_include/disqus.html* with all the code required.
+
+Read how to [embed Disqus code][2] as a reference.
+
+A good tip is to add the *disqus_shortname* variable into the *_config.yml*
+
+```
+disqus:
+  shortname: g14n
+```
+
+and to use [Jekyll variables][3] to set [Disqus Javascript configuration variables][4] like this
+
+```js
+var disqus_shortname  = '{{ site.disqus.shortname }}';
+var disqus_identifier = '{{ page.id }}';
+var disqus_title      = '{{ page.title }}';
+var disqus_url        = '{{ page.url }}';
+```
+
+<!--### Social integration-->
 
 ## See also
 
 * [Dependencies and versions used by GitHub Pages][1]
 
   [1]: https://pages.github.com/versions/ "Dependencies and versions used by GitHub Pages"
+  [2]: https://help.disqus.com/customer/portal/articles/472097-universal-embed-code "Disqus Universal Embed Code"
+  [3]: http://jekyllrb.com/docs/variables/ "Jekyll Variables"
+  [4]: https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables "Disqus JavaScript configuration variables"
+
