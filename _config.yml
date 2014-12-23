@@ -52,3 +52,6 @@ google-analytics:
 
 repo: https://github.com/fibo/fibo.github.io/
 
+disqus:
+  shortname: g14n
+
