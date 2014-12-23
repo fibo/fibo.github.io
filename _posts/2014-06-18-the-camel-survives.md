@@ -122,62 +122,16 @@ Now you can choose, to keep *cpanm* or get the official CPAN client
 $ cpanm CPAN
 ```
 
-Then maybe you want [A CPAN client that works like a charm](http://g14n.info/2014/03/a-cpan-client-that-works-like-charm).
-
-# Upgrade Perl
-
-Use [Perlbrew][6] to install, upgrade and manage your Perl installation.
-
-```bash
-$ export PERLBREW_ROOT=$PERL_BASE/perlbrew
-$ echo export PERLBREW_ROOT=$PERLBREW_ROOT >> ~/.perl_profile
-```
-
-Install it
-
-```bash
-$ cpanm App::perlbrew
-```
-
-Then initialize it and add it to your environment with
-
-```bash
-$ perlbrew init
-
-perlbrew root (~/perl5/perlbrew) is initialized.
-
-Append the following piece of code to the end of your ~/.bash_profile and start a
-new shell, perlbrew should be up and fully functional from there:
-
-    source ~/perl5/perlbrew/etc/bashrc
-
-Simply run `perlbrew` for usage details.
-
-Happy brewing!
-
-$ source ~/perl5/perlbrew/etc/bashrc
-$ echo 'source ~/perl5/perlbrew/etc/bashrc' >> ~/.perl_profile
-```
-
-Install *patchperl* (only once)
-
-```bash
-$ perlbrew install-patchperl
-```
-
-Now you can install and upgrade Perl easily, for example
-
-```bash
-$ perlbrew install perl-5.16.0
-$ perlbrew switch perl-5.16.0
-```
+Then maybe you want [A CPAN client that works like a charm][4].
 
 ## See also
 
-* [A CPAN client that works like a charm](http://g14n.info/2014/03/a-cpan-client-that-works-like-charm)
+* [The camel replicates!][3]
+* [A CPAN client that works like a charm][4]
 
   [1]: http://search.cpan.org/~bingos/ExtUtils-MakeMaker/lib/ExtUtils/MakeMaker.pm "ExtUtils::MakeMaker"
   [2]: http://search.cpan.org/~haarg/local-lib/lib/local/lib.pm "local::lib"
-  [5]: https://metacpan.org/pod/distribution/Perl-Tidy/lib/Perl/Tidy.pod
-  [6]: http://perlbrew.pl/
+  [3]: {% post_url 2014-12-23-the-camel-replicates %} "The camel replicates!"
+  [4]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %} "A CPAN client that works like a charm"
+  [5]: https://metacpan.org/pod/distribution/Perl-Tidy/lib/Perl/Tidy.pod "Perl::Tidy"
 
