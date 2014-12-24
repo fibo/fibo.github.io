@@ -10,8 +10,10 @@
   </div>
 </footer>
 
+{% if page.latex %}
 <!-- MathJax -->
 <script type="text/javascript" src="{{ site.mathjax.base_url }}/{{ site.mathjax.version }}/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
 
 <!-- JQuery -->
 <script type="text/javascript" src="{{ site.jquery.base_url }}/{{ site.jquery.version }}/jquery.min.js"></script>

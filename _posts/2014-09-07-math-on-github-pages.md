@@ -4,6 +4,7 @@ tags:
   - Math
 description: >
     Display math formulas on your free website.
+latex: true
 ---
 
 GitHub Pages uses [kramdown](http://kramdown.gettalong.org/) by default.

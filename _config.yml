@@ -44,7 +44,7 @@ jquery:
   version: 1.11.1
 
 mathjax:
-  base_url: http://cdn.mathjax.org/mathjax
+  base_url: https://cdn.mathjax.org/mathjax
   version: latest
 
 google-analytics:
