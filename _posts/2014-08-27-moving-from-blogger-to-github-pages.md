@@ -102,7 +102,7 @@ and to use [Jekyll variables][3] to set [Disqus Javascript configuration variabl
 var disqus_shortname  = '{{ site.disqus.shortname }}';
 var disqus_identifier = '{{ page.id }}';
 var disqus_title      = '{{ page.title }}';
-var disqus_url        = '{{ page.url }}';
+var disqus_url        = '{{ site.url }}/{{ page.url }}';
 ```
 
 <!--### Social integration-->
