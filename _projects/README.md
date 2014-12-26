@@ -16,22 +16,24 @@ cd _repos
 git clone https://github.com/fibo/foo
 ```
 
-Remove *foo/index.md* content except YAML front matter that should be
+Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
 
 ```
 ---
 title: foo
-layout: default
+layout: project
 ---
 ```
 
-Cat *README.md* into *foo/index.md*
+Concatenate *README.md* and its YAML front matter into *foo/index.md*
 
 ```bash
-cat _repos/foo/README.md >> foo/index.md
+cat foo/index.yaml _repos/foo/README.md >> foo/index.md
 ```
 
-Remove `# foo` heading from foo/index.md
-
 TODO: automate index.md update with some git hook or updateREADME.sh script
+
+## Other content
+
+It is worth to publish also other files on the site, for example the *dist/* and *examples/* folders.
 
