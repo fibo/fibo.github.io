@@ -12,6 +12,7 @@ exclude:
   - README.md
   - _projects/_repos
   - _projects/README.md
+  - _projects/**/*.yaml
 
 markdown: kramdown
 kramdown:
