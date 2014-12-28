@@ -55,8 +55,35 @@ jekyll serve --watch
 
 Static content is served [here][5].
 
+## Readme driven development
+
+Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their README.md file.
+
+Get repo **foo**.
+
+```bash
+$ git clone https://github.com/fibo/foo
+```
+
+Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
+
+```
+---
+title: foo
+layout: project
+---
+```
+
+Concatenate *README.md* and its YAML front matter into *foo/index.md*
+
+```bash
+cat _projects/foo/index.yaml foo/README.md >> _projects/foo/index.md
+```
+
   [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"
   [5]: http://rider-rufus.codio.io:4000/ "Static content on codio box"
+
+
