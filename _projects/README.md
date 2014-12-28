@@ -31,13 +31,5 @@ Concatenate *README.md* and its YAML front matter into *foo/index.md*
 cat foo/index.yaml _repos/foo/README.md >> foo/index.md
 ```
 
-TODO: automate index.md update with some git hook or updateREADME.sh script
-
-## Other content
-
-It is worth to publish also other files on the site, for example the *dist/* and *examples/* folders.
-
-```bash
-$ cp -r _repos/foo/dist foo/
-```
+Same procedure applies to other files, like those in *examples/* dir. The *empty* layout can be useful.
 
