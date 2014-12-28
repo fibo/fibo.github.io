@@ -5,13 +5,16 @@
 
 Mathematician + Coder: Casati Gianluca
 Site                 : g14n.info
-Contact              : casati_gianluca {at|chiocciola|arroba} yàh0Oo°`
+Contact              : casati_gianluca {at|chiocciola|arroba} yàh0Oo° dot IT`
 Location             : Milan, Italy
 
 /* THANKS */
+
+Jekyll
 GitHub
 Vim
 Slackware
 
 /* SITE */
+
 Standards: HTML5, SVG
