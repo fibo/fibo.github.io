@@ -143,3 +143,4 @@ Connected to an idle instance.
 SQL> quit
 Disconnected
 ```
+
