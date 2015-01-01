@@ -1,1 +1,67 @@
-my keybase
+==================================================================
+https://keybase.io/fibo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://g14n.info
+  * I am fibo (https://keybase.io/fibo) on keybase.
+  * I have a public key with fingerprint C446 CC5C 5206 27C9 9A61  3675 D971 4303 062E 41B3
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c446cc5c520627c99a613675d9714303062e41b3",
+            "host": "keybase.io",
+            "key_id": "d9714303062e41b3",
+            "kid": "01011011856c45120c4a01a54bff0ab14e916a968233e59d7d9e9b1f199fb53a3c980a",
+            "uid": "0130bf73f51fb3b2788b32b5aee8d500",
+            "username": "fibo"
+        },
+        "service": {
+            "hostname": "g14n.info",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1420126076,
+    "expire_in": 157680000,
+    "prev": "ab67fea852c8178eba79adeb04694f0adf12582d29b167d389611ee784edaab9",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMIRAnicbVJbSBVBGD6nNMnwFiZFSrAYGpnO7Oz1cIRKlBRNTKOHvDSzO3vOZu2e
+zi1FhaJI6UESQen20IOkkkmQSDe84IsXhCiIhBDqPIiKJIRklDQr9tYwMMz3f983
+8/38U0m7XYnuzOT1h/u+H4m4Zyc8EVdNn6+1hSO23sx5WrhGun0YpuWjwUDQtMKc
+h9MEQdI0URN5IPGypqpYgkiSRV2VoYAAYigVIEFcHue3Q46C2RAcovmmzTB2aTB1
+hv6H37hdABBAZyuipAki5IEmYACxKBDDAJhAgapQwqqk8AhRUdVlXaUqgQZUVYOI
+CCNNVQBmdpEdOwSIISNDhAZBhJcVhSCeiJhSRRcBcIghGrTwVcrYhklsri2PY0jU
+1KgT30mxU/VBwco3LcMJEgjaYVuzrzDYHw4HQh5HFm4OOLzrlDTsODQQ09JZA5ki
+SoMh07Y4D2RMLWw6llDgAeQlIEt5HG0KmEHaYDoMUZYUwJbzDo0yS0wk2aBYEXlN
+gbJCCZZVrFMCBEkVWF90A/Kiwus8a4Uk60hRJQgplRWB6hgTlXMyXbNszoPYN7GP
+WYZMn4XDkSDl2ibHa+Nc7kTXnvhdzgi4Evem/huMu8kJW97N6bLFluKR1nt1P0cG
+L5florHB2A2ESjJP+9KmK3viVl+/X0rJQpv1yQNFdSvFdeb+7o9FWRRMLw31n0vt
+qu8rjS3NVGz5XiVsPkU5c41eLv6Hd+WX1Jbx2zuVVN6hXJz8snxrIyOWcNSdOhUt
+76ws6OodNkqimY9WF6o7v1UeLDl2KlT0qbcKzCa/SIll+9MuvLUL18dKCtzvBtJX
+OzztMGN1Y7ym+vb5HljKf5441L3Qdrb95LOR7jXl6x05d9Q/23+8Ym1hfrjWvHR4
+buNDZY5/+c+ZwqQUCQfba2ZiTc/hfOP9nAchcuJJ1YGh9pdvstM3b+Ysjsw+Hv0L
+LpgfNw==
+=Jikl
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fibo
+
+==================================================================
