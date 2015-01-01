@@ -62,7 +62,8 @@ Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/rea
 Get repo **foo**.
 
 ```bash
-$ git clone https://github.com/fibo/foo
+$ mkdir -p _projects/_repos/foo
+$ git clone https://github.com/fibo/foo _projects/_repos/foo
 ```
 
 Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
@@ -77,7 +78,7 @@ layout: project
 Concatenate *README.md* and its YAML front matter into *foo/index.md*
 
 ```bash
-cat _projects/foo/index.yaml foo/README.md >> _projects/foo/index.md
+cat _projects/foo/index.yaml _projects/_repos/foo/README.md >> _projects/foo/index.md
 ```
 
   [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
