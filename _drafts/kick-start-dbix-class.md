@@ -2,18 +2,16 @@
 title: Kick start DBIx::Class
 tags:
   - Perl
-fileId: 0B1Q-qpUyEAecbjBqbTJuRDVwZGM
+description: >
+    Boost your Perl package with DBIx::Class ORM
 ---
 
-Boost your Perl package with [DBIx::Class][1] ... Gone in Sixty Seconds!
 
-<!--more-->
-
-[TOC]
+ORM https://en.wikipedia.org/wiki/Object-relational_mapping
 
 sto facendo un package per Unica, devo collegarmi al DB, ho convinto il mio capo
 
-farò le query con [DBIx::Class][2], devo mappare lo schema e usarlo successivamente
+farò le query con [DBIx::Class][1], devo mappare lo schema e usarlo successivamente
 
 # Prerequisites
 
@@ -26,7 +24,7 @@ $ cpan DBI
 $ cpan DBIx::Class
 ```
 
-eventuali moduli per collegarsi al database in question, nel mio caso Oracle ... if you need Oracle too, it is worth you read also [How to install DBD::Oracle][3].
+eventuali moduli per collegarsi al database in question, nel mio caso Oracle ... if you need Oracle too, it is worth you read also [How to install DBD::Oracle][2].
 
 ```bash
 $ cpan DBIx::Class::Schema::Loader
@@ -67,17 +65,9 @@ vedi
 
 http://www.slideshare.net/ranguard/dbixclass-beginners-presentation
 
-per fare la sysdate vedi DateTime::Format::MySQL o Oracle
-
-# See also
-
-* [How to install DBD::Oracle][4]
-* [A CPAN client that works like a charm][5]
+per fare la sysdate vedi DateTime::Format::Oracle
 
 
-  [1]: http://www.dbix-class.org/
-  [2]: http://www.dbix-class.org/
-  [3]: http://blog.g14n.info/2013/07/how-to-install-dbdoracle.html
-  [4]: http://blog.g14n.info/2013/07/how-to-install-dbdoracle.html
-  [5]: http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html
+  [1]: http://www.dbix-class.org/ "DBIx::Class"
+  [2]: {% 2013-07-02-how-to-install-dbdoracle %} "How to install DBD::Oracle"
 
