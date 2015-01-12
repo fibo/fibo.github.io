@@ -7,15 +7,12 @@ description: >
 ---
 
 
-ORM https://en.wikipedia.org/wiki/Object-relational_mapping
+In this article I describe how to take advantage of [Object relational mapping][3] to interact with a database. In particular I need to query an IBM Campaign Oracle schema, and I use the amazing [DBIx::Class][1].
 
-sto facendo un package per Unica, devo collegarmi al DB, ho convinto il mio capo
 
-farò le query con [DBIx::Class][1], devo mappare lo schema e usarlo successivamente
+## Prerequisites
 
-# Prerequisites
-
-Perl e CPAN, link ad articoli su Perl e CPAN
+Install Perl modules
 
 almeno per poter fare
 
@@ -24,7 +21,7 @@ $ cpan DBI
 $ cpan DBIx::Class
 ```
 
-eventuali moduli per collegarsi al database in question, nel mio caso Oracle ... if you need Oracle too, it is worth you read also [How to install DBD::Oracle][2].
+You need DBD::Oracle too, read [How to install DBD::Oracle][2].
 
 ```bash
 $ cpan DBIx::Class::Schema::Loader
@@ -67,7 +64,20 @@ http://www.slideshare.net/ranguard/dbixclass-beginners-presentation
 
 per fare la sysdate vedi DateTime::Format::Oracle
 
+Mett ianche trick per far vedere gli euro
+
+ my $schema =
+      $schema_class->connect( $datasource, $username, $password,
+        {
+         PrintError => 1,
+      ora_charset => 'AL32UTF8',
+        },
+      );
+
+e in generale come ho organizzato il codice in Sky, incluso Sky::Config
+
 
   [1]: http://www.dbix-class.org/ "DBIx::Class"
   [2]: {% 2013-07-02-how-to-install-dbdoracle %} "How to install DBD::Oracle"
+  [3]: https://en.wikipedia.org/wiki/Object-relational_mapping "ORM"
 
