@@ -74,7 +74,7 @@ Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy
 
 <div class="alert alert-danger">Don' t forget to source it from your <em>.bash_profile</em>!</div>
 
-## Latest DBI
+### Latest DBI
 
 Configure [A CPAN client that works like a charm][2] and install latest DBI
 
@@ -123,12 +123,43 @@ Create a log dir in your `$ORACLE_HOME`, otherwise you will find Oracle logs in 
 $ mkdir $ORACLE_HOME/log
 ```
 
+### Compile
+
 Now, clean your mind and pray the mantra 
 
 ```bash
 $ perl Makefile.PL
 $ make
 ```
+
+#### Troubleshooting
+
+If *make* fails with an error like
+
+```
+/usr/bin/ld: cannot find -lclntsh
+collect2: error: ld returned 1 exit status
+make: *** [blib/arch/auto/DBD/Oracle/Oracle.so] Error 1
+```
+
+don't worry! You can fix it creating a symbolic link
+
+Check your actual *libclntsh.so* version
+
+```bash
+$ ls $ORACLE_HOME/libclntsh.so*
+/path/to/your/instantclient_11_2/libclntsh.so.xy.z
+```
+
+for instance *libclntsh.so.10.1*, and then link it to the shared lib *ld* need to compile
+
+```bash
+$ ln -s $ORACLE_HOME/libclntsh.so.11.1 $ORACLE_HOME/libclntsh.so
+```
+
+Now try again [compile steps](#compile).
+
+### Test
 
 Run tests, it is always a good idea! But set the `ORACLE_USERID` and  `ORACLE_DSN` env vars, otherwise it probably will default to `scott/tiger` and `dbi:Oracle:testdb` hence will fail (unless you have a brand new Oracle installation with the famous `scott/tiger` still around :).
 
@@ -145,7 +176,7 @@ And finally
 $ make install
 ```
 
-### A final test
+#### Unit test
 
 If some tests fails or you want to check connectivity to one or more databases to be sure the installation will not be useless, here it is a simple test you can fill with your credentials and run launching
 
