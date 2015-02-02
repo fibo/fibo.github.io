@@ -163,7 +163,10 @@ Despite it is so young, node ecosystem is pretty rich!
 [Stream handbook](https://github.com/substack/stream-handbook)
 
 [An Introduction to Node Streams (video)](http://tagtree.tv/intro-to-node-streams)
-: In 8 minutes, Hendrik Swanepoel demonstrates how to create your own read, write, and transform stream, complete with written notes accompanying the video. 
+: In 8 minutes, Hendrik Swanepoel demonstrates how to create your own read, write, and transform stream, complete with written notes accompanying the video.
+
+[Node.js Stream Playground](http://ejohn.org/blog/node-js-stream-playground/)
+: Created by [John Resig][1] to help Node.js developers better understand how streams work by showing a number of use cases that are easily plug-and-play-able.
 
 ### Security
 
@@ -192,3 +195,4 @@ Despite it is so young, node ecosystem is pretty rich!
 * [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
 * [Node class template](http://g14n.info/2014/01/node-class-template)
 
+[1]: http://ejohn.org/ "John Resig"
