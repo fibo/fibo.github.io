@@ -16,6 +16,12 @@ sono diventato manteiner dei moduli Bot::* su CPAN e GitHub
 green test matrix http://matrix.cpantesters.org/?dist=Bot-Training+0.06
 rispetto alla precedente http://matrix.cpantesters.org/?dist=Bot-Training+0.04
 
+
+Ho creato la mia [Perl-Box](https://codio.com/fibo/Perl-Box)
+Mi hanno assegnato per febbraio
+https://metacpan.org/pod/Net::HTTPS::NB
+
+
   [1]: https://github.com/avar/task-bot-training/issues/1 "Issue: minimum Perl"
   [2]: https://github.com/avar/bot-training/issues/2 "Issue: Any::Moose is deprecated"
 
