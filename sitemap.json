@@ -9,7 +9,7 @@ layout: null
    "name": "Latest Posts",
    "children": [
      {% for post in site.posts limit:5 %}
-     {"name": "{{ post.title }}", size: 1000, url: "{{ post.url }}"},
+     {"name": "{{ post.title }}", "size": 1000, url: "{{ post.url }}"},
      {% endfor %}
      {"name": "...", size: 2000, url: "blog"}
    ]
@@ -21,7 +21,7 @@ layout: null
        "name": "Perl",
        "children": [
         {% for post in site.tags.Perl %}
-        {"name": "{{ post.title }}", size: {{ post.content | number_of_words }}, url: "{{ post.url }}"},
+        {"name": "{{ post.title }}", "size": {{ post.content | number_of_words }}, url: "{{ post.url }}"},
         {% endfor %}
         {"name": "...", size: 2000, url: "blog"}
        ]
@@ -30,7 +30,7 @@ layout: null
        "name": "Git",
        "children": [
         {% for post in site.tags.Git %}
-        {"name": "{{ post.title }}", size: {{ post.content | number_of_words }}, url: "{{ post.url }}"},
+        {"name": "{{ post.title }}", "size": {{ post.content | number_of_words }}, url: "{{ post.url }}"},
         {% endfor %}
         {"name": "...", size: 2000, url: "blog"}
        ]
