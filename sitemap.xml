@@ -9,6 +9,7 @@ layout: null
 </url>
 <url>
   <loc>{{ site.url }}/mit-license.html</loc>
+  <loc>{{ site.url }}/artistic-license.html</loc>
 </url>
 {% for post in site.posts %}
 <url>
