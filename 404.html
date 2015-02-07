@@ -7,6 +7,7 @@ bower:
 ---
 
 <style>
+/*
 .node {
   cursor: pointer;
 }
@@ -31,6 +32,7 @@ bower:
 .node--leaf {
   pointer-events: none;
 }
+*/
 </style>
 
 <script>
@@ -63,7 +65,14 @@ d3.json("sitemap.json", function(error, root) {
   function clack(d) {
       alert(d.name);
   }
-    
+  
+ var circle = svg.selectAll("circle")
+      .data(nodes)
+    .enter().append("circle")
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+  
   var text = svg.selectAll("text")
       .data(nodes)
     .enter().append("text")
@@ -72,13 +81,6 @@ d3.json("sitemap.json", function(error, root) {
       .style("display", function(d) { return d.parent === root ? null : "none"; })
       .text(function(d) { return d.name; })
       .on("click", clack);
-
- var circle = svg.selectAll("circle")
-      .data(nodes)
-    .enter().append("circle")
-      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var node = svg.selectAll("circle,text");
 
