@@ -57,3 +57,13 @@ repo: https://github.com/fibo/fibo.github.io/
 disqus:
   shortname: g14n
 
+clusters:
+  - Perl
+  - Git
+  - Node
+  - Netezza
+  - Web
+  - Windows
+  - IWTBF
+  - Unix
+

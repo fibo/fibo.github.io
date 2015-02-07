@@ -21,12 +21,14 @@ bower:
 }
 
 .label {
-  font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font: 17px "Lucida Console", Monaco, monospace;*/
+  font: 17px "Comic Sans MS", cursive, sans-serif;
   text-anchor: middle;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  /*text-shadow: 0 4px 0 #fff, 4px 0 0 #fff, -4px 0 0 #fff, 0 -4px 0 #fff;*/
+  text-shadow: 2px 2px 8px #FF0000;
 }
 
-/*.label,*/
 .node--root,
 .node--leaf {
   pointer-events: none;
@@ -34,8 +36,8 @@ bower:
 </style>
 
 <script>
-var margin = 10,
-    diameter = window.innerWidth;
+var margin = 1,
+    diameter = Math.min(window.innerHeight, window.innerWidth);
 
 var color = d3.scale.linear()
     .domain([-1, 5])
@@ -61,16 +63,17 @@ d3.json("sitemap.json", function(error, root) {
       view;
 
   function clack(d) {
+    if (d.url)
       location.href = "//{{ site.domain }}/" + d.url;
   }
-  
- var circle = svg.selectAll("circle")
+
+  var circle = svg.selectAll("circle")
       .data(nodes)
     .enter().append("circle")
       .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
       .style("fill", function(d) { return d.children ? color(d.depth) : null; })
       .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
-  
+
   var text = svg.selectAll("text")
       .data(nodes)
     .enter().append("text")
