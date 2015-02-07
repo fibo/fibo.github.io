@@ -60,13 +60,6 @@ d3.json("sitemap.json", function(error, root) {
       nodes = pack.nodes(root),
       view;
 
-  var circle = svg.selectAll("circle")
-      .data(nodes)
-    .enter().append("circle")
-      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
-
   function clack(d) {
       alert(d.name);
   }
@@ -79,6 +72,13 @@ d3.json("sitemap.json", function(error, root) {
       .style("display", function(d) { return d.parent === root ? null : "none"; })
       .text(function(d) { return d.name; })
       .on("click", clack);
+
+ var circle = svg.selectAll("circle")
+      .data(nodes)
+    .enter().append("circle")
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var node = svg.selectAll("circle,text");
 
