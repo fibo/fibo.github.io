@@ -6,6 +6,15 @@ layout: null
  "name": "flare",
  "children": [
   {
+   "name": "Latest Posts",
+   "children": [
+     {% for post in site.posts limit:5 %}
+     {"name": "{{ post.title }}", size: 1000, url: "{{ post.url }}"},
+     {% endfor %}
+     {"name": "...", size: 2000, url: "blog"
+   ]
+  },
+  {
    "name": "analytics",
    "children": [
     {
