@@ -61,7 +61,7 @@ d3.json("sitemap.json", function(error, root) {
       view;
 
   function clack(d) {
-      location.href = "//{{ site.domain }}" + d.name;
+      location.href = "//{{ site.domain }}/" + d.url;
   }
   
  var circle = svg.selectAll("circle")
