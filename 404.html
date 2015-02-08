@@ -55,6 +55,12 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
+var defs = svg.append("defs");
+
+var path = defs.append("path")
+               .attr("id", "myTextPath")
+               .attr("d", "M75,20 a1,1 0 0,0 100,0");
+
 d3.json("sitemap.json", function(error, root) {
   if (error) return console.error(error);
 
@@ -80,6 +86,7 @@ d3.json("sitemap.json", function(error, root) {
       .attr("class", "label")
       .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
       .style("display", function(d) { return d.parent === root ? null : "none"; })
+      .style("textlength", function(d) { return d.size - margin; })
       .text(function(d) { return d.name; })
       .on("click", clack);
 
