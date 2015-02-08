@@ -10,7 +10,7 @@ layout: null
    "children": [
      {% for post in site.posts limit:3 %}
      {
-       "name": "{{ post.title }}",
+       "name": "<textPath xlink:href='#MyTextPath'> {{ post.title }}",
        "size": 1{{ post.content | number_of_words }},
        "url": "{{ post.url }}"
      }{% if forloop.last %}{% else %},{% endif %}
