@@ -14,7 +14,7 @@ It is a common pattern: customers let me develop on hosts that **cannot access I
 
 In this article *host.customer.com* is that kind of host, and of course it is needed a *myhost.example.org* that can connect to Internet or at least to a CPAN mirror.
 
-<div class="alert alert-info">If you want a full featured tool, use <a href="https://metacpan.org/pod/Pinto">Pinto</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
+<div class="alert alert-info">If you want a full featured tool, consider using <a href="https://metacpan.org/pod/Pinto">Pinto</a> or <a href="https://metacpan.org/pod/Carton">Carton</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
 
 ## Requirements
 
@@ -46,7 +46,7 @@ $ cd ~/.cpan/sources
 $ tar xzf /path/to/cpanSources.tar.gz
 ```
 
-and you are done! Your *cpan* client on *host.customer.com* will not fetch sources from mirrors.
+and you are done! Your *cpan* client on *host.customer.com* will not fetch sources from CPAN mirrors. In fact, by default, *cpan* uses the *~/.cpan/sources* for caching the sources tarballs, and if the distro is already there it will not try to download it. Hence you can install all dependencies needed by your package even in those hosts that are isolated from Internet, those hosts where probably you work to pay your rent :)
 
 <!-- TODO add CPAN mirror http if hosts can connect -->
 
