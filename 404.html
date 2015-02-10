@@ -61,6 +61,9 @@ var path = defs.append("path")
                .attr("id", "myTextPath")
                .attr("d", "M75,20 a1,1 0 0,0 100,0");
 
+    svg.append("use")
+       .attr("xlink:href", "#s3");
+
 d3.json("sitemap.json", function(error, root) {
   if (error) return console.error(error);
 
@@ -87,8 +90,13 @@ d3.json("sitemap.json", function(error, root) {
       .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
       .style("display", function(d) { return d.parent === root ? null : "none"; })
       .style("textlength", function(d) { return d.size - margin; })
+   //   .text(function(d) { return d.name; })
+      .on("click", clack)
+    //.append("textPath")
+     // .attr({"xlink:href": "#MyTextPath"})
       .text(function(d) { return d.name; })
-      .on("click", clack);
+    .append("textPath")
+      .attr({"xlink:href": "#MyTextPath"});
 
   var node = svg.selectAll("circle,text");
 
