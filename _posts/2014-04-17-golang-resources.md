@@ -23,7 +23,10 @@ description: >
 ## Projects
 
 [HUGO](http://gohugo.io/)
-: Static site generator
+: Static site generator (Jekyll like).
+
+[BoltDB](https://github.com/boltdb)
+: Pure Go key/value database.
 
 ## Articles
 
