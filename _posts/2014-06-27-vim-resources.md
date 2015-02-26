@@ -38,6 +38,8 @@ description: >
 
 [Vim graphical cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
 
+[Vim as an IDE](https://github.com/jez/vim-as-an-ide)
+
 ## Articles
 
 [Turn Vim Into Excel: Tips for Editing Tabular Data](http://acg.github.io/2013/03/29/turn-vim-into-excel-tips-for-tabular-data-editing.html)

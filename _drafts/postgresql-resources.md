@@ -17,3 +17,7 @@ Collection of links and resources about PostgreSQL
 
 [PostgreSQL 9.4 and JSON](http://www.slideshare.net/amdunstan/94json)
 
+[Embracing SQL In Postgres](http://rob.conery.io/2015/02/24/embracing-sql-in-postgres/)
+
+[Tree structure query with PostgreSQL](http://truongtx.me/2014/02/28/tree-structure-query-with-postgresql/)
+
