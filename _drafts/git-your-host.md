@@ -1,4 +1,5 @@
 
+ho già fatto il repo home, has senso fare il repo root?
 
 l idea è di fare un .git nella root /
 
