@@ -14,7 +14,7 @@ description: >
 
 ## Free books online
 
-See my [book collection](http://g14n.info/2014/01/free-books-online#git)
+See my [book collection]({% post_url 2014-01-02-free-books-online %}#git)
 
 ## Articles
 

@@ -60,12 +60,6 @@ Click on the command to read its documentation on [git-extras][3] *Readme.md*.
 |[git-archive-file](https://github.com/tj/git-extras/wiki/Commands#git-archive-file)                  | |
 
 
-## See also
-
-* [Git Extras - Introduction](http://vimeo.com/45506445) screencast
-* [Git shell Windows tips](http://g14n.info/2014/02/git-shell-windows-tips)
-* [Git for dummies](http://g14n.info/2014/01/git-for-dummies)
-
   [3]: https://github.com/tj/git-extras
   [4]: http://gnuwin32.sourceforge.net/packages/make.htm
 

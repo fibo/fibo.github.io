@@ -189,11 +189,4 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [GPU fluid experiment](http://haxiomic.github.io/GPU-Fluid-Experiments/html5/)
 
-## See also
-
-[HTML5 resources](http://g14n.info/2014/03/hmtl5-resources)
-
-[CSS resources](http://g14n.info/2014/05/css-resources)
-
-[JavaScript resources](http://g14n.info/2014/01/javascript-resources)
 

@@ -69,15 +69,6 @@ Unsemantic is a fluid grid system that is the successor to the [960 Grid System]
 
 [CSS Diner - Where we feast on CSS Selectors!](http://flukeout.github.io/)
 
-## See also
-
-[HTML5 resources](http://g14n.info/2014/03g5-resources.html)
-
-[Web development resources](http://g14n.info/2014/01/web-development-resourcesg)
-
-[JavaScript resources](http://g14n.info/2014/01/javascript-resourcesg)
-
-
   [1]: https://twitter.com/mdo
   [2]: http://960.gs/
 

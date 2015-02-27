@@ -186,13 +186,5 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [cloudno.de](http://cloudno.de/)
 
-## See also
-
-* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
-* [Create an npm package](http://g14n.info/2014/01/create-npm-package)
-* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
-* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
-* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
-* [Node class template](http://g14n.info/2014/01/node-class-template)
-
 [1]: http://ejohn.org/ "John Resig"
+

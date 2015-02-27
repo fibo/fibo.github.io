@@ -6,8 +6,7 @@ description: >
     Migrate your blog from Blogger to GitHub Pages to gain full control on your content.
 ---
 
-Here it is, another meta post like the one I wrote about [How to use Markdown to edit Blogger posts](http://g14n.info/2013/12/how-to-use-markdown-to-edit-blogger).
-Yes, this post traits about its creation, infact I am moving from Blogger to Github Pages. 
+This is a **meta post**. Yes, this post traits about its own creation, infact I am moving from Blogger to Github Pages.
 
 I started looking these examples:
 
@@ -28,7 +27,7 @@ See here more [sites using Jekyll](http://jekyllrb.com/docs/sites/).
 
 * Loose out of the box Google Ads integration: it is ok for me, cause I will remove ads.
 * Loose comments feature: I will implement it with disqus or facebook. By the way I got three type of comments while my blog was on Blogger: spam, that I had to moderate; hints, that I would like to redirect to a collaboration via GitHub, maybe using the site's repo issues tracker; thanks, that I would like to redirect to donations.
- 
+
 ## Steps
 
 ### Basic structure

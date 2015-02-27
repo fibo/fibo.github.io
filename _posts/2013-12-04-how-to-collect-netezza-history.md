@@ -134,12 +134,6 @@ GROUP BY clienthost,clientip,sessionusername,clienttype
 ;
 ```
 
-## See also
-
-* [How to drop a user on Netezza](http://g14n.info/2013/12/how-to-drop-user-on-netezza)
-* [Use nzpassword !](http://g14n.info/2013/10/use-nzpassword)
-* [SQL client for Netezza](http://g14n.info/2013/05/sql-client-for-netezza)
-
-  [1]: http://documentup.com/fibo/nz-util/
+  [1]: //{{ site.domain }}/nz-utils
 
 

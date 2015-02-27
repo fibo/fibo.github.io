@@ -324,7 +324,7 @@ colorscheme bubblegum
 
 Install [Vim plugins for Go](http://golang.org/misc/vim/readme.txt).
 
-Note that you need to set the *GOROOT* environment variable properly, see [environment section](http://g14n.info/2014/04/golang-on-windows#environment) in my *Golang on Windows* article.
+Note that you need to set the *GOROOT* environment variable properly.
 
 ```vim
 " See http://golang.org/misc/vim/readme.txt
@@ -396,10 +396,6 @@ Install plugins
 au BufRead,BufNewFile *.coffee set filetype=coffee
 au BufRead,BufNewFile *.coffee.md set filetype=coffee
 ```
-
-## See also
-
-* [Vim resources](http:/g14n.info/2014/06/vim-resources)
 
   [1]: #programming-languages
   [2]: https://github.com/gmarik/vundle

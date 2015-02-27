@@ -110,15 +110,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
 
 <div class="alert alert-warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
  
-Read [Bypass restrictive firewall settings](http://g14n.info/2014/02/git-shell-windows-tips#bypass-restrictive-firewall-settings) instructions to work around it.
-
-## See also
-
-* [Git for dummies](http://g14n.info/2014/01/git-for-dummies)
-* [Git shell Windows tips](http://g14n.info/2014/02/git-shell-windows-tips)
-* [Git extras on Windows](http://g14n.info/2014/02/git-extras-on-windows)
-* [Git resources](http://g14n.info/2014/03/git-resources)
-
+Read [Bypass restrictive firewall settings]({% post_url 2014-02-14-git-shell-windows-tips %}#bypass-restrictive-firewall-settings) instructions to work around it.
 
   [1]: http://git-scm.com/images/logo@2x.png
   [2]: https://lh6.googleusercontent.com/_O0nduo4l74xVtUf_0kvwdo1x5S5LKUIUPkJrJIuxJ8=s0 "Git setup"

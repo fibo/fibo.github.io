@@ -71,11 +71,6 @@ $ git push --set-upstream origin master
 
 Now you can push *repobar* commits from your laptop to *gitbox.example.org*
 
-
-## See also
-
-* [Git resources]({% post_url 2014-03-16-git-resources %})
-
 ## References
 
 [Git on the Server][1]

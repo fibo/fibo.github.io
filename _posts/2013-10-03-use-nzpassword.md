@@ -106,9 +106,3 @@ $ nzpassword delete -all
 You could also keep password cached and avoid writing Netezza users passwords in the config files of your scripts.
 That is the way nerds like it :)
 
-## See also
-
-* [How to drop a user on Netezza](http://g14n.info/2013/12/how-to-drop-user-on-netezza)
-* [SQL client for Netezza](http://g14n.info/2013/05/sql-client-for-netezza)
-* [How to collect Netezza history](http://g14n.info/2013/12/how-to-collect-netezza-history)
-
