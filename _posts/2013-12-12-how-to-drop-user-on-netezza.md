@@ -50,11 +50,5 @@ CALL util..transfer_objects_owned_by('pippo', 'pluto');
 
 Finally, when no other object is owned by *pippo* you will be able to drop it.
 
-## See also
+  [1]: //{{ site.domain }}/nz-util
 
-* [Use nzpassword !](http://g14n.info/2013/10/use-nzpassword)
-* [SQL client for Netezza](http://g14n.info/2013/05/sql-client-for-netezza)
-* [How to collect Netezza history](http://g14n.info/2013/12/how-to-collect-netezza-history)
-
-  [1]: http://g14n.info/nz-util
-  

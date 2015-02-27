@@ -22,7 +22,7 @@ Read the [R page on Wikipedia](http://en.wikipedia.org/wiki/R_(programming_langu
 
 ## Free books online
 
-See my [book collection](http://g14n.info/2014/01/free-books-online#r)
+See my [book collection]({% post_url 2014-01-02-free-books-online %}#r)
 
 ## Articles
 

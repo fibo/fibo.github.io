@@ -48,15 +48,12 @@ C:\> mkdir %GOPATH%
 
 ### Vim integration
 
-Golang is intgrated with Vim by its creators. See *Go* section in [my Vim configuration](http://g14n.info/2013/07/my-vim-configuration#go).
+Golang is intgrated with Vim by its creators. See *Go* section in [my Vim configuration]({% post_url 2013-07-26-my-vim-configuration %}#go).
 
 ## Code 30 minutes everyday
 
 Inspiered by [Why Go is elegant and makes my code elegant](http://filippo.io/why-go-is-elegant-and-makes-my-code-elegant/) and [Write code everyday](http://ejohn.org/blog/write-code-every-day/) articles, since I am a mathematician, I started my quest on [Project Euler](https://projecteuler.net/) to get my hands dirty with [Go][1].
 
-## See also
-
-* [Golang resources](http://g14n.info/2014/04/golang-resources)
-
   [1]: http://golang.org/ "The Go Programming Language"
   [2]: https://golang.org/dl/ "Go Downloads"
+

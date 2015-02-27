@@ -158,13 +158,6 @@ Voilà! Now you can connect just clicking on the shortcut. Even better:
 
 Now you can access **really quickly** to your connection: <kbd>HOST + user@serv ...</kbd>
 
-<!--- if you have try to figure out how to setup an RSA based authentication -->
-
-## See also
-
-* [Roll your Windows](http://g14n.info/2013/04/roll-your-windows)
-
-
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
   [2]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
 

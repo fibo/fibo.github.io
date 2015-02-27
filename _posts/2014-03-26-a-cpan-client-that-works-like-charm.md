@@ -18,7 +18,7 @@ Do not edit that file, use `o conf` instead from the *cpan* interactive shell, s
 
 ### First run
 
-It is really easy to start, just launch 
+It is really easy to start, just launch
 
 ```bash
 $ cpan
@@ -64,7 +64,7 @@ Two things could not work: network *or* permissions.
 
 The quickest workaround is to check your network configuration and launch commands using sudo.
 
-I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [.software](http://g14n.info/.software) to know how to install Perl in some location your user owns.
+I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [dotsoftware](//{{ site.domain }}/dotsoftware) to know how to install Perl in some location your user owns.
 
 #### local::lib approach
 
@@ -304,7 +304,6 @@ Note that also *cpan* has the [upgrade modules feature](#upgrade-modules) but *c
 ## See also
 
 * [Learn Perl - CPAN and Perl Configuration Howto](http://learnperl.scratchcomputing.com/tutorials/configuration/)
-* [The camel survives!]({% post_url 2014-06-18-the-camel-survives %}).
 * Matt Trout's [Library deployment](http://shadow.cat/blog/matt-s-trout/mstpan-9/) article.
 
   [1]: http://www.cpan.org/ "CPAN"

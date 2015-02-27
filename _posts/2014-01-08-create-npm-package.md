@@ -64,7 +64,7 @@ description
 : can be almost the same as the GitHub repo description
 
 keywords
-: make it easy to find your package on [npm site][4]
+: make it easy to find your package on [npm site][1]
 
 author
 : use your npm nick
@@ -125,7 +125,7 @@ and I add the following content
 
 ### Add an homepage
 
-It is also a good idea to add a link to your project homepage, so it will showed by [npm site][6].
+It is also a good idea to add a link to your project homepage, so it will showed by [npm site][1].
 
 ```json
 "homepage": "http://g14n.info/tris3d",
@@ -156,21 +156,10 @@ docs/
 
 * [npm-developers][7]
 
-### Other articles
-
-* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
-* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
-* [Livereload with grunt](http://g14n.info/2013/12/livereload-with-grunt)
-* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
-* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
-* [Node class template](http://g14n.info/2014/01/node-class-template)
-
 
   [1]: https://npmjs.org/
   [2]: https://github.com/
   [3]: https://lh4.googleusercontent.com/Y0V5ArmaIFawdLp8SqVShPPzNzy5wonuLVsqeaBFdBE=s0 "New GitHub repo"
-  [4]: https://npmjs.org/
   [5]: https://npmjs.org/doc/json.html
-  [6]: https://npmjs.org/
   [7]: https://www.npmjs.org/doc/misc/npm-developers.html
 

@@ -108,11 +108,5 @@ description: >
 [WebRTC in the real world: STUN, TURN and signaling](http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
 : [(html5rocks.com)][1]
 
-## See also
-
-* [CSS resources](http://g14n.info/2014/05/css-resources)
-* [Web development resources](http://g14n.info/2014/01/web-development-resources)
-* [JavaScript resources](http://g14n.info/2014/01/javascript-resources)
-
   [1]: http://www.html5rocks.com
 

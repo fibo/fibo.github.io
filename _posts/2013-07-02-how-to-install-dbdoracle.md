@@ -186,12 +186,6 @@ $ prove oracle.t
 
 {% gist fibo/5901819 oracle.t %}
 
-## See also
-
-* [sqlplus tips](http://g14n.info/2013/10/sqlplus-tips)
-* [A CPAN client that works like a charm][2]
-
-
   [1]: https://metacpan.org/release/DBD-Oracle
   [2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
-  
+

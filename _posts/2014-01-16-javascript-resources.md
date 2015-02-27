@@ -10,7 +10,7 @@ description: >
 
 ## Free books online
 
-See my [book collection](http://g14n.info/2014/01/free-books-online#javascript)
+See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ## Sites
 
@@ -161,15 +161,6 @@ See my [book collection](http://g14n.info/2014/01/free-books-online#javascript)
 [An Open Letter to JavaScript Leaders Regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
 
 [JavaScript Semicolon Insertion, everything you need to know](http://inimino.org/~inimino/blog/javascript_semicolons)
-
-## See also
-
-* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
-* [HTML5 resources](http://g14n.info/2014/03/html5-resources)
-* [CSS resources](http://g14n.info/2014/05/css-resources)
-* [Web development resources](http://g14n.info/2014/01/web-development-resources)
-* [JavaScript resources](http://g14n.info/2014/01/javascript-resources)
-
 
   [1]: http://www.2ality.com
   [2]: http://www.html5rocks.com

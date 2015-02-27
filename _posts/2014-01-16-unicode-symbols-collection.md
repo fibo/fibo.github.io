@@ -29,15 +29,15 @@ description: >
 ↩ ↪ ↺  ↻
 ⇄ ⇅  ⇆  ⇇   ⇈   ⇉  ⇊
 ⇍ ⇎  ⇏
-⇐ ⇑ ⇒  ⇓ 
-⇔  ⇕ 
+⇐ ⇑ ⇒  ⇓
+⇔  ⇕
 ⇖ ⇗ ⇘ ⇙
 ⇦ ⇧ ⇨  ⇩
 
 ## Mathematical Operators
 
 ∀  ∂ ∃   ∄  ∈  ∉   ∋   ∌
-∏ ∑ ∞  
+∏ ∑ ∞
 ≠ ≤ ≥ ≡ ≢
 ⊂ ⊃ ⊄ ⊅ ⊆  ⊇  ⊈  ⊉
 ⊕ ⊗
@@ -48,12 +48,12 @@ description: >
 
 ## Other
 
-ñ µ ® © Ǝ ☭ 
-☯ ❤   
-☮ 
+ñ µ ® © Ǝ ☭
+☯ ❤
+☮
 
 
-## See also 
+## See also
 
 * [Unicode 6.3 Slide Show][1]
 * [UTF-8 Everywhere][2]

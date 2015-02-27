@@ -2,7 +2,7 @@
 title: The camel survives!
 tags:
   - Perl
-description: > 
+description: >
     About installing Perl in hostile environments.
 ---
 
@@ -33,13 +33,13 @@ What is worse is that I will deploy on a host with no Internet access, probably 
 
 You need to install [ExtUtils::MakeMaker][1].
 
-If you get errors like 
+If you get errors like
 
 ```
 Can't locate ExtUtils/MakeMaker.pm in @INC
 ```
 
-probabily is not installed. That is a silly choice of some Linux distros, yes I said **silly** cause [ExtUtils::MakeMaker][1] is a core module and it should be provided with any Perl distribution. 
+probabily is not installed. That is a silly choice of some Linux distros, yes I said **silly** cause [ExtUtils::MakeMaker][1] is a core module and it should be provided with any Perl distribution.
 
 Get root permissions and install it, on Centos just launch
 
@@ -47,7 +47,7 @@ Get root permissions and install it, on Centos just launch
 $ yum install perl-ExtUtils-MakeMaker
 ```
 
-If you can't do it, go straight and compile your own Perl: see [.software](http://g14n.info/dotsoftware).
+If you can't do it, go straight and compile your own Perl: see [dotsoftware](//{{ site.domain }}/dotsoftware).
 
 ### Choose your target
 
@@ -59,7 +59,7 @@ $ export PERL_BASE=~/perl5
 
 ### Get cpanm
 
-As documented in [App::cpanminus related section]( https://metacpan.org/pod/App::cpanminus#Downloading-the-standalone-executable), get a standalone *cpanm* executable to bootstrap your Perl. 
+As documented in [App::cpanminus related section]( https://metacpan.org/pod/App::cpanminus#Downloading-the-standalone-executable), get a standalone *cpanm* executable to bootstrap your Perl.
 
 ```bash
 $ mkdir -p $PERL_BASE/bin
@@ -123,11 +123,6 @@ $ cpanm CPAN
 ```
 
 Then maybe you want [A CPAN client that works like a charm][4].
-
-## See also
-
-* [The camel replicates!][3]
-* [A CPAN client that works like a charm][4]
 
   [1]: http://search.cpan.org/~bingos/ExtUtils-MakeMaker/lib/ExtUtils/MakeMaker.pm "ExtUtils::MakeMaker"
   [2]: http://search.cpan.org/~haarg/local-lib/lib/local/lib.pm "local::lib"

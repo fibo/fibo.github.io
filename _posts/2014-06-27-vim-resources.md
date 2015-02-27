@@ -40,6 +40,8 @@ description: >
 
 [Vim as an IDE](https://github.com/jez/vim-as-an-ide)
 
+[Five Minute Vimscript](http://andrewscala.com/vimscript/)
+
 ## Articles
 
 [Turn Vim Into Excel: Tips for Editing Tabular Data](http://acg.github.io/2013/03/29/turn-vim-into-excel-tips-for-tabular-data-editing.html)
@@ -69,10 +71,6 @@ description: >
 
 [word & line completion](http://web.cs.swarthmore.edu/help/vim/completion.html)
 : ([vim tips and tricks][1])
-
-## See also
-
-* [My Vim configuration](http://g14n.info/2013/07/my-vim-configuration)
 
   [1]: http://web.cs.swarthmore.edu/help/vim/home.html
   [2]: http://vim.wikia.com/wiki/Vim_Tips_Wiki

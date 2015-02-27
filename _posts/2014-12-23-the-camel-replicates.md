@@ -20,7 +20,7 @@ In this article *host.customer.com* is that kind of host, and of course it is ne
 
 <div class="alert alert-warning">I assume both hosts has same OS and Perl version for simplicity. In particular, different versions of Perl can lead to issues when resolving dependencies on core modules.</div>
 
-Start on *myhost.example.org*: you need a working *cpan* client that had at least a [first run](http://g14n.info/2014/03/a-cpan-client-that-works-like-charm/#first-run).
+Start on *myhost.example.org*: you need a working *cpan* client that had at least a [first run]({% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}#first-run).
 It is nice to have [A CPAN client that works like a charm][1].
 
 ## Implementation
@@ -50,11 +50,6 @@ and you are done! Your *cpan* client on *host.customer.com* will not fetch sourc
 
 <!-- TODO add CPAN mirror http if hosts can connect -->
 
-## See also
-
-* [The camel survives!][2]
-
   [1]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %} "A CPAN client that works like a charm"
   [2]: {% post_url 2014-06-18-the-camel-survives %} "The camel survives!"
-
 

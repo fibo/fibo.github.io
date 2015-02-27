@@ -178,11 +178,7 @@ For more information see: [Using SSH over the HTTPS port](https://help.github.co
 
 *Git shell* gives you the power of [find](http://en.wikipedia.org/wiki/Find) command-line utility on Windows!
 
-## See also
 
-* [Git extras on Windows](http://g14n.info/2014/02/git-extras-on-windows)
-* [Git resources](http://g14n.info/2014/03/git-resources)
-
-  [1]: http://g14n.info/2013/04/getting-started-with-git-shell
+  [1]: {% post_url 2013-04-27-getting-started-with-git-shell %}
   [2]: https://github.com/
 

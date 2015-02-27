@@ -54,15 +54,6 @@ $ grunt
 
 <div class="alert alert-success">Your browser will open, and the window will change <strong>as soon as</strong> you modify your files.</div>
 
-## See also
-
-* [Node ecosystem](http://g14n.info/2014/01/node-ecosystem)
-* [Install Node.js without sudo](http://g14n.info/2013/01/install-nodejs-without-sudo)
-* [Create an npm package](http://g14n.info/2014/01/create-npm-package)
-* [Badges everywhere](http://g14n.info/2014/01/badges-everywhere)
-* [NodeICO badges](http://g14n.info/2013/12/nodeico-badges)
-* [Node class template](http:/g14n.info/2014/01/node-class-template)
-
 
   [1]: http://gruntjs.com/
   [2]: http://livereload.com/
