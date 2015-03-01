@@ -28,6 +28,12 @@ description: >
 [BoltDB](https://github.com/boltdb)
 : Pure Go key/value database.
 
+[cli](https://github.com/codegangsta/cli)
+: A small package for building command line apps in Go
+
+[martini](http://martini.codegangsta.io/)
+: Classy web framework for Go
+
 ## Articles
 
 [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
