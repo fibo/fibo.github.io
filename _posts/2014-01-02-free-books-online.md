@@ -57,6 +57,8 @@ description: >
 
 [An Introduction to Programming in Go](http://www.golang-book.com/)
 
+[Go Bootcamp](http://www.golangbootcamp.com/book)
+
 ### Haskell
 
 [Learn Haskell Fast and Hard](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/)
