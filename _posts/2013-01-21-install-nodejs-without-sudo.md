@@ -36,7 +36,7 @@ cd $NODEJS_CURRENT
 cd $NODEJS_ROOT
 rm current 2> /dev/null # Removes current symbolic link, if any
 ln -s $NODEJS_CURRENT current
-echo Do not forget to edit your environment {% post_url 2013-01-21-install-nodejs-without-sudo %}#edit-your-environment
+echo Do not forget to edit your environment {% site.url %}{% post_url 2013-01-21-install-nodejs-without-sudo %}#edit-your-environment
 echo Happy coding!
 ```
 
