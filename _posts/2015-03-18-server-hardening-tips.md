@@ -13,11 +13,14 @@ I assume OS is Centos 7.
 
 ## ASAP
 
-<div class="alert alert-warning">Do the following steps As Soon As Possible, i.e. when you access the serve the first time.</div>
+<div class="alert alert-warning">Do the following steps As Soon As Possible, i.e. when you access the server the first time.</div>
 
 1. Login as root and change password
 2. Create a new user.
-3. Configure ssh, in particular to disable root access.
+3. [Configure ssh](#configure-ssh), in particular to disable root access.
+4. [Update software](#update-software).
+
+### Configure ssh
 
 If you login as root you will see a message like
 
@@ -42,20 +45,30 @@ So root user cannot login and any other user is disconnected if password is wron
 Commit changes restarting ssh daemon.
 
 ```
-# sudo systemctl restart sshd
+# systemctl restart sshd
 ```
 
 After this you should not see the failed login attempts warning. Test it with
 
 ```
-grep failed /var/log/secure |more
+$ grep failed /var/log/secure | more
 ```
 
 see also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
 
+### Update software
+
+Keep kernel and other software up to date.
+
+```
+# yum update
+```
+
 ## References
 
-[“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
+* [“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
+* [Top 20 OpenSSH Server Best Security Practices][2]
 
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
+  [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
 
