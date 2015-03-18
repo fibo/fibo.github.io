@@ -1,50 +1,5 @@
 
-NOTA: Potrebbe chiamarsi secure your linux server, oppure do not login as root
-
-ho fatto una macchina su softlayer
-
-dopo poco ho visto che hanno provato ad entrare 2000 volte come root
-
-```
-Using username "root".
-Last failed login: Fri Jan 16 07:09:14 CST 2015 from 183.136.216.4 on ssh:notty
-There were 20011 failed login attempts since the last successful login.
-Last login: Tue Jan 13 09:56:30 2015 from host16-249-static.143-193-b.business.telecomitalia.it
-```
-
-è incredibile, ogni volta che mi loggo vedo un elevato numero e un host diverso
-
-Last failed login: Fri Jan 16 09:38:50 CST 2015 from ds6722.dedicated.turbodns.co.uk on ssh:notty
-
-Ok, I know, this is normal: there is a lot of people and processes out there trying to enter as root or other common user.
-
-
-I found a lot of
-
-grep failed /var/log/secure |more
-
-http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean
-
-I did an OS reload on SoftLayer and as soon as I got access I disabled root login
-
-
-prima cosa
-creo utente
-
-poi in /etc/ssh/sshd_config
-
-PermitRootLogin no
-MaxAuthTries 2
-
-So root user cannot login and any other user is disconnected if password is wrong
-
-sudo systemctl restart sshd
-
-
-Già con questo non vedo più gli attempt login failed
-
-ancora di più
-
+TENGO QUESTO FILE COME NOTE, HO GIA PUBBLICATO ARTICOLO
 molti cambiano la porta 22 di default, ma, la sostanza non cambia: io devo ricordarmi che la porta è cambiata e chiunque può fare uno scan con npam e trovare quella giusta.
 
 
