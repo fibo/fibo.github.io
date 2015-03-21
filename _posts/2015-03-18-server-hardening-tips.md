@@ -62,14 +62,38 @@ see also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure]
 Keep kernel and other software up to date.
 
 ```
-# yum update
+# yum update -y
 ```
+
+## How to
+
+### Run server on port 80
+
+If you want to run a server on port 80, **do not** run it has root.
+Use `CAP_NET_BIND_SERVICE` capabilities instead. Suppose, for example, you want to run a server using nodejs.
+
+```
+$ su -
+# yum install libpcap -y
+# setcap cap_net_bind_service=ep /usr/bin/node
+```
+
+Check it out
+
+```
+$ getcap /usr/bin/node
+/usr/bin/node = cap_net_bind_service+ep
+```
+
+Now any user can run a nodejs server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
 ## References
 
 * [“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
 * [Top 20 OpenSSH Server Best Security Practices][2]
+* [How do I grant permission on port <1024][3]
 
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
+  [3]: http://forums.fedoraforum.org/showthread.php?t=207398 "How do I grant permission on port <1024"
 
