@@ -15,7 +15,7 @@ I assume OS is Centos 7.
 
 <div class="alert alert-warning">Do the following steps As Soon As Possible, i.e. when you access the server the first time.</div>
 
-1. Login as root and change password
+1. Login as root and change password, use a passphrase.
 2. Create a new user.
 3. [Configure ssh](#configure-ssh), in particular to disable root access.
 4. [Update software](#update-software).
@@ -36,6 +36,7 @@ Yes, there will a lot of **failed login attempts**. It is incredible how the num
 Edit your */etc/ssh/sshd_config* and set
 
 ```
+Protocol 2
 PermitRootLogin no
 MaxAuthTries 2
 ```
