@@ -127,9 +127,9 @@ Sadly, if you check where does the ssh failed login attempts come form, it turns
 For example, to allow connections from Italy you can launch, as root
 
 ```
-#                                "cn" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. 
-#                                                     ↓                       ↓                             ↓
-curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq >> /etc/hosts.deny
+#                                "cn" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. Append a dot to every subnet.
+#                                                     ↓                       ↓                             ↓                              ↓
+curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq | while read subnet; do echo ${subnet}.; done >> /etc/hosts.deny
 # Double check results appended to /etc/hosts.deny config file!
 ```
 
