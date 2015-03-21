@@ -127,7 +127,7 @@ Sadly, if you check where does the ssh failed login attempts come form, it turns
 For example, to allow connections from Italy you can launch, as root
 
 ```
-#                                "it" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. 
+#                                "cn" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. 
 #                                                     ↓                       ↓                             ↓
 curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq >> /etc/hosts.deny
 # Double check results appended to /etc/hosts.deny config file!
@@ -154,6 +154,6 @@ grep $LAST_IPV4_C_SUBNET  /etc/hosts.deny || systemctl restart sshd
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
   [3]: http://forums.fedoraforum.org/showthread.php?t=207398 "How do I grant permission on port <1024"
-  [4]: https://en.wikipedia.org/wiki/TCP_Wrapper [TCP wrapper]
+  [4]: https://en.wikipedia.org/wiki/TCP_Wrapper "TCP wrapper"
   [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
   [6]: http://www.ipdeny.com/ "IPdeny"
