@@ -87,6 +87,41 @@ $ getcap /usr/bin/node
 
 Now any user can run a nodejs server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
+### Restrict ssh access 
+
+As you can read in [Configure ssh](#configure-ssh) section, there are many login attempts. See it your self (sit down first :)
+
+```
+# tail -f /var/log/secure
+```
+
+You can use [TCP wrapper][4] lib to filter access to your host. Note that the following instructions work because *sshd* is compatible with tcpwrappers, in fact
+
+```
+$ ldd /usr/sbin/sshd | grep libwrap
+        libwrap.so.0 => /lib64/libwrap.so.0 (0x00007fac80451000)
+```
+
+For example, if you want to allow ssh access only from a class C subnet, for instance *10.20.30* do
+
+edit */etc/hosts.allow*
+
+```
+sshd: 10.20.30.
+```
+
+edit */etc/hosts.deny*
+
+```
+sshd: ALL
+```
+
+and restart ssh daemon
+
+```
+# systemctl restart sshd
+```
+
 ## References
 
 * [“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
@@ -96,4 +131,4 @@ Now any user can run a nodejs server on port 80. See also [how do I grant permis
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
   [3]: http://forums.fedoraforum.org/showthread.php?t=207398 "How do I grant permission on port <1024"
-
+  [4]: https://en.wikipedia.org/wiki/TCP_Wrapper [TCP wrapper]
