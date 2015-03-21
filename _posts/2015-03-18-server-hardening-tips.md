@@ -127,20 +127,20 @@ Sadly, if you check where does the ssh failed login attempts come form, it turns
 For example, to allow connections from Italy you can launch, as root
 
 ```
-#                                "it" stands for Italy. Drop curl progress bar. Extract class C IPv4 subnets. 
+#                                "it" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. 
 #                                                     ↓                       ↓                             ↓
-curl -L http://www.ipdeny.com/ipblocks/data/countries/it.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq >> /etc/hosts.allow
-# Double check results appended to /etc/hosts.allow config file!
+curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq >> /etc/hosts.deny
+# Double check results appended to /etc/hosts.deny config file!
 ```
 
 Note that the result is an aproximation, but, it is a pretty good one.
 
-Apply filter if last login is whitelisted
+Apply filter if last login is not blacklisted
 
 ```
 last | head -4 # Just to have a look
 LAST_IPV4_C_SUBNET=$(last | head -1 | awk '{print $3}' | cut -d . -f1-3)
-grep /etc/hosts.deny $LAST_IPV4_C_SUBNET && systemctl restart sshd
+grep $LAST_IPV4_C_SUBNET  /etc/hosts.deny || systemctl restart sshd
 ```
 
 
