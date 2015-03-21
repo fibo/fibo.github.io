@@ -102,7 +102,7 @@ $ ldd /usr/sbin/sshd | grep libwrap
         libwrap.so.0 => /lib64/libwrap.so.0 (0x00007fac80451000)
 ```
 
-For example, if you want to allow ssh access only from a class C subnet, for instance *10.20.30* do
+For example, if you want to allow ssh access only from a class C IPv4 subnet, for instance *10.20.30* do
 
 edit */etc/hosts.allow*
 
@@ -122,13 +122,44 @@ and restart ssh daemon
 # systemctl restart sshd
 ```
 
+Sadly, if you check where does the ssh failed login attempts come form, it turns out they are from China. You can use [IPdeny][6] lists to block or allow connections coming from a country.
+
+For example, to allow connections from Italy you can launch, as root
+
+```
+#                                                     "it" stands for Italy
+#                                                     ↓
+curl -L http://www.ipdeny.com/ipblocks/data/countries/it.zone \
+# Drop curl progress bar.                                     \
+2> /dev/null                                                  \
+# Extract class C IPv4 subnets                                \
+| cut -d . -f1-3 | sort | uniq                                \
+# Append to /etc/hosts.allow config file.                     \
+>> /etc/hosts.allow
+# Double check result!!
+```
+
+Note that the result is an aproximation, but, it is a pretty good one.
+
+Apply filter if last login is whitelisted
+
+```
+last | head -4 # Just to have a look
+LAST_IPV4_C_SUBNET=$(last | head -1 | awk '{print $3}' | cut -d . -f1-3)
+grep /etc/hosts.deny $LAST_IPV4_C_SUBNET && systemctl restart sshd
+```
+
+
 ## References
 
 * [“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
 * [Top 20 OpenSSH Server Best Security Practices][2]
 * [How do I grant permission on port <1024][3]
+* [Unexpected DDOS: Blocking China with ipset and iptables][5]
 
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
   [3]: http://forums.fedoraforum.org/showthread.php?t=207398 "How do I grant permission on port <1024"
   [4]: https://en.wikipedia.org/wiki/TCP_Wrapper [TCP wrapper]
+  [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
+  [6]: http://www.ipdeny.com/ "IPdeny"
