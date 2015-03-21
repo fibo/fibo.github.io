@@ -127,16 +127,10 @@ Sadly, if you check where does the ssh failed login attempts come form, it turns
 For example, to allow connections from Italy you can launch, as root
 
 ```
-#                                                     "it" stands for Italy
-#                                                     ↓
-curl -L http://www.ipdeny.com/ipblocks/data/countries/it.zone \
-# Drop curl progress bar.                                     \
-2> /dev/null                                                  \
-# Extract class C IPv4 subnets                                \
-| cut -d . -f1-3 | sort | uniq                                \
-# Append to /etc/hosts.allow config file.                     \
->> /etc/hosts.allow
-# Double check result!!
+#                                "it" stands for Italy. Drop curl progress bar. Extract class C IPv4 subnets. 
+#                                                     ↓                       ↓                             ↓
+curl -L http://www.ipdeny.com/ipblocks/data/countries/it.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq >> /etc/hosts.allow
+# Double check results appended to /etc/hosts.allow config file!
 ```
 
 Note that the result is an aproximation, but, it is a pretty good one.
