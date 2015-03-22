@@ -157,4 +157,4 @@ If everything looks ok, restart ssh daemon to apply filter
   [4]: https://en.wikipedia.org/wiki/TCP_Wrapper "TCP wrapper"
   [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
   [6]: http://www.ipdeny.com/ "IPdeny"
-  [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/"Network Security with tcpwrappers"
+  [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/ "Network Security with tcpwrappers"
