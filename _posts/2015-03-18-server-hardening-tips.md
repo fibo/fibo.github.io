@@ -127,20 +127,19 @@ Sadly, if you check where does the ssh failed login attempts come form, it turns
 For example, to allow connections from Italy you can launch, as root
 
 ```
-#                                "cn" stands for China. Drop curl progress bar. Extract class C IPv4 subnets. Append a dot to every subnet.
-#                                                     ↓                       ↓                             ↓                              ↓
-curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone                 2> /dev/null                  | cut -d . -f1-3 | sort | uniq | while read subnet; do echo ${subnet}.; done >> /etc/hosts.deny
-# Double check results appended to /etc/hosts.deny config file!
+echo -e \# $(date +%F): IP blocks from http://www.ipdeny.com/ipblocks/data/countries/cn.zone >> /etc/hosts.deny
+#                                "cn" stands for China.      Prepend sshd: .
+#                                                     ↓                    ↓ 
+curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null | while read subnet; do echo sshd: $subnet; done >> /etc/hosts.deny
+# Double check results appended to /etc/hosts.deny config!
 ```
 
-Note that the result is an aproximation, but, it is a pretty good one.
+Yes, double check results appended to your */etc/hosts.deny* config file and compare them with your last logins. Just use a simple `last | head -20` and `more /etc/hosts.deny` with a little bit from your brain.
 
-Apply filter if last login is not blacklisted
+If everything looks ok, restart ssh daemon to apply filter
 
 ```
-last | head -4 # Just to have a look
-LAST_IPV4_C_SUBNET=$(last | head -1 | awk '{print $3}' | cut -d . -f1-3)
-grep $LAST_IPV4_C_SUBNET  /etc/hosts.deny || systemctl restart sshd
+# systemctl restart sshd
 ```
 
 
@@ -150,6 +149,7 @@ grep $LAST_IPV4_C_SUBNET  /etc/hosts.deny || systemctl restart sshd
 * [Top 20 OpenSSH Server Best Security Practices][2]
 * [How do I grant permission on port <1024][3]
 * [Unexpected DDOS: Blocking China with ipset and iptables][5]
+* [Network Security with tcpwrappers][7]
 
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
@@ -157,3 +157,4 @@ grep $LAST_IPV4_C_SUBNET  /etc/hosts.deny || systemctl restart sshd
   [4]: https://en.wikipedia.org/wiki/TCP_Wrapper "TCP wrapper"
   [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
   [6]: http://www.ipdeny.com/ "IPdeny"
+  [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/"Network Security with tcpwrappers"
