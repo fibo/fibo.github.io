@@ -128,9 +128,9 @@ For example, to deny connections from China you can launch, as root
 
 ```
 echo -e \# $(date +%F): IP blocks from http://www.ipdeny.com/ipblocks/data/countries/cn.zone >> /etc/hosts.deny
-#                                "cn" stands for China. Extract class C subnet.  Prepend "sshd:"; append "." .
-#                                                     ↓                       ↓                              ↓ 
-curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null    | cut -d . -f1-3 | sort | uniq | while read subnet; do echo sshd: ${subnet}.; done >> /etc/hosts.deny
+#                                "cn" stands for China. Extract class B subnets.  Prepend "sshd:"; append "." .
+#                                                     ↓                        ↓                              ↓ 
+curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null     | cut -d . -f1-2 | sort | uniq | while read subnet; do echo sshd: ${subnet}.; done >> /etc/hosts.deny
 # Double check results appended to /etc/hosts.deny config!
 ```
 
