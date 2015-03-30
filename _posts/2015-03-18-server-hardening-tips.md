@@ -124,13 +124,13 @@ and restart ssh daemon
 
 Sadly, if you check where does the ssh failed login attempts come form, it turns out they are from China. You can use [IPdeny][6] lists to block or allow connections coming from a country.
 
-For example, to allow connections from Italy you can launch, as root
+For example, to deny connections from China you can launch, as root
 
 ```
 echo -e \# $(date +%F): IP blocks from http://www.ipdeny.com/ipblocks/data/countries/cn.zone >> /etc/hosts.deny
-#                                "cn" stands for China.      Prepend sshd: .
-#                                                     ↓                    ↓ 
-curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null | while read subnet; do echo sshd: $subnet; done >> /etc/hosts.deny
+#                                "cn" stands for China. Extract class C subnet.  Prepend "sshd:"; append "." .
+#                                                     ↓                       ↓                              ↓ 
+curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null    | cut -d . -f1-3 | sort | uniq | while read subnet; do echo sshd: ${subnet}.; done >> /etc/hosts.deny
 # Double check results appended to /etc/hosts.deny config!
 ```
 
@@ -141,7 +141,6 @@ If everything looks ok, restart ssh daemon to apply filter
 ```
 # systemctl restart sshd
 ```
-
 
 ## References
 
