@@ -17,6 +17,14 @@ By the way, sometimes I need to use *sqlplus*. Here it is a set of tips I always
 
 ## How to login
 
+     $ sqlplus schema@sid
+
+where *schema* is your user name and *sid* can be found in the *tnsnames.ora*.
+
+**Do not** do this
+
+     $ sqlplus schema/password@sid
+
 ### Check your environment
 
 Make sure your env vars are set properly
@@ -45,6 +53,11 @@ You can also do
 **Do not** do this
 
     $ sqlplus schema/password@sid
+
+You can also do this
+
+    $ sqlplus /nolog
+    SQL> CONNECT AS SYSDBA -- if you can :)
 
 ### Exit command
 
