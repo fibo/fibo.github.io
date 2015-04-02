@@ -17,6 +17,19 @@ By the way, sometimes I need to use *sqlplus*. Here it is a set of tips I always
 
 ## How to login
 
+     $ sqlplus schema@sid
+
+where *schema* is your user name and *sid* can be found in the *tnsnames.ora*.
+
+**Do not** show your password around, avoid this syntax
+
+     $ sqlplus schema/password@sid
+
+You can also do this
+
+    $ sqlplus /nolog
+    SQL> CONNECT AS SYSDBA -- if you can :)
+
 ### Check your environment
 
 Make sure your env vars are set properly
@@ -30,21 +43,6 @@ Set your `EDITOR` var to enable the `EDIT` command. It is a good idea to set thi
 If you are already logged in sqlplus, you can do
 
     SQL> DEFINE _EDITOR=vim
-
-### Connection syntax
-
-    $ sqlplus schema@sid
-
-Where *schema* is your user name, and *sid* can be found in your *tnsnames.ora*.
-
-You can also do
-
-    $ sqlplus /nolog
-    SQL> connect as sysdba -- if you can :)
-
-**Do not** do this
-
-    $ sqlplus schema/password@sid
 
 ### Exit command
 
