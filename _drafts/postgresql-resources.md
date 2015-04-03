@@ -1,15 +1,13 @@
 ---
 title: PostgreSQL resources
 tags:
-  - DataWarehouse
   - PostgreSQL
+  - DataWarehouse
 ---
 
 Collection of links and resources about PostgreSQL
 
-<!--more-->
-
-# Articles and other resources
+## Articles and other resources
 
 [Postgres Datatypes – the Ones You're Not Using.](http://www.craigkerstiens.com/2014/05/07/Postgres-datatypes-the-ones-youre-not-using)
 
