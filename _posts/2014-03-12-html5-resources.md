@@ -45,6 +45,9 @@ description: >
 [simpl.info](http://simpl.info/)
 : Simplest possible examples of HTML, CSS and JavaScript.
 
+[WebGL Fundamentals](http://webglfundamentals.org/)
+: WebGL from the ground up.
+
 ## Frameworks and libs
 
 [HTML5 Boilerplate](http://html5boilerplate.com/)
@@ -58,6 +61,9 @@ description: >
 
 [CutJS](http://cutjs.org/)
 : Lightweight, fast, interactable 2D HTML5 rendering engine for cross-platform game development.
+
+[GLSL.io](https://glsl.io/)
+: an open collection of GLSL Transitions.
 
 ### Web components
 
