@@ -20,7 +20,18 @@ description: >
 
 [Go Playground](http://play.golang.org/)
 
-## Projects
+## Packages
+
+[cli](https://github.com/codegangsta/cli)
+: A small package for building command line apps in Go
+
+[martini](http://martini.codegangsta.io/)
+: Classy web framework for Go
+
+## Software products
+
+[Docker](https://www.docker.com/)
+: An open platform for distributed applications for developers and sysadmins.
 
 [HUGO](http://gohugo.io/)
 : Static site generator (Jekyll like).
@@ -28,11 +39,8 @@ description: >
 [BoltDB](https://github.com/boltdb)
 : Pure Go key/value database.
 
-[cli](https://github.com/codegangsta/cli)
-: A small package for building command line apps in Go
-
-[martini](http://martini.codegangsta.io/)
-: Classy web framework for Go
+[Packer](https://packer.io/)
+: Tool for creating identical machine images for multiple platforms from a single source configuration.
 
 ## Articles
 
