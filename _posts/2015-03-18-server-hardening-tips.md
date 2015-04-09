@@ -65,6 +65,14 @@ Keep kernel and other software up to date.
 # yum update -y
 ```
 
+Schedule yum updates with *yum-cron*
+
+```
+# yum install yum-cron -y
+# systemctl enable yum-cron.service
+# systemctl start yum-cron
+```
+
 ## How to
 
 ### Run server on port 80
