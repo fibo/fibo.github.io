@@ -22,6 +22,9 @@ description: >
 
 ## Packages
 
+[cobra](https://github.com/spf13/cobra)
+: A Commander for modern Go CLI interactions
+
 [cli](https://github.com/codegangsta/cli)
 : A small package for building command line apps in Go
 
