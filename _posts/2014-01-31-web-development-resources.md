@@ -22,6 +22,14 @@ description: >
 [HTML Dog](http://htmldog.com/)
 : HTML, CSS and JavaScript tutorials
 
+[Flat UI Colors](http://flatuicolors.com/)
+: This small web app helps you to copy the colors from [Flat UI].
+
+[MDN - Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+: Shared knowledge for the Open Web, in particular see [Learning the Web](https://developer.mozilla.org/en-US/Learn).
+
+[REST API Tutorial](http://www.restapitutorial.com/)
+
 ### Validators
 
 [W3C Markup Validation Service](http://validator.w3.org/)
@@ -31,7 +39,7 @@ description: >
 : Check Cascading Style Sheets (CSS) and (X)HTML documents with style sheets
 
 [Validator.nu](http://html5.validator.nu/)
-: [X]HTML5 Validator (by WHATWG)
+: HTML5 Validator (by WHATWG)
 
 ## HTTP
 
@@ -49,9 +57,13 @@ description: >
 [Semantic UI](http://semantic-ui.com/)
 : UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
 
+[Flat UI][1]
+: Free Bootstrap Theme
+
 #### Application framework
 
 [Backbone](http://backbonejs.org/)
+: Backbone.js gives structure to web applications by providing **models** with key-value binding and custom events, **collections** with a rich API of enumerable functions, **views** with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
 
 [Vue](http://vuejs.org/)
 
@@ -101,6 +113,8 @@ description: >
 [Icon finder](https://www.iconfinder.com/)
 
 [X-Icon editor](http://www.xiconeditor.com/)
+
+[Evil Icons](http://evil-icons.io/)
 
 ## Online editors
 
@@ -153,6 +167,10 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [Remote Desktop Client with AngularJS and Yeoman](http://blog.mgechev.com/2014/02/08/remote-desktop-vnc-client-with-angularjs-and-yeoman/)
 
+[7 Principles of Rich Web Applications](http://rauchg.com/2014/7-principles-of-rich-web-applications/)
+
+[Presenting The Most Over-Engineered Blog Ever](http://jlongster.com/Presenting-The-Most-Over-Engineered-Blog-Ever)
+
 ### Server side
 
 [The CK10 problem](http://www.kegel.com/c10k.html)
@@ -160,6 +178,8 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 [Scaling to Millions of Simultaneous Connections](http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf)
 
 [To close or not to close](http://www.colorglare.com/2014/02/03/to-close-or-not-to-close.html)
+
+[How we built analytics.usa.gov](https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/)
 
 ## Hosting
 
@@ -191,4 +211,9 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [GPU fluid experiment](http://haxiomic.github.io/GPU-Fluid-Experiments/html5/)
 
+[tanx](http://playcanv.as/p/aP0oxhUr)
+: WebGL game on [PLAYCANVAS][2]
+
+  [1]: http://designmodo.com/flat-free/ "Flat UI"
+  [2]: https://playcanvas.com/play "PLAYCANVAS"
 

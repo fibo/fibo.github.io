@@ -8,7 +8,7 @@ description: My digital copybook
 
 permalink: ./:year/:month/:title
 
-exclude: 
+exclude:
   - Gemfile
   - README.md
   - _projects/_repos
