@@ -52,7 +52,10 @@ description: >
 ### Client side
 
 [Bootstrap](http://getbootstrap.com/)
-: The most popular front-end framework for developing responsive, mobile first projects on the web.
+: (claims to be :) The most popular front-end framework for developing responsive, mobile first projects on the web.
+
+[Foundation](http://foundation.zurb.com/)
+: (claims to be :) The most advanced responsive front-end framework in the world.
 
 [Semantic UI](http://semantic-ui.com/)
 : UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
