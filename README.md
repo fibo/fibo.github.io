@@ -14,7 +14,11 @@ It is highly recommended to install [Jekyll][3] to preview your site and avoid b
 
 ### Install Jekyll
 
-Instructions work great on a [Codio](https://codio.com) box like [this](https://codio.com/fibo/g14n-info).
+0. Install [Ruby](https://www.ruby-lang.org). With [dotsoftware](http://g14n.info/dotsoftware/) it is as simple as
+
+```bash
+$ .software_install Ruby
+```
 
 1. Create a *Gemfile* with the following content
 
@@ -27,21 +31,20 @@ gem 'github-pages'
 
 ```
 _site/
-.codio
 Gemfile*
 ```
 
 3. Install bundler
 
 ```bash
-gem install bundler
-```                                                                                                                     
+$ gem install bundler
+```
 
 4. Install dependencies
 
 ```bash
-bundle install
-```                                                                                                                     
+$ bundle install
+```
 
 See [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages) as a reference.
 
@@ -50,7 +53,7 @@ See [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with
 Test content generation running
 
 ```bash
-jekyll serve --watch
+$ jekyll serve --watch
 ```
 
 Static content is served [here][5].
