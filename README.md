@@ -14,10 +14,13 @@ It is highly recommended to install [Jekyll][3] to preview your site and avoid b
 
 ### Install Jekyll
 
-0. Install [Ruby](https://www.ruby-lang.org). With [dotsoftware](http://g14n.info/dotsoftware/) it is as simple as
+0. Install [Ruby](https://www.ruby-lang.org) and dependecies (libxml2, patch).
+With [dotsoftware](http://g14n.info/dotsoftware/) it is as simple as
 
 ```bash
 $ .software_install Ruby
+$ .software_install libxml2
+$ .software_install patch
 ```
 
 1. Create a *Gemfile* with the following content
