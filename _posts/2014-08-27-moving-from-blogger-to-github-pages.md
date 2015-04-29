@@ -84,7 +84,7 @@ I used [Cloudfare](https://www.cloudflare.com/) to get a naked domain and SSL: i
 
 On blogger you have comments and moderation out of the box. To achieve the same feature in a modular way, I chose [Disqus](https://disqus.com/).
 
-Basically I added an `{% include disqus.html %}` to my *_layouts/posts.html* and created an *_include/disqus.html* with all the code required.
+Basically I added an `{{ "{% include disqus.html " }}%}` to my *_layouts/posts.html* and created an *_include/disqus.html* with all the code required.
 
 Read how to [embed Disqus code][2] as a reference.
 
