@@ -29,6 +29,11 @@
               {% assign hasRelated = true %}
             {% endif %}
           {% endfor %}
+
+          {% if isRelated == true %}
+            <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+            <dd>{{ post.description }}</dd>
+          {% endif %}
         {% endfor %}
       {% endfor %}
 
