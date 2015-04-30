@@ -19,8 +19,17 @@
         <time datetime="{{ page.date }}" class="badge">{{ page.date | date: "%F" }}</time>
       </header>
 
-{{ content }}
+      {{ content }}
 
+      <aside>
+        <h2>Related posts</h2>
+        <dl>
+        {% for post in site.related_posts %}
+          <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+          <dd>{{ post.description }}</dd>
+        {% endfor %}
+        </dl>
+      </aside>
     </article>
 
 {% include disqus.html %}
