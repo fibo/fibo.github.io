@@ -8,8 +8,6 @@ description: >
 
 Firefox saved us from Internet Explorer nightmare. It was the example that Google followed to create the successful [Chromium projects](http://www.chromium.org/).
 
-![Firefox logo][1]
-
 ## I love Firefox
 
 Firefox is an **excelent browser** and is an essential tool for my current job (that is webanalytics for the main italian ISP).
@@ -38,7 +36,4 @@ It's because of [tons of addons](https://addons.mozilla.org) that help me with m
 ## Bonus tip
  
  You can also run a Firefox addon **without** using Firefox, thanks to [XULRunner](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/XULRunner).
-
-
-  [1]: https://assets.mozillalabs.com/Brands-Logos/Firefox/logo-only/firefox_logo-only.svg
 
