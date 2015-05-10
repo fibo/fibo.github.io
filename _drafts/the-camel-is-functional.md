@@ -6,6 +6,8 @@ description: >
     Amazing functional programming joy I, sinner, never expected from Perl
 ---
 
+Metti anche lo split_line di Sweet::File
+
 Closures in Perl! Cita il libro di JavaScript su Function Programming, altro parallelo per articolo JavaScript and Perl
 
 

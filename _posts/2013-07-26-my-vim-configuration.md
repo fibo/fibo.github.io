@@ -148,9 +148,9 @@ if has("gui_running")
 endif
 ```
 
-### Pastoggle
+### Pastetoggle
 
-Use <kbd>F2</kbd> to toggle auto-indenting for text paste.
+Use <kbd>F12</kbd> to toggle auto-indenting for text paste.
 
 ```vim
 " See http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
@@ -167,7 +167,7 @@ set hidden " abandon a buffer when unloaded
 
 ```vim
 set history=1000    " remember more commands and search history
-set undolevels=1000 " use many muchos levels of undo
+set undolevels=1000 " use many much levels of undo
 ```
 
 
@@ -363,23 +363,19 @@ autocmd filetype javascript setlocal tabstop=2
 
 ```vim
 " my Perl preferences
-autocmd filetype perl map <F2> :%!perltidy<CR> " indent
-autocmd filetype perl map <F3> :!prove -l<CR> " run tests
+autocmd filetype perl map <F2> :%!perltidy<CR>                    " indent
+autocmd filetype perl map <F3> :!prove -l<CR>                     " run tests
+autocmd Filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, stateful
+autocmd Filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
 autocmd filetype perl setlocal autoindent
 autocmd filetype perl setlocal expandtab
 autocmd filetype perl setlocal shiftwidth=4
 autocmd filetype perl setlocal tabstop=4
 
-" Syntastic
-" let g:syntastic_enable_perl_checker = 1
-" au BufRead,BufNewFile *.t let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
-" au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
-" au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
-
 " use perltidy for .pl, .pm, and .t
-au BufRead,BufNewFile *.pl setl equalprg=perltidy
-au BufRead,BufNewFile *.pm setl equalprg=perltidy
-au BufRead,BufNewFile *.t setl equalprg=perltidy
+autocmd BufRead,BufNewFile *.pl setl equalprg=perltidy
+autocmd BufRead,BufNewFile *.pm setl equalprg=perltidy
+autocmd BufRead,BufNewFile *.t  setl equalprg=perltidy
 ```
 
 ### CoffeeScript
