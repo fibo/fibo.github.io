@@ -14,7 +14,7 @@ It is highly recommended to install [Jekyll][3] to preview your site and avoid b
 
 ### Install Jekyll
 
-0. Install [Ruby](https://www.ruby-lang.org) its dependecies (libxml2, patch) and Node as JavaScript runtime needed by [execjs](https://github.com/rails/execjs).
+0. Install [Ruby](https://www.ruby-lang.org) its dependencies (libxml2, patch) and Node as JavaScript runtime needed by [execjs](https://github.com/rails/execjs).
 With [dotsoftware](http://g14n.info/dotsoftware/) it is as simple as
 
 ```bash
@@ -59,9 +59,6 @@ Test content generation running
 ```bash
 $ jekyll serve --watch
 ```
-
-Static content is served [here][5].
-
 ## Readme driven development
 
 Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their README.md file.
@@ -92,6 +89,5 @@ cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/inde
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"
-  [5]: http://rider-rufus.codio.io:4000/ "Static content on codio box"
 
 
