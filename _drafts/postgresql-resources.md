@@ -19,3 +19,5 @@ Collection of links and resources about PostgreSQL
 
 [Tree structure query with PostgreSQL](http://truongtx.me/2014/02/28/tree-structure-query-with-postgresql/)
 
+[Error Message Style Guide](http://www.postgresql.org/docs/devel/static/error-style-guide.html)
+

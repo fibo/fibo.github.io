@@ -57,6 +57,30 @@ Attach to a running session
 $ screen -x pst-3
 ```
 
+## Use case
+
+Suppose you need to login as *user1* in some host, then you can switch to user *user2*, *user3* … *userN*.
+
+<div class="alert alert-danger">Do not follow this instructions if any of the users is <em>root</em>.</div>
+
+As *user1* start a named screen session and switch to *user2*
+
+```bash
+$ screen -S user2
+$ su - user2
+```
+
+then detach with <kbd>CTRL-a d</kbd> and you are back to *user1* session.
+
+Repeat the analogous commands for *user3*, till *userN*.
+
+You get a screen session for every user. Now you do not need to enter passwords again
+and if the connection is broken you can enter again as *user1* then go to *user2* with
+
+```bash
+$ screen -x user2
+```
+
 ## References
 
 * [Screen quick reference][2]
