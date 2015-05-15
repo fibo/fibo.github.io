@@ -36,19 +36,17 @@ All screen commands are prefixed by <kbd>CTRL-a</kbd>, written in the help as `^
 You can give a name to the session
 
 ```bash
-$ screen -S myFirstScreenSession
+$ screen -S mySecondScreenSession
 ```
 
 List running sessions
 
 ```bash
 $ screen -ls
-```
-
-You can also start a session with a command, for example
-
-```bash
-$ screen -S install sudo apt-get install -y git
+There are screens on:
+        16704.mySecondScreenSession      (Attached)
+        16562.pts-3.server01    (Attached)
+2 Sockets in /var/run/screen/S-user.
 ```
 
 Detach from current session with <kbd>CTRL-a d</kbd>.
@@ -56,7 +54,7 @@ Detach from current session with <kbd>CTRL-a d</kbd>.
 Attach to a running session
 
 ```bash
-$ screen -x pst-0
+$ screen -x pst-3
 ```
 
 ## References
