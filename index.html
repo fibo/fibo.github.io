@@ -1,11 +1,13 @@
 ---
-layout: g14n
+layout: homepage
 title: My digital copybook
+description: A random topic blog
 ---
 
 <section>
   <h2>Latest posts</h2>
-{% include posts_list.html limit="3" %}
+
+  {% include posts_list.html limit="5" %}
 
   <a href="/blog" class="btn btn-primary"> &middot &middot &middot more posts</a>
 </section>
