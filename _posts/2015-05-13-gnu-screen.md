@@ -81,6 +81,18 @@ and if the connection is broken you can enter again as *user1* then go to *user2
 $ screen -x user2
 ```
 
+## Tips
+
+### Resize split window
+
+Split window with <kbd>CTRL-a S</kbd>. It creates a new region below.
+Go to new region with <kbd>CTRL-a TAB</kbd>.
+The region is empty, create a new window inside it with <kbd>CTRL-a c</kbd>
+Resize region by entering a screen command with <kbd>CTRL-a :</kbd>,
+then type for example `resize -5` to reduce region height by five rows.
+
+This is very useful if you want a separated window where you launch tasks like running tests, watch files for changes, tail logs, etc.
+
 ## References
 
 * [Screen quick reference][2]
