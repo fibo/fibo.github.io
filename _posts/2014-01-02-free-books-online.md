@@ -8,7 +8,7 @@ description: >
 
 > Information Wants To Be Free
 
-# eLibraries
+## eLibraries
 
 [List of free programming books (by vhf)](https://github.com/vhf/free-programming-books)
 
@@ -31,27 +31,27 @@ description: >
 [O’Reilly BioCoder](http://www.oreilly.com/biocoder/)
 : It’s about biology as it moves from research labs into startup incubators, hacker spaces, and even homes.
 
-# Computer Science
+### Computer Science
 
-## Programming languages
+### Programming languages
 
-### Assembly
+#### Assembly
 
 [The Art of Assembly Language](http://www.ic.unicamp.br/~pannain/mc404/aulas/pdfs/Art%20Of%20Intel%20x86%20Assembly.pdf)
 
-### AWK
+#### AWK
 
 [An Awk Primer](https://en.m.wikibooks.org/wiki/An_Awk_Primer)
 
-### C
+#### C
 
 [Guide to Advanced Programming in C](http://pfacka.binaryparadise.com/articles/guide-to-advanced-programming-in-C.html)
 
-### Erlang
+#### Erlang
 
 [Stuff Goes Bad: ERLANG IN ANGER](http://www.erlang-in-anger.com/)
 
-### Go
+#### Go
 
 [Effective go](http://golang.org/doc/effective_go.html)
 
@@ -59,17 +59,17 @@ description: >
 
 [Go Bootcamp](http://www.golangbootcamp.com/book)
 
-### Haskell
+#### Haskell
 
 [Learn Haskell Fast and Hard](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/)
 
-### HTML5
+#### HTML5
 
 [Dive Into HTML5](http://diveintohtml5.info/)
 
 [Web Audio API](http://chimera.labs.oreilly.com/books/1234000001552/index.html)
 
-### JavaScript
+#### JavaScript
 
 [Eloquent JavaScript](http://eloquentjavascript.net/)
 
@@ -85,21 +85,21 @@ description: >
 
 [Human JavaScript](http://read.humanjavascript.com/)
 
-### Lisp
+#### Lisp
 
 [The Roots of Lisp](http://www.cs.uml.edu/ecg/pub/uploads/OPLspr09/genesis-of-lisp-jmc.pdf)
 
-### R
+#### R
 
 [R - books](http://www.r-project.org/doc/bib/R-books.html)
 
 [Advanced R programming](http://adv-r.had.co.nz/) by Hadley Wickham
 
-### Perl
+#### Perl
 
 [Data Munging with Perl](http://perlhacks.com/dmp.pdf)
 
-### Python
+#### Python
 
 [Dive into Python](http://www.diveintopython.net/)
 
@@ -107,9 +107,9 @@ description: >
 
 [Full Stack Python](http://www.fullstackpython.com/)
 
-## Software
+### Software
 
-### Git
+#### Git
 
 [Git Community Book](http://git-scm.com/)
 
@@ -119,16 +119,16 @@ description: >
 
 [Git Pocket Guide](http://chimera.labs.oreilly.com/books/1230000000561/index.html)
 
-### Node
+#### Node
 
 [Node: Up and Running](http://chimera.labs.oreilly.com/books/1234000001808/index.html)
 
 
-## Web
+### Web
 
 [A Practical Guide to Web App Success](http://webappsuccess.com/)
 
-## Misc
+### Misc
 
 [Think OS](http://www.greenteapress.com/thinkos/index.html)
 : A Brief Introduction to Operating Systems
@@ -145,7 +145,7 @@ description: >
 [The Tao of Programming](http://www.mit.edu/~xela/tao.html)
 
 
-# Mathematics
+## Mathematics
 
 [Fractal Geometry](http://classes.yale.edu/fractals/)
 
@@ -159,3 +159,4 @@ description: >
 
 
   [1]: http://it.wikipedia.org/wiki/Eric_Steven_Raymond
+
