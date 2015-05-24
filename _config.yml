@@ -23,6 +23,9 @@ collections:
   projects:
     output: true
     permalink: ./:path.html
+  licenses:
+    output: true
+    permalink: ./:path.html
 
 # Defaults
 
