@@ -87,13 +87,23 @@ description: bla bla
 ---
 ```
 
+Add this entry in the package.json script array
+
+```
+"project:homepage:foo": "cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/index.md"
+```
+
 Concatenate *README.md* and its YAML front matter into *foo/index.md*
 
 ```bash
-cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/index.md
+npm run project:homepage:foo
 ```
 
-  [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
+
+## Licenses
+
+I use the [Artistic license](http://g14n.info/artistic-license) for Perl projects, the [MIT license](http://g14n.info/mit-license) otherwise.
+
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"

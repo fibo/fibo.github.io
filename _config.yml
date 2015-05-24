@@ -11,6 +11,7 @@ permalink: ./:year/:month/:title
 exclude:
   - Gemfile
   - README.md
+  - package.json
   - _projects/_repos
   - _projects/**/*.yaml
 
@@ -38,6 +39,12 @@ defaults:
       type: "projects"
     values:
       layout: project
+  -
+    scope:
+      path: ""
+      type: "licenses"
+    values:
+      layout: license
 
 # Custom vars
 
@@ -55,6 +62,8 @@ mathjax:
 
 google-analytics:
   id: UA-12635045-12
+
+google-site-verification: sL7WzWB8YUQPFoN0Rq_lGfM5JDdQ3r6PMj3_vhBHLwM
 
 repo: https://github.com/fibo/fibo.github.io/
 
