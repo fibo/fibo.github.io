@@ -16,15 +16,13 @@ layout: null
       </url>
     {% endfor %}
     <url>
-      <loc>{{ site.url }}/mit-license.html</loc>
-      <changefreq>never</changefreq>
-      <priority>0.1</priority>
-    </url>
     <url>
-      <loc>{{ site.url }}/artistic-license.html</loc>
-      <changefreq>never</changefreq>
+    {% for project in site.projects %}
+    <loc>{{ site.url }}/{{ project.name }}</loc>
+        <changefreq>never</changefreq>
       <priority>0.1</priority>
-    </url>
+      </url>
+    {% endfor %}
     {% for post in site.posts %}
       <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
