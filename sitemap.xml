@@ -17,8 +17,8 @@ layout: null
     {% endfor %}
     <url>
     <url>
-    {% for project in site.projects %}
-    <loc>{{ site.url }}/{{ project.name }}</loc>
+    {% for license in site.licenses %}
+    <loc>{{ site.url }}/{{ license.name }}</loc>
         <changefreq>never</changefreq>
       <priority>0.1</priority>
       </url>
