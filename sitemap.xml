@@ -1,7 +1,6 @@
 ---
 layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
@@ -10,10 +9,12 @@ layout: null
       <changefreq>monthly</changefreq>
     </url>
     <url>
-      <loc>{{ site.url }}/about-me.html</loc>
-      <changefreq>yearly</changefreq>
-      <priority>0.71</priority>
-    </url>
+    {% for project in site.projects %}
+    <loc>{{ site.url }}/{{ project.title }}</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.71</priority>
+      </url>
+    {% endfor %}
     <url>
       <loc>{{ site.url }}/mit-license.html</loc>
       <changefreq>never</changefreq>

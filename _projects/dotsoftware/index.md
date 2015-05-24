@@ -1,6 +1,6 @@
 ---
 title: dotsoftware
-layout: project
+description: build & install software locally
 ---
 .software
 =========
@@ -99,23 +99,17 @@ Otherwise you can add manually these lines to your *.bash_profile*.
 Note that if you are using *.software* from a graphical environment rather than a remote server login shell, you should edit *.bashrc* file instead.
 
 ```bash
-################################################################################
+###############################################################################
 ### .software config start
 
-##[optional]
-#
 # Set .software target dir, defaults to "~/.software".
-#
-##
 # export DOTSOFTWARE_ROOT_DIR=/path/to/your/software/installation/dir
 
-##[required]
 # Init .software
-##
 source ~/.software/etc/profile
 
-### end .software config
-################################################################################
+### .software config end
+###############################################################################
 ```
 
 #### DOTSOFTWARE_ROOT_DIR
@@ -141,7 +135,15 @@ $ ln -s ~/workspace/ ~/.software
 
 ## Software list
 
-### ctags
+### [BitchX](http://bitchx.sourceforge.net/)
+
+> version 1.2.1
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
+### [ctags](http://ctags.sourceforge.net/)
 
 > version 5.8
 
@@ -149,7 +151,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### cURL
+### [cURL](http://curl.haxx.se/)
 
 > version 7.41.0
 
@@ -157,7 +159,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Dos2Unix
+### [Dos2Unix](http://dos2unix.sourceforge.net/)
 
 > version 7.1
 
@@ -165,15 +167,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Graphviz
-
-> version
-
-Build depends on:
-* [gcc](#gcc)
-* [Make](#make)
-
-### Expat
+### [Expat](http://expat.sourceforge.net/)
 
 > version 2.1.0
 
@@ -183,7 +177,7 @@ Build depends on:
 * [Perl](#perl)
 * [Python](#python)
 
-### Findutils
+### [Findutils](http://www.gnu.org/software/findutils/)
 
 > version 4.4.2
 
@@ -191,7 +185,7 @@ It is a *.software* dependency.
 
 Install it with a package manager:
 
-* `# apt-get install -y findutils`
+* `# apt-get install findutils`
 
 Build depends on:
 * [gcc](#gcc)
@@ -199,21 +193,21 @@ Build depends on:
 
 ### g++
 
+Build not supported.
+
 Install it with a package manager:
 
-* `# apt-get install -y c++`
-
-Build not supported.
+* `# apt-get install c++`
 
 ### gcc
 
-Install it with a package manager:
-
-* `# apt-get install -y gcc`
-
 Build not supported.
 
-### Git
+Install it with a package manager:
+
+* `# apt-get install gcc`
+
+### [Git](https://git-scm.com/)
 
 > version 2.3.5
 
@@ -223,14 +217,14 @@ Build depends on:
 * [Perl](#perl)
 * [Python](#python)
 
-### git-extras
+### [git-extras](https://github.com/tj/git-extras)
 
 > version 2.2.0
 
 Build depends on:
 * [Make](#make)
 
-### Golang
+### [Golang](https://golang.org/)
 
 > version 1.4.2
 
@@ -238,7 +232,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Graphviz
+### [Graphviz](http://www.graphviz.org/)
 
 > version 2.38.0
 
@@ -246,7 +240,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Grep
+### [Grep](http://www.gnu.org/software/grep/)
 
 > version 2.21
 
@@ -254,25 +248,34 @@ It is a *.software* dependency.
 
 Install it with a package manager:
 
-* `# apt-get install -y grep`
+* `# apt-get install grep`
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Gzip
+### [Gzip](http://www.gnu.org/software/gzip/)
 
 > version 1.6
 
 Install it with a package manager:
 
-* `# apt-get install -y gzip`
+* `# apt-get install gzip`
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### libxml2
+### [Lua](http://www.lua.org/)
+
+> version 5.3.0
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+* [Readline](#readline)
+
+### [libxml2](http://www.xmlsoft.org/)
 
 > version 2.9.0
 
@@ -280,19 +283,19 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Make
+### [Make](http://www.gnu.org/software/make/)
 
 > version 3.82
 
 Install it with a package manager:
 
-* `# apt-get install -y make`
+* `# apt-get install make`
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Netcat
+### [Netcat](http://netcat.sourceforge.net/)
 
 > version 0.7.1
 
@@ -300,24 +303,33 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Node
+### [Node](https://nodejs.org/)
 
-> version 0.12.2
+> version 0.12.3
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 * [Python](#python)
 
-### OpenSSL
-
-Install it with a package manager:
-
-* `# apt-get install -y openssl libssl libssl-dev`
+### [OpenSSL](https://www.openssl.org/)
 
 Build not supported.
 
-### patch
+Install it with a package manager:
+
+* `# apt-get install openssl libssl libssl-dev`
+
+### [Readline](http://www.gnu.org/software/readline/)
+
+Build not supported.
+
+Install it with a package manager:
+
+* `# apt-get install libreadline-devel`
+* `# yum install readline-devel`
+
+### [patch](http://www.gnu.org/software/patch/)
 
 > version 2.7
 
@@ -325,7 +337,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Perl
+### [Perl](http://www.perl.org/)
 
 > version 5.20.2
 
@@ -333,7 +345,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Python
+### [Python](https://www.python.org/)
 
 > version 2.7.9
 
@@ -341,23 +353,23 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Redis
+### [Redis](http://redis.io/)
 
-> version 2.8.7
-
-Build depends on:
-* [gcc](#gcc)
-* [Make](#make)
-
-### Rsync
-
-> version 3.1.0
+> version 3.0.1
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Ruby
+### [rsync](https://rsync.samba.org/)
+
+> version 3.1.1
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
+### [Ruby](https://www.ruby-lang.org/)
 
 > version 2.2.2
 
@@ -368,7 +380,7 @@ Build depends on:
 * [libxml2](#libxml2)
 * [patch](#patch)
 
-### Sed
+### [sed](http://www.gnu.org/software/sed/)
 
 > version 4.2.2
 
@@ -376,7 +388,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Tar
+### [Tar](http://www.gnu.org/software/tar/)
 
 > version 1.28
 
@@ -384,13 +396,13 @@ It is a *.software* dependency.
 
 Install it with a package manager:
 
-* `# apt-get install -y tar`
+* `# apt-get install tar`
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### Wget
+### [Wget](http://www.gnu.org/software/wget/)
 
 > version 1.16
 
@@ -398,13 +410,13 @@ It is a *.software* dependency.
 
 Install it with a package manager:
 
-* `# apt-get install -y wget`
+* `# apt-get install wget`
 
 Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### xz
+### [xz](http://tukaani.org/xz/)
 
 > version 5.0.5
 
@@ -412,7 +424,7 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### zlib
+### [zlib](http://www.zlib.net/)
 
 > version 1.2.8
 
@@ -468,7 +480,7 @@ This file, contains also software versions. Every software must have an homonym 
 where version number is in the second row, like this
 
 ```
-### Foo
+### [Foo](http://url-of-foo-homepage.xxx)
 
 > version 1.2.3
 ```
