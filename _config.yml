@@ -12,7 +12,6 @@ exclude:
   - Gemfile
   - README.md
   - _projects/_repos
-  - _projects/README.md
   - _projects/**/*.yaml
 
 markdown: kramdown
@@ -32,8 +31,13 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: Gianluca Casati
       layout: post
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
 
 # Custom vars
 

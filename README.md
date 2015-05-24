@@ -59,23 +59,31 @@ Test content generation running
 ```bash
 $ jekyll serve --watch
 ```
-## Readme driven development
+## Collections
 
-Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their README.md file.
+### Projects
 
-Get repo **foo**.
+Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
+documentation about my projects that does not use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
+
+Add repo **foo** as a submodule.
 
 ```bash
-$ mkdir -p _projects/_repos
-$ git clone https://github.com/fibo/foo _projects/_repos/foo
+$ git submodule add git@github.com:fibo/foo _projects/_repos/foo
 ```
 
 Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
 
+```bash
+$ mkdir -p _projects/foo
+```
+
+Sample content of *_projects/foo/index.yaml*
+
 ```
 ---
-title: foo
-layout: project
+name: foo
+description: bla bla
 ---
 ```
 

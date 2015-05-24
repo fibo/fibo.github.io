@@ -1,6 +1,9 @@
 ---
 title: nz-util
-layout: project
+description: Netezza utility procedures
+---
+---
+title: nz-util
 ---
 
 > Netezza utility procedures
@@ -8,7 +11,7 @@ layout: project
 
 **Version 2014-01-21**
 
-    See [online docs](http://g14n.info/nz-util) for latest version.
+    See [online docs](http://www.g14n.info/nz-util) for latest version.
 
 
 ## Installation
@@ -18,13 +21,13 @@ layout: project
 If you are on a Linux box (for example the Netezza frontend itself), you can try with this command
 
 ```bash
-wget --timestamping http://g14n.info/nz-util/nz_util.sql
+wget --timestamping http://www.g14n.info/nz-util/nz_util.sql
 ```
 
 If it does not work, just point your browser to
 
 ```
-http://g14n.info/nz-util/nz_util.sql
+http://www.g14n.info/nz-util/nz_util.sql
 ```
 
 and use copy and paste, dude!
@@ -248,7 +251,7 @@ CALL util..transfer_objects_owned_by('USER_NAME', 'NEW_OWNER');
 #### objects_owned_by
 
 When you want to delete a user you need to know which objects he owns.
-See [How to drop a user on Netezza](http://g14n.info/2013/12/how-to-drop-user-on-netezza)
+See [How to drop a user on Netezza](http://blog.g14n.info/2013/12/how-to-drop-user-on-netezza.html)
 
 ```sql
 CALL util..objects_owned_by('USER_NAME');
@@ -278,5 +281,5 @@ grep -E '^--' nz_util.sql | sed -e 's/--//' > README.md
 
 ## License
 
- Code released under [MIT License](http://g14n.info/mit-license).
+ Code released under [MIT License](http://www.g14n.info/mit-license.html).
 
