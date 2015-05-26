@@ -3,14 +3,37 @@ title: Windows CMD alternative
 tags:
   - Windows
   - Software
-fileId: 0B1Q-qpUyEAecWHVvWWFfUW9IMGc
+description: >
+    Tyred of MS/DOS prompt limitations? Try this: Babun integrated with ConEmu.
 ---
 
-Ho provato ConEmu
+Download [ConEmu][1], and [Babun][2].
 
-https://code.google.com/p/conemu-maximus5/
+I like to put portable software in folder `C:\Portable` so I need to launch *Babun* installer with a custom target.
+
+```
+install.bat /t "C:\Portable"
+```
+
+which will install *Babun* under `C:\Portable\.babun` path. When installation finishes if you get this warning
+
+```
+Executing daily babun check:
+Source consistent [OK]
+Prompt speed      [OK]
+File permissions  [OK]
+Connection check  [FAILED]
+Update check      [FAILED]
+```
+
+probably you are behind a proxy, so you need to
+
+> adjust proxy settings in ~/.babunrc and execute 'source ~/.babunrc'
 
 metti anche le customizzazioni
+fighissima la Quake-like console <kbd>CTRL `</kbd> con la tastiera italiana
+è <kbd>CTRL ò</kbd> booh, meglio rimapparlo
 
-babun http://babun.github.io/ ti da un cygwin già pronto
+  [1]: http://sourceforge.net/projects/conemu/ "ConEmu"
+  [2]: http://babun.github.io/ "Babun"
 
