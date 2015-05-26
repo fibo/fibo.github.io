@@ -31,6 +31,9 @@ description: >
 [O’Reilly BioCoder](http://www.oreilly.com/biocoder/)
 : It’s about biology as it moves from research labs into startup incubators, hacker spaces, and even homes.
 
+[Awesome](https://github.com/sindresorhus/awesome)
+: A curated list of awesome lists
+
 ### Computer Science
 
 ### Programming languages
