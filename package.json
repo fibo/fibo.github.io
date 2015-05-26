@@ -4,9 +4,9 @@
   "description": "a random topic blog",
   "main": "index.js",
   "scripts": {
-    "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/homepage",
-    "project:homepage:gh-clone": "cat _projects/gh-clone/index.yaml _projects/_repos/gh-clone/README.md > _projects/gh-clone/homepage",
-    "project:homepage:nz-util": "cat _projects/nz-util/index.yaml _projects/_repos/nz-util/README.md > _projects/nz-util/homepage",
+    "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/index.md",
+    "project:homepage:gh-clone": "cat _projects/gh-clone/index.yaml _projects/_repos/gh-clone/README.md > _projects/gh-clone/index.md",
+    "project:homepage:nz-util": "cat _projects/nz-util/index.yaml _projects/_repos/nz-util/README.md > _projects/nz-util/index.md",
     "projects:homepage": "npm run project:homepage:dotsoftware; npm run project:homepage:gh-clone; npm run project:homepage:nz-util",
     "projects:update": "npm run submodules:pull; npm run projects:homepage",
     "submodules:pull": "git submodule foreach git pull origin master",
