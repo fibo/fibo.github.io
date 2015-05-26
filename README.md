@@ -59,33 +59,51 @@ Test content generation running
 ```bash
 $ jekyll serve --watch
 ```
-## Readme driven development
+## Collections
 
-Inspired by [Tom Preston's article](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html) documentation about my projects is contained in their README.md file.
+### Projects
 
-Get repo **foo**.
+Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
+documentation about my projects that does not use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
+
+Add repo **foo** as a submodule.
 
 ```bash
-$ mkdir -p _projects/_repos
-$ git clone https://github.com/fibo/foo _projects/_repos/foo
+$ git submodule add git@github.com:fibo/foo _projects/_repos/foo
 ```
 
 Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
 
+```bash
+$ mkdir -p _projects/foo
+```
+
+Sample content of *_projects/foo/index.yaml*
+
 ```
 ---
-title: foo
-layout: project
+name: foo
+description: bla bla
 ---
+```
+
+Add this entry in the package.json script array
+
+```
+"project:homepage:foo": "cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/index.md"
 ```
 
 Concatenate *README.md* and its YAML front matter into *foo/index.md*
 
 ```bash
-cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/index.md
+npm run project:homepage:foo
 ```
 
-  [1]: http://g14n.info/jekyll-boilerplate "Jekyll boilerplate"
+
+## Licenses
+
+I use the [Artistic license](http://g14n.info/artistic-license) for Perl projects, the [MIT license](http://g14n.info/mit-license) otherwise.
+
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"

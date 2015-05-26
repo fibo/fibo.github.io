@@ -57,6 +57,9 @@ $ grep failed /var/log/secure | more
 
 see also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
 
+<div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts.
+One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
+
 ### Update software
 
 Keep kernel and other software up to date.
@@ -95,7 +98,10 @@ $ getcap /usr/bin/node
 
 Now any user can run a nodejs server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
-### Restrict ssh access 
+<div class="alert alert-warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to <a href="http://g14n.info/dotsoftware">separate user software from system software</a>.
+In this particular case, if you update Node using yum you will loose the <em>cap_net_bind_service=ep</em> setting and your server will fail to restart on port 80.</div>
+
+### Restrict ssh access
 
 As you can read in [Configure ssh](#configure-ssh) section, there are many login attempts. See it your self (sit down first :)
 

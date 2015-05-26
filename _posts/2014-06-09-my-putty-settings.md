@@ -12,18 +12,19 @@ description: >
 
 [Putty][1] is a free (MIT-licensed) Win32 Telnet and SSH client. You need it if you want to use a terminal on Windows, I mean a **real** terminal, *MS/DOS* is not decent.
 
-Check also [PuttyTray](https://puttytray.goeswhere.com/).
+Check also [PuttyTray](https://puttytray.goeswhere.com/), it adds nice features like *Always on Top* and *Window transparency*
 
 ## Regedit
 
-For the impatient: copy the following content in a *.reg* file. To import it in regedit, right click on it and choose *merge* on the contextual menu.
+For the impatient: copy the following content in a *.reg* file. To import it in *regedit*, right click on it and choose *merge* on the contextual menu.
 
 It will overwrite the *Default Settings* configuration, details are in [Configuration summary](#configuration-summary).
 
 ```
 Windows Registry Editor Version 5.00
 
-; This is a comment
+; Colors are from eighties theme of
+; https://github.com/benjojo/base-16-putty
 
 [HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Default%20Settings]
 "FullScreenOnAltEnter"=dword:00000001
@@ -38,20 +39,20 @@ Windows Registry Editor Version 5.00
 "ANSIColour"=dword:00000001
 "Xterm256Colour"=dword:00000001
 "BoldAsColour"=dword:00000000
-"Colour0"="211,208,200"
-"Colour1"="242,240,236"
+"Colour0"="160,159,147"
+"Colour1"="211,208,200"
 "Colour2"="45,45,45"
-"Colour3"="116,115,105"
-"Colour4"="0,0,0"
-"Colour5"="252,151,31"
+"Colour3"="57,57,57"
+"Colour4"="45,45,45"
+"Colour5"="232,230,223"
 "Colour6"="45,45,45"
 "Colour7"="116,115,105"
 "Colour8"="242,119,122"
 "Colour9"="249,145,87"
 "Colour10"="153,204,153"
-"Colour11"="102,179,102"
+"Colour11"="57,57,57"
 "Colour12"="255,204,102"
-"Colour13"="255,189,51"
+"Colour13"="81,81,81"
 "Colour14"="102,153,204"
 "Colour15"="160,159,147"
 "Colour16"="204,153,204"
@@ -77,8 +78,6 @@ Choose *ClearType* as font quality.
 
 Check the *Hide mouse pointer when typing window* flag.
 
-
-
 #### Behaviour
 
 Check the *Full screen on Alt-Enter* flag.
@@ -93,33 +92,7 @@ Choose *UTF-8* encoding.
 
 The fastest workaround is to flag *Use system colours*.
 
-You will joy a better color theme, for example this one taken from [base16-mintty]( https://github.com/geoffstokes/base16-mintty/blob/master/base16-eighties.minttyrc). See also [chriskempson/tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) too see how it looks like.
-
-
-| Colour name               | R | G | B |
- ---------------------------|---|---|---|
-| Default Foreground        |211|208|200|
-| Default Bold Foreground   |242|240|236|
-| Default Background        | 45| 45| 45|
-| Default Bold Background   |116|115|105|
-| Cursor Text               |  0|  0|  0|
-| Cursor Colour             |252|151| 31|
-| ANSI Black                | 45| 45| 45|
-| ANSI Black Bold           |116|115|105|
-| ANSI Red                  |242|119|122|
-| ANSI Red Bold             |249|145| 87|
-| ANSI Green                |153|204|153|
-| ANSI Green Bold           |102|179|102|
-| ANSI Yellow               |255|204|102|
-| ANSI Yellow Bold          |255|189| 51|
-| ANSI Blue                 |102|153|204|
-| ANSI Blue Bold            |160|159|147|
-| ANSI Magenta              |204|153|204|
-| ANSI Magenta Bold         |232|230|223|
-| ANSI Cyan                 |102|204|204|
-| ANSI Cyan Bold            |210|123| 83|
-| ANSI White                |211|208|200|
-| ANSI White Bold           |242|240|236|
+You will joy a better color theme, for example the *eighties* theme from [base16-vim]( https://github.com/benjojo/base-16-putty).
 
 ### Connection
 
@@ -157,6 +130,12 @@ Voilà! Now you can connect just clicking on the shortcut. Even better:
 * on Windows 8, right click the shortcut and *Pin to Start*
 
 Now you can access **really quickly** to your connection: <kbd>HOST + user@serv ...</kbd>
+
+### Export from regedit
+
+I admit I try to export configuration from *regedit* one year after I wrote this article, and I couldn't do it at first attempt, so it is better I annotate this trick for the future *me*.
+
+Right click on the *regedit* entry and export, choose the *.reg* format. Then open the file with *vim* and remove the null characters by typing `:% s/`<kbd>CTRL</kbd>`2//g`.
 
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
   [2]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png

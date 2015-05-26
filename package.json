@@ -1,0 +1,25 @@
+{
+  "name": "fibo.github.io",
+  "version": "1.0.0",
+  "description": "a random topic blog",
+  "main": "index.js",
+  "scripts": {
+    "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/homepage",
+    "project:homepage:gh-clone": "cat _projects/gh-clone/index.yaml _projects/_repos/gh-clone/README.md > _projects/gh-clone/homepage",
+    "project:homepage:nz-util": "cat _projects/nz-util/index.yaml _projects/_repos/nz-util/README.md > _projects/nz-util/homepage",
+    "projects:homepage": "npm run project:homepage:dotsoftware; npm run project:homepage:gh-clone; npm run project:homepage:nz-util",
+    "projects:update": "npm run submodules:pull; npm run projects:homepage",
+    "submodules:pull": "git submodule foreach git pull origin master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fibo/fibo.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fibo/fibo.github.io/issues"
+  },
+  "homepage": "https://github.com/fibo/fibo.github.io"
+}

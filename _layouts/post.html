@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% include header.html %}
+  {% include bootstrap/header.html %}
+  {% include common/header.html %}
+
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
 </head>
 
 <body>
-{% include navbar.html %}
-
-{% include edit_post.html %}
+  {% include common/navbar.html %}
 
   <div class="container">
     <article>
@@ -56,13 +57,11 @@
       {% endif %}
     </article>
 
-{% include disqus.html %}
-
+    {% include common/disqus.html %}
   </div>
 
-{% include footer.html %}
-
-{% include analytics.html %}
-
+  {% include common/footer.html %}
+  {% include bootstrap/footer.html %}
+  {% include common/analytics.html %}
 </body>
 </html>
