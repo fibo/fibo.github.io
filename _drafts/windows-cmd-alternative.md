@@ -7,9 +7,15 @@ description: >
     Tyred of MS/DOS prompt limitations? Try this: Babun integrated with ConEmu.
 ---
 
-Download [ConEmu][1], and [Babun][2].
+Follow instructions in this article to get the coolest shell experience on Windows.
 
-I like to put portable software in folder `C:\Portable` so I need to launch *Babun* installer with a custom target.
+I use to put portable software in folder `C:\Portable`.
+
+## Babun
+
+Download [Babun][2] and uncompress it.
+
+I am so sorry, you need to open (for the last time ^:) an MS/DOS prompt, cd to the dir where you uncompressed *Babun* and launch the installer with a custom path.
 
 ```
 install.bat /t "C:\Portable"
@@ -26,26 +32,32 @@ Connection check  [FAILED]
 Update check      [FAILED]
 ```
 
-probably you are behind a proxy, so you need to
+probably you are behind a proxy, so, as you can read in the message, you need to
 
 > adjust proxy settings in ~/.babunrc and execute 'source ~/.babunrc'
 
-Also *ConEmu* can be installed as a portable software
+## ConEmu
+
+Download [ConEmu][1].
+
+Also *ConEmu* can be installed as a portable software, as you can read in *Portable.txt*
 
 > If You want to use «Portable» mode, just create empty file
 «ConEmu.xml» in this folder.
 
 that is the folder where you uncompress *ConEmu*.
+
 You will see a configuration wizard first time you run *ConEmu*, and, yes
 check the *Quake-style slide down from the to of the screen* flag.
-Since my default keyboard layout is italian, I see <kbd>CTRL+ò</kbd> as the keyboard shortcut. It is better to change it to <kbd>CTRL+\</kbd> that is what the author meant.
+Since my default keyboard layout is Italian, I see <kbd>CTRL+ò</kbd> as the keyboard shortcut.
+It is better to change it to <kbd>CTRL+\</kbd> that is what the author meant, i.e. <kbd>CTRL+`</kbd> if you have a USA keyboard layout.
 
+### Babun integration
 
+In *ConEmu* press <kbd>Win+Alt+P</kbd> or open settings from menu, go to *Startup > Tasks*, press **+** icon to add a new task and set it as specified in [Babun FAQ](http://babun.github.io/faq.html#_how_do_i_integrate_babun_with_conemu) but with the custom path.
 
-
-metti anche le customizzazioni
-fighissima la Quake-like console <kbd>CTRL `</kbd> con la tastiera italiana
-è <kbd>CTRL ò</kbd> booh, meglio rimapparlo
+* Task parameters: `/icon "C:\Portable\.babun\cygwin\bin\mintty.exe" /dir "C:\Portable"`
+* Commands: `C:\Portable\.babun\cygwin\bin\mintty.exe`
 
   [1]: http://sourceforge.net/projects/conemu/ "ConEmu"
   [2]: http://babun.github.io/ "Babun"
