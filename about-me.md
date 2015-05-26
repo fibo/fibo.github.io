@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: default
+layout: page
 ---
 
 Hi! My name is {{ site.author }}.

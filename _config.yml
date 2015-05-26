@@ -11,8 +11,8 @@ permalink: ./:year/:month/:title
 exclude:
   - Gemfile
   - README.md
+  - package.json
   - _projects/_repos
-  - _projects/README.md
   - _projects/**/*.yaml
 
 markdown: kramdown
@@ -21,6 +21,9 @@ kramdown:
 
 collections:
   projects:
+    output: true
+    permalink: ./:path.html
+  licenses:
     output: true
     permalink: ./:path.html
 
@@ -32,8 +35,19 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: Gianluca Casati
       layout: post
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  -
+    scope:
+      path: ""
+      type: "licenses"
+    values:
+      layout: license
 
 # Custom vars
 
@@ -51,6 +65,8 @@ mathjax:
 
 google-analytics:
   id: UA-12635045-12
+
+google-site-verification: sL7WzWB8YUQPFoN0Rq_lGfM5JDdQ3r6PMj3_vhBHLwM
 
 repo: https://github.com/fibo/fibo.github.io/
 

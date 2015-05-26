@@ -1,15 +1,9 @@
-<!-- _includes/header.html START -->
+<!-- _includes/bootstrap/header.html start -->
 
 <meta charset="{{ site.encoding }}">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="{{ page.description | strip_newlines }}">
-<meta name="author" content="{{ site.author }}">
-
-<title>{{ page.title }}</title>
-
-<!-- Bootstrap -->
 <link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ site.bootstrap.base_url }}/{{ site.bootstrap.version }}/css/bootstrap-theme.min.css">
 
@@ -20,10 +14,4 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
- <!-- Bower libs -->
-
-{% if page.bower.d3 %}
-  <script src="//g14n.info/bower_components/d3/d3.js"></script>
-{% endif %}
-
-<!-- _includes/header.html END -->
+<!-- _includes/bootstrap/header.html end -->

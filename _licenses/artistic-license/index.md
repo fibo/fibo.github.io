@@ -1,6 +1,6 @@
 ---
 title: The Artistic License
-layout: license
+name: artistic-license
 ---
 
 ## Preamble
