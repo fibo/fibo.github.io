@@ -30,6 +30,19 @@ probably you are behind a proxy, so you need to
 
 > adjust proxy settings in ~/.babunrc and execute 'source ~/.babunrc'
 
+Also *ConEmu* can be installed as a portable software
+
+> If You want to use «Portable» mode, just create empty file
+«ConEmu.xml» in this folder.
+
+that is the folder where you uncompress *ConEmu*.
+You will see a configuration wizard first time you run *ConEmu*, and, yes
+check the *Quake-style slide down from the to of the screen* flag.
+Since my default keyboard layout is italian, I see <kbd>CTRL+ò</kbd> as the keyboard shortcut. It is better to change it to <kbd>CTRL+\</kbd> that is what the author meant.
+
+
+
+
 metti anche le customizzazioni
 fighissima la Quake-like console <kbd>CTRL `</kbd> con la tastiera italiana
 è <kbd>CTRL ò</kbd> booh, meglio rimapparlo
