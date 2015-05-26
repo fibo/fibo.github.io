@@ -14,6 +14,8 @@ All sections start with an **h2**.
 
 This is a <span class="label label-default">label</span>
 
+![foo_bar](//{{ site.domain }}/images/yyyy-mm-dd-article-template/foo_bar.jpg)
+
 ## See also
 
 * [article]({% post_url yyyy-mm-dd-article %})
