@@ -14,6 +14,11 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         {% if page.title == "Blog" %}
+          <select class="filterArticles" multiple>
+            <option>Node</option>
+            <option>Perl</option>
+	    <!-- TODO add forloop on blog tags -->
+          </select>
           <!-- TODO put bootstrap select to filter articles check how it looks on mobile! -->
         {% else %}
           <li><a href="//{{ site.domain }}/blog">Blog</a></li>
