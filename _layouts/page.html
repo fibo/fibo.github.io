@@ -8,15 +8,6 @@
 
   {% include common/navbar.html %}
 
-        {% if page.title == "Blog" %}
-          <select class="filterArticles" multiple>
-            <option>Node</option>
-            <option>Perl</option>
-	    <!-- TODO add forloop on blog tags -->
-          </select>
-          <!-- TODO put bootstrap select to filter articles check how it looks on mobile! -->
-        {% endif %}
-
   <div class="container">{{ content }}</div>
 
   {% include common/footer.html %}
