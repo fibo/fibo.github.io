@@ -9,11 +9,12 @@ description: My digital copybook
 permalink: ./:year/:month/:title
 
 exclude:
+  - _projects/_repos
+  - _projects/**/*.yaml
+  - bower_components
   - Gemfile
   - README.md
   - package.json
-  - _projects/_repos
-  - _projects/**/*.yaml
 
 markdown: kramdown
 kramdown:
@@ -50,14 +51,6 @@ defaults:
       layout: license
 
 # Custom vars
-
-bootstrap:
-  base_url: https://maxcdn.bootstrapcdn.com/bootstrap
-  version: 3.3.4
-
-jquery:
-  base_url: https://ajax.googleapis.com/ajax/libs/jquery
-  version: 1.11.2
 
 mathjax:
   base_url: https://cdn.mathjax.org/mathjax
