@@ -69,8 +69,10 @@ documentation about my projects that does not use [GitHub Pages][4] is contained
 Add repo **foo** as a submodule.
 
 ```bash
-$ git submodule add git@github.com:fibo/foo _projects/_repos/foo
+$ git submodule add https://github.com/fibo/foo _projects/_repos/foo
 ```
+
+**Do not** use `git@github.com:fibo/foo.git` otherwise GitHub will be not able to clone submodule.
 
 Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
 
