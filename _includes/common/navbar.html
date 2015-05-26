@@ -13,7 +13,11 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li {% if page.title == "Blog" %}class="active"{% endif %}><a href="//{{ site.domain }}/blog">Blog</a></li>
+        {% if page.title == "Blog" %}
+          <!-- TODO put bootstrap select to filter articles check how it looks on mobile! -->
+        {% else %}
+          <a href="//{{ site.domain }}/blog">Blog</a></li>
+        {% endif %}
       </ul>
     </div>
   </div>
