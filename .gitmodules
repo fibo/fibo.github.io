@@ -1,9 +1,9 @@
 [submodule "_projects/_repos/nz-util"]
 	path = _projects/_repos/nz-util
-	url = git@github.com:fibo/nz-util
+	url = https://github.com/fibo/nz-util
 [submodule "_projects/_repos/gh-clone"]
 	path = _projects/_repos/gh-clone
-	url = git@github.com:fibo/gh-clone
+	url = https://github.com/fibo/gh-clone
 [submodule "_projects/_repos/dotsoftware"]
 	path = _projects/_repos/dotsoftware
-	url = git@github.com:fibo/.software
+	url = https://github.com/fibo/.software
