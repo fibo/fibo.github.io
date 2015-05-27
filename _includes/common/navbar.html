@@ -14,13 +14,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          {% if page.title == "Blog" %}
-            <select class="filterArticles" multiple>
-              {% for tag in site.tags | sort %}
-               <option>{{ tag | first | slugify }}</option>
-              {% endfor %}
-            </select>
-          {% else %}
+          {% if page.title != "Blog" %}
             <a href="//{{ site.domain }}/blog">Blog</a>
           {% endif %}
         </li>
