@@ -2,8 +2,11 @@
   "name": "fibo.github.io",
   "version": "1.0.0",
   "description": "a random topic blog",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "browserify": "npm run browserify:js:blog",
+    "browserify:js:blog": "browserify -e src/blog.js -o js/blog.js",
+    "browserify:TODO": "minification transform",
     "cp": "npm run cp:bootstrap; npm run cp:d3; npm run cp:jquery",
     "cp:bootstrap": "npm run cp:bootstrap:css; npm run cp:bootstrap:fonts; npm run cp:bootstrap:js; npm run cp:bootstrap:plugins",
     "cp:bootstrap:js": "cp bower_components/bootstrap/dist/js/bootstrap.min.js js/",
@@ -15,6 +18,7 @@
     "cp:bootstrap-select:css": "cp bower_components/bootstrap-select/dist/css/*.min.css css/",
     "cp:d3": "cp bower_components/d3/d3.min.js js/",
     "cp:jquery": "cp bower_components/jquery/dist/jquery.min.js js/",
+    "jshint": "jshint -c .jshintrc src/*.js",
     "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/index.md",
     "project:homepage:gh-clone": "cat _projects/gh-clone/index.yaml _projects/_repos/gh-clone/README.md > _projects/gh-clone/index.md",
     "project:homepage:nz-util": "cat _projects/nz-util/index.yaml _projects/_repos/nz-util/README.md > _projects/nz-util/index.md",
@@ -32,5 +36,9 @@
   "bugs": {
     "url": "https://github.com/fibo/fibo.github.io/issues"
   },
-  "homepage": "https://github.com/fibo/fibo.github.io"
+  "homepage": "https://github.com/fibo/fibo.github.io",
+  "dependencies": {
+    "browserify": "^10.2.1",
+    "dflow": "^0.4.0"
+  }
 }

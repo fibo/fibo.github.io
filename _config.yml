@@ -12,9 +12,13 @@ exclude:
   - _projects/_repos
   - _projects/**/*.yaml
   - bower_components
+  - bower.json
+  - npm-debug.log
   - Gemfile
   - README.md
   - package.json
+  - src/
+  - TODO
 
 markdown: kramdown
 kramdown:
@@ -60,8 +64,6 @@ google-analytics:
   id: UA-12635045-12
 
 google-site-verification: sL7WzWB8YUQPFoN0Rq_lGfM5JDdQ3r6PMj3_vhBHLwM
-
-repo: https://github.com/fibo/fibo.github.io/
 
 disqus:
   shortname: g14n
