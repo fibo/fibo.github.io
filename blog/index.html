@@ -1,10 +1,16 @@
 ---
 title: Blog
 layout: page
+flows:
+  - blog
 ---
 
 <div class="row">
-  <select class="filterArticles" multiple>
+  <select
+    class="filterArticles"
+    data-width="auto"
+    title="Filter by tags"
+  >
     {% for tag in site.tags | sort %}
      <option>{{ tag | first }}</option>
     {% endfor %}

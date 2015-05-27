@@ -2,12 +2,20 @@
 /**
  *
  * @param {Array} elements with class .filterArticles
+ * @param {Function} onChange
+ */
+
+function change (elements, onChange) {
+  elements.change(onChange)
+}
+
+/**
  *
- * @returns {Array} elements with class .filterArticles
+ * @param {Array} elements with class .filterArticles
  */
 
 function selectPicker (elements) {
-  return elements.selectpicker()
+  elements.selectpicker()
 }
 
 /**
@@ -24,7 +32,8 @@ function filterArticles () {
  */
 
 module.exports = {
-  '.selectpicker()': selectPicker,
+  'change': change,
+  'selectPicker()': selectPicker,
   '$filterArticles': filterArticles
 }
 
