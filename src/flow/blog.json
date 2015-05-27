@@ -1,10 +1,10 @@
 {
   "task": {
-    "selectPicker": ".selectPicker()",
-    "filterArticles": "$filterArticles"
+    "1": "$filterArticles",
+    "2": "selectPicker()"
   },
   "pipe": {
-    "a": ["filterArticles", "selectPicker"]
+    "a": ["1", "2"]
   },
   "view": {
     "box": {

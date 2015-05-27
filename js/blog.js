@@ -503,11 +503,11 @@ module.exports = validate
 },{}],12:[function(require,module,exports){
 module.exports={
   "task": {
-    "selectPicker": ".selectPicker()",
-    "filterArticles": "$filterArticles"
+    "1": "$filterArticles",
+    "2": "selectPicker()"
   },
   "pipe": {
-    "a": ["filterArticles", "selectPicker"]
+    "a": ["1", "2"]
   },
   "view": {
     "box": {
@@ -542,12 +542,20 @@ module.exports={
 /**
  *
  * @param {Array} elements with class .filterArticles
+ * @param {Function} onChange
+ */
+
+function change (elements, onChange) {
+  elements.change(onChange)
+}
+
+/**
  *
- * @returns {Array} elements with class .filterArticles
+ * @param {Array} elements with class .filterArticles
  */
 
 function selectPicker (elements) {
-  return elements.selectpicker()
+  elements.selectpicker()
 }
 
 /**
@@ -564,7 +572,8 @@ function filterArticles () {
  */
 
 module.exports = {
-  '.selectpicker()': selectPicker,
+  'change': change,
+  'selectPicker()': selectPicker,
   '$filterArticles': filterArticles
 }
 
@@ -577,6 +586,9 @@ var graph = require('./flow/blog.json')
 var funcs = require('./flow/funcs')
 
 var func = dflow.fun(graph, funcs)
+
+  console.log(func)
+  console.log(graph)
 
 func()
 
