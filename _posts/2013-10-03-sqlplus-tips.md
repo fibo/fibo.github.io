@@ -81,7 +81,7 @@ or simply
 ### Show command help
 
     SQL> HELP INDEX
-    
+
     Enter Help [topic] for help.
 
      @             COPY         PAUSE                    SHUTDOWN
@@ -212,6 +212,29 @@ Sometimes it is really useful to launch a SQL that generates a SQL statement. Fo
     COL parameter FOR a23
 
 to generate the `COL parameter FOR a23` expression, and then just copy and paste it into your SQL prompt.
+
+### Launch a script
+
+    SQL> @script.sql
+
+if *script.sql* is in the same directory you launched *sqlplus*.
+
+You can pass an absolute path
+
+    SQL> @/path/to/script.sql
+
+and even a name with spaces, by adding double quotes
+
+    SQL> @"001 - My script.sql"
+
+Note that if there is an ampersand (`&`) you will be prompted to insert a value,
+since it is the syntax for interactive variable assignations. Unluckly, if there is
+any string in your insert that contains an ampersand, *sqlplus* will recognize it as a variable,
+so you will be prompted for its assignation. You can solve it by setting
+
+    SET DEFINE OFF
+
+in your script or in the *sqlplus* session.
 
 ## See also
 
