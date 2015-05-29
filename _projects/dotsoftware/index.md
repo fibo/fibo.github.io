@@ -177,6 +177,15 @@ Build depends on:
 * [Perl](#perl)
 * [Python](#python)
 
+### [Expect](http://expect.sourceforge.net/)
+
+> version 5.45
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+* [Tcl](#tcl)
+
 ### [Findutils](http://www.gnu.org/software/findutils/)
 
 > version 4.4.2
@@ -397,6 +406,14 @@ It is a *.software* dependency.
 Install it with a package manager:
 
 * `# apt-get install tar`
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
+### [Tcl](http://www.tcl.tk/)
+
+> version 8.6.4
 
 Build depends on:
 * [gcc](#gcc)
