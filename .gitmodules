@@ -7,3 +7,6 @@
 [submodule "_projects/_repos/dotsoftware"]
 	path = _projects/_repos/dotsoftware
 	url = https://github.com/fibo/.software
+[submodule "_projects/_repos/games-of-life"]
+	path = _projects/_repos/games-of-life
+	url = https://github.com/fibo/games-of-life
