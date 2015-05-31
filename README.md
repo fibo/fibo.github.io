@@ -53,6 +53,7 @@ $ bundle install
 See as a reference:
 * [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)
 * [Repository metadata on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/)
+* [GitHub Markup](https://github.com/github/markup)
 
 ### Run Jekyll
 

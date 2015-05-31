@@ -16,9 +16,12 @@ exclude:
   - src/
   - TODO
 
-markdown: kramdown
-kramdown:
-  input: GFM
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - tables
+    - no_intra_emphasis
+    - autolink
 
 collections:
   projects:
