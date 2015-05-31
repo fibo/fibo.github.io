@@ -50,7 +50,9 @@ $ gem install bundler
 $ bundle install
 ```
 
-See [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages) as a reference.
+See as a reference:
+* [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)
+* [Repository metadata on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/)
 
 ### Run Jekyll
 
