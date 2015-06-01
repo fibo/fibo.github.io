@@ -52,10 +52,6 @@ defaults:
 
 # Custom vars
 
-mathjax:
-  base_url: https://cdn.mathjax.org/mathjax
-  version: latest
-
 google-analytics:
   id: UA-12635045-12
 
