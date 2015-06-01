@@ -2,5 +2,15 @@
 layout: page
 ---
 
-<p> TODO: flow/view.html#filterArticles </p>
+
+<script type="text/javascript" src="/js/flowView.js"></script>
+
+<div id="filterArticles"></div>
+
+<script type="text/javascript">
+  $.getJSON( "/flow/blog.json", function (flow) {
+    new flowView.Canvas('filterArticles', flow.view)
+  })
+
+</script>
 
