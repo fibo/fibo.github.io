@@ -6,7 +6,10 @@ description: >
     Display math formulas on your free website.
 ---
 
-<div class="alert alert-damnger">This article is <strong>obsolete</strong>. After I changes to <a href="https://github.com/vmg/redcarpet">Redcarpet<a> markdown render, which is actually the GitHub default, or for some other reason, maybe a MathJax update, the LaTeX rendering got broken. I also found MathJax <strong>really heavy</strong> to load</div>
+<div class="alert alert-danger">This article is <strong>obsolete</strong>.
+After I switched to <a href="https://github.com/vmg/redcarpet">Redcarpet</a> markdown render, which is actually the GitHub default (or due to some other reason, maybe a MathJax update) the LaTeX rendering got broken.
+I also found MathJax <strong>really heavy</strong> to load in my site, it requires more than 170 Mb of disc space!
+</div>
 
 <div class="alert alert-info">Take a look to <a href="https://khan.github.io/KaTeX/">KaTeX</a> which claims to be the <strong>fastest</strong> math typesetting library.</div>
 
