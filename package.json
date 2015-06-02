@@ -10,7 +10,7 @@
     "cp": "npm run cp:bower; npm run cp:flow; npm run cp:metadata",
     "cp:bower": "npm run cp:bower:bootstrap; npm run cp:bower:d3; npm run cp:bower:jquery",
     "cp:bower:bootstrap": "npm run cp:bower:bootstrap:css; npm run cp:bower:bootstrap:fonts; npm run cp:bower:bootstrap:js; npm run cp:bower:bootstrap:plugins",
-    "cp:bower:bootstrap:css": "cp bower_components/bootstrap/dist/css/{bootstrap,bootstrap-theme}.min.css css/",
+    "cp:bower:bootstrap:css": "cp bower_components/bootstrap/dist/css/*.min.css css/",
     "cp:bower:bootstrap:js": "cp bower_components/bootstrap/dist/js/bootstrap.min.js js/",
     "cp:bower:bootstrap:fonts": "cp bower_components/bootstrap/dist/fonts/*.* fonts/",
     "cp:bower:bootstrap:plugins": "npm run cp:bower:bootstrap-select",
