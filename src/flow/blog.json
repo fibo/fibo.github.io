@@ -11,18 +11,18 @@
       "a": {
         "x": 80,
         "y": 100,
-        "w": 10,
+        "w": 15,
         "h": 1,
         "text": "$filterArticles",
         "outs": [{"name": "out0", "data": 1}]
       },
       "b": {
-        "x": 180,
+        "x": 150,
         "y": 200,
-        "w": 10,
+        "w": 15,
         "h": 1,
         "text": "selectPicker()",
-        "ins": [{"name": "in0", "data": 2}, {"name": "in1", "data": 1}]
+        "ins": [{"name": "in0", "data": 2}]
       }
    },
    "link": {
