@@ -78,6 +78,10 @@ Choose *ClearType* as font quality.
 
 Check the *Hide mouse pointer when typing window* flag.
 
+<div class="alert alert-info">Use <a href="http://adobe-fonts.github.io/source-code-pro/">Source Code Pro</a> as a valid onospaced font family for user interface and coding environment by <em>Adobe</em>.
+To see it in the font change menu, you need to check the <em>Allow selection of variable-pitch fonts</em> flag.
+</div>
+
 #### Behaviour
 
 Check the *Full screen on Alt-Enter* flag.
