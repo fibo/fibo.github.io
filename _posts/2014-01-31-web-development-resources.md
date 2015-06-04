@@ -108,6 +108,9 @@ description: >
 [Fira Sans](http://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/)
 : Firefox OS Typeface
 
+[Google Fonts API](https://developers.google.com/fonts/)
+: helps you add fonts to any web page
+
 [Google Noto Fonts](http://www.google.com/get/noto/)
 : Beautiful and free fonts for all languages
 
