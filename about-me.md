@@ -3,6 +3,8 @@ title: About me
 layout: page
 ---
 
+<!-- TODO remove this page, put it in the index.html -->
+
 Hi! My name is {{ site.data.package.author }}.
 
 I am an Italian mathematician, working as an IT Consultant since 2005 in the Business Intelligence and Web Analytics area. Since 2014 I started working on Campaign Management projects too.

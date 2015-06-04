@@ -1,14 +1,15 @@
 ---
 layout: page
 title: Homepage
-description: A random topic blog
+description: A random topic blog | My projects aggregator
 ---
-
-<section>
-  <h2>Latest posts</h2>
-
-  {% include posts_list.html limit="5" %}
-
-  <a href="/blog" class="btn btn-primary"> &middot &middot &middot more posts</a>
-</section>
-
+<article>
+	<section id="about-me">
+		<h1>Ciao</h1>
+		<p>My name is Gianluca Casati. I am an italian mathematician, working as an IT Consultant since 2005. I ❤ coding and open source! I feel a strong passion for mathematics. I enjoy playing guitar and percussions.</p>
+	</section>
+</article>
+<aside>
+	<h2>Latest posts</h2>
+		{% include posts_list.html limit="5" %}
+</aside>
