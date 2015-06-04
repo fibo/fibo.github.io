@@ -52,7 +52,7 @@
   },
   "homepage": "http://g14n.info",
   "dependencies": {
-    "browserify": "^10.2.1",
+    "browserify": "^10.2.3",
     "dflow": "^0.4.0"
   }
 }

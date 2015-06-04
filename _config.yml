@@ -7,14 +7,18 @@ permalink: ./:year/:month/:title
 exclude:
   - _projects/_repos
   - _projects/**/*.yaml
-  - bower_components
+  - bower_components/
   - bower.json
-  - npm-debug.log
   - Gemfile
+  - npm-debug.log
+  - node_modules/
   - README.md
   - package.json
   - src/
   - TODO
+
+gems:
+  - jekyll-sitemap
 
 markdown: redcarpet
 redcarpet:
