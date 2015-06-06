@@ -1,6 +1,9 @@
 ---
-title: .software
+title: dotsoftware
 description: Install software locally
+project:
+  name: .software
+  type: Shell
 ---
 .software
 =========
