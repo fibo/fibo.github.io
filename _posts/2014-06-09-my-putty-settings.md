@@ -12,7 +12,7 @@ description: >
 
 [Putty][1] is a free (MIT-licensed) Win32 Telnet and SSH client. You need it if you want to use a terminal on Windows, I mean a **real** terminal, *MS/DOS* is not decent.
 
-Check also [PuttyTray](https://puttytray.goeswhere.com/), it adds nice features like *Always on Top* and *Window transparency*
+Check also [PuttyTray][3], it adds nice features like *Always on Top* and *Window transparency*
 
 ## Regedit
 
@@ -78,9 +78,8 @@ Choose *ClearType* as font quality.
 
 Check the *Hide mouse pointer when typing window* flag.
 
-<div class="alert alert-info">Use <a href="http://adobe-fonts.github.io/source-code-pro/">Source Code Pro</a> as a valid onospaced font family for user interface and coding environment by <em>Adobe</em>.
-To see it in the font change menu, you need to check the <em>Allow selection of variable-pitch fonts</em> flag.
-</div>
+Consolas is a the best default monospace font I found already installed.
+If you want to install and use other fonts, like [Source Code Pro](http://adobe-fonts.github.io/source-code-pro/) or *Ubuntu Mono* and you cannot find them in the font change menu, you need to check the *Allow selection of variable-pitch fonts* flag.
 
 #### Behaviour
 
@@ -96,7 +95,9 @@ Choose *UTF-8* encoding.
 
 The fastest workaround is to flag *Use system colours*.
 
-You will joy a better color theme, for example the *eighties* theme from [base16-vim]( https://github.com/benjojo/base-16-putty).
+You will joy a better color theme, for example the *eighties* theme from [base16-putty]( https://github.com/benjojo/base-16-putty).
+
+If you are using [PuttyTray][3] it is possible to get get a transparent window by modyfing the *Window opacity (50-255)* value.
 
 ### Connection
 
@@ -143,4 +144,5 @@ Right click on the *regedit* entry and export, choose the *.reg* format. Then op
 
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
   [2]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
+  [3]: https://puttytray.goeswhere.com/ "PuttyTray"
 

@@ -114,6 +114,9 @@ description: >
 [Google Noto Fonts](http://www.google.com/get/noto/)
 : Beautiful and free fonts for all languages
 
+[Ubuntu Font Family](http://font.ubuntu.com/)
+: A unique, custom designed font that has a very distinctive look and feel
+
 ## Icons
 
 [Icon finder](https://www.iconfinder.com/)
