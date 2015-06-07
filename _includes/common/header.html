@@ -1,7 +1,8 @@
 <!-- _includes/common/header.html start -->
+{% assign package = site.data.package %}
 
 <meta name="description" content="{{ page.description | strip_newlines }}">
-<meta name="author" content="{{ site.data.package.author.name }}">
+<meta name="author" content="{{ package.author.name }}">
 
 <title>{{ page.title }}</title>
 
