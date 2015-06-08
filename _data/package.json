@@ -7,8 +7,8 @@
     "browserify": "npm run browserify:js:blog",
     "browserify:js:blog": "browserify -e src/blog.js -o js/blog.js",
     "browserify:TODO": "minification transform",
-    "cp": "npm run cp:bower; npm run cp:flow; npm run cp:metadata",
-    "cp:bower": "npm run cp:bower:bootstrap; npm run cp:bower:d3; npm run cp:bower:jquery",
+    "cp": "npm run cp:bower; npm run cp:flow; npm run cp:metadata; npm run cp:polymer",
+    "cp:bower": "npm run cp:bower:bootstrap; npm run cp:bower:d3; npm run cp:bower:jquery; npm run cp:bower:webcomponentsjs",
     "cp:bower:bootstrap": "npm run cp:bower:bootstrap:css; npm run cp:bower:bootstrap:fonts; npm run cp:bower:bootstrap:js; npm run cp:bower:bootstrap:plugins",
     "cp:bower:bootstrap:css": "cp bower_components/bootstrap/dist/css/*.min.css css/",
     "cp:bower:bootstrap:js": "cp bower_components/bootstrap/dist/js/bootstrap.min.js js/",
@@ -19,10 +19,16 @@
     "cp:bower:bootstrap-select:css": "cp bower_components/bootstrap-select/dist/css/*.min.css css/",
     "cp:bower:d3": "cp bower_components/d3/d3.min.js js/",
     "cp:bower:jquery": "cp bower_components/jquery/dist/jquery.min.js js/",
+    "cp:bower:webcomponentsjs": "npm run cp:bower:webcomponentsjs:webcomponents",
+    "cp:bower:webcomponentsjs:webcomponents": "cp bower_components/webcomponentsjs/webcomponents.min.js js/",
     "cp:flow": "cp src/flow/*json flow/",
     "cp:metadata": "npm run cp:metadata:bower.json; npm run cp:metadata:package.json",
     "cp:metadata:bower.json": "cp bower.json _data/",
     "cp:metadata:package.json": "cp package.json _data/",
+    "cp:polymer": "npm run cp:polymer:polymer.html; npm run cp:polymer:polymer-micro.html; npm run cp:polymer:polymer-mini.html",
+    "cp:polymer:polymer.html": "cp bower_components/polymer/polymer.html web_components/polymer/",
+    "cp:polymer:polymer-micro.html": "cp bower_components/polymer/polymer-micro.html web_components/polymer/",
+    "cp:polymer:polymer-mini.html": "cp bower_components/polymer/polymer-mini.html web_components/polymer/",
     "jshint": "jshint -c .jshintrc src/*.js",
     "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/index.md",
     "project:homepage:games-of-life": "cat _projects/games-of-life/index.yaml _projects/_repos/games-of-life/README.md > _projects/games-of-life/index.md",
@@ -52,7 +58,7 @@
   },
   "homepage": "http://g14n.info",
   "dependencies": {
-    "browserify": "^10.2.1",
+    "browserify": "^10.2.3",
     "dflow": "^0.4.0"
   }
 }
