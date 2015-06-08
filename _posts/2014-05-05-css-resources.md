@@ -35,6 +35,12 @@ description: >
 [stylus](http://learnboost.github.io/stylus/)
 : Expressive, dynamic, robust CSS
 
+[Sass](http://sass-lang.com/)
+: CSS with superpowers
+
+[PostCSS](https://github.com/postcss/postcss)
+: Transformin CSS with JS plugins (IMHO, the most promising CSS preprocessor)
+
 ### Grid systems
 
 [Bootstrap's grid system](http://getbootstrap.com/css/#grid)
