@@ -9,7 +9,6 @@ permalink: ./:year/:month/:title
 exclude:
   - _projects/_repos
   - _projects/**/*.yaml
-  - bower_components/
   - bower.json
   - Gemfile
   - npm-debug.log
