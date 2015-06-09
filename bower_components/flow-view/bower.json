@@ -1,0 +1,32 @@
+{
+  "name": "flow-view",
+  "main": "dist/flowView.js",
+  "version": "0.01.0",
+  "homepage": "http://g14n.info/flow-view",
+  "authors": [
+    "fibo <casati_gianluca@yahoo.it>"
+  ],
+  "description": "Visual editor for dataflow programming",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "dataflow",
+    "visual",
+    "svg",
+    "editor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "examples",
+    "node_modules",
+    "bower_components",
+    "test",
+    "gh-pages",
+    "npm-debug.log",
+    "test",
+    "src",
+    "index.js"
+  ]
+}
