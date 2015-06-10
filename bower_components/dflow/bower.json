@@ -1,0 +1,28 @@
+{
+  "name": "dflow",
+  "main": "dist/dflow.js",
+  "version": "0.6.0",
+  "homepage": "http://g14n.info/dflow",
+  "authors": [
+    "Gianluca Casati"
+  ],
+  "description": "Dataflow programming",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "dataflow",
+    "visual"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "gh-pages",
+    "npm-debug.log",
+    "test",
+    "src",
+    "index.js"
+  ]
+}
