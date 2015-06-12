@@ -41,6 +41,8 @@ description: >
 [TEMPLATED](http://templated.co/)
 : A collection of many free CSS and HTML5 site templates, designed & built by Cherry + AJ and released under the Creative Commons.
 
+Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Better Motherfucking Website](http://bettermotherfuckingwebsite.com/)
+
 ### Validators
 
 [W3C Markup Validation Service](http://validator.w3.org/)
