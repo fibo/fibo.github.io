@@ -62,17 +62,25 @@ export ORACLE_HOME=$ORACLE_BASE/instantclient_10_2
 export PATH=$ORACLE_HOME:$PATH
 export TNS_ADMIN=$HOME/etc
 export NLS_LANG=ITALIAN_ITALY.WE8ISO8859P15
-export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
+
+# Set LD_LIBRARY_PATH avoiding a final colon.
+if [ -z "$LIBRARY_PATH" ]; then
+	LIBRARY_PATH=$ORACLE_HOME
+else
+	LIBRARY_PATH=$ORACLE_HOME:$LIBRARY_PATH
+fi
 ```
 
 Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn' t complete a working installation without it.
+Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as `LIBRARY_PATH=$ORACLE_HOME/lib`.
 
-Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European charset).  
+<div class="alert alert-danger">Anyway avoid set <pre>LD_LIBRARY_PATH</pre> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
+
+Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European charset).
 
 `TNS_ADMIN` is the directory where you put your *tnsadmin.ora*, since we are not pointing to an Oracle server installation, we probably need also our own tns configuration.
 
-
-<div class="alert alert-danger">Don' t forget to source it from your <em>.bash_profile</em>!</div>
+<div class="alert alert-warning">Don' t forget to source it from your <em>.bash_profile</em>!</div>
 
 ### Latest DBI
 
