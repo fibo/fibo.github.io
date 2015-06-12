@@ -30,6 +30,17 @@ description: >
 
 [REST API Tutorial](http://www.restapitutorial.com/)
 
+### Site templates
+
+[Initializr](http://www.initializr.com/)
+: Start an HTML5 project in 15 seconds!
+
+[HTML5 ★ BOILERPLATE](https://html5boilerplate.com/)
+: The web’s most popular front-end template
+
+[TEMPLATED](http://templated.co/)
+: A collection of many free CSS and HTML5 site templates, designed & built by Cherry + AJ and released under the Creative Commons.
+
 ### Validators
 
 [W3C Markup Validation Service](http://validator.w3.org/)
