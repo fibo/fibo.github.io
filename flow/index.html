@@ -15,6 +15,29 @@ layout: page
   var fv = require('flow-view')
 
 
+// var render =   fv.div('filter-blog-articles').load
+
+  fv.render = function render (element) {
+  return function loading (graph) {
+    new fv.Canvas(element, graph.view)
+  }
+
+  }
+
+/*
+
+  function render (graph) {
+    new fv.Canvas('filter-blog-articles', graph.view)
+  }
+
+  */
+
+  $.getJSON( "/flow/blog.json",fv.render('filter-blog-articles'))
+
+
+//    new fv.Canvas('filter-blog-articles', '/flow/blog.json')
+
+    /*
 function loadJSON(path, success, error)
 {
     var xhr = new XMLHttpRequest();
@@ -37,8 +60,9 @@ function loadJSON(path, success, error)
   function render (graph) {
     new fv.Canvas('filter-blog-articles', graph.view)
   }
+  */
 
-loadJSON( "/flow/blog.json",render)
+//loadJSON( "/flow/blog.json",render)
 
 //  $.getJSON( "/flow/blog.json",render)
 
