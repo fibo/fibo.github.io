@@ -4611,8 +4611,7 @@ var SVG = require('./SVG')
 var Box  = require('./Box'),
     Link = require('./Link')
 
-var defaultTheme = require('./Theme'),
-    loadJSON     = require('./loadJSON')
+var defaultTheme = require('./Theme')
 
 var defaultView = {
   box: {},
@@ -4684,7 +4683,7 @@ Canvas.prototype.addLink = addLink
 module.exports = Canvas
 
 
-},{"./Box":3,"./Link":6,"./SVG":9,"./Theme":10,"./loadJSON":12}],5:[function(require,module,exports){
+},{"./Box":3,"./Link":6,"./SVG":9,"./Theme":10}],5:[function(require,module,exports){
 
 function Input (box, position, numIns) {
   this.box      = box
@@ -5067,59 +5066,16 @@ module.exports = theme
 var Canvas = require('./Canvas')
 exports.Canvas = Canvas
 
-function div (id) {
-  function load (graph) {
-    return new Canvas(id, graph)
+function render (element) {
+  return function loading (graph) {
+    return new Canvas(element, graph.view)
   }
-
-  return { load: load }
 }
 
-exports.div = div
+exports.render = render
 
 
-},{"./Canvas":4}],12:[function(require,module,exports){
-
-// Stolen from here: http://stackoverflow.com/a/18278346/1217468
-// Credits to: Drew Noakes
-
-function loadJSON(path) // , success, error )
-{
-// TODO if (typeof path === 'undefined') return defaultView
-// TODO if (typeof path === 'object') return path
-
-  console.log('loadJSON')
-  console.log(path)
-function error () {
-throw new Error('Could not load JSON:' + path)
-}
-
-if (typeof path !== 'string')
-  error()
-
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-              success
-        //        if (success)
-         //           success(JSON.parse(xhr.responseText));
-            } else {
-          //      if (error)
-           //         error(xhr);
-error()
-            }
-        }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
-}
-
-module.exports = loadJSON
-
-
-},{}],"flow-view":[function(require,module,exports){
+},{"./Canvas":4}],"flow-view":[function(require,module,exports){
 
 module.exports = require('./src')
 
