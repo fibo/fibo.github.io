@@ -1,13 +1,14 @@
 {
   "name": "flow-view",
-  "main": "dist/flowView.js",
+  "main": "dist/flow-view.js",
+  "version": "0.2.0",
   "homepage": "http://g14n.info/flow-view",
   "authors": [
-    "fibo <casati_gianluca@yahoo.it>"
+    "Gianluca Casati"
   ],
   "description": "Visual editor for dataflow programming",
   "moduleType": [
-    "globals"
+    "node"
   ],
   "keywords": [
     "dataflow",
@@ -18,7 +19,6 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "examples",
     "node_modules",
     "bower_components",
     "test",
@@ -28,11 +28,11 @@
     "src",
     "index.js"
   ],
-  "_release": "d94a7b9e8d",
+  "_release": "0.2.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "d94a7b9e8d39e498bd6a9f81c7c05f4c5fc72bbc"
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "1964024f4c730354933babd5863d6ce96139a0b3"
   },
   "_source": "git://github.com/fibo/flow-view.git",
   "_target": "*",

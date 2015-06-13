@@ -1,11 +1,22 @@
 {
   "name": "flow-view",
-  "version": "0.01.0",
+  "version": "0.2.0",
   "description": "Visual editor for dataflow programming, powered by svg.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -s flowView -e index.js -o dist/flowView.js"
+    "_build": "npm run browserify && npm run jekyll; git status",
+    "_push": "git push origin master && npm run gh-pages:push",
+    "_pull": "git pull origin master && npm run gh-pages:pull",
+    "browserify": "browserify -r ./index.js:${npm_package_name} -o dist/${npm_package_name}.js",
+    "cp": "npm run cp:dist; npm run cp:package.json",
+    "cp:dist": "cp -r dist/ gh-pages/",
+    "cp:package.json": "cp package.json gh-pages/_data/",
+    "gh-pages:push": "git subtree --prefix gh-pages push origin gh-pages",
+    "gh-pages:pull": "git subtree --prefix gh-pages pull origin gh-pages",
+    "homepage": "echo \"---\ntitle: $npm_package_name\n---\" > gh-pages/index.md; cat README.md >> gh-pages/index.md",
+    "jekyll": "npm run homepage; npm run cp; cd gh-pages; jekyll build; cd ..",
+    "jshint": "jshint -c .jshintrc src/**.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -29,9 +40,10 @@
   },
   "homepage": "https://github.com/fibo/flow-view",
   "dependencies": {
-    "svg.js": "~1.0.0"
+    "svg.draggable.js": "git://github.com/fibo/svg.draggable.js.git",
+    "svg.js": "^2.0.0"
   },
   "devDependencies": {
-    "browserify": "~8.1.3"
+    "browserify": "^10.2.4"
   }
 }
