@@ -14,53 +14,10 @@ layout: page
 <script type="text/javascript">
   var fv = require('flow-view')
 
-
-// var render =   fv.div('filter-blog-articles').load
-
-  fv.render = function render (element) {
-  return function loading (graph) {
-    new fv.Canvas(element, graph.view)
-  }
-
-  }
-
-/*
-
-  function render (graph) {
-    new fv.Canvas('filter-blog-articles', graph.view)
-  }
-
-  */
-
   $.getJSON( "/flow/blog.json",fv.render('filter-blog-articles'))
 
 
 //    new fv.Canvas('filter-blog-articles', '/flow/blog.json')
-
-    /*
-function loadJSON(path, success, error)
-{
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                if (success)
-                    success(JSON.parse(xhr.responseText));
-            } else {
-                if (error)
-                    error(xhr);
-            }
-        }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
-}
-
-  function render (graph) {
-    new fv.Canvas('filter-blog-articles', graph.view)
-  }
-  */
 
 //loadJSON( "/flow/blog.json",render)
 
