@@ -5,15 +5,47 @@ layout: page
 
 <h1>Flow view</h1>
 
-<h2>Filter blog articles></h2>
+<h2>Filter blog articles</h2>
 
 <div id="filter-blog-articles"></div>
 
-<script type="text/javascript" src="/js/flowView.js"></script>
+<script type="text/javascript" src="/bower_components/flow-view/dist/flow-view.js"></script>
 
 <script type="text/javascript">
-  $.getJSON( "/flow/blog.json", function (flow) {
-    new flowView.Canvas('filter-blog-articles', flow.view)
+  var fv = require('flow-view')
+
+
+function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
+
+  function render (graph) {
+    new fv.Canvas('filter-blog-articles', graph.view)
+  }
+
+loadJSON( "/flow/blog.json",render)
+
+//  $.getJSON( "/flow/blog.json",render)
+
+/*
+  $.getJSON( "/flow/blog.json", function render (graph) {
+    new fv.Canvas('filter-blog-articles', graph.view)
   })
+  */
 </script>
 
