@@ -3,7 +3,9 @@ title: Math on GitHub Pages
 tags:
   - Math
 description: >
-    Display math formulas on your free website.
+    Display math formulas on GitHub Pages.
+bower:
+  katex: true
 ---
 
 <div class="alert alert-danger">This article is <strong>obsolete</strong>.
