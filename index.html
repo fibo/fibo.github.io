@@ -1,12 +1,25 @@
 ---
-layout: g14n
-title: My digital copybook
+layout: page
+title: Homepage
+description: A random topic blog | My projects aggregator
 ---
 
-<section>
-  <h2>Latest posts</h2>
-{% include posts_list.html limit="3" %}
-
-  <a href="/blog" class="btn btn-primary"> &middot &middot &middot more posts</a>
-</section>
-
+<article>
+	<section id="about-me">
+		<h1>Ciao</h1>
+		<p>My name is Gianluca Casati. I am an italian mathematician, working as an IT Consultant since 2005. I ❤ coding and open source! I feel a strong passion for mathematics. I enjoy playing guitar and percussions.</p>
+		<h2>Contacts</h2>
+		<p>I joined many social networks, and I have a profile on many sites. I like to increase my online presence.</p>
+		<p>Yes, I have a <a href="https://www.facebook.com/gianluca.casati.7">Facebook profile</a> that let me meet again my friends in Chile after 15 years (thank you, Andrès Hernaiz, to find me on the Internet).</p>
+		<p>I also have <a href="https://twitter.com/GianlucaCasati">Twitter</a>: I do not use it often, by now.<p>
+		<p>I am addicted to Hacker News and I have more than 200 karma points at the time of this writing, on my <a href="https://news.ycombinator.com/user?id=fibo">HN profile</a>.</p>
+		<p>Talking of my addictions, I joined GitHub (thanks to the mythic Ingy döt Net), and I put there almost all the code I write, including this site which is also hosted on GitHub Pages. I am convinced that GitHub behaviour and ethic is the key for the evolution of mankind in this new millenium. My nick on GitHub is <a href="https://github.com/fibo">fibo</a> that stands for Leonardo Pisano (a.k.a. Fibonacci, the son of Bonacci), which was the main mathematician of the middle age.</p>
+		<p>Fibonacci is famous for its sequence, but, he didn't really care about it: it was just one of the many excercises in its book <em>Liber Abaci</em>. There are many math formulas waiting to be discovered or rediscovered, think about Euler for example: most of the works written by the most prolific mathematician are still unpublished, just waiting. I really enjoy keep studying mathematics and implement it with a programming language, for example I produced a vvvv contribution that let artists play with Chaos Theory formulas: it is called <a href="http://vvvv.org/contribution/chaostoys">Chaos Toys</a>. I really like vvvv as an environment to play with mathematics, and it is very exciting for me thinking about artists that experiment with math formulas I implemented with vvvv. It is a fun way of doing math research, to free the formulas from the books and release them in some artistic installation that can push forward its conception to a level that even the original author could not imagine. This is my <a href="http://vvvv.org/users/fibo">vvvv profile page</a>. I am proud that vvvv users call me <em>fibo</em> on line and on site.</p>
+		<p>This is my <a href="https://it.linkedin.com/in/gianlucacasati">Linkedin profile</a>, and I would like to share also a nice story about Linkedin. As an experiment, I created the <a href="https://www.linkedin.com/grp/home?gid=4743207">vvvv users group</a> hoping it can help hiring vvvv developers. The group was created just after node13 event, on November 2013 and at the time of this writing has more than 200 users.</p>
+	</section>
+</article>
+<aside>
+	<h2>Latest posts</h2>
+	<p>I write a random topic <a href="./blog">blog</a> about things I want to remember, most of all are technical information.</p>
+	{% include posts_list.html limit="5" %}
+</aside>

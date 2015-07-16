@@ -1,4 +1,5 @@
+*~
 _site/
-.codio
 Gemfile*
-_projects/_repos
+node_modules/
+npm-debug.log

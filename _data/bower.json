@@ -1,0 +1,23 @@
+{
+  "name": "My digital copybook",
+  "private": true,
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "http://g14n.info",
+  "authors": [
+    "Gianluca Casati <casati_gianluca@yahoo.it>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/*"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "d3": "~3.5.5",
+    "flow-view": "*",
+    "bootstrap-select": "~1.7.1",
+    "polymer": "Polymer/polymer#~1.0.3",
+    "dflow": "~0.6.0"
+  }
+}

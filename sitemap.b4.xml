@@ -1,0 +1,31 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>{{ site.url }}</loc>
+      <priority>1</priority>
+      <changefreq>monthly</changefreq>
+    </url>
+    <url>
+    {% for project in site.projects %}
+    <loc>{{ site.url }}/{{ project.title }}</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.71</priority>
+      </url>
+    {% endfor %}
+    <url>
+    <url>
+    {% for license in site.licenses %}
+    <loc>{{ site.url }}/{{ license.name }}</loc>
+        <changefreq>never</changefreq>
+      <priority>0.1</priority>
+      </url>
+    {% endfor %}
+    {% for post in site.posts %}
+      <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+      </url>
+    {% endfor %}
+</urlset>

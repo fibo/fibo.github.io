@@ -1,3 +1,6 @@
+---
+layout: null
+---
 
 /* humanstxt.org */
 
@@ -14,7 +17,17 @@ Jekyll
 GitHub
 Vim
 Slackware
+Bower
+NPM
 
 /* SITE */
 
 Standards: HTML5, SVG
+
+{% assign bower = site.data.bower %}
+Bower:
+{% for dep in bower.dependencies %}{{ dep | join ' ' }}{% endfor %}
+
+{% assign npm = site.data.package %}
+NPM:
+{% for dep in npm.dependencies %}{{ dep | join ' ' }}{% endfor %}

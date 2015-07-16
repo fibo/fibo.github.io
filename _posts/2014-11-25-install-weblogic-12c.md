@@ -92,9 +92,10 @@ Do you want to configure a new domain?  [y/n]? n
 
 Answer **n** otherwise it will be created a domain under the *MW_HOME* which is not recommended (see $MW_HOME/README.txt).
 
-Now it is time to create your WebLogic domain
+Now it is time to create your WebLogic domain: first load the environment required, then cd into your domain folder and launch domain creation
 
 ```bash
+$ source $MW_HOME/wlserver/server/bin/setWLSEnv.sh
 $ cd /opt/weblogic/mydomain
 $ $JAVA_HOME/bin/java $JAVA_OPTIONS -Xmx1024m -XX:MaxPermSize=256m weblogic.Server
 

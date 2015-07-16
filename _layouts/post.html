@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% include header.html %}
+  {% include bootstrap/header.html %}
+  {% include common/header.html %}
+
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
 </head>
 
 <body>
-{% include navbar.html %}
-
-{% include edit_post.html %}
+  {% include common/navbar.html %}
 
   <div class="container">
     <article>
@@ -19,17 +20,48 @@
         <time datetime="{{ page.date }}" class="badge">{{ page.date | date: "%F" }}</time>
       </header>
 
-{{ content }}
+      {{ content }}
 
+      {% assign hasRelated = false %}
+      {% for post in site.posts %}
+        {% for tag in post.tags %}
+          {% for myTag in page.tags %}
+            {% if tag == myTag and page.id != post.id %}
+              {% assign hasRelated = true %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+
+      {% if hasRelated == true %}
+        <aside>
+          <h2>Related posts</h2>
+          <dl>
+          {% for post in site.posts %}
+            {% assign isRelated = false %}
+            {% for tag in post.tags %}
+              {% for myTag in page.tags %}
+                {% if tag == myTag and page.id != post.id %}
+                  {% assign isRelated = true %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+
+            {% if isRelated == true %}
+              <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+              <dd>{{ post.description }}</dd>
+            {% endif %}
+          {% endfor %}
+          </dl>
+        </aside>
+      {% endif %}
     </article>
 
-{% include disqus.html %}
-
+    {% include common/disqus.html %}
   </div>
 
-{% include footer.html %}
-
-{% include analytics.html %}
-
+  {% include common/footer.html %}
+  {% include bootstrap/footer.html %}
+  {% include common/analytics.html %}
 </body>
 </html>

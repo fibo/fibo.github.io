@@ -1,9 +1,21 @@
 ---
 title: Blog
-layout: default
+layout: page
+flows:
+  - blog
 ---
 
-Code for this blog is hosted on <a href="{{ site.repo }}">this GitHub repo</a>. Contributions are welcome!
+<div class="row">
+  <select
+    class="filterArticles"
+    data-width="auto"
+    title="Filter by tags"
+  >
+    {% for tag in site.tags | sort %}
+     <option>{{ tag | first }}</option>
+    {% endfor %}
+  </select>
+</div>
 
 <section>
   <h2>All posts</h2>
