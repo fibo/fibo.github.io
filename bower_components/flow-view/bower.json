@@ -1,0 +1,31 @@
+{
+  "name": "flow-view",
+  "main": "dist/flow-view.js",
+  "version": "0.2.0",
+  "homepage": "http://g14n.info/flow-view",
+  "authors": [
+    "Gianluca Casati"
+  ],
+  "description": "Visual editor for dataflow programming",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "dataflow",
+    "visual",
+    "svg",
+    "editor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "gh-pages",
+    "npm-debug.log",
+    "test",
+    "src",
+    "index.js"
+  ]
+}

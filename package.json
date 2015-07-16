@@ -1,0 +1,47 @@
+{
+  "name": "fibo.github.io",
+  "version": "1.0.0",
+  "description": "My digital copybook",
+  "private": true,
+  "scripts": {
+    "browserify": "npm run browserify:js:blog",
+    "browserify:js:blog": "browserify -e src/blog.js -o js/blog.js",
+    "browserify:TODO": "minification transform",
+    "cp": "npm run cp:flow; npm run cp:metadata",
+    "cp:flow": "cp src/flow/*json flow/",
+    "cp:metadata": "npm run cp:metadata:bower.json; npm run cp:metadata:package.json",
+    "cp:metadata:bower.json": "cp bower.json _data/",
+    "cp:metadata:package.json": "cp package.json _data/",
+    "jshint": "jshint -c .jshintrc src/*.js",
+    "project:homepage:dotsoftware": "cat _projects/dotsoftware/index.yaml _projects/_repos/dotsoftware/README.md > _projects/dotsoftware/index.md",
+    "project:homepage:games-of-life": "cat _projects/games-of-life/index.yaml _projects/_repos/games-of-life/README.md > _projects/games-of-life/index.md",
+    "project:homepage:gh-clone": "cat _projects/gh-clone/index.yaml _projects/_repos/gh-clone/README.md > _projects/gh-clone/index.md",
+    "project:homepage:nz-util": "cat _projects/nz-util/index.yaml _projects/_repos/nz-util/README.md > _projects/nz-util/index.md",
+    "projects:homepage": "npm run project:homepage:dotsoftware; npm run project:homepage:games-of-life; npm run project:homepage:gh-clone; npm run project:homepage:nz-util",
+    "projects:update": "npm run submodules:pull; npm run projects:homepage",
+    "submodules:pull": "git submodule foreach git pull origin master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fibo/fibo.github.io.git"
+  },
+  "author": {
+    "name": "Gianluca Casati",
+    "url": "http://g14n.info"
+  },
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://g14n.info/mit-license"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/fibo/fibo.github.io/issues"
+  },
+  "homepage": "http://g14n.info",
+  "dependencies": {
+    "browserify": "^10.2.3",
+    "dflow": "^0.4.0"
+  }
+}

@@ -1,26 +1,35 @@
 
 domain: g14n.info
 url: http://g14n.info
-encoding: utf-8
 
-author: Gianluca Casati
-description: My digital copybook
+encoding: utf-8
 
 permalink: ./:year/:month/:title
 
-exclude: 
-  - Gemfile
-  - README.md
+exclude:
   - _projects/_repos
-  - _projects/README.md
   - _projects/**/*.yaml
+  - bower.json
+  - Gemfile
+  - npm-debug.log
+  - node_modules/
+  - README.md
+  - package.json
+  - src/
+  - TODO
 
-markdown: kramdown
-kramdown:
-  input: GFM
+gems:
+  - jekyll-sitemap
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 collections:
   projects:
+    output: true
+    permalink: ./:path.html
+  licenses:
     output: true
     permalink: ./:path.html
 
@@ -32,27 +41,26 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: Gianluca Casati
       layout: post
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  -
+    scope:
+      path: ""
+      type: "licenses"
+    values:
+      layout: license
 
 # Custom vars
-
-bootstrap:
-  base_url: https://maxcdn.bootstrapcdn.com/bootstrap
-  version: 3.2.0
-
-jquery:
-  base_url: https://ajax.googleapis.com/ajax/libs/jquery
-  version: 1.11.1
-
-mathjax:
-  base_url: https://cdn.mathjax.org/mathjax
-  version: latest
 
 google-analytics:
   id: UA-12635045-12
 
-repo: https://github.com/fibo/fibo.github.io/
+google-site-verification: sL7WzWB8YUQPFoN0Rq_lGfM5JDdQ3r6PMj3_vhBHLwM
 
 disqus:
   shortname: g14n

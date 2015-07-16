@@ -101,7 +101,7 @@ and I add the following content
 so the command
 
 ```bash
-npm test
+$ npm test
 ```
 
 will run tests using mocha and the [nyan cat](http://www.nyan.cat/), that makes me very happy **:^)**
@@ -154,12 +154,12 @@ docs/
 
 ## See also
 
-* [npm-developers][7]
+* [npm-developers][4]
 
 
   [1]: https://npmjs.org/
   [2]: https://github.com/
   [3]: https://lh4.googleusercontent.com/Y0V5ArmaIFawdLp8SqVShPPzNzy5wonuLVsqeaBFdBE=s0 "New GitHub repo"
+  [4]: https://www.npmjs.org/doc/misc/npm-developers.html "npm-developers"
   [5]: https://npmjs.org/doc/json.html
-  [7]: https://www.npmjs.org/doc/misc/npm-developers.html
 
