@@ -45,8 +45,9 @@ But, sometimes you are in one of the following scenarios
 * you have not root rights, and you need to keep your software up to date
 * you want to compile from sources you trust
 * you want to try new releases without waiting until they are packaged
-* you are a nerd
-* you are a nerd, and it is Saturday night
+* you are a *nerd*
+* you are a *nerd*, and it is Saturday night
+* ok, seriously: you are a *nerd* and you want to try a new software, avoiding to mess with your system binaries
 
 ## Usage
 
@@ -67,9 +68,11 @@ Take a look to [Software list](#software-list), which includes for example [Perl
 
 ### Requirements
 
-Please note that *.software* supports only Linux, but could work on many other Unix-like systems, like BSD and Darwin.
+Please note that *.software* supports only Linux, but could work on many other Unix-like systems, like [BSD](http://en.wikipedia.org/wiki/Berkeley_Software_Distribution) and [Darwin](http://en.wikipedia.org/wiki/Darwin_%28operating_system%29).
 In order to run, *.software* requires bash, [Tar](#tar), [Gzip](#gzip), [Grep](#grep), [Findutils](#findutils) and [Wget](#wget).
 Other requirements are those needed by software builds: [Make](#make), [gcc](#gcc), etc.
+
+I am working on zsh compatibility, feedbacks are welcome.
 
 ### Get it
 
@@ -203,6 +206,25 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
+### [Fontconfig](http://www.freedesktop.org/wiki/Software/fontconfig/)
+
+> version 2.11.93
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+* [Expat](#expat)
+* [FreeType](#freetype)
+* [pkg-config](#pkg-config)
+
+### [FreeType](http://www.freetype.org/)
+
+> version 2.5.5
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
 ### g++
 
 Build not supported.
@@ -307,6 +329,14 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
+### [Ncurses](http://www.gnu.org/software/ncurses/)
+
+> version 5.9
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
 ### [Netcat](http://netcat.sourceforge.net/)
 
 > version 0.7.1
@@ -338,7 +368,7 @@ Build not supported.
 
 Install it with a package manager:
 
-* `# apt-get install libreadline-devel`
+* `# apt-get install libreadline-dev`
 * `# yum install readline-devel`
 
 ### [patch](http://www.gnu.org/software/patch/)
@@ -351,7 +381,15 @@ Build depends on:
 
 ### [Perl](http://www.perl.org/)
 
-> version 5.20.2
+> version 5.22.0
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+
+### [pkg-config](http://www.freedesktop.org/wiki/Software/pkg-config/)
+
+> version 0.18
 
 Build depends on:
 * [gcc](#gcc)
@@ -383,7 +421,7 @@ Build depends on:
 
 ### [Ruby](https://www.ruby-lang.org/)
 
-> version 2.1.1
+> version 2.1.6
 
 Build depends on:
 * [gcc](#gcc)
@@ -454,6 +492,14 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
+### [Zsh](http://www.zsh.org/)
+
+> version 5.0.7
+
+Build depends on:
+* [gcc](#gcc)
+* [Make](#make)
+* [Ncurses](#ncurses)
 
 ## Folder structure
 
