@@ -1,7 +1,8 @@
+
 var dflow = require('dflow')
 
-var graph = require('./flow/blog.json')
-var funcs = require('./flow/funcs')
+var graph = require('./graph.json')
+var funcs = require('./funcs')
 
 var func = dflow.fun(graph, funcs)
 

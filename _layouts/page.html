@@ -12,7 +12,10 @@
 
   {% include common/footer.html %}
   {% include bootstrap/footer.html %}
-  {% include flow/footer.html %}
   {% include common/analytics.html %}
+
+  {% if page.title == "Blog" %}
+  <script type="text/javascript" src="../js/blog.js"></script>
+  {% endif %}
 </body>
 </html>
