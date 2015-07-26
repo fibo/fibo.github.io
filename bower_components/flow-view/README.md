@@ -2,7 +2,7 @@
 
 > Visual editor for dataflow programming, powered by [svg.js][1]
 
-[![NPM version](https://badge.fury.io/js/flow-view.png)](http://badge.fury.io/js/flow-view) [![Build Status](https://travis-ci.org/fibo/flow-view.png?branch=master)](https://travis-ci.org/fibo/flow-view.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/flow-view.png)](https://gemnasium.com/fibo/flow-view)
+[![NPM version](https://badge.fury.io/js/flow-view.png)](http://badge.fury.io/js/flow-view) [![Build Status](https://travis-ci.org/fibo/flow-view.png?branch=master)](https://travis-ci.org/fibo/flow-view.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/flow-view.png)](https://gemnasium.com/fibo/flow-view) [![Stories in Ready](https://badge.waffle.io/fibo/flow-view.png?label=ready&title=Ready)](https://waffle.io/fibo/flow-view)
 
 [![NPM](https://nodei.co/npm-dl/flow-view.png)](https://nodei.co/npm-dl/flow-view/)
 
@@ -30,30 +30,24 @@ $ bower install flow-view
 
 ## Synopsis
 
-Go to [examples/synopsis/](http://g14n.info/flow-view/examples/synopsis/) to see results.
+Go to [examples/synopsis.html](http://g14n.info/flow-view/examples/synopsis.html) to see results.
 
 ```html
 <div id="drawing"></div>
 <script type="text/javascript" src="path/to/flowView.js"></script>
 <script type="text/javascript">
-  var Canvas = flowView.Canvas,
+  var Canvas = require(flow-view).Canvas,
       view = {
-        box: {
+        node: {
           a: {
-            x: 80,
-            y: 100,
-            w: 10,
-            h: 1,
+            x: 80, y: 100,
             text: "Drag me",
-            outs: [{name: "out0", data:1}]
+            outs: [{name: "out0"}]
           },
           b: {
-            x: 180,
-            y: 200,
-            w: 10,
-            h: 1,
+            x: 180, y: 200,
             text: "Hello",
-            ins: [{name: "in0", data:2}, {name: "in1", data:1}]
+            ins: [{name: "in0"}, {name: "in1"}]
           }
        },
        link: {
@@ -64,11 +58,13 @@ Go to [examples/synopsis/](http://g14n.info/flow-view/examples/synopsis/) to see
        }
      }
 
-  var canvas = new Canvas('drawing', view)
+  var canvas = new Canvas('drawing')
+
+  canvas.createView(view)
 </script>
 ```
 
-## Canvas
+### Canvas
 
 A *Canvas* need to know its *div* id which will be passed to [svg.js][1]. In your HTML file, put a *div* like this
 
@@ -76,27 +72,20 @@ A *Canvas* need to know its *div* id which will be passed to [svg.js][1]. In you
 <div id="drawing"></div>
 ```
 
-In order to start with a not empty *Canvas*, create an optional [view object](#view)
-
+Create a [view object](#view)
 
 ```
 var view = {
-      box: {
+      node: {
         a: {
-          x: 80,
-          y: 100,
-          w: 10,
-          h: 2,
+          x: 80, y: 100,
           text: "Drag me",
-          outs: [{name: "out0", data:1}]
+          outs: [{name: "out0"}]
         },
         b: {
-          x: 180,
-          y: 100,
-          w: 10,
-          h: 2,
+          x: 180, y: 100,
           text: "Hello",
-          ins: [{name: "in0", data:2}, {name: "in1", data:1}]
+          ins: [{name: "in0"}, {name: "in1"}]
         }
      },
      link: {
@@ -107,135 +96,88 @@ var view = {
    }
 ```
 
-and pass it to the *Canvas* constructor
+Create a *canvas* instance
 
 ```js
-var canvas = new flowView.Canvas('drawing', view)
+  var canvas = new Canvas('drawing')
 ```
 
-### addBox()
+and pass it its view
 
 ```js
-canvas.addBox()
-```
-
-### addLink()
-
-```js
-canvas.addLink()
+  canvas.createView(view)
 ```
 
 ### view
 
-The *view* object contains two objects:
+The *view* object contains two collections:
 
-  * box
+  * node
   * link
 
-## Theme
+### view.node
 
-The *Theme* is a plain object which defaults to
+The *view.node* collection contains the canvas nodes, that are objects with the following attributes
 
-```js
-var theme = {
-  unitHeight: 40,
-  unitWidth: 10,
-  labelFont: {
-    family: 'Consolas',
-    size: 17,
-    anchor: 'start'
-  },
-  fillLabel: '#333',
-  fillPin: '#333',
-  fillPinHighlighted: '#d63518',
-  fillRect: '#ccc',
-  halfPinSize: 5,
-  strokeDasharray: '5, 5',
-  strokeLine: { color: '#333', width: 3 },
-  strokeLineHighlighted: { color: '#d63518', width: 3 }
-}
-```
+#### x
 
-## Box
+The *x* coord of the top left vertex of the node.
 
-The *Box* constructor should not be used directly, use [addBox()](#addbox) instead.
+#### y
 
-### x
+The *y* coord of the top left vertex of the node.
 
-The *x* coord of the top left vertex of the box.
+#### w
 
-### y
+The *width* of the rect containing the node. It is expressed in width units.
+It defaults to a value enough to contain node text.
 
-The *y* coord of the top left vertex of the box.
+#### h
 
-### w
+The *height* of the rect containing the node. It is expressed in height units.
+It defaults to 1.
 
-The *width* of the rect containing the box. It is expressed in width units.
+#### text
 
-### h
+The *text* label displayed in the node.
 
-The *height* of the rect containing the box. It is expressed in height units.
+#### ins
 
-### text
+An optional list of *node inputs*, which are objects that can contain anything accepted by JSON.
 
-The *text* label displayed in the box.
+#### outs
 
-### ins
+An optional list of *node outputs*, which are objects that can contain anything accepted by JSON.
 
-An optional array of [Input](#input) objects.
+### view.link
 
-### outs
+The *view.link* collection contains the canvas links, that are objects with the following attributes
 
-An optional array of [Ouput](#output) objects.
-
-## Link
-
-The *Link* constructor should not be used directly, use [addLink()](#addlink) instead.
-
-### from
+#### from
 
 An array with two entries:
 
-  0. The key of the source box.
+  0. The key of the source node.
   1. The position of the output.
 
-### to
+#### to
 
 An array with two entries:
 
-  0. The key of the target box.
+  0. The key of the target node.
   1. The position of the input.
 
-## Pin
+### Events
 
-The *Pin* object is an abstract class, furthermore it is not coded.
+The following events are triggered
 
-It has the following attributes
-
-### name
-
-It is a String with the name of the object.
-
-### data
-
-Can have any type that fits in a JSON attribute.
-
-## Input
-
-Is a [Pin](#pin) Object. Attribute [name](#name) defaults to `inP` where `P` is the *position* in the [ins](#ins) array.
-
-```
-ins: [{name: "in0", data:2}, {name: "in1", data:1}]
-```
-
-## Output
-
-Is a [Pin](#pin) Object. Attribute [name](#name) defaults to `outP` where `P` is the *position* in the [outs](#outs) array.
-
-```
-outs: [{name: "out0", data:1}]
-```
-
+* addNode
+* addLink
+* delNode
+* delLink
+* moveNode
+* addInput
+* addOutput
 
   [1]: http://svgjs.com/ "SVG.js"
 
