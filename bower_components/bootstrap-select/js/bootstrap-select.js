@@ -125,6 +125,34 @@
       return r
     };
   }
+
+  $.fn.triggerNative = function (eventName) {
+    var el = this[0],
+        event;
+
+    if (el.dispatchEvent) {
+      if (typeof Event === 'function') {
+        // For modern browsers
+        event = new Event(eventName, {
+          bubbles: true
+        });
+      } else {
+        // For IE since it doesn't support Event constructor
+        event = document.createEvent('Event');
+        event.initEvent(eventName, true, false);
+      }
+
+      el.dispatchEvent(event);
+    } else {
+      if (el.fireEvent) {
+        event = document.createEventObject();
+        event.eventType = eventName;
+        el.fireEvent('on' + eventName, event);
+      }
+
+      this.trigger(eventName);
+    }
+  };
   //</editor-fold>
 
   // Case insensitive contains search
@@ -474,7 +502,7 @@
           titleOption.value = '';
           element.insertBefore(titleOption, element.firstChild);
           // Check if selected attribute is already set on an option. If not, select the titleOption option.
-          if (element.options[element.selectedIndex].getAttribute('selected') === null) titleOption.selected = true;
+          if ($(element.options[element.selectedIndex]).attr('selected') === undefined) titleOption.selected = true;
         }
       }
 
@@ -492,7 +520,7 @@
             tokens = $this.data('tokens') ? $this.data('tokens') : null,
             subtext = typeof $this.data('subtext') !== 'undefined' ? '<small class="text-muted">' + $this.data('subtext') + '</small>' : '',
             icon = typeof $this.data('icon') !== 'undefined' ? '<span class="' + that.options.iconBase + ' ' + $this.data('icon') + '"></span> ' : '',
-            isDisabled = this.disabled || this.parentElement.tagName === 'OPTGROUP' && this.parentElement.disabled;
+            isDisabled = this.disabled || (this.parentElement.tagName === 'OPTGROUP' && this.parentElement.disabled);
 
         if (icon !== '' && isDisabled) {
           icon = '<span>' + icon + '</span>';
@@ -509,14 +537,15 @@
         }
 
         if (this.parentElement.tagName === 'OPTGROUP' && $this.data('divider') !== true) {
+          var optGroupClass = ' ' + this.parentElement.className || '';
+
           if ($this.index() === 0) { // Is it the first option of the optgroup?
             optID += 1;
 
             // Get the opt group label
             var label = this.parentElement.label,
                 labelSubtext = typeof $this.parent().data('subtext') !== 'undefined' ? '<small class="text-muted">' + $this.parent().data('subtext') + '</small>' : '',
-                labelIcon = $this.parent().data('icon') ? '<span class="' + that.options.iconBase + ' ' + $this.parent().data('icon') + '"></span> ' : '',
-                optGroupClass = ' ' + this.parentElement.className || '';
+                labelIcon = $this.parent().data('icon') ? '<span class="' + that.options.iconBase + ' ' + $this.parent().data('icon') + '"></span> ' : '';
             
             label = labelIcon + '<span class="text">' + label + labelSubtext + '</span>';
 
@@ -703,8 +732,8 @@
           doneButtonHeight = doneButton ? doneButton.offsetHeight : 0,
           dividerHeight = $(divider).outerHeight(true),
           // fall back to jQuery if getComputedStyle is not supported
-          menuStyle = getComputedStyle ? getComputedStyle(menu) : false,
-          $menu = menuStyle ? $(menu) : null,
+          menuStyle = typeof getComputedStyle === 'function' ? getComputedStyle(menu) : false,
+          $menu = menuStyle ? null : $(menu),
           menuPadding = parseInt(menuStyle ? menuStyle.paddingTop : $menu.css('paddingTop')) +
                         parseInt(menuStyle ? menuStyle.paddingBottom : $menu.css('paddingBottom')) +
                         parseInt(menuStyle ? menuStyle.borderTopWidth : $menu.css('borderTopWidth')) +
@@ -730,6 +759,10 @@
     setSize: function () {
       this.findLis();
       this.liHeight();
+
+      if (this.options.header) this.$menu.css('padding-top', 0);
+      if (this.options.size === false) return;
+
       var that = this,
           $menu = this.$menu,
           $menuInner = this.$menuInner,
@@ -754,8 +787,6 @@
           };
 
       posVert();
-
-      if (this.options.header) $menu.css('padding-top', 0);
 
       if (this.options.size === 'auto') {
         var getSize = function () {
@@ -989,7 +1020,7 @@
           } else if (!that.multiple) {
             var selectedIndex = that.liObj[that.$element[0].selectedIndex];
 
-            if (typeof selectedIndex !== 'number') return;
+            if (typeof selectedIndex !== 'number' || that.options.size === false) return;
             
             // scroll to selected option
             var offset = that.$lis.eq(selectedIndex)[0].offsetTop - that.$menuInner[0].offsetTop;
@@ -1094,7 +1125,7 @@
 
           // Trigger select 'change'
           if ((prevValue != that.$element.val() && that.multiple) || (prevIndex != that.$element.prop('selectedIndex') && !that.multiple)) {
-            that.$element.change();
+            that.$element.triggerNative('change');
             // $option.prop('selected') is current option state (selected/unselected). state is previous option state.
             that.$element.trigger('changed.bs.select', [clickedIndex, $option.prop('selected'), state]);
           }
@@ -1146,7 +1177,7 @@
         } else {
           that.deselectAll();
         }
-        that.$element.change();
+        that.$element.triggerNative('change');
       });
 
       this.$element.change(function () {
@@ -1179,9 +1210,9 @@
         if (that.$searchbox.val()) {
           var $searchBase = that.$lis.not('.is-hidden').removeClass('hidden').children('a');
           if (that.options.liveSearchNormalize) {
-            $searchBase = $searchBase.not(':a' + that._searchStyle() + '(' + normalizeToBase(that.$searchbox.val()) + ')');
+            $searchBase = $searchBase.not(':a' + that._searchStyle() + '("' + normalizeToBase(that.$searchbox.val()) + '")');
           } else {
-            $searchBase = $searchBase.not(':' + that._searchStyle() + '(' + that.$searchbox.val() + ')');
+            $searchBase = $searchBase.not(':' + that._searchStyle() + '("' + that.$searchbox.val() + '")');
           }
           $searchBase.parent().addClass('hidden');
 
@@ -1227,7 +1258,7 @@
         }
 
         that.$lis.filter('.active').removeClass('active');
-        that.$lis.not('.hidden, .divider, .dropdown-header').eq(0).addClass('active').children('a').focus();
+        if (that.$searchbox.val()) that.$lis.not('.hidden, .divider, .dropdown-header').eq(0).addClass('active').children('a').focus();
         $(this).focus();
       });
     },
@@ -1345,7 +1376,7 @@
 
       isActive = that.$menu.parent().hasClass('open');
 
-      if (!isActive && (e.keyCode >= 48 && e.keyCode <= 57 || event.keyCode >= 65 && event.keyCode <= 90)) {
+      if (!isActive && (e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 65 && e.keyCode <= 90)) {
         if (!that.options.container) {
           that.setSize();
           that.$menu.parent().addClass('open');
@@ -1491,6 +1522,7 @@
 
     refresh: function () {
       this.$lis = null;
+      this.liObj = {};
       this.reloadLi();
       this.render();
       this.checkDisabled();

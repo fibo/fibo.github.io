@@ -1,14 +1,14 @@
 {
   "name": "dflow",
   "main": "dist/dflow.js",
-  "version": "0.6.0",
+  "version": "0.8.0",
   "homepage": "http://g14n.info/dflow",
   "authors": [
     "Gianluca Casati"
   ],
   "description": "Dataflow programming",
   "moduleType": [
-    "globals"
+    "node"
   ],
   "keywords": [
     "dataflow",
@@ -25,14 +25,13 @@
     "src",
     "index.js"
   ],
-  "_release": "0.6.0",
+  "_release": "0.8.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.6.0",
-    "commit": "6ab08ac9ea1a41534fc824ba6ac522b6418408d0"
+    "tag": "v0.8.0",
+    "commit": "405527e95303279b6a026d5e167daed6be6f7373"
   },
   "_source": "git://github.com/fibo/dflow.git",
-  "_target": "~0.6.0",
-  "_originalSource": "dflow",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "dflow"
 }
