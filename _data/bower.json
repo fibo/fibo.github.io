@@ -18,6 +18,7 @@
     "flow-view": "*",
     "bootstrap-select": "~1.7.1",
     "polymer": "Polymer/polymer#~1.0.3",
-    "dflow": "~0.6.0"
+    "dflow": "*",
+    "katex": "~0.4.0"
   }
 }
