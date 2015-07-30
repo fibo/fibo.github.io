@@ -20,4 +20,3 @@ layout: null
       <loc>http://{{ site.domain }}/flow-view/sitemap.xml</loc>
    </sitemap>
 </sitemapindex>
-

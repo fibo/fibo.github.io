@@ -99,7 +99,7 @@ Note that you cannot push from `/path/to/git/repo` to `/path/to/svn+git/repo` ca
 ## Conclusion
 
 Both git and svn will ignore each other and everything will *just work*.
-Use Git to develop, then commit to a Subversion server and at the end, everyone[^everyone] is happy!
+Use Git to develop, then commit to a Subversion server and at the end, everyone <sup>[1](#footnote1)</sup> is happy!
 
-[^everyone]: Everyone means *me* and my *boss* :).
+<a name="footnote1">1</a>: Everyone means *me* and my *boss* :).
 
