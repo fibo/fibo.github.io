@@ -21,11 +21,12 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li>
-          {% if page.title != "Blog" %}
-            <a href="//{{ site.domain }}/blog">Blog</a>
-          {% endif %}
-        </li>
+        {% if page.title != "Blog" %}
+          <li><a href="//{{ site.domain }}/blog">Blog</a></li>
+        {% endif %}
+        {% if page.title != "Software" %}
+          <li><a href="//{{ site.domain }}/software.html">Software</a></li>
+        {% endif %}
       </ul>
     </div>
   </div>

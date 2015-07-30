@@ -1,0 +1,12 @@
+---
+title: Software
+layout: page
+---
+
+<dl>
+{% for repo_hash in site.data.repos %}
+{% assign repo = repo_hash[1] %}
+  <dt><a href="{{ repo.html_url }}" >{{ repo.name }}</a></dt><dd>{{ repo.description }}</dd>
+{% endfor %}
+</dl>
+
