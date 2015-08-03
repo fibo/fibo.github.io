@@ -13,7 +13,7 @@
     "cp:metadata:bower.json": "cp bower.json _data/",
     "cp:metadata:package.json": "cp package.json _data/",
     "jshint": "jshint -c .jshintrc src/*.js",
-    "data:repo": "for repo in algebra dotsoftware flow-view dflow home; do npm run data:repo:$repo; done",
+    "data:repo": "for repo in algebra dflow dotsoftware flow-view games-of-life gh-clone home iper Perl-Box-pm Sweet-Home-pm Task-BeLike-FIBO-pm vvvv-ChaosToys; do npm run data:repo:$repo; done",
     "data:repo:algebra":             "wget https://api.github.com/repos/fibo/algebra             -O _data/repos/algebra.json",
     "data:repo:dflow":               "wget https://api.github.com/repos/fibo/dflow               -O _data/repos/dflow.json",
     "data:repo:dotsoftware":         "wget https://api.github.com/repos/fibo/.software           -O _data/repos/dotsoftware.json",
