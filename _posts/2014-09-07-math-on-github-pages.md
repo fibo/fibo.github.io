@@ -13,7 +13,11 @@ After I switched to <a href="https://github.com/vmg/redcarpet">Redcarpet</a> mar
 I also found MathJax <strong>really heavy</strong> to load, it requires more than 170 Mb of disc space: that is huge!
 </div>
 
-<div class="alert alert-info">Take a look to <a href="https://khan.github.io/KaTeX/">KaTeX</a> which claims to be the <strong>fastest</strong> math typesetting library.</div>
+<div class="alert alert-info">Take a look to <a href="https://khan.github.io/KaTeX/">KaTeX</a> which claims to be the <strong>fastest</strong> math typesetting library. I found its server side rendering feature a great solution to display math in browsers, see my algebra's blog <a href="http://g14n.info/algebra/tex-snippets">TeX snippets</a> page for a working example.</div>
+
+**Follows original article content**
+
+***
 
 GitHub Pages uses [kramdown](http://kramdown.gettalong.org/) by default.
 If you want to enable [GitHub Flavored Markdown][3], that is the same used by GitHub Wikis, set the following entries in your *_config.html*
