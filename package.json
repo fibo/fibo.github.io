@@ -4,6 +4,7 @@
   "description": "My digital copybook",
   "private": true,
   "scripts": {
+    "start": "jekyll serve",
     "_build": "npm run browserify; npm run cp; npm run readme; npm run data:repo",
     "browserify": "npm run browserify:src:blog",
     "browserify:src:blog": "browserify -e src/blog/index.js -o js/blog.js",
