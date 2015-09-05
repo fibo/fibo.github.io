@@ -7,7 +7,7 @@ encoding: utf-8
 permalink: ./:year/:month/:title
 
 exclude:
-  - _projects/_repos
+  - _projects/_readmes
   - _projects/**/*.yaml
   - bower.json
   - Gemfile

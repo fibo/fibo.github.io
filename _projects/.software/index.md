@@ -1,5 +1,12 @@
-.software
-=========
+---
+title: dotsoftware
+description: Install software locally
+project:
+  name: .software
+  type: Shell
+---
+dot software
+============
 
 > build & install software locally with **dot**software
 

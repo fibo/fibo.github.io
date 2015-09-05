@@ -67,43 +67,7 @@ $ jekyll serve --watch
 ### Projects
 
 Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
-documentation about my projects that does not use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
-
-Add repo **foo** as a submodule.
-
-```bash
-$ git submodule add https://github.com/fibo/foo _projects/_repos/foo
-```
-
-**Do not** use `git@github.com:fibo/foo.git` otherwise GitHub will be not able to clone submodule.
-
-Store YAML front matter in a separate homonym *.yaml* file, which is ignored by Jekyll.
-
-```bash
-$ mkdir -p _projects/foo
-```
-
-Sample content of *_projects/foo/index.yaml*
-
-```
----
-name: foo
-description: bla bla
----
-```
-
-Add this entry in the package.json script array
-
-```
-"project:homepage:foo": "cat _projects/foo/index.yaml _projects/_repos/foo/README.md > _projects/foo/index.md"
-```
-
-Concatenate *README.md* and its YAML front matter into *foo/index.md*
-
-```bash
-npm run project:homepage:foo
-```
-
+documentation about my projects that **does not** use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
 
 ## Licenses
 
@@ -112,5 +76,4 @@ I use the [Artistic license](http://g14n.info/artistic-license) for Perl project
   [2]: http://kramdown.gettalong.com "kramdown"
   [3]: http://jekyllrb.com "Jekyll"
   [4]: https://pages.github.com "GitHub Pages"
-
 
