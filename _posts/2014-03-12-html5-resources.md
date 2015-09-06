@@ -88,6 +88,8 @@ description: >
 
 [Special Characters](http://www.utexas.edu/learn/html/spchar.html)
 
+[Learn HTML](https://blog.udemy.com/learn-html-learn-the-foundations-of-html/) (good starting point for newbies)
+
 ### Web components
 
 [HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)

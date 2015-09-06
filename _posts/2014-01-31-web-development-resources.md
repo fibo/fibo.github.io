@@ -143,6 +143,8 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 
 [Evil Icons](http://evil-icons.io/)
 
+[Feed Icons](http://www.feedicons.com/)
+
 ## Online editors
 
 See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) on Wikipedia for a comparison table.
