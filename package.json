@@ -1,7 +1,7 @@
 {
   "name": "fibo.github.io",
   "version": "1.0.0",
-  "description": "My digital copybook",
+  "description": "Gianluca Casati's",
   "private": true,
   "scripts": {
     "start": "jekyll serve",
