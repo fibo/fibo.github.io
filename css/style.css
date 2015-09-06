@@ -3,3 +3,8 @@ footer {
 	padding: 100px 0;
 }
 
+.feed {
+	margin-left: 3px;
+	background: url("../images/feed-icon-28x28.png") no-repeat 0 50%;
+}
+
