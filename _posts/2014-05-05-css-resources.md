@@ -53,6 +53,11 @@ Unsemantic is a fluid grid system that is the successor to the [960 Grid System]
 [Jeet Grid System](http://jeet.gs/)
 : A grid system for humans
 
+### Animations
+
+[Animate.css](https://daneden.github.io/animate.css/)
+: Just-add-water CSS animation
+
 ## Demo
 
 [CSS visualizer](http://likethemammal.github.io/css-visualizer/)
