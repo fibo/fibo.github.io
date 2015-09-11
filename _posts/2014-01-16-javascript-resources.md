@@ -133,6 +133,12 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ### ECMAScript 6
 
+[ES6 in Depth](http://ponyfoo.com/articles/tagged/es6-in-depth)
+: [(ponyfoo.com)][6]
+
+[ES6 in Depth Articles](https://hacks.mozilla.org/category/es6-in-depth/)
+: [(hacks.mozilla.org)][5]
+
 [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
 
 [ECMAScript 6 modules: the future is now](http://www.2ality.com/2013/07/es6-modules.html)
@@ -166,4 +172,6 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
   [2]: http://www.html5rocks.com
   [3]: http://www.adequatelygood.com/
   [4]: http://ejohn.org/
+  [5]: https://hacks.mozilla.org
+  [6]: http://ponyfoo.com/
 
