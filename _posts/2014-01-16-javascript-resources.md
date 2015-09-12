@@ -26,6 +26,8 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [JavaScript Modules](http://jsmodules.io/)
 : The next version of JavaScript comes with a module system heavily inspired by Node.js modules. Here’s how it works.
 
+[ECMAScript compatibility table](http://kangax.github.io/compat-table/)
+
 ### Blogs
 
 [②ality][1]
