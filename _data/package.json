@@ -1,7 +1,7 @@
 {
   "name": "fibo.github.io",
   "version": "1.0.0",
-  "description": "My digital copybook",
+  "description": "Gianluca Casati's",
   "private": true,
   "scripts": {
     "start": "jekyll serve",
@@ -14,7 +14,7 @@
     "cp:metadata:bower.json": "cp bower.json _data/",
     "cp:metadata:package.json": "cp package.json _data/",
     "jshint": "jshint -c .jshintrc src/*.js",
-    "data:repo": "for repo in .software algebra algebra-group algebra-ring dflow flow-view games-of-life home iper Perl-Box-pm Sweet-Home-pm tris3d Task-BeLike-FIBO-pm vvvv-ChaosToys; do wget https://api.github.com/repos/fibo/$repo -O _data/repos/${repo}.json; done",
+    "data:repo": "for repo in .software algebra algebra-group algebra-ring cayley-dickson dflow flow-view games-of-life home iper Perl-Box-pm Sweet-Home-pm strict-mode tris3d Task-BeLike-FIBO-pm vvvv-ChaosToys; do wget https://api.github.com/repos/fibo/$repo -O _data/repos/${repo}.json; done",
     "readmes": "for repo in .software gh-clone nz-util; do wget -nv https://raw.githubusercontent.com/fibo/$repo/master/README.md -O _projects/_readmes/${repo}-readme.md; cat _projects/$repo/index.yaml _projects/_readmes/${repo}-readme.md > _projects/$repo/index.md; done",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
