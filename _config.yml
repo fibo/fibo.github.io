@@ -18,6 +18,10 @@ exclude:
   - src/
   - TODO
 
+include:
+  - _data/repos/.software.json
+  - _projects/.software/
+
 gems:
   - jekyll-sitemap
 
