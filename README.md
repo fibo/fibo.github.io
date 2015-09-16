@@ -7,6 +7,7 @@ This is my web book! Gianluca Casati writes here :)
 
 The domain for this site is **g14n.info** registered on [namecheap](https://www.namecheap.com);
 thanks to [CloudFlare](https://www.cloudflare.com/) it is a naked domain and has SSL: both *http* and *https* schemes are available.
+However, the default scheme I prefer when linking my site and articles is *http*.
 
 ## Debug
 
@@ -62,12 +63,34 @@ Test content generation running
 ```bash
 $ jekyll serve --watch
 ```
+
 ## Collections
 
 ### Projects
 
 Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
 documentation about my projects that **does not** use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
+
+```bash
+$ npm run readmes
+```
+
+## Software
+
+All software I produce is on GitHub, metadata is downloaded via API with
+
+```bash
+$ npm run data:repos
+```
+
+and stored in *_data/repos* folder as *.json* files. Data is displayed in [software page](http://g14n.info/software).
+To add a new repo, *foo* for instance, just add an empty *json* file
+
+```bash
+$ touch _data/repos/foo.json
+```
+
+The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll][3] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.
 
 ## Licenses
 
