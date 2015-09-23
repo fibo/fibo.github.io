@@ -9,13 +9,13 @@ description: >
 
 In this article I write what I do when I get a Linux server. Steps are really minimal 'cause I am lazy. I hope they are enough to prevent security issues.
 
-I assume OS is Centos 7.
+<div class="alert alert-info">I assume OS is a Centos 7. If you are using Ubuntu, few modifications are needed, using <em>apt-get</em> instead of <em>yum</em>, <em>service</em> instead of <em>systemctl</em>, etc. Aside few details, the same concepts applies on both as well as other Linux distros.</div>
 
 ## ASAP
 
-<div class="alert alert-warning">Do the following steps As Soon As Possible, i.e. when you access the server the first time.</div>
+<div class="alert alert-warning">Do the following steps <strong>As Soon As Possible</strong>, i.e. when you access the server the first time.</div>
 
-1. Login as root and change password, use a passphrase.
+1. Login as root and change password, use a *passphrase*.
 2. Create a new user.
 3. [Configure ssh](#configure-ssh), in particular to disable root access.
 4. [Update software](#update-software).
@@ -57,8 +57,9 @@ $ grep failed /var/log/secure | more
 
 see also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
 
-<div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts.
-One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
+<div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
+
+## How to
 
 ### Update software
 
@@ -68,7 +69,7 @@ Keep kernel and other software up to date.
 # yum update -y
 ```
 
-Schedule yum updates with *yum-cron*
+You can schedule yum updates with *yum-cron*
 
 ```
 # yum install yum-cron -y
@@ -76,7 +77,7 @@ Schedule yum updates with *yum-cron*
 # systemctl start yum-cron
 ```
 
-## How to
+<div class="alert alert-warning">Automatic updates should be configured <strong>only</strong> in a test environment.</div>
 
 ### Run server on port 80
 
@@ -86,14 +87,14 @@ Use `CAP_NET_BIND_SERVICE` capabilities instead. Suppose, for example, you want 
 ```
 $ su -
 # yum install libpcap -y
-# setcap cap_net_bind_service=ep /usr/bin/node
+# setcap cap_net_bind_service=ep /path/to/node
 ```
 
 Check it out
 
 ```
-$ getcap /usr/bin/node
-/usr/bin/node = cap_net_bind_service+ep
+$ getcap /path/to/node
+/path/to/node = cap_net_bind_service+ep
 ```
 
 Now any user can run a nodejs server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
@@ -171,3 +172,4 @@ If everything looks ok, restart ssh daemon to apply filter
   [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
   [6]: http://www.ipdeny.com/ "IPdeny"
   [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/ "Network Security with tcpwrappers"
+
