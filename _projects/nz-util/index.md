@@ -1,9 +1,5 @@
 ---
 title: nz-util
-description: Netezza utility procedures
-project:
-  name: nz-util
-  type: SQL
 ---
 ---
 title: nz-util
