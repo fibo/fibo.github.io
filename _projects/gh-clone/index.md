@@ -1,9 +1,5 @@
 ---
 title: gh-clone
-description: GitHub clone repo util
-project:
-  name: gh-clone
-  type: Shell
 ---
 # gh-clone
 
