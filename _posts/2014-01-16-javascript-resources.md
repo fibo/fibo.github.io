@@ -133,6 +133,8 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [7 Patterns to Refactor JavaScript Applications](http://journal.crushlovely.com/post/88286828068/7-patterns-to-refactor-javascript-applications-value)
 
+[From asm.js to WebAssembly](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/)
+
 ### ECMAScript 6
 
 [ES6 in Depth](http://ponyfoo.com/articles/tagged/es6-in-depth)
