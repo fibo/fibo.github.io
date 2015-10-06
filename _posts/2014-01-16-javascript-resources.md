@@ -96,6 +96,9 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [duo](http://duojs.org/)
 : A next-generation package manager for the front-end
 
+[jspm](http://jspm.io/)
+: Frictionless browser package management
+
 ## Articles, tutorials and other resources
 
 ### Functional programming
