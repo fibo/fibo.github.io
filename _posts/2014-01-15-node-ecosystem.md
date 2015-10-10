@@ -160,6 +160,9 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [Error Handling in Node.js](http://www.joyent.com/developers/node/design/errors)
 
+[P2P workshop](https://p2p-workshop.mafintosh.com)
+: by [mafintosh](https://mafintosh.com)
+
 ### Streams
 
 [Node Streams: How do they work?](http://maxogden.com/node-streams)
@@ -192,5 +195,5 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [cloudno.de](http://cloudno.de/)
 
-[1]: http://ejohn.org/ "John Resig"
+  [1]: http://ejohn.org/ "John Resig"
 
