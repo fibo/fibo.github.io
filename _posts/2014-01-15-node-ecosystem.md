@@ -29,19 +29,13 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [gobble](https://github.com/gobblejs/gobble)
 
-### Web applications
+### Web
 
 [Express](http://expressjs.com/)
 : Web application framework.
 
 [hapi](http://hapijs.com/)
 : A rich framework for building applications and services
-
-[Socket.IO](http://socket.io/)
-: The cross-browser WebSocket for realtime apps.
-
-[Primus](https://github.com/primus/primus)
-: Abstraction layer for real-time to prevent module lock-in
 
 [Sails.js](http://sailsjs.org/)
 : Realtime MVC framework.
@@ -52,8 +46,17 @@ Despite it is so young, node ecosystem is pretty rich!
 [DocPad](http://docpad.org/)
 : Streamlined web development
 
+[Socket.IO](http://socket.io/)
+: The cross-browser WebSocket for realtime apps.
+
+[Primus](https://github.com/primus/primus)
+: Abstraction layer for real-time to prevent module lock-in
+
 [Apache Cordova](http://cordova.apache.org/)
 : A platform for building native mobile applications using HTML, CSS and JavaScript.
+
+[Helmet](https://github.com/helmetjs/helmet)
+: Help secure Express apps with various HTTP headers.
 
 ### Documentation
 
