@@ -281,9 +281,7 @@ colorscheme bubblegum
 " colorscheme base16-tomorrow
 " colorscheme base16-greenscreen
 " colorscheme base16-eighties
-
 ```
-
 
 #### Cool plugins
 
@@ -317,8 +315,10 @@ colorscheme bubblegum
 [Syntastic](https://github.com/scrooloose/syntastic)
 : syntax checking hacks for vim
 
-## Programming languages
+[Auto Pairs](https://github.com/jiangmiao/auto-pairs)
+: insert or delete brackets, parens, quotes in pair
 
+## Programming languages
 
 ### Go
 
