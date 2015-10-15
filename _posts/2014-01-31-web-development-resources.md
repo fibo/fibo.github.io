@@ -70,11 +70,17 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 [Foundation](http://foundation.zurb.com/)
 : (claims to be :) The most advanced responsive front-end framework in the world.
 
+[Materialize](http://materializecss.com/)
+: A modern responsive front-end framework based on Material Design.
+
 [Semantic UI](http://semantic-ui.com/)
 : UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
 
 [Flat UI][1]
-: Free Bootstrap Theme
+: Free Bootstrap Theme.
+
+[Pure.css](http://purecss.io/)
+: A set of small, responsive CSS modules that you can use in every web project.
 
 #### Application framework
 
