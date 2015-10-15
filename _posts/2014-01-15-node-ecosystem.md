@@ -69,6 +69,9 @@ Despite it is so young, node ecosystem is pretty rich!
 [Gitbook](http://www.gitbook.io/)
 : Build beautiful programming books and exercises using GitHub/Git and Markdown.
 
+[YUIDoc](http://yui.github.io/yuidoc/)
+: JavaScript Documentation Tool
+
 ### Cli
 
 [Commander](http://visionmedia.github.io/commander.js/)
