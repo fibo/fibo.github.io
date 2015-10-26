@@ -22,6 +22,12 @@ description: >
 [WTF, HTML and CSS?](http://wtfhtmlcss.com/)
 : Reasons HTML and CSS might make you say what the fuck. A curated list of commonly frustrating HTML and CSS quandaries, miscues, and dilemmas. (by [@mdo][1])
 
+[Awesome CSS](https://github.com/sotayamashita/awesome-css)
+: A curated list of CSS lists
+
+[CSS3Files](http://css3files.com/)
+: CSS Tips, Tricks and Tutorials
+
 ## Frameworks and libs
 
 ### Preprocessors
