@@ -50,7 +50,7 @@ $ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
 
 ### Setup your environment
 
-I use to create a *.oracle_profile* with environment variables I need, so I can source it from *.bash_profile* or from another session (for example from a CPAN shell, see below). 
+I use to create a *.oracle_profile* with environment variables I need, so I can source it from *.bash_profile* or from another session (for example from a CPAN shell, see below).
 
 <div class="alert alert-warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
 
@@ -64,19 +64,22 @@ export TNS_ADMIN=$HOME/etc
 export NLS_LANG=ITALIAN_ITALY.WE8ISO8859P15
 
 # Set LD_LIBRARY_PATH avoiding a final colon.
-if [ -z "$LIBRARY_PATH" ]; then
-	LIBRARY_PATH=$ORACLE_HOME
+if [ -z "$LD_LIBRARY_PATH" ]; then
+	LD_LIBRARY_PATH=$ORACLE_HOME
 else
-	LIBRARY_PATH=$ORACLE_HOME:$LIBRARY_PATH
+	LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
 fi
 ```
 
-Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn' t complete a working installation without it.
-Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as `LIBRARY_PATH=$ORACLE_HOME/lib`.
-
 <div class="alert alert-danger">Anyway avoid set <em>LD_LIBRARY_PATH</em> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
 
-Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European charset).
+Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn't complete a working installation without it.
+
+<div class="alert alert-info">
+Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as <pre>LIBRARY_PATH=$ORACLE_HOME/lib</pre>.
+</div>
+
+Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European character set).
 
 `TNS_ADMIN` is the directory where you put your *tnsadmin.ora*, since we are not pointing to an Oracle server installation, we probably need also our own tns configuration.
 
@@ -118,13 +121,13 @@ Now you can source the *.oracle_profile* you created, to load the environment va
 $ source $HOME/.oracle_profile
 ```
 
-Check at least that sqlplus is working 
+Check at least that sqlplus is working
 
 ```bash
 $ sqlplus /nolog
 ```
 
-If you see a `SQL> prompt`, it means your installation have good chances to complete successfully. If not, probably you picked up an Oracle Instant Client version that is not compatible with your Operating System. 
+If you see a `SQL> prompt`, it means your installation have good chances to complete successfully. If not, probably you picked up an Oracle Instant Client version that is not compatible with your Operating System.
 Create a log dir in your `$ORACLE_HOME`, otherwise you will find Oracle logs in your home dir.
 
 ```bash
@@ -133,7 +136,7 @@ $ mkdir $ORACLE_HOME/log
 
 ### Compile
 
-Now, clean your mind and pray the mantra 
+Now, clean your mind and pray the mantra
 
 ```bash
 $ perl Makefile.PL
