@@ -8,6 +8,10 @@ description: >
 
 <div class="alert alert-info">Launch all the commands in this tutorial, from the first to the last, and you will cover almost all operations on branches.</div>
 
+It is highly recommended to install [git-aware-prompt](https://github.com/jimeh/git-aware-prompt).
+
+![Git Branch in Prompt](https://raw.github.com/jimeh/git-aware-prompt/master/preview.png)
+
 ## Clone a repo
 
 First of all, since we are going to talk also about remote branches, you need to clone a repo. For instance, suppose I am cloning a brand new repository I just created on GitHub.
