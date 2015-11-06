@@ -76,7 +76,7 @@ fi
 Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn't complete a working installation without it.
 
 <div class="alert alert-info">
-Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as <pre>LIBRARY_PATH=$ORACLE_HOME/lib</pre>.
+Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as <em>LIBRARY_PATH=$ORACLE_HOME/lib</em>.
 </div>
 
 Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy and euro accounting (Western European character set).
