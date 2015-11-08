@@ -5,3 +5,5 @@ alt shows you more options
 
 brew
 
+enter on filename to rename it
+

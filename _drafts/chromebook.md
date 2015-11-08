@@ -14,3 +14,9 @@ https://chromium.googlesource.com/apps/libapps/+/master/nassh/doc/faq.txt
 bisogna fare
 
 term_.command.removeDirectory('/.ssh/')
+
+prova mosh
+https://chrome.google.com/webstore/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj
+
+https://mosh.mit.edu/
+
