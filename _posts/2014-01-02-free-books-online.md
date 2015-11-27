@@ -50,6 +50,12 @@ description: >
 
 [Guide to Advanced Programming in C](http://pfacka.binaryparadise.com/articles/guide-to-advanced-programming-in-C.html)
 
+[Introduction to C](http://charliethe.ninja/2015/05/29/intro_to_c.html)
+: or follow this [direct link](http://charliethe.ninja/slideshow/english/introtoc.html#1)
+
+[Build your own Lisp](http://www.buildyourownlisp.com/)
+: Learn C and build your own programming language in 1000 lines of code! [Read Online!](http://www.buildyourownlisp.com/contents)
+
 #### Erlang
 
 [Stuff Goes Bad: ERLANG IN ANGER](http://www.erlang-in-anger.com/)
@@ -87,6 +93,8 @@ description: >
 [Understanding ECMAScript 6](https://github.com/nzakas/understandinges6)
 
 [Human JavaScript](http://read.humanjavascript.com/)
+
+[Exploring ES6](http://exploringjs.com/es6/)
 
 #### Lisp
 
@@ -147,6 +155,7 @@ description: >
 
 [The Tao of Programming](http://www.mit.edu/~xela/tao.html)
 
+[Software Architecture Patterns](http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf)
 
 ## Mathematics
 
@@ -160,6 +169,9 @@ description: >
 
 [Street fighting mathematics](http://mitpress.mit.edu/sites/default/files/titles/content/9780262514293_Creative_Commons_Edition.pdf)
 
+### Physics
+
+[The Feynman Lectures on Physics](http://www.feynmanlectures.caltech.edu/)
 
   [1]: http://it.wikipedia.org/wiki/Eric_Steven_Raymond
 
