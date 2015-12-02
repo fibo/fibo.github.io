@@ -172,6 +172,8 @@ Despite it is so young, node ecosystem is pretty rich!
 [P2P workshop](https://p2p-workshop.mafintosh.com)
 : by [mafintosh](https://mafintosh.com)
 
+[10 Habits of a Happy Node Hacker (2016)](http://blog.heroku.com/archives/2015/11/10/node-habits-2016)
+
 ### Streams
 
 [Node Streams: How do they work?](http://maxogden.com/node-streams)
