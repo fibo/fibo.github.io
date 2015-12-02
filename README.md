@@ -92,6 +92,24 @@ $ touch _data/repos/foo.json
 
 The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll][3] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.
 
+## npm scripts
+
+### GitHub badges
+
+Update all SVG badges
+
+```bash
+$ npm run img.shields.io
+```
+
+Update badges for a specific project
+
+```bash
+$ export filename=foo
+$ export reponame=foo
+$ npm run img.shields.io
+```
+
 ## Licenses
 
 I use the [Artistic license](http://g14n.info/artistic-license) for Perl projects, the [MIT license](http://g14n.info/mit-license) otherwise.
