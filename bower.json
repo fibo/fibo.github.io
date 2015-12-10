@@ -19,6 +19,7 @@
     "bootstrap-select": "~1.7.1",
     "polymer": "Polymer/polymer#~1.0.3",
     "dflow": "*",
-    "katex": "~0.4.0"
+    "katex": "~0.4.0",
+    "KaTeX": "katex#~0.5.1"
   }
 }
