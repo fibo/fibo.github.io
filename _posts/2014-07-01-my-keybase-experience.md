@@ -8,7 +8,7 @@ description: >
 
 ## Me at Keybase
 
-Hi! This is [me at Keybase][2].
+Hi! I am [**fibo** at Keybase][2].
 
 > Keybase will be a public directory of publicly auditable public keys. All paired, for convenience, with unique usernames.
 
@@ -24,8 +24,67 @@ I like [Keybase][1], 'cause:
 ## My identity
 
 First of all, I created a [public OpenPGP key][6].
-Then I veryfied my GitHub identity with this [gist proof][7].
-That's all by now, I will annotate here everything I will discover about this new world.
+Then I veryfied my identity, there are severall ways. I started with this [gist proof][7].
+
+{ gist fibo/a5ebb031ad2ee2bdaf00 keybase.md }
+
+## Use case
+
+I use [coveralls.io](https://coveralls.io/) to generate test coverage reports,
+and I need a secret token to commit results. It is a file named *.coveralls.yml* with a content like
+
+```
+repo_token: yCNr4OfqZJtFkWsUmcCuQs2SGkYYzuZsx
+```
+
+It is not so confidential, but it is not a good habit to private files
+in public repos so let's encrypt 'em all!
+Note that my previous solution was to add the file to the *.gitignore* list and creating it manually every time.
+The good news are that with [keybase][1] you have an easy way to do so.
+
+Here I start from scratch cause I do not have *keybase cli* installed
+
+```
+npm install -g keybase
+mkdir ~/.gnupg
+```
+
+At the time of this writing, it is necessary to create *~/.gnupg* folder manually, see [this issue](https://github.com/keybase/node-client/issues/202) on GitHub.
+
+Start a session
+
+```
+keybase login
+keybase id fibo
+```
+
+Encrypt *.coveralls.yml* file.  It will create a *.coveralls.yml.asc* encrypted file which can add it to the repo, while the original *.coveralls.yml* is still ignored by *git*.
+
+```
+cd /path/to/my/repo
+keybase encrypt fibo .coveralls.yml
+git add .coveralls.yml.asc
+```
+
+To decrypt it, launch
+
+```
+keybase decrypt -o .coveralls.yml .coveralls.yml.asc
+```
+
+which will prompt for your *passphrase*. At the time of this writing I did not found a way to cache the *passphrase*, anyway this process is shorter and safer than before.
+Adding this command somewhere in your repo it is a good idea,
+for example, since it is a *Node* package, I added this entry to the *package.json*
+
+```
+  "scripts": {
+  …
+    "decrypt:.coveralls.yml": "keybase decrypt -o .coveralls.yml .coveralls.yml.asc",
+  …
+  },
+```
+
+so I can launch `npm run decrypt:.coveralls.yml` to decrypt my *coveralls* token.
 
   [1]: https://keybase.io/
   [2]: https://keybase.io/fibo
@@ -34,5 +93,4 @@ That's all by now, I will annotate here everything I will discover about this ne
   [5]: http://nodejs.org/
   [6]: https://keybase.io/fibo/key.asc
   [7]: https://gist.github.com/a5ebb031ad2ee2bdaf00
-
 
