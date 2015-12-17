@@ -19,4 +19,7 @@ layout: null
    <sitemap>
       <loc>http://{{ site.domain }}/flow-view/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>http://{{ site.domain }}/iper/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
