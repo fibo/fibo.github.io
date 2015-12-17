@@ -28,6 +28,12 @@ description: >
 [CSS3Files](http://css3files.com/)
 : CSS Tips, Tricks and Tutorials
 
+[Must-Watch CSS](https://github.com/AllThingsSmitty/must-watch-css)
+: A useful list of must-watch talks about CSS
+
+[CSS protips](https://github.com/AllThingsSmitty/css-protips)
+: A collection of tips to help take your CSS skills pro
+
 ## Frameworks and libs
 
 ### Preprocessors
@@ -69,6 +75,8 @@ Unsemantic is a fluid grid system that is the successor to the [960 Grid System]
 [CSS visualizer](http://likethemammal.github.io/css-visualizer/)
 
 ## Articles and other resources
+
+[About Flexbox](https://speakerdeck.com/makhbeth/about-flexbox-you-cant-float-anymore)
 
 [Nice collection of CSS animated loading indicators](http://tobiasahlin.com/spinkit/)
 
