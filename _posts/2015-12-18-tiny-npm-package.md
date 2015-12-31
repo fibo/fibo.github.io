@@ -18,21 +18,18 @@ I have few *Node.js* packages on [npm][1] that has a *tiny structure*
 * [tensor-product](http://npm.im/tensor-product)
 * [write-file-utf8](http://npm.im/write-file-utf8)
 
-By *tiny structure* I mean they follow the *small package philosophy*.
-
-Workflow is really simple:
-  * add a feature: edit *index.js*, add example in *README.md* and its test in *test.js*.
-  * test: `npm test`
-  * lint: `npm run lint`
-  * commit and push: `git commit -am 'added feature foo'; git push`
-  * deploy: `npm version minor`
+By *tiny structure* I mean they follow the *small package philosophy* with a simple
+but robust workflow like this:
+  1. add a feature: edit [index.js](#index-js) to add functionality, add example in [README.md](#readme-md) and related test in [test.js](#test-js).
+  2. commit: `git commit -a`
+  3. deploy: `npm version minor`
 
 The repository contains the following files:
-  * README.md
-  * .gitignore
-  * package.json
-  * index.js
-  * test.js
+  * [README.md](#readme-md)
+  * [.gitignore](#gitignore)
+  * [package.json](#package-json)
+  * [index.js](#index-js)
+  * [test.js](#test-js)
 
 ## .gitignore
 
@@ -72,6 +69,10 @@ Use the following template, replacing **<package-name>** and **<package-descript
   "bugs": {
     "url": "https://github.com/fibo/<package-name>/issues"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
   "devDependencies": {},
   "dependencies": {}
 }
@@ -91,9 +92,14 @@ Add it also to GitHub repo's website entry.
 Install the following development dependencies
 
 ```
+npm install pre-commit --save-dev
 npm install standard --save-dev
 npm install tape --save-dev
 ```
+
+### pre-commit
+
+Run tests before each commit.
 
 ### postversion
 
