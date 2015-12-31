@@ -83,7 +83,7 @@ Add some keywords in order to make it easier to find it on [npm][1].
 
 ### homepage
 
-The url *http://npm.im/<package-name>* redirects to *<package-name>* page on [npm][1].
+The url `http://npm.im/<package-name>` redirects to `<package-name>` page on [npm][1].
 Add it also to GitHub repo's website entry.
 
 ### devDependencies
@@ -97,7 +97,11 @@ npm install tape --save-dev
 
 ### postversion
 
-Push tag on GitHub and publish on npm.
+Push tag on GitHub and publish on npm automatically after launching
+
+```
+npm version minor
+```
 
 ## README.md
 
