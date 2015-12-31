@@ -20,11 +20,13 @@ I have few *Node.js* packages on [npm][1] that has a *tiny structure*
 
 By *tiny structure* I mean they follow the *small package philosophy* with a simple
 but robust workflow like this:
+
   1. add a feature: edit [index.js](#index-js) to add functionality, add example in [README.md](#readme-md) and related test in [test.js](#test-js).
   2. commit: `git commit -a`
   3. deploy: `npm version minor`
 
 The repository contains the following files:
+
   * [README.md](#readme-md)
   * [.gitignore](#gitignore)
   * [package.json](#package-json)
@@ -72,7 +74,7 @@ Use the following template, replacing **<package-name>** and **<package-descript
   "pre-commit": [
     "lint",
     "test"
-  ]
+  ],
   "devDependencies": {},
   "dependencies": {}
 }
