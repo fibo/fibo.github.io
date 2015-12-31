@@ -107,43 +107,41 @@ npm version minor
 
 Use the following template, replacing **<package-name>** and **<package-description>**.
 
-```
-# <package-name>
+    # <package-name>
 
-> <package-description>
+    > <package-description>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+    [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-## Install
+    ## Install
 
-With [npm](https://www.npmjs.com/) do
+    With [npm](https://www.npmjs.com/) do
 
-    npm install <package-name> --save
+        npm install <package-name> --save
 
-## Usage
+    ## Usage
 
-Signature is `(bar)` where
-* **bar** is a string
+    Signature is `(bar)` where
+    * **bar** is a string
 
-It returns the **quz** string.
+    It returns the **quz** string.
 
-## Examples
+    ## Examples
 
-All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/<package-name>/blob/master/test.js).
+    All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/<package-name>/blob/master/test.js).
 
-```
-var myFooFunction = require('<package-name>')
-```
+    ```
+    var myFooFunction = require('<package-name>')
+    ```
 
-### example foo
+    ### example foo
 
-### example bar
+    ### example bar
 
-## License
+    ## License
 
-[MIT](http://g14n.info/mit-license/)
+    [MIT](http://g14n.info/mit-license/)
 
-```
 
 ### Description
 
