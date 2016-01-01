@@ -26,8 +26,6 @@ I like [Keybase][1], 'cause:
 First of all, I created a [public OpenPGP key][6].
 Then I veryfied my identity, there are severall ways. I started with this [gist proof][7].
 
-{ gist fibo/a5ebb031ad2ee2bdaf00 keybase.md }
-
 ## Use case
 
 I use [coveralls.io](https://coveralls.io/) to generate test coverage reports,
@@ -40,6 +38,14 @@ repo_token: yCNr4OfqZJtFkWsUmcCuQs2SGkYYzuZsx
 It is not so confidential, but it is not a good habit to private files
 in public repos so let's encrypt 'em all!
 Note that my previous solution was to add the file to the *.gitignore* list and creating it manually every time.
+For instance, double check that in your *.gitignore* file there are the following rows
+
+```
+# Test coverage
+coverage
+.coveralls.yml
+```
+
 The good news are that with [keybase][1] you have an easy way to do so.
 
 Here I start from scratch cause I do not have *keybase cli* installed
@@ -55,7 +61,6 @@ Start a session
 
 ```
 keybase login
-keybase id fibo
 ```
 
 Encrypt *.coveralls.yml* file.  It will create a *.coveralls.yml.asc* encrypted file which can add it to the repo, while the original *.coveralls.yml* is still ignored by *git*.
@@ -85,6 +90,9 @@ for example, since it is a *Node* package, I added this entry to the *package.js
 ```
 
 so I can launch `npm run decrypt:.coveralls.yml` to decrypt my *coveralls* token.
+Note that it will ask for the *passphrase*: it would be nice to having it filled
+automatically, in a similar way it does an ssh agent. I will look for a solution
+maybe in the future, by now it is already a improvement having the encrypted token versioned.
 
   [1]: https://keybase.io/
   [2]: https://keybase.io/fibo
