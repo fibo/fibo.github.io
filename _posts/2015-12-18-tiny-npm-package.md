@@ -6,6 +6,8 @@ description: >
     Guidelines to create a Node.js module following the small package philosophy.
 ---
 
+## Workflow
+
 I have few *Node.js* packages on [npm][1] that has a *tiny structure*
 
 * [algebra-group](http://npm.im/algebra-group)
@@ -33,6 +35,17 @@ The repository contains the following files:
   * [index.js](#index-js)
   * [test.js](#test-js)
 
+### Debug
+
+If you read below you may note that no TAP parser is used. This let also add `console.log` statements without
+breaking tests, which is the first debugging technique most of the people use.
+If you need to use the [Node debugger](https://nodejs.org/api/debugger.html), just add a **debugger** keyword to
+enable a breakpoint in your [index.js](#index-js) and launch tests with
+
+```
+node debug test.js
+```
+
 ## .gitignore
 
 It is as simple as
@@ -44,13 +57,13 @@ npm-debug.log
 
 ## package.json
 
-Use the following template, replacing **<package-name>** and **<package-description>**.
+Use the following template, replacing `<package-name>` and `<package-description>`.
 
 ```
 {
   "name": "<package-name>",
   "description": "<package-description>",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "homepage": "http://npm.im/<package-name>",
   "author": {
     "name": "Gianluca Casati",
@@ -80,6 +93,14 @@ Use the following template, replacing **<package-name>** and **<package-descript
 }
 ```
 
+### author
+
+Here you can see my name and my website URL, change it according to [related section on package.json documentation](https://docs.npmjs.com/files/package.json#people-fields-author-contributors).
+
+### version
+
+Start with `0.0.0`, when publishing with `npm version minor` it will be updated to `0.1.0`.
+
 ### keywords
 
 Add some keywords in order to make it easier to find it on [npm][1].
@@ -101,15 +122,18 @@ npm install tape --save-dev
 
 ### pre-commit
 
-Run tests before each commit.
+Run linter and tests before each commit. This is always a good idea as for the mantainer as for contributors.
+If the tower is burning and you need to commit with test unpassed you can use `git commit -n`.
 
 ### postversion
 
-Push tag on GitHub and publish on npm automatically after launching
+Push tag on GitHub and publish on [npm][1] automatically after launching
 
 ```
 npm version minor
 ```
+
+See also [npm-version](https://docs.npmjs.com/cli/version).
 
 ## README.md
 
@@ -150,19 +174,14 @@ Use the following template, replacing **<package-name>** and **<package-descript
 
     [MIT](http://g14n.info/mit-license/)
 
-
 ### Description
 
 Put the same description in:
-* package.json
-* README.md
+* [package.json](#package-json)
+* [README.md](#readme-md): here you can use markdown to add links and style
 * GitHub project description
 
-where  in README.md you can use markdown to add links and style.
-
 ### Badges
-
-#### standard
 
 Notify that [feross/standard](https://github.com/feross/standard) style is used.
 
@@ -172,11 +191,16 @@ Specify installation instructions, which may vary for example recommending globa
 
 ### Usage
 
-Describe function signature and its usage.
+Describe function signature and its usage. Comment each parameter with its type and meaning,
+write about which result the function returns or which errors are thrown. 
 
 ### Examples
 
 Put examples, each one must have a corresponding test.
+
+### License
+
+Specify under which license is relesead the code. I usually adopt the MIT license and add a link to a page of my website displaying it.
 
 ## test.js
 
