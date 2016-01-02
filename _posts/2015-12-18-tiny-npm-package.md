@@ -177,6 +177,7 @@ Use the following template, replacing **<package-name>** and **<package-descript
 ### Description
 
 Put the same description in:
+
 * [package.json](#package-json)
 * [README.md](#readme-md): here you can use markdown to add links and style
 * GitHub project description
