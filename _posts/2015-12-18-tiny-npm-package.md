@@ -72,6 +72,7 @@ Use the following template, replacing `<package-name>` and `<package-description
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "check-deps": "npm outdated",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "lint": "standard",
     "test": "tape test.js"
@@ -85,6 +86,7 @@ Use the following template, replacing `<package-name>` and `<package-description
     "url": "https://github.com/fibo/<package-name>/issues"
   },
   "pre-commit": [
+    "check-deps",
     "lint",
     "test"
   ],
@@ -122,8 +124,10 @@ npm install tape --save-dev
 
 ### pre-commit
 
-Run linter and tests before each commit. This is always a good idea as for the mantainer as for contributors.
-If the tower is burning and you need to commit with test unpassed you can use `git commit -n`.
+Run linter and tests before each commit. This is always a good idea as for the
+maintainer as for contributors. If **the tower is burning** and you need to commit
+with tests failing  you can use `git commit -n`.
+Finally it run a non blocking command which displays outdated dependencies.
 
 ### postversion
 
