@@ -143,7 +143,7 @@ git push origin master
 
 ## Add a *.npmignore* file
 
-You can tell npm wich files to ignore adding a *.npmignore* file, the syntax is the same as the *.gitignore*.
+You can tell npm which files to ignore adding a *.npmignore* file, the syntax is the same as the *.gitignore*.
 
 I use to start with this content
 

@@ -39,3 +39,13 @@ See current `search_path`
 SHOW search_path;
 ```
 
+Custom prompt
+
+\set PROMPT1 '(%n@%M:%>) %`date +%H:%M:%S` [%/] \n%x%# '
+
+ma questo e' troppo prolisso, meglio solo
+
+\set PROMPT1 '%n@%/=%# '
+
+da mettere in $HOME/.psqlrc
+

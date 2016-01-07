@@ -188,7 +188,11 @@ Put the same description in:
 
 ### Badges
 
+#### Standard
+
 Notify that [feross/standard](https://github.com/feross/standard) style is used.
+Note that using [standardjs](http://standardjs.com/) linter is a matter of choice
+if you *like semicolons* just use another linter, see also my list of [Javascript linters](http://g14n.info/2014/01/node-ecosystem/#linters).
 
 ### Install
 
