@@ -80,10 +80,24 @@ Despite it is so young, node ecosystem is pretty rich!
 [cli-table](https://github.com/LearnBoost/cli-table)
 : Pretty unicode tables for the CLI with Node.JS.
 
-### Test
+### Linters
+
+[JSLint](http://www.jslint.com/)
+: The JavaScript Code Quality Tool. The first one, by [Crockford](http://www.crockford.com/).
+
+[ESLint](http://eslint.org/)
+: The pluggable linting utility for JavaScript and JSX
 
 [JSHint](http://www.jshint.com/)
 : A JavaScript Code Quality Tool
+
+[XO](https://github.com/sindresorhus/xo)
+: JavaScript happiness style linter ❤️
+
+[StandardJS](http://standardjs.com/)
+: JavaScript Standard Style. One Style to Rule Them All!
+
+### Test
 
 [testling](https://testling.com/)
 : Run your browser tests on every push
