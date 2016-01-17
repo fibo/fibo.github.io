@@ -14,12 +14,12 @@
   ],
   "dependencies": {
     "bootstrap": "3.3.4",
-    "d3": "~3.5.5",
-    "flow-view": "*",
-    "bootstrap-select": "~1.7.1",
-    "polymer": "Polymer/polymer#~1.0.3",
-    "dflow": "*",
-    "katex": "~0.4.0",
+    "d3": "~3.5.12",
+    "flow-view": "~0.10.0",
+    "bootstrap-select": "~1.7.7",
+    "polymer": "Polymer/polymer#~1.0.9",
+    "dflow": "~0.12.7",
+    "katex": "~0.4.3",
     "KaTeX": "katex#~0.5.1"
   }
 }

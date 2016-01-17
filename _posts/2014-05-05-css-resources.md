@@ -16,7 +16,7 @@ description: >
 [CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
 : CSS documentation at Mozilla Developer Network
 
-[Variable gris system](http://grids.heroku.com/)
+[Variable grid system](http://grids.heroku.com/)
 : A quick way to generate an underlying CSS grid for your site.
 
 [WTF, HTML and CSS?](http://wtfhtmlcss.com/)
@@ -34,7 +34,23 @@ description: >
 [CSS protips](https://github.com/AllThingsSmitty/css-protips)
 : A collection of tips to help take your CSS skills pro
 
-## Frameworks and libs
+## Tools
+
+### Frameworks
+
+[MinimalCSS](http://minimalcss.com/)
+: Minimal CSS Framework
+
+[Pure.css](http://purecss.io/)
+: A set of small, responsive CSS modules that you can use in every web project.
+
+### Modules
+
+[Normalize.css](https://necolas.github.io/normalize.css/)
+: A modern, HTML5-ready alternative to CSS resets.
+
+[reset.css](https://www.npmjs.com/package/reset.css)
+: Genuine Eric Meyer's Reset CSS bundled as npm package.
 
 ### Preprocessors
 

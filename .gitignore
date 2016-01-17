@@ -3,3 +3,11 @@ _site/
 Gemfile*
 node_modules/
 npm-debug.log
+
+
+.bower.json
+
+*zip
+
+bower_components/jquery/*.txt
+bower_components/jquery/src/
