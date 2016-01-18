@@ -155,12 +155,26 @@ Use the following template, replacing **<package-name>** and **<package-descript
 
         npm install <package-name> --save
 
-    ## Usage
+    ## API
 
-    Signature is `(bar)` where
-    * **bar** is a string
+    <a name="foo"></a>
+    ### `foo(bar)`
 
-    It returns the **quz** string.
+    > get the bar count
+
+    If you want to know the bar count you should use this function.
+
+    ```
+    var countBars = foo(bar)
+    console.log(countBars) // 12
+    ```
+
+    ||||
+    ---|---|---|
+    |`@api`|**private**|
+    |`@param {String}`|bar| Lorem ipsum digitorum
+    |`@returns {Number}`|count|
+
 
     ## Examples
 
@@ -198,10 +212,18 @@ if you *like semicolons* just use another linter, see also my list of [Javascrip
 
 Specify installation instructions, which may vary for example recommending global flag.
 
-### Usage
+### API
 
 Describe function signature and its usage. Comment each parameter with its type and meaning,
-write about which result the function returns or which errors are thrown. 
+write about which result the function returns or which errors are thrown.
+Actually it is [dox](https://www.npmjs.com/package/dox) syntax rendered as markdown.
+
+Note that the heading can be forced to remove the signature
+
+```
+<a name="foo"></a>
+### `foo(bar)`
+```
 
 ### Examples
 
