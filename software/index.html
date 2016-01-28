@@ -6,7 +6,15 @@ layout: page
 <dl>
 {% for repo_hash in site.data.repos %}
 {% assign repo = repo_hash[1] %}
-  <dt><a href="{{ repo.homepage }}" >{{ repo.name }}</a></dt><dd>{{ repo.description }}</dd>
+  <dt>
+    <a href="{{ repo.homepage }}" >{{ repo.name }}</a>
+    <!-- Buttons from https://buttons.github.io/ -->
+    <a class="github-button" href="https://github.com/fibo/{{ repo.name }}" data-icon="octicon-star" data-style="mega" data-count-href="/fibo/{{ repo.name }}/stargazers" data-count-api="/repos/fibo/{{ repo.name }}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star fibo/{{ repo.name }} on GitHub">Star</a>
+  </dt>
+  <dd>{{ repo.description }}</dd>
 {% endfor %}
 </dl>
+
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
