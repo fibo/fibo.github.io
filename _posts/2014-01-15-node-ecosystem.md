@@ -29,6 +29,8 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [gobble](https://github.com/gobblejs/gobble)
 
+[fly](https://git.io/fly)
+
 ### Web
 
 [Express](http://expressjs.com/)
