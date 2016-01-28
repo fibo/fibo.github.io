@@ -97,6 +97,20 @@ set -g Z_SCRIPT_PATH ~/.shell/z/z.sh
 
 Yes, [fish-shell][1] can run bash programs, and furthermore my **z** history is shared among shells.
 
+It's time to defeat bash nostalgia, let's install [Shellder](https://github.com/simnalamburt/shellder), a beautiful *powerline* prompt.
+OSX Terminal supports powerline patched fonts, I chose *Roboto Mono Medium for Powerline* font.
+You can get them from [powerline/fonts](https://github.com/powerline/fonts) repo.
+
+Once you have the proper fonts installed, launch
+
+```
+fisher install shellder
+```
+
+and you will get this
+
+![qs-install](https://cloud.githubusercontent.com/assets/8317250/12331695/fecb63ca-bb2d-11e5-960b-90198bc2bbf6.gif)
+
 ## Resources
 
 * [awesome-fish](https://github.com/bucaran/awesome-fish).
