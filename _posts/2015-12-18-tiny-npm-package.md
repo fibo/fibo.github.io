@@ -169,11 +169,8 @@ Use the following template, replacing **<package-name>** and **<package-descript
     console.log(countBars) // 12
     ```
 
-    ||||
-    ---|---|---|
-    |`@api`|**private**|
-    |`@param {String}`|bar| Lorem ipsum digitorum
-    |`@returns {Number}`|count|
+    * `@param {String}`: bar lorem ipsum digitorum
+    * `@returns {Number}`: count
 
 
     ## Examples
