@@ -153,7 +153,11 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [Get ready for ECMAScript 6](http://k33g.github.io/2014/06/26/ES6-READY.html)
 
 [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
-: [(ponyfoo.com)][6] article repo. 
+: [(ponyfoo.com)][6] article repo.
+
+### ECMAScript 7
+
+[ES7 async functions](https://jakearchibald.com/2014/es7-async-functions/)
 
 #### Object.observe
 
