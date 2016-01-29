@@ -47,6 +47,9 @@ Press ENTER or type command to continue
 
 However, if I use `vim` instead, it works.
 
+Mmh, the day after I opened [an issue here](https://github.com/fish-shell/fish-shell/issues/2701) and got a quick answer that made my solve it.
+Yes, **there is One Big community** :)
+
 ## Setup
 
 I tryed it on Linux and OSX. On OSX you can install it with [Homebrew](http://brew.sh/)
@@ -86,13 +89,13 @@ First thing I miss is [z](https://github.com/rupa/z) which I installed at path *
 Install it with
 
 ```
-fisher install oh-my-fish/plugin-z
+fisher install omf/plugin-z
 ```
 
-Then configure it: create a file *~/.config/fisherman/conf.d/z.fish*and add the line
+then configure a `Z_SCRIPT_PATH` variabile with the path where *z.sh* is installed
 
 ```
-set -g Z_SCRIPT_PATH ~/.shell/z/z.sh
+echo "set -g Z_SCRIPT_PATH ~/.shell/z/z.sh" » ~/.config/fish/config.fish
 ```
 
 Yes, [fish-shell][1] can run bash programs, and furthermore my **z** history is shared among shells.
