@@ -50,6 +50,12 @@ However, if I use `vim` instead, it works.
 Mmh, the day after I opened [an issue here](https://github.com/fish-shell/fish-shell/issues/2701) and got a quick answer that made my solve it.
 Yes, **there is One Big community** :)
 
+By the way, you should add this line on top of your *.vimrc*, before loading any plugin
+
+```
+set shell=/bin/sh
+```
+
 ## Setup
 
 I tryed it on Linux and OSX. On OSX you can install it with [Homebrew](http://brew.sh/)
