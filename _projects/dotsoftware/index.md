@@ -49,7 +49,7 @@ But, sometimes you are in one of the following scenarios
 
 *.software* has only one feature: installing software locally!
 
-It is implemented by a bash function named `.software_install` that takes only one parameter: what you want to install.
+It is implemented by a bash function named `.software_install` that takes the software want to install as argument.
 
 For example
 
@@ -57,18 +57,21 @@ For example
 $ .software_install Foo
 ```
 
+Optionally, a custom version number can be passed as a second argument
+
+```bash
+$ .software_install Foo 2.3.4
+```
 Typing *.software_install* in your bash prompt, and hitting <kbd>TAB</kbd> will autocomplete with available software.
-Take a look to [Software list](#software-list), which includes for example [Perl](#perl), [Node](#node), [Golang](#golang), [Ruby](#ruby).
+Take a look to [Software list](#software-list), which includes [Perl](#perl), [Node](#node), [Golang](#golang), [Ruby](#ruby) among others.
 
 ## Installation
 
 ### Requirements
 
-Please note that *.software* supports only Linux, but could work on many other Unix-like systems, like [BSD](http://en.wikipedia.org/wiki/Berkeley_Software_Distribution) and [Darwin](http://en.wikipedia.org/wiki/Darwin_%28operating_system%29).
+Please note that *.software* supports Linux and OS X, but could work on other Unix-like systems, like [BSD](http://en.wikipedia.org/wiki/Berkeley_Software_Distribution).
 In order to run, *.software* requires bash, [Tar](#tar), [Gzip](#gzip), [Grep](#grep), [Findutils](#findutils) and [Wget](#wget).
 Other requirements are those needed by software builds: [Make](#make), [gcc](#gcc), etc.
-
-I am working on zsh compatibility, feedbacks are welcome.
 
 ### Get it
 
@@ -101,7 +104,7 @@ Otherwise you can add manually these lines to your *.bash_profile*.
 Note that if you are using *.software* from a graphical environment rather than a remote server login shell, you should edit *.bashrc* file instead.
 
 ```bash
-###############################################################################
+##########################
 ### .software config start
 
 # Set .software target dir, defaults to "~/.software".
@@ -111,7 +114,7 @@ Note that if you are using *.software* from a graphical environment rather than 
 source ~/.software/etc/profile
 
 ### .software config end
-###############################################################################
+########################
 ```
 
 #### DOTSOFTWARE_ROOT_DIR
@@ -137,15 +140,6 @@ $ ln -s ~/workspace/ ~/.software
 
 ## Software list
 
-### [BitchX](http://bitchx.sourceforge.net/)
-
-> version 1.2.1
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-
 ### [ctags](http://ctags.sourceforge.net/)
 
 > version 5.8
@@ -157,7 +151,7 @@ Build depends on:
 
 ### [cURL](http://curl.haxx.se/)
 
-> version 7.41.0
+> version 7.44.0
 
 Build depends on:
 
@@ -209,40 +203,17 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### [Fontconfig](http://www.freedesktop.org/wiki/Software/fontconfig/)
-
-> version 2.11.93
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-* [Expat](#expat)
-* [FreeType](#freetype)
-* [pkg-config](#pkg-config)
-
-### [FreeType](http://www.freetype.org/)
-
-> version 2.5.5
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-
 ### g++
 
 Build not supported.
 
-
 Install it with a package manager:
 
-* `# apt-get install c++`
+* `# apt-get install g++`
 
 ### gcc
 
 Build not supported.
-
 
 Install it with a package manager:
 
@@ -250,7 +221,7 @@ Install it with a package manager:
 
 ### [Git](https://git-scm.com/)
 
-> version 2.3.5
+> version 2.6.0
 
 Build depends on:
 
@@ -269,12 +240,16 @@ Build depends on:
 
 ### [Golang](https://golang.org/)
 
-> version 1.4.2
+> version 1.4.3
 
 Build depends on:
 
 * [gcc](#gcc)
 * [Make](#make)
+
+*Golang* needs environment variables
+* `GOROOT` which is set to `$DOTSOFTWARE_ROOT_DIR/opt/golang`
+* `GOPATH` which is set to `$DOTSOFTWARE_ROOT_DIR/opt/gopath`
 
 ### [Graphviz](http://www.graphviz.org/)
 
@@ -345,15 +320,6 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### [Ncurses](http://www.gnu.org/software/ncurses/)
-
-> version 5.9
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-
 ### [Netcat](http://netcat.sourceforge.net/)
 
 > version 0.7.1
@@ -365,11 +331,13 @@ Build depends on:
 
 ### [Node](https://nodejs.org/)
 
-> version 4.1.1
+> version 4.2.2
+
+Node version above is latest **LTS / Stable**.
 
 Build depends on:
 
-* [g++](#g++)
+* [g++](#g)
 * [Make](#make)
 * [Python](#python)
 
@@ -390,6 +358,16 @@ Install it with a package manager:
 * `# apt-get install libreadline-dev`
 * `# yum install readline-devel`
 
+### [Squid](http://www.squid-cache.org/)
+
+> version 3.5.11
+
+Build depends on:
+
+* [g++](#g)
+* [gcc](#gcc)
+* [Make](#make)
+
 ### [patch](http://www.gnu.org/software/patch/)
 
 > version 2.7
@@ -401,16 +379,7 @@ Build depends on:
 
 ### [Perl](http://www.perl.org/)
 
-> version 5.22.0
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-
-### [pkg-config](http://www.freedesktop.org/wiki/Software/pkg-config/)
-
-> version 0.18
+> version 5.20.3
 
 Build depends on:
 
@@ -426,9 +395,62 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
+### [PostgreSQL](http://www.postgresql.org/)
+
+> version 9.4.5
+
+Build depends on:
+
+* [gcc](#gcc)
+* [Make](#make)
+* [Readline](#readline)
+* [zlib](#zlib)
+
+Variable `PGDATA` defines the directory where PostgreSQL stores data and configuration.
+It defaults to `$DOTSOFTWARE_ROOT_DIR/opt/pgsql/data`.
+
+On build, commands `initdb` and `createdb` are launched: this means that
+database instance is initialized and a database named as your unix user is created.
+Set variable `PGDATABASE` in your environment to customize database name.
+
+Common actions are:
+
+* **Stop** database: `stop_postresql`
+* **Start** database: `start_postgresql`
+* **Connect** to database: `psql`
+* **Reload** configuration: `pg_ctl reload`
+
+Configuration files can be found in `$PGDATA` directory.
+For example, to enable connections to all users and databases from
+IP 10.20.30.40, to a PostgreSQL instance running on an host with an IP 1.2.3.4,
+
+edit $PGDATA/postgresql.conf
+
+```
+listen_addresses = '1.2.3.4'
+```
+
+and $PGDATA/pg_hba.conf
+
+```
+host    all    all    10.20.30.40/32    trust
+```
+
+then launch
+
+```
+pg_ctl reload
+```
+
+To build a [Amazon Redshift](https://aws.amazon.com/redshift/) compatible version launch
+
+```
+.software_install PostgreSQL 8.0.2
+```
+
 ### [Redis](http://redis.io/)
 
-> version 3.0.1
+> version 3.0.4
 
 Build depends on:
 
@@ -524,16 +546,6 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-### [Zsh](http://www.zsh.org/)
-
-> version 5.0.7
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-* [Ncurses](#ncurses)
-
 ## Folder structure
 
 ### ~/.software/etc/installrc.d/
@@ -575,6 +587,10 @@ function _build() {
 
 Implements the *.software_install* function.
 
+### ~/.software/etc/profile.d/
+
+Contains profile files for every software, where needed.
+
 ### ~/.software/README.md
 
 This file, contains also software versions. Every software must have an homonym section in this file
@@ -588,7 +604,8 @@ where version number is in the second row, like this
 
 ## Packaging software
 
-*.software* installs software locally downloading and compiling sources. This process can be time and cpu consuming, so, if you have two or more similar machines is not that difficult to build only once, then package your result and installing it on other hosts.
+*.software* installs software locally downloading and compiling sources.
+This process can be time and cpu consuming, so, if you have two or more similar machines is not that difficult to build only once, then package your result and installing it on other hosts.
 The requirement are
 
 * The hosts has the same system software (OS, kernel, etc) and environment.
