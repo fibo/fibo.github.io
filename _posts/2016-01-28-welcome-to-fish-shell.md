@@ -1,4 +1,4 @@
----
+  ---
 title: Welcome to fish-shell
 tags:
   - Unix
@@ -101,7 +101,7 @@ fisher install omf/plugin-z
 then configure a `Z_SCRIPT_PATH` variabile with the path where *z.sh* is installed
 
 ```
-echo "set -g Z_SCRIPT_PATH ~/.shell/z/z.sh" » ~/.config/fish/config.fish
+echo "set -g Z_SCRIPT_PATH ~/.shell/z/z.sh" >> ~/.config/fish/config.fish
 ```
 
 Yes, [fish-shell][1] can run bash programs, and furthermore my **z** history is shared among shells.
@@ -119,6 +119,12 @@ fisher install shellder
 and you will get this
 
 ![qs-install](https://cloud.githubusercontent.com/assets/8317250/12331695/fecb63ca-bb2d-11e5-960b-90198bc2bbf6.gif)
+
+If you want a nice minimal prompt, that does not require powerline patched fonts, try
+
+```
+fisher install pure
+```
 
 ## Resources
 
