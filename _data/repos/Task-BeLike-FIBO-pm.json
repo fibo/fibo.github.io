@@ -61,6 +61,7 @@
   "notifications_url": "https://api.github.com/repos/fibo/Task-BeLike-FIBO-pm/notifications{?since,all,participating}",
   "labels_url": "https://api.github.com/repos/fibo/Task-BeLike-FIBO-pm/labels{/name}",
   "releases_url": "https://api.github.com/repos/fibo/Task-BeLike-FIBO-pm/releases{/id}",
+  "deployments_url": "https://api.github.com/repos/fibo/Task-BeLike-FIBO-pm/deployments",
   "created_at": "2013-05-08T09:32:56Z",
   "updated_at": "2015-05-07T12:56:39Z",
   "pushed_at": "2015-07-05T18:31:27Z",
