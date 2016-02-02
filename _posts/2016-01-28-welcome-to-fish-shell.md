@@ -1,4 +1,4 @@
-  ---
+---
 title: Welcome to fish-shell
 tags:
   - Unix
