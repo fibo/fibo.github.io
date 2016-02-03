@@ -19,7 +19,7 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="https://github.com/fibo/{{ page.title }}">GitHub</a></li>
+          <li><a href="https://github.com/fibo/{% if page.title == 'dotsoftware' %}.software{% else %}{{ page.title }}{% endif %}">GitHub</a></li>
         </ul>
       </div>
     </div>
