@@ -81,9 +81,13 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [MIDI.js](http://mudcu.be/midi-js/)
 : Sequencing in Javascript.
 
-## Package  managers
+## Tools
+
+### Package  managers
 
 [Bower](http://bower.io/)
+
+[npm](https://www.npmjs.com/)
 
 [Component](http://component.io/)
 
@@ -97,6 +101,23 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [jspm](http://jspm.io/)
 : Frictionless browser package management
+
+### Linters
+
+[JSLint](http://www.jslint.com/)
+: The JavaScript Code Quality Tool. The first one, by [Crockford](http://www.crockford.com/).
+
+[ESLint](http://eslint.org/)
+: The pluggable linting utility for JavaScript and JSX
+
+[JSHint](http://www.jshint.com/)
+: A JavaScript Code Quality Tool
+
+[XO](https://github.com/sindresorhus/xo)
+: JavaScript happiness style linter ❤️
+
+[StandardJS](http://standardjs.com/)
+: JavaScript Standard Style. One Style to Rule Them All!
 
 ## Articles, tutorials and other resources
 
