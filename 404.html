@@ -64,7 +64,7 @@ var path = defs.append("path")
     svg.append("use")
        .attr("xlink:href", "#s3");
 
-d3.json("//{{ site.domain }}/sitemap.json", function(error, root) {
+d3.json("//{{ site.domain }}/404.json", function(error, root) {
   if (error) return console.error(error);
 
   var focus = root,

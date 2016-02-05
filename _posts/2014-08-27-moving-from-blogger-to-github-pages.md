@@ -1,7 +1,7 @@
 ---
 title: Moving from Blogger to GitHub Pages
 tags:
-  - Blogger
+  - Blog
 description: >
     Migrate your blog from Blogger to GitHub Pages to gain full control on your content.
 ---
@@ -70,7 +70,7 @@ Don't forget to insert a [YAML frontmatter](http://jekyllrb.com/docs/frontmatter
 layout: post
 title: Moving from Blogger to GitHub Pages
 tags:
-  - Blogger
+  - Blog
 ---
 ```
 
@@ -103,8 +103,6 @@ var disqus_identifier = '{{ page.id }}';
 var disqus_title      = '{{ page.title }}';
 var disqus_url        = '{{ site.url }}/{{ page.url }}';
 ```
-
-<!--### Social integration-->
 
 ## See also
 
