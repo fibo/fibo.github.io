@@ -3,8 +3,10 @@ title: Emoji everywhere
 tags:
   - Blog
   - Web
-description >
-    60 seconds tutorial about how to use Emoji in your web site
+description: >
+    60 seconds tutorial about how to use Emoji in your web site.
+libs:
+  twemoji: true
 ---
 
 
