@@ -5,6 +5,8 @@ tags:
   - JavaScript
 description: >
     Collection of links and resources about JavaScript.
+libs:
+  twemoji: true
 ---
 
 ## Free books online

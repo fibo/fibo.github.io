@@ -9,6 +9,15 @@ The domain for this site is **g14n.info** registered on [namecheap](https://www.
 thanks to [CloudFlare](https://www.cloudflare.com/) it is a naked domain and has SSL: both *http* and *https* schemes are available.
 However, the default scheme I prefer when linking my site and articles is *http*.
 
+## Pages
+
+### Libs
+
+---
+libs:
+  twemoji: true
+---
+
 ## Debug
 
 It is highly recommended to install [Jekyll][3] to preview your site and avoid build errors before publishing it.
