@@ -3,18 +3,6 @@ title: Blog
 layout: page
 ---
 
-<div class="row">
-  <select
-    class="filterArticles"
-    data-width="auto"
-    title="Filter by tags"
-  >
-    {% for tag in site.tags | sort %}
-     <option>{{ tag | first }}</option>
-    {% endfor %}
-  </select>
-</div>
-
 <section>
   <h2>All posts</h2>
   {% include posts_list.html %}
