@@ -4,7 +4,7 @@ url: http://g14n.info
 
 encoding: utf-8
 
-permalink: ./:year/:month/:title
+permalink: ./:year/:month/:title/
 
 exclude:
   - _projects/_readmes
