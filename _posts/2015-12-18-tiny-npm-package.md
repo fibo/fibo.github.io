@@ -73,8 +73,8 @@ Use the following template, replacing `<package-name>` and `<package-description
   "main": "index.js",
   "scripts": {
     "check-deps": "npm outdated",
-    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "lint": "standard",
+    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "tape test.js"
   },
   "repository": {
