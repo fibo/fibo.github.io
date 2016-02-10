@@ -86,9 +86,9 @@ Use the following template, replacing `<package-name>` and `<package-description
     "url": "https://github.com/fibo/<package-name>/issues"
   },
   "pre-commit": [
-    "check-deps",
     "lint",
-    "test"
+    "test",
+    "check-deps"
   ],
   "devDependencies": {},
   "dependencies": {}
