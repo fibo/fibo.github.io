@@ -24,7 +24,7 @@ that is the folder where you uncompress *ConEmu*.
 
 You will see a configuration wizard first time you run *ConEmu*, and, **yes** check the *Quake-style slide down from the to of the screen* flag.
 
-![ConEmu_fast_configuration](//{{ site.domain }}/images/2015-05-26-windows-cmd-alternative/ConEmu_fast_configuration.jpg)
+![ConEmu_fast_configuration](//{{ site.domain }}/images{{ page.id }}ConEmu_fast_configuration.jpg)
 
 Since my default keyboard layout is Italian, I see <kbd>CTRL+ò</kbd> as the keyboard shortcut.
 It is better to change it to <kbd>CTRL+\</kbd> that is what the author meant, i.e. <kbd>CTRL+`</kbd> if you have a USA keyboard layout.
