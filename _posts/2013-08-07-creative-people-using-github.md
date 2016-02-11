@@ -39,27 +39,27 @@ So the project I will consider as an example is [mrvux/dx11-vvvv-girlpower][1].
 
 Create your own copy of the repository, go to the [mrvux/dx11-vvvv-girlpower][1] repo and fork it!
 
-[![](http://3.bp.blogspot.com/-DG1rSEXmDMs/UcbmyxOwQlI/AAAAAAAAA1U/jiYA0aRqXbs/s1600/ForkIt.png)](http://3.bp.blogspot.com/-DG1rSEXmDMs/UcbmyxOwQlI/AAAAAAAAA1U/jiYA0aRqXbs/s1600/ForkIt.png)
+![ForkIt](//{{ site.domain }}images{{ page.id }}ForkIt.jpg)
 
 This will create a copy of the repo under your user namespace, for instance [fibo/dx11-vvvv-girlpower](https://github.com/fibo/dx11-vvvv-girlpower).
 
 It's time to download your own local copy, use the client and clone your repo.
 
-[![](http://1.bp.blogspot.com/-dbFeQTeum2Y/UcbmyDLmbsI/AAAAAAAAA1M/Ufjuv_nuoRE/s1600/CloneIt.png)](http://1.bp.blogspot.com/-dbFeQTeum2Y/UcbmyDLmbsI/AAAAAAAAA1M/Ufjuv_nuoRE/s1600/CloneIt.png)
+![CloneIt](//{{ site.domain }}images{{ page.id }}CloneIt.jpg)
 
 Just push the "Clone in Windows" button, and use the GitHub for Windows client.
 
 After you open the repo with the client, you can browse the file easily using the explorer.
 
-[![](http://4.bp.blogspot.com/-yqf70MXdaq4/Ucbmz962RZI/AAAAAAAAA1o/1lYIeMwV0SY/s1600/OpenInExplorer.png)](http://4.bp.blogspot.com/-yqf70MXdaq4/Ucbmz962RZI/AAAAAAAAA1o/1lYIeMwV0SY/s1600/OpenInExplorer.png)
+![OpenInExplorer](//{{ site.domain }}images{{ page.id }}OpenInExplorer.jpg)
 
 Add your stuff, do some modifications and then commit your work clicking the sync button. Everything will be saved to your own fork.
 
-[![](http://1.bp.blogspot.com/-Isswc3_GHZY/UcbmyoJE1nI/AAAAAAAAA1Q/2I2YqP9eF3Q/s1600/CommitAndSync.png)](http://1.bp.blogspot.com/-Isswc3_GHZY/UcbmyoJE1nI/AAAAAAAAA1Q/2I2YqP9eF3Q/s1600/CommitAndSync.png)
+![CommitAndSync](//{{ site.domain }}images{{ page.id }}CommitAndSync.jpg)
 
 To let vux know about your modifications, you can do a pull request.
 
-[![](http://3.bp.blogspot.com/-L5Y4Cvjkym0/Ucbm1Bd_gYI/AAAAAAAAA10/7dHMNB7itjo/s1600/PullRequest.png)](http://3.bp.blogspot.com/-L5Y4Cvjkym0/Ucbm1Bd_gYI/AAAAAAAAA10/7dHMNB7itjo/s1600/PullRequest.png)
+![PullRequest](//{{ site.domain }}images{{ page.id }}PullRequest.jpg)
 
 It will arrive a notification to mrvux that will merge your modifications to its master repo.
 Let me add some advice, that can seem trivial but could save a lot of time:
@@ -82,10 +82,9 @@ Unfortunately there is no **upstream** button on GitHub for Windows client, I al
 
 Soooo, if the project will go on, soon or later you will need to update your local repo with the last version of the original mrvux repo.
 
-Don' t panic it will be really easy, just follow my indications and open a shell.</div>
+Don' t panic it will be really easy, just follow my indications and open a shell.
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://2.bp.blogspot.com/-eOCDrfeTVa8/Ucbmz5Q0IDI/AAAAAAAAA1s/NrQh_sSKeTs/s1600/OpenShell.png)](http://2.bp.blogspot.com/-eOCDrfeTVa8/Ucbmz5Q0IDI/AAAAAAAAA1s/NrQh_sSKeTs/s1600/OpenShell.png)</div>
-<div></div>
+![OpenShell](//{{ site.domain }}images{{ page.id }}OpenShell.png)
 
 Only once, you should set the mrvux/dx11-vvvv-girlpower master repository as the **upstream**. In fact if you do
 
@@ -103,7 +102,7 @@ $ git remote add upstream https://github.com/mrvux/dx11-vvvv-girlpower.git
 
 Remember, this is done only once. Now you have your **upstream** set properly
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://4.bp.blogspot.com/-QX89blr7r7s/UcbmzWNdHfI/AAAAAAAAA1k/FudC_U3viIc/s1600/GitRemote.png)](http://4.bp.blogspot.com/-QX89blr7r7s/UcbmzWNdHfI/AAAAAAAAA1k/FudC_U3viIc/s1600/GitRemote.png)</div>
+![GitRemote](//{{ site.domain }}images{{ page.id }}GitRemote.png)
 
 So, now you can refresh your local repo with the latest goodies from the vux repo (the **upstream**) just typing 
 
@@ -111,7 +110,7 @@ So, now you can refresh your local repo with the latest goodies from the vux rep
 $ git pull upstream master
 ```
 
-<span style="font-size: large;">pretty easy, just use [the ghost in the shell](https://www.youtube.com/watch?v=ZGJE82p39jI)</span> <span style="font-size: x-large;">:) </span>
+pretty easy, just use [the ghost in the shell](https://www.youtube.com/watch?v=ZGJE82p39jI) :)
 
 I will look for some git hook or transparent user solution to avoid the upstream step.
 
