@@ -13,7 +13,7 @@ However, the default scheme I prefer when linking my site and articles is *http*
 
 ### Images
 
-When editing post *2000-01-01-template.md*, create a folder *images/2000/01/01/template*
+When editing post *2000-01-01-template.md*, create a folder *images/2000/01/template*
 which contains all images relative to that post, then you can reference them with
 
 ```
