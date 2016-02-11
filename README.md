@@ -17,7 +17,7 @@ When editing post *2000-01-01-template.md*, create a folder *images/2000/01/01/t
 which contains all images relative to that post, then you can reference them with
 
 ```
-![image_name](//{{ site.domain }}images{{ page.id }}image_name.jpg)
+![image_name](//{{ site.domain }}/images{{ page.id }}/image_name.jpg)
 ```
 
 ### Libs

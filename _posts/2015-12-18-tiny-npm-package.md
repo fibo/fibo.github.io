@@ -16,8 +16,10 @@ I have few *Node.js* packages on [npm][1] that has a *tiny structure*
 * [indices-permutations](http://npm.im/indices-permutations)
 * [laplace-determinant](http://npm.im/laplace-determinant)
 * [multidim-array-index](http://npm.im/multidim-array-index)
+* [not-defined](http://npm.im/not-defined)
 * [tensor-contraction](http://npm.im/tensor-contraction)
 * [tensor-product](http://npm.im/tensor-product)
+* [tris3d](http://npm.im/tris3d)
 * [write-file-utf8](http://npm.im/write-file-utf8)
 
 By *tiny structure* I mean they follow the *small package philosophy* with a simple
