@@ -5,7 +5,7 @@ title: kiss-literate-programming
 
 > is a minimal literate programming boilerplate
 
-[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](https://github.com/fibo/kiss-literate-programming)
+[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
 ## Description
 
@@ -85,7 +85,7 @@ using the following template
     
     > description
     
-    [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](https://github.com/fibo/kiss-literate-programming)
+    [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
     
     ## Installation
     
