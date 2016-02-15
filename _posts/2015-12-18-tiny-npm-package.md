@@ -37,10 +37,30 @@ The repository contains the following files:
   * [index.js](#index-js)
   * [test.js](#test-js)
 
+<div class="alert alert-info">This is just a starting point, it can grows for example adding folders <em>src/</em> and <em>test/</em> or adding services like travis or coveralls.</div>
+
 ### Debug
 
-If you read below you may note that no TAP parser is used. This let also add `console.log` statements without
-breaking tests, which is the first debugging technique most of the people use.
+If you read below you may note that the *tap-min* TAP parser is used: this has several reasons.
+In particular, using no TAP parser can lead to issues when publishing the package, if there are many many tests.
+
+If you want to add `console.log` statements without breaking tests, which is the first debugging technique most of the people use, you can just go for a bare
+
+```
+tape test.js
+```
+
+or even use [`t.comment(message)`](https://github.com/substack/tape#tcommentmessage).
+
+If you want a nice output you can optionally install few TAP parsers globally
+
+```
+npm install tap-pessimist -g
+npm install tap-spec -g
+```
+
+then run tests with `tape test.js | tap-spec` or `tape test.js | tap-pessimist`.
+
 If you need to use the [Node debugger](https://nodejs.org/api/debugger.html), just add a **debugger** keyword to
 enable a breakpoint in your [index.js](#index-js) and launch tests with
 
@@ -77,7 +97,7 @@ Use the following template, replacing `<package-name>` and `<package-description
     "check-deps": "npm outdated",
     "lint": "standard",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
-    "test": "tape test.js"
+    "test": "tape test.js | tap-min"
   },
   "repository": {
     "type": "git",
@@ -122,6 +142,7 @@ Install the following development dependencies
 npm install pre-commit --save-dev
 npm install standard --save-dev
 npm install tape --save-dev
+npm install tap-min --save-dev
 ```
 
 ### pre-commit
@@ -151,7 +172,7 @@ Use the following template, replacing **<package-name>** and **<package-descript
 
     [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-    ## Install
+    ## Installation
 
     With [npm](https://www.npmjs.com/) do
 
@@ -207,7 +228,7 @@ Notify that [feross/standard](https://github.com/feross/standard) style is used.
 Note that using [standardjs](http://standardjs.com/) linter is a matter of choice
 if you *like semicolons* just use another linter, see also my list of [Javascript linters](http://g14n.info/2014/01/node-ecosystem/#linters).
 
-### Install
+### Installation
 
 Specify installation instructions, which may vary for example recommending global flag.
 

@@ -96,6 +96,8 @@ description: >
 
 [Exploring ES6](http://exploringjs.com/es6/)
 
+[JavaScript for cats](http://jsforcats.com/)
+
 #### Lisp
 
 [The Roots of Lisp](http://www.cs.uml.edu/ecg/pub/uploads/OPLspr09/genesis-of-lisp-jmc.pdf)
