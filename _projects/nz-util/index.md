@@ -1,9 +1,6 @@
 ---
 title: nz-util
 ---
----
-title: nz-util
----
 
 > Netezza utility procedures
 
