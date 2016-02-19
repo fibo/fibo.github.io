@@ -43,7 +43,7 @@ MaxAuthTries 2
 
 So root user cannot login and any other user is disconnected if password is wrong.
 
-Commit changes restarting ssh daemon.
+Commit changes restarting ssh daemon
 
 ```
 # systemctl restart sshd
@@ -55,7 +55,7 @@ After this you should not see the failed login attempts warning. Test it with
 $ grep failed /var/log/secure | more
 ```
 
-see also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
+See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
 
 <div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
 
@@ -79,10 +79,10 @@ You can schedule yum updates with *yum-cron*
 
 <div class="alert alert-warning">Automatic updates should be configured <strong>only</strong> in a test environment.</div>
 
-### Run server on port 80
+### Run a server on port 80
 
 If you want to run a server on port 80, **do not** run it has root.
-Use `CAP_NET_BIND_SERVICE` capabilities instead. Suppose, for example, you want to run a server using nodejs.
+Use `CAP_NET_BIND_SERVICE` capabilities instead. Suppose, for example, you want to run a server using *nodejs*.
 
 ```
 $ su -
@@ -90,52 +90,48 @@ $ su -
 # setcap cap_net_bind_service=ep /path/to/node
 ```
 
-Check it out
+Check it out with
 
 ```
 $ getcap /path/to/node
 /path/to/node = cap_net_bind_service+ep
 ```
 
-Now any user can run a nodejs server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
+Now any user can run a *nodejs* server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
 <div class="alert alert-warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to <a href="http://g14n.info/dotsoftware">separate user software from system software</a>.
 In this particular case, if you update Node using yum you will loose the <em>cap_net_bind_service=ep</em> setting and your server will fail to restart on port 80.</div>
 
 ### Restrict ssh access
 
-As you can read in [Configure ssh](#configure-ssh) section, there are many login attempts. See it your self (sit down first :)
+As you can read in [Configure ssh](#configure-ssh) section, there are many login attempts. See it your self (sit down first 😱 )
 
 ```
 # tail -f /var/log/secure
 ```
 
-You can use [TCP wrapper][4] lib to filter access to your host. Note that the following instructions work because *sshd* is compatible with tcpwrappers, in fact
+You can use [TCP wrapper][4] lib to filter access to your host. Note that the following instructions work because *sshd* is compatible with *tcpwrappers*, in fact
 
 ```
 $ ldd /usr/sbin/sshd | grep libwrap
         libwrap.so.0 => /lib64/libwrap.so.0 (0x00007fac80451000)
 ```
 
-For example, if you want to allow ssh access only from a class C IPv4 subnet, for instance *10.20.30* do
-
-edit */etc/hosts.allow*
-
-```
-sshd: 10.20.30.
-```
-
-edit */etc/hosts.deny*
+First of all remove ssh access to everyone, make sure your */etc/hosts.deny* has the following line
 
 ```
 sshd: ALL
 ```
 
-and restart ssh daemon
+Now you can give access selectively. For example, if you want to allow ssh access only from a class C IPv4 subnet, for instance *10.20.30* add to your */etc/hosts.allow* the row
 
 ```
-# systemctl restart sshd
+sshd: 10.20.30.
 ```
+
+You are done! Now only accesses from trusted origin can enter.
+
+#### How to block a country
 
 Sadly, if you check where does the ssh failed login attempts come form, it turns out they are from China. You can use [IPdeny][6] lists to block or allow connections coming from a country.
 
@@ -144,18 +140,12 @@ For example, to deny connections from China you can launch, as root
 ```
 echo -e \# $(date +%F): IP blocks from http://www.ipdeny.com/ipblocks/data/countries/cn.zone >> /etc/hosts.deny
 #                                "cn" stands for China. Extract class B subnets.  Prepend "sshd:"; append "." .
-#                                                     ↓                        ↓                              ↓ 
+#                                                     ↓                        ↓                              ↓
 curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null     | cut -d . -f1-2 | sort | uniq | while read subnet; do echo sshd: ${subnet}.; done >> /etc/hosts.deny
 # Double check results appended to /etc/hosts.deny config!
 ```
 
 Yes, double check results appended to your */etc/hosts.deny* config file and compare them with your last logins. Just use a simple `last | head -20` and `more /etc/hosts.deny` with a little bit from your brain.
-
-If everything looks ok, restart ssh daemon to apply filter
-
-```
-# systemctl restart sshd
-```
 
 ## References
 
