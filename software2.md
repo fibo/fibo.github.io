@@ -3,6 +3,12 @@ title: Software
 layout: page
 ---
 
+## algebra
+
+> {{ site.data.repo.algebra.description }}
+
+[![Whatchers](http://g14n.info/svg/github/watchers/algebra.svg)](https://github.com/fibo/algebra/watchers) [![Stargazers](http://g14n.info/svg/github/stars/algebra.svg)](https://github.com/fibo/algebra/stargazers) [![Forks](http://g14n.info/svg/github/forks/algebra.svg)](https://github.com/fibo/algebra/network/members)
+
 ## dflow
 
 > {{ site.data.repo.dflow.description }}

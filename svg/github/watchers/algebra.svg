@@ -1,0 +1,5 @@
+---
+layout: null
+---
+{% assign repo = site.data.repos.algebra %}
+{% include github/watchers.html %}
