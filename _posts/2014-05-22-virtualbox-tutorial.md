@@ -12,7 +12,7 @@ description: >
 
 ### VirtualBox
 
-Go to [VirtualBox][1] site and download latest installer.
+Go to [VirtualBox][virtualbox-homepage] site and download latest installer.
 
 During installation few dialogs will appear askying if you trust Oracle software: just hit *yes*.
 
@@ -26,7 +26,7 @@ If you have an Intel processor and you want to run 64 bit operating systems you 
 
 There are many virtual box images available for download, but I prefer to download an iso and install it from scratch.
 
-Go to [Ubuntu Server download page][2] and get an iso image. Last stable version  at the time of this writing is *Ubuntu Server 14.04 LTS* so I downloaded *ubuntu-14.04-server-amd64.iso*.
+Go to [Ubuntu Server download page][ubuntu-downlad] and get an iso image. Last stable version  at the time of this writing is *Ubuntu Server 14.04 LTS* so I downloaded *ubuntu-14.04-server-amd64.iso*.
 
 ### Folder structure
 
@@ -51,7 +51,7 @@ I use to create a new 8GB virtual disc in VDI format dinamically allocated.
 
 Once your VM is created and you downloaded the iso, before turning on the VM go to **Settings > Storage > Controller: IDE** , click on *Empty* and navigate to the iso path, that on my Windows laptop is *C:\store\Software\Ubuntu\ubuntu-14.04-server-amd64.iso*
 
-![Mount iso image on Virtualbox][2]
+![mount_iso](//{{ site.domain }}/images{{ page.id }}/mount_iso.png)
 
 #### Credentials
 
@@ -137,5 +137,5 @@ It can be useful have a mouse in your terminal, specially for cut and paste. Jus
 $ sudo apt-get install gpm
 ```
 
-  [1]: https://www.virtualbox.org/
-  [2]: https://lh6.googleusercontent.com/-g_JMklUTFFo/U33Ftrs-mbI/AAAAAAAABI4/ziuJU4pzzeo/s0/2014-03-07+13_45_37-VirtualBox.png "MountIsoImageOnVirtualbox.png"
+[ubuntu-downalod]: http://www.ubuntu.com/download/server
+[virtualbox-homepage]: https://www.virtualbox.org/
