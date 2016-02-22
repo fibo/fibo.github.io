@@ -26,7 +26,7 @@ If you have an Intel processor and you want to run 64 bit operating systems you 
 
 There are many virtual box images available for download, but I prefer to download an iso and install it from scratch.
 
-Go to [Ubuntu Server download page][ubuntu-downlad] and get an iso image. Last stable version  at the time of this writing is *Ubuntu Server 14.04 LTS* so I downloaded *ubuntu-14.04-server-amd64.iso*.
+Go to [Ubuntu Server download page][ubuntu-download] and get an iso image. Last stable version  at the time of this writing is *Ubuntu Server 14.04 LTS* so I downloaded *ubuntu-14.04-server-amd64.iso*.
 
 ### Folder structure
 
@@ -137,5 +137,5 @@ It can be useful have a mouse in your terminal, specially for cut and paste. Jus
 $ sudo apt-get install gpm
 ```
 
-[ubuntu-downalod]: http://www.ubuntu.com/download/server
+[ubuntu-download]: http://www.ubuntu.com/download/server
 [virtualbox-homepage]: https://www.virtualbox.org/
