@@ -8,7 +8,7 @@ permalink: ./:year/:month/:title/
 
 exclude:
   - _projects/_readmes
-  - _projects/**/*.yaml
+  - _projects/**/index.yaml
   - bower.json
   - Gemfile
   - npm-debug.log
@@ -16,7 +16,6 @@ exclude:
   - README.md
   - package.json
   - src/
-  - TODO
 
 include:
   - _data/repos/.software.json
@@ -25,8 +24,6 @@ gems:
   - jekyll-sitemap
 
 markdown: kramdown
-
-highlighter: rouge
 
 collections:
   projects:
