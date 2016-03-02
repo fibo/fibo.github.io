@@ -55,9 +55,11 @@ After this you should not see the failed login attempts warning. Test it with
 $ grep failed /var/log/secure | more
 ```
 
-See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1]
+See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1].
 
 <div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
+
+<div class="alert alert-warning">Consider using <pre>ssh-keygen</pre> and <pre>ssh-copy-id</pre> to configure ssh access without password.</div>
 
 ## How to
 
@@ -154,6 +156,7 @@ Yes, double check results appended to your */etc/hosts.deny* config file and com
 * [How do I grant permission on port <1024][3]
 * [Unexpected DDOS: Blocking China with ipset and iptables][5]
 * [Network Security with tcpwrappers][7]
+* [3 Steps to Perform SSH Login Without Password Using ssh-keygen & ssh-copy-id][8]
 
   [1]: http://serverfault.com/questions/260706/possible-break-in-attempt-in-var-log-secure-what-does-this-mean "“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?"
   [2]: http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html "Top 20 OpenSSH Server Best Security Practices"
@@ -162,4 +165,5 @@ Yes, double check results appended to your */etc/hosts.deny* config file and com
   [5]: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables/ "Unexpected DDOS: Blocking China with ipset and iptables"
   [6]: http://www.ipdeny.com/ "IPdeny"
   [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/ "Network Security with tcpwrappers"
+  [8]: http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/ "3 Steps to Perform SSH Login Without Password Using ssh-keygen & ssh-copy-id"
 
