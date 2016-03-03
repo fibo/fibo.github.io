@@ -1,7 +1,6 @@
 ---
 title: Software
 layout: page
-permalink: ./:title/
 ---
 
 # Node
