@@ -12,7 +12,7 @@ title: tris3d
 * [API](#api)
 * [License](#license)
 
-[![NPM version](https://badge.fury.io/js/tris3d.svg)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.svg?branch=master)](https://travis-ci.org/fibo/tris3d.svg?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.svg)](https://gemnasium.com//tris3d)
+[![NPM version](https://badge.fury.io/js/tris3d.svg)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.svg?branch=master)](https://travis-ci.org/fibo/tris3d.svg?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.svg)](https://gemnasium.com//tris3d) [![Change log](https://img.shields.io/badge/change-log-blue.svg)](https://github.com/fibo/tris3d/blob/master/CHANGELOG.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 

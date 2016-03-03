@@ -59,7 +59,7 @@ See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure]
 
 <div class="alert alert-info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
 
-<div class="alert alert-warning">Consider using <pre>ssh-keygen</pre> and <pre>ssh-copy-id</pre> to configure ssh access without password.</div>
+<div class="alert alert-warning">Consider using <em>ssh-keygen</em> and <em>ssh-copy-id</em> to configure ssh access without password.</div>
 
 ## How to
 
