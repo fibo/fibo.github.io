@@ -15,9 +15,7 @@ Just use this code if you want a fast solution
 
 MY_FILENAME=`basename "$BASH_SOURCE"`
 
-echo $MY_FILENAME
-
-MY_PROCESS_COUNT=$(ps -ef | grep $MY_FILENAME | grep -v grep | grep -v $$ | wc -
+MY_PROCESS_COUNT=$(ps a -o pid,cmd | grep $MY_FILENAME | grep -v grep | grep -v $$ | wc -
 l)
 
 if [ $MY_PROCESS_COUNT -ne 0  ]; then
@@ -28,3 +26,4 @@ if
 # Follows the code to get the job done.
 ```
 
+You can test it by adding a `sleep 10` at the bottom of the script.
