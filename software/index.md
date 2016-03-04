@@ -28,8 +28,8 @@ node:
 
 # Node
 
-{% for tiny_pkg in page.node.tiny_packages %}
-## [pkg]({{ repo[pkg].homepage }})
+{% for pkg in page.node.packages %}
+## [{{ pgk }}]({{ repo[pkg].homepage }})
 
 > {{ repo[pkg].description }}
 
