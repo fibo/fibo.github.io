@@ -1,4 +1,3 @@
-
 # My digital copybook
 
 This is my web book! Gianluca Casati writes here :)
