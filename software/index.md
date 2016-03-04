@@ -4,6 +4,7 @@ layout: page
 bash:
   - bb-clone
   - gh-clone
+  - home
 node:
   packages:
     - algebra
@@ -50,3 +51,6 @@ node:
 * [{{ bash_project }}]({{ repo[bash_project].homepage }}): {{ repo[bash_project].description }}
 {% endfor %}
 
+# Meta
+
+[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)]({{ repo['kiss-literate-programming'].homepage }}): {{ repo['kiss-literate-programming'].description }}
