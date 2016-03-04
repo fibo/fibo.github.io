@@ -29,7 +29,7 @@ node:
 # Node
 
 {% for pkg in page.node.packages %}
-## [{{ pgk }}]({{ repo[pkg].homepage }})
+## [{{ pkg }}]({{ repo[pkg].homepage }})
 
 > {{ repo[pkg].description }}
 
