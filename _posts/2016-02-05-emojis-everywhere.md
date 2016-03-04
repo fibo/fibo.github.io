@@ -28,10 +28,30 @@ Then go to [emoji preview page](http://twitter.github.io/twemoji/preview.html), 
 
 Do you want to run a Fibonacci function? Here it is
 
-![fibonacci_emojilisp](http://emojilisp.com/img/emoji/unicode/1f31c.png)
+```
+🐇 🏤 🍇
+  🐇🐖 🏁 ➡️ 🚂 🍇
+    👴 Let’s print a few fibonaccis.
+
+    🍮 i 0
+    🍮 a 0
+    🍮 b 1
+
+    🔁 ◀️ i 15 🍇
+      🍮 r ➕ a b
+      🍮 a b
+      🍮 b r
+      😀 🔷🔡🚂 r 10
+      🍫 i
+    🍉
+
+    🍎 0
+  🍉
+🍉
+```
 
 Yes, you can code with emojis in few programming languages:
 
-* [emojilisp](http://emojilisp.com/)
 * [emojicode](http://www.emojicode.org/)
+* [emojilisp](http://emojilisp.com/)
 
