@@ -9,7 +9,6 @@ node:
     - algebra
     - dflow
     - flow-view
-    - tris3d
   tiny_packages:
     - algebra-group
     - algebra-ring
