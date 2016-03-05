@@ -5,6 +5,7 @@ bash:
   - bb-clone
   - gh-clone
   - home
+  - dotsoftware
 node:
   packages:
     - algebra
