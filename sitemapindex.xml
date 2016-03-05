@@ -14,6 +14,9 @@ layout: null
       <loc>http://{{ site.domain }}/games-of-life/sitemap.xml</loc>
    </sitemap>
    <sitemap>
+      <loc>http://{{ site.domain }}/geohash-neighbours/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
       <loc>http://{{ site.domain }}/dflow/sitemap.xml</loc>
    </sitemap>
    <sitemap>
@@ -21,5 +24,8 @@ layout: null
    </sitemap>
    <sitemap>
       <loc>http://{{ site.domain }}/iper/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://{{ site.domain }}/tris3d-canvas/sitemap.xml</loc>
    </sitemap>
 </sitemapindex>
