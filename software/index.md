@@ -22,6 +22,7 @@ node:
     - tensor-contraction
     - tensor-product
     - tris3d
+    - tris3d-ai
     - tris3d-canvas
     - write-file-utf8
     - x3dom-livereload
