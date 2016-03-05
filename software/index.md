@@ -24,6 +24,7 @@ node:
     - tris3d
     - tris3d-canvas
     - write-file-utf8
+    - x3dom-livereload
 ---
 
 {% assign repo = site.data.repos %}
