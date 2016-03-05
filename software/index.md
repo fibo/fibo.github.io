@@ -53,4 +53,4 @@ node:
 
 # Meta
 
-[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)]({{ repo['kiss-literate-programming'].homepage }}): {{ repo['kiss-literate-programming'].description }}
+[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming) {{ repo['kiss-literate-programming'].description }}
