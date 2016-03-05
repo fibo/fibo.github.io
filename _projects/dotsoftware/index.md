@@ -139,6 +139,7 @@ Instead of setting a `DOTSOFTWARE_ROOT_DIR` variable, another choice is to creat
 ## Software list
 
 <a name="ctags"></a>
+
 ### [ctags](http://ctags.sourceforge.net/)
 
 > version 5.8
@@ -149,6 +150,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="curl"></a>
+
 ### [cURL](http://curl.haxx.se/)
 
 > version 7.44.0
@@ -159,6 +161,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="dos2unix"></a>
+
 ### [Dos2Unix](http://dos2unix.sourceforge.net/)
 
 > version 7.1
@@ -169,6 +172,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="expat"></a>
+
 ### [Expat](http://expat.sourceforge.net/)
 
 > version 2.1.0
@@ -181,6 +185,7 @@ Build depends on:
 * [Python](#python)
 
 <a name="expect"></a>
+
 ### [Expect](http://expect.sourceforge.net/)
 
 > version 5.45
@@ -192,6 +197,7 @@ Build depends on:
 * [Tcl](#tcl)
 
 <a name="findutils"></a>
+
 ### [Findutils](http://www.gnu.org/software/findutils/)
 
 > version 4.4.2
@@ -208,6 +214,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="g++"></a>
+
 ### g++
 
 Build not supported.
@@ -217,6 +224,7 @@ Install it with a package manager:
 * `# apt-get install g++`
 
 <a name="gcc"></a>
+
 ### gcc
 
 Build not supported.
@@ -226,6 +234,7 @@ Install it with a package manager:
 * `# apt-get install gcc`
 
 <a name="git"></a>
+
 ### [Git](https://git-scm.com/)
 
 > version 2.6.0
@@ -238,6 +247,7 @@ Build depends on:
 * [Python](#python)
 
 <a name="git-extras"></a>
+
 ### [git-extras](https://github.com/tj/git-extras)
 
 > version 2.2.0
@@ -247,6 +257,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="golang"></a>
+
 ### [Golang](https://golang.org/)
 
 > version 1.4.3
@@ -262,6 +273,7 @@ Build depends on:
 * `GOPATH` which is set to `$DOTSOFTWARE_ROOT_DIR/opt/gopath`
 
 <a name="graphviz"></a>
+
 ### [Graphviz](http://www.graphviz.org/)
 
 > version 2.38.0
@@ -272,6 +284,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="grep"></a>
+
 ### [Grep](http://www.gnu.org/software/grep/)
 
 > version 2.21
@@ -288,6 +301,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="gzip"></a>
+
 ### [Gzip](http://www.gnu.org/software/gzip/)
 
 > version 1.6
@@ -302,6 +316,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="lua"></a>
+
 ### [Lua](http://www.lua.org/)
 
 > version 5.3.0
@@ -313,6 +328,7 @@ Build depends on:
 * [Readline](#readline)
 
 <a name="libxml2"></a>
+
 ### [libxml2](http://www.xmlsoft.org/)
 
 > version 2.9.0
@@ -323,6 +339,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="make"></a>
+
 ### [Make](http://www.gnu.org/software/make/)
 
 > version 3.82
@@ -337,6 +354,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="netcat"></a>
+
 ### [Netcat](http://netcat.sourceforge.net/)
 
 > version 0.7.1
@@ -347,6 +365,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="nginx"></a>
+
 ### [nginx](http://nginx.org/)
 
 > version 1.9.10
@@ -365,6 +384,7 @@ Install it with a package manager:
 * `# yum install nginx`
 
 <a name="node"></a>
+
 ### [Node](https://nodejs.org/)
 
 > version 4.3.2
@@ -378,6 +398,7 @@ Build depends on:
 * [Python](#python)
 
 <a name="openssl"></a>
+
 ### [OpenSSL](https://www.openssl.org/)
 
 Build not supported.
@@ -388,6 +409,7 @@ Install it with a package manager:
 * `# yum install openssl-devel`
 
 <a name="readline"></a>
+
 ### [Readline](http://www.gnu.org/software/readline/)
 
 Build not supported.
@@ -398,6 +420,7 @@ Install it with a package manager:
 * `# yum install readline-devel`
 
 <a name="squid"></a>
+
 ### [Squid](http://www.squid-cache.org/)
 
 > version 3.5.11
@@ -409,6 +432,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="patch"></a>
+
 ### [patch](http://www.gnu.org/software/patch/)
 
 > version 2.7
@@ -419,6 +443,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="pcre"></a>
+
 ### [PCRE](http://www.pcre.org/)
 
 Build not supported.
@@ -436,6 +461,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="perl"></a>
+
 ### [Perl](http://www.perl.org/)
 
 > version 5.20.3
@@ -446,6 +472,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="python"></a>
+
 ### [Python](https://www.python.org/)
 
 > version 2.7.9
@@ -456,6 +483,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="postgresql"></a>
+
 ### [PostgreSQL](http://www.postgresql.org/)
 
 > version 9.4.5
@@ -510,6 +538,7 @@ To build a [Amazon Redshift](https://aws.amazon.com/redshift/) compatible versio
 ```
 
 <a name="redis"></a>
+
 ### [Redis](http://redis.io/)
 
 > version 3.0.4
@@ -520,6 +549,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="rsync"></a>
+
 ### [rsync](https://rsync.samba.org/)
 
 > version 3.1.1
@@ -530,6 +560,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="ruby"></a>
+
 ### [Ruby](https://www.ruby-lang.org/)
 
 > version 2.1.6
@@ -545,6 +576,7 @@ Build depends on:
 Here version may be not the latest cause it is up to date with [GitHub Pages Dependency versions](https://pages.github.com/versions/).
 
 <a name="sed"></a>
+
 ### [sed](http://www.gnu.org/software/sed/)
 
 > version 4.2.2
@@ -555,6 +587,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="tar"></a>
+
 ### [Tar](http://www.gnu.org/software/tar/)
 
 > version 1.28
@@ -571,6 +604,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="tcl"></a>
+
 ### [Tcl](http://www.tcl.tk/)
 
 > version 8.6.4
@@ -581,6 +615,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="wget"></a>
+
 ### [Wget](http://www.gnu.org/software/wget/)
 
 > version 1.16
@@ -597,6 +632,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="xz"></a>
+
 ### [xz](http://tukaani.org/xz/)
 
 > version 5.0.5
@@ -607,6 +643,7 @@ Build depends on:
 * [Make](#make)
 
 <a name="zlib"></a>
+
 ### [zlib](http://www.zlib.net/)
 
 > version 1.2.8
