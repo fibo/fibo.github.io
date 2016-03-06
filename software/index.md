@@ -19,6 +19,7 @@ node:
     - laplace-determinant
     - multidim-array-index
     - not-defined
+    - static-props
     - tensor-contraction
     - tensor-product
     - tris3d
