@@ -16,9 +16,6 @@ description: >
 [Web technology for developers | MDN](https://developer.mozilla.org/en-US/docs/Web)
 : Web technology documentation at Mozilla developer network
 
-[CDNperf](http://www.cdnperf.com/)
-: finds you fast and reliable JavaScript CDNs that make your websites snappy and happy!
-
 [HTML Dog](http://htmldog.com/)
 : HTML, CSS and JavaScript tutorials
 
@@ -30,13 +27,16 @@ description: >
 
 [REST API Tutorial](http://www.restapitutorial.com/)
 
-### CDN Providers
+### CDN
 
 [JSDLIVER](http://www.jsdelivr.com/)
 
 [RawGit](https://rawgit.com/)
 
 [MAXCDN](https://www.maxcdn.com/)
+
+See also [CDNperf](http://www.cdnperf.com/)
+: finds you fast and reliable JavaScript CDNs that make your websites snappy and happy!
 
 ### Site templates
 
