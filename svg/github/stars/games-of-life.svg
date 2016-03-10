@@ -1,0 +1,5 @@
+---
+layout: null
+---
+{% assign repo = site.data.repos['games-of-life'] %}
+{% include github/stars.html %}
