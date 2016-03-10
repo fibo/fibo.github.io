@@ -30,6 +30,14 @@ description: >
 
 [REST API Tutorial](http://www.restapitutorial.com/)
 
+### CDN Providers
+
+[JSDLIVER](http://www.jsdelivr.com/)
+
+[RawGit](https://rawgit.com/)
+
+[MAXCDN](https://www.maxcdn.com/)
+
 ### Site templates
 
 [Initializr](http://www.initializr.com/)
@@ -91,9 +99,18 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 
 [Ember](http://emberjs.com/)
 
-[Angular](http://angularjs.org/)
+[Angular 1](http://angularjs.org/)
+
+[Angular 2](https://angular.io/)
+: One framework. Mobile and desktop.
 
 [Knockout](http://knockoutjs.com/)
+
+[React](https://facebook.github.io/react/)
+: A JavaScript library for building user interfaces
+
+[Riot](http://riotjs.com/)
+: A React-like user interface micro-library
 
 [Mithril](http://lhorie.github.io/mithril/)
 

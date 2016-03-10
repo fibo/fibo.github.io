@@ -9,12 +9,9 @@ description: >
 <div class="alert alert-warning">The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
 
 
-<ul>
-<li><a href="#get-it">Get it</a></li>
-<li><a href="#build-it">Build it</a></li>
-<li><a href="#update-it">Update it</a></li>
-</ul>
-</div>
+* [Get it](#get-it)
+* [Build it](#build-it)
+* [Update it](#update-it)
 
 
 ## Prerequisites
@@ -56,6 +53,8 @@ Choose your local folder, wherever you have enough space and read/write rights. 
 $ NODEJS_ROOT=~/nodejs # or whatever
 ```
 
+<a name="#get-it"></a>
+
 ### Get it
 
 Go to a temporary folder, */tmp* for instance and get latest [Node.js][1] source.
@@ -67,6 +66,8 @@ $ cd /tmp
 $ wget -N http://nodejs.org/dist/node-latest.tar.gz && tar xzf node-latest.tar.gz
 ```
 
+<a name="#build-it"></a>
+
 ### Build it
 
 Now, figure out what is current version so you can point to the target directory (a.k.a. **prefix**) and compile [Node.js][1] sources.
@@ -77,6 +78,8 @@ $ mkdir -p $NODEJS_ROOT/$NODEJS_CURRENT
 $ cd $NODEJS_CURRENT
 $ ./configure --prefix=$NODEJS_ROOT/$NODEJS_CURRENT && make install
 ```
+
+<a name="#update-it"></a>
 
 ### Update it
 
