@@ -11,6 +11,7 @@ node:
     - algebra
     - dflow
     - flow-view
+    - games-of-life
   tiny_packages:
     - algebra-group
     - algebra-ring
