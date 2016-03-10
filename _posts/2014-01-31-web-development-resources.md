@@ -154,6 +154,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 
 [Feed Icons](http://www.feedicons.com/)
 
+[Code Icons](https://github.com/mabrasil/codeicons)
+: An icon set of programming languages, frameworks, and coding tools.
+
 ## Online editors
 
 See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) on Wikipedia for a comparison table.
