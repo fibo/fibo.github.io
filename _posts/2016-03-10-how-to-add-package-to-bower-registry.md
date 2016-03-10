@@ -58,7 +58,7 @@ Since it is not a package of mine, I let the author do it. For instance it will 
 bower register codeicons git://github.com/mabrasil/codeicons.git
 ```
 
-I just opened a [pull request]
+I just opened a [pull request][pr1], let see what happens :).
 
 You need to add few properties according to [bower.json specification][bower_spec].
 Sometimes there are some doubts with the meaning, I willl write here what I discover or how I use to fill them.
