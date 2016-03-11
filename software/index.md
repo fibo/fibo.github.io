@@ -32,7 +32,14 @@ node:
 
 {% assign repo = site.data.repos %}
 
-# Node
+* [Node](#node)
+  - [Tiny npm packages](#tiny-npm-packages)
+* [Bash](#bash)
+* [Meta](#meta)
+
+<a name="node"></a>
+
+![nodejs_logo](https://cdn.rawgit.com/gilbarbara/logos/master/logos/nodejs.svg)
 
 {% for pkg in page.node.packages %}
 ## [{{ pkg }}]({{ repo[pkg].homepage }})
@@ -43,7 +50,9 @@ node:
 
 {% endfor %}
 
-## Tiny npm packages
+<a name="tiny-npm-packages"></a>
+
+![npm_package_logo](https://cdn.rawgit.com/gilbarbara/logos/master/logos/npm-2.svg)
 
 > I have few npm packages that adhere to the small package phylosophy.
 
@@ -51,7 +60,9 @@ node:
 * [{{ tiny_pkg }}]({{ repo[tiny_pkg].homepage }}): {{ repo[tiny_pkg].description }}
 {% endfor %}
 
-# Bash
+<a name="bash"></a>
+
+![bash_logo](https://cdn.rawgit.com/gilbarbara/logos/master/logos/bash.svg)
 
 {% for bash_project in page.bash %}
 * [{{ bash_project }}]({{ repo[bash_project].homepage }}): {{ repo[bash_project].description }}
