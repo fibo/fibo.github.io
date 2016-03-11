@@ -1,5 +1,5 @@
 ---
 layout: null
 ---
-{% assign repo = site.data.repos.flow-view %}
+{% assign repo = site.data.github.repos.flow-view %}
 {% include github/forks.html %}
