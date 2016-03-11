@@ -1,0 +1,5 @@
+---
+layout: null
+---
+{% assign user = site.data.github.users.fibo %}
+{% include github/followers.html %}

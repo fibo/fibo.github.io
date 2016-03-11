@@ -1,5 +1,5 @@
 ---
 layout: null
 ---
-{% assign repo = site.data.repos['games-of-life'] %}
+{% assign repo = site.data.github.repos['games-of-life'] %}
 {% include github/watchers.html %}

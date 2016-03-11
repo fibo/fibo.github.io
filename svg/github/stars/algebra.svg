@@ -1,5 +1,5 @@
 ---
 layout: null
 ---
-{% assign repo = site.data.repos.algebra %}
+{% assign repo = site.data.github.repos.algebra %}
 {% include github/stars.html %}

@@ -1,20 +1,19 @@
 {
   "name": "fibo.github.io",
   "version": "1.0.0",
-  "description": "Gianluca Casati's",
+  "description": "My digital copybook",
   "homepage": "http://g14n.info",
   "private": true,
   "scripts": {
-    "start": "jekyll serve",
+    "start": "jekyll serve -H dev.g14n.info",
     "_build": "npm run browserify; npm run cp; npm run readmes; npm run data:repo",
     "browserify": "npm run browserify:src:blog",
     "browserify:src:blog": "browserify -e src/blog/index.js -o js/blog.js",
     "browserify:TODO": "minification transform",
     "cp": "npm run cp:metadata",
-    "cp:metadata": "npm run cp:metadata:bower.json; npm run cp:metadata:package.json",
-    "cp:metadata:bower.json": "cp bower.json _data/",
+    "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
-    "data:repo": "for repo in $(ls _data/repos/ | while read filename; do echo ${filename%.json}; done | grep -v dotsoftware) ; do wget https://api.github.com/repos/fibo/$repo -O _data/repos/${repo}.json; done; wget https://api.github.com/repos/fibo/.software -O _data/repos/dotsoftware.json;",
+    "data:repo": "for repo in $(ls _data/github/repos/ | while read filename; do echo ${filename%.json}; done | grep -v dotsoftware) ; do wget https://api.github.com/repos/fibo/$repo -O _data/github/repos/${repo}.json; done; wget https://api.github.com/repos/fibo/.software -O _data/github/repos/dotsoftware.json;",
     "readmes": "for repo in $(ls -1 _projects/ | grep -v _readmes | grep -v dotsoftware); do wget -nv https://raw.githubusercontent.com/fibo/$repo/master/README.md -O _projects/_readmes/${repo}-readme.md; cat _projects/$repo/index.yaml _projects/_readmes/${repo}-readme.md > _projects/$repo/index.md; done; wget -nv https://raw.githubusercontent.com/fibo/.software/master/README.md -O _projects/_readmes/dotsoftware-readme.md; cat _projects/dotsoftware/index.yaml _projects/_readmes/dotsoftware-readme.md > _projects/dotsoftware/index.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,7 +30,6 @@
     "url": "https://github.com/fibo/fibo.github.io/issues"
   },
   "dependencies": {
-    "bower": "^1.7.7",
     "browserify": "^10.2.3",
     "dflow": "^0.4.0"
   }

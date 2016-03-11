@@ -1,5 +1,5 @@
 ---
 layout: null
 ---
-{% assign repo = site.data.repos.dflow %}
+{% assign repo = site.data.github.repos.dflow %}
 {% include github/forks.html %}
