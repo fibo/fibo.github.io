@@ -30,7 +30,7 @@ node:
     - x3dom-livereload
 ---
 
-{% assign repo = site.data.repos %}
+{% assign repo = site.data.github.repos %}
 
 * [Node](#node)
   - [Tiny npm packages](#tiny-npm-packages)
