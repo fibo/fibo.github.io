@@ -77,6 +77,9 @@ Put some keywords you think can help to find your package in the [bower search][
 
 ### moduleType
 
+Usually I [choose *node*](http://stackoverflow.com/questions/22674018/bower-init-difference-between-amd-es6-globals-and-node/26777353#26777353).
+In this particular case I left it undefined.
+
 ### license
 
 ## Bonus tip: CDN
