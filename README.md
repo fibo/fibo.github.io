@@ -1,6 +1,8 @@
 # My digital copybook
 
-This is my web book! Gianluca Casati writes here :)
+> This is my web book! Gianluca Casati writes here :)
+
+[![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/fibo/my-personal-website)
 
 ## Domain
 
