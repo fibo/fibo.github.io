@@ -129,6 +129,8 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ### Misc
 
+[State of the Art JavaScript in 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b)
+
 [JavaScript’s `this`](http://www.2ality.com/2014/05/this.html)
 : how it works, where it can trip you up. [(2ality.com)][1]
 
