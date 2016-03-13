@@ -28,9 +28,9 @@ See also [gh-clone](http://g14n.info/gh-clone) twin project, which do the same b
     	return 0
     fi
 
-Repos will be cloned under folder `$BITBUCKET_DIR` which defaults to *~/bitbucket.com*.
+Repos will be cloned under folder `$BITBUCKET_DIR` which defaults to *~/bitbucket.org*.
 
-    BITBUCKET_DIR=${BITBUCKET_DIR:-~/bitbucket.com}
+    BITBUCKET_DIR=${BITBUCKET_DIR:-~/bitbucket.org}
 
 `MY_BITBUCKET_USER` is prompted once, if not already configured.
 
@@ -58,7 +58,7 @@ Clone repo under `$BITBUCKET_DIR/$BITBUCKET_USER/$REPO_NAME` and cd into it.
     TARGET_DIR=$BITBUCKET_DIR/$BITBUCKET_USER
     mkdir -p $TARGET_DIR
     cd $TARGET_DIR
-    REPO_URL=git@bitbucket.com:$BITBUCKET_USER/${REPO_NAME}.git
+    REPO_URL=git@bitbucket.org:$BITBUCKET_USER/${REPO_NAME}.git
     git clone $REPO_URL && cd $REPO_NAME
 
 **Bonus feature**: run `npm install` if it looks like a Node project and there is some *npm* available.

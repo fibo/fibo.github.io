@@ -5,14 +5,19 @@ title: tris3d
 
 > is a 3d [tic tac toe](https://en.wikipedia.org/wiki/Tic-tac-toe) algorithm powered by Z3 space
 
+Wanna play? Go to [play.tris3d.net](https://play.tris3d.net)!
+
 **Table Of Contents:**
 
 * [Installation](#installation)
 * [Description](#description)
 * [API](#api)
+  - [isTris](#istris)
+  - [indexOfCoordinates](#indexofcoordinates)
+  - [coordinatesOfIndex](#coordinatesofindex)
 * [License](#license)
 
-[![NPM version](https://badge.fury.io/js/tris3d.svg)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.svg?branch=master)](https://travis-ci.org/fibo/tris3d.svg?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.svg)](https://gemnasium.com//tris3d) [![Change log](https://img.shields.io/badge/change-log-blue.svg)](https://github.com/fibo/tris3d/blob/master/CHANGELOG.md)
+[![NPM version](https://badge.fury.io/js/tris3d.svg)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.svg?branch=master)](https://travis-ci.org/fibo/tris3d.svg?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.svg)](https://gemnasium.com/fibo/tris3d) [![Change log](https://img.shields.io/badge/change-log-blue.svg)](https://github.com/fibo/tris3d/blob/master/CHANGELOG.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -75,6 +80,38 @@ var tris3d = require('tris3d')
 var isTris = tris3d.isTris
 
 isTris([2, 0, 2], [1, 1, 2], [0, 2, 2]) // true
+```
+
+<a name="indexofcoordinates"></a>
+`indexOfCoordinates(point)`
+
+Convert point in Z3xZ3xZ3 to index.
+
+```
+var tris3d = require('tris3d')
+
+var indexOf = tris3d.indexOfCoordinates
+
+indexOf([0, 0, 0]) // 0
+indexOf([1, 0, 0]) // 1
+// …
+indexOf([2, 2, 2]) // 26
+```
+
+<a name="coordinatesofindex"></a>
+`coordinatesOfIndex(index)`
+
+ Convert index to point in Z3xZ3xZ3.
+
+```
+var tris3d = require('tris3d')
+
+var coordOf = tris3d.coordinatesOfIndex
+
+coordOf(0)  // [0, 0, 0]
+coordOf(1)  // [1, 0, 0]
+// …
+coordOf(26) // [2, 2, 2]
 ```
 
 ## License
