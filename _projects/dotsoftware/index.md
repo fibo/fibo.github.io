@@ -495,6 +495,10 @@ Build depends on:
 * [Readline](#readline)
 * [zlib](#zlib)
 
+Install requirements with a package manager:
+
+* `# apt-get install make gcc libreadline-dev zlib1g-dev`
+
 Variable `PGDATA` defines the directory where PostgreSQL stores data and configuration.
 It defaults to `$DOTSOFTWARE_ROOT_DIR/opt/pgsql/data`.
 
@@ -563,7 +567,7 @@ Build depends on:
 
 ### [Ruby](https://www.ruby-lang.org/)
 
-> version 2.1.6
+> version 2.1.7
 
 Build depends on:
 
@@ -573,7 +577,12 @@ Build depends on:
 * [libxml2](#libxml2)
 * [patch](#patch)
 
-Here version may be not the latest cause it is up to date with [GitHub Pages Dependency versions](https://pages.github.com/versions/).
+Here version may be not the latest cause it is (manually) up to date with [GitHub Pages Dependency versions](https://pages.github.com/versions/).
+However you can install another version, for example with
+
+```
+.software_install Ruby 2.3.0
+```
 
 <a name="sed"></a>
 
@@ -656,6 +665,7 @@ Build depends on:
 Install it with a package manager:
 
 * `# yum install zlib-devel`
+* `# apt-get install zlib1g-dev`
 
 ## Folder structure
 
