@@ -39,6 +39,9 @@ Despite it is so young, node ecosystem is pretty rich!
 [hapi](http://hapijs.com/)
 : A rich framework for building applications and services
 
+[restify](http://restify.com/)
+: node.js REST framework specifically meant for web service APIs
+
 [Sails.js](http://sailsjs.org/)
 : Realtime MVC framework.
 
