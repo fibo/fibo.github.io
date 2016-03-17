@@ -12,10 +12,12 @@ node:
     - dflow
     - flow-view
     - games-of-life
+    - iper
   tiny_packages:
     - algebra-group
     - algebra-ring
     - cayley-dickson
+    - geohash-neighbours
     - indices-permutations
     - laplace-determinant
     - multidim-array-index
