@@ -121,6 +121,9 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [StandardJS](http://standardjs.com/)
 : JavaScript Standard Style. One Style to Rule Them All!
 
+[Semi-StandardJS](https://github.com/Flet/semistandard)
+: All the goodness of `feross/standard` with semicolons sprinkled on top.
+
 ## Articles, tutorials and other resources
 
 ### Functional programming
