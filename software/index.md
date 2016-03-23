@@ -1,6 +1,10 @@
 ---
 title: Software
 layout: page
+perl:
+  - Task-BeLike-FIBO-pm
+  - Sweet-Home-pm
+  - Task-Viral
 bash:
   - bb-clone
   - gh-clone
@@ -38,8 +42,11 @@ node:
   - [Tiny npm packages](#tiny-npm-packages)
 * [Bash](#bash)
 * [Meta](#meta)
+* [Perl](#perl)
 
 <a name="node"></a>
+
+## Node
 
 ![nodejs_logo](https://cdn.rawgit.com/gilbarbara/logos/master/logos/nodejs.svg)
 
@@ -64,12 +71,20 @@ node:
 
 <a name="bash"></a>
 
+## Bash
+
 ![bash_logo](https://cdn.rawgit.com/gilbarbara/logos/master/logos/bash.svg)
 
 {% for bash_project in page.bash %}
 * [{{ bash_project }}]({{ repo[bash_project].homepage }}): {{ repo[bash_project].description }}
 {% endfor %}
 
-# Meta
+## Meta
 
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming) {{ repo['kiss-literate-programming'].description }}
+
+## Perl
+
+{% for perl_project in page.perl %}
+* [{{ perl_project }}]({{ repo[perl_project].homepage }}): {{ repo[perl_project].description }}
+{% endfor %}
