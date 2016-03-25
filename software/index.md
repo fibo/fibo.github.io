@@ -55,7 +55,7 @@ node:
 
 > {{ repo[pkg].description }}
 
-[![Whatchers](http://g14n.info/svg/github/watchers/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/watchers) [![Stargazers](http://g14n.info/svg/github/stars/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/stargazers) [![Forks](http://g14n.info/svg/github/forks/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/network/members)
+[![Whatchers](/svg/github/watchers/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/watchers) [![Stargazers](/svg/github/stars/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/stargazers) [![Forks](/svg/github/forks/{{ pkg }}.svg)](https://github.com/fibo/{{ pkg }}/network/members)
 
 {% endfor %}
 
@@ -81,7 +81,7 @@ node:
 
 ## Meta
 
-[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming) {{ repo['kiss-literate-programming'].description }}
+[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](kiss-literate-programming) {{ repo['kiss-literate-programming'].description }}
 
 ## Perl
 
