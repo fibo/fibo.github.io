@@ -138,12 +138,6 @@ layout: null
 {% include github/stars.html %}
 ```
 
-To include to three available badges in a markdown file add this line
-
-```
-[![Whatchers](http://g14n.info/svg/github/watchers/foo.svg)](https://github.com/fibo/foo/watchers) [![Stargazers](http://g14n.info/svg/github/stars/foo.svg)](https://github.com/fibo/foo/stargazers) [![Forks](http://g14n.info/svg/github/forks/foo.svg)](https://github.com/fibo/foo/network/members)
-```
-
 ## Licenses
 
 I use the [Artistic license](http://g14n.info/artistic-license) for Perl projects, the [MIT license](http://g14n.info/mit-license) otherwise.
