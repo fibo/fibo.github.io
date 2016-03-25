@@ -26,6 +26,7 @@ node:
     - laplace-determinant
     - multidim-array-index
     - not-defined
+    - prime-number
     - static-props
     - tensor-contraction
     - tensor-product
