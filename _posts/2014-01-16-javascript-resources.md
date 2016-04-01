@@ -167,6 +167,8 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ### ECMAScript 6
 
+[ES6 features](http://git.io/es6features)
+
 [ES6 in Depth](http://ponyfoo.com/articles/tagged/es6-in-depth)
 : [(ponyfoo.com)][6]
 
