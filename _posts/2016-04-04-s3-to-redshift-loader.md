@@ -1,5 +1,5 @@
 ---
-title: How to use Devel::Cover
+title: S3 to RedShift loader
 tags:
   - S3
   - RedShift
