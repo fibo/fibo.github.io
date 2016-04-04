@@ -55,6 +55,12 @@ SORTKEY(request_time)
 Take a look to [apex](http://apex.run/). It is the latest [TJ Holowaychuk](https://github.com/tj) project: it is
 really useful to deal with Lambda functions workflow.
 
+Create a project, run
+
+```
+apex init
+```
+
 ```
 var pg = require('pg')
 var connectionString = 'postgres://user:pass@dbhost.redshift.amazonaws.com:5439/dbname'
@@ -92,10 +98,22 @@ No need to create a zip and uploading it, you can deploy it by launching
 apex deploy
 ```
 
-## Permission
+## Permissions
 
 Create a IAM role for your lambda function, something like *lamdba_s3_to_redshift_loader*
 with the following policies attached.
 
 ![IAM_policies](//{{ site.domain }}/images{{ page.id }}/iam_policies.png)
 
+Put the ARN role in your apex project.json
+
+```
+{
+  "name": "load_ELB_logs",
+  "description": "load ELB logs from S3 to Redshift",
+  "memory": 128,
+  "timeout": 30,
+  "role": "arn:aws:iam::880017770521:role/lamdba_s3_to_redshift_loader",
+  "environment": {}
+}
+```
