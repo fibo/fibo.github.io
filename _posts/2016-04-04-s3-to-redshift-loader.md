@@ -117,3 +117,23 @@ Put the ARN role in your apex project.json
   "environment": {}
 }
 ```
+
+## Debug
+
+Debuggin serverless code can be tricky. I found useful the following fake lambda code
+
+```
+var ev = require('./test_event.json')
+var ctx = {
+  succeed: console.log.bind(console),
+  fail: console.error.bind(console)
+}
+
+var handle = require('./index').handle
+
+handle(ev, ctx)
+```
+
+Where *test_event.json* contains a copy of the test event configured on AWS.
+
+
