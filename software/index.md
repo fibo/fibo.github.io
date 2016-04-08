@@ -24,6 +24,7 @@ node:
     - geohash-neighbours
     - indices-permutations
     - laplace-determinant
+    - matrix-multiplication
     - multidim-array-index
     - not-defined
     - prime-number
