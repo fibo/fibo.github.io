@@ -84,7 +84,8 @@ Use the following template, replacing `<package-name>` and `<package-description
     "check-deps": "npm outdated",
     "lint": "standard",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
-    "test": "tape test.js | tap-min"
+    "test": "tape test.js | tap-min",
+    "watch": "npm-watch"
   },
   "repository": {
     "type": "git",
@@ -99,6 +100,9 @@ Use the following template, replacing `<package-name>` and `<package-description
     "test",
     "check-deps"
   ],
+  "watch": {
+    "test": "{index,test}.js"
+  }
   "devDependencies": {},
   "dependencies": {}
 }
@@ -126,6 +130,7 @@ Add it also to GitHub repo's website entry.
 Install the following development dependencies
 
 ```
+npm install npm-watch --save-dev
 npm install pre-commit --save-dev
 npm install standard --save-dev
 npm install tape --save-dev
@@ -148,6 +153,14 @@ npm version minor
 ```
 
 See also [npm-version](https://docs.npmjs.com/cli/version).
+
+### watch
+
+Run tests when *index.js* or *test.js* change.
+
+```
+npm run watch
+```
 
 ## README.md
 
