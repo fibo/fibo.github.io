@@ -24,6 +24,7 @@ node:
     - geohash-neighbours
     - indices-permutations
     - laplace-determinant
+    - mdconf-from
     - matrix-multiplication
     - multidim-array-index
     - not-defined
@@ -36,6 +37,7 @@ node:
     - tris3d-canvas
     - write-file-utf8
     - x3dom-livereload
+    - zeroconf-redux
 ---
 
 {% assign repo = site.data.github.repos %}
