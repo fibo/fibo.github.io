@@ -32,7 +32,7 @@ layout: null
       {% for cat in post.categories %}
       <category>{{ cat | xml_escape }}</category>
       {% endfor %}
-      <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       <description>{{ post.description | xml_escape }}</description>
     </item>
     {% endfor %}
