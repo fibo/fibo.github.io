@@ -1,5 +1,5 @@
 <!-- _includes/posts_list.html start -->
-<div class="list-group">
+<ul class="list-group">
   {% for post in site.posts limit:{{include.limit}} %}
     <a href="{{ post.url }}" class="list-group-item">
       <article>
@@ -13,5 +13,5 @@
       </article>
     </a>
   {% endfor %}
-</div>
+</ul>
 <!-- _includes/posts_list.html end -->
