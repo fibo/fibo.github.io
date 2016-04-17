@@ -61,8 +61,6 @@ $ screen -x pst-3
 
 Suppose you need to login as *user1* in some host, then you can switch to user *user2*, *user3* … *userN*.
 
-<div class="alert alert-danger">Do not follow this instructions if any of the users is <em>root</em>.</div>
-
 As *user1* start a named screen session and switch to *user2*
 
 ```bash
