@@ -1,0 +1,122 @@
+---
+title: Software
+layout: page
+perl:
+  - Task-BeLike-FIBO-pm
+  - Sweet-Home-pm
+bash:
+  - bb-clone
+  - gh-clone
+  - home
+  - dotsoftware
+node:
+  packages:
+    - algebra
+    - dflow
+    - flow-view
+    - games-of-life
+    - iper
+  tiny_packages:
+    - algebra-group
+    - algebra-ring
+    - cayley-dickson
+    - geohash-neighbours
+    - indices-permutations
+    - laplace-determinant
+    - mdconf-from
+    - matrix-multiplication
+    - multidim-array-index
+    - not-defined
+    - prime-number
+    - static-props
+    - tensor-contraction
+    - tensor-product
+    - tris3d
+    - tris3d-ai
+    - tris3d-canvas
+    - write-file-utf8
+    - x3dom-livereload
+    - zeroconf-redux
+---
+
+{% assign repo = site.data.github.repos %}
+
+<div class="col-sm-4">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">NodeJS packages</div>
+    <div class="panel-body">
+      <img src="https://cdn.rawgit.com/gilbarbara/logos/master/logos/nodejs.svg" alt="NodeJS logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+
+      {% for pkg in page.node.packages %}
+      <li class="list-group-item">
+        <h3><a href="{{ repo[pkg].homepage }}">{{ pkg }}</a></h3>
+
+        <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
+
+        <p><a href="https://github.com/fibo/{{ pkg }}/watchers"><img src="/svg/github/watchers/{{ pkg }}.svg" alt="Whatchers"></a> <a href="https://github.com/fibo/{{ pkg }}/stargazers"><img src="/svg/github/stars/{{ pkg }}.svg" alt="Stargazers"></a> <a href="https://github.com/fibo/{{ pkg }}/network/members"><img src="/svg/github/forks/{{ pkg }}.svg" alt="Forks"></a></p>
+
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</div>
+
+<div class="col-sm-4">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">NodeJS <strong>micro</strong> packages</div>
+    <div class="panel-body">
+      <img src="https://cdn.rawgit.com/gilbarbara/logos/master/logos/npm-2.svg" alt="npm logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+    {% for tiny_pkg in page.node.tiny_packages %}
+      <li class="list-group-item">
+        <a href="{{ repo[tiny_pkg].homepage }}">{{ tiny_pkg }}</a>: {{ repo[tiny_pkg].description }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="col-sm-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Bash</div>
+    <div class="panel-body">
+      <img src="https://cdn.rawgit.com/gilbarbara/logos/master/logos/bash.svg" alt="Bash logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+      <li class="list-group-item">
+        <img src="https://img.shields.io/badge/kiss-literate-orange.svg" alt="KLP">
+        {{ repo['kiss-literate-programming'].description }}
+      </li>
+
+      {% for bash_project in page.bash %}
+      <li class="list-group-item">
+        <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>: {{ repo[bash_project].description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Perl</div>
+    <div class="panel-body">
+      <img src="https://cdn.rawgit.com/gilbarbara/logos/master/logos/perl.svg" alt="Perl logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+      {% for perl_project in page.perl %}
+      <li class="list-group-item">
+        <a href="{{ repo[perl_project].homepage }}">{{ perl_project }}</a>: {{ repo[perl_project].description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
