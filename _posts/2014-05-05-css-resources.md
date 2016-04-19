@@ -34,6 +34,9 @@ description: >
 [CSS protips](https://github.com/AllThingsSmitty/css-protips)
 : A collection of tips to help take your CSS skills pro
 
+[Maintenable CSS](http://maintainablecss.com/)
+: Is an approach to writing modular, scalable and of course, maintainable CSS.
+
 ## Tools
 
 ### Frameworks

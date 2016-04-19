@@ -143,6 +143,17 @@ Run linter and tests before each commit. This is always a good idea as for the
 maintainer as for contributors. If **the tower is burning** and you need to commit
 with tests failing  you can use `git commit -n`.
 Finally it run a non blocking command which displays outdated dependencies.
+If you need to update deps, you can run
+
+```
+npm update foo --save
+```
+
+or, if it is a dev dependency
+
+```
+npm update foo --save -dev
+```
 
 ### postversion
 
