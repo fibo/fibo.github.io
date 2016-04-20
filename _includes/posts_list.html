@@ -4,9 +4,9 @@
     <a href="{{ post.url }}" class="list-group-item">
       <article>
         <header>
-          <h2> {{ post.title }}  </h2>
+          <h3> {{ post.title }}  </h3>
 
-          <h3>{{ post.description }}</h3>
+          <p class="lead">{{ post.description }}</p>
 
           <time datetime="{{ post.date }}" class="badge">{{ post.date | date: "%F" }}</time>
         </header>
