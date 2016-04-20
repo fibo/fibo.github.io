@@ -39,6 +39,14 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ## Libraries
 
+### DOM manipulation
+
+[jQuery](https://jquery.com/)
+: write less, do more
+
+[cash](https://github.com/kenwheeler/cash)
+: An absurdly small jQuery alternative for modern browsers
+
 ### Functional programming
 
 [Underscore](http://underscorejs.org/)
@@ -85,13 +93,11 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ## Tools
 
-### Package  managers
+### Package managers
 
 [Bower](http://bower.io/)
 
 [npm](https://www.npmjs.com/)
-
-[Component](http://component.io/)
 
 [Ender](http://ender.jit.su/)
 
