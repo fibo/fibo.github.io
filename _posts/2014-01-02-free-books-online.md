@@ -143,6 +143,9 @@ description: >
 
 ### Misc
 
+[Thee Book of Shaders](http://thebookofshaders.com/)
+: This is a gentle step-by-step guide through the abstract and complex universe of Fragment Shaders.
+
 [Think OS](http://www.greenteapress.com/thinkos/index.html)
 : A Brief Introduction to Operating Systems
 
@@ -174,6 +177,4 @@ description: >
 ### Physics
 
 [The Feynman Lectures on Physics](http://www.feynmanlectures.caltech.edu/)
-
-  [1]: http://it.wikipedia.org/wiki/Eric_Steven_Raymond
 
