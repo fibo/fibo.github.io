@@ -37,6 +37,9 @@ description: >
 [Maintenable CSS](http://maintainablecss.com/)
 : Is an approach to writing modular, scalable and of course, maintainable CSS.
 
+[Flexbox Patterns](http://www.flexboxpatterns.com/)
+: Build awesome user interfaces with CSS flexbox. Examples and source code included.
+
 ## Tools
 
 ### Frameworks
