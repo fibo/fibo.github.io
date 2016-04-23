@@ -66,6 +66,10 @@ jquery:
   basepath: https://ajax.googleapis.com/ajax/libs/jquery
   version: 2.1.4
 
+katex:
+  basepath: https://cdnjs.cloudflare.com/ajax/libs/KaTeX
+  version: 0.5.1
+
 google-analytics:
   id: UA-12635045-12
 

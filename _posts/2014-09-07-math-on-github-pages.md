@@ -5,6 +5,8 @@ tags:
   - GitHub
 description: >
     Display math formulas on GitHub Pages.
+lib:
+  katex: true
 ---
 
 I have been searching a process to display math formulas, written in [LaTeX][LaTeX]
@@ -71,6 +73,13 @@ cat tex-snippets/display/matrix.tex | katex --display-mode > _includes/math/disp
 cat tex-snippets/inline/for-any-real.tex | katex > _includes/math/inline/for-any-real.html
 ```
 
+Finally, add KaTex tags to your html page. See [KaTex Usage][KaTexUsage], for example
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+```
+
 Now you can include the snippets in your website using [Jekyll][Jekyll] include tags
 
 * `{% include math/inline/for-any-real.html %}`
@@ -82,3 +91,4 @@ Now you can include the snippets in your website using [Jekyll][Jekyll] include 
 [KaTex]: https://khan.github.io/KaTeX/ "KaTex"
 [Jekyll]: http://jekyllrb.com/ "Jekyll"
 [npm]: https://www.npmjs.com/ "npm"
+[KaTexUsage]: https://github.com/Khan/KaTeX#usage "KaTex Usage"
