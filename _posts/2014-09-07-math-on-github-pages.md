@@ -5,9 +5,11 @@ tags:
   - GitHub
 description: >
     Display math formulas on GitHub Pages.
-lib:
+libs:
   katex: true
 ---
+
+## Goal
 
 I have been searching a process to display math formulas, written in [LaTeX][LaTeX]
 in a website for a long time. Now I think I can share my knowledge, hoping it
@@ -19,11 +21,16 @@ Note that client side rendering is also possible, but it is not in the scope of
 this article, by now.
 
 This is an updated version of the original article, that contained a different
-solution using MathJax and Redcarpet markdown.
-That solution is now obsolete, this article shows a solution I used in my
-[algebra][algebra] NodeJS package.
+solution using MathJax and Redcarpet markdown. That solution is obsolete, I found
+[KaTex][KaTex] and server side rendering, a far better solution.
 
-Install [KaTex cli][KaTex], with [npm][npm] do
+What is KaTex?
+
+> KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering on the web.
+
+## How to
+
+Install [katex cli][katex], with [npm][npm] do
 
 ```bash
 npm install katex -g
@@ -85,6 +92,13 @@ Now you can include the snippets in your website using [Jekyll][Jekyll] include 
 * {{ "{% include math/inline/for-any-real.html " }}%}
 * {{ "{% include math/display/matrix.html " }}%}
 
+## Structured solution
+
+Actually I am using the process explained above, for a NodeJS package. So I install
+[KaTex cli][katex] locally, and it is declared in my package deps. There are npm scripts
+that generate snippets on every build. Check out my [algebra][algebra] NodeJS package
+code, to see how its blog is generated.
+
 [algebra]: http://g14n.info/algebra "algebra"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
 [gh-pages]: https://pages.github.com/ "GitHub Pages"
@@ -92,3 +106,4 @@ Now you can include the snippets in your website using [Jekyll][Jekyll] include 
 [Jekyll]: http://jekyllrb.com/ "Jekyll"
 [npm]: https://www.npmjs.com/ "npm"
 [KaTexUsage]: https://github.com/Khan/KaTeX#usage "KaTex Usage"
+[katex]: https://www.npmjs.com/package/katex "katex cli"
