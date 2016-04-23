@@ -80,12 +80,14 @@ cat tex-snippets/display/matrix.tex | katex --display-mode > _includes/math/disp
 cat tex-snippets/inline/for-any-real.tex | katex > _includes/math/inline/for-any-real.html
 ```
 
-Finally, add KaTex tags to your html page. See [KaTex Usage][KaTexUsage], for example
+Finally, add KaTex CSS to your html page.
 
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
 ```
+
+If you read [KaTex Usage][KaTexUsage], there is also a JavaScript tag to add, but
+it is required only for client side rendering.
 
 Now you can include the snippets in your website using [Jekyll][Jekyll] include tags
 
