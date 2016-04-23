@@ -27,8 +27,14 @@ which contains all images relative to that post, then you can reference them wit
 ---
 libs:
   twemoji: true
+  katex: true
 ---
 ```
+
+### Tricks
+
+To escape Liquid tags, use `{{ "{% this " }}%}`. To escape `{{ this }}`, use `{{ "{{ this " }}}}`.
+Reference: [How to escape liquid tags?](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags).
 
 ## Debug
 
