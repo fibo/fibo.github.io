@@ -14,3 +14,5 @@ bower_components/jquery/src/
 !bower_components/twemoji/twemoji.min.js
 bower_components/twemoji/
 #!bower_components/twemoji/assets/
+
+.gh-token

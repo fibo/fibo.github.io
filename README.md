@@ -98,17 +98,24 @@ $ npm run readmes
 
 ## Software
 
+First of all, it is needed to decrypt (only once) the GitHub token
+
+```bash
+$ npm run decrypt:.gh-token
+```
+
 All software I produce is on GitHub, metadata is downloaded via API with
 
 ```bash
-$ npm run data:repos
+$ npm run data:github:repos
 ```
 
-and stored in *_data/repos* folder as *.json* files. Data is displayed in [software page](http://g14n.info/software).
+and stored in *_data/github/repos* folder as *.json* files. Data is displayed in [software page](http://g14n.info/software).
+
 To add a new repo, *foo* for instance, just add an empty *json* file
 
 ```bash
-$ touch _data/repos/foo.json
+$ touch _data/github/repos/foo.json
 ```
 
 The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll][3] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.

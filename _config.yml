@@ -58,6 +58,17 @@ defaults:
 
 # Custom vars
 
+bootstrap:
+  basepath: https://maxcdn.bootstrapcdn.com/bootstrap
+  version: 3.3.6
+  integrity:
+    css: sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd
+    js: sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS
+
+jquery:
+  basepath: https://ajax.googleapis.com/ajax/libs/jquery
+  version: 2.1.4
+
 google-analytics:
   id: UA-12635045-12
 
