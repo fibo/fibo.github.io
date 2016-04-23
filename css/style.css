@@ -5,6 +5,7 @@ footer {
 
 .feed {
 	margin-left: 3px;
-	background: url("../images/feed-icon/14x14.png") no-repeat 0 50%;
+	margin-right: 3px;
+	background: url("/images/feed-icon/14x14.png") no-repeat 0 50%;
 }
 
