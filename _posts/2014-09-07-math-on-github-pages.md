@@ -36,7 +36,7 @@ mkdir -p tex-snippets/inline
 mkdir -p tex-snippets/display
 ```
 
-An *inline* snippet, like {% include math/inline/for-any-real.html %} does not break its row.
+An *inline* snippet, like {% include math/inline/for-any-real.html %}, does not break its row.
 
 A snippet in *display* mode will be centered, usually it is a formula, for example
 
@@ -82,8 +82,8 @@ Finally, add KaTex tags to your html page. See [KaTex Usage][KaTexUsage], for ex
 
 Now you can include the snippets in your website using [Jekyll][Jekyll] include tags
 
-* `{% include math/inline/for-any-real.html %}`
-* `{% include math/display/matrix.html %}`
+* {{ "{% include math/inline/for-any-real.html " }}%}
+* {{ "{% include math/display/matrix.html " }}%}
 
 [algebra]: http://g14n.info/algebra "algebra"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
