@@ -18,7 +18,9 @@
   <script src="/bower_components/d3/d3.min.js"></script>
 {% endif %}
 
-{% if page.libs.katex %} {% include katex.html %} {% endif %}
+{% if page.libs.katex %}
+  <link rel="stylesheet" href="{{ site.katex.basepath }}/{{ site.katex.version }}/katex.min.css">
+{% endif %}
 
 <link href="//{{ site.domain }}/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
 
