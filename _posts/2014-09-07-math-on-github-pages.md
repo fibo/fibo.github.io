@@ -2,62 +2,83 @@
 title: Math on GitHub Pages
 tags:
   - Math
+  - GitHub
 description: >
     Display math formulas on GitHub Pages.
-bower:
-  katex: true
 ---
 
-<div class="alert alert-danger">This article is <strong>obsolete</strong>.
-After I switched to <a href="https://github.com/vmg/redcarpet">Redcarpet</a> markdown render, which is actually the GitHub default (or due to some other reason, maybe a MathJax update) the LaTeX rendering got broken.
-I also found MathJax <strong>really heavy</strong> to load, it requires more than 170 Mb of disc space: that is huge!
-</div>
+I have been searching a process to display math formulas, written in [LaTeX][LaTeX]
+in a website for a long time. Now I think I can share my knowledge, hoping it
+can help other people to divulge math.
+I am going to show how to render math snippets server side with [KaTex][KaTex]
+in order to import them in your [GitHub Pages][gh-pages] static web site using
+[Jekyll][Jekyll] `include` feature.
+Note that client side rendering is also possible, but it is not in the scope of
+this article, by now.
 
-<div class="alert alert-info">Take a look to <a href="https://khan.github.io/KaTeX/">KaTeX</a> which claims to be the <strong>fastest</strong> math typesetting library. I found its <em>server side rendering</em> feature a great solution to display math in browsers, see my algebra's blog <a href="http://g14n.info/algebra/tex-snippets">TeX snippets</a> page for a working example.</div>
+This is an updated version of the original article, that contained a different
+solution using MathJax and Redcarpet markdown.
+That solution is now obsolete, this article shows a solution I used in my
+[algebra][algebra] NodeJS package.
 
-**Follows original article content**
+Install [KaTex cli][KaTex], with [npm][npm] do
 
-***
-
-GitHub Pages uses [kramdown](http://kramdown.gettalong.org/) by default.
-If you want to enable [GitHub Flavored Markdown][3], that is the same used by GitHub Wikis, set the following entries in your *_config.html*
-
-```
-markdown: kramdown
-kramdown:
-  input: GFM
-```
-
-Edit your pages to add MathJax support adding the following snippet
-
-```
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+```bash
+npm install katex -g
 ```
 
-Now you can use a double dollar to include [LaTex][1] code block that will be rendered by [MathJax][2]!
+Create two folders that will contain **inline** and **display** snippets
 
-For example, try how renders the following code
-
-```
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
+```bash
+mkdir -p tex-snippets/inline
+mkdir -p tex-snippets/display
 ```
 
-  [1]: http://www.latex-project.org/ "LaTeX"
-  [2]: http://www.mathjax.org/ "MathJax"
-  [3]: https://help.github.com/articles/github-flavored-markdown "GitHub Flavored Markdown"
+An *inline* snippet, like {% include math/inline/for-any-real.html %} does not break its row.
 
+A snippet in *display* mode will be centered, usually it is a formula, for example
+
+{% include math/display/matrix.html %}
+
+Create file *tex-snippets/inline/for-any-real.tex* with the following content
+
+```tex
+\forall x \in R
+```
+
+Create file *tex-snippets/display/matrix.tex* with the following content
+
+```tex
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+```
+
+Create two folders that will contain *inline* and *display* rendered output in your
+[Jekyll][Jekyll] **includes** folder
+
+```bash
+mkdir -p _includes/math/inline
+mkdir -p _includes/math/display
+```
+
+Generate html output
+
+```bash
+cat tex-snippets/display/matrix.tex | katex --display-mode > _includes/math/display/matrix.html
+cat tex-snippets/inline/for-any-real.tex | katex > _includes/math/inline/for-any-real.html
+```
+
+Now you can include the snippets in your website using [Jekyll][Jekyll] include tags
+
+* `{% include math/inline/for-any-real.html %}`
+* `{% include math/display/matrix.html %}`
+
+[algebra]: http://g14n.info/algebra "algebra"
+[LaTeX]: http://www.latex-project.org/ "LaTeX"
+[gh-pages]: https://pages.github.com/ "GitHub Pages"
+[KaTex]: https://khan.github.io/KaTeX/ "KaTex"
+[Jekyll]: http://jekyllrb.com/ "Jekyll"
+[npm]: https://www.npmjs.com/ "npm"
