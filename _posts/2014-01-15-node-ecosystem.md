@@ -31,6 +31,17 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [fly](https://git.io/fly)
 
+### Module bundlers
+
+[Browserify](http://browserify.org/)
+: Browserify lets you require('modules') in the browser by bundling up all of your dependencies. See also [browserify-cdn](http://wzrd.in/)
+
+[Webpack](https://webpack.github.io/)
+: A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand. Through "loaders" modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
+
+[rollup](http://rollupjs.org/)
+: the next-generation JavaScript module bundler
+
 ### Web
 
 [Express](http://expressjs.com/)
@@ -115,9 +126,6 @@ Despite it is so young, node ecosystem is pretty rich!
 
 [async](https://www.npmjs.org/package/async)
 : Higher-order functions and common patterns for asynchronous code
-
-[Browserify](http://browserify.org/)
-: Browserify lets you require('modules') in the browser by bundling up all of your dependencies. See also [browserify-cdn](http://wzrd.in/)
 
 ## People
 
