@@ -1,6 +1,7 @@
 
 domain: g14n.info
 url: http://g14n.info
+name: My Digital Copybook
 
 encoding: utf-8
 
@@ -20,9 +21,9 @@ exclude:
 include:
   - _data/repos/.software.json
 
-#gems:
-#  - jekyll-sitemap
-#  - jekyll-gist
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
 
 markdown: kramdown
 
