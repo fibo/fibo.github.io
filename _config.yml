@@ -20,9 +20,9 @@ exclude:
 include:
   - _data/repos/.software.json
 
-gems:
-  - jekyll-sitemap
-  - jekyll-gist
+#gems:
+#  - jekyll-sitemap
+#  - jekyll-gist
 
 markdown: kramdown
 
