@@ -92,6 +92,9 @@ Unsemantic is a fluid grid system that is the successor to the [960 Grid System]
 [Animate.css](https://daneden.github.io/animate.css/)
 : Just-add-water CSS animation
 
+[Hover.css](http://ianlunn.github.io/Hover/)
+: A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on.
+
 ## Demo
 
 [CSS visualizer](http://likethemammal.github.io/css-visualizer/)
