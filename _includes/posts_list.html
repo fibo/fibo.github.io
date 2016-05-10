@@ -8,7 +8,7 @@
 
           <p class="lead">{{ post.description }}</p>
 
-          <time datetime="{{ post.date }}" class="badge">{{ post.date | date: "%F" }}</time>
+          <time datetime="{{ post.date | date: "%F" }}" class="badge">{{ post.date | date: "%b %d %Y" }}</time>
         </header>
       </article>
     </a>
