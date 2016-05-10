@@ -22,7 +22,7 @@ Yes, this is old school Data Warehouse.
 
 Create the staging table that will contain the loaded log files
 
-```
+```sql
 /**
  * See also
  * http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/access-log-collection.html
@@ -57,11 +57,11 @@ really useful to deal with Lambda functions workflow.
 
 Create a project, run
 
-```
-apex init
+```bash
+$ apex init
 ```
 
-```
+```javascript
 var pg = require('pg')
 var connectionString = 'postgres://user:pass@dbhost.redshift.amazonaws.com:5439/dbname'
 
@@ -94,8 +94,8 @@ exports.handle = function (ev, ctx) {
 
 No need to create a zip and uploading it, you can deploy it by launching
 
-````
-apex deploy
+```bash
+$ apex deploy
 ```
 
 ## Permissions
@@ -107,7 +107,7 @@ with the following policies attached.
 
 Put the ARN role in your apex project.json
 
-```
+```json
 {
   "name": "load_ELB_logs",
   "description": "load ELB logs from S3 to Redshift",
@@ -122,7 +122,7 @@ Put the ARN role in your apex project.json
 
 Debuggin serverless code can be tricky. I found useful the following fake lambda code
 
-```
+```javascript
 var ev = require('./test_event.json')
 var ctx = {
   succeed: console.log.bind(console),
@@ -135,5 +135,4 @@ handle(ev, ctx)
 ```
 
 Where *test_event.json* contains a copy of the test event configured on AWS.
-
 
