@@ -1,0 +1,11 @@
+<a href="{{ include.post.url }}" class="list-group-item">
+  <article>
+    <header>
+      <h3>{{ include.post.title }}</h3>
+
+      <p class="lead">{{ include.post.description }}</p>
+
+      <time datetime="{{ include.post.date | date: "%F" }}" class="badge">{{ include.post.date | date: "%b %d %Y" }}</time>
+    </header>
+  </article>
+</a>

@@ -1,17 +1,7 @@
 <!-- _includes/posts_list.html start -->
 <div class="list-group">
   {% for post in site.posts limit:{{include.limit}} %}
-    <a href="{{ post.url }}" class="list-group-item">
-      <article>
-        <header>
-          <h3> {{ post.title }}  </h3>
-
-          <p class="lead">{{ post.description }}</p>
-
-          <time datetime="{{ post.date | date: "%F" }}" class="badge">{{ post.date | date: "%b %d %Y" }}</time>
-        </header>
-      </article>
-    </a>
+    {% include post_box.html post=post %}
   {% endfor %}
 </div>
 <!-- _includes/posts_list.html end -->
