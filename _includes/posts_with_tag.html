@@ -1,0 +1,9 @@
+<!-- _includes/posts_with_tag.html start -->
+<div class="list-group">
+  {% for post in site.posts %}
+    {% if post.tags contains include.tag %}
+      {% include post_box.html post=post %}
+    {% endif %}
+  {% endfor %}
+</div>
+<!-- _includes/posts_with_tag.html end -->
