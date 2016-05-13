@@ -2,8 +2,9 @@
 title: sqlplus tips
 tags:
   - Oracle
+  - SQL
 description: >
-    Tricks and tips about your everyday sqlplus usage.
+    Tricks and tips about your everyday Oracle sqlplus usage.
 ---
 
 After I tryed *psql*, **I hate sqlplus**.
