@@ -55,8 +55,6 @@ description: >
 
 [Why Go is elegant and makes my code elegant](https://filippo.io/why-go-is-elegant-and-makes-my-code-elegant/)
 
-[Go & Assembly](http://www.doxsey.net/blog/go-and-assembly/)
-
 [My Opinionated Guide To Go (golang)](http://blog.hackingthought.com/2014/05/my-opinionated-guide-to-go-golang.html)
 
 [Getting started with Go](http://spf13.com/presentation/first-go-app/)
