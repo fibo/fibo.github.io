@@ -29,6 +29,8 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [ECMAScript compatibility table](http://kangax.github.io/compat-table/)
 
+[Simplified JavaScript Jargon](http://jargon.js.org/)
+
 ### Blogs
 
 [②ality][1]
