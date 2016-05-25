@@ -12,17 +12,17 @@ I have few *Node.js* packages on [npm][1] that has a *tiny structure*: my [npm t
 By *tiny structure* I mean they follow the *small package philosophy* with a simple
 but robust workflow like this:
 
-  1. add a feature: edit [index.js](#index-js) to add functionality, add example in [README.md](#readme-md) and related test in [test.js](#test-js).
-  2. commit: `git commit -a`
-  3. deploy: `npm version minor`
+1. add a feature: edit [index.js](#index-js) to add functionality, add example in [README.md](#readme-md) and related test in [test.js](#test-js).
+2. commit: `git commit -a`
+3. deploy: `npm version minor`
 
 The repository contains the following files:
 
-  * [README.md](#readme-md)
-  * [.gitignore](#gitignore)
-  * [package.json](#package-json)
-  * [index.js](#index-js)
-  * [test.js](#test-js)
+* [README.md](#readme-md)
+* [.gitignore](#gitignore)
+* [package.json](#package-json)
+* [index.js](#index-js)
+* [test.js](#test-js)
 
 <div class="alert alert-info">This is just a starting point, it can grows for example adding folders <em>src/</em> and <em>test/</em> or adding services like travis or coveralls.</div>
 
@@ -33,7 +33,7 @@ In particular, using no TAP parser can lead to issues when publishing the packag
 
 If you want to add `console.log` statements without breaking tests, which is the first debugging technique most of the people use, you can just go for a bare
 
-```
+```bash
 tape test.js
 ```
 
@@ -41,7 +41,7 @@ or even use [`t.comment(message)`](https://github.com/substack/tape#tcommentmess
 
 If you want a nice output you can optionally install few TAP parsers globally
 
-```
+```bash
 npm install tap-pessimist -g
 npm install tap-spec -g
 ```
@@ -51,7 +51,7 @@ then run tests with `tape test.js | tap-spec` or `tape test.js | tap-pessimist`.
 If you need to use the [Node debugger](https://nodejs.org/api/debugger.html), just add a **debugger** keyword to
 enable a breakpoint in your [index.js](#index-js) and launch tests with
 
-```
+```bash
 node debug test.js
 ```
 
@@ -68,7 +68,7 @@ npm-debug.log
 
 Use the following template, replacing `<package-name>` and `<package-description>`.
 
-```
+```json
 {
   "name": "<package-name>",
   "description": "<package-description>",
@@ -83,8 +83,10 @@ Use the following template, replacing `<package-name>` and `<package-description
   "scripts": {
     "check-deps": "npm outdated",
     "lint": "standard",
-    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "test": "tape test.js | tap-min",
+    "update-deps": "npm update --save --dev",
+    "postupdate-deps": "npm test && git commit -am 'updated deps' || git checkout -- package.json",
+    "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "watch": "npm-watch"
   },
   "repository": {
@@ -129,7 +131,7 @@ Add it also to GitHub repo's website entry.
 
 Install the following development dependencies
 
-```
+```bash
 npm install npm-watch --save-dev
 npm install pre-commit --save-dev
 npm install standard --save-dev
@@ -139,27 +141,28 @@ npm install tap-min --save-dev
 
 ### pre-commit
 
-Run linter and tests before each commit. This is always a good idea as for the
-maintainer as for contributors. If **the tower is burning** and you need to commit
-with tests failing  you can use `git commit -n`.
+Run linter and tests before each commit. This is always a good idea as for
+the maintainer as for contributors. If **the tower is burning** and you
+need to commit with tests failing you can use `git commit -n`.
+
 Finally it run a non blocking command which displays outdated dependencies.
-If you need to update deps, you can run
 
-```
-npm update foo --save
+## update-deps
+
+If you need to update all deps, you can run
+
+```bash
+npm run update-deps
 ```
 
-or, if it is a dev dependency
-
-```
-npm update foo --save -dev
-```
+Thanks to `postupdate-deps` if tests are failing it reverts *package.json*
+file modifications, which will contain bumped version numbers.
 
 ### postversion
 
 Push tag on GitHub and publish on [npm][1] automatically after launching
 
-```
+```bash
 npm version minor
 ```
 
@@ -169,7 +172,7 @@ See also [npm-version](https://docs.npmjs.com/cli/version).
 
 Run tests when *index.js* or *test.js* change.
 
-```
+```bash
 npm run watch
 ```
 
