@@ -12,16 +12,13 @@ description: >
 First of all, crontab environment is not the same as your shell. Only few
 variables are valued, for example `$HOME`, `$PATH` and `$MAILTO`.
 A common pit fall is to schedule a script and it does not work cause it
-needs environment varibles. The best trick I found to make it work is to
-create a *.cron.bash* file in your home dir, with the following content
+needs environment varibles. The best trick I found is to use [cron SHELL power](http://shtylman.com/post/cron-shell-power/)!
+Create a *.cron.bash* file in your home dir, containing something like the following
 
 ```bash
 #!/bin/bash
 
 source .bashrc
-
-# Set PATH
-export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin
 
 # Restore SHELL env var for cron
 SHELL=/bin/bash
