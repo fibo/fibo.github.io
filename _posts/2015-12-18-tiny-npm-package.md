@@ -184,6 +184,11 @@ Use the following template, replacing **<package-name>** and **<package-descript
 
     > <package-description>
 
+    [Installation](#installation) |
+    [API](#api) |
+    [Examples](#examples) |
+    [License](#license)
+
     [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
     ## Installation
