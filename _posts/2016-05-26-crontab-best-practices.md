@@ -4,8 +4,10 @@ tags:
   - Unix
   - Crontab
 description: >
-    How to edit a crontab in a mantainable way, and other tips to use it the right way
+    How to edit a crontab in a mantainable way, and other tips to use it the right way. I found a lot of messy crontabs in
 ---
+
+> The software utility [Cron] is a time-based job scheduler in Unix-like computer operating systems
 
 ## Environment
 
@@ -43,24 +45,86 @@ but **do not** send standard error stream on `/dev/null`.
 The best practice is to write scripts that run commands in quiet mode with
 no feedback unless a verbose flag, or whatever, is passed as argument.
 In this way, when a script outputs an error, crontab will send you an email
-if you configure it setting the `MAILTO` variable, for example
+if you configure the `MAILTO` variable, for example
 
 ```
-# Send script output by email.
+# Send scripts output by email.
 MAILTO=alarms@example.com
 ```
 
-## Schedules
+## Scheduled jobs
 
-Please order your schedules by time and indent them
+Organize your schedules by frequency (hourly, daily, monthly, etc) and
+write then in cronological order.
 
-```crontab
-# Hourly
+Pad left single digits with a zero, to get rows alligned. Please, indent
+and group where it makes sense
 
-# Daily
+```
+# Bad
 
-# Weekly
+0 5 * * * script1.sh param1
+5 5 * * * script2.sh
+15 5 * * * script3.sh param1 param2
+5 10 * * * script4.sh
 
-# Monthly
+15 10 * * * script5.sh param1
+5,35 15 * * * script6.sh
+15 15 * * * script7.sh
+
+# Good
+
+00 05 * * * script1.sh param1
+05 05 * * * script2.sh
+15 05 * * * script3.sh param1 param2
+
+05 10 * * * script4.sh
+15 10 * * * script5.sh param1
+
+5,35 15 * * * script6.sh
+15   15 * * * script7.sh
 ```
 
+Use comments to organize and inform, in particular when you deschedule a
+task temporarily with a comment, put your nick or email and a date.
+
+Just to have an idea of what I mean:
+
+```crontab
+
+# Countinous integration deploy.
+*/10 * * * * $BEMEDIA_REPO/src/bin/continuous_deploy.sh
+
+# Every hour
+# ----------
+
+10 * * * * rotate_logs.sh
+
+20 * * * * load_data.sh
+
+# Every day
+# ---------
+
+# gcasati 20160405: paused cause waiting for bla bla bla
+#10 04 * * * script2.sh
+
+00 05 * * * script3.sh param1
+05 05 * * * script4.sh
+15 05 * * * script5.sh param1 param2
+
+10 06 * * * script7.sh
+
+00 19 * * 0 script8.sh
+
+00 20 * * 0 script9.sh
+
+# Every sunday
+# ------------
+
+00 20 * * 0 rotate_table.sh campaign_dd 60
+05 20 * * 0 rotate_table.sh request 90
+10 20 * * 0 rotate_table.sh sales_dd 7
+
+```
+
+[Cron] https://en.wikipedia.org/wiki/Cron "Cron on Wikipedia"
