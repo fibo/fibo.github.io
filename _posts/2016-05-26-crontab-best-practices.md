@@ -138,4 +138,4 @@ schedule a `date` command with formatting, for example
 
 See the original article: [Using the `date` command in your crontab](http://www.logikdev.com/2010/05/25/using-the-date-command-in-your-crontab/).
 
-[Cron] https://en.wikipedia.org/wiki/Cron "Cron on Wikipedia"
+[Cron]: https://en.wikipedia.org/wiki/Cron "Cron on Wikipedia"
