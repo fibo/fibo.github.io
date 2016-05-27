@@ -127,4 +127,15 @@ Just to have an idea of what I mean:
 
 ```
 
+## Other tips
+
+Since `%` is a special char you need to escape it, for example when you
+schedule a `date` command with formatting, for example
+
+```
+0 5 * * * script.sh >> /my/log_`date +\%y\%m\%d`.log
+```
+
+See the original article: [Using the `date` command in your crontab](http://www.logikdev.com/2010/05/25/using-the-date-command-in-your-crontab/).
+
 [Cron] https://en.wikipedia.org/wiki/Cron "Cron on Wikipedia"
