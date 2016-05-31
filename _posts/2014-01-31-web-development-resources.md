@@ -150,7 +150,7 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 : Firefox OS Typeface
 
 [Google Fonts API](https://developers.google.com/fonts/)
-: helps you add fonts to any web page
+: helps you add fonts to any web page, see also [all available fonts](https://www.google.com/fonts/)
 
 [Google Noto Fonts](http://www.google.com/get/noto/)
 : Beautiful and free fonts for all languages
