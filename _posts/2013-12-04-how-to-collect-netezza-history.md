@@ -20,7 +20,6 @@ CREATE USER hist WITH PASSWORD '***' AUTH LOCAL;
 GRANT CREATE DATABASE TO hist;
 ```
 
-
 Log out, and back to the shell prompt to create a *query* database.
 
 ```bash
@@ -77,7 +76,7 @@ nzstart
 
 ### Create a group that can read the *query* database
 
-For sure you need to grant permission to see the history to some users. I use a set of utils I created: checkout my [nz-utils][1].
+For sure you need to grant permission to see the history to some users. I use a set of utils I created: checkout my [nz-util].
 
 ```sql
 \c query
@@ -134,6 +133,4 @@ GROUP BY clienthost,clientip,sessionusername,clienttype
 ;
 ```
 
-  [1]: //{{ site.domain }}/nz-utils
-
-
+[nz-util]: http://g14n.info/nz-util
