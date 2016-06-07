@@ -321,5 +321,4 @@ module.exports = myFooFunction
 ```
 
 [npm]: https://www.npmjs.com/ "npm website"
-[emoji-commits]: (https://github.com/nicola/emoji-commits)
-
+[emoji-commits]: https://github.com/nicola/emoji-commits "Emoji Commit Messages"
