@@ -8,7 +8,7 @@ description: >
 
 ## Workflow
 
-I have few *Node.js* packages on [npm][1] that has a *tiny structure*: my [npm tiny packages](//{{ site.domain }}/software#tiny-npm-packages).
+I have few *Node.js* packages on [npm] that has a *tiny structure*: my [npm tiny packages](//{{ site.domain }}/software#tiny-npm-packages).
 By *tiny structure* I mean they follow the *small package philosophy* with a simple
 but robust workflow like this:
 
@@ -85,7 +85,7 @@ Use the following template, replacing `<package-name>` and `<package-description
     "lint": "standard",
     "test": "tape test.js | tap-min",
     "update-deps": "npm update --save --dev",
-    "postupdate-deps": "npm test && git commit -am 'updated deps' || git checkout -- package.json",
+    "postupdate-deps": "npm test && git commit -am ':arrow_up: updated deps' || git checkout -- package.json",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "watch": "npm-watch"
   },
@@ -104,7 +104,7 @@ Use the following template, replacing `<package-name>` and `<package-description
   ],
   "watch": {
     "test": "{index,test}.js"
-  }
+  },
   "devDependencies": {},
   "dependencies": {}
 }
@@ -120,11 +120,11 @@ Start with `0.0.0`, when publishing with `npm version minor` it will be updated 
 
 ### keywords
 
-Add some keywords in order to make it easier to find it on [npm][1].
+Add some keywords in order to make it easier to find it on [npm].
 
 ### homepage
 
-The url `http://npm.im/<package-name>` redirects to `<package-name>` page on [npm][1].
+The url `http://npm.im/<package-name>` redirects to `<package-name>` page on [npm].
 Add it also to GitHub repo's website entry.
 
 ### devDependencies
@@ -157,10 +157,13 @@ npm run update-deps
 
 Thanks to `postupdate-deps` if tests are failing it reverts *package.json*
 file modifications, which will contain bumped version numbers.
+Note that the commit message starts with `:arrow_up:` which will be
+visualized as icon ⬆️. See [emoji-commits] for more.
+
 
 ### postversion
 
-Push tag on GitHub and publish on [npm][1] automatically after launching
+Push tag on GitHub and publish on [npm] automatically after launching
 
 ```bash
 npm version minor
@@ -317,5 +320,5 @@ function myFooFunction (bar) {
 module.exports = myFooFunction
 ```
 
-  [1]: https://www.npmjs.com/ "npm website"
-
+[npm]: https://www.npmjs.com/ "npm website"
+[emoji-commits]: https://github.com/nicola/emoji-commits "Emoji Commit Messages"
