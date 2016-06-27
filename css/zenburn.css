@@ -3,12 +3,13 @@
  *
  * https://github.com/richleland/pygments-css/blob/master/zenburn.css
  *
- * Was modified with
+ * It was modified with
  *
- * :% s/highlight/highlight/g
+ * :% s/codehilite/highlight/g
+ * :% s/\.highlight code, \.highlight pre/pre.highlight/
  */
 
-.highlight code, .highlight pre{color:#fdce93;background-color:#3f3f3f}
+pre.highlight{color:#fdce93;background-color:#3f3f3f}
 .highlight .hll{background-color:#222}
 .highlight .c{color:#7f9f7f}
 .highlight .err{color:#e37170;background-color:#3d3535}
