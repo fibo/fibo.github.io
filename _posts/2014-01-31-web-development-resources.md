@@ -134,6 +134,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 
 ## Fonts
 
+[Type Terms](https://www.supremo.tv/typeterms/)
+: If you are new to typography or here to refresh your memory, then Type Terms is the perfect tool for you.
+
 [Hack](http://sourcefoundry.org/hack/)
 : A typeface designed for source code
 
