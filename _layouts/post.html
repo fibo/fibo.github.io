@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+
   {% include bootstrap/header.html %}
   {% include common/header.html %}
 
-  <meta name="keywords" content="{{ page.tags | join: ',' }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+  <link rel="stylesheet" href="/css/zenburn.css">
 </head>
 
 <body>
