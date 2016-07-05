@@ -113,10 +113,19 @@ npm run decrypt:.gh-token
 All software I produce is on GitHub, metadata is downloaded via API with
 
 ```bash
-$ npm run data:github:repos
+npm run data:github:repos
 ```
 
 and stored in *_data/github/repos* folder as *.json* files. Data is displayed in [software page](http://g14n.info/software).
+
+To keep software metadata and social badges updated, on a host that is always on, launch the worker
+
+```bash
+screen -S worker
+npm run worker
+```
+
+then escape from screen session with <kbd>CTRL-a d</kbd>.
 
 To add a new repo, *foo* for instance, just add an empty *json* file
 
@@ -150,15 +159,6 @@ layout: null
 {% assign repo = site.data.github.repos.foo %}
 {% include github/stars.html %}
 ```
-
-To keep social badges updated, on a host that is always on, launch the worker
-
-```bash
-screen -S worker
-npm run worker
-```
-
-then escape from screen session with <kbd>CTRL-a d</kbd>.
 
 ## Licenses
 
