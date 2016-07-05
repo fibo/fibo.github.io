@@ -69,13 +69,13 @@ Gemfile*
 3. Install bundler
 
 ```bash
-$ gem install bundler
+gem install bundler
 ```
 
 4. Install dependencies
 
 ```bash
-$ bundle install
+bundle install
 ```
 
 See as a reference:
@@ -88,7 +88,7 @@ See as a reference:
 Test content generation running
 
 ```bash
-$ jekyll serve --watch
+jekyll serve --watch
 ```
 
 ## Collections
@@ -99,7 +99,7 @@ Inspired by Tom Preston's article [Readme driven development](http://tom.preston
 documentation about my projects that **does not** use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
 
 ```bash
-$ npm run readmes
+npm run readmes
 ```
 
 ## Software
@@ -107,7 +107,7 @@ $ npm run readmes
 First of all, it is needed to decrypt (only once) the GitHub token
 
 ```bash
-$ npm run decrypt:.gh-token
+npm run decrypt:.gh-token
 ```
 
 All software I produce is on GitHub, metadata is downloaded via API with
@@ -121,7 +121,7 @@ and stored in *_data/github/repos* folder as *.json* files. Data is displayed in
 To add a new repo, *foo* for instance, just add an empty *json* file
 
 ```bash
-$ touch _data/github/repos/foo.json
+touch _data/github/repos/foo.json
 ```
 
 The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll][3] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.
@@ -150,6 +150,15 @@ layout: null
 {% assign repo = site.data.github.repos.foo %}
 {% include github/stars.html %}
 ```
+
+To keep social badges updated, on a host that is always on, launch the worker
+
+```bash
+screen -S worker
+npm run worker
+```
+
+then escape from screen session with <kbd>CTRL-a d</kbd>.
 
 ## Licenses
 
