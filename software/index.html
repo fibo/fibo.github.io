@@ -1,14 +1,13 @@
 ---
 title: Software
 layout: page
-perl:
-  - Task-BeLike-FIBO-pm
-  - Sweet-Home-pm
 bash:
   - bb-clone
   - gh-clone
   - home
   - dotsoftware
+docker:
+  - fake-aws-redshift
 node:
   packages:
     - algebra
@@ -39,6 +38,9 @@ node:
     - SVGx
     - x3dom-livereload
     - zeroconf-redux
+perl:
+  - Task-BeLike-FIBO-pm
+  - Sweet-Home-pm
 ---
 
 {% assign repo = site.data.github.repos %}
@@ -87,6 +89,20 @@ node:
 </div>
 
 <div class="col-sm-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Docker</div>
+    <div class="panel-body">
+      <img src="https://cdn.rawgit.com/gilbarbara/logos/master/logos/docker.svg" alt="Docker logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+      {% for docker_image in page.docker %}
+      <li class="list-group-item">
+        <a href="{{ repo[docker_image].homepage }}">{{ docker_image }}</a>: {{ repo[docker_image].description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="panel panel-default">
     <div class="panel-heading">Bash</div>
     <div class="panel-body">
