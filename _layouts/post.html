@@ -20,7 +20,7 @@
 
         <p class="lead">{{ page.description }}</p>
 
-        <time datetime="{{ page.date }}" class="badge">{{ page.date | date: "%F" }}</time>
+        {% include post_time.html post=page %}
       </header>
 
       {{ content }}
