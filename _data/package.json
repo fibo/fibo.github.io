@@ -15,7 +15,8 @@
     "decrypt:.gh-token": "keybase decrypt -o .gh-token .gh-token.asc",
     "readmes": "for repo in $(ls -1 _projects/ | grep -v _readmes | grep -v dotsoftware); do wget -nv https://raw.githubusercontent.com/fibo/$repo/master/README.md -O _projects/_readmes/${repo}-readme.md; cat _projects/$repo/index.yaml _projects/_readmes/${repo}-readme.md > _projects/$repo/index.md; done; wget -nv https://raw.githubusercontent.com/fibo/.software/master/README.md -O _projects/_readmes/dotsoftware-readme.md; cat _projects/dotsoftware/index.yaml _projects/_readmes/dotsoftware-readme.md > _projects/dotsoftware/index.md",
     "start": "jekyll serve --incremental -H dev.g14n.info",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "worker": "while true; do npm run data; sleep 30; npm run readmes; sleep 30; git pull origin master; git add . && git commit -m 'updated metadata' && git push origin master; sleep 30; done"
   },
   "repository": {
     "type": "git",
