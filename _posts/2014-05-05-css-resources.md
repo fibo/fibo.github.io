@@ -8,6 +8,9 @@ description: >
 
 ## Sites
 
+[flexbox.io](http://flexbox.io)
+: WHAT THE FLEXBOX?! A simple, free 20 video course that will help you master CSS Flexbox!
+
 [Learn CSS Layout](http://learnlayout.com/)
 : This site teaches the CSS fundamentals that are used in any website's layout
 
@@ -57,6 +60,9 @@ description: >
 
 [reset.css](https://www.npmjs.com/package/reset.css)
 : Genuine Eric Meyer's Reset CSS bundled as npm package.
+
+[Baloon.css](http://kazzkiq.github.io/balloon.css/)
+: Simple tooltips made of pure CSS
 
 ### Preprocessors
 
