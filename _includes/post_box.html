@@ -5,7 +5,7 @@
 
       <p class="lead">{{ include.post.description }}</p>
 
-      <time datetime="{{ include.post.date | date: "%F" }}" class="badge">{{ include.post.date | date: "%b %d %Y" }}</time>
+      {% include post_time.html post=include.post %}
     </header>
   </article>
 </a>

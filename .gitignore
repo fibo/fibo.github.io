@@ -10,6 +10,8 @@ npm-debug.log
 
 *zip
 
+.*.swp
+
 bower_components/jquery/*.txt
 bower_components/jquery/src/
 !bower_components/twemoji/twemoji.min.js
