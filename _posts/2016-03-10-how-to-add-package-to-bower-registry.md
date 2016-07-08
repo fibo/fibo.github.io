@@ -11,7 +11,7 @@ I decided to contribute adding a *bower.json* cause I would like to use it and i
 
 ## bower.json
 
-I just create a file *bower.json* like the following
+I just created a file *bower.json* like the following
 
 ```
 {
@@ -61,7 +61,7 @@ bower register codeicons git://github.com/mabrasil/codeicons.git
 I just opened a [pull request][pr1], let see what happens :).
 
 You need to add few properties according to [bower.json specification][bower_spec].
-Sometimes there are some doubts with the meaning, I willl write here what I discover or how I use to fill them.
+Sometimes there are some doubts with the meaning, I will write here what I discover or how I use to fill them.
 
 **TODO** fill keywords
 
@@ -85,6 +85,18 @@ In this particular case I left it undefined.
 ## Bonus tip: CDN
 
 You can also add a CDN link for installation using [RawGit][rawgit].
+
+## Removing a package
+
+If for some reason you want to remove a package from a registry... think twice. Anyway, you can do
+
+```bash
+curl -X DELETE "https://bower.herokuapp.com/packages/PACKAGE?access_token=TOKEN"
+```
+
+Where *PACKAGE* is the package name you want to delete and *TOKEN* is GitHub's Personal
+Access Token that you can fetch from here: https://github.com/settings/applications
+See [reference here](https://github.com/bower/bower/issues/120#issue-8078953).
 
 [bower_search]: http://bower.io/search/
 [codeicons]: https://github.com/mabrasil/codeicons
