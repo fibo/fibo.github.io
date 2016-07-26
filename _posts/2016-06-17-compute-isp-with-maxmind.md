@@ -6,7 +6,7 @@ description: >
     This is a quick and dirty Perl script to compute the ISP of a given IP, using a Maxmind CSV file
 ---
 
-## Section
+## Goal
 
 I have a *GeoIPISP.csv* file from [MaxMind] with a content like the following
 
@@ -26,6 +26,8 @@ I need to compute the ISP name of given IP address, and once again, Perl comes t
 
 I am on Mac OS, so Perl is already installed: that is really good cause also
 my collegues has a Mac, so I can share the script with them easily.
+
+## Solution
 
 Copy the CSV file and make it executable
 
