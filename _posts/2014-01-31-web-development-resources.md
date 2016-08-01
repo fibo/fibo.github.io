@@ -177,6 +177,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 [Code Icons](https://github.com/mabrasil/codeicons)
 : An icon set of programming languages, frameworks, and coding tools.
 
+[Flat icons](http://www.flaticon.com/)
+: Free icons for both personal & commercial use.
+
 ## Online editors
 
 See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) on Wikipedia for a comparison table.
