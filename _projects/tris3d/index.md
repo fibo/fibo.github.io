@@ -7,15 +7,10 @@ title: tris3d
 
 Wanna play? Go to [play.tris3d.net](https://play.tris3d.net)!
 
-**Table Of Contents:**
-
-* [Installation](#installation)
-* [Description](#description)
-* [API](#api)
-  - [isTris](#istris)
-  - [indexOfCoordinates](#indexofcoordinates)
-  - [coordinatesOfIndex](#coordinatesofindex)
-* [License](#license)
+[Installation](#installation) |
+[Description](#description) |
+[API](#api) |
+[License](#license)
 
 [![NPM version](https://badge.fury.io/js/tris3d.svg)](http://badge.fury.io/js/tris3d) [![Build Status](https://travis-ci.org/fibo/tris3d.svg?branch=master)](https://travis-ci.org/fibo/tris3d.svg?branch=master) [![Dependency Status](https://gemnasium.com/fibo/tris3d.svg)](https://gemnasium.com/fibo/tris3d) [![Change log](https://img.shields.io/badge/change-log-blue.svg)](https://github.com/fibo/tris3d/blob/master/CHANGELOG.md)
 
@@ -32,12 +27,12 @@ npm install tris3d
 With [bower](http://bower.io/) do
 
 ```bash
-$ bower install tris3d
+bower install tris3d
 ```
 
 or use a CDN adding this to your HTML page
 
-```
+```html
 <script src="https://cdn.rawgit.com/fibo/tris3d/master/dist/tris3d.min.js"></script>
 ```
 
@@ -48,7 +43,7 @@ Algorithm to play tic tac toe in dimension three.
 Imagine a cube, just like the [Rubik's cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) where everyone of the little cubes is numbered from 0 to 26
 and has a 3d coordinate in the range from `[0, 0, 0]` to `[2, 2, 2]` following a natural order.
 
-```
+```javascript
 // Sorted array of points from point[0] to point[26]
 var point = [
   [0, 0, 0], [1, 0, 0], [2, 0, 0], // 0   1   2
@@ -68,13 +63,12 @@ there are three players (🐨 🐬 🐯), and is more fun if they can negotiate.
 
 ## API
 
-<a name="istris"></a>
-`isTris(p1, p2, p3)`
+### `isTris(p1, p2, p3)`
 
 Takes 3 points given by the coordinate system described above and returns
 a boolean that is true if they are aligned.
 
-```
+```javascript
 var tris3d = require('tris3d')
 
 var isTris = tris3d.isTris
@@ -82,12 +76,11 @@ var isTris = tris3d.isTris
 isTris([2, 0, 2], [1, 1, 2], [0, 2, 2]) // true
 ```
 
-<a name="indexofcoordinates"></a>
-`indexOfCoordinates(point)`
+### `indexOfCoordinates(point)`
 
 Convert point in Z3xZ3xZ3 to index.
 
-```
+```javascript
 var tris3d = require('tris3d')
 
 var indexOf = tris3d.indexOfCoordinates
@@ -98,8 +91,7 @@ indexOf([1, 0, 0]) // 1
 indexOf([2, 2, 2]) // 26
 ```
 
-<a name="coordinatesofindex"></a>
-`coordinatesOfIndex(index)`
+### `coordinatesOfIndex(index)`
 
  Convert index to point in Z3xZ3xZ3.
 
