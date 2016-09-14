@@ -7,9 +7,11 @@ title: bb-clone
 
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
-Very simple bash function that let you quickly clone git your repositories stored on Bitbucket.
+Very simple bash function that let you quickly clone git your repositories
+stored on Bitbucket.
 
-See also [gh-clone](http://g14n.info/gh-clone) twin project, which do the same but on GitHub.
+See also [gh-clone](http://g14n.info/gh-clone) twin project, which do the
+same but on GitHub.
 
 ## Annotated source
 
@@ -54,14 +56,16 @@ In the latter case `$BITBUCKET_USER` defaults to `$MY_BITBUCKET_USER`.
     fi
 
 Clone repo under `$BITBUCKET_DIR/$BITBUCKET_USER/$REPO_NAME` and cd into it.
+Use `git clone --recursive` to initialize and updated submodules.
 
     TARGET_DIR=$BITBUCKET_DIR/$BITBUCKET_USER
     mkdir -p $TARGET_DIR
     cd $TARGET_DIR
     REPO_URL=git@bitbucket.org:$BITBUCKET_USER/${REPO_NAME}.git
-    git clone $REPO_URL && cd $REPO_NAME
+    git clone --recursive $REPO_URL && cd $REPO_NAME
 
-**Bonus feature**: run `npm install` if it looks like a Node project and there is some *npm* available.
+**Bonus feature**: run `npm install` if it looks like a Node project and
+there is some *npm* available.
 
     if [ -e package.json ]
     then
@@ -98,7 +102,7 @@ Clean up
 
 Instructions borrowed from [git-aware-prompt](https://github.com/jimeh/git-aware-prompt#installation).
 
-```
+```bash
 mkdir -p ~/.bash
 cd ~/.bash
 git clone git://github.com/fibo/bb-clone.git
@@ -106,7 +110,7 @@ git clone git://github.com/fibo/bb-clone.git
 
 Edit your *~/.bash_profile* or *~/.profile* and add the following
 
-```
+```bash
 source ~/.bash/bb-clone/fun.sh
 ```
 
