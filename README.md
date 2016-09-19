@@ -52,27 +52,13 @@ $ .software_install patch
 $ .software_install Node
 ```
 
-1. Create a *Gemfile* with the following content
-
-```
-source 'https://rubygems.org'
-gem 'github-pages'
-```
-
-2. Add these lines to your *.gitignore*
-
-```
-_site/
-Gemfile*
-```
-
-3. Install bundler
+1. Install bundler
 
 ```bash
 gem install bundler
 ```
 
-4. Install dependencies
+2. Install dependencies
 
 ```bash
 bundle install
