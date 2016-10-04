@@ -12,6 +12,7 @@ exclude:
   - _projects/**/index.yaml
   - bower.json
   - Gemfile
+  - Gemfile.lock
   - npm-debug.log
   - node_modules/
   - README.md
