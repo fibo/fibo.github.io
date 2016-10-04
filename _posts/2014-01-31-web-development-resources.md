@@ -62,6 +62,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Bette
 [Validator.nu](http://html5.validator.nu/)
 : HTML5 Validator (by WHATWG)
 
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+: Make your web pages fast on all devices (by google).
+
 ## HTTP
 
 [HTTP/1.1: Status Code Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
