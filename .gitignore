@@ -7,6 +7,8 @@ npm-debug.log
 .bower.json
 .jekyll-metadata
 
+Gemfile.lock
+
 *zip
 
 .*.swp
