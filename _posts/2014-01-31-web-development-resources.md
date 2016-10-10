@@ -230,6 +230,9 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 ### Client side
 
+[Web Design in 4 minutes]: http://jgthms.com/web-design-in-4-minutes/
+: a nice interactive tutorial
+
 [Don't Forget to Cover Your Client Side!](http://code.tutsplus.com/tutorials/dont-forget-to-cover-your-client-side--cms-21021)
 
 [Working With Intl](http://code.tutsplus.com/tutorials/working-with-intl--cms-21082)
