@@ -6,12 +6,12 @@ dot software
 
 > build & install software locally with **dot**software
 
-**Table Of Contents:**
-
-* [Quick start](#quick-start)
-* [Usage](#usage)
-* [Installation](#installation)
-* [Software list](#software-list)
+[Quick start](#quick-start) |
+[Usage](#usage) |
+[Installation](#installation) |
+[Software list](#software-list) |
+[Folder structure](#folder-structure) |
+[Packaging software](#packaging-software)
 
 ## Quick start
 
@@ -57,14 +57,15 @@ It is implemented by a bash function named `.software_install` that takes the so
 For example
 
 ```bash
-$ .software_install Foo
+.software_install Foo
 ```
 
 Optionally, a custom version number can be passed as a second argument
 
 ```bash
-$ .software_install Foo 2.3.4
+.software_install Foo 2.3.4
 ```
+
 Typing *.software_install* in your bash prompt, and hitting <kbd>TAB</kbd> will autocomplete with available software.
 Take a look to [Software list](#software-list), which includes [Perl](#perl), [Node](#node), [Golang](#golang), [Ruby](#ruby) among others.
 
@@ -81,18 +82,18 @@ Other requirements are those needed by software builds: [Make](#make), [gcc](#gc
 Just go to your home directory and clone this repository.
 
 ```bash
-$ cd
-$ git clone https://github.com/fibo/.software.git
+cd
+git clone https://github.com/fibo/.software.git
 ```
 
 If you don't have git installed you can try the following commands
 
 ```bash
-$ cd
-$ wget --no-check-certificate https://github.com/fibo/.software/archive/master.zip
-$ unzip master
-$ mv .software-master .software
-$ rm master
+cd
+wget --no-check-certificate https://github.com/fibo/.software/archive/master.zip
+unzip master
+mv .software-master .software
+rm master
 ```
 
 ### Set your environment
@@ -159,27 +160,19 @@ Build depends on:
 * [gcc](#gcc)
 * [Make](#make)
 
-<a name="ctags"></a>
-
-### [ctags](http://ctags.sourceforge.net/)
-
-> version 5.8
-
-Build depends on:
-
-* [gcc](#gcc)
-* [Make](#make)
-
 <a name="curl"></a>
 
 ### [cURL](http://curl.haxx.se/)
 
-> version 7.44.0
+> version 7.50.3
+
+It is build with https support, i.e. `--with-ssl` configure flag.
 
 Build depends on:
 
 * [gcc](#gcc)
 * [Make](#make)
+* [OpenSSL](#openssl)
 
 <a name="dos2unix"></a>
 
@@ -422,7 +415,7 @@ Install it with a package manager:
 
 ### [Node](https://nodejs.org/)
 
-> version 4.4.3
+> version 4.6.0
 
 Node version above is latest **LTS / Stable**.
 
@@ -580,7 +573,7 @@ To build a [Amazon Redshift](https://aws.amazon.com/redshift/) compatible versio
 
 ### [Redis](http://redis.io/)
 
-> version 3.0.4
+> version 3.2.4
 
 Build depends on:
 
@@ -634,7 +627,7 @@ Build depends on:
 
 ### [Tar](http://www.gnu.org/software/tar/)
 
-> version 1.28
+> version latest
 
 It is a *.software* dependency.
 
@@ -662,7 +655,7 @@ Build depends on:
 
 ### [Wget](http://www.gnu.org/software/wget/)
 
-> version 1.16
+> version 1.18
 
 It is a *.software* dependency.
 
