@@ -4,7 +4,7 @@ tags:
   - Unix
   - Crontab
 description: >
-    How to edit a crontab in a mantainable way, and other tips to use it the right way. I found a lot of messy crontabs in
+    How to edit a crontab in a mantainable way, and other tips to use it the right way. I found a lot of messy crontabs around, it would be better to mantain order.
 ---
 
 > The software utility [Cron] is a time-based job scheduler in Unix-like computer operating systems
