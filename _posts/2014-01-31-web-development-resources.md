@@ -49,7 +49,10 @@ See also [CDNperf](http://www.cdnperf.com/)
 [TEMPLATED](http://templated.co/)
 : A collection of many free CSS and HTML5 site templates, designed & built by Cherry + AJ and released under the Creative Commons.
 
-Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and [Better Motherfucking Website](http://bettermotherfuckingwebsite.com/)
+Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
+1. [Better Motherfucking Website](http://bettermotherfuckingwebsite.com/)
+2. [Best Motherfucking Website](https://bestmotherfucking.website/)
+3. [The Best Motherfucking Website](https://thebestmotherfucking.website/)
 
 ### Validators
 
