@@ -47,11 +47,32 @@ description: >
 
 ### Frameworks
 
-[MinimalCSS](http://minimalcss.com/)
-: Minimal CSS Framework
+[Bootstrap](http://getbootstrap.com/)
+: (claims to be :) The most popular front-end framework for developing responsive, mobile first projects on the web.
+
+[Foundation](http://foundation.zurb.com/)
+: (claims to be :) The most advanced responsive front-end framework in the world.
+
+[Materialize](http://materializecss.com/)
+: A modern responsive front-end framework based on Material Design.
+
+[Semantic UI](http://semantic-ui.com/)
+: UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
+
+[Flat UI](http://designmodo.com/flat-free/)
+: Free Bootstrap Theme.
 
 [Pure.css](http://purecss.io/)
 : A set of small, responsive CSS modules that you can use in every web project.
+
+[MinimalCSS](http://minimalcss.com/)
+: Minimal CSS Framework
+
+[Skeleton](http://getskeleton.com/)
+: A dead simple, responsive boilerplate.
+
+[Basscss](http://www.basscss.com/)
+: Low-Level CSS Toolkit
 
 ### Modules
 

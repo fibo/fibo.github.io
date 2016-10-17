@@ -6,6 +6,14 @@ description: >
     Collection of links I find on my way about Web development.
 ---
 
+## CSS frameworks
+
+See [my CSS frameworks section]({% post_url 2014-05-05-css-resources %}#frameworks).
+
+## JavaScript frameworks
+
+See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resources %}#frameworks).
+
 ## Sites
 
 [World Wide Web Consortium (W3C)](http://www.w3.org/)
@@ -26,6 +34,9 @@ description: >
 : Shared knowledge for the Open Web, in particular see [Learning the Web](https://developer.mozilla.org/en-US/Learn).
 
 [REST API Tutorial](http://www.restapitutorial.com/)
+
+[Code Guide by @mdo](http://codeguide.co/)
+: Standards for developing flexible, durable, and sustainable HTML and CSS.
 
 ### CDN
 
@@ -73,60 +84,6 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [HTTP/1.1: Status Code Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 
 [HTTP/2 FAQ](http://http2.github.io/faq/)
-
-## Frameworks
-
-### Client side
-
-[Bootstrap](http://getbootstrap.com/)
-: (claims to be :) The most popular front-end framework for developing responsive, mobile first projects on the web.
-
-[Foundation](http://foundation.zurb.com/)
-: (claims to be :) The most advanced responsive front-end framework in the world.
-
-[Materialize](http://materializecss.com/)
-: A modern responsive front-end framework based on Material Design.
-
-[Semantic UI](http://semantic-ui.com/)
-: UI is the vocabulary of the web. Semantic empowers designers and developers by creating a language for sharing UI.
-
-[Flat UI][1]
-: Free Bootstrap Theme.
-
-[Pure.css](http://purecss.io/)
-: A set of small, responsive CSS modules that you can use in every web project.
-
-#### Application framework
-
-[Backbone](http://backbonejs.org/)
-: Backbone.js gives structure to web applications by providing **models** with key-value binding and custom events, **collections** with a rich API of enumerable functions, **views** with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
-
-[Vue](http://vuejs.org/)
-
-[Ember](http://emberjs.com/)
-
-[Angular 1](http://angularjs.org/)
-
-[Angular 2](https://angular.io/)
-: One framework. Mobile and desktop.
-
-[Knockout](http://knockoutjs.com/)
-
-[React](https://facebook.github.io/react/)
-: A JavaScript library for building user interfaces
-
-[Riot](http://riotjs.com/)
-: A React-like user interface micro-library
-
-[Mithril](http://lhorie.github.io/mithril/)
-
-[Hamlet](http://hamlet.coffee/)
-: Simple and powerful reactive templating
-
-### Server side
-
-[Hacklang](http://hacklang.org/)
-: Hack is a programming language for HHVM that interoperates seamlessly with PHP.
 
 ## Tools
 
@@ -233,7 +190,7 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 ### Client side
 
-[Web Design in 4 minutes]: http://jgthms.com/web-design-in-4-minutes/
+[Web Design in 4 minutes](http://jgthms.com/web-design-in-4-minutes/)
 : a nice interactive tutorial
 
 [Don't Forget to Cover Your Client Side!](http://code.tutsplus.com/tutorials/dont-forget-to-cover-your-client-side--cms-21021)
@@ -258,6 +215,8 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 [How we built analytics.usa.gov](https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/)
 
 ## Hosting
+
+[Amazon Web services](https://aws.amazon.com/)
 
 [Linode](https://www.linode.com/)
 
@@ -288,8 +247,5 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 [GPU fluid experiment](http://haxiomic.github.io/GPU-Fluid-Experiments/html5/)
 
 [tanx](http://playcanv.as/p/aP0oxhUr)
-: WebGL game on [PLAYCANVAS][2]
-
-  [1]: http://designmodo.com/flat-free/ "Flat UI"
-  [2]: https://playcanvas.com/play "PLAYCANVAS"
+: WebGL game on [PLAYCANVAS](https://playcanvas.com/play)
 
