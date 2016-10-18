@@ -39,6 +39,35 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [JavaScript, JavaScript ...](http://javascriptweblog.wordpress.com/)
 : by Angus Croll
 
+## Frameworks
+
+> See also a [Comparison of JavaScript frameworks](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
+
+[Backbone](http://backbonejs.org/)
+: Backbone.js gives structure to web applications by providing **models** with key-value binding and custom events, **collections** with a rich API of enumerable functions, **views** with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+
+[Vue](http://vuejs.org/)
+
+[Ember](http://emberjs.com/)
+
+[Angular 1](http://angularjs.org/)
+
+[Angular 2](https://angular.io/)
+: One framework. Mobile and desktop.
+
+[Knockout](http://knockoutjs.com/)
+
+[React](https://facebook.github.io/react/)
+: A JavaScript library for building user interfaces
+
+[Riot](http://riotjs.com/)
+: A React-like user interface micro-library
+
+[Mithril](http://lhorie.github.io/mithril/)
+
+[Hamlet](http://hamlet.coffee/)
+: Simple and powerful reactive templating
+
 ## Libraries
 
 ### DOM manipulation
