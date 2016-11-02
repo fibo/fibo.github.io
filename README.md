@@ -12,6 +12,13 @@ However, the default scheme I prefer when linking my site and articles is *http*
 
 ## Pages
 
+### Style
+
+Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages], read
+
+* [Using Sass with Jekyll](http://markdotto.com/2014/09/25/sass-and-jekyll/)
+* [Assets doc page on Jekyll website](https://jekyllrb.com/docs/assets/)
+
 ### Images
 
 When editing post *2000-01-01-template.md*, create a folder *images/2000/01/template*
@@ -38,7 +45,7 @@ Reference: [How to escape liquid tags?](http://stackoverflow.com/questions/34261
 
 ## Debug
 
-It is highly recommended to install [Jekyll][3] to preview your site and avoid build errors before publishing it.
+It is highly recommended to install [Jekyll] to preview your site and avoid build errors before publishing it.
 
 ### Install Jekyll
 
@@ -82,7 +89,7 @@ jekyll serve --watch
 ### Projects
 
 Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
-documentation about my projects that **does not** use [GitHub Pages][4] is contained in their *README.md* file which is used to generate the project Homepage.
+documentation about my projects that **does not** use [GitHub Pages] is contained in their *README.md* file which is used to generate the project Homepage.
 
 ```bash
 npm run readmes
@@ -119,7 +126,7 @@ To add a new repo, *foo* for instance, just add an empty *json* file
 touch _data/github/repos/foo.json
 ```
 
-The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll][3] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.
+The name should not start with a dot, the only exception (by now :) is *.software* that is handled separately. The issue is that [jekyll] ignores dotfiles, so I need to name them *dotsoftware*. On the other side, having a repo named *.software* is a great advantage for its user experience: it makes sense.
 
 ## npm scripts
 
@@ -150,7 +157,6 @@ layout: null
 
 I use the [Artistic license](http://g14n.info/artistic-license) for Perl projects, the [MIT license](http://g14n.info/mit-license) otherwise.
 
-  [2]: http://kramdown.gettalong.com "kramdown"
-  [3]: http://jekyllrb.com "Jekyll"
-  [4]: https://pages.github.com "GitHub Pages"
-
+[Jekyll]: http://jekyllrb.com "Jekyll"
+[GitHub Pages]: https://pages.github.com "GitHub Pages"
+[Sass]: http://sass-lang.com/ "Sass"

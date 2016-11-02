@@ -28,6 +28,9 @@ gems:
 
 markdown: kramdown
 
+sass:
+  style: compressed
+
 collections:
   projects:
     output: true

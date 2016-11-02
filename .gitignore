@@ -8,6 +8,7 @@ npm-debug.log
 .jekyll-metadata
 
 Gemfile.lock
+.sass-cache/
 
 *zip
 
