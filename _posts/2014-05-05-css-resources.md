@@ -117,6 +117,9 @@ description: >
 [Jeet Grid System](http://jeet.gs/)
 : A grid system for humans
 
+[SuperGiGi](http://objectway.github.io/super-gigi/index.html)
+: Italian Grilleria
+
 ### Animations
 
 [Animate.css](https://daneden.github.io/animate.css/)

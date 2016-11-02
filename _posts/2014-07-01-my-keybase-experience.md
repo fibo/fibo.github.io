@@ -35,7 +35,7 @@ and I need a secret token to commit results. It is a file named *.coveralls.yml*
 repo_token: yCNr4OfqZJtFkWsUmcCuQs2SGkYYzuZsx
 ```
 
-It is not so confidential, but it is not a good habit to private files
+It is not so confidential, but it is not a good habit to keep private files
 in public repos so let's encrypt 'em all!
 Note that my previous solution was to add the file to the *.gitignore* list and creating it manually every time.
 For instance, double check that in your *.gitignore* file there are the following rows
@@ -94,11 +94,11 @@ Note that it will ask for the *passphrase*: it would be nice to having it filled
 automatically, in a similar way it does an ssh agent. I will look for a solution
 maybe in the future, by now it is already a improvement having the encrypted token versioned.
 
-  [1]: https://keybase.io/
-  [2]: https://keybase.io/fibo
-  [3]: http://en.wikipedia.org/wiki/Pretty_Good_Privacy
-  [4]: https://github.com/keybase
-  [5]: http://nodejs.org/
-  [6]: https://keybase.io/fibo/key.asc
-  [7]: https://gist.github.com/a5ebb031ad2ee2bdaf00
+[1]: https://keybase.io/
+[2]: https://keybase.io/fibo
+[3]: http://en.wikipedia.org/wiki/Pretty_Good_Privacy
+[4]: https://github.com/keybase
+[5]: http://nodejs.org/
+[6]: https://keybase.io/fibo/key.asc
+[7]: https://gist.github.com/a5ebb031ad2ee2bdaf00
 
