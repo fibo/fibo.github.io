@@ -32,6 +32,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "dot-editorconfig": "^0.3.0",
     "keybase": "^0.8.25"
   }
 }
