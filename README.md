@@ -19,6 +19,14 @@ Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials a
 * [Using Sass with Jekyll](http://markdotto.com/2014/09/25/sass-and-jekyll/)
 * [Assets doc page on Jekyll website](https://jekyllrb.com/docs/assets/)
 
+A really good starting point is the [Jekyll] scaffold you obtain launching
+
+```bash
+jekyll new pippo
+```
+
+and the [minima] Jekyll theme.
+
 ### Images
 
 When editing post *2000-01-01-template.md*, create a folder *images/2000/01/template*
@@ -160,3 +168,4 @@ I use the [Artistic license](http://g14n.info/artistic-license) for Perl project
 [Jekyll]: http://jekyllrb.com "Jekyll"
 [GitHub Pages]: https://pages.github.com "GitHub Pages"
 [Sass]: http://sass-lang.com/ "Sass"
+[minima]: https://github.com/jekyll/minima "minima Jekyll theme"
