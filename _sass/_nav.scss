@@ -1,0 +1,31 @@
+/* credits: https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly */
+
+nav {}
+
+nav > a {
+  display: none;
+}
+
+nav li {
+  position: relative;
+}
+
+/* first level */
+
+nav > ul > li {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+/* second level */
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+nav li:hover ul {
+  display: block;
+}
