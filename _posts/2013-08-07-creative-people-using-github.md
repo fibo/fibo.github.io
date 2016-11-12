@@ -39,27 +39,27 @@ So the project I will consider as an example is [mrvux/dx11-vvvv-girlpower][1].
 
 Create your own copy of the repository, go to the [mrvux/dx11-vvvv-girlpower][1] repo and fork it!
 
-![ForkIt](//{{ site.domain }}/images{{ page.id }}/ForkIt.png)
+![ForkIt](/images{{ page.id }}/ForkIt.png)
 
 This will create a copy of the repo under your user namespace, for instance [fibo/dx11-vvvv-girlpower](https://github.com/fibo/dx11-vvvv-girlpower).
 
 It's time to download your own local copy, use the client and clone your repo.
 
-![CloneIt](//{{ site.domain }}/images{{ page.id }}/CloneIt.png)
+![CloneIt](/images{{ page.id }}/CloneIt.png)
 
 Just push the "Clone in Windows" button, and use the GitHub for Windows client.
 
 After you open the repo with the client, you can browse the file easily using the explorer.
 
-![OpenInExplorer](//{{ site.domain }}/images{{ page.id }}/OpenInExplorer.png)
+![OpenInExplorer](/images{{ page.id }}/OpenInExplorer.png)
 
 Add your stuff, do some modifications and then commit your work clicking the sync button. Everything will be saved to your own fork.
 
-![CommitAndSync](//{{ site.domain }}/images{{ page.id }}/CommitAndSync.png)
+![CommitAndSync](/images{{ page.id }}/CommitAndSync.png)
 
 To let vux know about your modifications, you can do a pull request.
 
-![PullRequest](//{{ site.domain }}/images{{ page.id }}/PullRequest.png)
+![PullRequest](/images{{ page.id }}/PullRequest.png)
 
 It will arrive a notification to mrvux that will merge your modifications to its master repo.
 Let me add some advice, that can seem trivial but could save a lot of time:
@@ -84,7 +84,7 @@ Soooo, if the project will go on, soon or later you will need to update your loc
 
 Don' t panic it will be really easy, just follow my indications and open a shell.
 
-![OpenShell](//{{ site.domain }}/images{{ page.id }}/OpenShell.png)
+![OpenShell](/images{{ page.id }}/OpenShell.png)
 
 Only once, you should set the mrvux/dx11-vvvv-girlpower master repository as the **upstream**. In fact if you do
 
@@ -102,9 +102,9 @@ $ git remote add upstream https://github.com/mrvux/dx11-vvvv-girlpower.git
 
 Remember, this is done only once. Now you have your **upstream** set properly
 
-![GitRemote](//{{ site.domain }}/images{{ page.id }}/GitRemote.png)
+![GitRemote](/images{{ page.id }}/GitRemote.png)
 
-So, now you can refresh your local repo with the latest goodies from the vux repo (the **upstream**) just typing 
+So, now you can refresh your local repo with the latest goodies from the vux repo (the **upstream**) just typing
 
 ```bash
 $ git pull upstream master

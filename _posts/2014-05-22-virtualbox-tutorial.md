@@ -4,7 +4,7 @@ tags:
   - Software
   - Windows
   - Virtualization
-description: > 
+description: >
     Setup an Ubuntu Server virtual machine on Windows using VirtualBox.
 ---
 
@@ -51,7 +51,7 @@ I use to create a new 8GB virtual disc in VDI format dinamically allocated.
 
 Once your VM is created and you downloaded the iso, before turning on the VM go to **Settings > Storage > Controller: IDE** , click on *Empty* and navigate to the iso path, that on my Windows laptop is *C:\store\Software\Ubuntu\ubuntu-14.04-server-amd64.iso*
 
-![mount_iso](//{{ site.domain }}/images{{ page.id }}/mount_iso.png)
+![mount_iso](/images{{ page.id }}/mount_iso.png)
 
 #### Credentials
 
@@ -67,7 +67,6 @@ hostname: box
 
 I use to disable audio and USB before installation. They are enabled by default and are not necessary on a Linux server.
 
-
 #### Networking
 
 By default **Network > Adapter 1** is enabled and *Attached to* **NAT**. That is enough to let the *guest host* see the Internet.
@@ -82,20 +81,20 @@ After installation completes, make sure to empty the CD removing the iso you set
 
 Make sure you have *gcc* and *kernel headers* installed
 
-```
-$ sudo apt-get update
-$ sudo apt-get install build-essential
-$ sudo apt-get install linux-headers-$(uname -r)
+```bash
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install linux-headers-$(uname -r)
 ```
 
 Then attach the guest additions iso image, using menu **Devices > Install Guest additions CD image**
 
 Now you can mount cdrom and install additions
 
-```
-$ sudo mount /dev/cdrom /media/cdrom
-$ cd /media/cdrom
-$ sudo ./VBoxLinuxAdditions.run
+```bash
+sudo mount /dev/cdrom /media/cdrom
+cd /media/cdrom
+sudo ./VBoxLinuxAdditions.run
 ```
 
 ## Tips
@@ -108,8 +107,8 @@ If you flag the *Auto-mount* option, Virtual box will mount it at boot on */medi
 
 Of course you can mount it wherever, launching
 
-```
-$ sudo mount -t vobxsf share /path/to/shared/folder 
+```bash
+sudo mount -t vobxsf share /path/to/shared/folder
 ```
 
 ### Change screen resolution
@@ -117,14 +116,14 @@ $ sudo mount -t vobxsf share /path/to/shared/folder
 Default terminal resolution is too small. To change it edit grub config
 
 ```bash
-$ sudo nano /etc/default/grub
+sudo nano /etc/default/grub
 ```
 
 and put `GRUB_CMDLINE_LINUX_DEFAULT="splash vga=792"`, then
 
 ```bash
-$ sudo update-grub
-$ sudo reboot
+sudo update-grub
+sudo reboot
 ```
 
 The `vga=792` corresponds to a *1024x768* resolution: see [ChangeTTYResolution](https://help.ubuntu.com/community/ChangeTTYResolution) in Ubuntu Official Documentation for parameters accepted by `vga=` flag.
@@ -134,7 +133,7 @@ The `vga=792` corresponds to a *1024x768* resolution: see [ChangeTTYResolution](
 It can be useful have a mouse in your terminal, specially for cut and paste. Just install the gpm server
 
 ```bash
-$ sudo apt-get install gpm
+sudo apt-get install gpm
 ```
 
 [ubuntu-download]: http://www.ubuntu.com/download/server

@@ -13,8 +13,6 @@ description: >
 
 Every time the AWS Elastic load balancer writes a log file, load it into RedShift.
 
-This article is still WIP, I will update it with results. By now the lambda is working and I am so excited I want to write this early draft.
-
 ## Table creation
 
 Assume there is a **sta** schema, containing staging tables.
@@ -30,19 +28,19 @@ Create the staging table that will contain the loaded log files
  * http://blogs.aws.amazon.com/bigdata/post/Tx2Z5UY685A20PL/-Using-Amazon-span-class-matches-Redshift-span-to-Analyze-Your-Elastic-Load-Bala
  */
 CREATE TABLE sta.trk_elb (
-	request_time DATETIME encode lzo,
-	elb VARCHAR(100) encode lzo,
-	client_port VARCHAR(22) encode lzo,
-	backend_port VARCHAR(22) encode lzo,
-	request_processing_time FLOAT encode bytedict,
-	backend_processing_time FLOAT encode bytedict,
-	response_processing_time FLOAT encode bytedict,
-	elb_status_code VARCHAR(3) encode lzo,
-	backend_status_code VARCHAR(3) encode lzo,
-	recieved_bytes BIGINT encode lzo,
-	sent_bytes BIGINT encode lzo,
+	request_time DATETIME ENCODE LZO,
+	elb VARCHAR(100) ENCODE LZO,
+	client_port VARCHAR(22) ENCODE LZO,
+	backend_port VARCHAR(22) ENCODE LZO,
+	request_processing_time FLOAT ENCODE BYTEDICT,
+	backend_processing_time FLOAT ENCODE BYTEDICT,
+	response_processing_time FLOAT ENCODE BYTEDICT,
+	elb_status_code VARCHAR(3) ENCODE LZO,
+	backend_status_code VARCHAR(3) ENCODE LZO,
+	recieved_bytes BIGINT ENCODE LZO,
+	sent_bytes BIGINT ENCODE LZO,
 	request VARCHAR(MAX),
-	user_agent VARCHAR(MAX) encode lzo,
+	user_agent VARCHAR(MAX) ENCODE LZO,
 	ssl_cipher VARCHAR(100),
 	ssl_protocol VARCHAR(100)
 )
@@ -58,11 +56,13 @@ really useful to deal with Lambda functions workflow.
 Create a project, run
 
 ```bash
-$ apex init
+apex init
 ```
 
 ```javascript
 var pg = require('pg')
+// TODO Set credentials properly --+----+----+----------------------------------+
+//                                 ↓    ↓    ↓                                  ↓
 var connectionString = 'postgres://user:pass@dbhost.redshift.amazonaws.com:5439/dbname'
 
 exports.handle = function (ev, ctx) {
@@ -95,7 +95,7 @@ exports.handle = function (ev, ctx) {
 No need to create a zip and uploading it, you can deploy it by launching
 
 ```bash
-$ apex deploy
+apex deploy
 ```
 
 ## Permissions
@@ -103,7 +103,7 @@ $ apex deploy
 Create a IAM role for your lambda function, something like *lamdba_s3_to_redshift_loader*
 with the following policies attached.
 
-![IAM_policies](//{{ site.domain }}/images{{ page.id }}/iam_policies.png)
+![IAM_policies](/images{{ page.id }}/iam_policies.png)
 
 Put the ARN role in your apex project.json
 
@@ -120,7 +120,7 @@ Put the ARN role in your apex project.json
 
 ## Debug
 
-Debuggin serverless code can be tricky. I found useful the following fake lambda code
+Debugging serverless code can be tricky. I found useful the following fake lambda code
 
 ```javascript
 var ev = require('./test_event.json')

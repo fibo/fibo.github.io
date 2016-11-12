@@ -32,13 +32,13 @@ and the [minima] Jekyll theme.
 When editing post *2000-01-01-template.md*, create a folder *images/2000/01/template*
 which contains all images relative to that post, then you can reference them with
 
-```
-![image_name](//{{ site.domain }}/images{{ page.id }}/image_name.jpg)
+```markdown
+![image_name](/images{{ page.id }}/image_name.jpg)
 ```
 
 ### Libs
 
-```
+```yaml
 ---
 libs:
   twemoji: true
@@ -61,10 +61,10 @@ It is highly recommended to install [Jekyll] to preview your site and avoid buil
 With [dotsoftware](http://g14n.info/dotsoftware/) it is as simple as
 
 ```bash
-$ .software_install Ruby
-$ .software_install libxml2
-$ .software_install patch
-$ .software_install Node
+.software_install Ruby
+.software_install libxml2
+.software_install patch
+.software_install Node
 ```
 
 1. Install bundler
@@ -86,10 +86,16 @@ See as a reference:
 
 ### Run Jekyll
 
-Test content generation running
+Launch server running
 
 ```bash
-jekyll serve --watch
+npm start
+```
+
+You can run it on a remote server, for example launching
+
+```bash
+npm start -- -H dev.g14n.info
 ```
 
 ## Collections
@@ -106,6 +112,8 @@ npm run readmes
 ## Software
 
 First of all, it is needed to decrypt (only once) the GitHub token
+
+**TODO** token was encrypted with keybase, I want to use plain gpg
 
 ```bash
 npm run decrypt:.gh-token

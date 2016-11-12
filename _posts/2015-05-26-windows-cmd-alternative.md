@@ -13,7 +13,7 @@ I use to put portable software in folder `C:\Portable`.
 
 ## ConEmu
 
-Download [ConEmu][1].
+Download [ConEmu].
 
 It can be installed as a portable software, as you can read in *Portable.txt*
 
@@ -24,7 +24,7 @@ that is the folder where you uncompress *ConEmu*.
 
 You will see a configuration wizard first time you run *ConEmu*, and, **yes** check the *Quake-style slide down from the to of the screen* flag.
 
-![ConEmu_fast_configuration](//{{ site.domain }}/images{{ page.id }}/ConEmu_fast_configuration.jpg)
+![ConEmu_fast_configuration](/images{{ page.id }}/ConEmu_fast_configuration.jpg)
 
 Since my default keyboard layout is Italian, I see <kbd>CTRL+ò</kbd> as the keyboard shortcut.
 It is better to change it to <kbd>CTRL+\</kbd> that is what the author meant, i.e. <kbd>CTRL+`</kbd> if you have a USA keyboard layout.
@@ -36,7 +36,7 @@ As an example, I will add *Babun*.
 
 ### Install Babun
 
-Download [Babun][2] and uncompress it.
+Download [Babun] and uncompress it.
 
 Change dir to the path where you uncompressed *Babun* and launch the installer with a custom target.
 
@@ -66,6 +66,6 @@ In *ConEmu* press <kbd>Win+Alt+P</kbd> or open settings from menu, go to *Startu
 * Task parameters: `/icon "C:\Portable\.babun\cygwin\bin\mintty.exe" /dir "C:\Portable"`
 * Commands: `C:\Portable\.babun\cygwin\bin\mintty.exe`
 
-  [1]: http://sourceforge.net/projects/conemu/ "ConEmu"
-  [2]: http://babun.github.io/ "Babun"
+[ConEmu]: http://sourceforge.net/projects/conemu/ "ConEmu"
+[Babun]: http://babun.github.io/ "Babun"
 

@@ -6,6 +6,8 @@ description: >
     About my experience as a Keybase user.
 ---
 
+**NOTA BENE** My Keybase experience ended. I am going to learn and use good old GPG, cause they [removed support to npm install keybase](https://github.com/keybase/keybase-issues/issues/2646).
+
 ## Me at Keybase
 
 Hi! I am [**fibo** at Keybase][2].
