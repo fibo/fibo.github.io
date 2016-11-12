@@ -9,13 +9,13 @@ keywords:
 
 <!-- TODO see https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly -->
 
-<nav id="nav" role="navigation">
+<nav role="navigation">
     <a href="#nav" title="Show navigation">Show navigation</a>
     <a href="#" title="Hide navigation">Hide navigation</a>
     <ul>
         <li><a href="/">Home</a></li>
         <li>
-            <a href="/" aria-haspopup="true">Blog</a>
+            <a href="/">Blog</a>
             <ul>
                 <li><a href="/">Design</a></li>
                 <li><a href="/">HTML</a></li>
@@ -24,7 +24,7 @@ keywords:
             </ul>
         </li>
         <li>
-            <a href="/" aria-haspopup="true">Work</a>
+            <a href="/">Work</a>
             <ul>
                 <li><a href="/">Web Design</a></li>
                 <li><a href="/">Typography</a></li>
