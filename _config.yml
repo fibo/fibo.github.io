@@ -32,12 +32,15 @@ sass:
   style: compressed
 
 collections:
-  projects:
-    output: true
-    permalink: ./:path.html
   licenses:
     output: true
     permalink: ./:path.html
+  projects:
+    output: true
+    permalink: ./:path.html
+  templates:
+    output: true
+    permalink: ./:collection/:path.html
 
 # Defaults
 
