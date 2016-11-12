@@ -46,11 +46,11 @@ This will produce a coverage.html file in the *cover_db/* directory.
 
 Noooooo, my *_node-perlfunc-int.t* has a red entry with a 50% ... mmh maybe because the test file is almost empty, it just checks default values.
 
-![int50](//{{ site.domain }}/images{{ page.id }}/int50.jpg)
+![int50](/images{{ page.id }}/int50.jpg)
 
 If I click on that ugly <span class="label label-danger">50.0</span>, I can see this.
 
-![int detail](//{{ site.domain }}/images{{ page.id }}/int_detail.jpg)
+![int detail](/images{{ page.id }}/int_detail.jpg)
 
 I'm going to add some tests, checking some results and for example passing wrong parameters. This is the result:
 
@@ -65,7 +65,7 @@ Result: PASS
 
 et voilà
 
-![int ok](//{{ site.domain }}/images{{ page.id }}/int_ok.jpg)
+![int ok](/images{{ page.id }}/int_ok.jpg)
 
 ## Conclusion
 
@@ -76,6 +76,6 @@ et voilà
 * [Devel::Cover][1]
 * [Devel::Cover::Tutorial][2]
 
-  [1]: https://metacpan.org/pod/Devel::Cover "Devel::Cover"
-  [2]: https://metacpan.org/pod/Devel::Cover::Tutorial "Devel::Cover::Tutorial"
+[1]: https://metacpan.org/pod/Devel::Cover "Devel::Cover"
+[2]: https://metacpan.org/pod/Devel::Cover::Tutorial "Devel::Cover::Tutorial"
 
