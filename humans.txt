@@ -6,10 +6,10 @@ layout: null
 
 /* TEAM */
 
-Mathematician + Coder: Casati Gianluca
-Site                 : g14n.info
-Contact              : casati_gianluca {at|chiocciola|arroba} yàh0Oo° dot IT`
-Location             : Milan, Italy
+Mathematician + Coder : Casati Gianluca
+Site                  : g14n.info
+Contact               : casati_gianluca {at|chiocciola|arroba} yàh0Oo° dot IT`
+Location              : Milan, Italy
 
 /* THANKS */
 
@@ -17,17 +17,9 @@ Jekyll
 GitHub
 Vim
 Slackware
-Bower
 NPM
 
 /* SITE */
 
 Standards: HTML5, SVG
 
-{% assign bower = site.data.bower %}
-Bower:
-{% for dep in bower.dependencies %}{{ dep | join ' ' }}{% endfor %}
-
-{% assign npm = site.data.package %}
-NPM:
-{% for dep in npm.dependencies %}{{ dep | join ' ' }}{% endfor %}

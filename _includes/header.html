@@ -6,16 +6,12 @@
 
 <title>{{ page.title }}</title>
 
-{% if page.title == "Homepage" %}
+{% if page.isHomepage %}
   <meta name="google-site-verification" content="{{ site.google-site-verification }}" />
 {% endif %}
 
 {% if page.libs.twemoji %}
   <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
-{% endif %}
-
-{% if page.bower.d3 %}
-  <script src="/bower_components/d3/d3.min.js"></script>
 {% endif %}
 
 {% if page.libs.katex %}

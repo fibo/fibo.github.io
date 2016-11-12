@@ -33,7 +33,7 @@ When editing post *2000-01-01-template.md*, create a folder *images/2000/01/temp
 which contains all images relative to that post, then you can reference them with
 
 ```markdown
-![image_name](/images{{ page.id }}/image_name.jpg)
+![image decription](/images{{ page.id }}/image_name.jpg)
 ```
 
 ### Libs
@@ -91,6 +91,8 @@ Launch server running
 ```bash
 npm start
 ```
+
+Then you can connect to the site served locally on http://localhost:4000 or the admin panel on http://localhost:4000/admin
 
 You can run it on a remote server, for example launching
 
