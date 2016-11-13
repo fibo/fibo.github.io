@@ -33,7 +33,7 @@ you can use an inline formula $$\forall x \in R$$ like this one
 you can use an inline formula $$\forall x \in R$$ like this one
 
 ```
-or display a centerd formula like this
+or display a centered formula like this
 
 $$
 M = \left( \begin{array}{ccc}
@@ -65,7 +65,7 @@ To let [MathJax] do its magic, add this script in your page
 For example in my thesis website I created an [_includes/lib/mathjax.html](https://github.com/fibo/Sul-problema-di-Apollonio/blob/master/_includes/lib/mathjax.html) I can use in any page with a [Jekyll] include like
 
 ```
-{{ "{% include lib/mathjax.html " }}%}`
+{{ "{% include lib/mathjax.html " }}%}
 ```
 
 **NOTA BENE** formulas are not rendered in the GitHub website but on your [GitHub Pages][gh-pages] website, emh like this one you are reading right now.
