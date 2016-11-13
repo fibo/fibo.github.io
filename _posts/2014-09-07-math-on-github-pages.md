@@ -20,7 +20,7 @@ can help other people to divulge math.
 
 ### Using MathJax
 
-This is the preferred method, cause [MathJax] is more complete than [KaTeX] and it is supported on [GitHub Pages][gh-pages], [Jekyll Math Support](https://jekyllrb.com/docs/extras/#math-support) section.
+This is the preferred method, cause [MathJax] is more complete than [KaTeX] and it is supported on [GitHub Pages][gh-pages], see [Jekyll Math Support](https://jekyllrb.com/docs/extras/#math-support) section.
 
 Just make sure you use the *kramdown* markdown processor, which is the default. If you don't know what I mean, it is ok, it means that you are using the default provided by [GitHub Pages][gh-pages] so you don't need to worry about it.
 
@@ -32,9 +32,9 @@ you can use an inline formula $$\forall x \in R$$ like this one
 
 you can use an inline formula $$\forall x \in R$$ like this one
 
-```
 or display a centered formula like this
 
+```
 $$
 M = \left( \begin{array}{ccc}
 x_{11} & x_{12} & \ldots \\
@@ -43,8 +43,6 @@ x_{21} & x_{22} & \ldots \\
 \end{array} \right)
 $$
 ```
-
-or display a centerd formula like this
 
 $$
 M = \left( \begin{array}{ccc}
@@ -147,8 +145,8 @@ it is required only for client side rendering.
 
 Now you can include the snippets in your website using [Jekyll][Jekyll] include tags
 
-* {{ "{% include math/inline/for-any-real.html " }}%}
-* {{ "{% include math/display/matrix.html " }}%}
+* `{{ "{% include math/inline/for-any-real.html " }}%}`
+* `{{ "{% include math/display/matrix.html " }}%}`
 
 [algebra]: http://g14n.info/algebra "algebra"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
