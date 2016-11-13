@@ -7,16 +7,71 @@ tags:
   - LaTeX
   - KaTeX
 description: >
-    Display math formulas on GitHub Pages using LaTeX formulas rendered server side by KaTeX.
+    Display math formulas on GitHub Pages using LaTeX. Two methods are described, one using MathJax to render formulas client side, and other using KaTeX to render formulas server side.
 libs:
   katex: true
 ---
 
 ## Goal
 
-I have been searching a process to display math formulas, written in [LaTeX][LaTeX]
+I have been searching a process to display math formulas, written in [LaTeX]
 in a website for a long time. Now I think I can share my knowledge, hoping it
 can help other people to divulge math.
+
+### Using MathJax
+
+This is the preferred method, cause [MathJax] is more complete than [KaTeX] and it is supported on [GitHub Pages][gh-pages], [Jekyll Math Support](https://jekyllrb.com/docs/extras/#math-support) section.
+
+Just make sure you use the *kramdown* markdown processor, which is the default. If you don't know what I mean, it is ok, it means that you are using the default provided by [GitHub Pages][gh-pages] so you don't need to worry about it.
+
+Just use a double dollar sign `$$` to escape [LaTeX] formulas
+
+```
+you can use an inline formula $$\forall x \in R$$ like this one
+```
+
+you can use an inline formula $$\forall x \in R$$ like this one
+
+```
+or display a centerd formula like this
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
+```
+
+or display a centerd formula like this
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
+
+To let [MathJax] do its magic, add this script in your page
+
+```html
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+```
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+For example in my thesis website I created an [_includes/lib/mathjax.html](https://github.com/fibo/Sul-problema-di-Apollonio/blob/master/_includes/lib/mathjax.html) I can use in any page with a [Jekyll] include like
+
+```
+{{ "{% include lib/mathjax.html " }}%}`
+```
+
+**NOTA BENE** formulas are not rendered in the GitHub website but on your [GitHub Pages][gh-pages] website, emh like this one you are reading right now.
+
+### Using KaTeX
+
 I am going to show how to render math snippets server side with [KaTeX][KaTeX]
 in order to import them in your [GitHub Pages][gh-pages] static web site using
 [Jekyll][Jekyll] `include` feature.
@@ -30,8 +85,6 @@ solution using MathJax and Redcarpet markdown. That solution is obsolete, I foun
 What is KaTeX?
 
 > KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering on the web.
-
-## How to
 
 Install [katex cli][katex], with [npm][npm] do
 
@@ -97,13 +150,6 @@ Now you can include the snippets in your website using [Jekyll][Jekyll] include 
 * {{ "{% include math/inline/for-any-real.html " }}%}
 * {{ "{% include math/display/matrix.html " }}%}
 
-## Structured solution
-
-Actually I am using the process explained above, for a NodeJS package. So I install
-[KaTeX cli][katex] locally, and it is declared in my package deps. There are npm scripts
-that generate snippets on every build. Check out my [algebra][algebra] NodeJS package
-code, to see how its blog is generated.
-
 [algebra]: http://g14n.info/algebra "algebra"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
 [gh-pages]: https://pages.github.com/ "GitHub Pages"
@@ -112,3 +158,4 @@ code, to see how its blog is generated.
 [npm]: https://www.npmjs.com/ "npm"
 [KaTexUsage]: https://github.com/Khan/KaTeX#usage "KaTex Usage"
 [katex]: https://www.npmjs.com/package/katex "katex cli"
+[MathJax]: https://www.mathjax.org/ "MathJax"
