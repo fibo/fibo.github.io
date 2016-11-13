@@ -1,4 +1,3 @@
-
 domain: g14n.info
 url: http://g14n.info
 name: My Digital Copybook
@@ -30,6 +29,11 @@ markdown: kramdown
 
 sass:
   style: compressed
+
+nav:
+  Home: /
+  Software: /software
+  Blog: /blog
 
 collections:
   licenses:
