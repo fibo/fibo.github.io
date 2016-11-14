@@ -227,8 +227,6 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [DigitalOcean](https://www.digitalocean.com/)
 
-[DotCloud](https://www.dotcloud.com/)
-
 [OPENSHIFT](https://www.openshift.com/)
 : The Open Hybrid Cloud Application Platform by Red Hat
 
