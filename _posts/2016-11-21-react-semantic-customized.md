@@ -63,11 +63,12 @@ git add -f semantic/.gitignore
 ```
 
 
-Enter *semantic/* folder and build it
+Enter *semantic/* folder and build CSS. You don't need to build JavaScript modules cause those
+[Semantic-UI] features are provided by [Semantic-UI-React].
 
 ```bash
 cd semantic
-gulp build
+gulp build-css
 cd ..
 ```
 
