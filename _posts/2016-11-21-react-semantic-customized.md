@@ -29,7 +29,7 @@ npm install gulp -g
 Install [Semantic-UI] and follow interactive instructions
 
 ```bash
-npm install semantic-ui --save
+npm install semantic-ui --save-dev
 ```
 
 Create a *tris3d* theme and customize it
