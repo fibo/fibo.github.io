@@ -15,7 +15,10 @@ I want to give a nice look&feed to my side project video game [tris3d] which use
 
 [![Semantic-UI-React](http://react.semantic-ui.com/logo.png)][Semantic-UI-React]
 
-## How to
+What I need is to use React components provided by integration, but, using
+a custom css to ha ve a customizable look&feel.
+
+## How to build
 
 Install gulp globally
 
@@ -53,8 +56,7 @@ Create a *semantic/.gitignore* to preserve *semantic/* folder and ignore everyth
 echo \* > semantic/.gitignore
 ```
 
-
-```
+```bash
 cat <<GITIGNORE >> .gitignore
 
 # Semantic custom files and dist.
