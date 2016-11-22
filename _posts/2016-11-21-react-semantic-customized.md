@@ -2,6 +2,7 @@
 title: React Semantic-UI customized
 tags:
   - React
+  - Semantic-UI
 description: >
     React and Semantic-UI are awesome! This article describes step by sted how to use them together and create a custom build.
 ---
@@ -43,6 +44,18 @@ cp -R semantic/src/themes/default/ semantic/src/themes/tris3d/
 ```
 
 In particular, I started changing some color in *semantic/src/themes/tris3d/globals/site.variables*.
+
+If you are not going to use the *flags* component you can remove the *images/flags.png*
+from your assets: this will save ~27kb.
+
+```bash
+rm semantic/src/themes/tris3d/assets/images/flags.png
+```
+
+Just make sure you do not select it during setup.
+
+![Semantic interactive setup](/images{{ page.id }}/semantic_setup.png)
+
 Another important trick to get started is to change images and fonts path
 
 ```diff
@@ -65,7 +78,6 @@ Create a *semantic/.gitignore* to preserve *semantic/* folder and ignore everyth
 echo \* > semantic/.gitignore
 git add -f semantic/.gitignore
 ```
-
 
 Enter *semantic/* folder and build assets and CSS. You don't need to build JavaScript modules cause those
 [Semantic-UI] features are provided by [Semantic-UI-React].
@@ -102,10 +114,11 @@ cat <<GITIGNORE >> .gitignore
 GITIGNORE
 ```
 
-To run again setup you can launch
+To force setup to run again, you can launch
 
 ```bash
-npm explore semantic-ui npm run install
+rm -rf semantic/src/definitions/
+npm explore semantic-ui gulp install
 ```
 
 Note that the dist folder *semantic/dist* can be configured in your *semantic.json* during
