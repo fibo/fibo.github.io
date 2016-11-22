@@ -29,8 +29,11 @@ npm install gulp -g
 Install [Semantic-UI] and follow interactive instructions
 
 ```bash
-npm install semantic-ui --save-dev
+npm install semantic-ui
 ```
+
+I do not recommend to use a `--save-dev` flag here, otherwise everytime you
+will run `npm install` you will be prompted into the interactive setup.
 
 Create a *tris3d* theme and customize it
 
