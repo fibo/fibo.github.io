@@ -136,7 +136,7 @@ must be served statically.
 Now that you have your custom CSS assets built with [Semantic] you just need to do
 
 ```bash
-npm install react-semantic-ui --save-dev
+npm install semantic-ui-react --save-dev
 ```
 
 and start using [Semantic-UI-React] that is really cool, trust me! As a bonus, you don't need jQuery
