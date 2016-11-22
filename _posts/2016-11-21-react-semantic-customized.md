@@ -34,6 +34,7 @@ npm install semantic-ui
 
 I do not recommend to use a `--save-dev` flag here, otherwise everytime you
 will run `npm install` you will be prompted into the interactive setup.
+Furthermore, file *semantic.json* will be generated with a `version` attribute.
 
 Create a *tris3d* theme and customize it
 
