@@ -102,6 +102,8 @@ description: >
 
 [The Roots of Lisp](http://www.cs.uml.edu/ecg/pub/uploads/OPLspr09/genesis-of-lisp-jmc.pdf)
 
+[Practical Common Lisp](http://www.gigamonkeys.com/book/)
+
 #### R
 
 [R - books](http://www.r-project.org/doc/bib/R-books.html)
