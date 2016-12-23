@@ -114,13 +114,7 @@ npm run readmes
 
 ## Software
 
-First of all, it is needed to decrypt (only once) the GitHub token
-
-**TODO** token was encrypted with keybase, I want to use plain gpg
-
-```bash
-npm run decrypt:.gh-token
-```
+First of all, it is needed to create `.gh-token` file containing a GitHub token
 
 All software I produce is on GitHub, metadata is downloaded via API with
 
