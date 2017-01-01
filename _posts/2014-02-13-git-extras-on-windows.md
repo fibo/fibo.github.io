@@ -9,7 +9,7 @@ description: >
 
 ## Installation
 
-<div class="alert alert-warning">Note that git-extras does <strong>not</strong> support Windows platform. Few commands may not work, see below.</div>
+<div class="alert warning">Note that git-extras does <strong>not</strong> support Windows platform. Few commands may not work, see below.</div>
 
 Enter Windows Git shell and launch
 
@@ -19,7 +19,7 @@ cd git-extras
 cp bin/* /libexec/git-core/
 ```
 
-Last command differs from [original installation instructions](https://github.com/tj/git-extras/wiki/Commands#installation). Launching `make install` which will not work even if you install [make for Windows][4]. 
+Last command differs from [original installation instructions](https://github.com/tj/git-extras/wiki/Commands#installation). Launching `make install` which will not work even if you install [make for Windows][make].
 
 I just copy bins where are located Windows Git shell ones. It seems tough but it works, and enables autocompletion too.
 
@@ -27,12 +27,12 @@ I just copy bins where are located Windows Git shell ones. It seems tough but it
 
 Not all commands will work, for example `git extras` will fail cause `man` is not installed.
 The *It works* flag will be added as soon as I will try commands.
-Click on the command to read its documentation on [git-extras][3] *Readme.md*.
+Click on the command to read its documentation on [git-extras] *Readme.md*.
 
 | Command                                                                                        | It works |
 |------------------------------------------------------------------------------------------------|----------|
 |[git-extras](https://github.com/tj/git-extras/wiki/Commands#git-extras-1)                            |✗|
-|[git-gh-pages](https://github.com/tj/git-extras/wiki/Commands#git-gh-pages)                          |✓|    
+|[git-gh-pages](https://github.com/tj/git-extras/wiki/Commands#git-gh-pages)                          |✓|
 |[git-feature](https://github.com/tj/git-extras/wiki/Commands#git-featurerefactorbug-finish-name)     |✓|
 |[git-contrib](https://github.com/tj/git-extras/wiki/Commands#git-contrib-author)                     |✓|
 |[git-summary](https://github.com/tj/git-extras/wiki/Commands#git-summary)                            |✓|
@@ -60,6 +60,6 @@ Click on the command to read its documentation on [git-extras][3] *Readme.md*.
 |[git-archive-file](https://github.com/tj/git-extras/wiki/Commands#git-archive-file)                  | |
 
 
-  [3]: https://github.com/tj/git-extras
-  [4]: http://gnuwin32.sourceforge.net/packages/make.htm
+[git-extras]: https://github.com/tj/git-extras
+[make]: http://gnuwin32.sourceforge.net/packages/make.htm
 

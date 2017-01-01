@@ -6,8 +6,8 @@ description: >
     This is a straightforward Node.js installation, just copy and paste the commands in your shell prompt. Root permissions are not required!
 ---
 
-<g14n-alert-warning>The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
-</g14n-alert-warning>
+<div class="alert warning">The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
+</div>
 
 
 * [Get it](#get-it)

@@ -13,7 +13,7 @@ In this article I write what I do when I get a Linux server. Steps are really mi
 
 ## ASAP
 
-<div class="alert alert-warning">Do the following steps <strong>As Soon As Possible</strong>, i.e. when you access the server the first time.</div>
+<div class="alert warning">Do the following steps <strong>As Soon As Possible</strong>, i.e. when you access the server the first time.</div>
 
 1. Login as root and change password, use a *passphrase*.
 2. Create a new user.
