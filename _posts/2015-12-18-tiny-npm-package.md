@@ -24,7 +24,7 @@ The repository contains the following files:
 * [index.js](#index-js)
 * [test.js](#test-js)
 
-<div class="alert alert-info">This is just a starting point, it can grows for example adding folders <em>src/</em> and <em>test/</em> or adding services like travis or coveralls.</div>
+<div class="alert info">This is just a starting point, it can grows for example adding folders <em>src/</em> and <em>test/</em> or adding services like travis or coveralls.</div>
 
 ### Debug
 

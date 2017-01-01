@@ -14,7 +14,7 @@ It is a common pattern: customers let me develop on hosts that **cannot access I
 
 In this article *host.customer.com* is that kind of host, and of course it is needed a *myhost.example.org* that can connect to Internet or at least to a CPAN mirror.
 
-<div class="alert alert-info">If you want a full featured tool, consider using <a href="https://metacpan.org/pod/Pinto">Pinto</a> or <a href="https://metacpan.org/pod/Carton">Carton</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
+<div class="alert info">If you want a full featured tool, consider using <a href="https://metacpan.org/pod/Pinto">Pinto</a> or <a href="https://metacpan.org/pod/Carton">Carton</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
 
 ## Requirements
 
@@ -25,7 +25,7 @@ It is nice to have [A CPAN client that works like a charm][1].
 
 ## Implementation
 
-<div class="alert alert-info">The trick is to realize that <em>~/.cpan/sources</em> is a mini CPAN mirror with all dependencies needed.</div>
+<div class="alert info">The trick is to realize that <em>~/.cpan/sources</em> is a mini CPAN mirror with all dependencies needed.</div>
 
 So install everything you need with your *cpan* client on *myhost.example.org*. I usually have a *Makefile.PL* that includes all dependencies information, it is a good idea.
 

@@ -38,7 +38,7 @@ echo Do not forget to edit your environment {{ site.url }}{% post_url 2013-01-21
 echo Happy coding!
 ```
 
-<div class="alert alert-danger"><p>If it is the first time you install <a href="http://nodejs.org/">Node.js</a> for that user in that host, go to <a href="#edit-your-environment">Edit your environment</a> section, otherwise you will miss <em>node</em> binary in your <em>PATH</em>.</p></div>
+<div class="alert danger"><p>If it is the first time you install <a href="http://nodejs.org/">Node.js</a> for that user in that host, go to <a href="#edit-your-environment">Edit your environment</a> section, otherwise you will miss <em>node</em> binary in your <em>PATH</em>.</p></div>
 
 Note that, before launching commands, you can set *NODEJS_ROOT* environment variable to point to your target location otherwise it will default to *~/nodejs*.
 

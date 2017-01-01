@@ -134,7 +134,7 @@ cpan> o conf auto_commit 1
 
 <div class="alert warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
 
-<div class="alert alert-danger">
+<div class="alert danger">
 Note that <em>auto_commit</em> is disabled by default, so you should launch <strong>o conf commit</strong> to confirm configuration changes.
 </div>
 

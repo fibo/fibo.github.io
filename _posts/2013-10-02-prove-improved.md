@@ -10,13 +10,13 @@ description: >
 
 ## Overview
 
-Instead of using a bare `prove` command to launch your Perl tests, I think it is really useful using  
+Instead of using a bare `prove` command to launch your Perl tests, I think it is really useful using
 
 ```bash
 $ prove --state=save
 ```
 
-that will run your tests, remembering which ones are failing, and  
+that will run your tests, remembering which ones are failing, and
 
 ```bash
 $ prove --state=failed,save
@@ -24,13 +24,13 @@ $ prove --state=failed,save
 
 that will run only those that failed.
 
-You can use this feature when you are writing a Perl module, but, I found another interesting use case. 
+You can use this feature when you are writing a Perl module, but, I found another interesting use case.
 
 > When I login, I want to know that everything is ok!
 
 Yes, you should check everything you need to be up and running: database connections, ssh key exchanges, software dependencies, scripts compilation, anything you want to rely on.
 
-Don't worry, at login only failed tests will run so you don't have to wait till all your test suite will finish. 
+Don't worry, at login only failed tests will run so you don't have to wait till all your test suite will finish.
 
 ## How to setup
 
@@ -63,7 +63,7 @@ t/
 
 #### In your home dir
 
-Create a .proverc file with the following content.  
+Create a .proverc file with the following content.
 
 ```
 ## see prove -H for full options list
@@ -92,7 +92,7 @@ Add this line to your crontab
 
 ## Create some tests
 
-Now it's time to fill your *t/* folder with tests, you can start with a simple one: *t/01_compile_scripts.t*. It checks that every Perl script in the *bin/* folder compiles. It has the following content.  
+Now it's time to fill your *t/* folder with tests, you can start with a simple one: *t/01_compile_scripts.t*. It checks that every Perl script in the *bin/* folder compiles. It has the following content.
 
 ```perl
 use strict;
@@ -103,7 +103,7 @@ use Test::Compile;
 all_pl_files_ok();
 ```
 
-Of course you should install that required module.  
+Of course you should install that required module.
 
 ```bash
 $ cpan Test::Compile
@@ -127,7 +127,7 @@ done_testing;
 
 Here we go ... we started writing tests for every feature we add.
 
-<div class="alert alert-danger">Please <strong>don't get addicted</strong> :)</div>
+<div class="alert danger">Please <strong>don't get addicted</strong> :)</div>
 
 ## Conclusion
 

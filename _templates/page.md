@@ -1,6 +1,6 @@
 ---
-layout: common/singlepage
-title: Single page
+layout: common/page
+title: Page
 description: example
 keywords:
   - pizza
@@ -24,8 +24,17 @@ nav:
 
 Lorem ipsum [link to homepage](http://g14n.info).
 
-```
-code
+<time datetime="2016-11-21" class="badge">Nov 21 2016</time>
+
+```c
+/* Hello World program */
+
+#include<stdio.h>
+
+main()
+{
+    printf("Hello World");
+}
 ```
 
 List:
@@ -40,5 +49,14 @@ Ordered list:
 2. mafia
 3. mandolino
 
+<span class="badge danger">Danger</span>
+<span class="badge info">Info</span>
+<span class="badge success">Info</span>
+<span class="badge warning">Warning</span>
+
 <button>Button</button>
 
+<div class="alert danger">Danger</div>
+<div class="alert info">Info</div>
+<div class="alert success">Info</div>
+<div class="alert warning">Warning</div>
