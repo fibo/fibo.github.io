@@ -7,6 +7,7 @@ description: >
 ---
 
 <div class="alert alert-warning">The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
+</div>
 
 
 * [Get it](#get-it)
@@ -50,7 +51,7 @@ Note that, before launching commands, you can set *NODEJS_ROOT* environment vari
 Choose your local folder, wherever you have enough space and read/write rights. Set a *NODEJS_ROOT* environment variabile, so you can use it during installation process.
 
 ```bash
-$ NODEJS_ROOT=~/nodejs # or whatever
+NODEJS_ROOT=~/nodejs # or whatever
 ```
 
 <a name="#get-it"></a>
@@ -62,8 +63,8 @@ Go to a temporary folder, */tmp* for instance and get latest [Node.js][1] source
 You will see a *node-vX.Y.Z* folder, that is *node-v0.8.17* right now, containing the latest [Node.js][1] sources. The `-N` flag, will overwrite file and download it only if it is newer.
 
 ```bash
-$ cd /tmp
-$ wget -N http://nodejs.org/dist/node-latest.tar.gz && tar xzf node-latest.tar.gz
+cd /tmp
+wget -N http://nodejs.org/dist/node-latest.tar.gz && tar xzf node-latest.tar.gz
 ```
 
 <a name="#build-it"></a>
@@ -73,10 +74,10 @@ $ wget -N http://nodejs.org/dist/node-latest.tar.gz && tar xzf node-latest.tar.g
 Now, figure out what is current version so you can point to the target directory (a.k.a. **prefix**) and compile [Node.js][1] sources.
 
 ```bash
-$ NODEJS_CURRENT=$(tar tf node-latest.tar.gz|head -1)
-$ mkdir -p $NODEJS_ROOT/$NODEJS_CURRENT
-$ cd $NODEJS_CURRENT
-$ ./configure --prefix=$NODEJS_ROOT/$NODEJS_CURRENT && make install
+NODEJS_CURRENT=$(tar tf node-latest.tar.gz|head -1)
+mkdir -p $NODEJS_ROOT/$NODEJS_CURRENT
+cd $NODEJS_CURRENT
+./configure --prefix=$NODEJS_ROOT/$NODEJS_CURRENT && make install
 ```
 
 <a name="#update-it"></a>
@@ -86,9 +87,9 @@ $ ./configure --prefix=$NODEJS_ROOT/$NODEJS_CURRENT && make install
 When compilation ends successful, update or create a simbolic link to your current installation. This will make it easier to upgrade to next version.
 
 ```bash
-$ cd $NODEJS_ROOT
-$ rm current 2> /dev/null # Removes current symbolic link, if any
-$ ln -s $NODEJS_CURRENT current
+cd $NODEJS_ROOT
+rm current 2> /dev/null # Removes current symbolic link, if any
+ln -s $NODEJS_CURRENT current
 ```
 
 ### Edit your environment
@@ -98,8 +99,9 @@ $ ln -s $NODEJS_CURRENT current
 Add permanently *NODEJS_ROOT* variable to your environment, and add *node* and *npm* binaries to your *PATH*. This is one way to do it:
 
 ```bash
-$ echo "export NODEJS_ROOT=$NODEJS_ROOT"            >> $HOME/.bash_profile
-$ echo 'export PATH=$NODEJS_ROOT/current/bin:$PATH' >> $HOME/.bash_profile
-$ source $HOME/.bash_profile # reload your env, so you can use node right now
+echo "export NODEJS_ROOT=$NODEJS_ROOT"            >> $HOME/.bash_profile
+echo 'export PATH=$NODEJS_ROOT/current/bin:$PATH' >> $HOME/.bash_profile
+source $HOME/.bash_profile # reload your env, so you can use node right now
 ```
 
+[1]: https://nodejs.org/it/ "Node.js"
