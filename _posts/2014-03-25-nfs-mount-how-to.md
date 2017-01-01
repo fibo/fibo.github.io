@@ -27,7 +27,7 @@ Connect to *host1.example.org*, that is our source host.
 
 ### NFS service
 
-<div class="alert alert-info">I assume here that source host has Red Hat OS.</div>
+<div class="alert info">I assume here that source host has Red Hat OS.</div>
 
 First of all, start NFS service
 

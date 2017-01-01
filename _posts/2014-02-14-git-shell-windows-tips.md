@@ -46,7 +46,7 @@ $ curl -o /share/vim/vim73/colors/desert.vim https://vim.googlecode.com/hg/runti
 $ echo colorscheme desert >> $HOME/_vimrc
 ```
 
-<div class="alert alert-success">Ok, you are done!</div>
+<div class="alert success">Ok, you are done!</div>
 
 If you use vim as editor for everything, like me, you can use this trick. Since git shell uses vim73, and **of course** I have vim74 I added this to the bottom of my *_vimrc*
 

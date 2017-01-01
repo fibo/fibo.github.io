@@ -30,7 +30,7 @@ SQL>
 
 Type `quit` to exit. But remember that,
 
-<div class="alert alert-info">Oracle Instant Client right version depends only on your host Operating System version.</div>
+<div class="alert info">Oracle Instant Client right version depends only on your host Operating System version.</div>
 
 I'm going to put files under `$HOME/opt/Oracle` and store the *.zip* in the packages folder, so here there are my files
 
@@ -71,11 +71,11 @@ else
 fi
 ```
 
-<div class="alert alert-danger">Anyway avoid set <em>LD_LIBRARY_PATH</em> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
+<div class="alert danger">Anyway avoid set <em>LD_LIBRARY_PATH</em> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
 
 Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn't complete a working installation without it.
 
-<div class="alert alert-info">
+<div class="alert info">
 Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as <em>LIBRARY_PATH=$ORACLE_HOME/lib</em>.
 </div>
 

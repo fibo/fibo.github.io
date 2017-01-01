@@ -10,7 +10,7 @@ description: >
 
 After changing your html, css and js files, you don't need to refresh your browser to see changes.
 
-<div class="alert alert-info">Your page will <strong>magically</strong> change, as you save your files!</div>
+<div class="alert info">Your page will <strong>magically</strong> change, as you save your files!</div>
 
 ## Requirements
 
@@ -52,10 +52,10 @@ Now, if you launch
 $ grunt
 ```
 
-<div class="alert alert-success">Your browser will open, and the window will change <strong>as soon as</strong> you modify your files.</div>
+<div class="alert success">Your browser will open, and the window will change <strong>as soon as</strong> you modify your files.</div>
 
 
-  [1]: http://gruntjs.com/
-  [2]: http://livereload.com/
-  [3]: http://coffeescript.org/
+[1]: http://gruntjs.com/
+[2]: http://livereload.com/
+[3]: http://coffeescript.org/
 
