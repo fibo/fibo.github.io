@@ -34,24 +34,24 @@ The only customization I **strongly recommend** is to check the *Run Git from Wi
 
 ## Configuration
 
-<div class="alert alert-warning">All the following commands should be launched from a <strong>git shell</strong>.</div>
+<div class="alert warning">All the following commands should be launched from a <strong>git shell</strong>.</div>
 
 ### Basics
 
 First of all, know your current configuration.
 
 ```bash
-$ git config --list
+git config --list
 ```
 
 Add your user info, for instance
 
 ```bash
-$ git config --global user.email "casati_gianluca@yahoo.it"
+git config --global user.email "casati_gianluca@yahoo.it"
 $ git config --global user.name "fibo"
 ```
 
-I really recommend you to flag the *quick edit mode* option on your prompt preferences. It will enable right mouse button to paste, otherwise you can use <kbd>Shift+INS</kbd>.  
+I really recommend you to flag the *quick edit mode* option on your prompt preferences. It will enable right mouse button to paste, otherwise you can use <kbd>Shift+INS</kbd>.
 
 ![Git bash properties][3]
 
@@ -66,10 +66,10 @@ This step is not required, but, it is really usefull. You can generate an ssh ke
 You need an ssh key if you want to authenticate easily on a [web-based hosting service](http://en.wikipedia.org/wiki/Shared_web_hosting_service), like [GitHub][4].
 
 ```bash
-$ ssh-keygen -t rsa -C "casati_gianluca@yahoo.it"
+ssh-keygen -t rsa -C "casati_gianluca@yahoo.it"
 ```
 
-By now I just hit enter three times, even when prompted for a passphrase. 
+By now I just hit enter three times, even when prompted for a passphrase.
 
 For more information about passphrase see: [Working with SSH key passphrases](https://help.github.com/articles/working-with-ssh-key-passphrases).
 
@@ -78,12 +78,12 @@ For more information about passphrase see: [Working with SSH key passphrases](ht
 You need to copy the content of you id_rsa.pub. The easiset way to copy it, if you have the **clip.exe** command is
 
 ```bash
-$ clip < $HOME/.ssh/id_rsa.pub
+clip < $HOME/.ssh/id_rsa.pub
 ```
 
 which will copy your public key to the clipboard so you can edit your hosting service's account preferences and paste it after you add a new ssh key.
 
-For example, on [GitHub][4] is under the [SSH keys profile settings menu](https://github.com/settings/ssh). 
+For example, on [GitHub][4] is under the [SSH keys profile settings menu](https://github.com/settings/ssh).
 
 #### Check it
 
@@ -100,7 +100,7 @@ Hi fibo! You've successfully authenticated, but GitHub does not provide shell ac
 cess.
 ```
 
-or even 
+or even
 
 ```bash
 $ ssh -T git@bitbucket.org
@@ -108,12 +108,12 @@ conq: logged in as fibo.
 You can use git or hg to connect to Bitbucket. Shell access is disabled.
 ```
 
-<div class="alert alert-warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
- 
+<div class="alert warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
+
 Read [Bypass restrictive firewall settings]({% post_url 2014-02-14-git-shell-windows-tips %}#bypass-restrictive-firewall-settings) instructions to work around it.
 
-  [1]: http://git-scm.com/images/logo@2x.png
-  [2]: https://lh6.googleusercontent.com/_O0nduo4l74xVtUf_0kvwdo1x5S5LKUIUPkJrJIuxJ8=s0 "Git setup"
-  [3]: https://lh6.googleusercontent.com/0CCA8zW8bPiL4238EDEpIfLvxQGKlW50zumiH7YxFKQ=s0 "Git bash properties"
-  [4]: https://github.com/
+[1]: http://git-scm.com/images/logo@2x.png
+[2]: https://lh6.googleusercontent.com/_O0nduo4l74xVtUf_0kvwdo1x5S5LKUIUPkJrJIuxJ8=s0 "Git setup"
+[3]: https://lh6.googleusercontent.com/0CCA8zW8bPiL4238EDEpIfLvxQGKlW50zumiH7YxFKQ=s0 "Git bash properties"
+[4]: https://github.com/
 

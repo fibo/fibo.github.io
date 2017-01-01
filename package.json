@@ -5,7 +5,6 @@
   "homepage": "http://g14n.info",
   "private": true,
   "scripts": {
-    "browserify:components": "browserify -t riotify -o js/components.js src/components/index.js",
     "build": "npm run cp; npm run readmes; npm run data",
     "cp": "npm run cp:metadata",
     "cp:metadata": "npm run cp:metadata:package.json",
@@ -32,9 +31,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "dot-editorconfig": "^0.3.0",
-    "riot": "^3.0.5",
-    "riotify": "^2.0.0"
+    "dot-editorconfig": "^0.3.0"
   }
 }

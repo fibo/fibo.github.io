@@ -8,7 +8,7 @@ description: >
 
 <div class="alert alert-info">This is a <strong>naïve</strong> implementation. Probably will be improved in the future. I really don't know how it is implemented GitHub backend and I don't pretend to achieve such a level of complexity. I only need a simple structure for a server where I host some git repos.</div>
 
-<div class="alert alert-warning">This article does <strong>not</strong> contain web interface setup instructions.</div>
+<div class="alert warning">This article does <strong>not</strong> contain web interface setup instructions.</div>
 
 ## Structure
 

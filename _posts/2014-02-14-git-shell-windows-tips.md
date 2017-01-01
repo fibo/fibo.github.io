@@ -9,7 +9,7 @@ description: >
 
 ## Requirements
 
-<div class="alert alert-warning">I assume your Windows Git shell is installed and properly configured.</div>
+<div class="alert warning">I assume your Windows Git shell is installed and properly configured.</div>
 
 See [Getting started with Git shell on Windows][1] before reading this article.
 
@@ -179,6 +179,6 @@ For more information see: [Using SSH over the HTTPS port](https://help.github.co
 *Git shell* gives you the power of [find](http://en.wikipedia.org/wiki/Find) command-line utility on Windows!
 
 
-  [1]: {% post_url 2013-04-27-getting-started-with-git-shell %}
-  [2]: https://github.com/
+[1]: {% post_url 2013-04-27-getting-started-with-git-shell %}
+[2]: https://github.com/
 

@@ -18,7 +18,7 @@ In this article *host.customer.com* is that kind of host, and of course it is ne
 
 ## Requirements
 
-<div class="alert alert-warning">I assume both hosts has same OS and Perl version for simplicity. In particular, different versions of Perl can lead to issues when resolving dependencies on core modules.</div>
+<div class="alert warning">I assume both hosts has same OS and Perl version for simplicity. In particular, different versions of Perl can lead to issues when resolving dependencies on core modules.</div>
 
 Start on *myhost.example.org*: you need a working *cpan* client that had at least a [first run]({% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}#first-run).
 It is nice to have [A CPAN client that works like a charm][1].

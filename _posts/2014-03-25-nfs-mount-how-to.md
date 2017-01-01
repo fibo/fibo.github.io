@@ -18,7 +18,7 @@ I like to use for the target folder the following naming convention
 
 Of course, the target folder **must** exist on target hosts and it is assumed that there is a route from source to target.
 
-<div class="alert alert-warning">All commands must be run with <strong>root</strong> privileges.</div>
+<div class="alert warning">All commands must be run with <strong>root</strong> privileges.</div>
 
 
 ## Source host

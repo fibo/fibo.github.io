@@ -42,17 +42,17 @@ sqlplus-10.2.0.5.0-linux-x64.zip
 ```
 
 ```bash
-$ cd $HOME/opt/Oracle
-$ unzip packages/basic-10.2.0.5.0-linux-x64.zip
-$ unzip packages/sdk-10.2.0.5.0-linux-x64.zip
-$ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
+cd $HOME/opt/Oracle
+unzip packages/basic-10.2.0.5.0-linux-x64.zip
+unzip packages/sdk-10.2.0.5.0-linux-x64.zip
+unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
 ```
 
 ### Setup your environment
 
 I use to create a *.oracle_profile* with environment variables I need, so I can source it from *.bash_profile* or from another session (for example from a CPAN shell, see below).
 
-<div class="alert alert-warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
+<div class="alert warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
 
 ```bash
 $ cat $HOME/.oracle_profile
@@ -83,14 +83,14 @@ Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy
 
 `TNS_ADMIN` is the directory where you put your *tnsadmin.ora*, since we are not pointing to an Oracle server installation, we probably need also our own tns configuration.
 
-<div class="alert alert-warning">Don' t forget to source it from your <em>.bash_profile</em>!</div>
+<div class="alert warning">Don' t forget to source it from your <em>.bash_profile</em>!</div>
 
 ### Latest DBI
 
 Configure [A CPAN client that works like a charm][2] and install latest DBI
 
 ```bash
-$ cpan DBI
+cpan DBI
 ```
 
 ## Installation
@@ -100,9 +100,9 @@ $ cpan DBI
 Download latest version of [DBD::Oracle][1] CPAN module, right now it is *DBD-Oracle-1.64.tar.gz*: you can download it manually from CPAN, untar it and cd into it
 
 ```bash
-$ wget http://search.cpan.org/CPAN/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.64.tar.gz
-$ tar xzf DBD-Oracle-1.64.tar.gz
-$ cd DBD-Oracle-1.64
+wget http://search.cpan.org/CPAN/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.64.tar.gz
+tar xzf DBD-Oracle-1.64.tar.gz
+cd DBD-Oracle-1.64
 ```
 
 or just open a cpan shell and type
@@ -118,20 +118,20 @@ Working directory is /home/wa/.cpan/build/DBD-Oracle-1.64-KIWHyH
 Now you can source the *.oracle_profile* you created, to load the environment variables.
 
 ```bash
-$ source $HOME/.oracle_profile
+source $HOME/.oracle_profile
 ```
 
 Check at least that sqlplus is working
 
 ```bash
-$ sqlplus /nolog
+sqlplus /nolog
 ```
 
 If you see a `SQL> prompt`, it means your installation have good chances to complete successfully. If not, probably you picked up an Oracle Instant Client version that is not compatible with your Operating System.
 Create a log dir in your `$ORACLE_HOME`, otherwise you will find Oracle logs in your home dir.
 
 ```bash
-$ mkdir $ORACLE_HOME/log
+mkdir $ORACLE_HOME/log
 ```
 
 ### Compile
@@ -139,8 +139,8 @@ $ mkdir $ORACLE_HOME/log
 Now, clean your mind and pray the mantra
 
 ```bash
-$ perl Makefile.PL
-$ make
+perl Makefile.PL
+make
 ```
 
 #### Troubleshooting
@@ -165,7 +165,7 @@ $ ls $ORACLE_HOME/libclntsh.so*
 for instance *libclntsh.so.10.1*, and then link it to the shared lib *ld* need to compile
 
 ```bash
-$ ln -s $ORACLE_HOME/libclntsh.so.11.1 $ORACLE_HOME/libclntsh.so
+ln -s $ORACLE_HOME/libclntsh.so.11.1 $ORACLE_HOME/libclntsh.so
 ```
 
 Now try again [compile steps](#compile).
@@ -175,16 +175,16 @@ Now try again [compile steps](#compile).
 Run tests, it is always a good idea! But set the `ORACLE_USERID` and  `ORACLE_DSN` env vars, otherwise it probably will default to `scott/tiger` and `dbi:Oracle:testdb` hence will fail (unless you have a brand new Oracle installation with the famous `scott/tiger` still around :).
 
 ```bash
-$ export ORACLE_USERID=pippo/password123
-$ export ORACLE_DSN='dbi:Oracle:mydsn'
+export ORACLE_USERID=pippo/password123
+export ORACLE_DSN='dbi:Oracle:mydsn'
 
-$ make test
+make test
 ```
 
 And finally
 
 ```bash
-$ make install
+make install
 ```
 
 #### Unit test
@@ -192,11 +192,11 @@ $ make install
 If some tests fails or you want to check connectivity to one or more databases to be sure the installation will not be useless, here it is a simple test you can fill with your credentials and run launching
 
 ```bash
-$ prove oracle.t
+prove oracle.t
 ```
 
 {% gist fibo/5901819 oracle.t %}
 
-  [1]: https://metacpan.org/release/DBD-Oracle
-  [2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
+[1]: https://metacpan.org/release/DBD-Oracle
+[2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
 

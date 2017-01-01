@@ -79,7 +79,7 @@ $ cd ~/perl5/lib/perl5
 $ perl -Mlocal::lib >> ~/.bash_profile
 $ source ~/.bash_profile # or reconnect
 ```
- 
+
 ### Help
 
 Just type **h** in a *cpan* shell
@@ -132,7 +132,7 @@ Always commit changes to config variables to disk.
 cpan> o conf auto_commit 1
 ```
 
-<div class="alert alert-warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
+<div class="alert warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
 
 <div class="alert alert-danger">
 Note that <em>auto_commit</em> is disabled by default, so you should launch <strong>o conf commit</strong> to confirm configuration changes.

@@ -78,7 +78,7 @@ then source it
 $ source $HOME/.bash_profile
 ```
 
-<div class="alert alert-warning">Note that the <em>USER_MEM_ARGS</em> depends on how many RAM your host has. The configuration above worked for me, but, remember that I am a WebLogic newbie.</div>
+<div class="alert warning">Note that the <em>USER_MEM_ARGS</em> depends on how many RAM your host has. The configuration above worked for me, but, remember that I am a WebLogic newbie.</div>
 
 Launch WebLogic *configure.sh*
 

@@ -11,7 +11,7 @@ description: >
 Do you have an npm account? If not, create it on [npm site][1], then run
 
 ```
-$ npm login
+npm login
 ```
 
 insert your authentication credentials, and you are ready to start!
@@ -24,7 +24,7 @@ This is your choice, but, if you want to follow what seems to be a *de facto* st
 
 I assume the repo and the package have the same name.
 
-<div class="alert alert-warning">Note that npm will <strong>not</strong> accept uppercase letters in package names.</div>
+<div class="alert warning">Note that npm will <strong>not</strong> accept uppercase letters in package names.</div>
 
 I use only letters, numbers, and hyphens. No *-js* suffix.
 
@@ -49,7 +49,7 @@ cd tris3d
 ```
 
  and create an npm package.
- 
+
 ## Create a package.json
 
 From your repo folder, just run
@@ -157,9 +157,9 @@ docs/
 * [npm-developers][4]
 
 
-  [1]: https://npmjs.org/
-  [2]: https://github.com/
-  [3]: https://lh4.googleusercontent.com/Y0V5ArmaIFawdLp8SqVShPPzNzy5wonuLVsqeaBFdBE=s0 "New GitHub repo"
-  [4]: https://www.npmjs.org/doc/misc/npm-developers.html "npm-developers"
-  [5]: https://npmjs.org/doc/json.html
+[1]: https://npmjs.org/
+[2]: https://github.com/
+[3]: https://lh4.googleusercontent.com/Y0V5ArmaIFawdLp8SqVShPPzNzy5wonuLVsqeaBFdBE=s0 "New GitHub repo"
+[4]: https://www.npmjs.org/doc/misc/npm-developers.html "npm-developers"
+[5]: https://npmjs.org/doc/json.html
 
