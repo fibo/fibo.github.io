@@ -37,6 +37,8 @@ main()
 }
 ```
 
+## Lists
+
 List:
 
 * pizza
@@ -49,14 +51,20 @@ Ordered list:
 2. mafia
 3. mandolino
 
-<span class="badge danger">Danger</span>
-<span class="badge info">Info</span>
-<span class="badge success">Info</span>
-<span class="badge warning">Warning</span>
-
 <button>Button</button>
 
+## Alerts
+
+<div class="alert">Default</div>
 <div class="alert danger">Danger</div>
 <div class="alert info">Info</div>
 <div class="alert success">Info</div>
 <div class="alert warning">Warning</div>
+
+## Badges
+
+<span class="badge">Default</span>
+<span class="badge danger">Danger</span>
+<span class="badge info">Info</span>
+<span class="badge success">Success</span>
+<span class="badge warning">Warning</span>

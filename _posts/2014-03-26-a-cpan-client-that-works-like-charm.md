@@ -58,7 +58,7 @@ otherwise read [Troubleshooting](#troubleshooting) if you had problems during in
 
 ### Troubleshooting
 
-<span class="label label-danger">ATTENTION</span>
+<span class="badge danger">ATTENTION</span>
 
 Two things could not work: network *or* permissions.
 
@@ -112,7 +112,7 @@ cpan> o conf init urllist
 
 #### Get CPAN latest version
 
-<span class="label label-danger">STRONGLY RECOMMENDED</span>
+<span class="badge danger">STRONGLY RECOMMENDED</span>
 
 First of all, make sure you have *CPAN.pm* module updated to latest version
 
@@ -124,7 +124,7 @@ cpan> reload CPAN
 
 #### Autocommit
 
-<span class="label label-info">OPTIONAL</span>
+<span class="badge info">OPTIONAL</span>
 
 Always commit changes to config variables to disk.
 
@@ -140,7 +140,7 @@ Note that <em>auto_commit</em> is disabled by default, so you should launch <str
 
 #### Command number in prompt
 
-<span class="label label-default">PERSONAL</span>
+<span class="badge">PERSONAL</span>
 
 Disable the command number in the prompt.
 
@@ -150,7 +150,7 @@ cpan> o conf commandnumber_in_prompt 0
 
 #### Enable history
 
-<span class="label label-warning">RECOMMENDED</span>
+<span class="badge warning">RECOMMENDED</span>
 
 You need to install the following modules
 
@@ -160,7 +160,7 @@ cpan> install Term::ReadLine::Perl Term::ReadKey
 
 #### YAML
 
-<span class="label label-warning">RECOMMENDED</span>
+<span class="badge warning">RECOMMENDED</span>
 
 Install [YAML](http://search.cpan.org/~ingy/YAML/) Perl module
 
@@ -182,7 +182,7 @@ cpan> o conf yaml_module YAML::XS
 
 #### LWP
 
-<span class="label label-warning">RECOMMENDED</span>
+<span class="badge warning">RECOMMENDED</span>
 
 Make sure [LWP](http://search.cpan.org/~gaas/libwww-perl/) is installed and up to date
 
@@ -194,7 +194,7 @@ so *cpan* will use it to fetch files from Internet.
 
 #### CPAN::SQLite
 
-<span class="label label-info">OPTIONAL</span>
+<span class="badge info">OPTIONAL</span>
 
 *CPAN::SQLite* is a layer between the index files that are downloaded
 from the *CPAN* and *CPAN.pm* that speeds up metadata queries and reduces memory consumption of *CPAN.pm* considerably.
@@ -211,7 +211,7 @@ cpan> o conf use_sqlite yes
 
 #### Build prerequisites automatically
 
-<span class="label label-warning">RECOMMENDED</span>
+<span class="badge warning">RECOMMENDED</span>
 
 The *CPAN.pm* module can detect when a module which you are trying to build depends on prerequisites. If this happens, I prefer it builds the prerequisites automatically instead of asking for confirmation.
 
@@ -224,7 +224,7 @@ cpan> o conf build_requires_install_policy yes
 
 #### Enable colors
 
-<span class="label label-default">PERSONAL</span>
+<span class="badge default">PERSONAL</span>
 
 ```
 cpan> o conf colorize_output yes
@@ -241,7 +241,7 @@ cpan> o conf init /colorize/
 
 #### Character set
 
-<span class="label label-default">PERSONAL</span>
+<span class="badge default">PERSONAL</span>
 
 In general, *CPAN* is English speaking territory, so the character set does not matter much but some modules have names that are outside the ASCII range. Since my terminal supports *UTF-8*, I set
 

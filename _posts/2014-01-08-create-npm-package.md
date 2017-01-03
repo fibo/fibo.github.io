@@ -39,19 +39,16 @@ Create a new repository, for instance *tris3d*
 
 ![create repo][3]
 
-Ok, this is the **next level**. use [git hub](https://github.com/ingydotnet/git-hub) to
+Ok, this is the **next level**. Use [git hub](https://github.com/ingydotnet/git-hub) to
 
 1. Create report from command line
 2. Add a description
 3. Add an homepage
-3. Clone it
 
 ```bash
 git hub repo-new tris3d
 git hub repo-edit tris3d description "is a cool package"
 git hub repo-edit tris3d homepage "http://npm.im/tris3d"
-git hub clone tri3d
-cd tris3d
 ```
 
 ### Create your npm package locally
@@ -63,7 +60,7 @@ git clone git@github.com:fibo/tris3d.git
 cd tris3d
 ```
 
- and create an npm package.
+and create an npm package.
 
 ## Create a package.json
 

@@ -48,7 +48,7 @@ Noooooo, my *_node-perlfunc-int.t* has a red entry with a 50% ... mmh maybe beca
 
 ![int50](/images{{ page.id }}/int50.jpg)
 
-If I click on that ugly <span class="label label-danger">50.0</span>, I can see this.
+If I click on that ugly <span class="badge danger">50.0</span>, I can see this.
 
 ![int detail](/images{{ page.id }}/int_detail.jpg)
 
