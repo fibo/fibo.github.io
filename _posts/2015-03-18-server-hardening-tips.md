@@ -49,6 +49,12 @@ Commit changes restarting ssh daemon
 # systemctl restart sshd
 ```
 
+For instance to change default port, for instance to 222
+
+```bash
+sudo perl -i -p -e 's/Port 22/Port 222/' /etc/ssh/sshd_config
+```
+
 After this you should not see the failed login attempts warning. Test it with
 
 ```bash

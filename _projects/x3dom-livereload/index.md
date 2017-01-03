@@ -3,28 +3,31 @@ title: x3dom-livereload
 ---
 # x3dom-livereload
 
-> is an [x3dom][1] tiny boilerplate with a [livereload][2] server
+> is an [x3dom] tiny boilerplate with a [livereload] server
 
 ## How to
 
-First install [Node.js][3]. Then copy and paste the following code into a terminal
+First install [Node.js][node]. Then copy and paste the following code into a terminal
 
-```
-npm install -g grunt-cli
-git clone https://github.com/fibo/x3dom-livereload
-cd x3dom-livereolad
-npm install
-grunt
+```bash
+npm install x3dom-livereload
+node_modules/.bin/budo -lo
 ```
 
-Then point your browser to *http://localhost:3000* and start editing *index.html*.
-Play with [x3dom][1] and every time you save the *index.html* your 3d scene will be updated
-magically without reloading your browser, thanks to [livereload][2].
+First command will install *x3dom-livereload*. An *index.html* will be
+created, on *postinstall*, if it does not exists: it is a minimal starting
+point with an [x3dom] cube.
+Second command will start a server and open your browser. You should see this
+
+![HelloX3DOM](https://cdn.rawgit.com/fibo/x3dom-livereload/master/media/HelloX3DOM.png)
+
+Play with [x3dom] and every time you save the *index.html* your 3d scene will be updated
+magically without reloading your browser, thanks to [livereload].
 
 ## License
 
 [MIT](http://g14n.info/mit-license)
 
-  [1]: http://www.x3dom.org/ "x3dom"
-  [2]: http://livereload.com/ "livereload"
-  [3]: https://nodejs.org/ "Node.js"
+[x3dom]: http://www.x3dom.org/ "x3dom"
+[livereload]: http://livereload.com/ "livereload"
+[node]: https://nodejs.org/ "Node.js"
