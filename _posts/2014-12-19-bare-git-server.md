@@ -29,12 +29,16 @@ In Unix context, a *user* will own a home folder: usually `/home/jsmith`. This f
 ### Create master git repo
 
 On *gitbox.example.org*, as *jsmith* user, create a *repofoo* git repo.
+
+Create repo folder under the home and cd into it.
+
+```bash
+mkdir ~/repofoo.git && cd $_
+```
+
 The trick is to create a *bare* git repo, in order to be able to push to it.
 
 ```bash
-$ cd
-$ mkdir repofoo.git
-$ cd repofoo.git
 $ git init --bare
 Initialized empty Git repository in /home/jsmith/repofoo.git/
 ```
@@ -45,15 +49,13 @@ Now on your laptop, or any other host you will use for development, you can clon
 I like to reflect the same [tree structure](#structure) also on folders, so in my laptop I do
 
 ```bash
-$ cd
-$ mkdir -p gitbox.example.org/jsmith
-$ cd gitbox.example.org/jsmith
+mkdir -p ~/gitbox.example.org/jsmith && cd $_
 ```
 
 then I clone *repofoo* with
 
 ```bash
-$ git clone jsmith@gitbox.example.org:~/repofoo.git
+git clone jsmith@gitbox.example.org:~/repofoo.git
 ```
 
 ### Port local repo on server
@@ -64,9 +66,9 @@ I assume you already created *repobar* locally with `git init`.
 Then go into your local *repobar* folder and add the **remote origin** and set **upstream master**.
 
 ```bash
-$ cd ~/gitbox.example.org/jsmith/repobar
-$ git remote add origin jsmith@gitbox.example.org:~/repofoo.git
-$ git push --set-upstream origin master
+cd ~/gitbox.example.org/jsmith/repobar
+git remote add origin jsmith@gitbox.example.org:~/repofoo.git
+git push --set-upstream origin master
 ```
 
 Now you can push *repobar* commits from your laptop to *gitbox.example.org*
@@ -75,8 +77,8 @@ Now you can push *repobar* commits from your laptop to *gitbox.example.org*
 
 [Git on the Server][1]
 
-  [1]: http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server "Git on the Server"
-  [2]: https://github.com/ "GitHub"
-  [3]: https://github.com/fibo "fibo@github.com"
-  [4]: {{ site.repo }} "{{ site.url }}"
+[1]: http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server "Git on the Server"
+[2]: https://github.com/ "GitHub"
+[3]: https://github.com/fibo "fibo@github.com"
+[4]: {{ site.repo }} "{{ site.url }}"
 
