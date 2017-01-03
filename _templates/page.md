@@ -58,7 +58,7 @@ Ordered list:
 <div class="alert">Default</div>
 <div class="alert danger">Danger</div>
 <div class="alert info">Info</div>
-<div class="alert success">Info</div>
+<div class="alert success">Success</div>
 <div class="alert warning">Warning</div>
 
 ## Badges
