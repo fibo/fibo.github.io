@@ -16,13 +16,23 @@ can use [Emoji](https://en.wikipedia.org/wiki/Emoji) in their web site.
 
 You can use [twem❤ji](http://twitter.github.io/twemoji/). Just add this script in to your `head` tag
 
-```
+```html
 <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
 ```
 
 Then go to [emoji preview page](http://twitter.github.io/twemoji/preview.html), choose an emoji you like, click on it and copy & paste it into your blog article.
 
- 😍 ❤ ♍ 🐘 🎲 💪 🍺 🐧 🐢 
+ 😍 ❤ ♍ 🐘 🎲 💪 🍺 🐧 🐢
+
+
+If you are using Jekyll, is even easier, just add this to your *_config.yaml*
+
+```yaml
+gems:
+  - jemoji
+```
+
+See also [Emoji on GitHub Pages](https://help.github.com/articles/emoji-on-github-pages/).
 
 ## Coding
 

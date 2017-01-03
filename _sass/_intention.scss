@@ -1,19 +1,19 @@
 .danger {
-  background-color: #f2dede;
-  color: #a94442;
+  background-color: $danger-background-color;
+  color: $danger-color;
 }
 
 .info {
-  background-color: #d9edf7;
-  color: #31708f;
+  background-color: $info-background-color;
+  color: $info-color;
 }
 
 .success {
-  background-color: #dff0d8;
-  color: #3c763d;
+  background-color: $success-background-color;
+  color: $success-color;
 }
 
 .warning {
-  background-color: #fcf8e3;
-  color: #8a6d3b;
+  background-color: $warning-background-color;
+  color: $warning-color;
 }

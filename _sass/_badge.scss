@@ -1,6 +1,10 @@
 .badge {
   background-color: $gray;
+  border-color: $shadow;
   border-radius: 10px;
+  border-style: outset;
+  border-width: thin;
   color: $white;
+  font-weight: bold;
   padding: 3px 7px;
 }
