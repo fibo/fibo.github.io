@@ -10,7 +10,7 @@ description: >
 
 Do you have an npm account? If not, create it on [npm site][1], then run
 
-```
+```bash
 npm login
 ```
 
@@ -38,6 +38,19 @@ Create a new repository, for instance *tris3d*
 * add a *Node* .gitignore
 
 ![create repo][3]
+
+Ok, this is the **next level**. use [git hub](https://github.com/ingydotnet/git-hub) to
+
+1. Create report from command line
+2. Add a description
+3. Clone it
+
+```bash
+git hub repo-new tris3d
+git hub repo-edit tris3d is a cool package
+git hub clone tri3d
+cd tris3d
+```
 
 ### Create your npm package locally
 
