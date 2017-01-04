@@ -6,8 +6,8 @@ keywords:
   - pizza
   - mafia
 nav:
-  - Mafia: http://g14n.info
-  - Pizza: '#heading-5'
+  Mafia: http://g14n.info
+  Pizza: '#heading-5'
 ---
 
 # Heading 1
@@ -39,17 +39,27 @@ main()
 
 ## Lists
 
-List:
+### List
 
 * pizza
 * mafia
 * mandolino
 
-Ordered list:
+### Ordered list
 
 1. pizza
 2. mafia
 3. mandolino
+
+### Description list
+
+Item
+: description
+
+Another item
+: description
+
+## Buttons
 
 <button>Button</button>
 
