@@ -8,6 +8,11 @@ $gray: #777;
 $shadow: rgba(0, 0, 0, 0.071);
 $transparent-black: rgba(20, 20, 20, 0.9);
 
+$unvisited-link-color: #4078c0;
+$visited-link-color: darken($unvisited-link-color, 10%);
+$hover-link-color: $unvisited-link-color;
+$active-link-color: $unvisited-link-color;
+
 $danger-background-color: #f2dede;
 $danger-color: #a94442;
 
