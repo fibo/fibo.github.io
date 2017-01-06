@@ -1,68 +1,93 @@
-/* credits: https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly */
 
-nav {}
-
-nav > a {
-  display: none;
+/* Remove margins and padding from the list */
+nav[role=navigator] ul {
+  z-index: 1000;
+  height: 3em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $transparent-black;
 }
 
-nav li {
-  position: relative;
+/* Float the list items side by side */
+nav[role=navigator] ul li:first-child { float: left; }
+nav[role=navigator] ul li { float: right; }
+
+/* Style the links inside the list items */
+nav[role=navigator] ul li a {
+  display: inline-block;
+  color: $gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-/* first level */
-
-nav > ul > li {
-  width: 25%;
-  height: 100%;
-  float: left;
+nav[role=navigator] ul li a:hover {
+  color: $white;
 }
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+nav[role=navigator] ul li.icon { display: none; }
 
 /* second level */
 
-nav li ul {
+nav[role=navigator] ul li ul {
   display: none;
-  position: absolute;
-  top: 100%;
 }
 
-nav li:hover ul {
+nav[role=navigator] ul li:hover ul {
+  z-index: 1000;
   display: block;
+  background-color: $transparent-black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
-@media only screen and ( max-width: 680px ) {
-  nav {
-    position: relative;
+nav[role=navigator] ul li:hover ul li {
+  float: left;
+  clear: left;
+}
+
+/* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width: $mobile-break-point) {
+  nav[role=navigator] ul li:not(:first-child) { display: none; }
+
+  nav[role=navigator] ul li.icon {
+    float: right;
+    display: inline-block;
   }
+}
 
-  nav > a {}
-  nav:not( :target ) > a:first-of-type,
-  nav:target > a:last-of-type {
-    display: block;
-  }
-
-  /* first level */
-
-  nav > ul {
-    height: auto;
-    display: none;
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width: $mobile-break-point) {
+  nav[role=navigator] ul.responsive {
     position: absolute;
-    left: 0;
-    right: 0;
-  }
-
-  nav:target > ul {
-    display: block;
-  }
-
-  nav > ul > li {
+    left: 0wh;
+    top: 0vh;
     width: 100%;
-    float: none;
+    height: 100vh;
   }
 
-  /* second level */
+  nav[role=navigator] ul.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-  nav li ul {
-    position: static;
+  nav[role=navigator] ul.responsive li {
+    float: none;
+    display: inline;
+  }
+
+  nav[role=navigator] ul.responsive li a {
+    display: block;
+    text-align: left;
   }
 }
+
