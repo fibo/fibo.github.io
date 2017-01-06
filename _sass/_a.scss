@@ -1,4 +1,5 @@
 a {
+  background-color: $link-background-color;
   cursor: pointer;
   text-decoration: none;
 }
@@ -21,6 +22,6 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: $selected-link-color;
+  color: $active-link-color;
   text-decoration: underline;
 }
