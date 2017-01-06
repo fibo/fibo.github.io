@@ -38,6 +38,9 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 [Code Guide by @mdo](http://codeguide.co/)
 : Standards for developing flexible, durable, and sustainable HTML and CSS.
 
+[structure exposed](https://structure.exposed)
+: View a website’s skeleton by resetting all styling to browser default.
+
 ### CDN
 
 [JSDLIVER](http://www.jsdelivr.com/)
@@ -85,9 +88,7 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 
 [HTTP/2 FAQ](http://http2.github.io/faq/)
 
-## Tools
-
-### Browser testing
+## Browser testing
 
 [BrowserSync](http://www.browsersync.io/)
 : Time-saving synchronised browser testing.
