@@ -22,9 +22,16 @@ nav:
 
 > This is a blockquote
 
-Lorem ipsum [link to homepage](http://g14n.info).
-
 <time datetime="2016-11-21" class="badge">Nov 21 2016</time>
+
+Lorem ipsum [link to homepage](http://g14n.info). Press <kbd>CTRL-d</kbd> to exit.
+This is a paragraph, this is **bold** and this *is italic*.
+
+## Code
+
+This is inline code: `find . -type f -exec file {} \;`.
+
+This is displayed code.
 
 ```c
 /* Hello World program */
