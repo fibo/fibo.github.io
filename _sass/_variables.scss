@@ -1,12 +1,18 @@
 $font-family: Helvetica, Arial, sans-serif;
+$font-family-mono: "Lucida Console", Monaco, monospace;
 $font-size: 14px;
 
 $mobile-break-point: 680px;
+
+/* colors */
 
 $white: #fff;
 $gray: #777;
 $shadow: rgba(0, 0, 0, 0.071);
 $transparent-black: rgba(20, 20, 20, 0.9);
+
+$code-color: #c7254e;
+$code-background-color: #f9f2f4;
 
 $link-background-color: $shadow;
 $unvisited-link-color: #4078c0;
