@@ -6,10 +6,15 @@
 @import "variables";
 
 @import "body";
+
+/* HTML tags */
 @import "a";
+@import "blockquote";
 @import "code";
 @import "nav";
 @import "pre";
+
+/* Classes */
 @import "alert";
 @import "badge";
 @import "intention";
