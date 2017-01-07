@@ -52,6 +52,9 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 See also [CDNperf](http://www.cdnperf.com/)
 : finds you fast and reliable JavaScript CDNs that make your websites snappy and happy!
 
+[unpkg](https://unpkg.com)
+:unpkg is a fast, global content delivery network for stuff that is published to npm.
+
 ### Site templates
 
 [Initializr](http://www.initializr.com/)
