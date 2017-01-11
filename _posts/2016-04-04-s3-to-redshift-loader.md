@@ -1,6 +1,7 @@
 ---
 title: S3 to RedShift loader
 tags:
+  - AWS
   - S3
   - RedShift
   - Lambda
