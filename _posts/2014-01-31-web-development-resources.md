@@ -150,6 +150,8 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Flat icons](http://www.flaticon.com/)
 : Free icons for both personal & commercial use.
 
+[Favicon & App Icon Generator](http://www.favicon-generator.org/)
+
 ## Online editors
 
 See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) on Wikipedia for a comparison table.
