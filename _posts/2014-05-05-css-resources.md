@@ -77,6 +77,9 @@ description: >
 [Basscss](http://www.basscss.com/)
 : Low-Level CSS Toolkit
 
+[awsm.css](https://igoradamenko.github.io/awsm.css/)
+: Simple CSS library for semantic HTML markup
+
 ### Modules
 
 [Normalize.css](https://necolas.github.io/normalize.css/)
