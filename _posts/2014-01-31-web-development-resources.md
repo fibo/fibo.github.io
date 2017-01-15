@@ -150,6 +150,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Flat icons](http://www.flaticon.com/)
 : Free icons for both personal & commercial use.
 
+[Icons8](https://icons8.com/)
+: 38700 free icons, the largest icons pack ever.
+
 [Favicon & App Icon Generator](http://www.favicon-generator.org/)
 
 ## Online editors
