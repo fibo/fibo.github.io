@@ -9,19 +9,4 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
-
-  + ul, + ol {
-    margin-top: -.75em;
-  }
-
-  img, picture {
-    float: right;
-    margin-bottom: .5em;
-    margin-left: .5em;
-
-    img {
-      float: none;
-      margin: 0;
-    }
-  }
 }
