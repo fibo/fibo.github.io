@@ -20,6 +20,8 @@ Read the [R page on Wikipedia](http://en.wikipedia.org/wiki/R_(programming_langu
 
 [R Graphical Manual](http://rgm3.lab.nig.ac.jp/RGM/top)
 
+[Learn R Programming](https://www.programiz.com/r-programming)
+
 ## Free books online
 
 See my [book collection]({% post_url 2014-01-02-free-books-online %}#r)
