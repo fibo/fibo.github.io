@@ -48,6 +48,9 @@ description: >
 [WebGL Fundamentals](http://webglfundamentals.org/)
 : WebGL from the ground up.
 
+[htmlreference.io](http://htmlreference.io/)
+> A free guide to HTML. It features all elements and attributes.
+
 ## Frameworks and libs
 
 [HTML5 Boilerplate](http://html5boilerplate.com/)
@@ -75,6 +78,9 @@ description: >
 
 [Bosonic](http://bosonic.github.io/)
 : Bosonic Web Component
+
+[SkateJS](https://skatejs.gitbooks.io/skatejs/content/)
+:  is a web component library designed to give you an augmentation of the web component specs focusing on a functional rendering pipeline, clean property / attribute semantics and a small footprint.
 
 ## Articles and other resources
 
