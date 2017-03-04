@@ -3,9 +3,8 @@ title: Node class template
 tags:
   - Node
 description: >
-    Waiting for ES6 class implementation, this article shows how I create an ES5 class with Node.
+    Waiting for ES6 class implementation, this article shows how I create an ES5 class with Node. Yes, you can transpile but I really don't like howbabel do it.
 ---
-
 
 ## Conventions
 
@@ -16,19 +15,18 @@ First of all, *Foo* class is defined in a *Foo.js* file:
 Here it is classic *Point2d* class example.
 
 ```js
-
 function Point2d (x, y) {
   Object.defineProperty(this, 'x', {value: x})
   Object.defineProperty(this, 'y', {value: y})
 }
 
-module.exports = Point2d
-
+module.exports = exports.default = Point2d
 ```
 
 Note that constructor should contain at least once a `this` keyword.
 
-The file ends with the [node convention][1] for exporting data from one file to another.
+The file ends with the [node convention][1] for exporting data from one
+file to another, plus a cheap trick to get compatibility with ES6 exports.
 
 ## Attributes
 
@@ -41,14 +39,11 @@ See [Object.defineProperty on MDN][3] for a reference.
 In *Point3d.js* add a *dimension* attribute to *Point3d* constructor.
 
 ```js
-
 function Point3d () {
- ...
- 
+// ...
 }
- 
-Point3d.dimension = 3
 
+Point3d.dimension = 3
 ```
 
 ## Inheritance
@@ -57,7 +52,6 @@ Let's create a *Point3d* class that inherits from *Point2d*.
 You can use Node's `util.inherits`, but I recommend [inherits][4].
 
 ```js
-
 var Point2d  = require('./Point2d.js')
   , inherits = require('inherits')
 
@@ -69,8 +63,7 @@ function Point3d (x, y, z) {
 
 inherits(Point3d, Point2d)
 
-module.exports = Point3d
-
+module.exports = exports.default = Point3d
 ```
 
 ## Methods
@@ -79,16 +72,14 @@ A method can be implemented easily adding a function to `prototype`.
 In *Poin2D.js* after constructor definition
 
 ```js
-
 function length () {
   var x = this.x
     , y = this.y
-    
+
   return Math.sqrt(x * x + y * y)
 }
 
 Point2d.prototype.length = length
-
 ```
 
 ### Abstract method
@@ -96,11 +87,11 @@ Point2d.prototype.length = length
 Something like
 
 ```js
-
-Point2d.prototype.anAbstractMethod = function () {
+function isAbstract () {
   throw new Error('unimplemented abstract method')
 }
 
+Point2d.prototype.myMethod = isAbstract
 ```
 
 ### Overridden method
@@ -108,21 +99,18 @@ Point2d.prototype.anAbstractMethod = function () {
 In *Point3d.js* add a *length* method to prototype.
 
 ```js
-
 inherits(Point3d, Point2d)
-
-...
+// ...
 
 function length () {
   var x = this.x
     , y = this.y
     , z = this.z
-    
+
   return Math.sqrt(x * x + y * y + z * z)
 }
 
 Point3d.prototype.length = length
-
 ```
 
 Note that it must be exported after *inherits* call.
@@ -132,10 +120,8 @@ Note that it must be exported after *inherits* call.
 In *Point3d.js* add a *length* method to *Point3d* constructor.
 
 ```js
-
 function Point3d () {
- ...
- 
+// ...
 }
 
 function length (x, y, z) {
@@ -143,7 +129,6 @@ function length (x, y, z) {
 }
 
 Point3d.length = length
-
 ```
 
   [1]: http://nodejs.org/docs/latest/api/modules.html#modules_module_exports
