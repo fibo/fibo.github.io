@@ -3,7 +3,7 @@ title: Node class template
 tags:
   - Node
 description: >
-    Waiting for ES6 class implementation, this article shows how I create an ES5 class with Node. Yes, you can transpile but I really don't like howbabel do it.
+    Waiting for ES6 class implementation, this article shows how I create an ES5 class with Node. Yes, you can transpile but I really don't like how babel do it.
 ---
 
 ## Conventions
