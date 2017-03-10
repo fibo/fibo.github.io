@@ -5,7 +5,7 @@ title: strict-mode
 
 > enables strict mode in your package
 
-[![NPM version](https://badge.fury.io/js/strict-mode.svg)](http://badge.fury.io/js/strict-mode) [![Build Status](https://travis-ci.org/fibo/strict-mode.svg?branch=master)](https://travis-ci.org/fibo/strict-mode.png?branch=master) [![Dependency Status](https://gemnasium.com/fibo/strict-mode.svg)](https://gemnasium.com/fibo/strict-mode)
+[![NPM version](https://badge.fury.io/js/strict-mode.svg)](http://badge.fury.io/js/strict-mode) [![Build Status](https://travis-ci.org/fibo/strict-mode.svg?branch=master)](https://travis-ci.org/fibo/strict-mode?branch=master) [![Dependency Status](https://gemnasium.com/fibo/strict-mode.svg)](https://gemnasium.com/fibo/strict-mode)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -25,7 +25,7 @@ npm install strict-mode
 If used with [browserify] it is a [no op](https://github.com/fibo/strict-mode/blob/master/browser.js).
 
 Suppose that the *main attribute* in your *package.json* is *index.js*.
-If you want that all the modules in your package has strict mode enabled,
+If you want that all the modules in your package have strict mode enabled,
 just wrap your *index.js* this way
 
 ```javascript
