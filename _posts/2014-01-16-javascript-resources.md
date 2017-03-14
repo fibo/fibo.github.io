@@ -33,7 +33,7 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 ### Blogs
 
-[②ality][1]
+[②ality][2ality.com]
 : Blog about JavaScript, web development and mobile computing
 
 [JavaScript, JavaScript ...](http://javascriptweblog.wordpress.com/)
@@ -62,6 +62,9 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [Riot](http://riotjs.com/)
 : A React-like user interface micro-library
+
+[choo](https://choo.io/)
+: 🚂🚋🚋🚋 - sturdy frontend framework
 
 [Mithril](http://lhorie.github.io/mithril/)
 
@@ -172,7 +175,7 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [State of the Art JavaScript in 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b)
 
 [JavaScript’s `this`](http://www.2ality.com/2014/05/this.html)
-: how it works, where it can trip you up. [(2ality.com)][1]
+: how it works, where it can trip you up. ([2ality.com])
 
 [JavaScript Module Pattern: In-Depth](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
 : The module pattern is a common JavaScript coding pattern. It’s generally well understood, but there are a number of advanced uses that have not gotten a lot of attention. [(adequatelygood.com)][3]
@@ -215,7 +218,7 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
 
 [ECMAScript 6 modules: the future is now](http://www.2ality.com/2013/07/es6-modules.html)
-: [(2ality.com)][1]
+: ([2ality.com])
 
 [Get ready for ECMAScript 6](http://k33g.github.io/2014/06/26/ES6-READY.html)
 
@@ -248,10 +251,10 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [JavaScript Semicolon Insertion, everything you need to know](http://inimino.org/~inimino/blog/javascript_semicolons)
 
-  [1]: http://www.2ality.com
-  [2]: http://www.html5rocks.com
-  [3]: http://www.adequatelygood.com/
-  [4]: http://ejohn.org/
-  [5]: https://hacks.mozilla.org
-  [6]: http://ponyfoo.com/
+[2ality.com]: http://www.2ality.com
+[2]: http://www.html5rocks.com
+[3]: http://www.adequatelygood.com/
+[4]: http://ejohn.org/
+[5]: https://hacks.mozilla.org
+[6]: http://ponyfoo.com/
 
