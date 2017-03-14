@@ -88,7 +88,10 @@ Despite it is so young, node ecosystem is pretty rich!
 [YUIDoc](http://yui.github.io/yuidoc/)
 : JavaScript Documentation Tool
 
-### Cli
+### CLI
+
+[nopt](https://www.npmjs.com/package/nopt)
+: option parser used by npm CLI
 
 [Commander](http://visionmedia.github.io/commander.js/)
 : A light-weight, expressive, and powerful command-line framework for node.js.
@@ -203,6 +206,10 @@ Despite it is so young, node ecosystem is pretty rich!
 [Building Secure Node.js Applications](http://blog.safaribooksonline.com/2014/03/12/building-secure-node-js-applications/)
 
 [Node.js Security Tips](http://blog.risingstack.com/node-js-security-tips/)
+
+### Async/await
+
+[The 80/20 Guide to Async/Await in Node.js](http://thecodebarbarian.com/80-20-guide-to-async-await-in-node.js.html)
 
 ### Promises
 
