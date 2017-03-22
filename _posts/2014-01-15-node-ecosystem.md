@@ -199,13 +199,17 @@ Despite it is so young, node ecosystem is pretty rich!
 : In 8 minutes, Hendrik Swanepoel demonstrates how to create your own read, write, and transform stream, complete with written notes accompanying the video.
 
 [Node.js Stream Playground](http://ejohn.org/blog/node-js-stream-playground/)
-: Created by [John Resig][1] to help Node.js developers better understand how streams work by showing a number of use cases that are easily plug-and-play-able.
+: Created by [John Resig][ejohn.org] to help Node.js developers better understand how streams work by showing a number of use cases that are easily plug-and-play-able.
 
 ### Security
 
 [Building Secure Node.js Applications](http://blog.safaribooksonline.com/2014/03/12/building-secure-node-js-applications/)
 
 [Node.js Security Tips](http://blog.risingstack.com/node-js-security-tips/)
+
+### Web Assembly
+
+[Getting Started With WebAssembly in Node.js](http://thecodebarbarian.com/getting-started-with-webassembly-in-node.js.html)
 
 ### Async/await
 
@@ -217,11 +221,8 @@ Despite it is so young, node ecosystem is pretty rich!
 
 ## Paas hosting
 
-[heroku](https://www.heroku.com/)
+* [heroku](https://www.heroku.com/)
+* [nodejitsu](https://www.nodejitsu.com/)
+* [cloudno.de](http://cloudno.de/)
 
-[nodejitsu](https://www.nodejitsu.com/)
-
-[cloudno.de](http://cloudno.de/)
-
-  [1]: http://ejohn.org/ "John Resig"
-
+[ejohn.org]: http://ejohn.org/ "John Resig"
