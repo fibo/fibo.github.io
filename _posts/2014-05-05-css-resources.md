@@ -46,6 +46,9 @@ description: >
 [How to center in CSS](http://howtocenterincss.com/)
 : Centering in CSS is a pain in the ass. There seems to be a gazillion ways to do it, depending on a variety of factors. This consolidates them and gives you the code you need for each situation.
 
+[Grid by Example](http://gridbyexample.com/)
+: A collection of usage examples for the CSS Grid Layout specification.
+
 ## Tools
 
 ### Frameworks
