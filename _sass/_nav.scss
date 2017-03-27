@@ -1,6 +1,6 @@
 
 /* Remove margins and padding from the list */
-nav[role=navigator] ul {
+nav[role=navigation] ul {
   z-index: 1000;
   height: 3em;
   list-style-type: none;
@@ -11,11 +11,11 @@ nav[role=navigator] ul {
 }
 
 /* Float the list items side by side */
-nav[role=navigator] ul li:first-child { float: left; }
-nav[role=navigator] ul li { float: right; }
+nav[role=navigation] ul li:first-child { float: left; }
+nav[role=navigation] ul li { float: right; }
 
 /* Style the links inside the list items */
-nav[role=navigator] ul li a {
+nav[role=navigation] ul li a {
   display: inline-block;
   color: $gray;
   text-align: center;
@@ -25,20 +25,20 @@ nav[role=navigator] ul li a {
   font-size: 17px;
 }
 
-nav[role=navigator] ul li a:hover {
+nav[role=navigation] ul li a:hover {
   color: $white;
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-nav[role=navigator] ul li.icon { display: none; }
+nav[role=navigation] ul li.icon { display: none; }
 
 /* second level */
 
-nav[role=navigator] ul li ul {
+nav[role=navigation] ul li ul {
   display: none;
 }
 
-nav[role=navigator] ul li:hover ul {
+nav[role=navigation] ul li:hover ul {
   z-index: 1000;
   display: block;
   background-color: $transparent-black;
@@ -49,16 +49,16 @@ nav[role=navigator] ul li:hover ul {
   position: absolute;
 }
 
-nav[role=navigator] ul li:hover ul li {
+nav[role=navigation] ul li:hover ul li {
   float: left;
   clear: left;
 }
 
 /* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width: $mobile-break-point) {
-  nav[role=navigator] ul li:not(:first-child) { display: none; }
+  nav[role=navigation] ul li:not(:first-child) { display: none; }
 
-  nav[role=navigator] ul li.icon {
+  nav[role=navigation] ul li.icon {
     float: right;
     display: inline-block;
   }
@@ -66,7 +66,7 @@ nav[role=navigator] ul li:hover ul li {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width: $mobile-break-point) {
-  nav[role=navigator] ul.responsive {
+  nav[role=navigation] ul.responsive {
     position: absolute;
     left: 0wh;
     top: 0vh;
@@ -74,18 +74,18 @@ nav[role=navigator] ul li:hover ul li {
     height: 100vh;
   }
 
-  nav[role=navigator] ul.responsive li.icon {
+  nav[role=navigation] ul.responsive li.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
 
-  nav[role=navigator] ul.responsive li {
+  nav[role=navigation] ul.responsive li {
     float: none;
     display: inline;
   }
 
-  nav[role=navigator] ul.responsive li a {
+  nav[role=navigation] ul.responsive li a {
     display: block;
     text-align: left;
   }
