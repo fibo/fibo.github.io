@@ -11,7 +11,7 @@ bash:
 docker:
   - fake-aws-redshift
 node:
-  packages:
+  packages_with_social_stats:
     - algebra
     - dflow
     - flow-view
@@ -39,6 +39,7 @@ node:
     - read-file-utf8
     - static-props
     - strict-mode
+    - SQL92-JSON
     - tensor-contraction
     - tensor-product
     - three-orbitcontrols
@@ -67,7 +68,7 @@ perl:
 
     <ul class="list-group">
 
-      {% for pkg in page.node.packages %}
+      {% for pkg in page.node.packages_with_social_stats %}
       <li class="list-group-item">
         <h3><a href="{{ repo[pkg].homepage }}">{{ pkg }}</a></h3>
 
