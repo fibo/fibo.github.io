@@ -3,16 +3,18 @@ title: SQL92-JSON
 ---
 # SQL92-JSON
 
-> can stringify a JSON into an SQL
+> can stringify a JSON into an SQL and viceversa parse an SQL and serialize it into a JSON
 
 [Installation](#installation) |
-[Usage](#usage) |
+[API](#api) |
+[Examples](#examples) |
 [References](#references) |
 [License](#license)
 
 [![NPM version](https://badge.fury.io/js/sql92-json.svg)](http://badge.fury.io/js/sql92-json)
 [![Build Status](https://travis-ci.org/fibo/SQL92-JSON.svg?branch=master)](https://travis-ci.org/fibo/SQL92-JSON?branch=master)
 [![Dependency Status](https://gemnasium.com/fibo/static-props.svg)](https://gemnasium.com/fibo/static-props)
+[![Coverage Status](https://coveralls.io/repos/fibo/SQL92-JSON/badge.svg?branch=master)](https://coveralls.io/r/fibo/SQL92-JSON?branch=master)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -24,7 +26,9 @@ With [npm](https://npmjs.org/) do
 npm install sql92-json
 ```
 
-## Usage
+## API
+
+### `stringify`
 
 > Convert a JSON to SQL
 
@@ -36,6 +40,24 @@ console.log(json2sql({  //
   FROM: ['revenue']     // FROM revenue
 }))                     //
 ```
+
+### `parse`
+
+> Convert an SQL to JSON
+
+```javascript
+var sql2json = require('sql92-json').parse
+
+console.log(sql2json(`
+SELECT *
+FROM revenue
+`)                      // {
+                        //   SELECT: ['*'],
+                        //   FROM: ['revenue']
+                        // }
+```
+
+## Examples
 
 See [examples] folder where every `.json` file has its homonym `.sql`.
 
