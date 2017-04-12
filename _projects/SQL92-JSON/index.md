@@ -5,6 +5,10 @@ title: SQL92-JSON
 
 > can stringify a JSON into an SQL and viceversa parse an SQL and serialize it into a JSON
 
+🚧 **STATUS**: Right now the test suite contains 32 SELECT statements that
+are serialized into JSON and viceversa parsed back into SQL successfully.
+Adding INSERT and other DMLs statementes as well as DDLs is on the roadmap.
+
 [Installation](#installation) |
 [API](#api) |
 [Examples](#examples) |
@@ -77,7 +81,7 @@ See for example the following [example JSON][exampleJSON] and its [corresponding
         { "AND": [ "country", { "IN": ["IT", "US"] } ] },
         { "AND": [
           "categoryid", { "BETWEEN": [100, 200] },
-          { "OR": [ "productname", { "!=": "icecream" } ] }
+          { "OR": [ "productname", { "!=": "'icecream'" } ] }
         ] }
       ]
     }

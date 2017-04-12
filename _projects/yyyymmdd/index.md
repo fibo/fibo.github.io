@@ -3,7 +3,7 @@ title: yyyymmdd
 ---
 # yyyymmdd
 
-> uses cal Unix program to print out the days in a month in YYYYMMDD format
+> uses cal Unix program to print out the days in a month
 
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
@@ -71,4 +71,4 @@ Use [cal] to output days...
 
 [MIT](http://g14n.info/mit-license)
 
-[cal] https://en.wikipedia.org/wiki/Cal_(Unix) "cal"
+[cal]: https://en.wikipedia.org/wiki/Cal_(Unix) "cal"

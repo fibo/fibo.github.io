@@ -63,7 +63,7 @@
   "releases_url": "https://api.github.com/repos/fibo/three-orbitcontrols/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/three-orbitcontrols/deployments",
   "created_at": "2016-07-14T13:26:30Z",
-  "updated_at": "2017-02-18T12:28:43Z",
+  "updated_at": "2017-04-07T21:55:49Z",
   "pushed_at": "2016-10-18T19:19:10Z",
   "git_url": "git://github.com/fibo/three-orbitcontrols.git",
   "ssh_url": "git@github.com:fibo/three-orbitcontrols.git",
@@ -71,8 +71,8 @@
   "svn_url": "https://github.com/fibo/three-orbitcontrols",
   "homepage": "http://npm.im/three-orbitcontrols",
   "size": 12,
-  "stargazers_count": 3,
-  "watchers_count": 3,
+  "stargazers_count": 4,
+  "watchers_count": 4,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
@@ -84,13 +84,16 @@
   "open_issues_count": 0,
   "forks": 2,
   "open_issues": 0,
-  "watchers": 3,
+  "watchers": 4,
   "default_branch": "master",
   "permissions": {
     "admin": true,
     "push": true,
     "pull": true
   },
+  "allow_squash_merge": true,
+  "allow_merge_commit": true,
+  "allow_rebase_merge": true,
   "network_count": 2,
   "subscribers_count": 2
 }
