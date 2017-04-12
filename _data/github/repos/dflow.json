@@ -91,6 +91,9 @@
     "push": true,
     "pull": true
   },
+  "allow_squash_merge": true,
+  "allow_merge_commit": true,
+  "allow_rebase_merge": true,
   "network_count": 3,
   "subscribers_count": 9
 }

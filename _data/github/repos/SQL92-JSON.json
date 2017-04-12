@@ -64,13 +64,13 @@
   "deployments_url": "https://api.github.com/repos/fibo/SQL92-JSON/deployments",
   "created_at": "2017-02-07T23:10:52Z",
   "updated_at": "2017-03-30T19:37:39Z",
-  "pushed_at": "2017-04-04T16:22:44Z",
+  "pushed_at": "2017-04-12T22:12:43Z",
   "git_url": "git://github.com/fibo/SQL92-JSON.git",
   "ssh_url": "git@github.com:fibo/SQL92-JSON.git",
   "clone_url": "https://github.com/fibo/SQL92-JSON.git",
   "svn_url": "https://github.com/fibo/SQL92-JSON",
   "homepage": "http://g14n.info/SQL92-JSON",
-  "size": 322,
+  "size": 415,
   "stargazers_count": 0,
   "watchers_count": 0,
   "language": "JavaScript",
@@ -91,6 +91,9 @@
     "push": true,
     "pull": true
   },
+  "allow_squash_merge": true,
+  "allow_merge_commit": true,
+  "allow_rebase_merge": true,
   "network_count": 0,
   "subscribers_count": 1
 }
