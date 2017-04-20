@@ -34,4 +34,7 @@ layout: null
    <sitemap>
       <loc>http://{{ site.domain }}/SQL-editor/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>http://{{ site.domain }}/SQL92-JSON/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
