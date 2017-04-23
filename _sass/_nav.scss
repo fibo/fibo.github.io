@@ -29,8 +29,7 @@ nav[role=navigation] ul li a:hover {
   color: $white;
 }
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-nav[role=navigation] ul li.icon { display: none; }
+#hamburgericon { display: none; }
 
 /* second level */
 
@@ -54,30 +53,41 @@ nav[role=navigation] ul li:hover ul li {
   clear: left;
 }
 
-/* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+/* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.hamburgericon) */
 @media screen and (max-width: $mobile-break-point) {
   nav[role=navigation] ul li:not(:first-child) { display: none; }
 
-  nav[role=navigation] ul li.icon {
+  #hamburgericon {
+    cursor: pointer;
     float: right;
     display: inline-block;
+    position: absolute;
+    right: 4px;
+    width: 37px;
+    height: 40px;
+    top: 8px;
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+       -moz-transition: .5s ease-in-out;
+         -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+/*
+  width: 60px;
+  height: 45px;
+  position: relative;
+*/
   }
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width: $mobile-break-point) {
+/* The "responsive" class is added to the nav with JavaScript when the user clicks on the hamburger icon. This class makes the nav look good on small screens */
   nav[role=navigation] ul.responsive {
     position: absolute;
     left: 0wh;
     top: 0vh;
     width: 100%;
     height: 100vh;
-  }
-
-  nav[role=navigation] ul.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
   nav[role=navigation] ul.responsive li {
@@ -89,5 +99,87 @@ nav[role=navigation] ul li:hover ul li {
     display: block;
     text-align: left;
   }
-}
 
+  #hamburgericon span {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 50%;
+    background: #d3531a;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+       -moz-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+  }
+
+  #hamburgericon span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  #hamburgericon span:nth-child(odd) {
+    left:0px;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  #hamburgericon span:nth-child(1), #hamburgericon span:nth-child(2) {
+    top: 0px;
+  }
+
+  #hamburgericon span:nth-child(3), #hamburgericon span:nth-child(4) {
+    top: 9px;
+  }
+
+  #hamburgericon span:nth-child(5), #hamburgericon span:nth-child(6) {
+    top: 18px;
+  }
+
+  #hamburgericon.open span:nth-child(1),#hamburgericon.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  #hamburgericon.open span:nth-child(2),#hamburgericon.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  #hamburgericon.open span:nth-child(1) {
+    left: 5px;
+    top: 4px;
+  }
+
+  #hamburgericon.open span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 4px;
+  }
+
+  #hamburgericon.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+
+  #hamburgericon.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+
+  #hamburgericon.open span:nth-child(5) {
+    left: 5px;
+    top: 15px;
+  }
+
+  #hamburgericon.open span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 15px;
+  }
+}
