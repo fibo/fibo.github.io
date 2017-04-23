@@ -5,12 +5,13 @@
 /* import variables first */
 @import "variables";
 
-@import "body";
 
 /* HTML tags */
+@import "body";
 @import "a";
 @import "blockquote";
 @import "h1-6";
+@import "main";
 @import "nav";
 @import "p";
 @import "pre";
