@@ -19,6 +19,12 @@ pre.highlight {
   border-radius: $border-radius;
   margin-bottom: 0;
 
+  code {
+    background-color: $code-background-color;
+    color: $code-color;
+    margin: 0;
+    padding: 0;
+  }
 
  .hll { background-color: #222 }
  .c { color: #7f9f7f }
