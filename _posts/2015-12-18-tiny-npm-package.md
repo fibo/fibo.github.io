@@ -84,8 +84,6 @@ Use the following template, replacing `<package-name>` and `<package-description
     "check-deps": "npm outdated",
     "lint": "standard",
     "test": "tape test.js | tap-min",
-    "update-deps": "npm update --save --dev",
-    "postupdate-deps": "npm test && git commit -am ':arrow_up: updated deps' || git checkout -- package.json",
     "postversion": "git push origin v${npm_package_version}; npm publish; git push origin master",
     "watch": "npm-watch"
   },
@@ -146,20 +144,6 @@ the maintainer as for contributors. If **the tower is burning** and you
 need to commit with tests failing you can use `git commit -n`.
 
 Finally it run a non blocking command which displays outdated dependencies.
-
-## update-deps
-
-If you need to update all deps, you can run
-
-```bash
-npm run update-deps
-```
-
-Thanks to `postupdate-deps` if tests are failing it reverts *package.json*
-file modifications, which will contain bumped version numbers.
-Note that the commit message starts with `:arrow_up:` which will be
-visualized as icon ⬆️. See [emoji-commits] for more.
-
 
 ### postversion
 
