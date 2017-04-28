@@ -83,7 +83,10 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 : HTML5 Validator (by WHATWG)
 
 [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-: Make your web pages fast on all devices (by google).
+: Make your web pages fast on all devices (by Google).
+
+[The AMP Validator](https://validator.ampproject.org)
+: Interactive validator for Accelerated Mobile Pages (by Google).
 
 ## HTTP
 
