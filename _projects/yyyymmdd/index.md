@@ -56,7 +56,7 @@ Then split input into year and month.
 
 Use [cal] to output days...
 
-            for d in $(cal $MM $YYYY | grep "^ *[0-9]")
+            for d in $(cal -h $MM $YYYY | grep "^ *[0-9]")
             do
                 DD=$(printf "%02d" $d)
                 echo $YYYY$MM$DD
