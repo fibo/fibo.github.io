@@ -79,10 +79,10 @@
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 0,
+  "forks_count": 1,
   "mirror_url": null,
   "open_issues_count": 0,
-  "forks": 0,
+  "forks": 1,
   "open_issues": 0,
   "watchers": 1,
   "default_branch": "master",
@@ -94,6 +94,6 @@
   "allow_squash_merge": true,
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
-  "network_count": 0,
+  "network_count": 1,
   "subscribers_count": 1
 }
