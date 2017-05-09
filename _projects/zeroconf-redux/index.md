@@ -22,6 +22,7 @@ This is an empty package, there is almost no code implemented, only a set of dep
 * [babel-preset-react]
 * [babelify]
 * [budo]
+* [prop-types]
 * [react][React]
 * [react-dom]
 * [react-redux]
@@ -42,7 +43,7 @@ npm install zeroconf-redux --save-dev
 
 ### Quick start
 
-Assumption: your project folder contains files  *index.js* and *index.html*.
+Assumption: your project folder contains an *index.js* with a `console.log('Hello World')`.
 
 Just install
 
@@ -53,13 +54,13 @@ npm i zeroconf-redux
 and launch the dev server with
 
 ```bash
-node_modules/.bin/budo index.js --dir . --live --open -- -t babelify
+node_modules/.bin/budo index.js --live --open -- -t babelify
 ```
 
 Your browser will open and you can start coding now!
 
-Read below for more details and instructions to improve this quick process and
-launch your dev server with a simple `npm start`.
+Read below for more details and instructions to improve this quick
+process and launch your dev server with a simple `npm start`.
 
 ### Use a package.json
 
@@ -90,11 +91,24 @@ If you want to trigger it manually, you can run
 npm explore zeroconf-redux npm run copy_babelrc
 ```
 
-Add an npm script to your *package.json*, to run [budo] dev server.
-For example
+Assuming there is an *index.html* in the same folder as the *package.json*
+with a content like the following...
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
+```
+
+... add an npm script to your *package.json*, to run [budo] dev server,
+something like
 
 ```json
-  "start": "budo index.js --dir . --live --open -- -t babelify",
+  "start": "budo index.js --dir . --serve bundle.js --live --open -- -t babelify",
 ```
 
 Now, running `npm start` it will
@@ -110,7 +124,7 @@ You can run it with this command
 npm explore zeroconf-redux npm run example_counter
 ```
 
-## Customization
+### Customization
 
 #### Babel presets
 
@@ -133,46 +147,56 @@ See [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html) chapter
 
 #### LiveReactload
 
-> **NOTA BENE** the instructions below work, but, they will be changed and updated when next HMR will be released.
-
 You can benefit from awesome **hot reloading** feature using [livereactload].
 
 Install dependencies
 
 ```bash
-npm i --save-dev livereactload react-proxy@1.x babel-plugin-react-transform
+npm install livereactload@next react-hot-loader@next
 ```
 
-Use a *.babelrc* like
+Use a *.babelrc* like the following
 
 ```json
 {
-  "presets": [
-    "es2015",
-    "react"
-  ],
-  "env": {
-    "development": {
-      "plugins": [
-        ["react-transform", {
-          "transforms": [{
-            "transform": "livereactload/babel-transform",
-            "imports": ["react"]
-          }]
-        }]
-      ]
-    }
-  }
+  "presets": ["es2015", "react"],
+  "plugins": ["react-hot-loader/babel"]
 }
 ```
 
-Assuming your *index.js* creates the DOM element where you will mount your
-React app, probably you can omit the *index.html*.
+You can create it if you launch
+
+```bash
+rm .babelrc
+npm explore zeroconf-redux npm run copy_babelrc_livereactload
+```
+
+I assume you have an *index.html*, with a `div` having an *app* id. Note
+that your code must be idempotent in order to let [livereactload] do its
+magic, see [more details here](https://github.com/milankinen/livereactload/pull/153#issuecomment-299560608).
+
+When you create your application you need something like
+
+```javascript
+import React from 'react'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import Component from './components/Component'
+
+const root = document.getElementById('app')
+
+render(
+  <AppContainer>
+    <Component />
+  </AppContainer>,
+  root
+)
+```
 
 Then add the following npm script to your *package.json*
 
 ```json
-"start": "BABEL_ENV=development NODE_PATH=. budo --open index.js -- -t babelify -p livereactload",
+"start": "NODE_PATH=. budo -d . -s bundle.js -o index.js -- -t babelify -p livereactload",
 ```
 
 Now, launching `npm start` you can edit your code and it will be injected
@@ -190,6 +214,7 @@ in your page without losing the state.
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
+[prop-types]: https://github.com/reactjs/prop-types "prop-types"
 [React]: https://facebook.github.io/react/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
