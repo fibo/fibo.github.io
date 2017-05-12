@@ -37,6 +37,12 @@ $ yyyymmdd 201701
 20170131
 ```
 
+It is possible to provide an `UNTIL` option, which is passed to `date -d` command, for example
+
+* `UNTIL=now yyyymmdd 201701`
+* `UNTIL=yesterday yyyymmdd 201701`
+* `UNTIL="2 hours ago" yyyymmdd 201701`
+
 ## Annotated source
 
 Create a `yyyymmdd` bash function.
@@ -54,12 +60,26 @@ Then split input into year and month.
             YYYY=${YYYYMM:0:4}
             MM=${YYYYMM:4:2}
 
+Handle `UNTIL` option
+
+        YYYYMMDD_MAX=99999999
+
+        if [ ! -z "$UNTIL" ]
+        then
+            YYYYMMDD_MAX=$(date -d "$UNTIL" +%Y%m%d)
+        fi
+
 Use [cal] to output days...
 
             for d in $(cal -h $MM $YYYY | grep "^ *[0-9]")
             do
                 DD=$(printf "%02d" $d)
-                echo $YYYY$MM$DD
+                YYYYMMDD=$YYYY$MM$DD
+
+                if [ $YYYYMMDD -le $YYYYMMDD_MAX ]
+                then
+                    echo $YYYY$MM$DD
+                fi
             done
 
 ... and we are done!

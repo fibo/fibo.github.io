@@ -6,6 +6,7 @@ title: dot-editorconfig
 > creates a .editorconfig file in your package dir
 
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
+[![NPM version](https://badge.fury.io/js/dot-editorconfig.svg)](http://badge.fury.io/js/dot-editorconfig)
 
 [Usage](#usage) |
 [Source](#source) |
@@ -32,30 +33,30 @@ It is up to you to choose to gitignore or version and modify further your
 ## Source
 
     # EditorConfig is awesome: http://EditorConfig.org
-    
-    # This file was created by command
+
+    # This file was created via command line
     #
     #     npm install dot-editorconfig
-    
+
     # top-most EditorConfig file
     root = true
-    
+
     [*]
     end_of_line = lf
     trim_trailing_whitespace = true
     charset = utf-8
     indent_style = space
     indent_size = 2
-    
+
     [*{.conf,.pl,.pm,.py}]
     indent_size = 4
-    
+
     [*{.glsl,.go,.sh,.sql}]
     indent_style = tab
-    
+
     [Makefile]
     indent_style = tab
-    
+
 
 ## Contributing
 
