@@ -3,6 +3,8 @@ title: zeroconf-redux
 ---
 # zeroconf-redux
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/fibo/zeroconf-redux.svg)](https://greenkeeper.io/)
+
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 [Installation](#installation) |
