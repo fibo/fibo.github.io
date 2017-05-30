@@ -17,8 +17,7 @@ Assumptions:
 0. You *are a* (or *work with a*) designer who want to launch a server to develop cool webapps.
 1. You have [Node.js](https://nodejs.org/en/) installed.
 2. Your working folder contains a [package.json](https://docs.npmjs.com/files/package.json). If there is no *package.json* yet, you can create it with `npm init -y`.
-3. You can open a *Terminal* into your working folder and copy and paste commands into it.
-4. Your *package.json* contains a `start` script
+3. Your *package.json* contains a `start` script
 
 
 Install command with
@@ -27,12 +26,18 @@ Install command with
 npm install npm-start-command --save-dev
 ```
 
-It will create a *start.command* file, if you click on it.
+Optionally, make git ignore *npm-start-command* file.
+
+```bash
+echo "npm-start-command" >> .gitignore
+```
+
+An *npm-start.command* file will be created: if you click it, your
+development server will be launched.
 
 **TODO**:
 
 * support Linux and Windows too.
-* review installation process, make it easier: just download *npm-start.command* which contains `npm init -y` and `npm install`.
 * link to [zeroconf-redux] and [x3dom-livereload].
 
 ## License
