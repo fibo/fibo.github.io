@@ -32,11 +32,13 @@ Props `style` and `size` are optional.
 import React from 'react'
 import ClipboardIcon from 'react-clipboard-icon'
 
+const style = { fill: 'red' }
+
 const MyComponent = () => (
   <div>
     <ClipboardIcon
       size={40}
-      style={{ fill: 'red' }}
+      style={style}
     />
   </div>
 )
