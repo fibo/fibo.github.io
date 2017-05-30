@@ -5,6 +5,8 @@ $font-size: 14px;
 $mobile-break-point: 680px;
 $border-radius: 4px;
 
+$margin-bottom: 17px;
+
 /* colors */
 
 $white: #fff;
@@ -17,8 +19,8 @@ $transparent-gray: rgba(0, 0, 0, 0.4);
 $code-color: #fdce93;
 $code-background-color: #3f3f3f;
 
-$unvisited-link-color: #4078c0;
-$visited-link-color: darken($unvisited-link-color, 10%);
+$unvisited-link-color: #71ad0b;
+$visited-link-color: darken($unvisited-link-color, 20%);
 $hover-link-color: $unvisited-link-color;
 $active-link-color: $unvisited-link-color;
 

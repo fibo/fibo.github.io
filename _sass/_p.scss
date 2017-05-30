@@ -1,5 +1,6 @@
 p {
-  margin: 1em 0;
+  margin-top: 0;
+  margin-bottom: $margin-bottom;
   hyphens: auto;
 
   &:first-child {
