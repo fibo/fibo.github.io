@@ -11,6 +11,22 @@
  * Then adapted for SASS.
  */
 
+pre {
+  word-wrap: normal;
+
+  code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
 pre.highlight {
   background-color: $code-background-color;
   color: $code-color;

@@ -1,13 +1,13 @@
 main {
   max-width: 720px;
   margin: auto;
-  padding-left: 1em;
-  padding-right: 1em;
-
-  /* Keep top the same as nav height, so when menu is open
-   * the main tag do not move.
-   */
-  position: absolute;
-  top: 3em;
+  padding-left: 0.5em;
 }
 
+/* Keep top the same as nav height, so when menu is open the main tag do
+ * not move. The "shifted" class is added via JavaScript when the user
+ * clicks on the hamburger icon.
+ */
+main.shifted {
+  margin-top: 3em;
+}
