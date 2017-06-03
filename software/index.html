@@ -10,6 +10,8 @@ bash:
   - yyyymmdd
 docker:
   - fake-aws-redshift
+golang:
+  - m2c
 node:
   packages_with_social_stats:
     - algebra
@@ -132,6 +134,21 @@ perl:
       {% for bash_project in page.bash %}
       <li class="list-group-item">
         <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>: {{ repo[bash_project].description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Golang</div>
+    <div class="panel-body">
+      <img src="/svg/logos/gopher.svg" alt="Golang logo" class="center-block img-responsive"/>
+    </div>
+
+    <ul class="list-group">
+      {% for golang_project in page.golang %}
+      <li class="list-group-item">
+        <a href="{{ repo[golang_project].homepage }}">{{ golang_project }}</a>: {{ repo[golang_project].description }}
       </li>
       {% endfor %}
     </ul>
