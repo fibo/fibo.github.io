@@ -63,7 +63,7 @@
   "releases_url": "https://api.github.com/repos/fibo/flow-view/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/flow-view/deployments",
   "created_at": "2014-11-22T14:55:34Z",
-  "updated_at": "2017-05-10T16:21:44Z",
+  "updated_at": "2017-06-05T03:48:12Z",
   "pushed_at": "2017-05-04T22:04:37Z",
   "git_url": "git://github.com/fibo/flow-view.git",
   "ssh_url": "git@github.com:fibo/flow-view.git",
@@ -71,8 +71,8 @@
   "svn_url": "https://github.com/fibo/flow-view",
   "homepage": "http://g14n.info/flow-view",
   "size": 8199,
-  "stargazers_count": 32,
-  "watchers_count": 32,
+  "stargazers_count": 33,
+  "watchers_count": 33,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
@@ -81,10 +81,10 @@
   "has_pages": true,
   "forks_count": 8,
   "mirror_url": null,
-  "open_issues_count": 5,
+  "open_issues_count": 6,
   "forks": 8,
-  "open_issues": 5,
-  "watchers": 32,
+  "open_issues": 6,
+  "watchers": 33,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -95,5 +95,5 @@
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
   "network_count": 8,
-  "subscribers_count": 4
+  "subscribers_count": 5
 }
