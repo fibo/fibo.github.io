@@ -16,6 +16,7 @@ chrome://network-error/-106
 
 I discovered it few minutes ago, and I have just broke my record: see the
 screenshot below, 5816! I never got an higher score before, yes probably
-cause I never finished my game cause the network was restore in some way.
+cause I never finished my game cause the network was suddenly restored
+in some way.
 
 ![T-Rex Chrome game](/images{{ page.id }}/my_t_rex_game_record.png)
