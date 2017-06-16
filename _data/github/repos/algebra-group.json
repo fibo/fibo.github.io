@@ -63,7 +63,7 @@
   "releases_url": "https://api.github.com/repos/fibo/algebra-group/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/algebra-group/deployments",
   "created_at": "2015-08-28T09:37:42Z",
-  "updated_at": "2016-11-27T13:12:59Z",
+  "updated_at": "2017-06-15T19:44:12Z",
   "pushed_at": "2016-11-27T17:47:00Z",
   "git_url": "git://github.com/fibo/algebra-group.git",
   "ssh_url": "git@github.com:fibo/algebra-group.git",
