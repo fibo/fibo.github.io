@@ -9,7 +9,7 @@ $margin-bottom: 17px;
 
 /* colors */
 
-$white: #fff;
+$white: #bbb;
 $gray: #777;
 $light-gray: #eee;
 $shadow: rgba(0, 0, 0, 0.071);
@@ -20,7 +20,8 @@ $code-color: #fdce93;
 $code-background-color: #3f3f3f;
 
 $unvisited-link-color: #71ad0b;
-$visited-link-color: darken($unvisited-link-color, 20%);
+/* $visited-link-color: darken($unvisited-link-color, 20%); */
+$visited-link-color: #517514;
 $hover-link-color: $unvisited-link-color;
 $active-link-color: $unvisited-link-color;
 
