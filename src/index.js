@@ -5,12 +5,12 @@ function toggleNav () {
 
   // Disable scrolling when menu is open.
 
-  var overflow = document.body.overflow
+  var overflow = document.body.style.overflow
 
   if (overflow === '') {
-    document.body.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
   } else {
-    document.body.overflow = ''
+    document.body.style.overflow = ''
   }
 }
 
