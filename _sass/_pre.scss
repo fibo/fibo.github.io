@@ -12,6 +12,7 @@
  */
 
 pre {
+  padding: 10px;
   margin-top: 0;
   margin-bottom: $margin-bottom;
   word-wrap: normal;
@@ -33,9 +34,7 @@ pre.highlight {
   background-color: $code-background-color;
   color: $code-color;
   font-family: $font-family-mono;
-  margin-top: 0;
   border-radius: $border-radius;
-  margin-bottom: 0;
 
   code {
     background-color: $code-background-color;
