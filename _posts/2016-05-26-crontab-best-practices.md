@@ -60,7 +60,7 @@ write then in cronological order.
 Pad left single digits with a zero, to get rows alligned. Please, indent
 and group where it makes sense
 
-```
+```crontab
 # Bad
 
 0 5 * * * script1.sh param1
