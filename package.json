@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "npm run browserify; npm run cp; npm run readmes; npm run data",
-    "browserify": "browserify -e src/index.js -o js/bundle.js",
+    "browserify": "browserify -e src/index.js | uglifyjs > js/bundle.js",
     "cp": "npm run cp:metadata",
     "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
@@ -30,7 +30,9 @@
   "bugs": {
     "url": "https://github.com/fibo/fibo.github.io/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "uglify-js": "^3.0.17"
+  },
   "devDependencies": {
     "browserify": "^14.3.0",
     "dot-editorconfig": "^0.3.0"
