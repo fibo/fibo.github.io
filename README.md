@@ -36,6 +36,12 @@ which contains all images relative to that post, then you can reference them wit
 ![image decription](/images{{ page.id }}/image_name.jpg)
 ```
 
+If you want the image to be responsive add the `responsive` CSS class
+
+```markdown
+![image decription](http://image/url){:.responsive}
+```
+
 ### Libs
 
 ```yaml
