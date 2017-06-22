@@ -32,7 +32,7 @@ could be printed.
 
 Internet is divided among 5 world regions each ruled by a [registry][Regional_Internet_registry].
 
-![Internet world regions](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Regional_Internet_Registries_world_map.svg/1600px-Regional_Internet_Registries_world_map.svg.png)
+![Internet world regions](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Regional_Internet_Registries_world_map.svg/1600px-Regional_Internet_Registries_world_map.svg.png){:.responsive}
 
 ## Usage
 
