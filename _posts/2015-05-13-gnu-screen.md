@@ -91,6 +91,14 @@ then type for example `resize -5` to reduce region height by five rows.
 
 This is very useful if you want a separated window where you launch tasks like running tests, watch files for changes, tail logs, etc.
 
+### Remove dead screens
+
+If there are dead screen session you can clean them with
+
+```bash
+screen -wipe
+```
+
 ## References
 
 * [Screen quick reference][2]
@@ -101,9 +109,9 @@ This is very useful if you want a separated window where you launch tasks like r
 * [Screen User's Manual][4]
 * [A nice default screenrc][5]
 
-  [1]: http://www.gnu.org/software/screen/ "GNU Screen"
-  [2]: http://aperiodic.net/screen/quick_reference "Screen quick reference"
-  [3]: https://kb.iu.edu/d/acuy "In Unix, what is screen, and how do I use it?"
-  [4]: http://www.gnu.org/software/screen/manual/screen.html "Screen User's Manual"
-  [5]: https://gist.github.com/ChrisWills/1337178 "A nice default screenrc"
+[1]: http://www.gnu.org/software/screen/ "GNU Screen"
+[2]: http://aperiodic.net/screen/quick_reference "Screen quick reference"
+[3]: https://kb.iu.edu/d/acuy "In Unix, what is screen, and how do I use it?"
+[4]: http://www.gnu.org/software/screen/manual/screen.html "Screen User's Manual"
+[5]: https://gist.github.com/ChrisWills/1337178 "A nice default screenrc"
 
