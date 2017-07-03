@@ -8,7 +8,7 @@ title: 5m
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
 [Installation](#installation) |
-[Test](#test) |
+[Use case](#use-case)
 [Annotated source](#annotated-source) |
 [License](#license)
 
@@ -18,97 +18,100 @@ title: 5m
 npm i 5m
 ```
 
-## Test
+## Use case
 
-*NOTA BENE* tests will require at least five minutes to run.
+> I use this package with [debug] and [aws-sdk] to upload logs on S3.
 
-```bash
-npm t
-```
+Then there is a trigger that feeds every file created on S3 to an AWS Lambda
+which sends file content to a server that broadcast it using [socket.io].
+Yes I know there are other cool tools like CloudWatch, Kinesis, etc.
+(but **5m** is free as in speach and free as in beer too ;)
 
 ## Annotated source
 
-Store data in a namespaced buffer, as well as its function to flush data.
+Store data in a namespaced bucket, as well as its function to flush data.
 
-    var buffer = {}
+    var bucket = {}
     var flush = {}
 
-Store last time data was write and when is current time for a given namespace.
+Considering 1 char should be 1 byte, and dates are expressed in milliseconds,
+the following constants express *5 MB* and *5 minutes*.
+Aproximation is ok, since we want to achieve a near real time.
+The timeout used for flushing data can be set, for testing or other purpouse
+via the `FIVEM_TIMEOUT_MILLISECONDS` environment variable.
 
-    var lastWrite = {}
-    var now = {}
-
-Considering 1 char should be 1 byte, and dates are expressed in milliseconds, the following constants
-express *5 MB* and *5 minutes* where aproximation is ok, since we want to achieve a near real time.
 
     const fiveMb = 1024 * 1024 * 5
     const fiveMin = 300 * 1000
+    const flushTimeout = process.env.FIVEM_TIMEOUT_MILLISECONDS || fiveMin
 
 Make sure no data is lost on exit.
 
     process.on('exit', () => {
-      for (namespace in buffer) flush[namespace]()
+      for (var namespace in bucket) flush[namespace]()
     })
 
-Create the **5m** function with the following signature
+Create the **5m** function.
 
-* **@param** `{String}` namespace
-* **@param** `{Function}` write
-* **@returns** `{Function}` logger
+Since *5m* is allowed as npm package name, but not as JavaScript
+identifier, using a roman number like *Vm* can be confusing, so maybe
+naming the function as *fiveM* is a good idea.
 
-Since *5m* is allowed as npm package name, but not as JavaScript identifier,
-using a roman number like *Vm* can be confusing, so maybe naming the function
-as *fiveM* is a good idea.
-
+    /**
+     * **@param** `{String}` namespace
+     * **@param** `{Function}` write
+     *
+     * **@returns** `{Function}` logger
+     */
     function fiveM (namespace, write) {
-
-Initialize *buffer* and *lastWrite*.
-
-      buffer[namespace] = ''
-      lastWrite[namespace] = new Date()
 
 Create the namespaced *flush* function: write data and clean up.
 
       flush[namespace] = () => {
-          write(buffer[namespace])
+        if (bucket[namespace]) {
+          write(bucket[namespace])
 
-          delete buffer[namespace]
-          lastWrite[namespace] = new Date()
+          delete bucket[namespace]
+        }
       }
 
-Create the **logger** function with the following signature
+Create the **logger** function.
 
-* **@param** `{*}` data
-
+      /**
+       * @param {*} data
+       */
       return function logger (data) {
 
-Set write time for current namespace.
+If necessary, initialize data bucket and set timeout to flush it later.
 
-        now[namespace] = new Date()
+        if (typeof bucket[namespace] === 'undefined') {
+          bucket[namespace] = ''
 
-Append data to named buffer.
+          setTimeout(flush[namespace], flushTimeout)
+        }
 
-        buffer[namespace] += data
+Append data to named bucket.
 
-Check if there is some data and it is bigger than *5 MB* or it is older than *5 minutes*.
+        bucket[namespace] += data
 
-        const thereIsSomeData = buffer[namespace].length > 0
-        const exceededSpace = (buffer[namespace].length > fiveMb)
-        const exceededTime = (fiveMin < now[namespace] - lastWrite[namespace])
+Check if data is bigger than *5 MB*.
+
+        const exceededSpace = bucket[namespace] && (bucket[namespace].length > 0) && (bucket[namespace].length > fiveMb)
 
 If yes, flush it!
 
-        if (thereIsSomeData && (exceededSpace || exceededTime)) {
-          flush[namespace]()
-        }
-
-Export it.
-
+        if (exceededSpace) flush[namespace]()
       }
     }
+
+Export *5m* function.
 
     module.exports = fiveM
 
 ## License
 
 [MIT](http://g14n.info/mit-license)
+
+[debug]: https://www.npmjs.com/package/debug "debug"
+[aws-sdk]: https://www.npmjs.com/package/aws-sdk "aws-sdk"
+[socket.io]: https://socket.io/ "socket.io"
