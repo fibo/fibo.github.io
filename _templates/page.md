@@ -85,3 +85,8 @@ Another item
 <span class="badge info">Info</span>
 <span class="badge success">Success</span>
 <span class="badge warning">Warning</span>
+
+## Keyboard
+
+Press <kbd>Ctrl-A</kbd> then <kbd>Enter</kbd>
+
