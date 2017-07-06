@@ -3,8 +3,6 @@ title: zeroconf-redux
 ---
 # zeroconf-redux
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/fibo/zeroconf-redux.svg)](https://greenkeeper.io/)
-
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 [Installation](#installation) |
@@ -29,9 +27,6 @@ This is an empty package, there is almost no code implemented, only a set of dep
 * [react-dom]
 * [react-redux]
 * [redux][Redux]
-
-I am using [greenkeeper.io](https://greenkeeper.io) to keep dependencies up to date,
-then publish them as *patch* versions.
 
 ## Installation
 
