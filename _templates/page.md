@@ -68,7 +68,11 @@ Another item
 
 ## Buttons
 
-<button>Button</button>
+<button>Default</button>
+<button class="danger">Danger</button>
+<button class="info">Info</button>
+<button class="success">Success</button>
+<button class="warning">Warning</button>
 
 ## Alerts
 
