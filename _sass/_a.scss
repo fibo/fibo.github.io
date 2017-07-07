@@ -5,12 +5,12 @@ a {
 
 /* unvisited link */
 a:link {
-  color: $unvisited-link-color;
+  color: $gray;
 }
 
 /* visited link */
 a:visited {
-  color: $visited-link-color;
+  darken($gray, 20%)
 }
 
 /* mouse over link */
