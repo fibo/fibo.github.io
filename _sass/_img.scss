@@ -10,3 +10,11 @@ img.responsive {
 img.circle {
   border-radius: 50%;
 }
+
+@media screen and (max-width: $mobile-break-point) {
+  /* Npm downloads image responsive */
+  img[alt="NPM"] {
+    width: 100%;
+    height: auto;
+  }
+}
