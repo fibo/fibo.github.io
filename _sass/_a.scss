@@ -15,12 +15,10 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: $hover-link-color;
   text-decoration: underline;
 }
 
 /* selected link */
 a:active {
-  color: $active-link-color;
   text-decoration: underline;
 }
