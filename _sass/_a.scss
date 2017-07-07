@@ -10,7 +10,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  darken($gray, 20%)
+  color: $gray;
 }
 
 /* mouse over link */
