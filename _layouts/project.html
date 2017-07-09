@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+{% if site.lang %}
+  <html lang="{{ site.lang }}">
+{% else %}
+  <html lang="en">
+{% endif %}
 <head>
-  {% include bootstrap/header.html %}
-  {% include header.html %}
+  {% include common/meta.html %}
+  {% include common/favicon.html %}
   {% include common/cookieconsent.html %}
   {% include common/style.html %}
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <main>{{ content }}</main>
 
-        <a class="navbar-brand" href="//{{ site.domain }}/{{ page.title }}">{{ page.title }}</a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="https://github.com/fibo/{% if page.title == 'dotsoftware' %}.software{% else %}{{ page.title }}{% endif %}">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">{{ content }}</div>
-
-  {% include footer.html %}
-  {% include bootstrap/footer.html %}
+  {% include common/footer.html %}
   {% include common/analytics.html %}
+  {% include common/js-bundle.html %}
 </body>
 </html>
