@@ -32,9 +32,10 @@ pre {
 
 pre.highlight {
   background-color: $code-background-color;
+  border-radius: $border-radius;
   color: $code-color;
   font-family: $font-family-mono;
-  border-radius: $border-radius;
+  overflow-x: auto;
 
   code {
     background-color: $code-background-color;
