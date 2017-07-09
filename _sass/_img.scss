@@ -12,8 +12,8 @@ img.circle {
 }
 
 @media screen and (max-width: $mobile-break-point) {
-  /* Npm downloads image responsive */
-  img[alt="NPM"] {
+  /* Npm downloads image: make it responsive */
+  img[alt="NPM"], img[alt="NPM downloads"] {
     width: 100%;
     height: auto;
   }
