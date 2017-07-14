@@ -31,6 +31,9 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 
 [Simplified JavaScript Jargon](http://jargon.js.org/)
 
+[jsPerf](https://jsperf.com)
+: jsPerf aims to provide an easy way to create and share test cases, comparing the performance of different JavaScript snippets by running benchmarks.
+
 ### Blogs
 
 [②ality][2ality.com]
