@@ -41,6 +41,12 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 [structure exposed](https://structure.exposed)
 : View a website’s skeleton by resetting all styling to browser default.
 
+[HTTP STATUS DOGS](https://httpstatusdogs.com/)
+: Hypertext Transfer Protocol Response status codes. And dogs.
+
+[HTTP Status Cats API](https://http.cat/)
+: **Usage**: `https://http.cat/[status_code]`. If you need for some reason to use an image extension, add .jpg to the URL.
+
 ### CDN
 
 [JSDLIVER](http://www.jsdelivr.com/)
