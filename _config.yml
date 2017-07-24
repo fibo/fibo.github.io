@@ -31,7 +31,6 @@ sass:
   style: compressed
 
 nav:
-  Home: /
   Software: /software
   Blog: /blog
 

@@ -11,8 +11,14 @@ nav ul {
 }
 
 /* Float the list items side by side */
-nav ul li:first-child { float: left; }
-nav ul li { float: right; }
+nav ul li:first-child {
+  float: left;
+  font-size: 1.17em;
+}
+nav ul li {
+  float: right;
+  font-size: 1em;
+}
 
 /* Style the links inside the list items */
 nav ul li a {
@@ -22,7 +28,6 @@ nav ul li a {
   padding: 14px 16px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 17px;
 }
 
 nav ul li a:hover {
