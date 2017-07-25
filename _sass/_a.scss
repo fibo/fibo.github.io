@@ -5,7 +5,7 @@ a {
 
 /* unvisited link */
 a:link {
-  color: $light-gray;
+  color: $gray;
 }
 
 /* visited link */
@@ -15,10 +15,12 @@ a:visited {
 
 /* mouse over link */
 a:hover {
+  background-color: $transparent-black;
   color: $white;
 }
 
 /* selected link */
 a:active {
+  background-color: $transparent-black;
   color: $white;
 }
