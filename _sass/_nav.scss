@@ -63,14 +63,14 @@ nav ul li:hover ul li {
   nav ul li:not(:first-child) { display: none; }
 
   #hamburgericon {
-    cursor: pointer;
+    cursor: default;
     float: right;
     display: inline-block;
     position: absolute;
     right: 4px;
     width: 37px;
     height: 40px;
-    top: 8px;
+    top: 14px;
     -webkit-transform: rotate(0deg);
        -moz-transform: rotate(0deg);
          -o-transform: rotate(0deg);

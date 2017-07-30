@@ -1,7 +1,7 @@
 code {
   padding: 2px 4px;
-  color: #717171;
-  background-color: #f1f1f1;
+  color: $code-color;
+  background-color: $code-background-color;
   border-radius: $border-radius;
   font-family: $font-family-mono;
 }
