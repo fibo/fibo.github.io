@@ -1,7 +1,7 @@
 a {
   background-color: $semi-transparent;
   border-radius: $border-radius;
-  color: $gray;
+  color: $black;
   cursor: pointer;
   padding: 2px;
   text-decoration: none;
@@ -15,6 +15,7 @@ a:visited {
 a:active,
 a:focus,
 a:hover {
+  background-color: $transparent-black;
   color: $white;
   text-decoration: none;
 }
