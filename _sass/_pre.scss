@@ -37,35 +37,28 @@ pre.highlight {
   font-family: $font-family-mono;
   overflow-x: auto;
 
-  code {
-    background-color: $code-background-color;
-    color: $code-color;
-    margin: 0;
-    padding: 0;
-  }
-
  .hll { background-color: #222 }
  .c { color: #7f9f7f }
  .err { color: #e37170; background-color: #3d3535 }
  .g { color: #7f9f7f }
  .k { color: #f0dfaf }
- .l { color: #ccc }
+ .l { color: $code-color }
  .n { color: #dcdccc }
  .o { color: #f0efd0 }
- .x { color: #ccc }
+ .x { color: $code-color }
  .p { color: #41706f }
  .cm { color: #7f9f7f }
  .cp { color: #7f9f7f }
  .c1 { color: #7f9f7f }
  .cs { color: #cd0000; font-weight: bold }
  .gd { color: #cd0000 }
- .ge { color: #ccc; font-style: italic }
+ .ge { color: $code-color; font-style: italic }
  .gr { color: red }
  .gh { color: #dcdccc; font-weight: bold }
  .gi { color: #00cd00 }
  .go { color: gray }
  .gp { color: #dcdccc; font-weight: bold }
- .gs { color: #ccc; font-weight: bold }
+ .gs { color: $code-color; font-weight: bold }
  .gu { color: purple; font-weight: bold }
  .gt { color: #0040D0 }
  .kc { color: #dca3a3 }
@@ -80,19 +73,19 @@ pre.highlight {
  .na { color: #9ac39f }
  .nb { color: #efef8f }
  .nc { color: #efef8f }
- .no { color: #ccc }
- .nd { color: #ccc }
+ .no { color: $code-color }
+ .nd { color: $code-color }
  .ni { color: #c28182 }
  .ne { color: #c3bf9f; font-weight: bold }
  .nf { color: #efef8f }
- .nl { color: #ccc }
+ .nl { color: $code-color }
  .nn { color: #8fbede }
- .nx { color: #ccc }
- .py { color: #ccc }
+ .nx { color: $code-color }
+ .py { color: $code-color }
  .nt { color: #9ac39f }
  .nv { color: #dcdccc }
  .ow { color: #f0efd0 }
- .w { color: #ccc }
+ .w { color: $code-color }
  .mf { color: #8cd0d3 }
  .mh { color: #8cd0d3 }
  .mi { color: #8cd0d3 }
