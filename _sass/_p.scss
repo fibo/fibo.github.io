@@ -1,5 +1,5 @@
 p {
-  margin-top: 0;
+  margin-top: $margin-top;
   margin-bottom: $margin-bottom;
   hyphens: auto;
 
@@ -14,5 +14,5 @@ p {
 
 p.description {
   font-weight: lighter;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
