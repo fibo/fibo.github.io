@@ -1,6 +1,9 @@
 a {
+  background-color: $semi-transparent;
+  border-radius: $border-radius;
   color: $gray;
   cursor: pointer;
+  padding: 2px;
   text-decoration: none;
 }
 
@@ -21,7 +24,7 @@ nav {
   a:focus,
   a:hover {
     background-color: $transparent-black;
-    color: transparent;
+    color: $white;
     text-decoration: none;
   }
 }
