@@ -2,7 +2,7 @@
 /* Remove margins and padding from the list */
 nav ul {
   z-index: 1000;
-  height: 3rem;
+  height: 3em;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -13,11 +13,11 @@ nav ul {
 /* Float the list items side by side */
 nav ul li:first-child {
   float: left;
-  font-size: 1.17rem;
+  font-size: 1.17em;
 }
 nav ul li {
   float: right;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 /* Style the links inside the list items */
@@ -97,7 +97,7 @@ nav ul li:hover ul li {
 
   nav ul.responsive li a {
     display: block;
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   /* Hamburger icon animation */
