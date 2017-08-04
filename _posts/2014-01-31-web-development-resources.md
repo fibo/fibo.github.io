@@ -59,7 +59,7 @@ See also [CDNperf](http://www.cdnperf.com/)
 : finds you fast and reliable JavaScript CDNs that make your websites snappy and happy!
 
 [unpkg](https://unpkg.com)
-:unpkg is a fast, global content delivery network for stuff that is published to npm.
+: unpkg is a fast, global content delivery network for stuff that is published to npm.
 
 ### Site templates
 
@@ -221,6 +221,8 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 [7 Principles of Rich Web Applications](http://rauchg.com/2014/7-principles-of-rich-web-applications/)
 
 [Presenting The Most Over-Engineered Blog Ever](http://jlongster.com/Presenting-The-Most-Over-Engineered-Blog-Ever)
+
+[Introducing Pokedex.org: a progressive webapp for Pokémon fans](http://www.pocketjavascript.com/blog/2015/11/23/introducing-pokedex-org)
 
 ### Server side
 
