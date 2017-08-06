@@ -86,6 +86,9 @@ description: >
 [Mobi.css](http://getmobicss.com/)
 : A lightweight, scalable, mobile-first css framework
 
+[Shoelace](https://shoelace.style/)
+: A back to the basics CSS starter kit. For when you don’t need the whole boot.
+
 ### Modules
 
 [Normalize.css](https://necolas.github.io/normalize.css/)
