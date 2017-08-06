@@ -18,15 +18,16 @@ pre {
   word-wrap: normal;
 
   code {
-    display: inline;
-    max-width: auto;
-    padding: 0;
-    margin: 0;
-    overflow: scroll;
-    line-height: inherit;
-    word-wrap: normal;
     background-color: transparent;
     border: 0;
+    color: $code-color;
+    display: inline;
+    line-height: inherit;
+    max-width: auto;
+    margin: 0;
+    overflow: scroll;
+    padding: 0;
+    word-wrap: normal;
   }
 }
 

@@ -48,7 +48,7 @@ Add your user info, for instance
 
 ```bash
 git config --global user.email "casati_gianluca@yahoo.it"
-$ git config --global user.name "fibo"
+git config --global user.name "fibo"
 ```
 
 I really recommend you to flag the *quick edit mode* option on your prompt preferences. It will enable right mouse button to paste, otherwise you can use <kbd>Shift+INS</kbd>.
