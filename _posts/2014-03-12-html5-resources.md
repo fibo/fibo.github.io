@@ -1,7 +1,8 @@
 ---
 title: HTML5 resources
 tags:
-  - Web
+  - Web,
+  - HTML
 description: >
     Collection of links related to HTML5.
 ---
@@ -19,14 +20,11 @@ description: >
 [WHATWG](http://www.whatwg.org/)
 : Web Hypertext Application Technology Working Group
 
-[HTML5 rocks](http://www.html5rocks.com/en/)
+[HTML5 rocks][html5rocks]
 : A resource for developers looking to put HTML5 to use today, including information on specific features and when to use them in your apps.
 
 [HTML Goodies](http://www.htmlgoodies.com/)
 : The ultimate HTML resource.
-
-[Bootswatch](http://bootswatch.com/)
-: Free themes for Bootstrap.
 
 [Mr. doob](http://www.mrdoob.com/)
 : HTML5 demos from [Three.js](http://threejs.org/) creator.
@@ -49,7 +47,7 @@ description: >
 : WebGL from the ground up.
 
 [htmlreference.io](http://htmlreference.io/)
-> A free guide to HTML. It features all elements and attributes.
+: A free guide to HTML. It features all elements and attributes.
 
 ## Frameworks and libs
 
@@ -85,6 +83,7 @@ description: >
 ## Articles and other resources
 
 [HTML5rocks presentation](http://slides.html5rocks.com/)
+: [html5rocks]
 
 [One line browser notepad](https://coderwall.com/p/lhsrcq)
 
@@ -94,13 +93,16 @@ description: >
 
 [Special Characters](http://www.utexas.edu/learn/html/spchar.html)
 
-[Learn HTML](https://blog.udemy.com/learn-html-learn-the-foundations-of-html/) (good starting point for newbies)
+[Learn HTML](https://blog.udemy.com/learn-html-learn-the-foundations-of-html/)
+: (good starting point for newbies)
 
 ### Web components
 
 [HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
+: [html5rocks]
 
 [HTML's New Template Tag](http://www.html5rocks.com/en/tutorials/webcomponents/template/)
+: [html5rocks]
 
 [Custom Elements](http://customelements.io/)
 : a web components gallery for modern web apps
@@ -117,10 +119,13 @@ description: >
 ### WebRTC
 
 [Getting started with WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
-: [(html5rocks.com)][1]
+: [html5rocks]
 
 [WebRTC in the real world: STUN, TURN and signaling](http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
-: [(html5rocks.com)][1]
+: [html5rocks]
 
-  [1]: http://www.html5rocks.com
+[A real world guide to WebRTC](https://deepstreamhub.com/tutorials/protocols/webrtc-intro/)
+: [deepstreamhub]
 
+[html5rocks]: http://www.html5rocks.com
+[deepstreamhub]: https://deepstreamhub.com/
