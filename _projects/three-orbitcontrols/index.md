@@ -1,5 +1,6 @@
 ---
 title: three-orbitcontrols
+npm: true
 ---
 # three-orbitcontrols
 

@@ -1,5 +1,6 @@
 ---
 title: not-defined
+npm: true
 ---
 # not-defined
 

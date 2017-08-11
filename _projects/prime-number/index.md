@@ -1,5 +1,6 @@
 ---
 title: prime-number
+npm: true
 ---
 # prime-number
 

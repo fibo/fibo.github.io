@@ -1,5 +1,6 @@
 ---
 title: zeroconf-redux
+npm: true
 ---
 # zeroconf-redux
 

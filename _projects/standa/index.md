@@ -1,5 +1,6 @@
 ---
 title: standa
+npm: true
 ---
 # standa
 

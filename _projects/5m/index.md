@@ -1,5 +1,6 @@
 ---
 title: 5m
+npm: true
 ---
 # 5m
 
