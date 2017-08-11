@@ -168,7 +168,7 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 
 See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) on Wikipedia for a comparison table.
 
-[Codeopen](http://codepen.io/)
+[Codepen](http://codepen.io/)
 : Front End Developer Playground &amp; Code Editor in the Browser
 
 [Leaveweave](http://liveweave.com/)
@@ -190,7 +190,7 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 : an online IDE for client and server development
 
 [Bootply](http://bootply.com/)
-: The [Bootstrap][1] Playground
+: The Bootstrap Playground
 
 [JSFiddle](http://jsfiddle.net/)
 : Test your JavaScript, CSS, HTML or CoffeeScript online
@@ -203,6 +203,9 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [Codio](https://codio.com)
 : THE WORLD'S MOST POWERFUL WEB IDE
+
+[CodeSandbox](https://codesandbox.io)
+: CodeSandbox makes it easier to create, share and reuse React projects with others
 
 ## Articles
 
