@@ -1,5 +1,6 @@
 ---
 title: strict-mode
+npm: true
 ---
 # strict-mode
 

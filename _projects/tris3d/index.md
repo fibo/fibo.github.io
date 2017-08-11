@@ -1,5 +1,6 @@
 ---
 title: tris3d
+npm: true
 ---
 # tris3d
 

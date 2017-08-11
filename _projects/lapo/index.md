@@ -1,5 +1,6 @@
 ---
 title: lapo
+npm: true
 ---
 # lapo
 

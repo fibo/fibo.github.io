@@ -1,5 +1,6 @@
 ---
 title: inlined
+npm: true
 ---
 # inlined
 

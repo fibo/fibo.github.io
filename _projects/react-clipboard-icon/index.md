@@ -1,5 +1,6 @@
 ---
 title: react-clipboard-icon
+npm: true
 ---
 # react-clipboard-icon
 

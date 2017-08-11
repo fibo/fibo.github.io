@@ -1,5 +1,6 @@
 ---
 title: tris3d-ai
+npm: true
 ---
 # tris3d-ai
 

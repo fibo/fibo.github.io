@@ -1,5 +1,6 @@
 ---
 title: x3dom-livereload
+npm: true
 ---
 # x3dom-livereload
 

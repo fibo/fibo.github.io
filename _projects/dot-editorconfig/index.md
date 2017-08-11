@@ -1,5 +1,6 @@
 ---
 title: dot-editorconfig
+npm: true
 ---
 # dot-editorconfig
 
