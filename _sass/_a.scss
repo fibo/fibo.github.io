@@ -1,10 +1,7 @@
 a {
-  background-color: transparent;
-  border-radius: $border-radius;
   color: $black;
   cursor: pointer;
   display: inline-block; /* make the link filled with its content, for examples, images */
-  padding: 1px 7px;
   text-decoration: none;
 }
 
@@ -16,7 +13,6 @@ a:visited {
 a:active,
 a:focus,
 a:hover {
-  background-color: $semi-transparent;
   color: $black;
   text-decoration: underline;
 }
