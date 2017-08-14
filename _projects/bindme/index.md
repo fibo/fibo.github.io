@@ -21,10 +21,12 @@ npm install bindme
 
 This interesting article published today explains a React perfomance tip:
 [React Performance Anti-Pattern: Creating Functions in render()](https://medium.com/@erikras/react-performance-anti-pattern-creating-functions-in-render-ddeb5ebd2933).
+
 I was looking for a way to autobind methods but none is too convincingly
 in my opinion so I created this minimal package that is implemented
 in 6 lines of good old and battle tested ES5 code and requires really
 few lines of code on the user side to be imported and invoked.
+
 Consider also that, at the time of this writing, *decorator* syntax is
 not final yet. Furthermore, this `bindme` helper has no dependency at all
 and prolly will not require any version upgrade.
@@ -47,6 +49,18 @@ class MyButton extends Component {
 
   handleClick() {
     this.setState({ clicked: true })
+  }
+```
+
+If you have no state and need only bindings in your constructor, since
+`super` returns an instance to the object, the following snippet works too
+
+```javascript
+  constructor() {
+    bindme(super(),
+      'onClick',
+      'onMouseOver'
+    )
   }
 ```
 
