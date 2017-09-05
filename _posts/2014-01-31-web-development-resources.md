@@ -162,6 +162,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Icons8](https://icons8.com/)
 : 38700 free icons, the largest icons pack ever.
 
+[Simple icons](https://simpleicons.org/)
+: Free SVG icons for popular brands
+
 [Favicon & App Icon Generator](http://www.favicon-generator.org/)
 
 ## Online editors
