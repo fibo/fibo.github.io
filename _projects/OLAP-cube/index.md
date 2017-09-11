@@ -33,9 +33,15 @@ All code in this section is run and tested in [this single file][test_api].
 Note also that
 
 1. Everything is immutable, all attributes are static.
-2. Operators are chainable but they always return a brand new instance.
+2. Operators are chainable and they always return a brand new instance.
 
 ### `new Table({ dimensions, fields, points, data })`
+
+* @param {Object} arg
+* @param {Array} arg.dimensions
+* @param {Array} arg.points
+* @param {Array} arg.fields
+* @param {Array} arg.data in the format data[pointIndex][fieldIndex]
 
 ```javascripts
 const Table = require('olap-cube').model.Table
@@ -43,7 +49,7 @@ const Table = require('olap-cube').model.Table
 const table = new Table({
   dimensions: ['year', 'month'],
   fields: ['revenue'],
-  points: [[2016, 'Gen']],
+  points: [[2016, 'Jan']],
   data: [[100]]
 })
 
@@ -86,6 +92,11 @@ console.log(table.fields) // [ 'revenue' ]
 
 > Add a set of rows to the table.
 
+* @param {Object} data
+* @param {Array} data.header
+* @param {Array} data.rows
+* @returns {Object} table
+
 Every row is an object which attributes are either a dimension or a field.
 
 ```javascripts
@@ -97,6 +108,7 @@ const table2 = emptyTable.addRows({
     [ 2016, 'Jan', 100 ],
     [ 2016, 'Feb', 170 ],
     [ 2016, 'Mar', 280 ],
+    [ 2017, 'Feb', 177 ],
     [ 2017, 'Apr', 410 ]
   ]
 })
@@ -112,6 +124,7 @@ console.log(table2.data) // [[ 80 ],
                          //  [ 100 ],
                          //  [ 170 ],
                          //  [ 280 ],
+                         //  [ 177 ],
                          //  [ 410 ]]
 ```
 
@@ -133,14 +146,18 @@ console.log(table2.points) // [[ 2015, 'Nov' ],
                            //  [ 2017, 'Apr' ]]
 ```
 
-### `table.slice(dimension, table)`
+### `table.slice(dimension, filter)`
 
 > Slice operator picks a rectangular subset of a cube by choosing a single value of its dimensions.
+
+* @param {String} dimension
+* @param {*} filter
+* @returns {Object} table
 
 Consider the following example, where a slice with 2016 year is created.
 
 ```javascripts
-var table3 = table2.slice('year', 2016)
+const table3 = table2.slice('year', 2016)
 
 console.log(table3.points) // [[ 2016, 'Jan' ],
                            //  [ 2016, 'Feb' ],
@@ -149,6 +166,33 @@ console.log(table3.points) // [[ 2016, 'Jan' ],
 console.log(table3.data) // [[ 100 ],
                          //  [ 170 ],
                          //  [ 280 ]]
+```
+
+### `table.dice(selector)`
+
+> Dice operator picks a subcube by choosing a specific values of multiple dimensions.
+
+* @param {Function} selector
+* @returns {Object} table
+
+Consider the following example, where a dice excluding one month is created.
+
+```javascripts
+const onlyFebruary = (point) => point[1] !== 'Feb'
+
+const table4 = table2.dice(onlyFebruary)
+
+console.log(table4.points) // [[ 2015, 'Nov' ],
+                           //  [ 2015, 'Dec' ],
+                           //  [ 2016, 'Jan' ],
+                           //  [ 2016, 'Mar' ],
+                           //  [ 2017, 'Apr' ]]
+
+console.log(table4.data) // [[ 80 ],
+                         //  [ 90 ],
+                         //  [ 100 ],
+                         //  [ 280 ],
+                         //  [ 410 ]]
 ```
 
 ## License
