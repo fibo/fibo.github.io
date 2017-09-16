@@ -51,18 +51,17 @@ node examples/distributeDomains.js | sort | uniq -c
 
 ## Annotated source
 
-[Latin alphabet system numerology](https://en.wikipedia.org/wiki/Numerology#Latin_alphabet_systems) assigns a number to every lower case latin letter.
-We are going to use `String.prototype.charCodeAt` to accept every character and `String.prototype.toLowerCase` to make it **case insensitive**.
-Compatibility with classic numerology actually is not supported.
+[Latin alphabet system numerology](https://en.wikipedia.org/wiki/Numerology#Latin_alphabet_systems), which actually is not implemented by this package, assigns a number to every lower case latin letter.
+The function below uses `String.prototype.charCodeAt` to accept every character and `String.prototype.toLowerCase` to be **case insensitive**.
 
     /**
      * @param {String} name you want to convert into a number.
-     * @param {Array} [range] defaults to `[1, 9]`.
+     * @param {Array} [range] defaults to `[0, 9]`.
      * @returns {Number} num.
      */
 
     function numerology (name, range) {
-      if (arguments.length === 1) range = [1, 9]
+      if (arguments.length === 1) range = [0, 9]
 
       const inf = range[0]
       const sup = range[1]
