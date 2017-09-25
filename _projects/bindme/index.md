@@ -72,7 +72,8 @@ following ES6 code
 ```javascript
 const bindme = (self, ...funcs) => {
   funcs.forEach(func => {
-    self[func] = self[func].bind(self)
+    if (self[func]) self[func] = self[func].bind(self)
+    else console.error(`Method ${func} is not defined`)
   })
 }
 ```
