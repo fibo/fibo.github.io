@@ -104,7 +104,10 @@ VALUES
 Calculate distance from two locations
 
 ```sql
-select ST_Distance((select geo from location where name = 'Colosseo'),(select geo from location where name = 'Duomo'))
+SELECT ST_Distance(
+  (SELECT geo FROM location WHERE name = 'Colosseo'),
+  (SELECT geo FROM location WHERE name = 'Duomo')
+)
 ```
 
 [PostGIS]: http://postgis.net/ "PostGIS"
