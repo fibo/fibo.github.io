@@ -9,7 +9,7 @@ description: >
 
 ## Requirements
 
-<div class="alert warning">I assume your Windows Git shell is installed and properly configured.</div>
+<div class="paper warning">I assume your Windows Git shell is installed and properly configured.</div>
 
 See [Getting started with Git shell on Windows][1] before reading this article.
 
@@ -46,7 +46,7 @@ $ curl -o /share/vim/vim73/colors/desert.vim https://vim.googlecode.com/hg/runti
 $ echo colorscheme desert >> $HOME/_vimrc
 ```
 
-<div class="alert success">Ok, you are done!</div>
+<div class="paper success">Ok, you are done!</div>
 
 If you use vim as editor for everything, like me, you can use this trick. Since git shell uses vim73, and **of course** I have vim74 I added this to the bottom of my *_vimrc*
 

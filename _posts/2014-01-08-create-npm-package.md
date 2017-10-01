@@ -24,7 +24,7 @@ This is your choice, but, if you want to follow what seems to be a *de facto* st
 
 I assume the repo and the package have the same name.
 
-<div class="alert warning">Note that npm will <strong>not</strong> accept uppercase letters in package names.</div>
+<div class="paper warning">Note that npm will <strong>not</strong> accept uppercase letters in package names.</div>
 
 I use only letters, numbers, and hyphens. No *-js* suffix.
 

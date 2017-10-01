@@ -10,17 +10,17 @@ description: >
 
 <div class="well">You are entering in the Git world.</div>
 
-![Choose your pill][1]
+![Choose your pill][1]{:.responsive}
 
 ### Blue pill
 
-<div class="alert info">If you feel more like a creative, and you like to use a graphic user interface.</div>
+<div class="paper info">If you feel more like a creative, and you like to use a graphic user interface.</div>
 
 Go to [Creative people using GitHub]({% post_url 2013-08-07-creative-people-using-github %}), and you are done!
 
 ### Red pill
 
-<div class="alert danger">If you feel more like a coder and want the power of a shell.</div>
+<div class="paper danger">If you feel more like a coder and want the power of a shell.</div>
 
 Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/getting-started-with-git-shell).
 

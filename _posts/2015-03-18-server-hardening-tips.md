@@ -9,11 +9,11 @@ description: >
 
 In this article I write what I do when I get a Linux server. Steps are really minimal 'cause I am lazy. I hope they are enough to prevent security issues.
 
-<div class="alert info">I assume OS is a Centos 7. If you are using Ubuntu, few modifications are needed, using <em>apt-get</em> instead of <em>yum</em>, <em>service</em> instead of <em>systemctl</em>, etc. Aside few details, the same concepts applies on both as well as other Linux distros.</div>
+<div class="paper info">I assume OS is a Centos 7. If you are using Ubuntu, few modifications are needed, using <em>apt-get</em> instead of <em>yum</em>, <em>service</em> instead of <em>systemctl</em>, etc. Aside few details, the same concepts applies on both as well as other Linux distros.</div>
 
 ## ASAP
 
-<div class="alert warning">Do the following steps <strong>As Soon As Possible</strong>, i.e. when you access the server the first time.</div>
+<div class="paper warning">Do the following steps <strong>As Soon As Possible</strong>, i.e. when you access the server the first time.</div>
 
 1. Login as root and change password, use a *passphrase*.
 2. Create a new user.
@@ -63,9 +63,9 @@ $ grep failed /var/log/secure | more
 
 See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1].
 
-<div class="alert info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
+<div class="paper info">Many articles recommend to change default ssh port. It is not really a security enhancement, but, yes it can reduce the number of break-in attempts. One really benefit that I found about changing port number is to set it to <em>443</em> to bypass restrictive corporate firewalls.</div>
 
-<div class="alert warning">Consider using <em>ssh-keygen</em> and <em>ssh-copy-id</em> to configure ssh access without password.</div>
+<div class="paper warning">Consider using <em>ssh-keygen</em> and <em>ssh-copy-id</em> to configure ssh access without password.</div>
 
 ## How to
 
@@ -85,7 +85,7 @@ You can schedule yum updates with *yum-cron*
 # systemctl start yum-cron
 ```
 
-<div class="alert warning">Automatic updates should be configured <strong>only</strong> in a test environment.</div>
+<div class="paper warning">Automatic updates should be configured <strong>only</strong> in a test environment.</div>
 
 ### Run a server on port 80
 
@@ -107,7 +107,7 @@ $ getcap /path/to/node
 
 Now any user can run a *nodejs* server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
-<div class="alert warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to <a href="http://g14n.info/dotsoftware">separate user software from system software</a>.
+<div class="paper warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to <a href="http://g14n.info/dotsoftware">separate user software from system software</a>.
 In this particular case, if you update Node using yum you will loose the <em>cap_net_bind_service=ep</em> setting and your server will fail to restart on port 80.</div>
 
 ### Restrict ssh access

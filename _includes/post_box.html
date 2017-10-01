@@ -1,11 +1,11 @@
-<a href="{{ include.post.url }}" class="list-group-item">
-  <article>
+<article class="paper">
+  <a href="{{ include.post.url }}">
     <header>
       <h3>{{ include.post.title }}</h3>
 
-      <p class="description">{{ include.post.description }}</p>
+      <p>{{ include.post.description }}</p>
 
       {% include post_time.html post=include.post %}
     </header>
-  </article>
-</a>
+  </a>
+</article>

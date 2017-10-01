@@ -4,7 +4,6 @@
   <meta name="keywords" content="{{ page.tags | join: ',' }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 
-  {% include bootstrap/header.html %}
   {% include header.html %}
   {% include common/cookieconsent.html %}
   {% include common/style.html %}
@@ -13,9 +12,9 @@
 <body>
   {% include nav.html %}
 
-  <div class="container">
+  <main>
     <article>
-      <header class="page-header">
+      <header>
         <h1> {{ page.title }}  </h1>
 
         <p class="description">{{ page.description }}</p>
@@ -61,10 +60,9 @@
     </article>
 
     {% include disqus.html %}
-  </div>
+  </main>
 
   {% include footer.html %}
-  {% include bootstrap/footer.html %}
   {% include common/analytics.html %}
 </body>
 </html>

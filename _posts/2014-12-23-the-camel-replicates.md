@@ -14,18 +14,18 @@ It is a common pattern: customers let me develop on hosts that **cannot access I
 
 In this article *host.customer.com* is that kind of host, and of course it is needed a *myhost.example.org* that can connect to Internet or at least to a CPAN mirror.
 
-<div class="alert info">If you want a full featured tool, consider using <a href="https://metacpan.org/pod/Pinto">Pinto</a> or <a href="https://metacpan.org/pod/Carton">Carton</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
+<div class="paper info">If you want a full featured tool, consider using <a href="https://metacpan.org/pod/Pinto">Pinto</a> or <a href="https://metacpan.org/pod/Carton">Carton</a>: this article describes just a very simple trick I found to deal with this network limitation.</div>
 
 ## Requirements
 
-<div class="alert warning">I assume both hosts has same OS and Perl version for simplicity. In particular, different versions of Perl can lead to issues when resolving dependencies on core modules.</div>
+<div class="paper warning">I assume both hosts has same OS and Perl version for simplicity. In particular, different versions of Perl can lead to issues when resolving dependencies on core modules.</div>
 
 Start on *myhost.example.org*: you need a working *cpan* client that had at least a [first run]({% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}#first-run).
 It is nice to have [A CPAN client that works like a charm][1].
 
 ## Implementation
 
-<div class="alert info">The trick is to realize that <em>~/.cpan/sources</em> is a mini CPAN mirror with all dependencies needed.</div>
+<div class="paper info">The trick is to realize that <em>~/.cpan/sources</em> is a mini CPAN mirror with all dependencies needed.</div>
 
 So install everything you need with your *cpan* client on *myhost.example.org*. I usually have a *Makefile.PL* that includes all dependencies information, it is a good idea.
 
