@@ -74,13 +74,13 @@ Another item
 <button class="success">Success</button>
 <button class="warning">Warning</button>
 
-## Alerts
+## Papers
 
-<div class="alert">Default</div>
-<div class="alert danger">Danger</div>
-<div class="alert info">Info</div>
-<div class="alert success">Success</div>
-<div class="alert warning">Warning</div>
+<div class="paper">Default</div>
+<div class="paper danger">Danger</div>
+<div class="paper info">Info</div>
+<div class="paper success">Success</div>
+<div class="paper warning">Warning</div>
 
 ## Badges
 

@@ -127,7 +127,7 @@ done_testing;
 
 Here we go ... we started writing tests for every feature we add.
 
-<div class="alert danger">Please <strong>don't get addicted</strong> :)</div>
+<div class="paper danger">Please <strong>don't get addicted</strong> :)</div>
 
 ## Conclusion
 

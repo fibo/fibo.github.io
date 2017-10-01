@@ -18,7 +18,7 @@ I like to use for the target folder the following naming convention
 
 Of course, the target folder **must** exist on target hosts and it is assumed that there is a route from source to target.
 
-<div class="alert warning">All commands must be run with <strong>root</strong> privileges.</div>
+<div class="paper warning">All commands must be run with <strong>root</strong> privileges.</div>
 
 
 ## Source host
@@ -27,7 +27,7 @@ Connect to *host1.example.org*, that is our source host.
 
 ### NFS service
 
-<div class="alert info">I assume here that source host has Red Hat OS.</div>
+<div class="paper info">I assume here that source host has Red Hat OS.</div>
 
 First of all, start NFS service
 

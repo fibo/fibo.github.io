@@ -67,18 +67,18 @@ perl:
 
 {% assign repo = site.data.github.repos %}
 
-<div class="col-sm-4">
+<div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">NodeJS packages</div>
-    <div class="panel-body">
-      <img src="/svg/logos/nodejs.svg" alt="NodeJS logo" class="center-block img-responsive"/>
+  <div>
+    <div>NodeJS packages</div>
+    <div>
+      <img src="/svg/logos/nodejs.svg" alt="NodeJS logo"/>
     </div>
 
-    <ul class="list-group">
+    <ul>
 
       {% for pkg in page.node.packages_with_social_stats %}
-      <li class="list-group-item">
+      <li>
         <h3><a href="{{ repo[pkg].homepage }}">{{ pkg }}</a></h3>
 
         <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
@@ -92,17 +92,17 @@ perl:
   </div>
 </div>
 
-<div class="col-sm-4">
+<div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">NodeJS <strong>micro</strong> packages</div>
-    <div class="panel-body">
-      <img src="/svg/logos/npm-2.svg" alt="npm logo" class="center-block img-responsive"/>
+  <div>
+    <div>NodeJS <strong>micro</strong> packages</div>
+    <div>
+      <img src="/svg/logos/npm-2.svg" alt="npm logo"/>
     </div>
 
-    <ul class="list-group">
+    <ul>
     {% for tiny_pkg in page.node.tiny_packages %}
-      <li class="list-group-item">
+      <li>
         <a href="{{ repo[tiny_pkg].homepage }}">{{ tiny_pkg }}</a>: {{ repo[tiny_pkg].description }}
       </li>
     {% endfor %}
@@ -110,65 +110,65 @@ perl:
   </div>
 </div>
 
-<div class="col-sm-4">
-  <div class="panel panel-default">
-    <div class="panel-heading">Docker</div>
-    <div class="panel-body">
-      <img src="/svg/logos/docker.svg" alt="Docker logo" class="center-block img-responsive"/>
+<div>
+  <div>
+    <div>Docker</div>
+    <div>
+      <img src="/svg/logos/docker.svg" alt="Docker logo"/>
     </div>
 
-    <ul class="list-group">
+    <ul>
       {% for docker_image in page.docker %}
-      <li class="list-group-item">
+      <li>
         <a href="{{ repo[docker_image].homepage }}">{{ docker_image }}</a>: {{ repo[docker_image].description }}
       </li>
       {% endfor %}
     </ul>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">Bash</div>
-    <div class="panel-body">
-      <img src="/svg/logos/bash.svg" alt="Bash logo" class="center-block img-responsive"/>
+  <div>
+    <div>Bash</div>
+    <div>
+      <img src="/svg/logos/bash.svg" alt="Bash logo"/>
     </div>
 
-    <ul class="list-group">
-      <li class="list-group-item">
+    <ul>
+      <li>
         <img src="https://img.shields.io/badge/kiss-literate-orange.svg" alt="KLP">
         {{ repo['kiss-literate-programming'].description }}
       </li>
 
       {% for bash_project in page.bash %}
-      <li class="list-group-item">
+      <li>
         <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>: {{ repo[bash_project].description }}
       </li>
       {% endfor %}
     </ul>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">Golang</div>
-    <div class="panel-body">
-      <img src="/svg/logos/gopher.svg" alt="Golang logo" class="center-block img-responsive"/>
+  <div>
+    <div>Golang</div>
+    <div>
+      <img src="/svg/logos/gopher.svg" alt="Golang logo"/>
     </div>
 
-    <ul class="list-group">
+    <ul>
       {% for golang_project in page.golang %}
-      <li class="list-group-item">
+      <li>
         <a href="{{ repo[golang_project].homepage }}">{{ golang_project }}</a>: {{ repo[golang_project].description }}
       </li>
       {% endfor %}
     </ul>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">Perl</div>
-    <div class="panel-body">
-      <img src="/svg/logos/perl.svg" alt="Perl logo" class="center-block img-responsive"/>
+  <div>
+    <div>Perl</div>
+    <div>
+      <img src="/svg/logos/perl.svg" alt="Perl logo"/>
     </div>
 
-    <ul class="list-group">
+    <ul>
       {% for perl_project in page.perl %}
-      <li class="list-group-item">
+      <li>
         <a href="{{ repo[perl_project].homepage }}">{{ perl_project }}</a>: {{ repo[perl_project].description }}
       </li>
       {% endfor %}

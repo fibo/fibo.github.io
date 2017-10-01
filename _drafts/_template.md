@@ -10,9 +10,7 @@ description: >
 
 All sections start with an **h2**.
 
-<div class="alert alert-info">This is an alert</div>
-
-This is a <span class="label label-default">label</span>
+<div class="paper info">This is an <em>info</em> <strong>paper</strong>.</div>
 
 ![foo_bar](//{{ site.domain }}/images/yyyy-mm-dd-article-template/foo_bar.jpg)
 

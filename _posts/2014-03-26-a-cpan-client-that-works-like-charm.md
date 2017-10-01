@@ -132,9 +132,9 @@ Always commit changes to config variables to disk.
 cpan> o conf auto_commit 1
 ```
 
-<div class="alert warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
+<div class="paper warning">For the rest of this article I assume <strong>auto_commit is on</strong>.</div>
 
-<div class="alert danger">
+<div class="paper danger">
 Note that <em>auto_commit</em> is disabled by default, so you should launch <strong>o conf commit</strong> to confirm configuration changes.
 </div>
 

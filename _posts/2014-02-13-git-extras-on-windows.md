@@ -9,7 +9,7 @@ description: >
 
 ## Installation
 
-<div class="alert warning">Note that git-extras does <strong>not</strong> support Windows platform. Few commands may not work, see below.</div>
+<div class="paper warning">Note that git-extras does <strong>not</strong> support Windows platform. Few commands may not work, see below.</div>
 
 Enter Windows Git shell and launch
 

@@ -34,7 +34,7 @@ The only customization I **strongly recommend** is to check the *Run Git from Wi
 
 ## Configuration
 
-<div class="alert warning">All the following commands should be launched from a <strong>git shell</strong>.</div>
+<div class="paper warning">All the following commands should be launched from a <strong>git shell</strong>.</div>
 
 ### Basics
 
@@ -108,7 +108,7 @@ conq: logged in as fibo.
 You can use git or hg to connect to Bitbucket. Shell access is disabled.
 ```
 
-<div class="alert warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
+<div class="paper warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
 
 Read [Bypass restrictive firewall settings]({% post_url 2014-02-14-git-shell-windows-tips %}#bypass-restrictive-firewall-settings) instructions to work around it.
 
@@ -116,4 +116,3 @@ Read [Bypass restrictive firewall settings]({% post_url 2014-02-14-git-shell-win
 [2]: https://lh6.googleusercontent.com/_O0nduo4l74xVtUf_0kvwdo1x5S5LKUIUPkJrJIuxJ8=s0 "Git setup"
 [3]: https://lh6.googleusercontent.com/0CCA8zW8bPiL4238EDEpIfLvxQGKlW50zumiH7YxFKQ=s0 "Git bash properties"
 [4]: https://github.com/
-

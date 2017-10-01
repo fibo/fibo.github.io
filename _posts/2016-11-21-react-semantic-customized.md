@@ -54,7 +54,7 @@ rm semantic/src/themes/tris3d/assets/images/flags.png
 
 Just make sure you do not select it during setup.
 
-![Semantic interactive setup](/images{{ page.id }}/semantic_setup.png)
+![Semantic interactive setup](/images{{ page.id }}/semantic_setup.png){:.responsive}
 
 Another important trick to get started is to change images and fonts path
 

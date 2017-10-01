@@ -2,14 +2,6 @@ p {
   margin-top: $margin-top;
   margin-bottom: $margin-bottom;
   hyphens: auto;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 p.description {

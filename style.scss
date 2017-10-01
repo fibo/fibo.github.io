@@ -12,11 +12,12 @@
 @import "blockquote";
 @import "body";
 @import "button";
+@import "code";
+@import "footer";
 @import "dl";
 @import "kbd";
-@import "footer";
-@import "code";
 @import "h1-6";
+@import "header";
 @import "img";
 @import "main";
 @import "nav";
@@ -26,6 +27,6 @@
 @import "ul";
 
 /* Classes */
-@import "alert";
 @import "badge";
 @import "intention";
+@import "paper";

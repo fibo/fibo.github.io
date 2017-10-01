@@ -30,7 +30,7 @@ SQL>
 
 Type `quit` to exit. But remember that,
 
-<div class="alert info">Oracle Instant Client right version depends only on your host Operating System version.</div>
+<div class="paper info">Oracle Instant Client right version depends only on your host Operating System version.</div>
 
 I'm going to put files under `$HOME/opt/Oracle` and store the *.zip* in the packages folder, so here there are my files
 
@@ -52,7 +52,7 @@ unzip packages/sqlplus-10.2.0.5.0-linux-x64.zip
 
 I use to create a *.oracle_profile* with environment variables I need, so I can source it from *.bash_profile* or from another session (for example from a CPAN shell, see below).
 
-<div class="alert warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
+<div class="paper warning">It is important you use the same environment variables as in your scripts as at the time of installation, since installation will create linked libraries.</div>
 
 ```bash
 $ cat $HOME/.oracle_profile
@@ -71,11 +71,11 @@ else
 fi
 ```
 
-<div class="alert danger">Anyway avoid set <em>LD_LIBRARY_PATH</em> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
+<div class="paper danger">Anyway avoid set <em>LD_LIBRARY_PATH</em> with a final colon (<strong>:</strong>) otherwise you can get unexpected results.</div>
 
 Yes I know! It is said that [LD_LIBRARY_PATH is evil](https://blogs.oracle.com/ali/entry/avoiding_ld_library_path_the), but I couldn't complete a working installation without it.
 
-<div class="alert info">
+<div class="paper info">
 Also note that if you are using a full Oracle client, or even an Oracle server you probably should set it as <em>LIBRARY_PATH=$ORACLE_HOME/lib</em>.
 </div>
 
@@ -83,7 +83,7 @@ Set `NLS_LANG` according to your needs. In the example above, it is ok for Italy
 
 `TNS_ADMIN` is the directory where you put your *tnsadmin.ora*, since we are not pointing to an Oracle server installation, we probably need also our own tns configuration.
 
-<div class="alert warning">Don' t forget to source it from your <em>.bash_profile</em>!</div>
+<div class="paper warning">Don' t forget to source it from your <em>.bash_profile</em>!</div>
 
 ### Latest DBI
 

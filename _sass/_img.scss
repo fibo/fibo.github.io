@@ -2,18 +2,12 @@ img {
   border-style: none;
 }
 
-img.responsive {
-  width: 100%;
-  height: auto;
-}
-
 img.circle {
   border-radius: 50%;
 }
 
 @media screen and (max-width: $mobile-break-point) {
-  /* Npm downloads image: make it responsive */
-  img[alt="NPM"], img[alt="NPM downloads"] {
+  img.responsive {
     width: 100%;
     height: auto;
   }
