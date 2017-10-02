@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="keywords" content="{{ page.tags | join: ',' }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 
+  {% assign page.keywords = page.tags %}
+
+  {% include common/meta.html %}
+  {% include common/favicon.html %}
   {% include header.html %}
   {% include common/cookieconsent.html %}
   {% include common/style.html %}
