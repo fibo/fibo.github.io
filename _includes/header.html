@@ -1,15 +1,7 @@
-{% assign package = site.data.package %}
-
-<meta name="description" content="{{ page.description | strip_newlines }}">
-<meta name="author" content="{{ package.author.name }}">
-
-<title>{{ site.name - page.title }}</title>
-
 {% if page.isHomepage %}
   <meta name="google-site-verification" content="{{ site.google-site-verification }}" />
 {% endif %}
 
-<!-- TODO remove this and use jemoji gem -->
 {% if page.libs.twemoji %}
   <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
 {% endif %}
