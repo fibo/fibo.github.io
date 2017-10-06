@@ -23,6 +23,10 @@
         <p class="description">{{ page.description }}</p>
 
         {% include post_time.html post=page %}
+
+        {% for tag in include.post.tags %}
+          <div class="badge info">{{ tag }}</div>
+        {% endfor %}
       </header>
 
       {{ content }}
