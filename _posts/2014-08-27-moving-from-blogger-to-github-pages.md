@@ -51,9 +51,9 @@ I will focus on post [How to install DBD::Oracle](http://g14n.info/2013/07/how-t
 
 See [Jekyll docs about how to write a post](http://jekyllrb.com/docs/posts/).
 
-To preserve blogger urls, edit _config.yml and add
+To preserve blogger urls, edit *_config.yml* and add
 
-```
+```yaml
 permalink: ./:year/:month/:title.html
 ```
 
@@ -65,7 +65,7 @@ _posts/2013-07-02-how-to-install-dbdoracle.md
 
 Don't forget to insert a [YAML frontmatter](http://jekyllrb.com/docs/frontmatter/)
 
-```
+```yaml
 ---
 layout: post
 title: Moving from Blogger to GitHub Pages
@@ -90,12 +90,21 @@ Read how to [embed Disqus code][2] as a reference.
 
 A good tip is to add the *disqus_shortname* variable into the *_config.yml*
 
-```
+```yaml
 disqus:
   shortname: g14n
 ```
 
-and to use [Jekyll variables][3] to set [Disqus Javascript configuration variables][4] like this
+and to use the following [Jekyll variables][3]
+
+```js
+var disqus_shortname  = '{{ "{{ site.disqus.shortname " }}}}';
+var disqus_identifier = '{{ "{{ page.id " }}}}';
+var disqus_title      = '{{ "{{ page.title " }}}}';
+var disqus_url        = '{{ "{{ site.url " }}}}/{{ "{{ page.url " }}}}';
+```
+
+to obtain [Disqus Javascript configuration variables][4] like this
 
 ```js
 var disqus_shortname  = '{{ site.disqus.shortname }}';
@@ -108,8 +117,7 @@ var disqus_url        = '{{ site.url }}/{{ page.url }}';
 
 * [Dependencies and versions used by GitHub Pages][1]
 
-  [1]: https://pages.github.com/versions/ "Dependencies and versions used by GitHub Pages"
-  [2]: https://help.disqus.com/customer/portal/articles/472097-universal-embed-code "Disqus Universal Embed Code"
-  [3]: http://jekyllrb.com/docs/variables/ "Jekyll Variables"
-  [4]: https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables "Disqus JavaScript configuration variables"
-
+[1]: https://pages.github.com/versions/ "Dependencies and versions used by GitHub Pages"
+[2]: https://help.disqus.com/customer/portal/articles/472097-universal-embed-code "Disqus Universal Embed Code"
+[3]: http://jekyllrb.com/docs/variables/ "Jekyll Variables"
+[4]: https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables "Disqus JavaScript configuration variables"
