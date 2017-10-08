@@ -52,6 +52,13 @@ libs:
 ---
 ```
 
+### Post tags
+
+Every tag can have a [tag](./tag) subfolder names as `{ tag | slugify }`.
+To show it as a link in tag badges, edit `_data/pagetag.yml`; for example
+if there is only one post tagged with that keywork it does not make sense to list all of its related posts in a page.
+Furthermore, tag could by a typo or tag folder could not exist yet.
+
 ### Tricks
 
 To escape Liquid tags, use `{{ "{% this " }}%}`. To escape `{{ this }}`, use `{{ "{{ this " }}}}`.
