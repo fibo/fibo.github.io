@@ -33,6 +33,8 @@ Get the identity matrix
 
 ```go
 var id = m2c.I()
+fmt.Printf("%v", id)
+// {(1+0i) (0+0i) (0+0i) (1+0i)}
 ```
 
 Multiply two matrices.
