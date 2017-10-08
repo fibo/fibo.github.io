@@ -1,15 +1,17 @@
 <article>
   <header class="paper">
-    <a href="{{ include.post.url }}">
-      <h1>{{ include.post.title }}</h1>
+    <div>
+      <a href="{{ include.post.url }}">
+        <h1>{{ include.post.title }}</h1>
 
-      <p class="description">{{ include.post.description }}</p>
+        <p class="description">{{ include.post.description }}</p>
+      </a>
+    </div>
 
-      {% include post_time.html post=include.post %}
+    {% include post_time.html post=include.post %}
 
-      {% for tag in include.post.tags %}
-        <div class="badge info">{{ tag }}</div>
-      {% endfor %}
-    </a>
+    {% for tag in post.tags %}
+      <div class="badge info">{{ tag }}</div>
+    {% endfor %}
   </header>
 </article>
