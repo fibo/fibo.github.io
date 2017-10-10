@@ -15,6 +15,7 @@ nav ul li:first-child {
   float: left;
   font-size: 1.17em;
 }
+
 nav ul li {
   float: right;
   font-size: 1em;
@@ -95,6 +96,10 @@ nav ul li:hover ul li {
     display: inline;
   }
 
+  nav ul.responsive li:first-child {
+    margin-top: 1em;
+  }
+
   nav ul.responsive li a {
     display: block;
     font-size: 2em;
@@ -141,14 +146,14 @@ nav ul li:hover ul li {
     top: 18px;
   }
 
-  #hamburgericon.open span:nth-child(1),#hamburgericon.open span:nth-child(6) {
+  #hamburgericon.open span:nth-child(1), #hamburgericon.open span:nth-child(6) {
     -webkit-transform: rotate(45deg);
        -moz-transform: rotate(45deg);
          -o-transform: rotate(45deg);
             transform: rotate(45deg);
   }
 
-  #hamburgericon.open span:nth-child(2),#hamburgericon.open span:nth-child(5) {
+  #hamburgericon.open span:nth-child(2), #hamburgericon.open span:nth-child(5) {
     -webkit-transform: rotate(-45deg);
        -moz-transform: rotate(-45deg);
          -o-transform: rotate(-45deg);
