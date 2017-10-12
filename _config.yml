@@ -23,7 +23,6 @@ include:
 
 gems:
   - jekyll-sitemap
-  - jekyll-gist
 
 markdown: kramdown
 

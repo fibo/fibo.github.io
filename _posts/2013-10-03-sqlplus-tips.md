@@ -132,7 +132,19 @@ Defaults are really weird, try to make it more usable.
 
 Create a *login.sql* file in your current directory, your $HOME for instance, or in some directory you add to `SQLPATH` env var. Add to *login.sql* the following content
 
-{% gist fibo/6592631 %}
+```sql
+-- Make SQL prompt show database name so I know where I am (thanks to Tom Kyte for this)
+COLUMN global_name new_value gname
+SET TERMOUT OFF
+SELECT LOWER(USER) || '@' || global_name || '> ' AS global_name FROM global_name;
+SET SQLPROMPT '&gname'
+SET TERMOUT ON
+
+SET TIME ON
+SET PAUSE ON
+SET PAGESIZE 80
+SET LINESIZE 120
+```
 
 Remember that, since *PAUSE* flag is on, you should hit enter after you run a query to see a first result.
 
@@ -142,7 +154,54 @@ Remember that, since *PAUSE* flag is on, you should hit enter after you run a qu
 
 ### Spool table content to file
 
-{% gist fibo/6807322 %}
+```bash
+#!/bin/bash
+#
+## Configuration
+#
+# Don't forget to edit credentials, filename and query, see below.
+#
+## How to launch
+#
+#    $ chmod +x spool_Oracle_table.sh
+#    $ nohup spool_Oracle_table.sh > spool_Oracle_table.nohup &
+###
+
+sqlplus -S /nolog <<EOF > /dev/null
+-------------------------------------------
+-- Set your credentials here
+-------------------------------------------
+CONN Oracle_user/Oracle_password@Oracle_sid
+-------------------------------------------
+SET ARRAY 100
+SET PAGES 0
+SET WRAP OFF
+SET FLUSH OFF
+SET FEED OFF
+SET FEEDBACK OFF
+SET ECHO OFF
+SET VERIFY OFF
+SET TERM OFF
+SET TRIMSPOOL ON
+SET HEAD OFF
+SET TRIM ON
+SET COLSEP "|"
+SET LINESIZE 800 --> this value should be enough otherwise rows will be truncated
+--------------------------------------------------------------------
+-- edit you filename here
+SPOOL filename.dat
+--------------------------------------------------------------------
+-- your spool query here, something like
+-- SELECT
+--   col1
+--   || '|' || col2
+--   || '|' || TRIM(col3_varchar)
+--   || '|' || TO_CHAR(col3_date, 'yyyy-mm-dd')
+-- FROM table;
+SPOOL OFF
+EXIT
+EOF
+```
 
 ### Edit SQL buffer
 

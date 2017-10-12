@@ -195,7 +195,30 @@ If some tests fails or you want to check connectivity to one or more databases t
 prove oracle.t
 ```
 
-{% gist fibo/5901819 oracle.t %}
+```perl
+use strict;
+use warnings;
+use DBI;
+use File::Spec;
+use Test::More;
+
+my $user = 'scott';             # Change me
+my $pass = 'tiger';             # Change me
+my $conn = 'DBI:Oracle:testdb'; # Change me
+
+ok $ENV{ORACLE_BASE}, '$ORACLE_BASE env var is defined';
+ok $ENV{ORACLE_HOME}, '$ORACLE_HOME env var is defined';
+ok $ENV{TNS_ADMIN},   '$TNS_ADMIN env var is defined';
+
+ok -d $ENV{ORACLE_BASE}, '$ORACLE_BASE dir exists';
+ok -d $ENV{ORACLE_HOME}, '$ORACLE_HOME dir exists';
+ok -e File::Spec->catfile($ENV{TNS_ADMIN}, 'tnsnames.ora'), 'tnsnames.ora exists';
+
+ok my $dbh = DBI->connect($conn, $user, $pass,{ PrintError => 1, }), 'database connection';
+
+done_testing
+__END__
+```
 
 [1]: https://metacpan.org/release/DBD-Oracle
 [2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
