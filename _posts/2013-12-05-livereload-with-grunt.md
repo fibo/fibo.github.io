@@ -44,12 +44,43 @@ I like to use [coffee-script][3] to edit configuration, i.e. I use a *Gruntfile.
 
 Here it is a working configuration
 
-{% gist fibo/7054215 %}
+```coffee
+livereloadPort = 35729
+
+module.exports = (grunt) ->
+  grunt.initConfig
+    watch:
+      index:
+        files: ['index.html']
+        tasks: []
+        options:
+          livereload: livereloadPort
+      js:
+        files: ['js/*.js']
+        tasks: []
+        options:
+          livereload: livereloadPort
+    connect:
+      server:
+        options:
+          port: 3000
+          livereload: livereloadPort
+    open:
+      index:
+        path: 'http://localhost:3000'
+        app: 'chrome'
+
+  grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-open'
+
+  grunt.registerTask 'default', ['connect', 'open', 'watch']
+```
 
 Now, if you launch
 
 ```bash
-$ grunt
+grunt
 ```
 
 <div class="paper success">Your browser will open, and the window will change <strong>as soon as</strong> you modify your files.</div>
