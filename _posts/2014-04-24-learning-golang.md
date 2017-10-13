@@ -68,5 +68,31 @@ See *Go* section in [my Vim configuration]({% post_url 2013-07-26-my-vim-configu
 
 Inspired by [Why Go is elegant and makes my code elegant](http://filippo.io/why-go-is-elegant-and-makes-my-code-elegant/) and [Write code everyday](http://ejohn.org/blog/write-code-every-day/) articles, since I am a mathematician, I started my quest on [Project Euler](https://projecteuler.net/) to get my hands dirty with [Go].
 
+## Package template
+
+Choose a good name for a Golang package, for instance `foo`.
+Create an homonym GitHub repository, start with files:
+
+* [package.go](#packagego)
+* [README.md](#readmemd)
+
+### package.go
+
+```go
+// Package foo oneline description.
+package foo
+```
+
+### README.md
+
+```markdown
+# s2
+
+> go for the Reimann sphere
+
+[![GoDoc](https://godoc.org/github.com/fibo/foo?status.svg)](https://godoc.org/github.com/fibo/foo)
+[![GoLint](https://img.shields.io/badge/go-lint-blue.svg)](http://go-lint.appspot.com/github.com/fibo/foo)
+```
+
 [Go]: http://golang.org/ "The Go Programming Language"
 [2]: https://golang.org/dl/ "Go Downloads"

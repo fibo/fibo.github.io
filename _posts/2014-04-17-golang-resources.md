@@ -33,6 +33,9 @@ description: >
 [martini](http://martini.codegangsta.io/)
 : Classy web framework for Go
 
+[gonum](http://www.gonum.org/)
+: Go numrical packages
+
 ## Software products
 
 [Docker](https://www.docker.com/)
