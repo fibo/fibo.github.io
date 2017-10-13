@@ -46,13 +46,18 @@ var b = m2c.Matrix{1, 1+i, 0, 1-i}
 var c = m2c.Mul(a, b)
 ```
 
-Multiply two matrices.
+Invert a matrix.
 
 ```go
 var a = m2c.Matrix{2i, 0, 0, 1}
 
 var invA, err = m2c.Inv(a)
+
+if err != nil {
+	log.Fatal(err)
+}
 ```
+
 ## License
 
 [MIT](http://g14n.info/mit-license/)
