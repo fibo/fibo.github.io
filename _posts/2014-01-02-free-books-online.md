@@ -68,6 +68,8 @@ description: >
 
 [Go Bootcamp](http://www.golangbootcamp.com/book)
 
+[The Little Go Book](http://openmymind.net/The-Little-Go-Book/)
+
 #### Haskell
 
 [Learn Haskell Fast and Hard](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/)
