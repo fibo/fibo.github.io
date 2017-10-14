@@ -70,7 +70,7 @@
   "clone_url": "https://github.com/fibo/m2c.git",
   "svn_url": "https://github.com/fibo/m2c",
   "homepage": "http://g14n.info/m2c",
-  "size": 6,
+  "size": 7,
   "stargazers_count": 0,
   "watchers_count": 0,
   "language": "Go",
