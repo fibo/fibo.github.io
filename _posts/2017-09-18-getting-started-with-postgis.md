@@ -94,8 +94,7 @@ Insert the coordinates of two locations, the [Colosseum](https://en.wikipedia.or
 Note that `4326` value is fixed since it corresponds to [World Geodetic System](https://en.wikipedia.org/wiki/World_Geodetic_System) EGS84, also used by the [GPS](https://en.wikipedia.org/wiki/Global_Positioning_System).
 
 ```sql
-INSERT INTO location (name, geo)
-VALUES
+INSERT INTO location (name, geo) VALUES
 ('Colosseo', ST_GeographyFromText('SRID=4326;POINT(41.8902102 12.4900422)')),
 ('Duomo', ST_GeographyFromText('SRID=4326;POINT(45.4640976 9.1897378)'))
 ;
@@ -108,6 +107,12 @@ SELECT ST_Distance(
   (SELECT geo FROM location WHERE name = 'Colosseo'),
   (SELECT geo FROM location WHERE name = 'Duomo')
 )
+```
+
+Get geo data in GeoJSON format.
+
+```sql
+SELECT ST_AsGeoJSON(geo) FROM location;
 ```
 
 [PostGIS]: http://postgis.net/ "PostGIS"
