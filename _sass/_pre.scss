@@ -8,7 +8,7 @@
  * :% s/codehilite/highlight/g
  * :% s/\.highlight code, \.highlight pre/pre.highlight/
  *
- * Then adapted for SASS.
+ * Then it was adapted for SASS and got few color modifications.
  */
 
 pre {
@@ -61,7 +61,7 @@ pre.highlight {
  .gp { color: #dcdccc; font-weight: bold }
  .gs { color: $code-color; font-weight: bold }
  .gu { color: purple; font-weight: bold }
- .gt { color: #0040D0 }
+ .gt { color: #517ba7 }
  .kc { color: #dca3a3 }
  .kd { color: #ffff86 }
  .kn { color: #dfaf8f; font-weight: bold }
