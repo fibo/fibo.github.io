@@ -29,7 +29,6 @@ I think it is not ethic to *park* domains. I ask to the reader, if you can do so
 I know that in the real world there are so many bad things happening, but please, at least on Internet, do not do that!
 
 
-  [1]: http://en.wikipedia.org/wiki/Domain_parking
-  [2]: http://todo.es/
-  [3]: https://www.sedo.co.uk
-
+[1]: http://en.wikipedia.org/wiki/Domain_parking
+[2]: http://todo.es/
+[3]: https://www.sedo.co.uk
