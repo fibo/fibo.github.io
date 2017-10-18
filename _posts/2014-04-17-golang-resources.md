@@ -64,6 +64,10 @@ description: >
 
 [Getting started with Go](http://spf13.com/presentation/first-go-app/)
 
+[How I start Go](http://howistart.org/posts/go/1/)
+
+[Why we switched from Python to Go](https://getstream.io/blog/switched-python-go/)
+
 ## Free books online
 
 See my [book collection]({% post_url 2014-01-02-free-books-online %}#go)
