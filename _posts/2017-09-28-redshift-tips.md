@@ -32,9 +32,9 @@ will write the snippets I use to convert it or manipulate it in Redshift,
 however...
 
 <div class="paper warning">
-Consider also to use the `YYYY-MM-DD` string format that has the same benefits
+Consider also to use the <code>YYYY-MM-DD</code> string format that has the same benefits
 and has also the advantage to be easier to cast in Redshift, for instance
-`SELECT SYSDATE::DATE` returns current timestamp in this format.
+<code>SELECT SYSDATE::DATE</code> returns current timestamp in this format.
 </div>
 
 Convert timestamp to yyyymmdd
