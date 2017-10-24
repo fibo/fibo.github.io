@@ -20,26 +20,39 @@ npm: true
 
 ## Quick start
 
-One only assumption: your *current working directory* contains
-an **index.js** that is your entry file:
-`echo "alert('ok')" > index.js` is enough to start.
-
-Now you can run
+Just run
 
 ```bash
 npm install zeroconf-redux
 npx zeroconf-redux
+# Yay!
 ```
 
-Your browser will open and you can start coding your [React]/[Redux] awesome web app now!
+Your browser will open and you can start coding your awesome [React]/[Redux] web app now!
 
-Read below for more details and instructions to improve this quick
-process and launch your dev server with a simple `npm start`.
+If it does not exists, a basic *index.js* file will be created to be used
+as the entry for your [budo] dev server.
+
+Read below for more details and instructions about how to create a package
+and launch your dev server with an `npm start`.
 
 ## Usage
 
 If you have no *package.json* yet, create one now! For instance with
-`npm init` or even (for the lazy ones like me :^) `npm init -y`.
+`npm init` or even (for the lazy ones like me :^)
+
+```bash
+npm init -y
+```
+
+**Tip**: if it is not a package you want to add on the npm registry,
+consider adding a
+
+```json
+  "private": true,
+```
+
+attribute to your *package.json* file.
 
 Then with [npm] do
 
@@ -49,6 +62,7 @@ npm install zeroconf-redux --save-dev
 
 The following dependencies will be installed:
 
+* [babel-core]
 * [babel-preset-es2015]
 * [babel-preset-react]
 * [babelify]
@@ -189,12 +203,13 @@ in your page without losing the state.
 <sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
 
 [babelify]: https://github.com/babel/babelify "babelify"
+[babel-core]: https://www.npmjs.com/package/babel-core "babel-core"
 [babel-preset-es2015]: https://babeljs.io/docs/plugins/preset-es2015/ "Babel ES2015 preset"
 [babel-preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
 [browserify]: http://browserify.org/ "browserify"
 [counter_example]: https://github.com/fibo/zeroconf-redux/tree/master/examples/counter "counter example"
-[React]: https://facebook.github.io/react/ "React"
+[React]: https://reactjs.org/ "React"
 [react-dom]: https://www.npmjs.com/package/react-dom "React DOM"
 [react-redux]: https://github.com/reactjs/react-redux "React Redux"
 [Redux]: http://redux.js.org/ "Redux"
