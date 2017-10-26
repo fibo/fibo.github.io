@@ -49,3 +49,17 @@ First day of last week
 ```sql
  SELECT TO_CHAR(DATE_ADD('day', -7, DATE_TRUNC('week', SYSDATE)), 'YYYYMMDD');
 ```
+
+Read given date from environment, for example in your bash script set
+*YYYYMMDD* to yesterday
+
+```bash
+YYYYMMDD=$(date --date="yesterday" +%Y%m%d)
+```
+
+Then in your psql session
+
+```sql
+\set yyyymmdd `echo \'$YYYYMMDD\'`
+SELECT CAST(:yyyymmdd AS INTEGER) AS yyyymmdd;
+```
