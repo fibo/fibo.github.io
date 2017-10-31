@@ -129,9 +129,4 @@ algebraCyclic([1, 2, 1])
 
 [MIT](http://g14n.info/mit-license/)
 
-<!--
-     Original Uroboro image URL is
-     https://upload.wikimedia.org/wikipedia/commons/7/71/Serpiente_alquimica.jpg
--->
-
-[Uroboro]: media/Uroboro.jpg "Serpiente alquimica"
+[Uroboro]: https://upload.wikimedia.org/wikipedia/commons/7/71/Serpiente_alquimica.jpg "Serpiente alquimica"
