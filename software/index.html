@@ -3,6 +3,10 @@ title: Software
 layout: page
 
 lang:
+  react:
+    - react-clipboard-icon
+    - zeroconf-redux
+    - SVGx
   bash:
     - bb-clone
     - dir
@@ -50,7 +54,6 @@ lang:
       - npm-start-command
       - OLAP-cube
       - prime-number
-      - react-clipboard-icon
       - read-file-utf8
       - standa
       - static-props
@@ -63,10 +66,8 @@ lang:
       - tris3d-ai
       - tris3d-canvas
       - write-file-utf8
-      - SVGx
       - x3dom-livereload
       - y-combinator
-      - zeroconf-redux
 ---
 
 {% assign repo = site.data.github.repos %}
@@ -151,6 +152,24 @@ lang:
         <a href="{{ repo[private_pkg].homepage }}">{{ private_pkg }}</a>
       </dt>
       <dd>{{ repo[private_pkg].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="react" class="paper">
+  <div>
+    <img
+      src="/svg/logos/react.svg"
+      alt="React logo"
+    />
+  </div>
+
+  <dl>
+    {% for react_pkg in page.lang.react %}
+      <dt>
+        <a href="{{ repo[react_pkg].homepage }}">{{ react_pkg }}</a>
+      </dt>
+      <dd>{{ repo[react_pkg].description }}</dd>
     {% endfor %}
   </dl>
 </section>
