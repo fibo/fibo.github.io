@@ -8,9 +8,13 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: $transparent-black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* Float the list items side by side */
+
 nav ul li:first-child {
   float: left;
   font-size: 1.17em;
@@ -84,9 +88,8 @@ nav ul li:hover ul li {
 
 /* The "responsive" class is added to the nav with JavaScript when the user clicks on the hamburger icon. This class makes the nav look good on small screens */
   nav ul.responsive {
-    position: absolute;
-    left: 0wh;
-    top: 0vh;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 100vh;
   }
@@ -96,13 +99,10 @@ nav ul li:hover ul li {
     display: inline;
   }
 
-  nav ul.responsive li:first-child {
-    margin-top: 1em;
-  }
-
   nav ul.responsive li a {
     display: block;
-    font-size: 2em;
+    font-size: 1.7em;
+    text-align: left;
   }
 
   /* Hamburger icon animation */
@@ -110,7 +110,7 @@ nav ul li:hover ul li {
   #hamburgericon span {
     display: block;
     position: absolute;
-    height: 6px;
+    height: 4px;
     width: 50%;
     background: $gray;
     opacity: 1;
@@ -118,10 +118,10 @@ nav ul li:hover ul li {
        -moz-transform: rotate(0deg);
          -o-transform: rotate(0deg);
             transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-       -moz-transition: .25s ease-in-out;
-         -o-transition: .25s ease-in-out;
-            transition: .25s ease-in-out;
+    -webkit-transition: .17s ease-in-out;
+       -moz-transition: .17s ease-in-out;
+         -o-transition: .17s ease-in-out;
+            transition: .17s ease-in-out;
   }
 
   #hamburgericon span:nth-child(even) {
