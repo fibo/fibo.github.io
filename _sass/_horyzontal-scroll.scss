@@ -1,0 +1,14 @@
+/*
+
+Code from here:
+
+  https://iamsteve.me/blog/entry/horizontal-scrolling-responsive-menu
+
+*/
+
+.horyzontal-scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

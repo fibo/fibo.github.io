@@ -1,205 +1,236 @@
 ---
 title: Software
 layout: page
-bash:
-  - bb-clone
-  - dir
-  - gh-clone
-  - home
-  - dotsoftware
-  - yyyymmdd
-docker:
-  - fake-aws-redshift
-golang:
-  - m2c
-  - s2
-node:
-  packages_with_social_stats:
-    - algebra
-    - dflow
-    - flow-view
-    - games-of-life
-    - iper
-  tiny_packages:
-    - algebra-group
-    - algebra-cyclic
-    - algebra-ring
-    - cayley-dickson
-    - dot-editorconfig
-    - flow-chart
-    - geohash-neighbours
-    - i-am-not-a-robot
-    - indices-permutations
-    - inlined
-    - laplace-determinant
-    - mdconf-from
-    - mobius-transformation
-    - matrix-multiplication
-    - multidim-array-index
-    - npm-config
-    - numerology
-    - not-defined
-    - npm-start-command
-    - OLAP-cube
-    - prime-number
-    - react-clipboard-icon
-    - read-file-utf8
-    - redux-todoapp
-    - standa
-    - static-props
-    - strict-mode
-    - SQL92-JSON
-    - tensor-contraction
-    - tensor-product
-    - three-orbitcontrols
-    - tris3d
-    - tris3d-ai
-    - tris3d-canvas
-    - write-file-utf8
-    - SVGx
-    - x3dom-livereload
-    - y-combinator
-    - zeroconf-redux
-perl:
-  - Task-BeLike-FIBO-pm
-  - Sweet-Home-pm
-  - netvision
+
+lang:
+  bash:
+    - bb-clone
+    - dir
+    - gh-clone
+    - home
+    - dotsoftware
+    - yyyymmdd
+  golang:
+    - m2c
+    - s2
+  perl:
+    - Task-BeLike-FIBO-pm
+    - Sweet-Home-pm
+    - netvision
+  docker:
+    - fake-aws-redshift
+  nodejs:
+    packages_with_social_stats:
+      - algebra
+      - dflow
+      - flow-view
+      - games-of-life
+      - iper
+    packages_not_in_the_registry:
+      - npm-config
+      - redux-todoapp
+    tiny_packages:
+      - algebra-group
+      - algebra-cyclic
+      - algebra-ring
+      - cayley-dickson
+      - dot-editorconfig
+      - flow-chart
+      - geohash-neighbours
+      - i-am-not-a-robot
+      - indices-permutations
+      - inlined
+      - laplace-determinant
+      - mdconf-from
+      - mobius-transformation
+      - matrix-multiplication
+      - multidim-array-index
+      - numerology
+      - not-defined
+      - npm-start-command
+      - OLAP-cube
+      - prime-number
+      - react-clipboard-icon
+      - read-file-utf8
+      - standa
+      - static-props
+      - strict-mode
+      - SQL92-JSON
+      - tensor-contraction
+      - tensor-product
+      - three-orbitcontrols
+      - tris3d
+      - tris3d-ai
+      - tris3d-canvas
+      - write-file-utf8
+      - SVGx
+      - x3dom-livereload
+      - y-combinator
+      - zeroconf-redux
 ---
 
 {% assign repo = site.data.github.repos %}
 
 <style>
+  @keyframes translateScroll {
+    0% { transform: none; }
+
+    25% { transform: translate3d(17%, 0, 0); }
+
+    100% { transform: none; }
+  }
+
+  div.horyzontal-scroll img {
+    height: 117px;
+    width: auto;
+    cursor: pointer;
+    animation-name: translateScroll;
+    animation-duration: 17s;
+  }
+
+  div.horyzontal-scroll img:not(:last-child){
+    margin-right: 10%;
+  }
 </style>
 
-<div>
+<div class="horyzontal-scroll">
+  {% for lang in page.lang %}
+    <img
+      onclick="document.getElementById('{{ lang[0] }}').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })"
+      src="/svg/logos/{{ lang[0] }}.svg"
+      alt="{{ lang[0] }}"
+    />
+  {% endfor %}
+</div>
 
+<section id="nodejs" class="paper">
   <div>
-    <div>NodeJS packages</div>
-    <div>
-      <img
-        class="responsive"
-        src="/svg/logos/nodejs.svg"
-        alt="NodeJS logo"
-      />
-    </div>
+    <img
+      src="/svg/logos/nodejs.svg"
+      style="width: 170px; height: auto;"
+      alt="NodeJS logo"
+    />
+  </div>
 
-    <ul>
-
-      {% for pkg in page.node.packages_with_social_stats %}
+  <ul>
+    {% for pkg in page.lang.nodejs.packages_with_social_stats %}
       <li>
         <h3><a href="{{ repo[pkg].homepage }}">{{ pkg }}</a></h3>
 
         <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
 
         <p><a href="https://github.com/fibo/{{ pkg }}/watchers"><img src="/svg/github/watchers/{{ pkg }}.svg" alt="Whatchers"></a> <a href="https://github.com/fibo/{{ pkg }}/stargazers"><img src="/svg/github/stars/{{ pkg }}.svg" alt="Stargazers"></a> <a href="https://github.com/fibo/{{ pkg }}/network/members"><img src="/svg/github/forks/{{ pkg }}.svg" alt="Forks"></a></p>
-
-      </li>
-      {% endfor %}
-
-    </ul>
-  </div>
-</div>
-
-<div>
-
-  <div>
-    <div>NodeJS <strong>micro</strong> packages</div>
-    <div>
-      <img
-        class="responsive"
-        src="/svg/logos/npm-2.svg"
-        alt="npm logo"
-      />
-    </div>
-
-    <ul>
-    {% for tiny_pkg in page.node.tiny_packages %}
-      <li>
-        <a href="{{ repo[tiny_pkg].homepage }}">{{ tiny_pkg }}</a>: {{ repo[tiny_pkg].description }}
       </li>
     {% endfor %}
-    </ul>
-  </div>
-</div>
+  </ul>
+</section>
 
-<div>
+<section class="paper">
+  <div>NodeJS <strong>micro</strong> packages</div>
   <div>
-    <div>Docker</div>
-    <div>
-      <img
-        class="responsive"
-        src="/svg/logos/docker.svg"
-        alt="Docker logo"
-      />
-    </div>
-
-    <ul>
-      {% for docker_image in page.docker %}
-      <li>
-        <a href="{{ repo[docker_image].homepage }}">{{ docker_image }}</a>: {{ repo[docker_image].description }}
-      </li>
-      {% endfor %}
-    </ul>
+    <img
+      src="/svg/logos/npm-2.svg"
+      alt="npm logo"
+    />
   </div>
-  <div>
-    <div>Bash</div>
-    <div>
-      <img
-        class="responsive"
-        src="/svg/logos/bash.svg"
-        alt="Bash logo"
-      />
-    </div>
 
-    <ul>
-      <li>
+  <dl>
+    {% for tiny_pkg in page.lang.nodejs.tiny_packages %}
+      <dt>
+        <a href="{{ repo[tiny_pkg].homepage }}">{{ tiny_pkg }}</a>
+      </dt>
+      <dd>{{ repo[tiny_pkg].description }}</dd>
+    {% endfor %}
+  </dl>
+
+  <p>The following packages are not in the npm registry.</p>
+
+  <dl>
+    {% for private_pkg in page.lang.nodejs.packages_not_in_the_registry %}
+      <dt>
+        <a href="{{ repo[private_pkg].homepage }}">{{ private_pkg }}</a>
+      </dt>
+      <dd>{{ repo[private_pkg].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="docker" class="paper">
+  <div>
+    <img
+      src="/svg/logos/docker.svg"
+      alt="Docker logo"
+    />
+  </div>
+
+  <dl>
+    {% for docker_image in page.lang.docker %}
+      <dt>
+        <a href="{{ repo[docker_image].homepage }}">{{ docker_image }}</a>
+      </dt>
+      <dd>{{ repo[docker_image].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="bash" class="paper">
+  <div>Bash</div>
+  <div>
+    <img
+      src="/svg/logos/bash.svg"
+      alt="Bash logo"
+    />
+  </div>
+
+  <dl>
+    <dt>
+      <a href="{{ repo['kiss-literate-programming'].homepage }}">
         <img src="https://img.shields.io/badge/kiss-literate-orange.svg" alt="KLP">
-        {{ repo['kiss-literate-programming'].description }}
-      </li>
+      </a>
+    </dt>
+    <dd>{{ repo['kiss-literate-programming'].description }}</dd>
 
-      {% for bash_project in page.bash %}
-      <li>
-        <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>: {{ repo[bash_project].description }}
-      </li>
-      {% endfor %}
-    </ul>
+    {% for bash_project in page.lang.bash %}
+      <dt>
+        <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>
+      </dt>
+      <dd>{{ repo[bash_project].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="golang" class="paper">
+  <div>Golang</div>
+  <div>
+    <img
+      src="/svg/logos/golang.svg"
+      alt="Golang logo"
+    />
   </div>
 
-  <div>
-    <div>Golang</div>
-    <div>
-      <img
-        class="responsive"
-        src="/svg/logos/gopher.svg"
-        alt="Golang logo"
-      />
-    </div>
+  <dl>
+    {% for golang_project in page.lang.golang %}
+    <dt>
+      <a href="{{ repo[golang_project].homepage }}">{{ golang_project }}</a>
+    </dt>
+    <dd>{{ repo[golang_project].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>
 
-    <ul>
-      {% for golang_project in page.golang %}
-      <li>
-        <a href="{{ repo[golang_project].homepage }}">{{ golang_project }}</a>: {{ repo[golang_project].description }}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div>
-    <div>Perl</div>
-    <div>
+<section id="perl" class="paper">
       <img
-        class="responsive"
         src="/svg/logos/perl.svg"
         alt="Perl logo"
       />
-    </div>
+      <h2>Perl</h2>
 
-    <ul>
-      {% for perl_project in page.perl %}
-      <li>
-        <a href="{{ repo[perl_project].homepage }}">{{ perl_project }}</a>: {{ repo[perl_project].description }}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+  <dl>
+    {% for perl_project in page.lang.perl %}
+    <dt>
+      <a href="{{ repo[perl_project].homepage }}">{{ perl_project }}</a>
+    </dt>
+    <dd>{{ repo[perl_project].description }}</dd>
+    {% endfor %}
+  </dl>
+</section>

@@ -1,7 +1,8 @@
 
 /* Remove margins and padding from the list */
+
 nav ul {
-  z-index: 1000;
+  z-index: 10;
   height: 2.5em;
   list-style-type: none;
   margin: 0;
@@ -25,6 +26,7 @@ nav ul li {
 }
 
 /* Style the links inside the list items */
+
 nav ul li a {
   display: inline-block;
   color: $white;
@@ -67,14 +69,14 @@ nav ul li:hover ul li {
   nav ul li:not(:first-child) { display: none; }
 
   #hamburgericon {
+    z-index: 17;
     cursor: default;
-    float: right;
     display: inline-block;
-    position: absolute;
-    right: 4px;
+    position: fixed;
+    right: 6px;
     width: 37px;
     height: 40px;
-    top: 14px;
+    top: 11px;
     -webkit-transform: rotate(0deg);
        -moz-transform: rotate(0deg);
          -o-transform: rotate(0deg);
@@ -86,6 +88,7 @@ nav ul li:hover ul li {
   }
 
 /* The "responsive" class is added to the nav with JavaScript when the user clicks on the hamburger icon. This class makes the nav look good on small screens */
+
   nav ul.responsive {
     position: fixed;
     top: 0;

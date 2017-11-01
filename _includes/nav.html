@@ -4,18 +4,17 @@
 <nav>
   <ul>
     <li><a href="/" onclick="toggleNav()">{{ site.name }}</a></li>
-  {% for item in nav %}
-    <li><a href="{{ item[1] }}" onclick="toggleNav()">{{ item[0] }}</a></li>
-  {% endfor %}
-    <li id="hamburgericon" onclick="toggleNav()">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </li>
+    {% for item in nav %}
+      <li><a href="{{ item[1] }}" onclick="toggleNav()">{{ item[0] }}</a></li>
+    {% endfor %}
   </ul>
-  <script>
-  </script>
 </nav>
+
+<div id="hamburgericon" onclick="toggleNav()">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
