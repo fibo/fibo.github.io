@@ -2,7 +2,7 @@
 /* Remove margins and padding from the list */
 nav ul {
   z-index: 1000;
-  height: 3em;
+  height: 2.5em;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,7 +17,6 @@ nav ul {
 
 nav ul li:first-child {
   float: left;
-  font-size: 1.17em;
 }
 
 nav ul li {
