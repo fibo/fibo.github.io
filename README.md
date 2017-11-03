@@ -42,6 +42,14 @@ If you want the image to be responsive add the `responsive` CSS class
 ![image decription](http://image/url){:.responsive}
 ```
 
+### Link to post
+
+Use the snippet `[linked text]{% post_url yyyy-mm-dd-foo-bar %}`, for example
+
+```
+See how to install [AWS Redshift compatible PostgreSQL client]{% post_url 2016-05-12-aws-redshift-compatible-psql %} article.
+```
+
 ### Libs
 
 ```yaml

@@ -43,14 +43,27 @@ sudo make install
 Do not forget to add `$PGROOT/bin` to your `$PATH`: it should be already
 ok if you used the *PGROOT* recommended above.
 
-Consider set your environment to point to your main database.  For example I added to my *~/.bashrc*
+Consider set your environment to point to your main database.  For example I added to my *~/.bashrc* something like
 
 ```bash
-export PGUSER=mydb_user
-export PGDATABASE=mydb
-export PGPORT=5439
 export PGHOST=mydb-instance.cd274s5bo4aq.eu-west-1.redshift.amazonaws.com
+export PGPORT=5439
+export PGDATABASE=mydb
+export PGUSER=mydb_user
 ```
+
+`PGHOST`
+: Redshift hostname. You can find it in the AWS console, look for *Cluster Endpoint* in your Redshift instance *Configuration* tab: it is something like `my-dw-instance.nctgnxb2tav5.us-east-1.redshift.amazonaws.com`
+`PGPORT`
+: 5439, is default Redshift password.
+`PGDATABASE`
+: Your database name.
+`PGUSER`
+: Your database user name.
+
+<div class="paper danger">
+Do not use <code>PGPASSWORD</code> to set credentials, it is strongly recommended to use a pgpass file (read below).
+</div>
 
 ## Credentials
 
@@ -72,11 +85,17 @@ hostname:port:database:username:password
 For instance
 
 ```bash
-export PASSWD=s3cret
-echo $PGHOST:$PGPORT:$PGDATABASE:$PGUSER:$PASSWD >> ~/.pgpass
+echo $PGHOST:$PGPORT:$PGDATABASE:$PGUSER:password >> ~/.pgpass
 ```
 
+Then edit *.pgpass* and change *password*.
+
 Now you can connect to the database just launching `psql`.
+
+<div class="paper info">
+It is possible to have multiple lines since environment variables
+are read first, then password is grabbed from pgpass file.
+</div>
 
 ## Custom prompt
 
