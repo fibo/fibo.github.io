@@ -4,9 +4,17 @@ tags:
   - AWS
   - PostgreSQL
   - Redshift
+  - SQL
 description: >
     I am using Redshift since two years ago, and as every database it has its SQL dialect and its secrets. I will write here everything I discover and it is worth to be annotated.
 ---
+
+## psql
+
+Use `psql`! It is a great tool: I use it for ETL scheduled processes
+and on a daily basis to interact with Redshift.
+
+See how to install [AWS Redshift compatible PostgreSQL client]{% post_url 2016-05-12-aws-redshift-compatible-psql %} article.
 
 ## Temporary tables
 
@@ -17,8 +25,37 @@ CREATE TABLE #mytable AS SELECT 1;
 ```
 
 Table `#mytable` will be clean up when session will be closed.
+
+<div class="paper info">
 Two simultanei sessions can create a temporary table with the same name
 with no conflicts.
+</div>
+
+You can also create a *tmp* schema, launching the following statement
+
+```sql
+/**
+ * Statement above must be executed as admin
+ *
+ * NOTA BENE: replace <myuser> with the user that actually will
+ *            use the tmp schema.
+ */
+CREATE SCHEMA tmp;
+GRANT CREATE, USAGE ON SCHEMA tmp TO <myuser>;
+```
+
+The following bash script can ne scheduled to clean up the *tmp* schema.
+
+```bash
+#!/bin/bash
+
+psql -A -t -q -c "
+SELECT 'DROP TABLE tmp.' || table_name || ';'
+FROM information_schema.tables
+WHERE table_schema = 'tmp'
+;
+" | psql
+```
 
 ## yyyymmdd
 
