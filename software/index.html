@@ -3,7 +3,9 @@ title: Software
 layout: page
 
 lang:
+# All react packages has social stats
   react:
+    - flow-view
     - react-clipboard-icon
     - zeroconf-redux
     - SVGx
@@ -27,7 +29,6 @@ lang:
     packages_with_social_stats:
       - algebra
       - dflow
-      - flow-view
       - games-of-life
       - iper
     packages_not_in_the_registry:
@@ -72,27 +73,7 @@ lang:
 
 {% assign repo = site.data.github.repos %}
 
-<style>
-  @keyframes translateScroll {
-    0% { transform: none; }
-
-    25% { transform: translate3d(17%, 0, 0); }
-
-    100% { transform: none; }
-  }
-
-  div.horyzontal-scroll img {
-    height: 117px;
-    width: auto;
-    cursor: pointer;
-    animation-name: translateScroll;
-    animation-duration: 17s;
-  }
-
-  div.horyzontal-scroll img:not(:last-child){
-    margin-right: 10%;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 
 <div class="horyzontal-scroll">
   {% for lang in page.lang %}
@@ -105,35 +86,65 @@ lang:
 </div>
 
 <section id="nodejs" class="paper">
-  <div>
+  <p>
     <img
-      src="/svg/logos/nodejs.svg"
-      style="width: 170px; height: auto;"
       alt="NodeJS logo"
+      class="software-logo"
+      src="/svg/logos/nodejs.svg"
     />
-  </div>
 
-  <ul>
+    My first experiment with NodeJS was on August 2012: I wrote a prototype of a multiplayer game with Socket.io and I was amazed by its power and simplicity. Also, npm was a step forward at that time in the world of package management. Nowadays I still appreciate this concept: using one language for backend and frontend. Few years later there was a quantum leap in the JavaScript ecosystem, the language evolved and the transition was handled in the best way (IMO). In general, I consider JavaScript the <em>lingua franca</em> of IT: if I write an algorithm in JavaScript almost any developer can read it and translate it in any other language.
+  </p>
+
+  <ul class="tile-list">
     {% for pkg in page.lang.nodejs.packages_with_social_stats %}
       <li>
-        <h3><a href="{{ repo[pkg].homepage }}">{{ pkg }}</a></h3>
+        <a href="{{ repo[pkg].homepage }}">
+          <h3>{{ pkg }}</h3>
 
-        <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
+          <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
+        </a>
 
-        <p><a href="https://github.com/fibo/{{ pkg }}/watchers"><img src="/svg/github/watchers/{{ pkg }}.svg" alt="Whatchers"></a> <a href="https://github.com/fibo/{{ pkg }}/stargazers"><img src="/svg/github/stars/{{ pkg }}.svg" alt="Stargazers"></a> <a href="https://github.com/fibo/{{ pkg }}/network/members"><img src="/svg/github/forks/{{ pkg }}.svg" alt="Forks"></a></p>
+        {% include repo_social_badges.html repo=pkg %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="react" class="paper">
+  <p>
+    <img
+      alt="React logo"
+      class="software-logo"
+      src="/svg/logos/react.svg"
+    />
+    I started using React in early 2016, when I discovered Redux and I thought: this is the right way to do it.
+  </p>
+
+  <ul class="tile-list">
+    {% for react_pkg in page.lang.react %}
+      <li>
+        <a href="{{ repo[react_pkg].homepage }}">
+          <h3>{{ react_pkg }}</h3>
+
+          <blockquote><p>{{ repo[react_pkg].description }}</p></blockquote>
+        </a>
+
+        {% include repo_social_badges.html repo=react_pkg %}
       </li>
     {% endfor %}
   </ul>
 </section>
 
 <section class="paper">
-  <div>NodeJS <strong>micro</strong> packages</div>
-  <div>
+  <p>
     <img
-      src="/svg/logos/npm-2.svg"
       alt="npm logo"
+      class="software-logo"
+      src="/svg/logos/npm-2.svg"
     />
-  </div>
+    I wrote some NodeJS <strong>micro</strong> packages.
+  </p>
 
   <dl>
     {% for tiny_pkg in page.lang.nodejs.tiny_packages %}
@@ -156,31 +167,16 @@ lang:
   </dl>
 </section>
 
-<section id="react" class="paper">
-  <div>
-    <img
-      src="/svg/logos/react.svg"
-      alt="React logo"
-    />
-  </div>
-
-  <dl>
-    {% for react_pkg in page.lang.react %}
-      <dt>
-        <a href="{{ repo[react_pkg].homepage }}">{{ react_pkg }}</a>
-      </dt>
-      <dd>{{ repo[react_pkg].description }}</dd>
-    {% endfor %}
-  </dl>
-</section>
-
 <section id="docker" class="paper">
-  <div>
+  <p>
     <img
-      src="/svg/logos/docker.svg"
       alt="Docker logo"
+      class="software-logo"
+      src="/svg/logos/docker.svg"
     />
-  </div>
+
+    I like the concept of reproducibility: I did few experiments with Docker. It is a great tool, but sincerely I still use more Amazon AMIs.
+  </p>
 
   <dl>
     {% for docker_image in page.lang.docker %}
@@ -199,22 +195,24 @@ lang:
       src="/svg/logos/bash.svg"
       alt="Bash logo"
     />
+
+    I am addicted to CLIs and the shell. I wrote few tools and my opinion is that a bash script is still the cheapest and fastest way to automate a task.
   </div>
 
   <dl>
-    <dt>
-      <a href="{{ repo['kiss-literate-programming'].homepage }}">
-        <img src="https://img.shields.io/badge/kiss-literate-orange.svg" alt="KLP">
-      </a>
-    </dt>
-    <dd>{{ repo['kiss-literate-programming'].description }}</dd>
-
     {% for bash_project in page.lang.bash %}
       <dt>
         <a href="{{ repo[bash_project].homepage }}">{{ bash_project }}</a>
       </dt>
       <dd>{{ repo[bash_project].description }}</dd>
     {% endfor %}
+
+    <dt>
+      <a href="{{ repo['kiss-literate-programming'].homepage }}">
+        <img src="https://img.shields.io/badge/kiss-literate-orange.svg" alt="KLP">
+      </a>
+    </dt>
+    <dd>{{ repo['kiss-literate-programming'].description }}</dd>
   </dl>
 </section>
 
@@ -225,6 +223,8 @@ lang:
       src="/svg/logos/golang.svg"
       alt="Golang logo"
     />
+
+    Probably Golang is not the definitive language, but, for me is perfect. First of all, a compiled language was missing in my reportoire. Deploying or distribute a single executable is a big win. I also like the simplicity of the language: yes, only 25 keywords actually attract me. I really like the fact that it handles concurrency and it is multicore out of the box: it relaxes me, I can focus only on the algorithm... but I confess that, as a mathematician, I felt in love with Golang cause it has builtin complex number data type. Wow!
   </div>
 
   <dl>
@@ -238,11 +238,15 @@ lang:
 </section>
 
 <section id="perl" class="paper">
-      <img
-        src="/svg/logos/perl.svg"
-        alt="Perl logo"
-      />
-      <h2>Perl</h2>
+  <p>
+    <img
+      alt="Perl logo"
+      class="software-logo"
+      src="/svg/logos/perl.svg"
+    />
+
+    When I started working in IT in 2005 my boss said: you need to learn Perl. Big respect for the camel, I learned a lot from this language and its community. It is still my preferred language for string manipulation and parsing.
+  </p>
 
   <dl>
     {% for perl_project in page.lang.perl %}

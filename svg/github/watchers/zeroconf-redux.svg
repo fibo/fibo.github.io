@@ -1,0 +1,5 @@
+---
+layout: null
+---
+{% assign repo = site.data.github.repos['zeroconf-redux'] %}
+{% include github/watchers.html %}

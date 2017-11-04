@@ -12,3 +12,7 @@ Code from here:
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
+.horyzontal-scroll::-webkit-scrollbar {
+  display: none;
+}

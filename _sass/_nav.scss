@@ -65,6 +65,7 @@ nav ul li:hover ul li {
 }
 
 /* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.hamburgericon) */
+
 @media screen and (max-width: $mobile-break-point) {
   nav ul li:not(:first-child) { display: none; }
 
