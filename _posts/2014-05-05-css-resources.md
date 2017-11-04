@@ -89,6 +89,9 @@ description: >
 [Shoelace](https://shoelace.style/)
 : A back to the basics CSS starter kit. For when you don’t need the whole boot.
 
+[Picnic](https://picnicss.com/)
+: A beautiful CSS library to kickstart your projects.
+
 ### Modules
 
 [Normalize.css](https://necolas.github.io/normalize.css/)
