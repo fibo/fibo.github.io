@@ -47,6 +47,7 @@ img.software-logo {
   height: 170px;
   width: auto;
   float: left;
+  padding: 1em;
 }
 
 ul.tile-list {
@@ -64,6 +65,14 @@ ul.tile-list li {
 }
 
 @media screen and (max-width: $mobile-break-point) {
-  flex-basis: 100%;
-  flex-grow: 0;
+  ul.tile-list li {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: $mobile-break-point) and (orientation: portrait) {
+  img.software-logo {
+    height: auto;
+    width: 100%;
+  }
 }
