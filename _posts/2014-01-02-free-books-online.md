@@ -112,6 +112,8 @@ description: >
 
 [Advanced R programming](http://adv-r.had.co.nz/) by Hadley Wickham
 
+[Kickstarting R](https://cran.r-project.org/doc/contrib/Lemon-kickstart/index.html)
+
 #### Perl
 
 [Data Munging with Perl](http://perlhacks.com/dmp.pdf)

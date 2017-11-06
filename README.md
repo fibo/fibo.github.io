@@ -12,6 +12,8 @@ However, the default scheme I prefer when linking my site and articles is *http*
 
 ## Pages
 
+See [template page](http://g14n.info/templates/page).
+
 ### Style
 
 Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages], read

@@ -1,4 +1,33 @@
+/*
+Code from here:
+http://adamschwartz.co/magic-of-css/potions/buttons/
+*/
+
 button {
-  padding: 10px;
-  border-radius: 10%;
+  outline: none;
+  margin: 0;
+  background: linear-gradient(#eee, #c0c0c0);
+  border-radius: .25em;
+  cursor: pointer;
+  border: 0;
+  padding: .4em .8em;
+  text-rendering: optimizeLegibility;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  color: inherit;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    0 .08em .24em rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 .08em .24em rgba(0, 0, 0, 0.3);
 }
