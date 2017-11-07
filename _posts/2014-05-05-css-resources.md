@@ -106,6 +106,9 @@ description: >
 [radiobox.css](https://720kb.github.io/radiobox.css/)
 : Tiny set of CSS3 animations meant for your radio inputs.
 
+[stroll.js](http://lab.hakim.se/scroll-effects/)
+: CSS3 list scroll effects
+
 ### Preprocessors
 
 [Compass](http://compass-style.org/)
