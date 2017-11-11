@@ -49,6 +49,9 @@ description: >
 [Grid by Example](http://gridbyexample.com/)
 : A collection of usage examples for the CSS Grid Layout specification.
 
+[Quantity Queries](http://quantityqueries.com/)
+: A tool to help build Quantity Queries for your projects
+
 ## Tools
 
 ### Frameworks
