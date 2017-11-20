@@ -1,5 +1,6 @@
 ---
 title: OLAP-cube
+npm: true
 ---
 # OLAP-cube
 

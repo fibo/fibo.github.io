@@ -1,5 +1,6 @@
 ---
 title: geohash-neighbours/
+npm: true
 ---
 # geohash-neighbours
 
