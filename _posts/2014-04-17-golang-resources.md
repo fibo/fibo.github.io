@@ -22,6 +22,8 @@ description: >
 
 [Go by Example](https://gobyexample.com/)
 
+[GOPHERDATA](http://gopherdata.io/)
+
 ## Packages
 
 [cobra](https://github.com/spf13/cobra)
@@ -71,6 +73,8 @@ description: >
 [Using the Go tracer to speed up fractal making](https://campoy.cat/blog/using-the-go-tracer-to-speed-up-fractal-making/)
 
 [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
+
+[Go for Data Science](https://blog.chewxy.com/2017/11/02/go-for-data-science/)
 
 ## Free books online
 
