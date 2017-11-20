@@ -4,7 +4,7 @@ npm: true
 ---
 # algebra-ring-ring
 
-> defines an [algebra-ring ring][1] structure
+> defines an [algebra ring][1] structure
 
 [Installation](#installation) |
 [Example](#example) |
@@ -21,15 +21,19 @@ npm: true
 With [npm](https://npmjs.org/) do
 
 ```bash
-$ npm install algebra-ring
+npm install algebra-ring
 ```
 
 ## Example
 
 All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/algebra-ring-ring/blob/master/test.js).
 
+### Real
+
+Create a ring structure over real numbers.
+
 ```javascript
-var ring = require('algebra-ring')
+const ring = require('algebra-ring')
 
 // Define operators.
 function contains (a) {
@@ -48,7 +52,7 @@ function multiplication (a, b) { return a * b }
 function inversion (a) { return 1 / a }
 
 // Create a ring by defining its identities and operators.
-var R = ring([0, 1], {
+const R = ring([0, 1], {
   equality: equality,
   contains: contains,
   addition: addition,
@@ -104,6 +108,42 @@ R.equality(R.division(2, 2), R.one) // true
 
 R.division(1, 0) // will complain
 R.inversion(R.zero) // will complain too
+```
+
+### Boolean
+
+It is possible to create a ring over the booleans.
+
+```javascript
+const Boole = ring([false, true], {
+  equality: (a, b) => (a === b),
+  contains: (a) => (typeof a === 'boolean'),
+  addition: (a, b) => (a || b),
+  negation: (a) => (a),
+  multiplication: (a, b) => (a && b),
+  inversion: (a) => (a)
+})
+```
+
+There are only two elements, you know, `true` and `false`.
+
+```javascript
+Boole.contains(true, false) // true
+```
+
+Check that `false` is the neutral element of addition and `true` is the
+neutral element of multiplication.
+
+```javascript
+Boole.addition(true, Boole.zero) // true
+Boole.multiplication(true, Boole.one) // true
+```
+
+As usual, it is not allowed to divide by zero: the following code will throw.
+
+```javascript
+Boole.division(true, false)
+Boole.inversion(Bool.zero)
 ```
 
 ## API
