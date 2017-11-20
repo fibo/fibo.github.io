@@ -70,6 +70,8 @@ description: >
 
 [Using the Go tracer to speed up fractal making](https://campoy.cat/blog/using-the-go-tracer-to-speed-up-fractal-making/)
 
+[Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
+
 ## Free books online
 
 See my [book collection]({% post_url 2014-01-02-free-books-online %}#go)
