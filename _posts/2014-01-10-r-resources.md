@@ -41,6 +41,42 @@ quit(save = "no", status = 0, runLast = TRUE)
 Note that the `R` executable is a REPL and not intendend to be used in a shebang, use `Rscript` instead.
 Make it executable with `chmod +x hello-world.R` as usual, and then you can launch it or schedule it.
 
+## Dependencies
+
+The killer app of R is [CRAN] and its massive number of available packages.
+How to use and install them? If you are on a remote Linux server, you
+should create a folder for your user libs, for instance
+
+```bash
+mkdir $HOME/.R_packages
+```
+
+and add to your profile
+
+```bash
+export R_LIBS_USER=$HOME/.R_packages
+```
+
+I suggest to install [Tidyverse](https://www.tidyverse.org/) that is a
+[collection of R packages](https://www.tidyverse.org/packages/).
+
+On Ubuntu, install required deps
+
+```bash
+sudo apt-get install libxml2-dev -y
+```
+
+Then pick up a CRAN mirror [from this list](https://cran.r-project.org/mirrors.html)
+and create an `install_packages.R` script like
+
+```R
+#!/usr/bin/env Rscript
+
+install.packages("tidyverse", repos="https://ftp.heanet.ie/mirrors/cran.r-project.org/")
+```
+
+You can make it executable and run it when necessary.
+
 ## Sites
 
 [The R Project for Statistical Computing](http://www.r-project.org/)
@@ -63,3 +99,4 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#r)
 
 [7+ ways to plot dendrograms in R](http://gastonsanchez.com/blog/how-to/2012/10/03/Dendrograms.html)
 
+[CRAN]: "https://cran.r-project.org" "CRAN"
