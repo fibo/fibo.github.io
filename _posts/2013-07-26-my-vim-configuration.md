@@ -154,7 +154,7 @@ Use <kbd>F12</kbd> to toggle auto-indenting for text paste.
 
 ```vim
 " See http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
-set pastetoggle=<F12> 
+set pastetoggle=<F12>
 ```
 
 ### Buffers
@@ -322,12 +322,12 @@ colorscheme bubblegum
 
 ### Go
 
-Install [Vim plugins for Go](http://golang.org/misc/vim/readme.txt).
+Install [Vim plugin for Go](https://github.com/fatih/vim-go).
 
 Note that you need to set the *GOROOT* environment variable properly.
 
 ```vim
-" See http://golang.org/misc/vim/readme.txt
+" See https://github.com/fatih/vim-go/blob/master/README.md
 """""""""""""""""""""""""""""""""""""""""""
 
 " On Windows, add environment variable GOROOT=C:\Go

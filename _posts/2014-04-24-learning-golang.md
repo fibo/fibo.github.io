@@ -78,6 +78,9 @@ Create an homonym GitHub repository, start with files:
 
 ### package.go
 
+Just one line of code, declaring the package name: holds the main
+documention page that will be showed on godoc.org website.
+
 ```go
 // Package foo oneline description.
 package foo
@@ -85,10 +88,12 @@ package foo
 
 ### README.md
 
-```markdown
-# s2
+Start with a file like this, changing of course package name and description.
 
-> go for the Reimann sphere
+```markdown
+# foo
+
+> go for... package description here
 
 [![GoDoc](https://godoc.org/github.com/fibo/foo?status.svg)](https://godoc.org/github.com/fibo/foo)
 [![GoLint](https://img.shields.io/badge/go-lint-blue.svg)](http://go-lint.appspot.com/github.com/fibo/foo)
