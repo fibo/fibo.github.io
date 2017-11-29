@@ -64,7 +64,7 @@
   "deployments_url": "https://api.github.com/repos/fibo/dflow/deployments",
   "created_at": "2012-10-13T00:23:45Z",
   "updated_at": "2017-11-17T08:27:25Z",
-  "pushed_at": "2017-11-25T18:03:44Z",
+  "pushed_at": "2017-11-28T18:19:22Z",
   "git_url": "git://github.com/fibo/dflow.git",
   "ssh_url": "git@github.com:fibo/dflow.git",
   "clone_url": "https://github.com/fibo/dflow.git",
@@ -83,6 +83,12 @@
   "mirror_url": null,
   "archived": false,
   "open_issues_count": 30,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit"
+  },
   "forks": 3,
   "open_issues": 30,
   "watchers": 35,
