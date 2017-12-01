@@ -63,7 +63,7 @@
   "releases_url": "https://api.github.com/repos/fibo/SQL92-JSON/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/SQL92-JSON/deployments",
   "created_at": "2017-02-07T23:10:52Z",
-  "updated_at": "2017-08-30T19:27:05Z",
+  "updated_at": "2017-11-29T22:27:15Z",
   "pushed_at": "2017-11-24T15:14:04Z",
   "git_url": "git://github.com/fibo/SQL92-JSON.git",
   "ssh_url": "git@github.com:fibo/SQL92-JSON.git",
