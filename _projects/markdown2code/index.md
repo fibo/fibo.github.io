@@ -4,11 +4,16 @@ npm: true
 ---
 # markdown2code
 
-> extracts code blocks from markdown and streams it out as JSON
+> extracts code blocks (surrounded by triple backticks) from markdown and streams it out as text or JSON
+
+[Installation](#installation) |
+[API](#api) |
+[CLI](#cli) |
+[License](#license)
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
+## Installation
 
 With [npm](https://www.npmjs.com/) do
 
@@ -16,16 +21,29 @@ With [npm](https://www.npmjs.com/) do
 npm install markdown2code
 ```
 
+Since there is a `markdown2code` [CLI](#cli) it does make sense to install globally
+
+```bash
+npm install markdown2code -g
+```
+
 ## API
 
-The `markdown2code` function exported, accepts two arguments: an input
-and an output stream. For example:
+The `markdown2code` function accepts the following parameters.
+
+* `@param {Stream} input`
+* `@param {Stream} output`
+* `@param {Object} [opt]`
+* `@param {String} [opt.format]` can be text (default) or JSON
+* `@param {String} [opt.language]` filter
+
+For example:
 
 ```javascript
 const markdown2code = require('markdown2code')
 
 const fs = require('fs')
-const input = fs.createReadStream(filepath)
+const input = fs.createReadStream('README.md')
 const output = process.stdout
 
 markdown2code(input, output)
@@ -33,11 +51,26 @@ markdown2code(input, output)
 
 ## CLI
 
-Start from a markdown file like this one, and launch `markdown2code` CLI
+### Usage
 
-```
-markdown2code README.md
-```
+    markdown2code [--format JSON|text] [--lang <language>] file.md
+
+### Options
+
+* -f --format [text|JSON] output format, defaults to text
+* -l --lang language filter
+* -h --help shows this text message
+* -v --version prints package version
+
+### Examples
+
+Extract all javascript snippets in text format
+
+    markdown2code --lang javascript README.md
+
+Extract all code snippets in JSON format
+
+    markdown2code --format JSON README.md
 
 Code blocks like the following will be extracted
 
