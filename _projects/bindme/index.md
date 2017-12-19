@@ -19,24 +19,27 @@ npm install bindme
 
 ## Motivation
 
-This interesting article published today explains a React perfomance tip:
-[React Performance Anti-Pattern: Creating Functions in render()](https://medium.com/@erikras/react-performance-anti-pattern-creating-functions-in-render-ddeb5ebd2933).
+I was reading some interesting articles about a React poerformance tip:
+creating functions in render() is not recommended.
 
-I was looking for a way to autobind methods but none is too convincingly
-in my opinion so I created this minimal package that is implemented
-in 6 lines of good old and battle tested ES5 code and requires really
-few lines of code on the user side to be imported and invoked.
+I was looking for a way to autobind methods but none was enough
+convincingly in my opinion, so I created this minimal package that is
+implemented in 6 lines of good old ES5 code and requires really few lines
+of code on the user side to be imported and invoked.
 
 Consider also that, at the time of this writing, *decorator* syntax is
 not final yet. Furthermore, this `bindme` helper has no dependency at all
-and prolly will not require any version upgrade.
+and probably will not require updates.
 
 ## Usage
 
-API is `bindme(this, 'method1', 'method2', ..., 'methodN')`. For example
+API is `bindme(this, 'method1', 'method2', ..., 'methodN')`.
+For example
 
 ```javascript
 import bindme from 'bindme'
+// Also CommonJS is available:
+// const bindme = require('bindme')
 
 class MyButton extends Component {
   constructor(props) {
@@ -50,14 +53,14 @@ class MyButton extends Component {
   handleClick() {
     this.setState({ clicked: true })
   }
+}
 ```
 
-If you have no state and need only bindings in your constructor, since
-`super` returns an instance to the object, the following snippet works too
+Since `super` returns an instance, the following snippet works too
 
 ```javascript
-  constructor() {
-    bindme(super(),
+  constructor(props) {
+    bindme(super(props),
       'onClick',
       'onMouseOver'
     )
@@ -72,8 +75,11 @@ following ES6 code
 ```javascript
 const bindme = (self, ...funcs) => {
   funcs.forEach(func => {
-    if (self[func]) self[func] = self[func].bind(self)
-    else console.error(`Method ${func} is not defined`)
+    if (self[func]) {
+      self[func] = self[func].bind(self)
+    } else {
+      console.error(`Method ${func} is not defined`)
+    }
   })
 }
 ```
