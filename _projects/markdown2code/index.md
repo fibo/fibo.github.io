@@ -27,6 +27,20 @@ Since there is a `markdown2code` [CLI](#cli) it does make sense to install globa
 npm install markdown2code -g
 ```
 
+If you add the following script to your package.json
+
+```json
+    "markdown2code": "markdown2code -l javascript README.md > ${npm_package_main}",
+```
+
+then you can do literate programming in your *README.md* and extract code running
+
+```bash
+npm run markdown2code
+```
+
+See also [Usage](#usage) and [Examples](#examples) sections.
+
 ## API
 
 The `markdown2code` function accepts the following parameters.
