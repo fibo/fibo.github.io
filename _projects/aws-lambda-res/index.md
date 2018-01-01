@@ -1,8 +1,8 @@
 ---
-title: aws-lambda-response
+title: aws-lambda-res
 npm: true
 ---
-# aws-lambda-response
+# aws-lambda-res
 
 > is a tiny helper to create a response object for AWS Lambda with Proxy integration
 
@@ -20,7 +20,7 @@ Lambda Proxy integration, suppose you have a dummy endpoint which returns
 JSON `{ "ok": true }`, then the following code will be enough
 
 ```
-const response = require('aws-lambda-response')
+const response = require('aws-lambda-res')
 
 function handler (event, context, callback) {
   callback(null, response(200)({ ok: true }))
