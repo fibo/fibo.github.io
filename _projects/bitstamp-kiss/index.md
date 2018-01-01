@@ -6,11 +6,28 @@ npm: true
 
 > is a Bitstamp API v2 wrapper with the joy of kiss literate programming
 
+[API](#api)
+[Annotated source](#annotated-source) |
+[License](#license)
+
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
-[Annotated source](#annotated-source) |
-[License](#license)
+## API
+
+The following methods are implemented:
+
+* [Public API](#public-api)
+  - [orderBook](#orderBook)
+  - [ticker](#ticker)
+  - [hourlyTicker](#hourlyTicker)
+  - [transactions](#transactions)
+* [Private API](#private-api)
+  - [accountBalance](#accountBalance)
+  - [allOpenOrders](#allOpenOrders)
+  - [buyMarketOrder](#buyMarketOrder)
+  - [openOrders](#openOrders)
+  - [sellMarketOrder](#sellMarketOrder)
 
 ## Annotated source
 
@@ -149,7 +166,7 @@ function publicRequest (path, next) {
 
 #### orderBook
 
-Returns a JSON dictionary like the ticker call, with the calculated values being from within an hour.
+> Returns a JSON dictionary like the ticker call, with the calculated values being from within an hour.
 
 ```javascript
 function orderBook (currencyPair, next) {
@@ -163,20 +180,23 @@ exports.orderBook = orderBook
 
 #### ticker
 
+> Returns data for the given currency pair.
+
 ```javascript
 /**
- * Returns data for the currency pair.
+ * @param {String} currencyPair
+ * @param {Function} next
  *
  * @returns {Object} tick
- * @returns {String} tick.last Last currency price.
- * @returns {String} tick.high Last 24 hours price high.
- * @returns {String} tick.low Last 24 hours price low.
- * @returns {String} tick.vwap Last 24 hours [volume weighted average price](https://en.wikipedia.org/wiki/Volume-weighted_average_price).
- * @returns {String} tick.volume Last 24 hours volume.
- * @returns {String} tick.bid Highest buy order.
- * @returns {String} tick.ask Lowest sell order.
- * @returns {String} tick.timestamp Unix timestamp date and time.
- * @returns {String} tick.open First price of the day.
+ * @returns {Number} tick.last Last currency price.
+ * @returns {Number} tick.high Last 24 hours price high.
+ * @returns {Number} tick.low Last 24 hours price low.
+ * @returns {Number} tick.vwap Last 24 hours [volume weighted average price](https://en.wikipedia.org/wiki/Volume-weighted_average_price).
+ * @returns {Number} tick.volume Last 24 hours volume.
+ * @returns {Number} tick.bid Highest buy order.
+ * @returns {Number} tick.ask Lowest sell order.
+ * @returns {Number} tick.timestamp Unix timestamp date and time.
+ * @returns {Number} tick.open First price of the day.
  */
 
 function ticker (currencyPair, next) {
@@ -190,11 +210,29 @@ function ticker (currencyPair, next) {
 exports.ticker = ticker
 ```
 
-#### transaction
+#### hourlyTicker
+
+> Returns a JSON dictionary like the [ticker](#ticker) call, with the calculated values being from within an hour.
+
+```javascript
+function hourlyTicker (currencyPair, next) {
+  const path = `/v2/ticker_hour/${currencyPair}/`
+
+  publicRequest(path, (err, data) => {
+    next(err, coerceTick(data))
+  })
+}
+
+exports.hourlyTicker = hourlyTicker
+```
+
+#### transactions
 
 ```javascript
 /**
+ * @params {currencyPair}
  * @params {String} time The time interval from which we want the transactions to be returned. Possible values are minute, hour (default) or day.
+ * @params {Function} next
  */
 
 function transactions (currencyPair, time, next) {
@@ -255,9 +293,7 @@ function privateRequest (path, params, next) {
     })
   })
 
-  request.on('error', error => {
-    next(error)
-  })
+  request.on('error', error => { next(error) })
 
   request.write(requestData)
 
