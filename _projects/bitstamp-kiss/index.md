@@ -6,10 +6,12 @@ npm: true
 
 > is a Bitstamp API v2 wrapper with the joy of kiss literate programming
 
-[API](#api)
+[API](#api) |
 [Annotated source](#annotated-source) |
 [License](#license)
 
+[![NPM version](https://badge.fury.io/js/bitstamp-kiss.svg)](http://badge.fury.io/js/bitstamp-kiss)
+[![No deps](https://img.shields.io/badge/dependencies-none-green.svg)](https://github.com/fibo/bitstamp-kiss)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
@@ -18,16 +20,17 @@ npm: true
 The following methods are implemented:
 
 * [Public API](#public-api)
-  - [orderBook](#orderBook)
+  - [orderBook](#orderbook)
   - [ticker](#ticker)
-  - [hourlyTicker](#hourlyTicker)
+  - [hourlyTicker](#hourlyticker)
   - [transactions](#transactions)
 * [Private API](#private-api)
-  - [accountBalance](#accountBalance)
-  - [allOpenOrders](#allOpenOrders)
-  - [buyMarketOrder](#buyMarketOrder)
-  - [openOrders](#openOrders)
-  - [sellMarketOrder](#sellMarketOrder)
+  - [accountBalance](#accountbalance)
+  - [allOpenOrders](#allopenorders)
+  - [buyMarketOrder](#buymarketorder)
+  - [openOrders](#openorders)
+  - [sellMarketOrder](#sellmarketorder)
+  - [userTransactions](#usertransactions)
 
 ## Annotated source
 
@@ -145,9 +148,7 @@ function publicRequest (path, next) {
 
     let responseJSON = ''
 
-    response.on('data', (chunk) => {
-      responseJSON += chunk
-    })
+    response.on('data', chunk => { responseJSON += chunk })
 
     response.on('end', () => {
       const responseData = JSON.parse(responseJSON)
@@ -160,7 +161,7 @@ function publicRequest (path, next) {
         next(null, responseData)
       }
     })
-  })
+  }).on('error', next)
 }
 ```
 
@@ -203,7 +204,8 @@ function ticker (currencyPair, next) {
   const path = `/v2/ticker/${currencyPair}/`
 
   publicRequest(path, (err, data) => {
-    next(err, coerceTick(data))
+    if (err) next(err)
+    else next(null, coerceTick(data))
   })
 }
 
@@ -219,7 +221,8 @@ function hourlyTicker (currencyPair, next) {
   const path = `/v2/ticker_hour/${currencyPair}/`
 
   publicRequest(path, (err, data) => {
-    next(err, coerceTick(data))
+    if (err) next(err)
+    else next(null, coerceTick(data))
   })
 }
 
@@ -230,8 +233,8 @@ exports.hourlyTicker = hourlyTicker
 
 ```javascript
 /**
- * @params {currencyPair}
- * @params {String} time The time interval from which we want the transactions to be returned. Possible values are minute, hour (default) or day.
+ * @param {currencyPair}
+ * @param {String} time interval from which we want the transactions to be returned. Possible values are minute, hour (default) or day.
  * @params {Function} next
  */
 
@@ -245,6 +248,8 @@ exports.transactions = transactions
 ```
 
 ### Private API
+
+> These calls will be executed on the account (Sub or Main), to which the used API key is bound to.
 
 #### privateRequest
 
@@ -272,13 +277,21 @@ function privateRequest (path, params, next) {
   }
 
   const request = https.request(requestOptions, (response) => {
+    const statusCode = response.statusCode
+
+    if (statusCode !== 200) {
+      const error = new Error(`Request failed with ${statusCode}`)
+
+      response.resume()
+
+      next(error)
+    }
+
     response.setEncoding('utf8')
 
     let responseJSON = ''
 
-    response.on('data', (chunk) => {
-      responseJSON += chunk
-    })
+    response.on('data', chunk => { responseJSON += chunk })
 
     response.on('end', () => {
       const responseData = JSON.parse(responseJSON)
@@ -293,7 +306,7 @@ function privateRequest (path, params, next) {
     })
   })
 
-  request.on('error', error => { next(error) })
+  request.on('error', next)
 
   request.write(requestData)
 
@@ -303,9 +316,103 @@ function privateRequest (path, params, next) {
 
 #### accountBalance
 
+> This API call is cached for 10 seconds.
+
 ```javascript
+/**
+ * @param {Function} next callback
+ * @returns {Object} balance
+ *
+ * Balance
+ *
+ * @returns {Number} balance.usd_balance
+ * @returns {Number} balance.btc_balance
+ * @returns {Number} balance.eur_balance
+ * @returns {Number} balance.xrp_balance
+ * @returns {Number} balance.bch_balance
+ * @returns {Number} balance.eth_balance
+ * @returns {Number} balance.ltc_balance
+ *
+ * Reserved.
+ *
+ * @returns {Number} balance.usd_reserved
+ * @returns {Number} balance.btc_reserved
+ * @returns {Number} balance.eur_reserved
+ * @returns {Number} balance.xrp_reserved
+ * @returns {Number} balance.bch_reserved
+ * @returns {Number} balance.eth_reserved
+ * @returns {Number} balance.ltc_reserved
+ *
+ * Available for trading.
+ *
+ * @returns {Number} balance.usd_available
+ * @returns {Number} balance.btc_available
+ * @returns {Number} balance.eur_available
+ * @returns {Number} balance.xrp_available
+ * @returns {Number} balance.bch_available
+ * @returns {Number} balance.eth_available
+ * @returns {Number} balance.ltc_available
+ *
+ * Customer trading fees.
+ *
+ * @returns {Number} balance.bchbtc_fee
+ * @returns {Number} balance.bcheur_fee
+ * @returns {Number} balance.bchusd_fee
+ * @returns {Number} balance.btceur_fee
+ * @returns {Number} balance.btcusd_fee
+ * @returns {Number} balance.ethbtc_fee
+ * @returns {Number} balance.etheur_fee
+ * @returns {Number} balance.ethusd_fee
+ * @returns {Number} balance.eurusd_fee
+ * @returns {Number} balance.ltcbtc_fee
+ * @returns {Number} balance.ltceur_fee
+ * @returns {Number} balance.ltcusd_fee
+ * @returns {Number} balance.xrpbtc_fee
+ * @returns {Number} balance.xrpeur_fee
+ * @returns {Number} balance.xrpusd_fee
+ */
+
 function accountBalance (next) {
-  privateRequest('/v2/balance/', {}, next)
+  privateRequest('/v2/balance/', {}, (err, data) => {
+    next(err, {
+      usd_balance: parseFloat(data.usd_balance),
+      btc_balance: parseFloat(data.btc_balance),
+      eur_balance: parseFloat(data.eur_balance),
+      xrp_balance: parseFloat(data.xrp_balance),
+      bch_balance: parseFloat(data.bch_balance),
+      eth_balance: parseFloat(data.eth_balance),
+      ltc_balance: parseFloat(data.ltc_balance),
+      usd_reserved: parseFloat(data.usd_reserved),
+      btc_reserved: parseFloat(data.btc_reserved),
+      eur_reserved: parseFloat(data.eur_reserved),
+      xrp_reserved: parseFloat(data.xrp_reserved),
+      bch_reserved: parseFloat(data.bch_reserved),
+      eth_reserved: parseFloat(data.eth_reserved),
+      ltc_reserved: parseFloat(data.ltc_reserved),
+      usd_available: parseFloat(data.usd_available),
+      btc_available: parseFloat(data.btc_available),
+      eur_available: parseFloat(data.eur_available),
+      xrp_available: parseFloat(data.xrp_available),
+      bch_available: parseFloat(data.bch_available),
+      eth_available: parseFloat(data.eth_available),
+      ltc_available: parseFloat(data.ltc_available),
+      bchbtc_fee: parseFloat(data.bchbtc_fee),
+      bcheur_fee: parseFloat(data.bcheur_fee),
+      bchusd_fee: parseFloat(data.bchusd_fee),
+      btceur_fee: parseFloat(data.btceur_fee),
+      btcusd_fee: parseFloat(data.btcusd_fee),
+      ethbtc_fee: parseFloat(data.ethbtc_fee),
+      etheur_fee: parseFloat(data.etheur_fee),
+      ethusd_fee: parseFloat(data.ethusd_fee),
+      eurusd_fee: parseFloat(data.eurusd_fee),
+      ltcbtc_fee: parseFloat(data.ltcbtc_fee),
+      ltceur_fee: parseFloat(data.ltceur_fee),
+      ltcusd_fee: parseFloat(data.ltcusd_fee),
+      xrpbtc_fee: parseFloat(data.xrpbtc_fee),
+      xrpeur_fee: parseFloat(data.xrpeur_fee),
+      xrpusd_fee: parseFloat(data.xrpusd_fee)
+    })
+  })
 }
 
 exports.accountBalance = accountBalance
@@ -323,7 +430,20 @@ exports.allOpenOrders = allOpenOrders
 
 #### buyMarketOrder
 
+> By placing a market order you acknowledge that the execution of your order depends on the market conditions and that these conditions may be subject to sudden changes that cannot be foreseen.
+
 ```javascript
+/**
+ * @param {currencyPair}
+ * @param {Number} amount
+ * @param {Function} next callback
+ * @returns {Object} response
+ * @returns {Number} response.id Order ID.
+ * @returns {String} response.datetime
+ * @returns {String} response.type 0 (buy) or 1 (sell).
+ * @returns {Number} response.price
+ * @returns {Number} response.amount
+ */
 function buyMarketOrder (currencyPair, amount, next) {
   const params = {
     amount: limitTo8Decimals(amount)
@@ -348,6 +468,17 @@ exports.openOrders = openOrders
 #### sellMarketOrder
 
 ```javascript
+/**
+ * @param {currencyPair}
+ * @param {Number} amount
+ * @param {Function} next callback
+ * @returns {Object} response
+ * @returns {Number} response.id Order ID.
+ * @returns {String} response.datetime
+ * @returns {String} response.type 0 (buy) or 1 (sell).
+ * @returns {Number} response.price
+ * @returns {Number} response.amount
+ */
 function sellMarketOrder (currencyPair, amount, next) {
   const params = {
     amount: limitTo8Decimals(amount)
@@ -361,21 +492,74 @@ exports.sellMarketOrder = sellMarketOrder
 
 #### userTransactions
 
+> Returns a descending list of transactions, represented as dictionaries.
+
+For example, to get latest 100 BTC/USD market trade transactions
+
+```
+bitstamp.userTransactions('btcusd', 0, 100, 'desc', (err, transactions) => {
+  if (err) throw err
+
+  const marketTradeTransactions = transactions.filter(
+    ({type}) => type === '2'
+  )
+
+  console.log(marketTradeTransactions)
+})
+```
+
 ```javascript
 /**
- * Returns a descending list of transactions, represented as dictionaries.
- *
- * @param {Number} offset Skip that many transactions before returning results (default: 0).
- * @param {Number} limit Limit result to that many transactions (default: 100; maximum: 1000).
+ * @param {currencyPair}
+ * @param {Number} offset to skip that many transactions before returning results (default: 0).
+ * @param {Number} limit result to that many transactions (default: 100; maximum: 1000).
  * @param {Number} sort Sorting by date and time: asc - ascending; desc - descending (default: desc).
+ * @param {Function} next callback
+ *
+ * @returns {Array} transactions
+ *
+ * Every transaction has the following properties:
+ * @prop {String} datetime
+ * @prop {Number} id
+ * @prop {String} type 0 - deposit; 1 - withdrawal; 2 - market trade; 14 - sub account transfer
+ * @prop {Number} usd
+ * @prop {Number} eur
+ * @prop {Number} btc
+ * @prop {Number} xrp
+ * @prop {Number} btc_usd exchange rate (if available)
+ * @prop {Number} xrp_usd exchange rate (if available)
+ * @prop {Number} btc_eur exchange rate (if available)
+ * @prop {Number} xrp_eur exchange rate (if available)
+ * @prop {Number} fee
+ * @prop {Number} order_id
  */
 
 function userTransactions (currencyPair, offset, limit, sort, next) {
-  const params = {
-    offset, limit, sort
-  }
+  const params = { offset, limit, sort }
 
-  privateRequest(`/v2/user_transactions/${currencyPair}/`, params, next)
+  privateRequest(`/v2/user_transactions/${currencyPair}/`, params, (err, data) => {
+    if (err) {
+      next(err)
+    } else {
+      next(null, data.map(data => {
+        const { datetime, id, type } = data
+        let transaction = { datetime, id, type }
+
+        const currency1 = currencyPair.substring(0, 3)
+        const currency2 = currencyPair.substring(3)
+        const exchangeRateLabel = `${currency1}_${currency2}`
+
+        if (data.fee) transaction.fee = parseFloat(data.fee)
+        if (data.order_id) transaction.order_id = data.order_id
+
+        transaction[currency1] = parseFloat(data[currency1])
+        transaction[currency2] = parseFloat(data[currency2])
+        transaction[exchangeRateLabel] = parseFloat(data[exchangeRateLabel])
+
+        return transaction
+      }))
+    }
+  })
 }
 
 exports.userTransactions = userTransactions
