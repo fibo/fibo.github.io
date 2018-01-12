@@ -6,10 +6,12 @@ npm: true
 
 > is a tiny helper to create a response object for AWS Lambda with Proxy integration
 
-[Usage](#usage)
+[Usage](#usage) |
 [Annotated source](#annotated-source) |
 [License](#license)
 
+[![NPM version](https://badge.fury.io/js/aws-lambda-res.svg)](http://badge.fury.io/js/aws-lambda-res)
+[![No deps](https://img.shields.io/badge/dependencies-none-green.svg)](https://github.com/fibo/aws-lambda-res)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
