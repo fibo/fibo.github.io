@@ -63,7 +63,7 @@
   "releases_url": "https://api.github.com/repos/fibo/three-orbitcontrols/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/three-orbitcontrols/deployments",
   "created_at": "2016-07-14T13:26:30Z",
-  "updated_at": "2017-09-27T07:46:34Z",
+  "updated_at": "2018-01-23T12:03:05Z",
   "pushed_at": "2017-11-23T11:26:48Z",
   "git_url": "git://github.com/fibo/three-orbitcontrols.git",
   "ssh_url": "git@github.com:fibo/three-orbitcontrols.git",
