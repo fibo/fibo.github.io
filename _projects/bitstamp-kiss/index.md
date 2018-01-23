@@ -204,8 +204,9 @@ function ticker (currencyPair, next) {
   const path = `/v2/ticker/${currencyPair}/`
 
   publicRequest(path, (err, data) => {
-    if (err) next(err)
-    else next(null, coerceTick(data))
+    if (err) return next(err)
+
+    next(null, coerceTick(data))
   })
 }
 
@@ -221,8 +222,9 @@ function hourlyTicker (currencyPair, next) {
   const path = `/v2/ticker_hour/${currencyPair}/`
 
   publicRequest(path, (err, data) => {
-    if (err) next(err)
-    else next(null, coerceTick(data))
+    if (err) return next(err)
+
+    next(null, coerceTick(data))
   })
 }
 
@@ -374,7 +376,9 @@ function privateRequest (path, params, next) {
 
 function accountBalance (next) {
   privateRequest('/v2/balance/', {}, (err, data) => {
-    next(err, {
+    if (err) return next(err)
+
+    next(null, {
       usd_balance: parseFloat(data.usd_balance),
       btc_balance: parseFloat(data.btc_balance),
       eur_balance: parseFloat(data.eur_balance),
@@ -484,7 +488,17 @@ function sellMarketOrder (currencyPair, amount, next) {
     amount: limitTo8Decimals(amount)
   }
 
-  privateRequest(`/v2/sell/market/${currencyPair}/`, params, next)
+  privateRequest(`/v2/sell/market/${currencyPair}/`, params, (err, data) => {
+    if (err) return next(err)
+
+    next(null, {
+      id: parseInt(data.id),
+      datetime: data.datetime,
+      type: data.type,
+      price: parseFloat(data.price),
+      amount: parseFloat(data.amount)
+    })
+  })
 }
 
 exports.sellMarketOrder = sellMarketOrder
@@ -538,27 +552,25 @@ function userTransactions (currencyPair, offset, limit, sort, next) {
   const params = { offset, limit, sort }
 
   privateRequest(`/v2/user_transactions/${currencyPair}/`, params, (err, data) => {
-    if (err) {
-      next(err)
-    } else {
-      next(null, data.map(data => {
-        const { datetime, id, type } = data
-        let transaction = { datetime, id, type }
+    if (err) return next(err)
 
-        const currency1 = currencyPair.substring(0, 3)
-        const currency2 = currencyPair.substring(3)
-        const exchangeRateLabel = `${currency1}_${currency2}`
+    next(null, data.map(data => {
+      const { datetime, id, type } = data
+      let transaction = { datetime, id, type }
 
-        if (data.fee) transaction.fee = parseFloat(data.fee)
-        if (data.order_id) transaction.order_id = data.order_id
+      const currency1 = currencyPair.substring(0, 3)
+      const currency2 = currencyPair.substring(3)
+      const exchangeRateLabel = `${currency1}_${currency2}`
 
-        transaction[currency1] = parseFloat(data[currency1])
-        transaction[currency2] = parseFloat(data[currency2])
-        transaction[exchangeRateLabel] = parseFloat(data[exchangeRateLabel])
+      if (data.fee) transaction.fee = parseFloat(data.fee)
+      if (data.order_id) transaction.order_id = data.order_id
 
-        return transaction
-      }))
-    }
+      transaction[currency1] = parseFloat(data[currency1])
+      transaction[currency2] = parseFloat(data[currency2])
+      transaction[exchangeRateLabel] = parseFloat(data[exchangeRateLabel])
+
+      return transaction
+    }))
   })
 }
 

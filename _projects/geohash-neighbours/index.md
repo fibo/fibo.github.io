@@ -1,5 +1,5 @@
 ---
-title: geohash-neighbours/
+title: geohash-neighbours
 npm: true
 ---
 # geohash-neighbours
