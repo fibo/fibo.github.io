@@ -31,6 +31,9 @@ description: >
 [CSS3Files](http://css3files.com/)
 : CSS Tips, Tricks and Tutorials
 
+[Get BEM](http://getbem.com)
+: Get BEM to all people in simplest way
+
 [Must-Watch CSS](https://github.com/AllThingsSmitty/must-watch-css)
 : A useful list of must-watch talks about CSS
 
