@@ -32,7 +32,7 @@ Install [Semantic-UI] and follow interactive instructions
 npm install semantic-ui --no-save
 ```
 
-I do not recommend to use a `--no-save` flag here, otherwise everytime you
+I **recommend** to use a `--no-save` flag here, otherwise everytime you
 will run `npm install` you will be prompted into the interactive setup.
 Furthermore, file *semantic.json* will be generated with a `version` attribute.
 
