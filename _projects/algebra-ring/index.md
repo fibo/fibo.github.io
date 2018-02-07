@@ -2,7 +2,7 @@
 title: algebra-ring
 npm: true
 ---
-# algebra-ring-ring
+# algebra-ring
 
 > defines an [algebra ring][1] structure
 

@@ -27,8 +27,10 @@ The following methods are implemented:
 * [Private API](#private-api)
   - [accountBalance](#accountbalance)
   - [allOpenOrders](#allopenorders)
+  - [buyLimitOrder](#buylimitorder)
   - [buyMarketOrder](#buymarketorder)
   - [openOrders](#openorders)
+  - [sellLimitOrder](#selllimitorder)
   - [sellMarketOrder](#sellmarketorder)
   - [userTransactions](#usertransactions)
 
@@ -109,9 +111,25 @@ function getSignature (nonce) {
 }
 ```
 
+#### limitTo5Decimals
+
+Truncate value to avoid Bitstamp API errors on *sell limit order*.
+
+```javascript
+function limitTo5Decimals (value) {
+  const decimals = value.toString().split('.')[1]
+
+  if (decimals && decimals.length > 5) {
+    return value.toFixed(5)
+  } else {
+    return value
+  }
+}
+```
+
 #### limitTo8Decimals
 
-Check value to avoid Bistamp API error:
+Truncate value to avoid Bitstamp API error:
 
 > Ensure that there are no more than 8 decimal places.
 
@@ -432,6 +450,52 @@ function allOpenOrders (currencyPair, next) {
 exports.allOpenOrders = allOpenOrders
 ```
 
+#### buyLimitOrder
+
+> This call will be executed on the account (Sub or Main), to which the used API key is bound to.
+
+```javascript
+/**
+ * @param {currencyPair}
+ * @param {Object} param
+ * @param {Number} param.amount
+ * @param {Number} param.price
+ * @param {Number} param.limit_price If the order gets executed, a new sell order will be placed, with "limit_price" as its price.
+ * @param {Function} next callback
+ * @returns {Object} response
+ * @returns {Number} response.id Order ID.
+ * @returns {String} response.datetime
+ * @returns {String} response.type 0 (buy) or 1 (sell).
+ * @returns {Number} response.price
+ * @returns {Number} response.amount
+ */
+function buyLimitOrder (currencyPair, param, next) {
+  if (param.limit_price <= param.price) {
+    next(new Error('limit_price <= price'))
+  }
+
+  const params = {
+    amount: limitTo8Decimals(param.amount),
+    price: limitTo8Decimals(param.price),
+    limit_price: limitTo8Decimals(param.limit_price)
+  }
+
+  privateRequest(`/v2/buy/${currencyPair}/`, params, (err, data) => {
+    if (err) return next(err)
+
+    next(null, {
+      id: parseInt(data.id),
+      datetime: data.datetime,
+      type: data.type,
+      price: parseFloat(data.price),
+      amount: parseFloat(data.amount)
+    })
+  })
+}
+
+exports.buyLimitOrder = buyLimitOrder
+```
+
 #### buyMarketOrder
 
 > By placing a market order you acknowledge that the execution of your order depends on the market conditions and that these conditions may be subject to sudden changes that cannot be foreseen.
@@ -453,7 +517,17 @@ function buyMarketOrder (currencyPair, amount, next) {
     amount: limitTo8Decimals(amount)
   }
 
-  privateRequest(`/v2/buy/market/${currencyPair}/`, params, next)
+  privateRequest(`/v2/buy/market/${currencyPair}/`, params, (err, data) => {
+    if (err) return next(err)
+
+    next(null, {
+      id: parseInt(data.id),
+      datetime: data.datetime,
+      type: data.type,
+      price: parseFloat(data.price),
+      amount: parseFloat(data.amount)
+    })
+  })
 }
 
 exports.buyMarketOrder = buyMarketOrder
@@ -469,7 +543,60 @@ function openOrders (currencyPair, next) {
 exports.openOrders = openOrders
 ```
 
+#### sellLimitOrder
+
+> This call will be executed on the account (Sub or Main), to which the used API key is bound to.
+
+Note that *daily_order* param is not supported, since Bistamp API complains with error
+
+> Both limit_price and any optional parameter cannot be set.
+
+```javascript
+/**
+ * @param {currencyPair}
+ * @param {Object} param
+ * @param {Number} param.amount
+ * @param {Number} param.price
+ * @param {Number} param.limit_price If the order gets executed, a new buy order will be placed, with "limit_price" as its price.
+ * @param {Function} next callback
+ * @returns {Object} response
+ * @returns {Number} response.id Order ID.
+ * @returns {String} response.datetime
+ * @returns {String} response.type 0 (buy) or 1 (sell).
+ * @returns {Number} response.price
+ * @returns {Number} response.amount
+ */
+function sellLimitOrder (currencyPair, param, next) {
+  if (param.limit_price >= param.price) {
+    next(new Error('limit_price >= price'))
+  }
+
+  const params = {
+    amount: limitTo5Decimals(param.amount),
+    price: limitTo5Decimals(param.price),
+    limit_price: limitTo5Decimals(param.limit_price)
+  }
+
+  privateRequest(`/v2/sell/${currencyPair}/`, params, (err, data) => {
+    if (err) return next(err)
+
+    next(null, {
+      id: parseInt(data.id),
+      datetime: data.datetime,
+      type: data.type,
+      price: parseFloat(data.price),
+      amount: parseFloat(data.amount)
+    })
+  })
+}
+
+exports.sellLimitOrder = sellLimitOrder
+```
+
 #### sellMarketOrder
+
+> By placing a market order you acknowledge that the execution of your order depends on the market conditions and that these conditions may be subject to sudden changes that cannot be foreseen.
+> This call will be executed on the account (Sub or Main), to which the used API key is bound to.
 
 ```javascript
 /**
