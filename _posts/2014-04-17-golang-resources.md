@@ -76,6 +76,8 @@ description: >
 
 [Go for Data Science](https://blog.chewxy.com/2017/11/02/go-for-data-science/)
 
+[Using Go as a scripting language in Linux](https://blog.cloudflare.com/using-go-as-a-scripting-language-in-linux/)
+
 ## Free books online
 
 See my [book collection]({% post_url 2014-01-02-free-books-online %}#go)
