@@ -30,7 +30,7 @@ function volatility (values) {
 
   const deviation = values.reduce((dev, val) => (dev + (val - mean) * (val - mean)), 0)
 
-  return Math.sqrt(deviation / (n - 1))
+  return Math.sqrt(deviation / n)
 }
 
 module.exports = volatility
