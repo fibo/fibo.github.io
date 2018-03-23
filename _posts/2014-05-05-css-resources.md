@@ -55,6 +55,9 @@ description: >
 [Quantity Queries](http://quantityqueries.com/)
 : A tool to help build Quantity Queries for your projects
 
+[CSScomb](http://csscomb.com/)
+: Makes your code beautiful
+
 ## Tools
 
 ### Frameworks
