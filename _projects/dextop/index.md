@@ -61,6 +61,7 @@ to provide the following options:
 
 | name          | default                |
 |---------------|------------------------|
+| autohide      | `true`                 |
 | width         | `400`                  |
 | height        | `300`                  |
 | color         | `'rgba(0, 0, 0, 0.1)'` |
@@ -90,8 +91,7 @@ can optionally style it with a CSS like the following.
 }
 ```
 
-Class `DextopWindow` inherits from [EventEmitter], it is possible to listen
-to events like in the following snippet.
+Class `DextopWindow` inherits from [EventEmitter], it is possible to listen to events like in the following snippet.
 
 ```javascript
 dextop.on('move', ({ x, y }) => {
