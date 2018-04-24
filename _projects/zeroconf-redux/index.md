@@ -7,7 +7,7 @@ npm: true
 > is a minimal [React]/[Redux] dev stack, on top of [browserify] + [budo]
 
 **UPDATES** 🎉:
-  - v3 brings super 😸 exciting [babel-preset-env]
+  - v3 brings super 😸 exciting [babel-preset-env] and [Redux] v4
   - v2 contains brand new [React] v16 😎
 
 [Quick start](#quick-start) |
@@ -49,14 +49,13 @@ If you have no *package.json* yet, create one now! For instance with
 npm init -y
 ```
 
-**Tip**: if it is not a package you want to add on the npm registry,
-consider adding a
+**Tip**: If it is not a package you want to add to the npm registry, you
+should add the following attribute to your *package.json* file.
 
 ```json
   "private": true,
 ```
 
-attribute to your *package.json* file.
 
 Then with [npm] do
 
@@ -147,7 +146,8 @@ For example, you may edit your *.babelrc* to target specific chrome version
 ```json
 {
   "presets": [
-    ["env", { "targets": { "chrome": "60" } }]
+    ["env", { "targets": { "chrome": "60" } }],
+    "react"
   ]
 }
 ```
