@@ -169,6 +169,8 @@ description: >
 
 [About Flexbox](https://speakerdeck.com/makhbeth/about-flexbox-you-cant-float-anymore)
 
+[How browsers position floats](https://meowni.ca/posts/float-layout/)
+
 [Nice collection of CSS animated loading indicators](http://tobiasahlin.com/spinkit/)
 
 [CSS Development & Testing Tools](https://tech.bellycard.com/blog/css-development-testing-tools/)
