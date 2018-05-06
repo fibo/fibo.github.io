@@ -145,9 +145,10 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 
 ## Icons
 
-[Icon finder](https://www.iconfinder.com/)
+[b64](http://b64.io/)
+: Image optimization and base64 encoding.
 
-[X-Icon editor](http://www.xiconeditor.com/)
+[Icon finder](https://www.iconfinder.com/)
 
 [Evil Icons](http://evil-icons.io/)
 
@@ -165,10 +166,16 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Simple icons](https://simpleicons.org/)
 : Free SVG icons for popular brands
 
-[Favicon & App Icon Generator](http://www.favicon-generator.org/)
-
 [Super Tiny Social Icons](https://github.com/edent/SuperTinyIcons)
 : Under 1KB each! Super Tiny Icons are miniscule SVG versions of your favourite website and app logos
+
+## Favicons
+
+[Favicon & App Icon Generator](http://www.favicon-generator.org/)
+
+[X-Icon editor](http://www.xiconeditor.com/)
+
+[Favicon Generator. For real.](https://realfavicongenerator.net/)
 
 ## Online editors
 
