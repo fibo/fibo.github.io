@@ -155,6 +155,17 @@ curl -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone 2> /dev/null     |
 
 Yes, double check results appended to your */etc/hosts.deny* config file and compare them with your last logins. Just use a simple `last | head -20` and `more /etc/hosts.deny` with a little bit from your brain.
 
+### Update server time
+
+It is also a **really good idea** to sync server time. Some softwares like aws-sdk could break if timestamp is wrong.
+
+Add this entry to *root* crontab
+
+```
+# Update server time.
+0 * * * * ntpdate -s time.nist.gov
+```
+
 ## References
 
 * [“POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure — what does this mean?][1]
