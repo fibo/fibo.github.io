@@ -86,6 +86,9 @@ description: >
 [Skeleton](http://getskeleton.com/)
 : A dead simple, responsive boilerplate.
 
+[Bulma](https://bulma.io/)
+: is an open source CSS framework based on Flexbox.
+
 [Basscss](http://www.basscss.com/)
 : Low-Level CSS Toolkit
 
@@ -162,6 +165,8 @@ description: >
 : A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on.
 
 ## Demo
+
+[Pixel Art to CSS](https://www.pixelartcss.com/)
 
 [CSS visualizer](http://likethemammal.github.io/css-visualizer/)
 
