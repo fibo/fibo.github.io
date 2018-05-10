@@ -150,6 +150,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 
 [Icon finder](https://www.iconfinder.com/)
 
+[Iconic](https://useiconic.com/)
+: The definitive icon set designed for the modern web.
+
 [Evil Icons](http://evil-icons.io/)
 
 [Feed Icons](http://www.feedicons.com/)
