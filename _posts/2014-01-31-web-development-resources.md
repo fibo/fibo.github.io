@@ -119,12 +119,6 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Hack](http://sourcefoundry.org/hack/)
 : A typeface designed for source code
 
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-: THe iconic font and CSS toolkit
-
-[Fontello](http://fontello.com/)
-: Icon fonts generator
-
 [Font River](http://www.fontriver.com/)
 : 20,000 downloadable fonts and dingbats for Windows and Mac
 
@@ -148,6 +142,12 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [b64](http://b64.io/)
 : Image optimization and base64 encoding.
 
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+: THe iconic font and CSS toolkit
+
+[Fontello](http://fontello.com/)
+: Icon fonts generator
+
 [Icon finder](https://www.iconfinder.com/)
 
 [Iconic](https://useiconic.com/)
@@ -156,6 +156,8 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Evil Icons](http://evil-icons.io/)
 
 [Feed Icons](http://www.feedicons.com/)
+
+[Ionicons](http://ionicons.com/)
 
 [Code Icons](https://github.com/mabrasil/codeicons)
 : An icon set of programming languages, frameworks, and coding tools.
