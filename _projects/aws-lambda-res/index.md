@@ -17,11 +17,15 @@ npm: true
 
 ## Usage
 
-In some AWS Lambda, triggered by an API Gateway endpoint and configured with
-Lambda Proxy integration, suppose you have a dummy endpoint which returns
-JSON `{ "ok": true }`, then the following code will be enough
+Suppose you have an *API Gateway* resource with a method configured with
+*Lambda Proxy integration*.
 
-```
+![proxy flag](media/Use-Lambda-Proxy-integration.png)
+
+Suppose you have a dummy endpoint which returns JSON `{ "ok": true }`,
+then the following code will be a working implementation.
+
+```js
 const response = require('aws-lambda-res')
 
 function handler (event, context, callback) {
@@ -34,7 +38,7 @@ exports.handler = handler
 You can pass headers as second argument, body can be null: for example to
 logout and redirect to homepage you can use something like
 
-```
+```js
 function handler (event, context, callback) {
   const Expires = 'Sat, 01 Jan 2000 00:00:00 GMT' // Some day in the past.
 
