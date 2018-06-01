@@ -4,7 +4,7 @@ npm: true
 ---
 # not-defined
 
-> checks if foo is not defined, i.e. undefined, null, an empty string, array or object
+> checks if foo is not defined, i.e. undefined, null, an empty string, array, object or NaN
 
 [Installation](#installation) |
 [Usage](#usage) |
@@ -12,7 +12,6 @@ npm: true
 [License](#license)
 
 [![NPM version](https://badge.fury.io/js/not-defined.svg)](http://badge.fury.io/js/not-defined)
-[![Dependency Status](https://gemnasium.com/fibo/not-defined.svg)](https://gemnasium.com/fibo/not-defined)
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
 ## Installation
@@ -60,6 +59,7 @@ no(null) // true
 no('') // true
 no([]) // true
 no({}) // true
+no(NaN) // true
 
 no(0) // false
 no(true) // false
@@ -82,9 +82,9 @@ no(function () { return 1 }) // false
 ## Annotated source
 
 This is my first npm package written using [KISS Literate Programming][KLP].
-It is plain ES5 function that is 125 characters long.
+It is plain ES5 function that is 159 characters long.
 
-    module.exports=function(x){return x==null||(x.length<1&&typeof x!='function')||(typeof x=='object'&&Object.keys(x).length<1)}
+    module.exports=function(x){return x==null||(typeof x == 'number'&&isNaN(x))||(x.length<1&&typeof x!='function')||(typeof x=='object'&&Object.keys(x).length<1)}
 
 Snippet `length<1` is used instead of equivalent `length==0` to save two characters, considering it is used twice.
 
