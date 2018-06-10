@@ -1,6 +1,6 @@
 {% if site.data.tagpage[include.tag] %}
   <div class="badge info">
-    <a href="/tag/{{ include.tag | slugify }}">{{ include.tag }}</a>
+    <a class="no-text-decoration" href="/tag/{{ include.tag | slugify }}">{{ include.tag }}</a>
   </div>
 {% else %}
   <div class="badge warning">
