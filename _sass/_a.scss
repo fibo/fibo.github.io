@@ -3,6 +3,10 @@ a {
   cursor: pointer;
 }
 
+a.no-text-decoration {
+  text-decoration-none;
+}
+
 a:link,
 a:visited {
   color: $gray;
