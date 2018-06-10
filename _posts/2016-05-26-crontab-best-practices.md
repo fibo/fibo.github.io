@@ -32,7 +32,7 @@ exec /bin/bash --norc "$@"
 
 Then **on top** of your crontab
 
-```
+```bash
 # Let scheduled scripts run with the same environment as bash
 # shell interactive session.
 SHELL=.cron.bash
@@ -47,7 +47,7 @@ no feedback unless a verbose flag, or whatever, is passed as argument.
 In this way, when a script outputs an error, crontab will send you an email
 if you configure the `MAILTO` variable, for example
 
-```
+```bash
 # Send scripts output by email.
 MAILTO=alarms@example.com
 ```
@@ -60,7 +60,7 @@ write then in cronological order.
 Pad left single digits with a zero, to get rows alligned. Please, indent
 and group where it makes sense
 
-```crontab
+```bash
 # Bad
 
 0 5 * * * script1.sh param1
@@ -90,7 +90,7 @@ task temporarily with a comment, put your nick or email and a date.
 
 Just to have an idea of what I mean:
 
-```crontab
+```bash
 
 # Countinous integration deploy.
 */10 * * * * $BEMEDIA_REPO/src/bin/continuous_deploy.sh
@@ -132,7 +132,7 @@ Just to have an idea of what I mean:
 Since `%` is a special char you need to escape it, for example when you
 schedule a `date` command with formatting, for example
 
-```
+```bash
 0 5 * * * script.sh >> /my/log_`date +\%y\%m\%d`.log
 ```
 
