@@ -225,6 +225,14 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 [CodeSandbox](https://codesandbox.io)
 : CodeSandbox makes it easier to create, share and reuse React projects with others
 
+## Random stuff
+
+[Unsplash](https://unsplash.com/)
+: Photos for everyone
+
+[Lorem picsum](https://picsum.photos/)
+: Lorem Ipsum... but for photos
+
 ## Articles
 
 ### Client side
