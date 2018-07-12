@@ -93,7 +93,7 @@ Just to have an idea of what I mean:
 ```bash
 
 # Countinous integration deploy.
-*/10 * * * * $BEMEDIA_REPO/src/bin/continuous_deploy.sh
+*/10 * * * * continuous_deploy.sh
 
 # Every hour
 # ----------
@@ -105,7 +105,7 @@ Just to have an idea of what I mean:
 # Every day
 # ---------
 
-# gcasati 20160405: paused cause waiting for bla bla bla
+# jsmith 20160405: paused cause waiting for bla bla bla
 #10 04 * * * script2.sh
 
 00 05 * * * script3.sh param1
