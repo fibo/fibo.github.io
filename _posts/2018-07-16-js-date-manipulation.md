@@ -1,5 +1,5 @@
 ---
-title: Use fetch!
+title: Vanilla JavaScript date manipulation
 tags:
   - Web
   - JavaScript
