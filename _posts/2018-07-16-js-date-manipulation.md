@@ -8,7 +8,7 @@ description: >
     You don't need moment.js! Just use few snippets of native JavaScript code to parse and manipulate dates.
 ---
 
-I as at [DEVit conf](https://devitconf.org/) in 2017 and I had the pleasure to meet [substack](https://www.substack.com/) a very kind person and, in my opinion, one of the most brilliant developer around and main evangelist of the holy Unix phylosophy.
+I as at [DEVit conf](https://devitconf.org/) in 2017 and I had the pleasure to meet [substack](https://github.com/substack) a very kind person and, in my opinion, one of the most brilliant developer around and main evangelist of the holy Unix phylosophy.
 Talking about minimalism, vanilla code, etc. he said to me
 
 > ... also moment.js it is unnecessary, you can achieve the features you need with few lines of code, instead of importing it in your build
