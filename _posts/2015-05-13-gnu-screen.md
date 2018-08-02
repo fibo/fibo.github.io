@@ -81,6 +81,16 @@ $ screen -x user2
 
 ## Tips
 
+### Multiple windows
+
+Enter in some screen session or create a new one, for instance
+
+```bash
+screen -x multiWondowSession
+```
+
+Create a new window with <kbd>CTRL-a c</kbd>. Cycle through windows with <kbd>CTRL-a n</kbd>. Close window with <kbd>CTRL-d</kbd>.
+
 ### Resize split window
 
 Split window with <kbd>CTRL-a S</kbd>. It creates a new region below.
