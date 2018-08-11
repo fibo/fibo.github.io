@@ -168,9 +168,9 @@ description: >
 
 [Software Architecture Patterns](http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf)
 
-## Mathematics
+[Compilation of 100+ 3D graphics academic papers](https://rivten.github.io/2018/08/03/graphics-article-list.html)
 
-[Fractal Geometry](http://classes.yale.edu/fractals/)
+## Mathematics
 
 [Introductory Statistics: Concepts, Models, and Applications](http://www.psychstat.missouristate.edu/introbook/sbk00.htm)
 
