@@ -12,14 +12,14 @@ npm: true
 
 Just add this line of code in your JavaScript client code.
 
-```javascript
+```js
 require('https-scheme')()
 ```
 
 Or, if you prefer maybe cause you want to call it if some condition is met, for instance
 only in production
 
-```javascript
+```js
 const forceHttps = require('https-scheme')
 
 if (isProduction) {
@@ -31,7 +31,7 @@ if (isProduction) {
 
 Check if protocol is *https*. If yes, redirect location to homonym secure URL.
 
-```js
+```javascript
 function forceHttps () {
   if (window.location.protocol !== 'https:') {
     window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
