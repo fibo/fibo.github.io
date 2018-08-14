@@ -59,6 +59,20 @@ Just push the local branch to remote *origin*.
 git push origin develop
 ```
 
+## Show differences
+
+Now that you have a branch other than *master* you may want to add some code or do a revision of code in the branch. It can be handy to compare current branch with *master*, to do so launch
+
+```bash
+git diff --name-status master
+```
+
+To compare any pair of branches
+
+```bash
+git diff --name-status firstbranch..yourBranchName
+```
+
 ## Change branch
 
 If you want to go back to master branch launch
@@ -66,6 +80,9 @@ If you want to go back to master branch launch
 ```bash
 git checkout master
 ```
+
+Note that before switching branch, you may need to commit changes, if any.
+
 
 ## Merge two branches
 
