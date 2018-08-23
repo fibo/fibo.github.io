@@ -1,9 +1,8 @@
 .paper {
-  box-shadow: 3px 3px 5px $shadow;
+  box-shadow: 4px 4px 5px $shadow;
   display: block;
   margin-bottom: $margin-bottom;
   padding: 15px;
-  transition: 0.4s;
 
   &:hover {
     box-shadow: 5px 5px 7px $shadow;
