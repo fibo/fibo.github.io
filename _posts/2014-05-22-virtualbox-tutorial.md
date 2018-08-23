@@ -51,7 +51,7 @@ I use to create a new 8GB virtual disc in VDI format dinamically allocated.
 
 Once your VM is created and you downloaded the iso, before turning on the VM go to **Settings > Storage > Controller: IDE** , click on *Empty* and navigate to the iso path, that on my Windows laptop is *C:\store\Software\Ubuntu\ubuntu-14.04-server-amd64.iso*
 
-![mount_iso](/images{{ page.id }}/mount_iso.png)
+![mount_iso](/images{{ page.id }}/mount_iso.png){:.responsive}
 
 #### Credentials
 
