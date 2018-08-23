@@ -8,7 +8,7 @@ description: >
 
 ## Get an account
 
-Do you have an npm account? If not, create it on [npm site][1], then run
+Do you have an npm account? If not, create it on [npm site][npm], then run
 
 ```bash
 npm login
@@ -18,7 +18,7 @@ insert your authentication credentials, and you are ready to start!
 
 ## Start with a GitHub repository
 
-This is your choice, but, if you want to follow what seems to be a *de facto* standard in Node community, use [GitHub][2]!
+This is your choice, but, if you want to follow what seems to be a *de facto* standard in Node community, use [GitHub]!
 
 ### About the package name
 
@@ -37,7 +37,7 @@ Create a new repository, for instance *tris3d*
 * check the *README flag*
 * add a *Node* .gitignore
 
-![create repo][3]
+![create repo](/images{{ page.id }}/new-GitHub-repo.png){:.responsive}
 
 Ok, this is the **next level**. Use [git hub](https://github.com/ingydotnet/git-hub) to
 
@@ -76,12 +76,12 @@ description
 : can be almost the same as the GitHub repo description
 
 keywords
-: make it easy to find your package on [npm site][1]
+: make it easy to find your package on [npm site][npm]
 
 author
 : use your npm nick
 
-See [npm's package.json specifics][5] to know about what's required in your *package.json* file, and the meaning of every attribute.
+See [npm's package.json specifics](https://docs.npmjs.com/files/package.json) to know about what's required in your *package.json* file, and the meaning of every attribute.
 
 
 ### Do you want to be public?
@@ -137,7 +137,7 @@ and I add the following content
 
 ### Add an homepage
 
-It is also a good idea to add a link to your project homepage, so it will showed by [npm site][1].
+It is also a good idea to add a link to your project homepage, so it will showed by [npm site][npm].
 
 ```json
 "homepage": "http://g14n.info/tris3d",
@@ -166,12 +166,8 @@ docs/
 
 ## See also
 
-* [npm-developers][4]
+* [npm-developers][https://docs.npmjs.com/misc/developers]
 
 
-[1]: https://npmjs.org/
-[2]: https://github.com/
-[3]: https://lh4.googleusercontent.com/Y0V5ArmaIFawdLp8SqVShPPzNzy5wonuLVsqeaBFdBE=s0 "New GitHub repo"
-[4]: https://www.npmjs.org/doc/misc/npm-developers.html "npm-developers"
-[5]: https://npmjs.org/doc/json.html
-
+[npm]: https://npmjs.org/
+[GitHub]: https://github.com/
