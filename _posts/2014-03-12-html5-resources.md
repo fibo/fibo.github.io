@@ -1,7 +1,7 @@
 ---
 title: HTML5 resources
 tags:
-  - Web,
+  - Web
   - HTML
 description: >
     Collection of links related to HTML5.
@@ -48,6 +48,9 @@ description: >
 
 [htmlreference.io](http://htmlreference.io/)
 : A free guide to HTML. It features all elements and attributes.
+
+[Service Worker Cookbook](https://serviceworke.rs/)
+: The Service Worker Cookbook is a collection of working, practical examples of using service workers in modern web sites (by Mozilla :).
 
 ## Frameworks and libs
 
