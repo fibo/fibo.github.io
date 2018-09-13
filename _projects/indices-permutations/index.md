@@ -12,10 +12,11 @@ npm: true
 [License](#license)
 
 [![NPM version](https://badge.fury.io/js/indices-permutations.svg)](http://badge.fury.io/js/indices-permutations)
-[![Build Status](https://travis-ci.org/fibo/indices-permutations.svg?branch=master)](https://travis-ci.org/fibo/indices-permutations?branch=master)[![Dependency Status](https://gemnasium.com/fibo/indices-permutations.svg)](https://gemnasium.com/fibo/indices-permutations)
+[![Build Status](https://travis-ci.org/fibo/indices-permutations.svg?branch=master)](https://travis-ci.org/fibo/indices-permutations?branch=master)
+[![No deps](https://img.shields.io/badge/dependencies-none-green.svg)](https://github.com/fibo/strict-mode)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
+## Installation
 
 With [npm](https://www.npmjs.com/) do
 
@@ -25,16 +26,24 @@ npm install indices-permutations
 
 ## Usage
 
-Use it as a callback for the [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
-It returns the **result** array of all indices permutated.
+Use it as a callback for the [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+on an array of positive integers.  It returns the **result** array of all indices permutated.
+
+Note that *initialValue* argument must be provided, for instance it can be an empty array `[]`.
+
+Both CommonJS and ES6 import syntax are supported.
+
+```js
+import indicesPermutations from 'indicesPermutations'
+```
+
+```js
+const indicesPermutations = require('indices-permutations')
+```
 
 ## Examples
 
 All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/indices-permutations/blob/master/test.js).
-
-```javaScript
-var indicesPermutations = require('indices-permutations')
-```
 
 ### order 1
 

@@ -56,6 +56,10 @@ npm install babel-eslint
 
 Credits go to [standard-engine collaborators](https://www.npmjs.com/package/standard-engine/access).
 
+## Versioning
+
+*Major* version is the same as [eslint-config-standard](https://github.com/standard/eslint-config-standard).
+
 ## License
 
 Same as [Standard JS], i.e. [MIT](http://g14n.info/mit-license).

@@ -21,7 +21,7 @@ With [npm](https://www.npmjs.com/) do
 npm install markdown2code
 ```
 
-THen, if you add a script to your package.json, like the following one
+Then, if you add a script to your package.json, like the following one
 
 ```json
     "markdown2code": "markdown2code -l javascript README.md > ${npm_package_main}",
