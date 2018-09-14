@@ -1,0 +1,15 @@
+.post_box {
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:focus,
+  a:link,
+  a:hover
+  a:visited {
+    color: $info-color;
+    text-decoration: none;
+  }
+}
