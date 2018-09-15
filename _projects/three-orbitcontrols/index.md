@@ -6,7 +6,19 @@ npm: true
 
 > is the [three.js] OrbitControls from official repo examples
 
-All credit goes to [OrbitControls.js][original_orbitcontrols] contributors. See also [official OrbitControls documentation][orbitcontrols_documentation].
+## Installation
+
+To install with npm do
+
+```bash
+npm install three
+npm install three-orbitcontrols
+```
+
+## Usage
+
+All credit goes to [OrbitControls.js][original_orbitcontrols] contributors.
+See also [official OrbitControls documentation][orbitcontrols_documentation].
 
 I have just **stolen** the code and modified to export it as a module so you can do something like
 
@@ -34,16 +46,16 @@ Please note that:
 1. You call `OrbitControls` directly instead of `THREE.OrbitControls`.
 2. This package does not depend directly on [three.js], which is declared as a peer dependency.
 
-To install with npm do
+See also [examples/ folder](https://github.com/fibo/three-orbitcontrols/tree/master/examples).
 
-```bash
-npm install three three-orbitcontrols --save
-```
+## Motivation
 
 There is another package similar to this one: [three-orbit-controls].
 I decided to create another package with a different approach, see [this issue for the rationale](https://github.com/mattdesl/three-orbit-controls/issues/17).
 
 I am using this package for my [3d tic tac toe](http://tris3d.net) online game.
+
+## How to update code
 
 To update *OrbitControls.js* code follow instructions below.
 
@@ -72,6 +84,8 @@ rm OrbitControls.js.new # clean up downloaded file
 
 Note that minor version in this package is in sync with three.js minor version, i.e. release number.
 Also update `peerDependencies` attribute in *package.json* with latest three.js version.
+
+## License
 
 License is the same as [three.js], i.e. [MIT].
 
