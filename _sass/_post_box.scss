@@ -5,11 +5,14 @@
   }
 
   a:active,
-  a:focus,
+  a:focus {
+    color: $info-color;
+  }
+
   a:link,
   a:hover
   a:visited {
-    color: $info-color;
     text-decoration: none;
   }
+}
 }
