@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1NDczODc3OA==",
   "name": "prime-number",
   "full_name": "fibo/prime-number",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/prime-number",
   "description": "is a slow recursive function to check if a number is prime (and a benchmark to test how slow it is :)",
   "fork": false,

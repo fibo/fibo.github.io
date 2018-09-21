@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk5OTMyOTc2",
   "name": "Task-BeLike-FIBO-pm",
   "full_name": "fibo/Task-BeLike-FIBO-pm",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/Task-BeLike-FIBO-pm",
   "description": "Leonardo Pisano a.k.a. Fibonacci (Bonacci's son)",
   "fork": false,

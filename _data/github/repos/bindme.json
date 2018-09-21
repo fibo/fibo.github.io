@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMDAwNzMzMDM=",
   "name": "bindme",
   "full_name": "fibo/bindme",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/bindme",
   "description": "is a helper to bind a list of methods to an object reference",
   "fork": false,

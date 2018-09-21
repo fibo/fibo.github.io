@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk2MzYwNjIyNA==",
   "name": "dot-editorconfig",
   "full_name": "fibo/dot-editorconfig",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/dot-editorconfig",
   "description": "creates a .editorconfig file in your package dir",
   "fork": false,

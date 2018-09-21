@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMzk2MDE5ODk=",
   "name": "country-isocode2",
   "full_name": "fibo/country-isocode2",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/country-isocode2",
   "description": "bare list of country codes",
   "fork": false,

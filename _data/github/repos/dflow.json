@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk2MTk4MTgz",
   "name": "dflow",
   "full_name": "fibo/dflow",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/dflow",
   "description": "is a minimal Dataflow programming engine",
   "fork": false,

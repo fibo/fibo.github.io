@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk5MzIwNDg1Ng==",
   "name": "m2c",
   "full_name": "fibo/m2c",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/m2c",
   "description": "go for 2x2 complex matrices",
   "fork": false,

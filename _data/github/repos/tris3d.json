@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxNDk4NTYxOA==",
   "name": "tris3d",
   "full_name": "fibo/tris3d",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/tris3d",
   "description": "is a 3d tic tac toe algorithm powered by Z3 space",
   "fork": false,

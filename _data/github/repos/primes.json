@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMTI3MjIyNTI=",
   "name": "primes",
   "full_name": "fibo/primes",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/primes",
   "description": "is a list of prime numbers",
   "fork": false,

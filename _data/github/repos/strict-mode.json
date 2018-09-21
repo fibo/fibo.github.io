@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxNTc0Njc3Mw==",
   "name": "strict-mode",
   "full_name": "fibo/strict-mode",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/strict-mode",
   "description": "enables strict mode in your package",
   "fork": false,

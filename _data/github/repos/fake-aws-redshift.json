@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1OTAzOTE2Nw==",
   "name": "fake-aws-redshift",
   "full_name": "fibo/fake-aws-redshift",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/fake-aws-redshift",
   "description": "is a docker image with a PostgreSQL 8.0.2, i.e. compatible with AWS Redshift",
   "fork": false,

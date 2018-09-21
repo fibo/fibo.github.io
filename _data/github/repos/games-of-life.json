@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkzNjU3MTMxMg==",
   "name": "games-of-life",
   "full_name": "fibo/games-of-life",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/games-of-life",
   "description": "is a Mathematical solution of any Game of Life variation",
   "fork": false,

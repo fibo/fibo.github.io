@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMTU5NDQ3NjY=",
   "name": "aws-lambda-res",
   "full_name": "fibo/aws-lambda-res",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/aws-lambda-res",
   "description": "is a tiny helper to create a response object for AWS Lambda with Proxy integration",
   "fork": false,

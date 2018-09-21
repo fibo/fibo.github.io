@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk4NDU2MjEyMg==",
   "name": "inlined",
   "full_name": "fibo/inlined",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/inlined",
   "description": "throws if some module body length exceeds *max_inlined_source_size* number of chars",
   "fork": false,

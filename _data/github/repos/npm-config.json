@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk3MTEzOTYxMw==",
   "name": "npm-config",
   "full_name": "fibo/npm-config",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/npm-config",
   "description": "my npm init defaults",
   "fork": false,

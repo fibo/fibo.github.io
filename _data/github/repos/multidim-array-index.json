@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk0MjA2MTQwMg==",
   "name": "multidim-array-index",
   "full_name": "fibo/multidim-array-index",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/multidim-array-index",
   "description": "Computes index of multi dimensional array",
   "fork": false,

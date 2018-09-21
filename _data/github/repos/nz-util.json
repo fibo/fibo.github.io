@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMzI3MDQ4MQ==",
   "name": "nz-util",
   "full_name": "fibo/nz-util",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/nz-util",
   "description": "Netezza utility procedures",
   "fork": false,

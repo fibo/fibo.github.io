@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk5MjMxNDAzMw==",
   "name": "i-am-not-a-robot",
   "full_name": "fibo/i-am-not-a-robot",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/i-am-not-a-robot",
   "description": "cause I can play games",
   "fork": false,

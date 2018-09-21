@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk0ODI1OTE0NQ==",
   "name": "indices-permutations",
   "full_name": "fibo/indices-permutations",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/indices-permutations",
   "description": "is a recursive reducer to all permutations with repetitions of multi dimensional array indices",
   "fork": false,

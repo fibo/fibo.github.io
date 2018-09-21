@@ -16,7 +16,7 @@ nav {
 
 nav ul {
   z-index: 10;
-  height: 2.5em;
+  height: 2.5rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ nav ul li:first-child {
 
 nav ul li {
   float: right;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Style the links inside the list items */
@@ -119,8 +119,7 @@ nav ul li:hover ul li {
 
   nav ul.responsive li a {
     display: block;
-    font-size: 1.7em;
-    text-align: left;
+    font-size: 1.7rem;
   }
 
   /* Hamburger icon animation */

@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1MDQ5NTI0Nw==",
   "name": "kiss-literate-programming",
   "full_name": "fibo/kiss-literate-programming",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/kiss-literate-programming",
   "description": "is a minimal literate programming boilerplate",
   "fork": false,

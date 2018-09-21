@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1NDcwMzE3OA==",
   "name": "algebra-cyclic",
   "full_name": "fibo/algebra-cyclic",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/algebra-cyclic",
   "description": "creates a space isomorphic to Zp: the cyclic ring of order p, where p is prime",
   "fork": false,

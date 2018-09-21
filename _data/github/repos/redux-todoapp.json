@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk5NzM0MjM4NA==",
   "name": "redux-todoapp",
   "full_name": "fibo/redux-todoapp",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/redux-todoapp",
   "description": "is an example React/Redux app",
   "fork": false,
