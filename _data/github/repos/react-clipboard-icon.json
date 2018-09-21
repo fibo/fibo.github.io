@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk2MjIxOTA0MA==",
   "name": "react-clipboard-icon",
   "full_name": "fibo/react-clipboard-icon",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/react-clipboard-icon",
   "description": "is an svg icon from clipboard.js site assets, packaged as a React stateless component",
   "fork": false,

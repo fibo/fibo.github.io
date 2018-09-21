@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMzA1OTg4OTM=",
   "name": "SQL92-operators",
   "full_name": "fibo/SQL92-operators",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/SQL92-operators",
   "description": "is the list of operators in SQL92 specification",
   "fork": false,

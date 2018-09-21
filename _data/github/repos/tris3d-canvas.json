@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1MzEyNzA2Mw==",
   "name": "tris3d-canvas",
   "full_name": "fibo/tris3d-canvas",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/tris3d-canvas",
   "description": "is a placeholder to play tic tac toe in 3d",
   "fork": false,

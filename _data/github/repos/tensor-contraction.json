@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk0MjI5NTExNg==",
   "name": "tensor-contraction",
   "full_name": "fibo/tensor-contraction",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/tensor-contraction",
   "description": "implements tensor contraction on a single mixed tensor",
   "fork": false,

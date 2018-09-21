@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkxMTQwOTkyNTA=",
   "name": "markdown2code",
   "full_name": "fibo/markdown2code",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/markdown2code",
   "description": "extracts code blocks (surrounded by triple backticks) from markdown",
   "fork": false,

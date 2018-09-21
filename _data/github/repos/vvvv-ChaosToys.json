@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk4MTc3NjI4",
   "name": "vvvv-ChaosToys",
   "full_name": "fibo/vvvv-ChaosToys",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/vvvv-ChaosToys",
   "description": "Chaos Theory nodes",
   "fork": false,

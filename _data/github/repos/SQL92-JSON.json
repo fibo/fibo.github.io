@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk4MTI2NDMwNQ==",
   "name": "SQL92-JSON",
   "full_name": "fibo/SQL92-JSON",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/SQL92-JSON",
   "description": "can stringify a JSON into an SQL and viceversa parse an SQL and serialize it into a JSON",
   "fork": false,

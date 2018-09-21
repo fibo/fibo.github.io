@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnkzMDIzNjMwMg==",
   "name": "Perl-Box-pm",
   "full_name": "fibo/Perl-Box-pm",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/Perl-Box-pm",
   "description": "Get a ready to use Perl Codio box and start coding now!",
   "fork": false,

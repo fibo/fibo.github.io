@@ -3,6 +3,7 @@
   "node_id": "MDEwOlJlcG9zaXRvcnk1MTU3NTg2NA==",
   "name": "geohash-neighbours",
   "full_name": "fibo/geohash-neighbours",
+  "private": false,
   "owner": {
     "login": "fibo",
     "id": 176730,
@@ -23,7 +24,6 @@
     "type": "User",
     "site_admin": false
   },
-  "private": false,
   "html_url": "https://github.com/fibo/geohash-neighbours",
   "description": "finds the cells near a given geohash",
   "fork": false,
