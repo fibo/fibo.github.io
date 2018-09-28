@@ -87,8 +87,8 @@
   "open_issues_count": 0,
   "license": {
     "key": "other",
-    "name": "Other",
-    "spdx_id": null,
+    "name": "NOASSERTION",
+    "spdx_id": "NOASSERTION",
     "url": null,
     "node_id": "MDc6TGljZW5zZTA="
   },
