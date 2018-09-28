@@ -1,10 +1,9 @@
 main {
   max-width: 1007px;
   margin: auto;
-  margin-top: 3em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  margin-top: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* Keep top the same as nav height, so when menu is open the main tag do
@@ -12,5 +11,5 @@ main {
  * clicks on the hamburger icon.
  */
 main.shifted {
-  margin-top: 3em;
+  margin-top: $nav-height;
 }
