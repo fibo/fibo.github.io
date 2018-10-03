@@ -58,6 +58,9 @@ description: >
 [CSScomb](http://csscomb.com/)
 : Makes your code beautiful
 
+[30 Seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
+: A curated collection of useful CSS snippets you can understand in 30 seconds or less.
+
 ## Tools
 
 ### Frameworks
