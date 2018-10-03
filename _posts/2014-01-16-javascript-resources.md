@@ -34,6 +34,9 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [jsPerf](https://jsperf.com)
 : jsPerf aims to provide an easy way to create and share test cases, comparing the performance of different JavaScript snippets by running benchmarks.
 
+[30 seconds of code](https://30secondsofcode.org/)
+: Curated collection of useful JavaScript snippets that you can understand in 30 seconds or less.
+
 ### Blogs
 
 [②ality][2ality.com]
