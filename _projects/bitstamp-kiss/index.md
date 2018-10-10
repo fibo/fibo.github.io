@@ -43,6 +43,8 @@ See [Bitstamp API](https://www.bitstamp.net/api/) as a reference.
 
 ### Dependencies
 
+Required dependencies are all core paackages.
+
 ```javascript
 const crypto = require('crypto')
 const https = require('https')
@@ -50,6 +52,9 @@ const querystring = require('querystring')
 ```
 
 ### Environment
+
+Customer id is your Bitstamp username. You can get API key and secret going to
+[Account > Settings > API Access](https://www.bitstamp.net/account/security/api/).
 
 ```javascript
 const BITSTAMP_APIKEY = process.env.BITSTAMP_APIKEY
