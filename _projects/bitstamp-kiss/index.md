@@ -32,6 +32,8 @@ The following methods are implemented:
   - [sellLimitOrder](#selllimitorder)
   - [sellMarketOrder](#sellmarketorder)
   - [userTransactions](#usertransactions)
+* [Helpers](#helpers)
+  - [computeFee](#computeFee)
 
 ## Annotated source
 
@@ -615,7 +617,7 @@ exports.sellMarketOrder = sellMarketOrder
 
 For example, to get latest 100 BTC/USD market trade transactions
 
-```
+```js
 bitstamp.userTransactions('btcusd', 0, 100, 'desc', (err, transactions) => {
   if (err) throw err
 
@@ -638,6 +640,7 @@ bitstamp.userTransactions('btcusd', 0, 100, 'desc', (err, transactions) => {
  * @returns {Array} transactions
  *
  * Every transaction has the following properties:
+ *
  * @prop {String} datetime
  * @prop {Number} id
  * @prop {String} type 0 - deposit; 1 - withdrawal; 2 - market trade; 14 - sub account transfer
@@ -680,6 +683,25 @@ function userTransactions (currencyPair, offset, limit, sort, next) {
 }
 
 exports.userTransactions = userTransactions
+```
+
+### Helpers
+
+#### computeFee
+
+```javascript
+/**
+ * @param {Number} value
+ *
+ * @returns {Number} fee
+ */
+function computeFee (value) {
+  const fee = value * 0.25 / 100 // 0.25%
+
+  return Math.round(fee * 100) / 100 // rounded to two decimals
+}
+
+exports.computeFee = computeFee
 ```
 
 ## License
