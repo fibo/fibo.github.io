@@ -41,7 +41,7 @@ It is up to you to choose to gitignore or version and modify further your
 
 If you don't have npm you can just copy and paste the following source.
 
-```editorconfig
+```sh
 # EditorConfig is awesome: http://EditorConfig.org
 
 # This file was created via command line
@@ -61,7 +61,7 @@ indent_size = 2
 [*{.conf,.pl,.pm,.py}]
 indent_size = 4
 
-[*{.glsl,.go,.sh,.sql,rc}]
+[*{.glsl,.go,.sh,.sql}]
 indent_style = tab
 
 [Makefile]
