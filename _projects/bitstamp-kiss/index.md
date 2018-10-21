@@ -33,7 +33,7 @@ The following methods are implemented:
   - [sellMarketOrder](#sellmarketorder)
   - [userTransactions](#usertransactions)
 * [Helpers](#helpers)
-  - [computeFee](#computeFee)
+  - [computeFee](#computefee)
 
 ## Annotated source
 
