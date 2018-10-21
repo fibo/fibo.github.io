@@ -174,6 +174,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Super Tiny Social Icons](https://github.com/edent/SuperTinyIcons)
 : Under 1KB each! Super Tiny Icons are miniscule SVG versions of your favourite website and app logos
 
+[svgicons.sparkk.fr](http://svgicons.sparkk.fr/)
+: Ready to use SVG icons for the web.
+
 ## Favicons
 
 [Favicon & App Icon Generator](http://www.favicon-generator.org/)
