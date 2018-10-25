@@ -260,6 +260,8 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [The Complete Guide to Lazy Loading Images](https://css-tricks.com/the-complete-guide-to-lazy-loading-images/)
 
+[The Essential Meta Tags for Social Media](https://css-tricks.com/essential-meta-tags-social-media/)
+
 ### Server side
 
 [The CK10 problem](http://www.kegel.com/c10k.html)

@@ -72,7 +72,7 @@
   "clone_url": "https://github.com/fibo/trunx.git",
   "svn_url": "https://github.com/fibo/trunx",
   "homepage": "http://g14n.info/trunx",
-  "size": 2309,
+  "size": 2315,
   "stargazers_count": 5,
   "watchers_count": 5,
   "language": "JavaScript",
@@ -81,7 +81,7 @@
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": true,
-  "forks_count": 1,
+  "forks_count": 2,
   "mirror_url": null,
   "archived": false,
   "open_issues_count": 7,
@@ -92,7 +92,7 @@
     "url": "https://api.github.com/licenses/mit",
     "node_id": "MDc6TGljZW5zZTEz"
   },
-  "forks": 1,
+  "forks": 2,
   "open_issues": 7,
   "watchers": 5,
   "default_branch": "master",
@@ -104,6 +104,6 @@
   "allow_squash_merge": true,
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
-  "network_count": 1,
+  "network_count": 2,
   "subscribers_count": 4
 }
