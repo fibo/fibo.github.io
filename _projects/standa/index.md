@@ -35,6 +35,16 @@ For example you can declare globals in *package.json*, adding something like
 
 Note that the attribute name is **standa** instead of *standard*.
 
+The same applies if you want to ignore files, for example
+
+```json
+  "standa": {
+    "ignore": [
+      "dist/"
+    ]
+  }
+```
+
 Another use case, if you want to lint code with flow annotations, follow
 [instructions from official StandardJS documentation](https://standardjs.com/#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
 then in your *package.json*
