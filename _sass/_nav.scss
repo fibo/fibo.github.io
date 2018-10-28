@@ -7,7 +7,7 @@ nav {
   a:focus,
   a:hover {
     background-color: $transparent-black;
-    color: $white;
+    color: $light-gray;
     text-decoration: none;
   }
 }
@@ -42,7 +42,7 @@ nav ul li {
 
 nav ul li a {
   display: inline-block;
-  color: $white;
+  color: $light-gray;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
