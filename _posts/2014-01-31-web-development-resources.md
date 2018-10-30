@@ -262,6 +262,8 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [The Essential Meta Tags for Social Media](https://css-tricks.com/essential-meta-tags-social-media/)
 
+[Web Performance 101](https://3perf.com/talks/web-perf-101/)
+
 ### Server side
 
 [The CK10 problem](http://www.kegel.com/c10k.html)
