@@ -629,6 +629,8 @@ bitstamp.userTransactions('btcusd', 0, 100, 'desc', (err, transactions) => {
 })
 ```
 
+The *currencyPair* parameter can be also `all` to get transactions for all currency pairs.
+
 ```javascript
 /**
  * @param {currencyPair}
@@ -659,23 +661,36 @@ bitstamp.userTransactions('btcusd', 0, 100, 'desc', (err, transactions) => {
 function userTransactions (currencyPair, offset, limit, sort, next) {
   const params = { offset, limit, sort }
 
-  privateRequest(`v2/user_transactions/${currencyPair}/`, params, (err, data) => {
+  const path = currencyPair === 'all' ? 'v2/user_transactions/' : `v2/user_transactions/${currencyPair}/`
+
+  privateRequest(path, params, (err, data) => {
     if (err) return next(err)
 
     next(null, data.map(data => {
       const { datetime, id, type } = data
-      let transaction = { datetime, id, type }
 
-      const currency1 = currencyPair.substring(0, 3)
-      const currency2 = currencyPair.substring(3)
-      const exchangeRateLabel = `${currency1}_${currency2}`
+      const transaction = { datetime, id, type }
 
       if (data.fee) transaction.fee = parseFloat(data.fee)
       if (data.order_id) transaction.order_id = data.order_id
 
+      const currencies = ['btc', 'eur', 'xrp', 'usd']
+
+      currencies.forEach(currency => {
+        if (data[currency]) transaction[currency] = parseFloat(data[currency])
+      })
+
+      const exchangeRateLabel = Object.keys(data).find(key => (
+        key.length === 7 && key.charAt(3) === '_'
+      ))
+
+      transaction[exchangeRateLabel] = parseFloat(data[exchangeRateLabel])
+
+      const currency1 = exchangeRateLabel.substring(0, 3)
+      const currency2 = exchangeRateLabel.substring(4)
+
       transaction[currency1] = parseFloat(data[currency1])
       transaction[currency2] = parseFloat(data[currency2])
-      transaction[exchangeRateLabel] = parseFloat(data[exchangeRateLabel])
 
       return transaction
     }))
