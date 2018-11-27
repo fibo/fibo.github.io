@@ -80,6 +80,8 @@ description: >
 
 [How I write Go HTTP services after seven years](https://medium.com/@matryer/how-i-write-go-http-services-after-seven-years-37c208122831)
 
+[Errors in Go: From denial to acceptance](https://evilmartians.com/chronicles/errors-in-go-from-denial-to-acceptance)
+
 ## Free books online
 
 See my [book collection]({% post_url 2014-01-02-free-books-online %}#go)
