@@ -107,6 +107,9 @@ description: >
 [Picnic](https://picnicss.com/)
 : A beautiful CSS library to kickstart your projects.
 
+[NES.css](https://bcrikko.github.io/NES.css/)
+: NES-style CSS Framework
+
 ### Modules
 
 [Normalize.css](https://necolas.github.io/normalize.css/)
