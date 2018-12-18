@@ -66,7 +66,7 @@
   "deployments_url": "https://api.github.com/repos/fibo/three-orbitcontrols/deployments",
   "created_at": "2016-07-14T13:26:30Z",
   "updated_at": "2018-12-11T00:50:32Z",
-  "pushed_at": "2018-12-06T21:58:39Z",
+  "pushed_at": "2018-12-17T17:16:25Z",
   "git_url": "git://github.com/fibo/three-orbitcontrols.git",
   "ssh_url": "git@github.com:fibo/three-orbitcontrols.git",
   "clone_url": "https://github.com/fibo/three-orbitcontrols.git",
@@ -81,10 +81,10 @@
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 11,
+  "forks_count": 13,
   "mirror_url": null,
   "archived": false,
-  "open_issues_count": 0,
+  "open_issues_count": 1,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -92,8 +92,8 @@
     "url": "https://api.github.com/licenses/mit",
     "node_id": "MDc6TGljZW5zZTEz"
   },
-  "forks": 11,
-  "open_issues": 0,
+  "forks": 13,
+  "open_issues": 1,
   "watchers": 30,
   "default_branch": "master",
   "permissions": {
@@ -104,6 +104,6 @@
   "allow_squash_merge": true,
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
-  "network_count": 11,
+  "network_count": 13,
   "subscribers_count": 1
 }
