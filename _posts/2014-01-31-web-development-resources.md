@@ -47,6 +47,9 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 [HTTP Status Cats API](https://http.cat/)
 : **Usage**: `https://http.cat/[status_code]`. If you need for some reason to use an image extension, add .jpg to the URL.
 
+[Inclusive Components](https://inclusive-components.design/)
+: A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece.
+
 ### CDN
 
 [JSDLIVER](http://www.jsdelivr.com/)
