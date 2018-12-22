@@ -89,7 +89,7 @@ Enter in some screen session or create a new one, for instance
 screen -x multiWindowSession
 ```
 
-Create a new window with <kbd>CTRL-a c</kbd>. Cycle through windows with <kbd>CTRL-a n</kbd> or even better with <kbd>CTRL-a CTRL-a</kbd> i.e. holding <kbd>CTRL</kdb> and hitting <kbd>a</kbd> twice. Close window with <kbd>CTRL-d</kbd>.
+Create a new window with <kbd>CTRL-a c</kbd>. Cycle through windows with <kbd>CTRL-a n</kbd> or even better with <kbd>CTRL-a CTRL-a</kbd> i.e. holding <kbd>CTRL</kbd> and hitting <kbd>a</kbd> twice. Close window with <kbd>CTRL-d</kbd>.
 
 ### Resize split window
 
