@@ -1,9 +1,14 @@
 ---
-title: include-html
+title: load-html
 npm: true
 ---
-# include-html
-include HTML code inside HTML pages using a custom tag `include-html` to load content dynamically
+# load-html
+
+> include HTML code inside HTML pages using a custom tag `load-html` to load content dynamically
+
+[Usage](#usage) |
+[Annotated source](#annotated-source) |
+[License](#license)
 
 ## Usage
 
@@ -15,24 +20,36 @@ Start with your *index.html*
   <head>
   </head>
   <body>
-    <include-html src="helloWorld.html">Loading...</include-html>
+    <load-html src="helloWorld.html">Loading...</load-html>
   </body>
 </html>
 ```
 
-Content inside `<include-html>` custom HTML tag is optional.
+Content inside `<load-html>` custom HTML tag is optional.
 
-Create an *helloWorld.html* file in the same folder
+Create files *helloWorld.html* and *linkToHomepage.html* in the same folder.
 
 ```html
+<!-- helloWorld.html -->
+
 <h1>Hello World</h1>
+
+<load-html src="linkToHomepage.html"></load-html>
 ```
 
-Import `includeHtml` function some how, for example, add the following tag
+```html
+<!-- linkToHomepage.html -->
+
+<p>
+  This content was loaded by <a href="https://g14n.info/load-html">load-html</a>.
+</p>
+```
+
+Import `loadHtml` function some how, for example, add the following tag
 to your *index.html*:
 
 ```html
-<script src="https://unpkg.com/include-html"></script>
+<script src="https://unpkg.com/load-html"></script>
 ```
 
 Then invoke it on window load, for instance add the following snippet to your *index.html*:
@@ -50,20 +67,20 @@ window.addEventListener('load', function () {
 Start with attribution comment: web site and license.
 
 ```javascript
-// https://g14n.info/include-html License: MIT
+// https://g14n.info/load-html License: MIT
 ```
 
-Just define a global *includeHtml* function.
+Just define a global *loadHtml* function.
 
 ```javascript
-function includeHtml () {
+function loadHtml () {
 ```
 
-Select all `include-html` tags. Note the **loaded** attribute, used to achieve
+Select all `load-html` tags. Note the **loaded** attribute, used to achieve
 recursive loading.
 
 ```javascript
-  var nodes = document.querySelectorAll('include-html:not([loaded])');
+  var nodes = document.querySelectorAll('load-html:not([loaded])');
   var toBeLoaded = nodes.length;
 ```
 
@@ -76,10 +93,7 @@ Fetch the HTML content for each node.
       loader.addEventListener('load', function loadHtml () {
         if (loader.status == 200) {
           node.innerHTML = loader.responseText;
-        } else {
-          node.setAttribute('status', loader.status);
         }
-
         node.setAttribute('loaded', true);
 ```
 
@@ -88,7 +102,7 @@ Keep track of number of DOM nodes loaded, then try to repeat recursively.
 ```javascript
         toBeLoaded--;
         if (toBeLoaded == 0) {
-          includeHtml();
+          loadHtml();
         }
       });
 ```
@@ -109,10 +123,9 @@ Store error, mark include as loaded.
       node.setAttribute('loaded', true);
     }
   })
-```
-
-End of function, code is not exported nor minified.
-
-```javascript
 }
 ```
+
+## License
+
+[MIT](http://g14n.info/mit-license)
