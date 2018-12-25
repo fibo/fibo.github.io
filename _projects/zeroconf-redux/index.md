@@ -14,11 +14,6 @@ npm: true
 [Customization](#customization) |
 [License](#license)
 
-**UPDATES**:
-  - v4 adds [browserslist] support and switch to babel v7 namespaced packages
-  - v3 brings super exciting [@babel/preset-env] and [Redux] v4
-  - v2 contains brand new [React] v16
-
 ## Quick start
 
 Just run
