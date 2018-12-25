@@ -21,7 +21,7 @@ exclude:
 include:
   - _data/repos/.software.json
 
-gems:
+plugins:
   - jekyll-sitemap
 
 markdown: kramdown
