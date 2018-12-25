@@ -69,14 +69,6 @@ defaults:
 
 # Custom vars
 
-bootstrap:
-  basepath: https://maxcdn.bootstrapcdn.com/bootstrap
-  version: 3.3.6
-
-jquery:
-  basepath: https://ajax.googleapis.com/ajax/libs/jquery
-  version: 2.1.4
-
 katex:
   basepath: https://cdnjs.cloudflare.com/ajax/libs/KaTeX
   version: 0.5.1

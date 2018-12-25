@@ -69,6 +69,15 @@ To show it as a link in tag badges, edit `_data/pagetag.yml`; for example
 if there is only one post tagged with that keywork it does not make sense to list all of its related posts in a page.
 Furthermore, tag could by a typo or tag folder could not exist yet.
 
+### Components
+
+HTML loadable components are defined in common/ folder and can be loaded using [load-html](https://g14n.info/load-html),
+for example in any *g14n.info* HTML page you can load footer with the fillowing snippet.
+
+```html
+<load-html src="//common/footer.html"></load-html>
+```
+
 ### Tricks
 
 To escape Liquid tags, use `{{ "{% this " }}%}`. To escape `{{ this }}`, use `{{ "{{ this " }}}}`.

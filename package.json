@@ -32,10 +32,11 @@
     "url": "https://github.com/fibo/fibo.github.io/issues"
   },
   "dependencies": {
-    "uglify-js": "^3.1.5"
+    "load-html": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^14.3.0",
-    "dot-editorconfig": "^1.0.1"
+    "dot-editorconfig": "^1.0.1",
+    "uglify-js": "^3.1.5"
   }
 }
