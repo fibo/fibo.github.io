@@ -1,6 +1,5 @@
 a {
-  color: $black;
-  color: $info-color;
+  color: #64b136;
   cursor: pointer;
   text-decoration: none;
 }
@@ -9,4 +8,8 @@ a:active,
 a:focus,
 a:hover {
   text-decoration: underline;
+}
+
+a:focus {
+  outline: none;
 }
