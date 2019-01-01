@@ -126,6 +126,12 @@ Store error, mark include as loaded.
 }
 ```
 
+Export it as a global function.
+
+```javascript
+window.loadHtml = loadHtml;
+```
+
 ## License
 
 [MIT](http://g14n.info/mit-license)
