@@ -1,13 +1,13 @@
 a {
-  color: #64b136;
+  color: inherit;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:active,
 a:focus,
 a:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 a:focus {
