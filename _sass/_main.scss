@@ -1,7 +1,7 @@
 main {
   max-width: 1007px;
   margin: auto;
-  margin-top: calc($nav-height + 0.5rem);
+  margin-top: $nav-height;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
