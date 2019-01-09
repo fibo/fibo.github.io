@@ -3,7 +3,7 @@
     <li><a href="/{{ page.title }}" onclick="toggleNav()">{{ page.title }}</a></li>
     <li><a href="https://github.com/fibo/{{ page.title }}">Code</a></li>
     {% if page.npm == true %}
-      <li><a href="https://www.npmjs.com/package/{{ page.title }}">npm</a></li>
+      <li><a href="https://www.npmjs.com/package/{{ page.title | downcase }}">npm</a></li>
     {% endif %}
     <li id="hamburgericon" onclick="toggleNav()">
       <span></span>
