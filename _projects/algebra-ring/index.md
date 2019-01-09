@@ -13,7 +13,6 @@ npm: true
 
 [![NPM version](https://badge.fury.io/js/algebra-ring.svg)](http://badge.fury.io/js/algebra-ring)
 [![Build Status](https://travis-ci.org/fibo/algebra-ring.svg?branch=master)](https://travis-ci.org/fibo/algebra-ring?branch=master)
-[![Dependency Status](https://gemnasium.com/fibo/algebra-ring.svg)](https://gemnasium.com/fibo/algebra-ring)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
@@ -26,7 +25,7 @@ npm install algebra-ring
 
 ## Example
 
-All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/algebra-ring-ring/blob/master/test.js).
+All code in the examples below is intended to be contained into a [single file](https://github.com/fibo/algebra-ring/blob/master/test.js).
 
 ### Real
 
@@ -62,8 +61,8 @@ const R = ring([0, 1], {
 })
 ```
 
-You get an [algebra-ring ring][1] that is an [algebra-ring group][2] with *multiplication*.
-Its inverse operator is *division*.
+You get a [Ring][1] that is a [Group][2] with *multiplication* operator.
+The *multiplication* operator must be **closed** respect the underlying set; its inverse operator is *division*.
 
 This is the list of ring operators:
 
@@ -78,8 +77,7 @@ This is the list of ring operators:
 * division
 * inversion
 
-The neutral element for addition and multiplication are, as usual, called
-*zero* and *one* respectively.
+The neutral element for addition and multiplication are, as usual, called *zero* and *one* respectively.
 
 ```javascript
 R.contains(10) // true
@@ -148,11 +146,11 @@ Boole.inversion(Bool.zero)
 
 ## API
 
-### `ring(identity, operator)`
+### `ring(identities, operator)`
 
-* **@param** `{Array}` **identity**
-* **@param** `{*}`     **identity[0]** a.k.a zero
-* **@param** `{*}`     **identity[1]** a.k.a one
+* **@param** `{Array}` **identities**
+* **@param** `{*}`     **identities[0]** a.k.a zero
+* **@param** `{*}`     **identities[1]** a.k.a one
 * **@param** `{Object}`   **operator**
 * **@param** `{Function}` **operator.contains**
 * **@param** `{Function}` **operator.equality**
