@@ -4,12 +4,6 @@ a {
   text-decoration: underline;
 }
 
-a:active,
-a:focus,
-a:hover {
-  font-weight: bold;
-}
-
 a:focus {
   outline: none;
 }
