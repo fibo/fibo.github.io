@@ -1,9 +1,13 @@
 a {
   color: inherit;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:focus {
   outline: none;
+}
+
+p a {
+  text-decoration: underline;
 }
