@@ -166,8 +166,9 @@ docs/
 
 ## See also
 
-* [npm-developers][https://docs.npmjs.com/misc/developers]
+* [npm-developers]
 
 
 [npm]: https://npmjs.org/
+[npm-developers]: https://docs.npmjs.com/misc/developers
 [GitHub]: https://github.com/

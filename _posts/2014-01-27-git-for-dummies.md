@@ -10,7 +10,7 @@ description: >
 
 <div class="well">You are entering in the Git world.</div>
 
-![Choose your pill][1]{:.responsive}
+![Choose your pill](/images{{ page.id }}/redblue_pill.jpg){:.responsive}
 
 ### Blue pill
 
@@ -30,6 +30,3 @@ Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/g
 * [Git extras on Windows]({% post_url 2014-02-13-git-extras-on-windows %})
 * [Working with git branches]({% post_url 2013-11-07-working-with-git-branches %})
 * [Git resources]({% post_url 2014-03-16-git-resources %})
-
-  [1]: https://lh6.googleusercontent.com/uRJgqB77ubdAcaZ3ZwodHboPLu4FWjz-1AKgS2i45E8=s0 "Choose your pill"
-
