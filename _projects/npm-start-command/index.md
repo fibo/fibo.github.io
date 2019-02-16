@@ -9,7 +9,8 @@ npm: true
 [Usage](#usage) |
 [License](#license)
 
-<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" />
+<img src="https://g14n.info/os-icons8/Apple-50.png" width="50" height="50" />
+<img src="https://g14n.info/os-icons8/Windows8-50.png" width="50" height="50" />
 
 ## Usage
 
@@ -27,25 +28,21 @@ Install command with
 npm install npm-start-command --save-dev
 ```
 
-Optionally, make git ignore *npm-start-command* file.
+This will create two files:
 
-```bash
-echo "npm-start-command" >> .gitignore
-```
+- *_MacOS.npm-start.command*
+- *_Windows.npm-start.bat*
 
-An *npm-start.command* file will be created: if you click it, your
-development server will be launched.
+### MacOS
 
-**TODO**:
+Click on file *_MacOS.npm-start.command* , your development server will be launched.
 
-* support Linux and Windows too.
-* link to [zeroconf-redux] and [x3dom-livereload].
+### Windows
+
+Click on file *_Windows.npm-start.bat* , your development server will be launched.
 
 ## License
 
 [MIT](http://g14n.info/mit-license/)
 
 <sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
-
-[zeroconf-redux]: http://g14n.info/zeroconf-redux
-[x3dom-livereload]: http://g14n.info/x3dom-livereload
