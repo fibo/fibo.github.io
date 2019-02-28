@@ -8,7 +8,13 @@ description: >
     You don't need moment.js! Just use few snippets of native JavaScript code to parse and manipulate dates.
 ---
 
-I as at [DEVit conf](https://devitconf.org/) in 2017 and I had the pleasure to meet [substack](https://github.com/substack) a very kind person and, in my opinion, one of the most brilliant developer around and main evangelist of the holy Unix phylosophy.
+<div class="paper warning">
+[Moment.js](https://momentjs.com/) is used in many projects to <em>parse, validate, manipulate, and display dates and times in JavaScript</em>.
+There are few alternative libraries which offer similar features but with a lighter weight, for example [dayjs](https://github.com/iamkun/dayjs).
+If you need [Internationalization and localization](https://en.wikipedia.org/wiki/Internationalization_and_localization) probably <em>Moment.js</em> is a good choice.
+</div>
+
+I attended at [DEVit conf](https://devitconf.org/) in 2017 and had the pleasure to meet [substack](https://github.com/substack): he is a very kind person and, in my opinion, one of the most brilliant developer around and main evangelist of the holy Unix phylosophy.
 Talking about minimalism, vanilla code, etc. he said to me
 
 > ... also moment.js it is unnecessary, you can achieve the features you need with few lines of code, instead of importing it in your build
@@ -63,10 +69,10 @@ now.toISOString().slice(0, 10)
 Given a *day* in *YYYY-MM-DD* check if it is valid.
 
 ```javascript
-function isValid (yyyymmdd) {
+function isValid (day) {
   try {
-    var t = new Date(yyyymmdd)
-    return t.toISOString().slice(0, 10) === yyyymmdd
+    var t = new Date(day)
+    return t.toISOString().slice(0, 10) === day
   } catch (err) {
     return false
   }
