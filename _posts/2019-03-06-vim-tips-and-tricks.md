@@ -25,3 +25,8 @@ Split window and open current directory: `:split .`
 
 Split window to a file relative to current open file. This will expand to current file: `:split %` <kbd>tab</kbd>.
 
+## Tabs
+
+To open a new tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
+
+Go to next tab: `gt`.
