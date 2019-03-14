@@ -6,11 +6,11 @@ description: >
     Learn Git, reading this collection of pragmatic articles.
 ---
 
-## Choose your pill
+> You are entering in the Git world.
 
-<div class="well">You are entering in the Git world.</div>
-
+<center>
 ![Choose your pill](/images{{ page.id }}/redblue_pill.jpg){:.responsive}
+</center>
 
 ### Blue pill
 
