@@ -1,8 +1,7 @@
 ---
-title: Git shell Windows tips
+title: Vim tips & tricks
 tags:
-  - Git
-  - Windows
+  - Vim
 description: >
      Vim is awesome and can speed up your productivity, however it is hard to learn. I will write here things it is worth to remember.
 ---
