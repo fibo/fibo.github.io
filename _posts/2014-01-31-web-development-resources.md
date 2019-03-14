@@ -50,6 +50,9 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 [Inclusive Components](https://inclusive-components.design/)
 : A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece.
 
+[Web Accessibility Guide](https://webaccessibility.guide/)
+: A curated collection of web accessibility tips, tricks, and best practices. Let's make the web a better place for everyone.
+
 ### CDN
 
 [JSDLIVER](http://www.jsdelivr.com/)

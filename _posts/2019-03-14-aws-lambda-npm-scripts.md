@@ -33,17 +33,18 @@ The npm scripts below assume, just to simplify, that:
 
 ## `package.json`
 
-Every Lambda needs its folder and a *package.json*.
+Every Lambda needs its own folder containing a *package.json*.
 The package name will be used as the function name, usually I prefix it with current project name. Package name should be lowercase, you know.
 Also the *description* will appear on your AWS Console.
 Probably you want to make it private.
+Something like the following
 
 ```json
 {
   "name": "myproject-foo",
   "description": "myproject foo bla bla",
-  "main": "src/index.js",
   "private": true,
+  "main": "src/index.js",
   "scripts": {
 
   }
@@ -53,6 +54,10 @@ Probably you want to make it private.
 ## Permissions
 
 Create a IAM role, for instance *lambda_dynamo_myproject*, that has permissions on all table prefixed by *MyProject* and can write logs.
+
+I created a *iam/* folder with the following files
+
+> lambda-role.json
 
 ```json
 {
@@ -83,7 +88,56 @@ Create a IAM role, for instance *lambda_dynamo_myproject*, that has permissions 
 }
 ```
 
+> lambda-role.json
 
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "lambda.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+Create role:
+
+```bash
+aws iam create-role --role-name MyProject --assume-role-policy-document file://iam/lambda-role.json --profile myproject,
+```
+
+Create policy:
+
+```bash
+aws iam create-policy --policy-name lambda_dynamo_myproject --policy-document file://iam/lambda-policy.json --profile myproject,
+```
+
+Attach policy:
+
+```bash
+aws iam attach-role-policy --policy-arn arn:aws:iam::1234567890:policy/lambda_dynamo_myproject --role-name MyProject --profile myproject,
+```
+
+## Config
+
+I usually create a *config* attribute like this
+
+```json
+"config": {
+  "log_retention": 7,
+  "profile": "myproject",
+  "region": "us-east-1",
+  "role": "lambda_dynamo_myproject",
+  "timeout": 10
+}
+```
 ## Environment
 
 This was a tricky one. The correct syntax was not documented. Luckily I could find a [solution askying on GitHub](https://github.com/aws/aws-cli/issues/2638#issuecomment-352901978).
@@ -97,24 +151,7 @@ In my case I was writing a trading bot using [BitStamp exchange](https://www.bit
 Add the following npm script
 
 ```bash
-"set_environment": "aws lambda update-function-configuration --region us-east-1 --profile bitstamp --function-name ${npm_package_name} --environment \"Variables={BITSTAMP_CUSTOMERID=$BITSTAMP_CUSTOMERID,BITSTAMP_APISECRET=$BITSTAMP_APISECRET,BITSTAMP_APIKEY=$BITSTAMP_APIKEY}\"",
-```
-## Config
-
-I usually create a *config* attribute like this
-
-```json
-"config": {
-  "log_retention": 7,
-  "timeout": 10
-}
-```
-
-And add the following npm scripts to set them
-
-```json
-"set_log_retention": "aws logs put-retention-policy --region us-east-1 --profile myproject --log-group-name /aws/lambda/$npm_package_name --retention-in-days $npm_package_config_log_retention",
-"set_timeout": "aws lambda update-function-configuration --region us-east-1 --profile myproject --function-name ${npm_package_name} --timeout ${npm_package_config_timeout}",
+"set_environment": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --environment \"Variables={BITSTAMP_CUSTOMERID=$BITSTAMP_CUSTOMERID,BITSTAMP_APISECRET=$BITSTAMP_APISECRET,BITSTAMP_APIKEY=$BITSTAMP_APIKEY}\"",
 ```
 
 ## Create and deploy
@@ -123,12 +160,17 @@ Add the following scripts to your *package.json*
 
 ```json
 "copy": "cp -r src/* build/; cp -r node_modules/ build/node_modules",
-"create": "aws lambda create-function --region us-east-1 --profile myproject --function-name ${npm_package_name} --description \"${npm_package_description}\" --runtime nodejs8.10 --handler index.handler --role arn:aws:iam::1234567890:role/lambda_dynamo_myproject --zip-file fileb://build.zip",
-"deploy": "aws lambda update-function-code --region us-east-1 --profile myproject --function-name ${npm_package_name} --zip-file fileb://build.zip",
+"create": "aws lambda create-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --description \"$npm_package_description\" --runtime nodejs8.10 --handler index.handler --role arn:aws:iam::1234567890:role/$npm_package_config_role --zip-file fileb://build.zip",
+
+"create_log_group": "aws logs create-log-group --log-group-name /aws/lambda/$npm_package_name",
+"deploy": "aws lambda update-function-code --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --zip-file fileb://build.zip",
+"postcreate_log_group": "npm run set_log_retention",
 "precopy": "rm -rf node_modules/; npm install --production; rm -rf build; mkdir build",
 "predeploy": "npm run zip",
 "precreate": "npm run zip",
 "prezip": "rm -rf build.zip; npm run copy",
+"set_log_retention": "aws logs put-retention-policy --region $npm_package_config_region --profile $npm_package_config_profile --log-group-name /aws/lambda/$npm_package_name --retention-in-days $npm_package_config_log_retention",
+"set_timeout": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --timeout $npm_package_config_timeout",
 "zip": "cd build; zip -X -r ../build.zip * > /dev/null; cd ..",
 ```
 
@@ -136,8 +178,6 @@ Only once, create the lambda with
 
 ```bash
 npm run create
-npm run set_timeout
-npm run set_log_retention
 ```
 
 In my case I also need to set [Environment variables](#environment) and then launch
@@ -152,7 +192,31 @@ After that, you can deploy later updates launching just
 npm run deploy
 ```
 
+You can update timeout and log retention by editing *config* content in your *package.json* and run
+
+```bash
+npm run set_timeout
+npm run set_log_retention
+```
+
 ## Dependencies
 
 Add your dependencies using npm as usual. However you do not need to install *aws-sdk* package since it is already provided on cloud instances.
 Consider there is a size limit on the zip file uploaded.
+
+## Delete
+
+Complete your script with the possibility to delete the lambda, add the following
+
+```json
+"delete": "aws lambda delete-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name",
+"delete_log_group": "aws logs delete-log-group --log-group-name /aws/lambda/$npm_package_name",
+"postdelete": "npm run delete_log_group",
+```
+
+So you can delete your function launching
+
+```bash
+npm run delete
+```
+
