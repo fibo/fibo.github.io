@@ -8,9 +8,7 @@ description: >
 
 > You are entering in the Git world.
 
-<center>
-![Choose your pill](/images{{ page.id }}/redblue_pill.jpg){:.responsive}
-</center>
+<center><img src="/images{{ page.id }}/redblue_pill.jpg" alt="Choose your pill" class="responsive"></center>
 
 ### Blue pill
 
