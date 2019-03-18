@@ -10,6 +10,20 @@ description: >
 
 Just hit `ZZ`.
 
+## Moving faster
+
+Move to start of previous paragraph or code block: `{`.
+
+Move to end of next paragraph or code block: `}`.
+
+Move forward one screenful: <kbd>CTRL F</kbd>.
+
+Move backward one screenful: <kbd>CTRL B</kbd>.
+
+Jump back to the previous (older) location: <kbd>CTRL O</kbd>
+
+Jump forward to the next (newer) location: <kdb>CTRL I</kbd> or also <kbd>TAB</kbd>.
+
 ## Marks
 
 Create a mark labeled as **a**: `ma`.
@@ -22,7 +36,7 @@ Split window and open another file: `:split path/to/file`.
 
 Split window and open current directory: `:split .`
 
-Split window to a file relative to current open file. This will expand to current file: `:split %` <kbd>tab</kbd>.
+Split window to a file relative to current open file. This will expand to current file: `:split %` <kbd>TAB</kbd>.
 
 ## Tabs
 
