@@ -22,7 +22,7 @@ Move backward one screenful: <kbd>CTRL B</kbd>.
 
 Jump back to the previous (older) location: <kbd>CTRL O</kbd>
 
-Jump forward to the next (newer) location: <kdb>CTRL I</kbd> or also <kbd>TAB</kbd>.
+Jump forward to the next (newer) location: <kbd>CTRL I</kbd> or also <kbd>TAB</kbd>.
 
 ## Marks
 
