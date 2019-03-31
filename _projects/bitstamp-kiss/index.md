@@ -711,9 +711,11 @@ exports.userTransactions = userTransactions
  * @returns {Number} fee
  */
 function computeFee (value) {
-  const fee = value * 0.25 / 100 // 0.25%
+  const percentage = 0.25
 
-  return Math.round(fee * 100) / 100 // rounded to two decimals
+  const fee = value * percentage / 100 // 0.25%
+
+  return Math.ceil(fee * 100) / 100 // rounded to two decimals
 }
 
 exports.computeFee = computeFee
