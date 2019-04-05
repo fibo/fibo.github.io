@@ -84,6 +84,7 @@
   "forks_count": 1,
   "mirror_url": null,
   "archived": false,
+  "disabled": false,
   "open_issues_count": 0,
   "license": {
     "key": "gpl-2.0",
