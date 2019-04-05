@@ -30,6 +30,20 @@ Create a mark labeled as **a**: `ma`.
 
 Go to mark **a**: `'a`.
 
+Usually I create a mark labeled as **m**: typing `mm` and then `'m` is faster.
+
+## Macros
+
+1. Start recording a macro labeled as **a**: `qa`.
+2. Execute a sequence of commands you want to repeat.
+3. Stop recording macro: `q`.
+
+Invoke your macro labeled as **a**: `@a`.
+
+Usually I create a macro labeled as **q**, so I just type `qq` to start recording, `q` to stop recording and `@q` to invoke it.
+
+Note also that you can launch macro *n* times, for example to execute my macro ten times, I do `10@q`.
+
 ## Split window
 
 Split window and open another file: `:split path/to/file`.
