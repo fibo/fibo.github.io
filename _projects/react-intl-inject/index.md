@@ -44,6 +44,8 @@ class MyComponent extends Component {
 }
 ```
 
+See also [this Stack Overflow question](https://stackoverflow.com/questions/35186297/how-to-retrieve-a-string-in-reactintl-2-0-without-using-formattedmessage).
+
 ## License
 
 [MIT](http://g14n.info/mit-license)

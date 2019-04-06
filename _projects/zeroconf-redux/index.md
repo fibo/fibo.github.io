@@ -58,6 +58,7 @@ npm install zeroconf-redux --save-dev
 The following dependencies will be installed:
 
 * [@babel/core]
+* [@babel/plugin-proposal-class-properties]
 * [@babel/preset-env]
 * [@babel/preset-react]
 * [core-js]
@@ -78,7 +79,8 @@ On `postinstall` the following files are created, if they do not exist:
 * *.babelrc*
 * *.browserslistrc*
 * *.editorconfig*
-* *index.js*
+
+If you run `npx zeroconf-redux` commmand, a file *index.js* is created if it does not exists and development server will start in watch mode, with a default *index.html* (in memory).
 
 Let's assume there is an *index.html* in the same folder as the *package.json* with a content like the following
 
@@ -108,7 +110,7 @@ where:
 
 <sub>See [budo cli docs](https://github.com/mattdesl/budo/blob/master/docs/command-line-usage.md) for more details.</sub>
 
-Your *index.js* looks something like
+Your *index.js* should look something like
 
 ```javascript
 import React from 'react'
@@ -173,6 +175,9 @@ Programming is a creative process, **you know**.
 Default *.babelrc* created on *postinstall* is the following.
 ```json
 {
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ],
   "presets": [
     "@babel/preset-react",
     [
@@ -244,6 +249,7 @@ Now on every commit, you will check the code with [standard] linter. If you like
 [browserslist]: https://github.com/browserslist/browserslist "Browserslist"
 [babelify]: https://github.com/babel/babelify "babelify"
 [@babel/core]: https://www.npmjs.com/package/@babel/core "babel-core"
+[@babel/plugin-proposal-class-properties]: https://babeljs.io/docs/en/babel-plugin-proposal-class-properties "Babel plugin-proposal-class-properties"
 [@babel/preset-env]: http://babeljs.io/env "Babel env preset"
 [@babel/preset-react]: https://babeljs.io/docs/plugins/preset-react/ "Babel React preset"
 [budo]: https://github.com/mattdesl/budo "budo"
