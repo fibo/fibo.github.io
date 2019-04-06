@@ -2,11 +2,12 @@ a {
   color: cadetblue;
   cursor: pointer;
   text-decoration: none;
+  transition: color 1s;
 }
 
+a:hover,
 a:focus {
-  color: darkblue;
-  outline: none;
+  color: cornflowerblue;
 }
 
 p a {
