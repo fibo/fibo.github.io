@@ -32,7 +32,7 @@ could be printed.
 
 Internet is divided among 5 world regions each ruled by a [registry][Regional_Internet_registry].
 
-![Internet world regions](media/Regional_Internet_Registries_world_map.png){:.responsive}
+![Internet world regions](https://raw.githubusercontent.com/fibo/netvision/master/media/Regional_Internet_Registries_world_map.png){:.responsive}
 
 ## Usage
 
