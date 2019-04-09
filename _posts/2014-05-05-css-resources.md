@@ -23,7 +23,7 @@ description: >
 : A quick way to generate an underlying CSS grid for your site.
 
 [WTF, HTML and CSS?](http://wtfhtmlcss.com/)
-: Reasons HTML and CSS might make you say what the fuck. A curated list of commonly frustrating HTML and CSS quandaries, miscues, and dilemmas. (by [@mdo][1])
+: Reasons HTML and CSS might make you say what the fuck. A curated list of commonly frustrating HTML and CSS quandaries, miscues, and dilemmas. (by [@mdo])
 
 [Awesome CSS](https://github.com/sotayamashita/awesome-css)
 : A curated list of CSS lists
@@ -201,6 +201,11 @@ description: >
 
 [CSS Diner - Where we feast on CSS Selectors!](http://flukeout.github.io/)
 
-  [1]: https://twitter.com/mdo
-  [2]: http://960.gs/
+[Hover Effect ideas](https://tympanus.net/Development/HoverEffectIdeas/)
 
+[Kevin Powell's YouTube channel](https://www.youtube.com/user/KepowOb)
+
+[Layout Land YouTube channel](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag)
+
+[@mdo]: https://twitter.com/mdo
+[2]: http://960.gs/
