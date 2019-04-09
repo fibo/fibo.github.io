@@ -118,19 +118,14 @@ lang:
     My first experiment with NodeJS was on August 2012: I wrote a prototype of a multiplayer game with Socket.io and I was amazed by its power and simplicity. Also, npm was a step forward at that time in the world of package management. Nowadays I still appreciate this concept: using one language for backend and frontend. Few years later there was a quantum leap in the JavaScript ecosystem, the language evolved and the transition was handled in the best way (IMO). In general, I consider JavaScript the <em>lingua franca</em> of IT: if I write an algorithm in JavaScript almost any developer can read it and translate it in any other language.
   </p>
 
-  <ul class="tile-list">
+  <dl>
     {% for pkg in page.lang.nodejs.packages_with_social_stats %}
-      <li>
-        <a href="{{ repo[pkg].homepage }}">
-          <h3>{{ pkg }}</h3>
-
-          <blockquote><p>{{ repo[pkg].description }}</p></blockquote>
-        </a>
-
-        {% include repo_social_badges.html repo=pkg %}
-      </li>
+      <dt>
+        <a href="{{ repo[pkg].homepage }}">{{ pkg }}</a>
+      </dt>
+      <dd>{{ repo[pkg].description }}</dd>
     {% endfor %}
-  </ul>
+  </dl>
 </section>
 
 <section id="react" class="paper">
@@ -143,19 +138,14 @@ lang:
     I started using React in early 2016, when I discovered Redux and I thought: this is the right way to do it.
   </p>
 
-  <ul class="tile-list">
+  <dl>
     {% for react_pkg in page.lang.react %}
-      <li>
-        <a href="{{ repo[react_pkg].homepage }}">
-          <h3>{{ react_pkg }}</h3>
-
-          <blockquote><p>{{ repo[react_pkg].description }}</p></blockquote>
-        </a>
-
-        {% include repo_social_badges.html repo=react_pkg %}
-      </li>
+      <dt>
+        <a href="{{ repo[react_pkg].homepage }}">{{ react_pkg }}</a>
+      </dt>
+      <dd>{{ repo[react_pkg].description }}</dd>
     {% endfor %}
-  </ul>
+  </dl>
 </section>
 
 <section class="paper">
@@ -166,6 +156,7 @@ lang:
       src="/svg/logos/npm-2.svg"
     />
   </div>
+
   <p>
     I wrote some NodeJS <strong>micro</strong> packages.
   </p>
