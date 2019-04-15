@@ -1,6 +1,17 @@
 p {
   margin-bottom: $margin-bottom;
   hyphens: auto;
+
+  a:link {
+    text-decoration: underline;
+  }
+
+  a:active,
+  a:hover,
+  a:focus,
+  a:visited {
+    text-decoration: none;
+  }
 }
 
 p.description {

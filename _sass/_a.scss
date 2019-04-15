@@ -1,15 +1,23 @@
 a {
-  color: cadetblue;
   cursor: pointer;
   text-decoration: none;
-  transition: color 1s;
+  transition: color 400ms ease-in, outline-color 400ms ease-in;
 }
 
-a:hover,
-a:focus {
+a:link {
   color: cornflowerblue;
 }
 
-p a {
-  text-decoration: underline;
+a:active,
+a:hover,
+a:focus {
+  color: hotpink;
+  outline-color: hotpink;
+  outline-offset: 1px;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+a:visited {
+  color: cadetblue;
 }
