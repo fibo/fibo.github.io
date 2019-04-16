@@ -1,8 +1,7 @@
 a {
-  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  transition: color 400ms ease-out;
+  transition: color 300ms ease-out;
 }
 
 a:link {
@@ -13,7 +12,7 @@ a:active,
 a:hover,
 a:focus {
   color: $link-highlight-color;
-  outline-color: $link-highlight-color;
+  outline-color: $link-outline-color;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 1px;
