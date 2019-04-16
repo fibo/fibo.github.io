@@ -12,10 +12,12 @@ nav {
     content: ' 🡒';
   }
 
+  a:active,
   a:focus,
   a:hover,
   a:visited {
     background-color: $transparent-black;
+    color: $light-gray;
     outline: 0;
   }
 }

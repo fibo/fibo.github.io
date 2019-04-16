@@ -2,6 +2,14 @@ p {
   margin-bottom: $margin-bottom;
   hyphens: auto;
 
+  a {
+    display: inline-block;
+
+    img {
+      display: block;
+    }
+  }
+
   a:link {
     text-decoration: underline;
   }
