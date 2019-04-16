@@ -23,9 +23,6 @@ description: >
 [HTML5 rocks][html5rocks]
 : A resource for developers looking to put HTML5 to use today, including information on specific features and when to use them in your apps.
 
-[HTML Goodies](http://www.htmlgoodies.com/)
-: The ultimate HTML resource.
-
 [Mr. doob](http://www.mrdoob.com/)
 : HTML5 demos from [Three.js](http://threejs.org/) creator.
 
@@ -69,20 +66,6 @@ description: >
 [GLSL.io](https://glsl.io/)
 : an open collection of GLSL Transitions.
 
-### Web components
-
-[Polymer](http://www.polymer-project.org/)
-: Building blocks for the web
-
-[X-tags](http://www.x-tags.org/)
-: The Custom Elements Polylib
-
-[Bosonic](http://bosonic.github.io/)
-: Bosonic Web Component
-
-[SkateJS](https://skatejs.gitbooks.io/skatejs/content/)
-:  is a web component library designed to give you an augmentation of the web component specs focusing on a functional rendering pipeline, clean property / attribute semantics and a small footprint.
-
 ## Articles and other resources
 
 [HTML5rocks presentation](http://slides.html5rocks.com/)
@@ -99,6 +82,8 @@ description: >
 [Learn HTML](https://blog.udemy.com/learn-html-learn-the-foundations-of-html/)
 : (good starting point for newbies)
 
+[Native image lazy-loading for the web!](https://addyosmani.com/blog/lazy-loading/)
+
 ### Web components
 
 [HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
@@ -112,6 +97,18 @@ description: >
 
 [WebComponents.org](http://webcomponents.org/)
 : a place to discuss and evolve web component best-practices
+
+[Polymer](http://www.polymer-project.org/)
+: Building blocks for the web
+
+[X-tags](http://www.x-tags.org/)
+: The Custom Elements Polylib
+
+[Bosonic](http://bosonic.github.io/)
+: Bosonic Web Component
+
+[SkateJS](https://skatejs.gitbooks.io/skatejs/content/)
+:  is a web component library designed to give you an augmentation of the web component specs focusing on a functional rendering pipeline, clean property / attribute semantics and a small footprint.
 
 ### Canvas
 
