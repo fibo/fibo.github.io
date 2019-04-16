@@ -1,13 +1,22 @@
 nav {
   a {
+    color: $light-gray;
     text-align: center;
   }
 
-  a:active,
+  a::before {
+    content: '  ';
+  }
+
+  a:focus::before {
+    content: ' 🡒';
+  }
+
   a:focus,
-  a:hover {
+  a:hover,
+  a:visited {
     background-color: $transparent-black;
-    color: $light-gray;
+    outline: 0;
   }
 }
 
