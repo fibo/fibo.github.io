@@ -1,23 +1,24 @@
 a {
+  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  transition: color 400ms ease-in, outline-color 400ms ease-in;
+  transition: color 400ms ease-out;
 }
 
 a:link {
-  color: cornflowerblue;
+  color: $link-color;
 }
 
 a:active,
 a:hover,
 a:focus {
-  color: hotpink;
-  outline-color: hotpink;
+  color: $link-highlight-color;
+  outline-color: $link-highlight-color;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 1px;
 }
 
 a:visited {
-  color: cadetblue;
+  color: $link-visited-color;
 }
