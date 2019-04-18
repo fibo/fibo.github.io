@@ -1,21 +1,23 @@
 nav {
   a {
-    color: $light-gray;
     text-align: center;
   }
 
-  a::before {
-    content: '  ';
+  a:link {
+    color: $light-gray;
   }
 
-  a:focus::before {
-    content: ' 🡒';
+  a:focus {
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: $light-gray;
   }
 
   a:active,
   a:focus,
-  a:hover,
-  a:visited {
+  a:hover {
     background-color: $transparent-black;
     color: $light-gray;
     outline: 0;
