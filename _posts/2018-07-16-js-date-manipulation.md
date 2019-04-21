@@ -10,7 +10,7 @@ description: >
 
 <div class="paper warning">
 <a href="https://momentjs.com/">Moment.js</a> is used in many projects to <em>parse, validate, manipulate, and display dates and times in JavaScript</em>.
-There are few alternative libraries which offer similar features but with a lighter weight, for example [dayjs](https://github.com/iamkun/dayjs).
+There are few alternative libraries which offer similar features but with a lighter weight, for example <a href="https://github.com/iamkun/dayjs">dayjs</a>.
 If you need <a href="https://en.wikipedia.org/wiki/Internationalization_and_localization">Internationalization and localization</a> probably <em>Moment.js</em> is a good choice.
 </div>
 
