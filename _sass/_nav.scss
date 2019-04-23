@@ -7,10 +7,6 @@ nav {
     color: $light-gray;
   }
 
-  a:focus {
-    text-decoration: underline;
-  }
-
   a:visited {
     color: $light-gray;
   }
@@ -21,6 +17,7 @@ nav {
     background-color: $transparent-black;
     color: $light-gray;
     outline: 0;
+    text-decoration: underline;
   }
 }
 
@@ -59,10 +56,6 @@ nav ul li a {
   padding: 10px 10px;
   text-decoration: none;
   transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: $gray;
 }
 
 #hamburgericon {

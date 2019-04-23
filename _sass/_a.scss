@@ -8,6 +8,10 @@ a:link {
   color: $link-color;
 }
 
+a:visited {
+  color: $link-visited-color;
+}
+
 a:active,
 a:hover,
 a:focus {
@@ -16,8 +20,4 @@ a:focus {
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 1px;
-}
-
-a:visited {
-  color: $link-visited-color;
 }
