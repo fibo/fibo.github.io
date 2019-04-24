@@ -31,8 +31,8 @@ sass:
 
 nav:
   About me: /about-me
-  Software: /software
   Blog: /blog
+#  Software: /software
 
 collections:
   licenses:
