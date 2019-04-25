@@ -11,4 +11,8 @@
     stroke: $light-gray;
     fill: $shadow;
   }
+
+  circle:hover {
+    fill: $transparent-black;
+  }
 }
