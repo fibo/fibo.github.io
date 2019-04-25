@@ -1,0 +1,13 @@
+.anathema {
+  z-index: -1;
+  position: fixed;
+  top: -1rem;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  circle {
+    stroke: $light-gray;
+    fill: transparent;
+  }
+}
