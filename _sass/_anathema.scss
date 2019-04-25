@@ -1,13 +1,14 @@
 .anathema {
-  z-index: -1;
-  position: fixed;
+  margin: 0;
+  padding: 0;
+  position: absolute;
   top: -1rem;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 600px;
 
   circle {
     stroke: $light-gray;
-    fill: transparent;
+    fill: $shadow;
   }
 }
