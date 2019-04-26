@@ -7,6 +7,11 @@ img.circle {
   border-radius: 50%;
 }
 
+img.responsive {
+  display: block;
+  margin: auto;
+}
+
 @media screen and (max-width: $mobile-break-point) {
   img.responsive {
     width: 100%;

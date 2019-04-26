@@ -37,6 +37,15 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 [30 seconds of code](https://30secondsofcode.org/)
 : Curated collection of useful JavaScript snippets that you can understand in 30 seconds or less.
 
+[Learn JavaScript online](https://learnjavascript.online/)
+: The easiest way to learn & practice modern JavaScript
+
+[Learn Vanilla JS](https://learnvanillajs.com/)
+: A vanilla JS roadmap, along with learning resources and project ideas to help you get started.
+
+[JavaScript Info](https://javascript.info/)
+: The Modern JavaScript Tutorial
+
 ### Blogs
 
 [②ality][2ality.com]
@@ -234,13 +243,6 @@ See my [book collection]({% post_url 2014-01-02-free-books-online %}#javascript)
 ### ECMAScript 7
 
 [ES7 async functions](https://jakearchibald.com/2014/es7-async-functions/)
-
-#### Object.observe
-
-[Why I'm Excited About Object.observe](http://amasad.me/2014/03/16/why-im-excited-about-objectobserve)
-
-[Data-binding Revolutions with Object.observe()](http://www.html5rocks.com/en/tutorials/es7/observe/)
-: [(html5rocks.com)][2]
 
 #### Promises
 

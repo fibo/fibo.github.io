@@ -1,8 +1,7 @@
 ---
-title: Optimize Maxmind database loaded on Redshift using Analytics functions
+title: Optimize Maxmind database loaded on Redshift using Analytical functions
 tags:
   - AWS
-  - Maxmind
   - Redshift
   - SQL
 description: >
