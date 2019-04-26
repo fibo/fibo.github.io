@@ -2,7 +2,6 @@
 title: Play T-Rex Chrome game online
 tags:
   - Web
-  - Chrome
 description: >
     If you also like Chrome, you probably also like to play with the T-Rex game but then suddenly the network arrives and the game is over...
 ---
