@@ -24,6 +24,10 @@ Jump back to the previous (older) location: <kbd>CTRL O</kbd>
 
 Jump forward to the next (newer) location: <kbd>CTRL I</kbd> or also <kbd>TAB</kbd>.
 
+Move to the first line in a file: `gg`.
+
+Move to the last line in a file: `G`.
+
 ## Marks
 
 Create a mark labeled as **a**: `ma`.
