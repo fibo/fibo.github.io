@@ -52,3 +52,26 @@ Now quit Terminal and re-open it! Check if all ok?
 ```bash
 echo $BASH_VERSION
 ```
+
+## Git Aware Prompt
+
+Thanks to [jimeh/git-aware-prompt](https://github.com/jimeh/git-aware-prompt) you can
+
+> Display current Git branch name in your terminal prompt when in a Git working directory.
+
+Install with the following commands
+
+```bash
+mkdir -p ~/.bash
+cd ~/.bash
+git clone git://github.com/jimeh/git-aware-prompt.git
+```
+
+Then configure it adding to your *.bash_profile*
+
+```bash
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+```
+
