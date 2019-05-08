@@ -4,4 +4,8 @@ main {
   margin-top: $nav-height + 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+
+  li {
+    line-height: 2rem;
+  }
 }
