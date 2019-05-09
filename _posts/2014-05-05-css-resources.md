@@ -64,6 +64,9 @@ description: >
 [GRID](http://grid.malven.co/)
 : A simple visual cheatsheet for CSS Grid Layout
 
+[cssfx](https://cssfx.dev/)
+: Beautifully simple click-to-copy CSS effects
+
 ## Tools
 
 ### Frameworks

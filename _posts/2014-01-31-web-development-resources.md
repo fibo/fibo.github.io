@@ -14,6 +14,17 @@ See [my CSS frameworks section]({% post_url 2014-05-05-css-resources %}#framewor
 
 See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resources %}#frameworks).
 
+## Design systems
+
+[Ant Design](https://ant.design/)
+: A design system with values of Nature and Determinacy for better user experience of enterprise applications
+
+[Material Design](https://material.io/design/)
+: Create intuitive and beautiful products with Material Design
+
+[Semantic UI](https://semantic-ui.com/)
+: User Interface is the language of the web
+
 ## Sites
 
 [World Wide Web Consortium (W3C)](http://www.w3.org/)
