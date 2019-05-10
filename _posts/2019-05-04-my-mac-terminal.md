@@ -75,3 +75,21 @@ source "${GITAWAREPROMPT}/main.sh"
 export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 ```
 
+## Aliases
+
+Cannot live without these aliases
+
+```bash
+alias ls='ls -G'
+
+alias ga='git add '
+alias gd='git diff'
+alias gc='git commit '
+alias gl='git log'
+alias gpl='git pull '
+alias gps='git push '
+alias gs='git status'
+
+alias ns='npm start'
+alias nt='npm test'
+```
