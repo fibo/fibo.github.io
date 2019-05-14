@@ -17,9 +17,16 @@ It is highly recommended to install [git-aware-prompt](https://github.com/jimeh/
 First of all, since we are going to talk also about remote branches, you need to clone a repo. For instance, suppose I am cloning a brand new repository I just created on GitHub.
 
 ```bash
-git clone https://github.com/myuser/mynewrepo.git
-cd repo
+git clone https://github.com/my-user/myNewRepo.git
 ```
+
+Then, of course, you need to enter in the repository folder...
+
+```bash
+cd myNewRepo
+```
+
+...but if you are using GitBash on Windows you can also right click the folder and open a bash shell.
 
 ## Show current branch
 
