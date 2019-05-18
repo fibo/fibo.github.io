@@ -89,6 +89,14 @@ Convert to *YYYY-MM-DD* format.
 now.toISOString().slice(0, 10)
 ```
 
+## Truncations
+
+Truncate to current day, at midnight 🧙.
+
+```javascript
+const day = new Date(now.toISOString().slice(0, 10))
+```
+
 ## Date validation
 
 Given a *day* in *YYYY-MM-DD* check if it is valid.
