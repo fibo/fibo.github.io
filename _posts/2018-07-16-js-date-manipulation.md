@@ -43,6 +43,8 @@ Math.floor(new Date().getTime() / 1000)
 
 [De Mysteriis Dom JavaScript](https://www.youtube.com/watch?v=qcS0CVJ1KPg)!
 
+Also following snippets are weird but they work, and even more... they work in [UTC].
+
 ## Add or subtract time.
 
 Get yesterday date.
@@ -106,3 +108,4 @@ isValid('2018-02-30') // false
 isValid('2018-01-0x') // false
 ```
 
+[UTC]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time "Coordinated Universal Time"
