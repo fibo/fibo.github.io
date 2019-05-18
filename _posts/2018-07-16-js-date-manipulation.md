@@ -29,6 +29,20 @@ Start from here, now!
 const now = new Date()
 ```
 
+Current Unix timestamp in seconds
+
+```javascript
+Math.floor(now.getTime() / 1000)
+```
+
+Notice also this syntax is valid if you want to get a value on the fly with no need to create a reference
+
+```javascript
+Math.floor(new Date().getTime() / 1000)
+```
+
+[De Mysteriis Dom JavaScript](https://www.youtube.com/watch?v=qcS0CVJ1KPg)!
+
 ## Add or subtract time.
 
 Get yesterday date.
@@ -54,6 +68,15 @@ Get last day of previous month.
 ```javascript
 now.setDate(1)
 now.setDate(now.getDate() - 1)
+```
+
+## Date extraction
+
+Get year, month, day, hour, minute, second and millisecond as left padded strings.
+
+```javascript
+const [yyyy, mm, dd, hh, mi, ss, mls] = now.toISOString().split(/[^\d]/)
+// ['2018', '07', '16', '12', '01', '15', '107']
 ```
 
 ## Date formats
