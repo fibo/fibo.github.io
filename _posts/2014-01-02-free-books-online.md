@@ -149,6 +149,9 @@ description: >
 [Practical Common Lisp](http://www.gigamonkeys.com/book/)
 : &nbsp;
 
+[The Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/)
+: &nbsp;
+
 #### R
 
 [R - books](http://www.r-project.org/doc/bib/R-books.html)
