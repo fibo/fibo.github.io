@@ -21,6 +21,10 @@ Talking about minimalism, vanilla code, etc. he said to me
 
 I thought it was an interesting point and those words were in background for two years, until now that I decided to write down few snippets I use to manipulate and parse dates in Javascript.
 
+<div class="paper info">
+  <b>UPDATE</b>: it looks like that many others shares this opinion too: <a href="https://github.com/you-dont-need/You-Dont-Need-Momentjs" target="_blank">you dont need Momentjs</a>.
+</div>
+
 ## Now
 
 Start from here, now!
