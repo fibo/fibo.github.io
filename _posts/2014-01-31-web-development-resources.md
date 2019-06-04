@@ -154,6 +154,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Adobe Font - Source Code Pro](http://adobe-fonts.github.io/source-code-pro/)
 : Monospaced font family for user interface and coding environments
 
+[Liberation fonts](https://github.com/liberationfonts)
+: Free font by RedHat, compatible with Microsoft Office
+
 ## Icons
 
 [b64](http://b64.io/)
