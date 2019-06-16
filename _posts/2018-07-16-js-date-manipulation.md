@@ -76,12 +76,60 @@ now.setDate(1)
 now.setDate(now.getDate() - 1)
 ```
 
+Follows a list of utility functions for date manipulation.
+
+```js
+function addDays (num, t1 = new Date()) {
+  const t2 = new Date(t1)
+
+  t2.setDate(t2.getDate() + num)
+
+  return t2
+}
+
+function addHours (num, t1 = new Date()) {
+  const t2 = new Date(t1)
+
+  t2.setHours(t2.getHours() + num)
+
+  return t2
+}
+
+function addMinutes (num, t1 = new Date()) {
+  const t2 = new Date(t1)
+
+  t2.setMinutes(t2.getMinutes() + num)
+
+  return t2
+}
+
+function daysAgo (num, t1 = new Date()) {
+  const t2 = new Date(t1)
+
+  t2.setDate(t2.getDate() - num)
+
+  return t2
+}
+
+function nextHour (t = new Date()) {
+  return addHours(t, 1)
+}
+
+function tomorrow (t = new Date()) {
+  return addDays(t, 1)
+}
+```
+
 ## Date extraction
 
 Get year, month, day, hour, minute, second and millisecond as left padded strings.
 
 ```javascript
-const [yyyy, mm, dd, hh, mi, ss, mls] = now.toISOString().split(/[^\d]/)
+function splitDate (t = new Date()) {
+  return t.toISOString().split(/[^\d]/)
+}
+
+const [yyyy, mm, dd, hh, mi, ss, mls] = splitDate()
 // ['2018', '07', '16', '12', '01', '15', '107']
 ```
 
@@ -98,7 +146,9 @@ now.toISOString().slice(0, 10)
 Truncate to current day, at midnight 🧙.
 
 ```javascript
-const day = new Date(now.toISOString().slice(0, 10))
+function truncateDay (t = new Date()) {
+  return new Date(ymd(t))
+}
 ```
 
 ## Date validation
@@ -118,6 +168,28 @@ function isValid (day) {
 isValid('2018-07-16') // true
 isValid('2018-02-30') // false
 isValid('2018-01-0x') // false
+```
+
+## Utils
+
+Current Unix timestamp, with milliseconds.
+
+```js
+function currentUnixTimestamp () {
+  return new Date().getTime()
+}
+```
+
+List of hours in a day, and list of minutes in an hour.
+
+```
+function hoursInDay () {
+  return [...new Array(24).keys()].map(h => String(h).padStart(2, '0'))
+}
+
+function minutesInHour () {
+  return [...new Array(60).keys()].map(h => String(h).padStart(2, '0'))
+}
 ```
 
 [UTC]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time "Coordinated Universal Time"
