@@ -209,14 +209,16 @@ Consider there is a size limit on the zip file uploaded.
 Complete your script with the possibility to delete the lambda, add the following
 
 ```json
-"delete": "aws lambda delete-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name",
-"delete_log_group": "aws logs delete-log-group --log-group-name /aws/lambda/$npm_package_name",
-"postdelete": "npm run delete_log_group",
+"_delete": "aws lambda delete-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name",
+"_delete_log_group": "aws logs delete-log-group --log-group-name /aws/lambda/$npm_package_name",
+"post_delete": "npm run delete_log_group",
 ```
 
 So you can delete your function launching
 
 ```bash
-npm run delete
+npm run _delete
 ```
+
+Notice that the *_delete* string has an underscore prefix otherwise it is error prone, due to bash completion on npm scripts, in particular when you launch *npm run deploy*.
 
