@@ -130,13 +130,14 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::1234567890:policy/lambda_dy
 I usually create a *config* attribute like this
 
 ```json
-"config": {
-  "log_retention": 7,
-  "profile": "myproject",
-  "region": "us-east-1",
-  "role": "lambda_dynamo_myproject",
-  "timeout": 10
-}
+  "config": {
+    "log_retention": 7,
+    "memory_size": 128,
+    "profile": "myproject",
+    "region": "us-east-1",
+    "role": "lambda_dynamo_myproject",
+    "timeout": 10
+  }
 ```
 ## Environment
 
@@ -159,19 +160,21 @@ Add the following npm script
 Add the following scripts to your *package.json*
 
 ```json
-"copy": "cp -r src/* build/; cp -r node_modules/ build/node_modules",
-"create": "aws lambda create-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --description \"$npm_package_description\" --runtime nodejs8.10 --handler index.handler --role arn:aws:iam::1234567890:role/$npm_package_config_role --zip-file fileb://build.zip",
+    "copy": "cp -r src/* build/; cp -r node_modules/ build/node_modules",
+    "create": "aws lambda create-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --description \"$npm_package_description\" --runtime nodejs8.10 --handler index.handler --role arn:aws:iam::1234567890:role/$npm_package_config_role --zip-file fileb://build.zip",
 
-"create_log_group": "aws logs create-log-group --log-group-name /aws/lambda/$npm_package_name",
-"deploy": "aws lambda update-function-code --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --zip-file fileb://build.zip",
-"postcreate_log_group": "npm run set_log_retention",
-"precopy": "rm -rf node_modules/; npm install --production; rm -rf build; mkdir build",
-"predeploy": "npm run zip",
-"precreate": "npm run zip",
-"prezip": "rm -rf build.zip; npm run copy",
-"set_log_retention": "aws logs put-retention-policy --region $npm_package_config_region --profile $npm_package_config_profile --log-group-name /aws/lambda/$npm_package_name --retention-in-days $npm_package_config_log_retention",
-"set_timeout": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --timeout $npm_package_config_timeout",
-"zip": "cd build; zip -X -r ../build.zip * > /dev/null; cd ..",
+    "create_log_group": "aws logs create-log-group --log-group-name /aws/lambda/$npm_package_name",
+    "deploy": "aws lambda update-function-code --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --zip-file fileb://build.zip",
+    "postcreate_log_group": "npm run set_log_retention",
+    "postcreate": "npm run create_log_group; npm run set_timeout, npm run set_memory_size; rm -rf build/",
+    "postdeploy": "rm -rf build/; rm build.zip",
+    "precopy": "rm -rf node_modules/; npm install --production; rm -rf build; mkdir build",
+    "predeploy": "npm run zip",
+    "precreate": "npm run zip",
+    "prezip": "rm -rf build.zip; npm run copy",
+    "set_log_retention": "aws logs put-retention-policy --region $npm_package_config_region --profile $npm_package_config_profile --log-group-name /aws/lambda/$npm_package_name --retention-in-days $npm_package_config_log_retention",
+    "set_timeout": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --timeout $npm_package_config_timeout",
+    "zip": "cd build; zip -X -r ../build.zip * > /dev/null; cd ..",
 ```
 
 Only once, create the lambda with
@@ -192,9 +195,10 @@ After that, you can deploy later updates launching just
 npm run deploy
 ```
 
-You can update timeout and log retention by editing *config* content in your *package.json* and run
+You can update memory size, timeout and log retention by editing *config* content in your *package.json* and run
 
 ```bash
+npm run set_memory_size
 npm run set_timeout
 npm run set_log_retention
 ```
@@ -209,9 +213,9 @@ Consider there is a size limit on the zip file uploaded.
 Complete your script with the possibility to delete the lambda, add the following
 
 ```json
-"_delete": "aws lambda delete-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name",
-"_delete_log_group": "aws logs delete-log-group --log-group-name /aws/lambda/$npm_package_name",
-"post_delete": "npm run delete_log_group",
+    "_delete": "aws lambda delete-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name",
+    "_delete_log_group": "aws logs delete-log-group --log-group-name /aws/lambda/$npm_package_name",
+    "post_delete": "npm run delete_log_group",
 ```
 
 So you can delete your function launching
