@@ -82,7 +82,7 @@ Cannot live without these aliases
 ```bash
 alias ls='ls -G'
 
-alias ga='git add '
+alias ga='git add .'
 alias gd='git diff'
 alias gc='git commit '
 alias gl='git log'
@@ -92,4 +92,6 @@ alias gs='git status'
 
 alias ns='npm start'
 alias nt='npm test'
+
+alias ,,='cd .. && pwd'
 ```
