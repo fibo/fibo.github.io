@@ -93,5 +93,5 @@ alias gs='git status'
 alias ns='npm start'
 alias nt='npm test'
 
-alias ,,='cd .. && pwd'
+alias ',,'='cd .. && pwd'
 ```
