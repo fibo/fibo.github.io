@@ -138,12 +138,14 @@ const [yyyy, mm, dd, hh, mi, ss, mls] = splitDate()
 Convert to *YYYY-MM-DD* format.
 
 ```javascript
-now.toISOString().slice(0, 10)
+function ymd (t = new Date()) {
+  return t.toISOString().slice(0, 10)
+}
 ```
 
 ## Truncations
 
-Truncate to current day, at midnight 🧙.
+Truncate date, at midnight 🧙.
 
 ```javascript
 function truncateDay (t = new Date()) {
