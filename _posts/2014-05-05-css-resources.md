@@ -184,6 +184,8 @@ description: >
 
 ## Articles and other resources
 
+[CSS variable secrets](https://www.youtube.com/watch?v=UQRSaG1hQ20)
+
 [About Flexbox](https://speakerdeck.com/makhbeth/about-flexbox-you-cant-float-anymore)
 
 [How browsers position floats](https://meowni.ca/posts/float-layout/)
