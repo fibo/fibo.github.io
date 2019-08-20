@@ -95,3 +95,23 @@ alias gs='git status'
 alias ns='npm start'
 alias nt='npm test'
 ```
+
+## Other tips
+
+### Switch language shortcut
+
+I often need to switch language since the US keyboard is the best layout in my opinion for programming, so it is useful to have a shortcut.
+Go to *System Preferences* > *Keyboard* > *Input Sources* and flag **Select the previous input source**.
+
+![siwtch language shortcut](/images{{ page.id }}/switch_language_shortcut.png)
+
+This is a good solution if you needd to switch on two languages, in my case US an IT: the shortcut <kbd>CTRL</kbd> <kbd>SPACE</kbd> will do the trick.
+
+### Screen recording
+
+When I discover it I said:
+
+> Yes, I ❤  Mac!
+
+On Mojave you have a native screen recorder, invoke it with <kbd>COMMAND SHIFT 5</kbd>. It also manage screeshots.
+
