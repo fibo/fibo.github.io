@@ -184,7 +184,7 @@ function currentUnixTimestamp () {
 
 List of hours in a day, and list of minutes in an hour.
 
-```
+```js
 function hoursInDay () {
   return [...new Array(24).keys()].map(h => String(h).padStart(2, '0'))
 }
