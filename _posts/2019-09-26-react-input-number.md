@@ -6,7 +6,14 @@ description: >
      Having an input number working correctly is not that easy, let me share my implementation.
 ---
 
-Using `type='number'` has few issues: for example you can type the following:
+<div class="paper info">If you want to get an input number working properly by installing a dependency take a look to <a target="_blank" href="https://github.com/s-yadav/react-number-format">react-number-format</a></div>
+
+In this article I am going to share my own implementation, you may want to use as a starting point.
+There are some use cases where you prefer to write an implementation from scratch, avoid dependencies as much as possible, and get maximum control and chance to customization.
+
+## Analysis
+
+Using `<input type='number' />` has few issues: for example you can type the following:
 
 * `-1-2`
 * `1.2...`
@@ -15,13 +22,33 @@ Using `type='number'` has few issues: for example you can type the following:
 You may start trying to use `parseFloat` to validate input in the `onChange` handler but then you realize soon that while user is typing we need to accept a string as input, for example the string `-` which is not a number yet but it could become a `-1`.
 So we need to do some parsing in the `onChange` handler but do the final validation in the `onBlur` handler.
 
+For sure we want to be able to optionally apply threesholds with `min` and `max` props.
+
+The usage involves React hooks, `value` and `setValue` are created using hooks, something like
+
+```javascript
+import React, { useState } from 'react'
+import InputNumber from './InputNumber.js'
+
+function MyComponent () {
+  const [myNumber, setMyNumber] = useState(null)
+
+  return (
+    <InputNumber
+       value={myNumber}
+       setValue={setMyNumber}
+    />
+  )
+}
+```
+
+## Implementation
+
 ```javascript
 import React, { useState } from 'react'
 
 /**
  * Input with number validation.
- *
- * @typedef {number | null} MaybNumber
  *
  * @typedef {Object} InputNumberProps
  * @prop {string=} decimalSeparator
@@ -30,7 +57,7 @@ import React, { useState } from 'react'
  * @prop {number=} min
  * @prop {string=} placeholder
  * @prop {function} setValue
- * @prop {MaybNumber} value
+ * @prop {number | null} value
  *
  * @param {InputNumberProps} props
  */
