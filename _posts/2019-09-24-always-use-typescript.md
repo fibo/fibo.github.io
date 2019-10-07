@@ -36,6 +36,7 @@ Create a *tsconfig.json* file like the following one.
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "target": "esnext"
   },
   "exclude": [
