@@ -6,9 +6,9 @@ description: >
     Collection of links about CSS.
 ---
 
-## Sites
+## Sites and Articles
 
-[CSS Font Stacj](https://www.cssfontstack.com)
+[CSS Font Stack](https://www.cssfontstack.com)
 : nice breakdown of existing system fonts
 
 [flexbox.io](http://flexbox.io)
@@ -69,6 +69,8 @@ description: >
 
 [cssfx](https://cssfx.dev/)
 : Beautifully simple click-to-copy CSS effects
+
+[A Modern CSS Reset](https://hankchizljaw.com/wrote/a-modern-css-reset/)
 
 ## Tools
 
