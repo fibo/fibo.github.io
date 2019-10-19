@@ -2,11 +2,11 @@
   z-index: -1;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: -1rem;
+  position: fixed;
+  top: 17vh;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 711px;
 
   circle {
     stroke: $light-gray;
