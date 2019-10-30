@@ -157,6 +157,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Liberation fonts](https://github.com/liberationfonts)
 : Free font by RedHat, compatible with Microsoft Office
 
+[Victor Mono](https://rubjo.github.io/victor-mono/)
+: Victor Mono is a free programming font with semi-connected cursive italics, symbol ligatures and Latin, Cyrillic and Greek characters.
+
 ## Icons
 
 [b64](http://b64.io/)
