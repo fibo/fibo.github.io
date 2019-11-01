@@ -36,6 +36,7 @@ description: >
 : Which HTML5 Game Engine is right for you?
 
 [HTML5 Canvas Tutorials](http://www.html5canvastutorials.com/)
+: Here you will find the best tutorials and resources to learn Canvas and other HTML5 aspects.
 
 [simpl.info](http://simpl.info/)
 : Simplest possible examples of HTML, CSS and JavaScript.
@@ -50,6 +51,7 @@ description: >
 : The Service Worker Cookbook is a collection of working, practical examples of using service workers in modern web sites (by Mozilla :).
 
 [HTML5 Periodical Table](https://websitesetup.org/html5-periodical-table/)
+: All HTML tags organized in a sort of periodic table.
 
 ## Frameworks and libs
 
