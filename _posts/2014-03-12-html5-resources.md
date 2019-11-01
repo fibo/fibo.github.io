@@ -49,6 +49,8 @@ description: >
 [Service Worker Cookbook](https://serviceworke.rs/)
 : The Service Worker Cookbook is a collection of working, practical examples of using service workers in modern web sites (by Mozilla :).
 
+[HTML5 Periodical Table](https://websitesetup.org/html5-periodical-table/)
+
 ## Frameworks and libs
 
 [HTML5 Boilerplate](http://html5boilerplate.com/)
