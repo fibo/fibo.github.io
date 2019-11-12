@@ -66,13 +66,13 @@
   "deployments_url": "https://api.github.com/repos/fibo/games-of-life/deployments",
   "created_at": "2015-05-30T18:54:41Z",
   "updated_at": "2019-08-01T14:07:14Z",
-  "pushed_at": "2019-08-01T14:07:12Z",
+  "pushed_at": "2019-11-02T15:47:51Z",
   "git_url": "git://github.com/fibo/games-of-life.git",
   "ssh_url": "git@github.com:fibo/games-of-life.git",
   "clone_url": "https://github.com/fibo/games-of-life.git",
   "svn_url": "https://github.com/fibo/games-of-life",
   "homepage": "http://g14n.info/games-of-life/",
-  "size": 1077,
+  "size": 1130,
   "stargazers_count": 18,
   "watchers_count": 18,
   "language": "JavaScript",
@@ -85,7 +85,7 @@
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 1,
+  "open_issues_count": 2,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -94,7 +94,7 @@
     "node_id": "MDc6TGljZW5zZTEz"
   },
   "forks": 5,
-  "open_issues": 1,
+  "open_issues": 2,
   "watchers": 18,
   "default_branch": "master",
   "permissions": {
