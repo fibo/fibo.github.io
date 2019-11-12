@@ -25,6 +25,5 @@ Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/g
 ... and continue with the following articles:
 
 * [Git shell Windows tips]({% post_url 2014-02-14-git-shell-windows-tips %})
-* [Git extras on Windows]({% post_url 2014-02-13-git-extras-on-windows %})
 * [Working with git branches]({% post_url 2013-11-07-working-with-git-branches %})
 * [Git resources]({% post_url 2014-03-16-git-resources %})
