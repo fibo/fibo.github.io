@@ -46,11 +46,16 @@ Please note that:
 1. You call `OrbitControls` directly instead of `THREE.OrbitControls`.
 2. This package does not depend directly on [three.js], which is declared as a peer dependency.
 
-See also [examples/ folder](https://github.com/fibo/three-orbitcontrols/tree/master/examples):
+See also examples:
 
-- [CommonJS example](https://github.com/fibo/three-orbitcontrols/tree/master/examples/CommonJS)
-- [TypeScript example](https://github.com/fibo/three-orbitcontrols/tree/master/examples/TypeScript)
+- [CommonJS example](https://github.com/fibo/three-orbitcontrols/tree/master/example.js): clone this repo, install deps and launch `npm run example_commonjs`.
+- [TypeScript example](https://github.com/fibo/three-orbitcontrols/tree/master/example.ts): clone this repo, install deps and launch `npm run example_typescript`.
 
+## Changelog
+
+See [OrbiControls.js history here](https://github.com/mrdoob/three.js/commits/master/examples/js/controls/OrbitControls.js).
+
+Please also note that this repo's minor version equals [three.js] release number.
 
 ## Motivation
 
