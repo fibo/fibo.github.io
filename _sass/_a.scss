@@ -1,7 +1,7 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  transition: color 300ms ease-out;
+  transition: color 711ms ease-out, outline-width 117ms linear;
 }
 
 a:link {
@@ -18,6 +18,6 @@ a:focus {
   color: $link-highlight-color;
   outline-color: $link-outline-color;
   outline-offset: 1px;
-  outline-style: solid;
+  outline-style: dotted;
   outline-width: 1px;
 }
