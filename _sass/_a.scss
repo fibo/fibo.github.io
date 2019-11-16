@@ -1,7 +1,7 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  transition: color 711ms ease-out, outline-width 117ms linear;
+  transition: color 711ms ease-in-out, outline-width 117ms linear;
 }
 
 a:link {
@@ -15,6 +15,7 @@ a:visited {
 a:active,
 a:hover,
 a:focus {
+  background-color: $semi-transparent;
   color: $link-highlight-color;
   outline-color: $link-outline-color;
   outline-offset: 1px;
