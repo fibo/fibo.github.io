@@ -165,6 +165,7 @@ nav ul li:hover ul li {
   }
 
   #hamburgericon span:nth-child(5), #hamburgericon span:nth-child(6) {
+    display: none;
     top: 18px;
   }
 
@@ -203,11 +204,13 @@ nav ul li:hover ul li {
   }
 
   #hamburgericon.open span:nth-child(5) {
+    display: block;
     left: 5px;
     top: 13px;
   }
 
   #hamburgericon.open span:nth-child(6) {
+    display: block;
     left: calc(50% - 5px);
     top: 13px;
   }
