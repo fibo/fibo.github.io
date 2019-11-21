@@ -107,6 +107,14 @@ source ~/.bash/completion/npm
 source ~/.bash/completion/git-completion.bash
 ```
 
+## Locale
+
+This tip can prevent many issues, add this to your *.bash_profile* to specify a locale or change it accordingly.
+
+```bash
+export LC_ALL=en_US.UTF-8
+```
+
 ## Other tips
 
 ### Switch language shortcut
