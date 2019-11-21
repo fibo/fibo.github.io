@@ -80,6 +80,8 @@ export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 Cannot live without these aliases
 
 ```bash
+alias vi='nvim '
+
 alias ls='ls -G'
 alias ',,'='cd .. && pwd'
 alias ','='ls -Galrth'
@@ -94,6 +96,15 @@ alias gs='git status'
 
 alias ns='npm start'
 alias nt='npm test'
+```
+
+## Auto completion
+
+Create a *~/.bash/completion* folder and copy there files [npm](https://github.com/fibo/home/blob/home/.bash/completion/npm) and [git-completion.bash](https://github.com/fibo/home/blob/home/.bash/completion/git-completion.bash) then add these lines to your *.bash_profile*.
+
+```bash
+source ~/.bash/completion/npm
+source ~/.bash/completion/git-completion.bash
 ```
 
 ## Other tips
