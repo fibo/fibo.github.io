@@ -54,7 +54,7 @@ Note that I *include* the *src* and *test* folders where I put my source code an
 Now if you create this npm script in your *package.json*:
 
 ```json
-    "tsc": "npm run tsc"
+    "tsc": "tsc"
 ```
 
 you can launch TypeScrypt type checker with this command
