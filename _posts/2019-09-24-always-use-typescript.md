@@ -91,7 +91,60 @@ You may want to make your type checker more strict by enabling these later optio
 +    "noUnusedParameters": true,
 ```
 
+## Defining types
+
+You can use [JSDocs](https://jsdoc.app) markup to define types. In particular with `@typedef` you can define new types, for example
+
+```js
+import React from 'react'
+
+/**
+ * Input with number validation.
+ *
+ * @typedef {Object} MyButtonProps
+ * {React.ReactNode=} children
+ * @prop {Boolean=} disabled
+ *
+ * @param {MyButtonProps} props
+ */
+
+export default function MyButton ({
+  children,
+  disabled
+}) {
+  return (
+    <button
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  )
+}
+```
+
+<div class="paper info">
+Yes, the TypeScript compiler can parse JSDocs and will complain if there a type mismatch, or for example some required prop is missing.
+</div>
+
+<b>Bonus Tip</b>: if you need shared types definition, you can create a *types.js* cotaining only JSDoc comments. You need to import it in your entry file, for instance *src/index.js*.
+
+You can use both `string` and `String` to define a string type, but I recommend to use type names starting with uppercase letter, even for builtin types: reasone is that `date` is not an allowed type, you need to use `Date`.
+
+
 ## Benefits
 
 There are many benefits you get by adding TypeScript as a type checker, but the best one in my opinion is the following.
-JavaScript is very flexible and sometimes can be error prone. Adding TypeScript you will get a lot of tests that of course do not replace the tests you write, but **YOU will catch errors at COMPILE TIME**. Yes this is the thing I like most about TypeScript, it complains at *compile time*, I mean before you generate your JavaScript bundle, and **it is far better then your website USER discovering the same error at RUN TIME**.
+
+<div class="paper success">
+JavaScript is very flexible and sometimes can be error prone. Adding TypeScript you will get a lot of tests that of course do not replace the tests you write, but
+
+<br>
+  <b><u>You</u> will catch errors at <u>Compile Time</u>.</b>
+<br>
+
+Yes this is the thing I like most about TypeScript, it complains at <em>Compile time</em>, I mean before you generate your JavaScript bundle, and
+
+<br>
+  <b>it is far better then your <u>Website user</u> discovering the same error at <u>Run Time</u>.</b>
+<br>
+</div>
