@@ -132,7 +132,7 @@ nav ul li:hover ul li {
   #hamburgericon span {
     display: block;
     position: absolute;
-    height: 4px;
+    height: 2px;
     width: 50%;
     background: $gray;
     opacity: 1;
@@ -148,12 +148,10 @@ nav ul li:hover ul li {
 
   #hamburgericon span:nth-child(even) {
     left: 50%;
-    border-radius: 0 $border-radius $border-radius 0;
   }
 
   #hamburgericon span:nth-child(odd) {
     left: 0px;
-    border-radius: $border-radius 0 0 $border-radius;
   }
 
   #hamburgericon span:nth-child(1), #hamburgericon span:nth-child(2) {
