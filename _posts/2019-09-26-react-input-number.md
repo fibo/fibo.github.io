@@ -51,13 +51,13 @@ import React, { useState } from 'react'
  * Input with number validation.
  *
  * @typedef {Object} InputNumberProps
- * @prop {string=} decimalSeparator
- * @prop {boolean=} disabled
- * @prop {number=} max
- * @prop {number=} min
- * @prop {string=} placeholder
- * @prop {function} setValue
- * @prop {number | null} value
+ * @prop {String=} decimalSeparator
+ * @prop {Boolean=} disabled
+ * @prop {Number=} max
+ * @prop {Number=} min
+ * @prop {String=} placeholder
+ * @prop {Function} setValue
+ * @prop {Number | null} value
  *
  * @param {InputNumberProps} props
  */
