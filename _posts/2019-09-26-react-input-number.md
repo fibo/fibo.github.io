@@ -57,7 +57,7 @@ import React, { useState } from 'react'
  * @prop {Number=} min
  * @prop {String=} placeholder
  * @prop {Function} setValue
- * @prop {Number | null} value
+ * @prop {Number=} value
  *
  * @param {InputNumberProps} props
  */
@@ -132,10 +132,18 @@ function InputNumber ({
 
         setCurrentValue(maybeNumber)
       }}
-      onFocus={() => { setEditing(true) }}
+      onFocus={() => {
+        if (typeof value === 'number') {
+          setCurrentValue(String(value))
+        } else {
+          setCurrentValue('')
+        }
+
+        setEditing(true)
+      }}
       placeholder={placeholder}
       type='text'
-      value={editing ? currentValue : (value === null ? '' : value)}
+      value={editing ? currentValue : (typeof value === 'undefined' ? '' : value)}
     />
   )
 }
