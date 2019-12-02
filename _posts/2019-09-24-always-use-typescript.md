@@ -93,7 +93,7 @@ You may want to make your type checker more strict by enabling these later optio
 
 ## Defining types
 
-You can use [JSDocs](https://jsdoc.app) markup to define types. In particular with `@typedef` you can define new types, for example
+You can use [JSDoc](https://jsdoc.app) markup to define types. In particular with `@typedef` you can define new types, for example
 
 ```js
 import React from 'react'
