@@ -28,6 +28,16 @@ Move to the first line in a file: `gg`.
 
 Move to the last line in a file: `G`.
 
+## Wrap lines
+
+It is ok to wrap lines, add to your vim config
+
+```
+set wrap
+```
+
+Then just use `gj` or `gk` to move on a wrapped line.
+
 ## Marks
 
 Create a mark labeled as **a**: `ma`.
@@ -61,3 +71,19 @@ Split window to a file relative to current open file. This will expand to curren
 To open a new tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
 
 Go to next tab: `gt`.
+
+## Buffers
+
+See listed buffers with `:ls`, the for example to open buffer number 2, do `:b2`. Go to previous or next buffer with `:bprev` and `:bnext`. Adding the following to your vim config
+
+```
+:nnoremap gb :bnext<CR>
+```
+
+let you cycle throw buffers with `gb`.
+
+## Icons
+
+Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf)
+
+Thanks to vim plugin [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) you will get an awesome result.

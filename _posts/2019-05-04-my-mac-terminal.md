@@ -132,5 +132,5 @@ When I discover it I said:
 
 > Yes, I ❤  Mac!
 
-On Mojave you have a native screen recorder, invoke it with <kbd>COMMAND SHIFT 5</kbd>. It also manage screeshots.
+On Mojave you have a native screen recorder, invoke it with <kbd>COMMAND</kbd> <kbd>SHIFT</kbd> <kbd>5</kbd>. It also manage screeshots.
 
