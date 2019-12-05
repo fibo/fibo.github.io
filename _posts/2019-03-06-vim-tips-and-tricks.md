@@ -84,9 +84,26 @@ let you cycle throw buffers with `gb`.
 
 ## Icons
 
+<span class="badge">Plugin</span>
+
 Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf). Wow, that font name sounds good!
 
 Thanks to vim plugin [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) you will get an awesome result.
 
 ![Vim devicons](/images{{ page.id }}/vim-devicons.png)
 
+## Emmet
+
+<span class="badge">Plugin</span>
+
+Install [mattn/emmet-vim](https://github.com/mattn/emmet-vim) plugin
+
+> which provides support for expanding abbreviations similar to [emmet](http://emmet.io)
+
+Then add this mapping to your configuration
+
+```
+imap ,, <C-y>,
+```
+
+For example, typing `div` or any other emmet expression, you can expand it to markup with `,,`.
