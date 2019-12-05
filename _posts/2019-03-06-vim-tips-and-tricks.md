@@ -10,19 +10,25 @@ description: >
 
 Just hit `ZZ`.
 
+## Undo redo
+
+Un-do with `u`. Re-do with <kbd>CTRL</kbd> <kbd>r</kbd>.
+
+Jut type `.` in command mode to repeat last executed command.
+
 ## Moving faster
 
 Move to start of previous paragraph or code block: `{`.
 
 Move to end of next paragraph or code block: `}`.
 
-Move forward one screenful: <kbd>CTRL F</kbd>.
+Move forward one screenful: <kbd>CTRL</kbd> <kbd>F</kbd>.
 
-Move backward one screenful: <kbd>CTRL B</kbd>.
+Move backward one screenful: <kbd>CTRL</kbd> <kbd>B</kbd>.
 
-Jump back to the previous (older) location: <kbd>CTRL O</kbd>
+Jump back to the previous (older) location: <kbd>CTRL</kbd> <kbd>O</kbd>
 
-Jump forward to the next (newer) location: <kbd>CTRL I</kbd> or also <kbd>TAB</kbd>.
+Jump forward to the next (newer) location: <kbd>CTRL</kbd> <kbd>I</kbd> or also <kbd>TAB</kbd>.
 
 Move to the first line in a file: `gg`.
 
@@ -81,6 +87,40 @@ See listed buffers with `:ls`, the for example to open buffer number 2, do `:b2`
 ```
 
 let you cycle throw buffers with `gb`.
+
+## Change or delete **inside**
+
+Move inside single quotes and type `ci'`, for example if you have
+
+```
+some 'quoted content'
+```
+
+then you move cursor inside the `'quoted content'` and type `ci'` you will get
+
+```
+some ''
+```
+
+and you can start typing to replace previous `'quoted content'` with something else.
+
+It also work with other enclosing characters, for example, to change content inside square brackets, do `ci[`.
+
+If you want just to delete content use `d` instead of `c`, for example if you have
+
+```
+function (parameter) {
+  // some code
+}
+```
+
+and you place the cursor inside parenthesis and type `di(`, or also `di)` you will get
+
+```
+function () {
+  // some code
+}
+```
 
 ## Icons
 
