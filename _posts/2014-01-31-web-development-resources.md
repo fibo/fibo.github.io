@@ -160,6 +160,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Victor Mono](https://rubjo.github.io/victor-mono/)
 : Victor Mono is a free programming font with semi-connected cursive italics, symbol ligatures and Latin, Cyrillic and Greek characters.
 
+[Recursive](https://www.recursive.design/)
+: A typographic palette for vibrant code & UI
+
 ## Icons
 
 [b64](http://b64.io/)
