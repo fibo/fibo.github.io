@@ -147,3 +147,14 @@ imap ,, <C-y>,
 ```
 
 For example, typing `div` or any other emmet expression, you can expand it to markup with `,,`.
+
+## Markdown
+
+You may want syntax highlighter inside markdown code snippets. I achieve it adding the following lines to my configuration.
+
+```
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown' " requires godlygeek/tabular
+
+let g:vim_markdown_folding_disabled = 1
+```

@@ -2,6 +2,7 @@
 title: React input number done right
 tags:
   - JavaScript
+  - React
 description: >
      Having an input number working correctly is not that easy, let me share my implementation.
 ---
