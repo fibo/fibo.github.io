@@ -9,13 +9,13 @@ description: >
 ---
 
 <div class="paper warning">
-  **This article is a WIP**
+  This article is a WIP
 </div>
 
 ## Getting started
 
 <div class="paper info">
-  Source code is available here: [fibo/material-react-app](https://github.com/fibo/material-react-app).
+  Source code is available here: <a href="https://github.com/fibo/material-react-app" target="_blank">fibo/material-react-app</a>.
 </div>
 
 [Material](https://material.io) is a beautiful and open source design system, by Google.
@@ -56,4 +56,126 @@ Then update style import in your *src/App.tsx*
 ```diff
 -import './App.css';
 +import './App.scss';
+```
+
+Finally, add a *.env* file with the following content
+
+```
+SASS_PATH=node_modules
+```
+
+## Create a Layout
+
+Let's start adding a [dismissible drawer](https://material.io/develop/web/components/drawers/) as well as other few components to create a basic layout with a top navigation bar.
+
+> The navigation drawer slides in from the left and contains the navigation destinations for your app.
+
+Install dependencies
+
+```bash
+yarn add @material/react-drawer @material/react-material-icon @material/react-top-app-bar @material/react-list
+```
+
+Include Material icons by adding the following to *public/index.html* file
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+
+Replace the content of *src/App.scss* with the following code
+
+```scss
+@import '@material/react-drawer/index.scss';
+@import '@material/react-top-app-bar/index.scss';
+@import '@material/react-list/index.scss';
+@import '@material/react-material-icon/index.scss';
+
+.drawer-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.drawer-app-content {
+  flex: auto;
+  overflow: auto;
+}
+```
+
+Replace the content of *src/App.tsx* with the following code
+
+```javascript
+import React, { useState } from 'react';
+
+import TopAppBar, {
+  TopAppBarFixedAdjust,
+  TopAppBarIcon,
+  TopAppBarRow,
+  TopAppBarSection,
+  TopAppBarTitle
+} from '@material/react-top-app-bar';
+import Drawer, {
+  DrawerAppContent,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle
+} from '@material/react-drawer';
+import MaterialIcon from '@material/react-material-icon';
+import List, {
+  ListItem,
+  ListItemGraphic,
+  ListItemText
+} from '@material/react-list';
+
+import './App.scss';
+
+export default function App () {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false)
+
+  return (
+    <div className='drawer-container'>
+      <Drawer dismissible open={drawerIsOpen}>
+        <DrawerHeader>
+          <DrawerTitle tag='h2'>
+            jane.smith@gmail.com
+          </DrawerTitle>
+        </DrawerHeader>
+
+        <DrawerContent>
+          <List singleSelection selectedIndex={selectedIndex}>
+            <ListItem>
+              <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
+
+              <ListItemText primaryText='Mail' />
+            </ListItem>
+          </List>
+        </DrawerContent>
+      </Drawer>
+
+      <DrawerAppContent className='drawer-app-content'>
+        <TopAppBar>
+          <TopAppBarRow>
+            <TopAppBarSection align='start'>
+              <TopAppBarIcon navIcon tabIndex={0}>
+                <MaterialIcon
+                  hasRipple
+                  icon='menu'
+                  onClick={() => setDrawerIsOpen(!drawerIsOpen)}
+                />
+              </TopAppBarIcon>
+
+              <TopAppBarTitle>Inbox</TopAppBarTitle>
+            </TopAppBarSection>
+          </TopAppBarRow>
+        </TopAppBar>
+
+        <TopAppBarFixedAdjust>
+          Your inbox content
+        </TopAppBarFixedAdjust>
+      </DrawerAppContent>
+    </div>
+  )
+}
 ```
