@@ -131,51 +131,83 @@ import List, {
 import './App.scss';
 
 export default function App () {
-  const [selectedIndex, setSelectedIndex] = useState(0)
   const [drawerIsOpen, setDrawerIsOpen] = useState(false)
 
   return (
     <div className='drawer-container'>
-      <Drawer dismissible open={drawerIsOpen}>
-        <DrawerHeader>
-          <DrawerTitle tag='h2'>
-            jane.smith@gmail.com
-          </DrawerTitle>
-        </DrawerHeader>
+      <TopAppBar>
+        <TopAppBarRow>
+          <TopAppBarSection align='start'>
+            <TopAppBarIcon navIcon tabIndex={0}>
+              <MaterialIcon
+                hasRipple
+                icon='menu'
+                onClick={() => setDrawerIsOpen(!drawerIsOpen)}
+              />
+            </TopAppBarIcon>
 
-        <DrawerContent>
-          <List singleSelection selectedIndex={selectedIndex}>
-            <ListItem>
-              <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
+            <TopAppBarTitle>Inbox</TopAppBarTitle>
+          </TopAppBarSection>
+        </TopAppBarRow>
+      </TopAppBar>
 
-              <ListItemText primaryText='Mail' />
-            </ListItem>
-          </List>
-        </DrawerContent>
-      </Drawer>
+      <TopAppBarFixedAdjust className='top-app-bar-fix-adjust'>
+        <Drawer dismissible open={drawerIsOpen}>
+          <DrawerHeader>
+            <DrawerTitle tag='h2'>
+              jane.smith@gmail.com
+            </DrawerTitle>
+          </DrawerHeader>
 
-      <DrawerAppContent className='drawer-app-content'>
-        <TopAppBar>
-          <TopAppBarRow>
-            <TopAppBarSection align='start'>
-              <TopAppBarIcon navIcon tabIndex={0}>
-                <MaterialIcon
-                  hasRipple
-                  icon='menu'
-                  onClick={() => setDrawerIsOpen(!drawerIsOpen)}
-                />
-              </TopAppBarIcon>
+          <DrawerContent>
+            <List>
+              <ListItem>
+                <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
 
-              <TopAppBarTitle>Inbox</TopAppBarTitle>
-            </TopAppBarSection>
-          </TopAppBarRow>
-        </TopAppBar>
+                <ListItemText primaryText='Mail' />
+              </ListItem>
+            </List>
+          </DrawerContent>
+        </Drawer>
 
-        <TopAppBarFixedAdjust>
+        <DrawerAppContent className='drawer-app-content'>
           Your inbox content
-        </TopAppBarFixedAdjust>
-      </DrawerAppContent>
+        </DrawerAppContent>
+      </TopAppBarFixedAdjust>
     </div>
   )
 }
 ```
+
+## Deploy
+
+For sure this section can vary a lot according to your needs. I am going to show, as an example, how I deployed on [GitHub Pages](https://pages.github.com/).
+
+You need to tell *CRA* your webapp base URL setting `PUBLIC_URL` environment variable.
+It is also achieved setting your *package.json* `homepage` attribute. Since I use a custom dommain for my *GitHub Pages* I added to my *package.json* file
+
+```json
+  "homepage": "https://g14n.info/material-react-app",
+```
+
+Install [gh-pages](https://www.npmjs.com/package/gh-pages) package to deploy easily.
+
+```bash
+yarn add gh-pages
+```
+
+Add a `deploy` script to your *package.json*
+
+```diff
+  "scripts": {
+    "build": "react-scripts build",
++    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject",
++    "predeploy": "yarn build",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+```
+
+From now on, to deploy just launch `yarn deploy`.
+
