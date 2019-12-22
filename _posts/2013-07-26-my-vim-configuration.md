@@ -79,6 +79,13 @@ set showmatch     " set show matching parenthesis
 
 See [Programming languages][1] section for specific configuration.
 
+### Use mouse
+
+```
+" Enable mouse
+set mouse=a
+```
+
 ### Disable that annoing beep
 
 ```vim
