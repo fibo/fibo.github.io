@@ -14,16 +14,10 @@ You can save projects in two formats, we a **folder-backed** project. It is a *.
 
 ## Authenticate
 
-It looks a good idea to install [Framer CLI](https://www.npmjs.com/package/framer-cli) globally, then authenticate and set your `FRAMER_TOKEN` in a permanent environment variable. So I did, installed the CLI
+It looks a good idea use the [Framer CLI](https://www.npmjs.com/package/framer-cli) to authenticate and set your `FRAMER_TOKEN` in a permanent environment variable. I assume you already have a *Framer X* account, use your email address of course
 
 ```bash
-npm install framer-cli -g
-```
-
-Then I got the token, I assume you already have a *Framer X* account, use your email address of course
-
-```bash
-framer-cli authenticate <email@address>
+npx framer-cli authenticate <email@address>
 ```
 
 Then I edited my *.bash_profile* with something like
@@ -116,6 +110,10 @@ Let's install some dependencies
 yarn add framer react react-dom trunx node-sass --dev
 ```
 
+<div class="paper warning">
+  I am an <em>npm</em> fan but in a <em>Framer X</em> project I am going to use <em>yarn</em>. Both will get the job done.
+</div>
+
 Then add a `sass` script in *package.json*
 
 ```json
@@ -127,7 +125,7 @@ Then add a `sass` script in *package.json*
 And run it
 
 ```bash
-npm run sass
+yarn sass
 ```
 
 It creates a *code/app.css* file, and here it is the trick! Create a *code/loadStyles.js* file with the following content
@@ -145,6 +143,10 @@ if (document.getElementById(id) === null) loadStyles()
 ```
 
 And you are done, *Framer X* will import the Sass build under the hood.
+
+<div class="paper info">
+ You can use any file name, just create a <em>dot js</em> file in the <em>code</em> folder.
+</div>
 
 ## Create a component
 
@@ -183,10 +185,10 @@ addPropertyControls(Button, {
 ```
 
 <div class="paper warning">
-  You may need to restart *Framer X* in case during the steps above you see an error message in the canvas.
+  You may need to restart <em>Framer X</em> in case during the steps above you see an error message in the canvas.
 </div>
 
 ## Conclusion
 
-**Framer X** looks really promising, I just started and even if usually I am picky it looks this is an awesome tool and it is worth to spend time learning it.
+*Framer X* looks really promising, I just started and even if usually I am picky it looks this is an awesome tool and it is worth to spend time learning it.
 
