@@ -41,7 +41,8 @@ After I created the empty project and uplaoded it on GitHub for the first time I
 ├── .gitignore
 ├── README.md
 ├── build
-│   └── .gitignore
+│   ├── index.js
+│   └── vendors.js
 ├── code
 ├── design
 │   └── document.json
@@ -52,24 +53,11 @@ After I created the empty project and uplaoded it on GitHub for the first time I
 └── yarn.lock
 ```
 
-I created the root *.gitignore* file, as usual, it contains something like
+Also, I edited my *package.json* accordingly, in particular I do not want to upload it on the npm registry, so I added
 
+```json
+  "private": true,
 ```
-node_modules
-.backups/
-.framer-lock
-.npmrc
-.project.log
-.yarnrc
-```
-
-I also created *build* and *metadata* folders containing a *.gitignore* file with the following content
-
-```
-*
-```
-
-in order to keep them empty in case the code is committed or repository is cloned somewhere.
 
 ## Sass build
 
@@ -107,7 +95,13 @@ File: *app.scss*.
 Let's install some dependencies
 
 ```bash
-yarn add framer react react-dom trunx node-sass --dev
+yarn add framer react react-dom node-sass --dev
+```
+
+I also added *trunx*, cause it is needed in my case. Probably you do not need it
+
+```bash
+yarn add trunx --dev
 ```
 
 <div class="paper warning">
