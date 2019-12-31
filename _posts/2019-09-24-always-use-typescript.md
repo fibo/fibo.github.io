@@ -1,7 +1,7 @@
 ---
 title: Always use TypeScript
 tags:
-  - Web
+  - React
 description: >
      If you are writing a JavaScript code base you should use TypeScript, even if you are not writing TypeScript code.
 ---
