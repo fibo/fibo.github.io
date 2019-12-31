@@ -1,7 +1,7 @@
 ---
 title: How to drop a user on Netezza
 tags:
-  - Netezza
+  - SQL
 description: >
     You are trying to drop a user but Netezza complains cause it "owns objects"? This article shows how to solve this problem.
 ---
@@ -33,7 +33,7 @@ WHERE owner = ^pippo^
 which shows you the objects owned by the user you want to drop. You should alter those
 objects and transfer their ownership to another user.
 
-You can install my [*Netezza utilities*][1] to simplify this task and save time.
+You can install my [*Netezza utilities*](http://g14n.info/nz-util) to simplify this task and save time.
 
 Get the list of objects owned by user *pippo*.
 
@@ -49,6 +49,3 @@ CALL util..transfer_objects_owned_by('pippo', 'pluto');
 ```
 
 Finally, when no other object is owned by *pippo* you will be able to drop it.
-
-  [1]: //{{ site.domain }}/nz-util
-
