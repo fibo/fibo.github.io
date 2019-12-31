@@ -6,6 +6,20 @@ description: >
     Collection of links I find on my way about Web development.
 ---
 
+## Stock resources
+
+[Awesome stock resources](https://github.com/neutraltone/awesome-stock-resources)
+: A collection of links for free stock photography, video and Illustration websites
+
+[Unsplash](https://unsplash.com/)
+: Photos for everyone
+
+[Lorem picsum](https://picsum.photos/)
+: Lorem Ipsum... but for photos
+
+[Placeholder.com](https://placeholder.com)
+: The Free Image Placeholder Service Favoured By Designers
+
 ## CSS frameworks
 
 See [my CSS frameworks section]({% post_url 2014-05-05-css-resources %}#frameworks).
@@ -253,14 +267,6 @@ See [Online JavaScript IDE](http://en.wikipedia.org/wiki/Online_JavaScript_IDE) 
 
 [CodeSandbox](https://codesandbox.io)
 : CodeSandbox makes it easier to create, share and reuse React projects with others
-
-## Random stuff
-
-[Unsplash](https://unsplash.com/)
-: Photos for everyone
-
-[Lorem picsum](https://picsum.photos/)
-: Lorem Ipsum... but for photos
 
 ## Articles
 
