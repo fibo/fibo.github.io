@@ -1,7 +1,7 @@
 ---
 title: How to collect Netezza history
 tags:
-  - Netezza
+  - SQL
 description: >
     Collecting your Netezza query history is a mandatory step before optimization. Read this article to know how to collect Netezza history easily.
 ---
