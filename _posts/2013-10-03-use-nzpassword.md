@@ -1,7 +1,7 @@
 ---
 title: Use nzpassword!
 tags:
-  - Netezza
+  - SQL
 description: >
     How to authenticate securely on Netezza.
 ---
