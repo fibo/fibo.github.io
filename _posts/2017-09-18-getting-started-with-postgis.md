@@ -1,9 +1,7 @@
 ---
 title: Getting started with PostGIS
 tags:
-  - PostGIS
-  - PostgreSQL
-  - GeoJSON
+  - SQL
 description: >
     PostGIS is a PostgreSQL extension that adds support for geographic objects allowing location queries to be run in SQL.
 ---

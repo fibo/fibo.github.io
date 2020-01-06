@@ -2,7 +2,6 @@
 title: React Semantic-UI customized
 tags:
   - React
-  - Semantic-UI
 description: >
     React and Semantic-UI are awesome! This article describes step by sted how to use them together and create a custom build.
 ---
@@ -132,7 +131,7 @@ must be served statically.
 
 ## You are done
 
-Now that you have your custom CSS assets built with [Semantic] you just need to do
+Now that you have your custom CSS assets built with [Semantic-UI] you just need to do
 
 ```bash
 npm install semantic-ui-react --save-dev

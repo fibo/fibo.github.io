@@ -2,10 +2,7 @@
 title: S3 to RedShift loader
 tags:
   - AWS
-  - S3
-  - RedShift
-  - Lambda
-  - apex
+  - SQL
 description: >
     Load data from S3 to RedShift using Lambda, powered by apex. Our goal is: every time the AWS Elastic load balancer writes a log file, load it into RedShift.
 ---

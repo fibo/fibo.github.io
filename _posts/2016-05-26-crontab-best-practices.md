@@ -2,7 +2,6 @@
 title: Crontab best practices
 tags:
   - Unix
-  - Crontab
 description: >
     How to edit a crontab in a mantainable way, and other tips to use it the right way. I found a lot of messy crontabs around, it would be better to mantain order.
 ---

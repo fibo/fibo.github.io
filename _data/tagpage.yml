@@ -1,9 +1,14 @@
 AWS: true
-JavaScript: true
 Git: true
 Go: true
+JavaScript: true
+Mac: true
 Node: true
 Perl: true
-SQL: true
 React: true
+Software: true
+SQL: true
 Vim: true
+Unix: true
+Web: true
+Windows: true

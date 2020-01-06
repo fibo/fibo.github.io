@@ -2,7 +2,6 @@
 title: S3 bucket public by default
 tags:
   - AWS
-  - S3
 description: >
     How to make an Amazon S3 bucket public by default.
 ---

@@ -2,10 +2,7 @@
 title: Math on GitHub Pages
 tags:
   - Math
-  - GitHub
-  - Markdown
-  - LaTeX
-  - KaTeX
+  - Web
 description: >
     Display math formulas on GitHub Pages using LaTeX. Two methods are described, one using MathJax to render formulas client side, and other using KaTeX to render formulas server side.
 libs:

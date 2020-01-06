@@ -2,7 +2,6 @@
 title: Optimize Maxmind database loaded on Redshift using Analytical functions
 tags:
   - AWS
-  - Redshift
   - SQL
 description: >
     If you need to associate an IP address to a country or a city probably you will use MaxMind data. If you load it in a relational database you will write a SQL statement that joins your traffic data with MaxMind data, which can be really heavy. This is an attempt to optimize queries by reducing the number of MaxMind data rows.
