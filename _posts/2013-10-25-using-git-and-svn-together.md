@@ -2,7 +2,6 @@
 title: Using git and svn together
 tags:
   - Git
-  - Subversion
 description: >
     This is a quick and dirty way to version a folder using svn and git at the same time.
 ---

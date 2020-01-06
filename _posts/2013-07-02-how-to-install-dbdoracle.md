@@ -2,7 +2,7 @@
 title: How to install DBD::Oracle
 tags:
   - Perl
-  - Oracle
+  - SQL
 description: >
   I am going to put here all the steps required to install DBD::Oracle CPAN module, which is not a straightforward installation.
   The purpose is to reduce headache and turn it into a repeatable process.
