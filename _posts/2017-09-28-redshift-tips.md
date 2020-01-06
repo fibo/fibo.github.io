@@ -2,8 +2,6 @@
 title: Redshift tips
 tags:
   - AWS
-  - PostgreSQL
-  - Redshift
   - SQL
 description: >
     I am using Redshift since two years ago, and as every database it has its SQL dialect and its secrets. I will write here everything I discover and it is worth to be annotated.

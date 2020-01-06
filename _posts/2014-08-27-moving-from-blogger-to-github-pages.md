@@ -1,7 +1,7 @@
 ---
 title: Moving from Blogger to GitHub Pages
 tags:
-  - Blog
+  - Web
 description: >
     Migrate your blog from Blogger to GitHub Pages to gain full control on your content.
 ---

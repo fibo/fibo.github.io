@@ -1,8 +1,8 @@
 ---
 title: Install WebLogic 12c
 tags:
-  - Web development
   - Software
+  - Unix
 description: >
     How to install WebLogic 12c development version on Linux RedHat.
 ---

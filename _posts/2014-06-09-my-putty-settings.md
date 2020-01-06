@@ -3,7 +3,6 @@ title: My Putty settings
 tags:
   - Windows
   - Software
-  - Putty
 description: >
     Putty configuration tips.
 ---

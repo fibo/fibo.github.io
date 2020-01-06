@@ -2,8 +2,7 @@
 title: AWS Redshift compatible PostgreSQL client
 tags:
   - AWS
-  - PostgreSQL
-  - Redshift
+  - SQL
 description: >
     How to install a PostgreSQL client (psql) that is compatible with AWS Redshift
 ---

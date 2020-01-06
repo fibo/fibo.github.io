@@ -2,7 +2,7 @@
 title: AWS Lambda npm scripts
 tags:
   - AWS
-  - Serverless
+  - Node
 description: >
      AWS Lambda is great! But even better, there is no need to add any framework on top for management. You can use npm scripts.
 ---
