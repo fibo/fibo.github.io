@@ -6,6 +6,17 @@ description: >
     Collection of links about CSS.
 ---
 
+## CSS resets
+
+[Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
+: the first one
+
+[Normalize.css](https://necolas.github.io/normalize.css/)
+: A modern, HTML5-ready alternative to CSS resets
+
+[CSS remedy](https://github.com/mozdevs/cssremedy)
+: Start your project with a remedy for the technical debt of CSS.
+
 ## Sites and Articles
 
 [CSS Font Stack](https://www.cssfontstack.com)
