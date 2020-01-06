@@ -1,8 +1,7 @@
 ---
 title: Server hardening tips
 tags:
-  - Security
-  - Linux
+  - Unix
 description: >
     You got a Linux server and you want to prevent security issues: follow these instructions.
 ---
