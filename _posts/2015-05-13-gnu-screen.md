@@ -44,8 +44,8 @@ List running sessions
 ```bash
 $ screen -ls
 There are screens on:
-        16704.mySecondScreenSession      (Attached)
-        16562.pts-3.server01    (Attached)
+        16704.mySecondScreenSession (Attached)
+        16562.pts-3.server01 (Attached)
 2 Sockets in /var/run/screen/S-user.
 ```
 
@@ -80,6 +80,12 @@ $ screen -x user2
 ```
 
 ## Tips
+
+### Scroll window
+
+1. Hit <kbd>CTRL-a</kbd> <kbd>Escape</kbd>
+2. Move up or down with arrow keys <kbd> ↑ </kbd> <kbd> ↓ </kbd>
+3. When you are done hit <kbd>q</kbd> or <kbd>Escape</kbd>
 
 ### Multiple windows
 
