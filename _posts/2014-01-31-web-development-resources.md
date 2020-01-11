@@ -20,6 +20,11 @@ description: >
 [Placeholder.com](https://placeholder.com)
 : The Free Image Placeholder Service Favoured By Designers
 
+## Online tools
+
+[Shape Shifter](https://shapeshifter.design/)
+: Create SVG animations
+
 ## CSS frameworks
 
 See [my CSS frameworks section]({% post_url 2014-05-05-css-resources %}#frameworks).
