@@ -25,6 +25,9 @@ description: >
 [Shape Shifter](https://shapeshifter.design/)
 : Create SVG animations
 
+[CSS matic](https://www.cssmatic.com/)
+: The ultimate CSS tools for web designers
+
 ## CSS frameworks
 
 See [my CSS frameworks section]({% post_url 2014-05-05-css-resources %}#frameworks).
