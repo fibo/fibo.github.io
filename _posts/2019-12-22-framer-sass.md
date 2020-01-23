@@ -32,7 +32,7 @@ Open *Framer X*, create a new project and save it as a *folder-backed project*. 
 
 My Goal is to create a custom Sass build, importing it into the project and design components with that style into *Framer X*.
 
-I also uploaded it on GitHub, this is the final result: [fibo/trunx.framerfx](https://github.com/fibo/trunx.framerfx).
+I also uploaded it on GitHub, this is the final result: [fibo/sass-build-example.framerfx](https://github.com/fibo/sass-build-example.framerfx).
 
 After I created the empty project and uplaoded it on GitHub for the first time I see the following
 
