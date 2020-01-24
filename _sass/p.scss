@@ -1,6 +1,5 @@
 p {
   margin-bottom: $margin-bottom;
-  margin-left: 0.71rem;
   margin-top: $margin-top;
   hyphens: auto;
 
@@ -12,15 +11,12 @@ p {
     }
   }
 
-  a:link {
-    text-decoration: underline;
-  }
-
   a:active,
   a:hover,
+  a:link,
   a:focus,
   a:visited {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

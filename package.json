@@ -6,19 +6,23 @@
   "private": true,
   "scripts": {
     "build": "npm run browserify; npm run cp; npm run readmes; npm run data",
-    "browserify": "browserify -e src/index.js | uglifyjs > js/bundle.js",
+    "browserify": "browserify -e src/index.js",
     "cp": "npm run cp:metadata",
     "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
     "data": "npm run data:github:repos; npm run data:github:users:fibo",
     "data:github:repos": "token=$(cat .gh-token); cd _data/github/repos/; for repo in $(ls | while read filename; do echo ${filename%.json}; done | grep -v dotsoftware); do curl -u fibo:$token https://api.github.com/repos/fibo/$repo > ${repo}.json; done; curl -s -u fibo:$token https://api.github.com/repos/fibo/.software > dotsoftware.json; cd -",
     "data:github:users:fibo": "curl -u fibo:$(cat .gh-token) https://api.github.com/user > _data/github/users/fibo.json",
+    "lint:sass": "stylelint _sass",
     "postreadmes": "git add _projects/; git commit -m 'updated project pages'; git push origin master",
     "readmes": "for repo in $(ls -1 _projects/ | grep -v _readmes | grep -v dotsoftware); do wget -nv https://raw.githubusercontent.com/fibo/$repo/master/README.md -O _projects/_readmes/${repo}-readme.md; cat _projects/$repo/index.yaml _projects/_readmes/${repo}-readme.md > _projects/$repo/index.md; done; wget -nv https://raw.githubusercontent.com/fibo/.software/master/README.md -O _projects/_readmes/dotsoftware-readme.md; cat _projects/dotsoftware/index.yaml _projects/_readmes/dotsoftware-readme.md > _projects/dotsoftware/index.md",
     "start": "bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "worker": "while true; do npm run data; sleep 300; npm run readmes; sleep 300; git pull --rebase origin master; git add . && git commit -m 'updated metadata' && git push origin master; sleep 300; done"
   },
+  "pre-commit": [
+    "lint:sass"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/fibo/fibo.github.io.git"
@@ -37,6 +41,7 @@
   "devDependencies": {
     "browserify": "^14.3.0",
     "dot-editorconfig": "^1.0.1",
-    "uglify-js": "^3.1.5"
+    "pre-commit": "^1.2.2",
+    "stylelint": "^13.0.0"
   }
 }

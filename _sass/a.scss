@@ -1,0 +1,17 @@
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 400ms ease-out;
+}
+
+a:link,
+a:visited {
+  color: $link-color;
+}
+
+a:active,
+a:hover,
+a:focus {
+  background-color: $semi-transparent;
+  color: $link-highlight-color;
+}

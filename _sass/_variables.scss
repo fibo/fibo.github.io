@@ -1,5 +1,13 @@
+@font-face {
+ font-family: "Recursive";
+ src: url("/fonts/recursive.woff2") format("woff2-variations");
+ font-weight: 300 1000;
+}
+
 $font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-mono: "Lucida Console", Monaco, monospace;
+$font-family-heading: "Recursive", $font-family;
+$font-variation-settings: "CASL" 0, "slnt" -5;
 $font-size: 17px;
 
 $mobile-break-point: 680px;
@@ -25,8 +33,6 @@ $black: #343434;
 
 $link-color: darkcyan;
 $link-highlight-color: tomato;
-$link-outline-color: tomato;
-$link-visited-color: chocolate;
 
 $code-color: #ccc;
 $code-background-color: #292924;
