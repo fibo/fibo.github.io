@@ -2,6 +2,7 @@
 title: Using Framer X with custom Sass build
 tags:
   - Web
+  - React
 description: >
      Framer X is a slick tool, you can express your creativity creating not only design mockups but also React components from real code. Is it possible to use your own Sass build?
 ---
