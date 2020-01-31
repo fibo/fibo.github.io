@@ -4,7 +4,7 @@ npm: true
 ---
 # read-file-utf8
 
-> shortcut to [fs.readFile][readFile] or [fs.readFileSync][readFileSync]
+> reads content from file using utf-8 encoding
 
 [API](#api) |
 [Usage](#usage) |
@@ -14,66 +14,50 @@ npm: true
 
 ## API
 
-### `readFile(filePath[, callback])`
+### `read(filePath)`
+
+It is a function that returns a *Promise* and requires one parameter:
 
 * **@param** `{String}` filePath
-* **@param** `{Function}` [callback] optionally passed to fs.readFile
-* **@returns** `{String}` content, **only if** callback is not provided
 
 ## Usage
 
-Given a callback to execute on *data*, for instance
-
 ```javascript
-function callback (err, data) {
-  if (err) throw err
-  console.log(data)
+const read = require('read-file-utf8')
+
+const filePath = 'file.txt'
+
+// Since read-file-utf8 function will return a Promise,
+// the most comfortable way to run it is inside an async function.
+async function example () {
+  try {
+    // Read file content.
+    //////////////////////////////////////////////////////////////////
+    const content = await read(filePath)
+
+    console.log(content)
+  } catch (error) {
+    // In case you do not have permissions,
+    // you may want to handle it here.
+    console.error(error)
+  }
 }
-```
 
-then, the following code
-
-```javascript
-var read = require('read-file-utf8')
-
-var filePath = '/tmp/foo'
-
-read(filePath, callback)
-```
-
-actually is the same as
-
-```javascript
-var fs = require('fs')
-
-var filePath = '/tmp/foo'
-
-fs.readFile(filePath, 'utf8', callback)
-```
-
-If no callback is provided, the synchronous version is used, hence the snippet
-
-```javascript
-var content = read('/tmp/bar')
-```
-
-is equivalent to
-
-```javascript
-var content = fs.readFileSync('/tmp/bar', 'utf8')
+// Run example.
+example()
 ```
 
 ## Example
 
 Suppose you have some SQL queries. It is really better to put every query
-in its own *queryFile.sql*, instead then inside *someOtherFile.js*.
+in its own *queryFile.sql* good old SQL file, instead then inside *someOtherFile.js* JavaScript file.
 
-Create a *sql/* folder and put there all your queries. Add also a
-*sql/index.js* with the following content
+Create a *sql/* folder and put there all your queries.
+Add also a *sql/index.js* with the following content
 
 ```javascript
-var path = require('path')
-var read = require('read-file-utf8')
+const path = require('path')
+const read = require('read-file-utf8')
 
 function sql (fileName) {
   return read(path.join(__dirname, `${fileName}.sql`))
@@ -93,15 +77,18 @@ WHERE is_winner IS TRUE
 Now you are able to do, for example
 
 ```javascript
-var sql = require('./path/to/sql/')
-var pg = require('pg')
+const pg = require('pg')
 
-var conString = 'your connection string here'
+const sql = require('./path/to/sql/index.js')
 
-pg.connect(conString, function (err, client, done) {
+const connectionString = '@@@your connection string here@@@'
+
+pg.connect(connectionString, async function (err, client, done) {
   if (err) return console.error(err)
 
-  client.query(sql('count_winners'), function (err, result) {
+  const sqlCode = await sql('count_winners')
+
+  client.query(sqlCode, function (err, result) {
     if (err) return console.error(err)
 
     console.log(result.rows[0].num)
@@ -113,11 +100,9 @@ pg.connect(conString, function (err, client, done) {
 
 * [write-file-utf8](http://g14n.info/write-file-utf8)
 * [fs.readFile][readFile]
-* [fs.readFileSync][readFileSync]
 
 ## License
 
 [MIT](http://g14n.info/mit-license/)
 
 [readFile]: https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback
-[readFileSync]: https://nodejs.org/api/fs.html#fs_fs_readfilesync_file_options
