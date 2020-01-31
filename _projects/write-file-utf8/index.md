@@ -44,13 +44,17 @@ const content = 'Hello'
 // the most comfortable way to run it is inside an async function.
 async function example () {
   try {
+    // Write a string into file.
+    //////////////////////////////////////////////////////////////////
     await write(filePath1, content)
 
+    // Write a buffer into file.
+    //////////////////////////////////////////////////////////////////
     const buffer = new Buffer.from(content) // this is an utf-8 encoded buffer
     await write(filePath2, buffer)
   } catch (error) {
     // In case you do not have permissions to create folders,
-    // you may want to handle that case here.
+    // you may want to handle it here.
     console.error(error)
   }
 }
@@ -70,4 +74,4 @@ example()
 
 [fs.writeFile]: https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
 [mkdirp]: https://www.npmjs.com/package/mkdirp
-[read-file-utf8]: http://npm.im/read-file-utf8
+[read-file-utf8]: https://g14n.info/read-file-utf8
