@@ -185,8 +185,9 @@ Do not miss [Motherfucking Website](http://motherfuckingwebsite.com/) and ...
 [Recursive](https://www.recursive.design/)
 : A typographic palette for vibrant code & UI
 
-[brains](https://www.jetbrains.com/lp/mono)
-: 
+[JetBrains Mono](https://www.jetbrains.com/lp/mono)
+: A typeface for developers
+
 ## Icons
 
 [b64](http://b64.io/)
