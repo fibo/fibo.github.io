@@ -83,6 +83,8 @@ description: >
 
 [A Modern CSS Reset](https://hankchizljaw.com/wrote/a-modern-css-reset/)
 
+[The Simpsons in CSS](https://pattle.github.io/simpsons-in-css/)
+
 ## Tools
 
 ### Frameworks
