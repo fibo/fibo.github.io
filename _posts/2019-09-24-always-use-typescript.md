@@ -102,7 +102,7 @@ import React from 'react'
  * Input with number validation.
  *
  * @typedef {Object} MyButtonProps
- * {React.ReactNode=} children
+ * @prop {React.ReactNode=} children
  * @prop {Boolean=} disabled
  *
  * @param {MyButtonProps} props

@@ -8,10 +8,6 @@ description: >
      How to use create-react-app with Material web components.
 ---
 
-<div class="paper warning">
-  This article is a WIP
-</div>
-
 ## Getting started
 
 <div class="paper info">
