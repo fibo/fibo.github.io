@@ -81,13 +81,13 @@
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 6,
+  "forks_count": 5,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
   "open_issues_count": 0,
   "license": null,
-  "forks": 6,
+  "forks": 5,
   "open_issues": 0,
   "watchers": 4,
   "default_branch": "master",
@@ -101,6 +101,6 @@
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
   "delete_branch_on_merge": false,
-  "network_count": 6,
+  "network_count": 5,
   "subscribers_count": 1
 }
