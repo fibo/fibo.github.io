@@ -65,8 +65,8 @@
   "releases_url": "https://api.github.com/repos/fibo/algebra-group/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/algebra-group/deployments",
   "created_at": "2015-08-28T09:37:42Z",
-  "updated_at": "2020-01-24T01:03:36Z",
-  "pushed_at": "2020-03-13T20:59:23Z",
+  "updated_at": "2020-03-15T11:02:07Z",
+  "pushed_at": "2020-03-15T11:01:55Z",
   "git_url": "git://github.com/fibo/algebra-group.git",
   "ssh_url": "git@github.com:fibo/algebra-group.git",
   "clone_url": "https://github.com/fibo/algebra-group.git",
@@ -85,7 +85,7 @@
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 2,
+  "open_issues_count": 1,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -94,7 +94,7 @@
     "node_id": "MDc6TGljZW5zZTEz"
   },
   "forks": 1,
-  "open_issues": 2,
+  "open_issues": 1,
   "watchers": 1,
   "default_branch": "master",
   "permissions": {
