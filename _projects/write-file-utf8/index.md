@@ -12,6 +12,8 @@ npm: true
 [See also](#see-also) |
 [License](#license)
 
+[![NPM version](https://badge.fury.io/js/write-file-utf8.svg)](http://badge.fury.io/js/write-file-utf8)
+
 ## Installation
 
 With [npm](https://npmjs.org/) do
@@ -50,7 +52,7 @@ async function example () {
 
     // Write a buffer into file.
     //////////////////////////////////////////////////////////////////
-    const buffer = new Buffer.from(content) // this is an utf-8 encoded buffer
+    const buffer = Buffer.from(content) // this is an utf-8 encoded buffer
     await write(filePath2, buffer)
   } catch (error) {
     // In case you do not have permissions to create folders,
