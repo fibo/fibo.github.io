@@ -65,8 +65,8 @@
   "releases_url": "https://api.github.com/repos/fibo/algebra-cyclic/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/algebra-cyclic/deployments",
   "created_at": "2016-03-25T07:41:47Z",
-  "updated_at": "2020-01-24T01:04:28Z",
-  "pushed_at": "2020-03-13T20:58:05Z",
+  "updated_at": "2020-03-15T11:01:10Z",
+  "pushed_at": "2020-03-15T11:00:56Z",
   "git_url": "git://github.com/fibo/algebra-cyclic.git",
   "ssh_url": "git@github.com:fibo/algebra-cyclic.git",
   "clone_url": "https://github.com/fibo/algebra-cyclic.git",
@@ -77,7 +77,7 @@
   "watchers_count": 1,
   "language": "JavaScript",
   "has_issues": true,
-  "has_projects": true,
+  "has_projects": false,
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
@@ -85,7 +85,7 @@
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 1,
+  "open_issues_count": 0,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -94,7 +94,7 @@
     "node_id": "MDc6TGljZW5zZTEz"
   },
   "forks": 0,
-  "open_issues": 1,
+  "open_issues": 0,
   "watchers": 1,
   "default_branch": "master",
   "permissions": {
