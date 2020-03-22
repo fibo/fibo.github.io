@@ -23,18 +23,24 @@ The goals are:
 3. **Model and View** separation is sacred! Read the *old but gold* article [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) by *Redux* creator. Read it twice. I saw so many projects where business logic is deeply nested into view components, please stop it.
 4. Reduce boilerplate: I started from [Redux Ducks proposal](https://github.com/erikras/ducks-modular-redux) and developed my own structure, let's see it together.
 
+<div class="paper info">
+This is just a starting point that could evolve easily according to your needs. Remember that there is no definitive structure, and any dogma can be wrong depending on the context. The best way is to keep it flexible.
+</div>
+
 ## How to write a reducer
 
 > A reducer, its initial state, actions and constants can be implemented all in the same file.
 
-There is no need to open several files to implement a reducer action. This is a simple *foo* reducer.
+There is no need to open several files to implement a reducer action. This is a simple reducer with a *foo* action.
 
 ```javascript
 // Action name
 const CREATE_FOO = 'CREATE_ACTION'
 
 export const initialState = {
-  created: false
+  foo: {
+    created: false
+  }
 }
 
 // Action creator
@@ -45,9 +51,12 @@ export function createFoo () {
 // Reducer
 export default function (state = initialState) {
   switch (action.type) {
+    // It is worth to enclose `case` body with brackets, both for indentation and scope.
     case CREATE_FOO: {
       return {
-        created: true,
+        foo: {
+          created: true
+        },
         // notice the spread operator here, to provide immutability
         ...state
       }
@@ -58,6 +67,105 @@ export default function (state = initialState) {
 }
 ```
 
+What about *async actions*? Let's write a little helper to reduce the SLOC.
+
+```javascript
+export default function asyncActions (NAME) {
+  return {
+    FAILURE: `${NAME}_FAILURE`,
+    REQUEST: `${NAME}_REQUEST`,
+    SUCCESS: `${NAME}_SUCCESS`
+  }
+}
+```
+
+Then, let's say we want to create another reducer with an async *get bar* action
+
+```javascript
+// Import api module, this could be imported from a separated package... more about this topic later.
+// By now, notice that it provides a getBar() method.
+import api from '../api.js'
+import asyncActions from '../utils/asyncActions.js'
+
+// Action names, will be GET_BAR.REQUEST, GET_BAR.SUCCESS, GET_BAR.FAILURE
+const GET_BAR = asyncActions('GET_BAR')
+
+export const initialState = {
+  bar: {
+    // initialize data here according to your needs, it could be null, an empty list, etc...
+    data: null,
+    // we need two booleans to hold the request state, name them as you like.
+    requestIsWaiting: false,
+    responseHasError: false
+  }
+}
+
+// Async action creator
+export const getBar () => (dispatch) => {
+  dispatch({ type: GET_BAR.REQUEST })
+
+  api().getBar().then(
+    () => dispatch({ type: GET_BAR.SUCCESS }),
+    (error) => dispatch({ error, type: GET_BAR.FAILURE })
+  )
+}
+
+// Reducer
+export default function (state = initialState) {
+  switch (action.type) {
+    case GET_BAR.REQUEST: {
+      return {
+        bar: {
+          ...state.bar,
+          // Reset error, if any.
+          responseHasError: false,
+          // We are waiting for a request now, this could be used for example to show a spinner in a button.
+          requestIsWaiting: true,
+        },
+        ...state
+      }
+    }
+
+    case GET_BAR.SUCCESS: {
+      return {
+        bar: {
+          ...state.bar,
+          // Waiting for the request ended.
+          requestIsWaiting: false,
+          // Store request data. This also may vary a lot, you may need to use some ES6 function here.
+          data: action.data,
+        },
+        ...state
+      }
+    }
+
+    case GET_BAR.FAILURE: {
+      // TODO Do some error handling, using `action.error`.
+      return {
+        bar: {
+          ...state.bar,
+          // Stop waiting for response and turn on the error flag.
+          requestIsWaiting: false,
+          responseHasError: true
+        },
+        ...state
+      }
+    }
+    default: return state
+  }
+}
+```
+
+About the *TODO* in the snippet above, you may want to use `action.error` for error handling.
+Error handling is up to you and really depends on the project and sometimes even from the specific request.
+For example you could create classes that extend Error and use a class name as error code,
+then show an error message using i18n translations.
+It could also happen that backend already provides a proper error message but
+usually it is not a good idea to show it to the user as is.
+
 <div class="paper info">
 This article is a <b>Work in Progress</b>.
+<!-- TODO define api.js, optionally in a separated package, it can be typed and contains endpoints, errors etc. -->
+<!-- TODO containers, i.e. pages and components -->
+<!-- TODO middlewares, reducer actions can be exported, localstorage middleware example -->
 </div>
