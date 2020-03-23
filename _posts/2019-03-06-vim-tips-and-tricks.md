@@ -44,6 +44,15 @@ set wrap
 
 Then just use `gj` or `gk` to move on a wrapped line.
 
+## Sort lines
+
+Select the lines you want to sort, for example do:
+
+1. Place cursor on the first line and start selection with <kbd>SHIFT</kbd> <kbd>V</kbd>.
+2. Go down to the last line, for example using <kbd>J</kbd>.
+
+Then sort lines with <kbd>:</kbd> <kbd>sort</kbd>.
+
 ## Marks
 
 Create a mark labeled as **a**: `ma`.
