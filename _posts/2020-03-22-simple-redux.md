@@ -31,7 +31,8 @@ This is just a starting point that could evolve easily according to your needs. 
 
 > A reducer, its initial state, actions and constants can be implemented all in the same file.
 
-There is no need to open several files to implement a reducer action. This is a simple reducer with a *foo* action.
+There is no need to open several files to implement a reducer action.
+This is a simple reducer with a *create foo* action.
 
 ```javascript
 // Action name
@@ -65,6 +66,20 @@ export default function (state = initialState) {
     default: return state
   }
 }
+```
+
+<div class="paper warning">
+  Don't forget to add the new reducer to the reducers index.
+</div>
+
+Create a file in the *src/reducers/* folder, for instance *src/reducers/foo.js*. Then add it to the reducers index, i.e. in file *src/reducers/index.js* do something like
+
+```javascript
+import { combineReducers } from 'redux'
+
+export default combineReducers({
+  foo
+})
 ```
 
 What about *async actions*? Let's write a little helper to reduce the SLOC.
@@ -101,7 +116,7 @@ export const initialState = {
 }
 
 // Async action creator
-export const getBar () => (dispatch) => {
+export const getBar = () => (dispatch) => {
   dispatch({ type: GET_BAR.REQUEST })
 
   api().getBar().then(
