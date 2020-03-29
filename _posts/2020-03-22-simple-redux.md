@@ -50,16 +50,16 @@ export function createFoo () {
 }
 
 // Reducer
-export default function (state = initialState) {
+export default function (state = initialState, action) {
   switch (action.type) {
     // It is worth to enclose `case` body with brackets, both for indentation and scope.
     case CREATE_FOO: {
       return {
+        // notice the spread operator here, to provide immutability
+        ...state,
         foo: {
           created: true
         },
-        // notice the spread operator here, to provide immutability
-        ...state
       }
     }
 
@@ -116,7 +116,14 @@ export const initialState = {
 }
 
 // Async action creator
-export const getBar = () => (dispatch) => {
+export const getBar = () => (dispatch, getState) => {
+  const {
+    bar: { requestIsWaiting }
+  } = getState()
+
+  // Avoid multiple API calls.
+  if (requestIsWaiting) return
+
   dispatch({ type: GET_BAR.REQUEST })
 
   api().getBar().then(
