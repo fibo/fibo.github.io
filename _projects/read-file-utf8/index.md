@@ -61,7 +61,7 @@ For example to read version from a *package.json* you can do something like the 
 
 ```javascript
 async function showPackageJsonVersion () {
-  const { version } = await readFile('package.json').then(content => JSON.parse(content))
+  const { version } = await readFile('package.json').then(JSON.parse)
 
   console.log(version)
 }
