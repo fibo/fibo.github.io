@@ -36,7 +36,7 @@ This is a simple reducer with a *create foo* action.
 
 ```javascript
 // Action name
-const CREATE_FOO = 'CREATE_ACTION'
+const CREATE_FOO = 'CREATE_FOO'
 
 export const initialState = {
   foo: {

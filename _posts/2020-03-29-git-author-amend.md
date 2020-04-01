@@ -18,7 +18,7 @@ Usually I create in my user home folder, a folder named as the domain hosting th
 * github.com
 * source.my-customer.com
 
-Now it I want to use a different git config depending on the folder, I edit my *~/.gitconfig* file with something like
+Now if I want to use a different git config depending on the folder, I edit my *~/.gitconfig* file with something like
 
 ```
 [includeIf "gitdir:github.com/"]
@@ -28,15 +28,15 @@ Now it I want to use a different git config depending on the folder, I edit my *
 [includeIf "gitdir:source.my-customer.com/"]
   path = /Users/myuser/source.my-customer.com/.gitconfig
 [github]
-	user = fibo
+  user = my-github-nickname
 ```
 
 Where my */Users/myuser/github.com/.gitconfig* is something like
 
 ```
 [user]
-	name = github-nickname
-	email = my-github-email@example.com
+  name = my-github-nickname
+  email = my-github-email@example.com
 ```
 
 And the */Users/myuser/source.my-customer.com/.gitconfig* is something similar.
