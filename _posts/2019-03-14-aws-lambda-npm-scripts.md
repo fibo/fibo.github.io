@@ -202,12 +202,13 @@ After that, you can deploy later updates launching just
 npm run deploy
 ```
 
-You can update memory size, timeout and log retention by editing *config* content in your *package.json* and run
+You can update *log retention*, *memory size*, *runtime* (i.e. Node.js version) and *timeout* by editing *config* content in your *package.json* and run
 
 ```bash
-npm run set_memory_size
-npm run set_timeout
 npm run set_log_retention
+npm run set_memory_size
+npm run set_runtime
+npm run set_timeout
 ```
 
 ## Dependencies
@@ -218,7 +219,7 @@ Add your dependencies using npm as usual.  Consider there is a size limit on the
 You do not need to install <em>aws-sdk</em> package since <b>it is already provided</b> on cloud instances.
 </div>
 
-## Delete
+## Deletion
 
 Complete your script with the possibility to delete the lambda, add the following
 
