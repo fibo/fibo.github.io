@@ -122,7 +122,7 @@ aws iam create-policy --policy-name lambda_dynamo_myproject --policy-document fi
 Attach policy:
 
 ```bash
-aws iam attach-role-policy --policy-arn arn:aws:iam::1234567890:policy/lambda_dynamo_myproject --role-name MyProject --profile myproject,
+aws iam attach-role-policy --policy-arn arn:aws:iam::$AWS_ACCOUNT_ID:policy/lambda_dynamo_myproject --role-name MyProject --profile myproject,
 ```
 
 ## Config
@@ -133,26 +133,31 @@ I usually create a *config* attribute like this
   "config": {
     "log_retention": 7,
     "memory_size": 128,
+    "runtime": "nodejs12.x",
     "profile": "myproject",
     "region": "us-east-1",
     "role": "lambda_dynamo_myproject",
     "timeout": 10
   }
 ```
+
+<div paper="paper info">
+Node.js runtime <code>nodejs12.x</code> may be outdated and not yet avaialable, you are going to use the currently supported version.
+</div>
+
 ## Environment
 
 This was a tricky one. The correct syntax was not documented. Luckily I could find a [solution askying on GitHub](https://github.com/aws/aws-cli/issues/2638#issuecomment-352901978).
 
-In my case I was writing a trading bot using [BitStamp exchange](https://www.bitstamp.net/), so I needed the following environment variables
+Suppose you need the following environment variables
 
-* `BITSTAMP_APIKEY`
-* `BITSTAMP_APISECRET`
-* `BITSTAMP_CUSTOMERID`
+* `ENVIRONMENT_VARIABLE`
+* `ANOTHER_ENVIRONMENT_VARIABLE`
 
 Add the following npm script
 
 ```bash
-"set_environment": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --environment \"Variables={BITSTAMP_CUSTOMERID=$BITSTAMP_CUSTOMERID,BITSTAMP_APISECRET=$BITSTAMP_APISECRET,BITSTAMP_APIKEY=$BITSTAMP_APIKEY}\"",
+"set_environment": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --environment \"Variables={ENVIRONMENT_VARIABLE=$ENVIRONMENT_VARIABLE,ANOTHER_ENVIRONMENT_VARIABLE=$ANOTHER_ENVIRONMENT_VARIABLE}\"",
 ```
 
 ## Create and deploy
@@ -161,7 +166,7 @@ Add the following scripts to your *package.json*
 
 ```json
     "copy": "cp -r src/* build/; cp -r node_modules/ build/node_modules",
-    "create": "aws lambda create-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --description \"$npm_package_description\" --runtime nodejs8.10 --handler index.handler --role arn:aws:iam::1234567890:role/$npm_package_config_role --zip-file fileb://build.zip",
+    "create": "aws lambda create-function --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --description \"$npm_package_description\" --runtime $npm_package_config_runtime --handler index.handler --role arn:aws:iam::$AWS_ACCOUNT_ID:role/$npm_package_config_role --zip-file fileb://build.zip",
 
     "create_log_group": "aws logs create-log-group --log-group-name /aws/lambda/$npm_package_name",
     "deploy": "aws lambda update-function-code --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --zip-file fileb://build.zip",
@@ -173,6 +178,8 @@ Add the following scripts to your *package.json*
     "precreate": "npm run zip",
     "prezip": "rm -rf build.zip; npm run copy",
     "set_log_retention": "aws logs put-retention-policy --region $npm_package_config_region --profile $npm_package_config_profile --log-group-name /aws/lambda/$npm_package_name --retention-in-days $npm_package_config_log_retention",
+    "set_memory_size": "aws lambda update-function-configuration --region ${npm_package_config_region} --profile ${npm_package_config_profile} --function-name $npm_package_name --memory-size $npm_package_config_memory_size",
+    "set_runtime": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --runtime $npm_package_config_runtime",
     "set_timeout": "aws lambda update-function-configuration --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --timeout $npm_package_config_timeout",
     "zip": "cd build; zip -X -r ../build.zip * > /dev/null; cd ..",
 ```
@@ -205,8 +212,11 @@ npm run set_log_retention
 
 ## Dependencies
 
-Add your dependencies using npm as usual. However you do not need to install *aws-sdk* package since it is already provided on cloud instances.
-Consider there is a size limit on the zip file uploaded.
+Add your dependencies using npm as usual.  Consider there is a size limit on the zip file uploaded.
+
+<div paper="paper info">
+You do not need to install <em>aws-sdk</em> package since <b>it is already provided</b> on cloud instances.
+</div>
 
 ## Delete
 
@@ -224,5 +234,7 @@ So you can delete your function launching
 npm run _delete
 ```
 
+<div class="paper warning">
 Notice that the *_delete* string has an underscore prefix otherwise it is error prone, due to bash completion on npm scripts, in particular when you launch *npm run deploy*.
+</div>
 
