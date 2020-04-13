@@ -53,6 +53,11 @@ Select the lines you want to sort, for example do:
 
 Then sort lines with <kbd>:</kbd> <kbd>sort</kbd>.
 
+## Registers
+
+Hey, multiple clipboards are available: to see them type <kbd>ESC</kbd> `:reg`.
+Let’s say you want to copy a line into a specific register: `"kyy` will yank the current line into register *"k*. If you later want to paste register *"k* you can do this: `"kp`. Easy, huh?
+
 ## Marks
 
 Create a mark labeled as **a**: `ma`.
