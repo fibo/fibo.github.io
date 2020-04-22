@@ -26,7 +26,7 @@ The npm scripts below assume, just to simplify, that:
 * Lambdas run on *us-east-1* region.
 * Node.js runtime is `8.10`.
 * You created a *myproject* AWS CLI profile and your keys own all required permissions.
-* Your *AWS account id* is, ehm, `1234567890`.
+* Your *AWS account id* is, ehm, `1234567890`. It is stored in an environment variable: `AWS_ACCOUNT_ID`.
 * Your project uses DynamoDB.
 * Code is in *src/* folder and package main file is *src/index.js*.
 * Lambdas main function is named `handler`.
@@ -57,7 +57,7 @@ Create a IAM role, for instance *lambda_dynamo_myproject*, that has permissions 
 
 I created a *iam/* folder with the following files
 
-> lambda-role.json
+> lambda-policy.json
 
 ```json
 {
@@ -110,13 +110,13 @@ I created a *iam/* folder with the following files
 Create role:
 
 ```bash
-aws iam create-role --role-name MyProject --assume-role-policy-document file://iam/lambda-role.json --profile myproject,
+aws iam create-role --role-name MyProject --assume-role-policy-document file://iam/lambda-role.json --profile myproject
 ```
 
 Create policy:
 
 ```bash
-aws iam create-policy --policy-name lambda_dynamo_myproject --policy-document file://iam/lambda-policy.json --profile myproject,
+aws iam create-policy --policy-name lambda_dynamo_myproject --policy-document file://iam/lambda-policy.json --profile myproject
 ```
 
 Attach policy:
@@ -171,7 +171,7 @@ Add the following scripts to your *package.json*
     "create_log_group": "aws logs create-log-group --log-group-name /aws/lambda/$npm_package_name",
     "deploy": "aws lambda update-function-code --region $npm_package_config_region --profile $npm_package_config_profile --function-name $npm_package_name --zip-file fileb://build.zip",
     "postcreate_log_group": "npm run set_log_retention",
-    "postcreate": "npm run create_log_group; npm run set_timeout, npm run set_memory_size; rm -rf build/",
+    "postcreate": "npm run create_log_group; npm run set_timeout; npm run set_memory_size; rm -rf build/",
     "postdeploy": "rm -rf build/; rm build.zip",
     "precopy": "rm -rf node_modules/; npm install --production; rm -rf build; mkdir build",
     "predeploy": "npm run zip",
