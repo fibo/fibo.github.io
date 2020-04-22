@@ -17,18 +17,19 @@ npm: true
 
 ## API
 
-### `read(filePath)`
+### `readFile(filePath: String): Promise<String>`
 
-It is a function that returns a *Promise* and requires one parameter:
+It is a function that returns a *Promise* and requires one *String* parameter:
 
 * **@param** `{String}` filePath
+* **@returns** `{Promise<String>}` content
 
 ## Usage
 
 Read from a text file.
 
 ```javascript
-const read = require('read-file-utf8')
+const readFile = require('read-file-utf8')
 
 const filePath = 'file.txt'
 
@@ -37,12 +38,12 @@ const filePath = 'file.txt'
 async function example () {
   try {
     // Read file content.
-    //////////////////////////////////////////////////////////////////
-    const content = await read(filePath)
+    ////////////////////
+    const content = await readFile(filePath)
 
     console.log(content)
   } catch (error) {
-    // In case you do not have permissions,
+    // In case you do not have read permissions,
     // you may want to handle it here.
     console.error(error)
   }
@@ -79,10 +80,10 @@ Add also a *sql/index.js* with the following content
 
 ```javascript
 const path = require('path')
-const read = require('read-file-utf8')
+const readFile = require('read-file-utf8')
 
 function sql (fileName) {
-  return read(path.join(__dirname, `${fileName}.sql`))
+  return readFile(path.join(__dirname, `${fileName}.sql`))
 }
 
 module.exports = sql
