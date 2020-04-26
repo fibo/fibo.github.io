@@ -2,7 +2,7 @@
   "rules": {
     "block-no-empty": true,
     "comment-no-empty": true,
-    "declaration-no-important": true,
+    "declaration-no-important": null,
     "max-empty-lines": 1,
     "media-feature-name-no-vendor-prefix": true,
     "no-duplicate-at-import-rules": true,
