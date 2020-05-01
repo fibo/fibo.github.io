@@ -205,6 +205,8 @@ description: >
 
 ## Articles and other resources
 
+[CSS for internationalisation](https://chenhuijing.com/blog/css-for-i18n)
+
 [CSS variable secrets](https://www.youtube.com/watch?v=UQRSaG1hQ20)
 
 [About Flexbox](https://speakerdeck.com/makhbeth/about-flexbox-you-cant-float-anymore)
