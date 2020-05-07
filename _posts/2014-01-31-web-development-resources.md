@@ -49,6 +49,8 @@ See [my JavaScript frameworks section]({% post_url 2014-01-16-javascript-resourc
 
 ## Sites
 
+[LAWS OF UX](https://lawsofux.com)
+
 [World Wide Web Consortium (W3C)](http://www.w3.org/)
 
 [Can I use ...](http://caniuse.com/)
