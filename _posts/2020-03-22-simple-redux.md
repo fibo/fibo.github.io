@@ -50,8 +50,8 @@ export function createFoo () {
 }
 
 // Reducer
-export default function (state = initialState, action) {
-  switch (action.type) {
+export default function (state = initialState, { type: actionType }) {
+  switch (actionType) {
     // It is worth to enclose `case` body with brackets, both for indentation and scope.
     case CREATE_FOO: {
       return {
@@ -94,6 +94,10 @@ export default function asyncActions (NAME) {
 }
 ```
 
+<div class="paper info">
+  I published this tiny helper to create async actions: <a href="http://g14n.info/async-actions">async-actions</a>.
+</div>
+
 Then, let's say we want to create another reducer with an async *get bar* action
 
 ```javascript
@@ -127,14 +131,14 @@ export const getBar = () => (dispatch, getState) => {
   dispatch({ type: GET_BAR.REQUEST })
 
   api().getBar().then(
-    () => dispatch({ type: GET_BAR.SUCCESS }),
+    (data) => dispatch({ data, type: GET_BAR.SUCCESS }),
     (error) => dispatch({ error, type: GET_BAR.FAILURE })
   )
 }
 
 // Reducer
-export default function (state = initialState) {
-  switch (action.type) {
+export default function (state = initialState, { type: actionType, ...action }) {
+  switch (actionType) {
     case GET_BAR.REQUEST: {
       return {
         bar: {
@@ -173,6 +177,7 @@ export default function (state = initialState) {
         ...state
       }
     }
+
     default: return state
   }
 }
