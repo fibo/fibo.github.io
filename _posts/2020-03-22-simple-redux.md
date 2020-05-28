@@ -98,16 +98,20 @@ export default function asyncActions (NAME) {
   I published this tiny helper to create async actions: <a href="http://g14n.info/async-actions">async-actions</a>.
 </div>
 
-Then, let's say we want to create another reducer with an async *get bar* action
+Then, let's say we want to create another reducer with an async *READ bar* action.
+
+<div class="paper success">
+  I strongly recommend to use a <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> naming convention, for example <code>createBar</code>, <code>readBar</code>, etc.
+</div>
 
 ```javascript
 // Import api module, this could be imported from a separated package... more about this topic later.
-// By now, notice that it provides a getBar() method.
+// By now, notice that it provides a readBar() method.
 import api from '../api.js'
 import asyncActions from '../utils/asyncActions.js'
 
-// Action names, will be GET_BAR.REQUEST, GET_BAR.SUCCESS, GET_BAR.FAILURE
-const GET_BAR = asyncActions('GET_BAR')
+// Action names, will be READ_BAR.REQUEST, READ_BAR.SUCCESS, READ_BAR.FAILURE
+const READ_BAR = asyncActions('READ_BAR')
 
 export const initialState = {
   bar: {
@@ -119,27 +123,36 @@ export const initialState = {
   }
 }
 
+// Using a `selector` function to access the state is very handy.
+// It may seem overkill at the beginning but since selectors can be composed
+// it is a good idea in order to improve code maintenance.
+export const selectReadBarRequestIsWaiting = (state) => (
+  state.foo.requestIsWaiting
+)
+
 // Async action creator
-export const getBar = () => (dispatch, getState) => {
-  const {
-    bar: { requestIsWaiting }
-  } = getState()
+export const readBar = () => (dispatch, getState) => {
+  const state = getState()
+
+  const requestIsWaiting = selectReadBarRequestIsWaiting(state)
 
   // Avoid multiple API calls.
   if (requestIsWaiting) return
 
-  dispatch({ type: GET_BAR.REQUEST })
+  dispatch({ type: READ_BAR.REQUEST })
 
-  api().getBar().then(
-    (data) => dispatch({ data, type: GET_BAR.SUCCESS }),
-    (error) => dispatch({ error, type: GET_BAR.FAILURE })
+  // Always return a Promise.
+  // This is handy to chain actions, for example to launch multiple API request in series.
+  return api().readBar().then(
+    (data) => dispatch({ data, type: READ_BAR.SUCCESS }),
+    (error) => dispatch({ error, type: READ_BAR.FAILURE })
   )
 }
 
 // Reducer
 export default function (state = initialState, { type: actionType, ...action }) {
   switch (actionType) {
-    case GET_BAR.REQUEST: {
+    case READ_BAR.REQUEST: {
       return {
         bar: {
           ...state.bar,
@@ -152,7 +165,7 @@ export default function (state = initialState, { type: actionType, ...action }) 
       }
     }
 
-    case GET_BAR.SUCCESS: {
+    case READ_BAR.SUCCESS: {
       return {
         bar: {
           ...state.bar,
@@ -165,7 +178,7 @@ export default function (state = initialState, { type: actionType, ...action }) 
       }
     }
 
-    case GET_BAR.FAILURE: {
+    case READ_BAR.FAILURE: {
       // TODO Do some error handling, using `action.error`.
       return {
         bar: {
