@@ -122,7 +122,7 @@ aws iam create-policy --policy-name lambda_dynamo_myproject --policy-document fi
 Attach policy:
 
 ```bash
-aws iam attach-role-policy --policy-arn arn:aws:iam::$AWS_ACCOUNT_ID:policy/lambda_dynamo_myproject --role-name MyProject --profile myproject,
+aws iam attach-role-policy --policy-arn arn:aws:iam::$AWS_ACCOUNT_ID:policy/lambda_dynamo_myproject --role-name MyProject --profile myproject
 ```
 
 ## Config
