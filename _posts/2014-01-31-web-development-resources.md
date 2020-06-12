@@ -6,6 +6,11 @@ description: >
     Collection of links I find on my way about Web development.
 ---
 
+## Aggregators
+
+[NoDesign.dev](https://nodesign.dev/)
+: A collection of tools for developers who have little to no artistic talent.
+
 ## Stock resources
 
 [Awesome stock resources](https://github.com/neutraltone/awesome-stock-resources)
@@ -19,6 +24,9 @@ description: >
 
 [Placeholder.com](https://placeholder.com)
 : The Free Image Placeholder Service Favoured By Designers
+
+[unDraw](https://undraw.co/)
+: Open-source illustrations for any idea you can imagine and create.
 
 ## Online tools
 
