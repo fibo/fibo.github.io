@@ -51,19 +51,26 @@ export function createFoo () {
 
 // Reducer
 export default function (state = initialState, { type: actionType }) {
-  switch (actionType) {
-    // It is worth to enclose `case` body with brackets, both for indentation and scope.
-    case CREATE_FOO: {
-      return {
-        // notice the spread operator here, to provide immutability
-        ...state,
-        foo: {
-          created: true
-        },
+  // Wrap the reducer in a try catch otherwise an error could cause a blank page client side.
+  try {
+    switch (actionType) {
+      // It is worth to enclose `case` body with brackets, both for indentation and scope.
+      case CREATE_FOO: {
+        return {
+          // notice the spread operator here, to provide immutability
+          ...state,
+          foo: {
+            created: true
+          },
+        }
       }
-    }
 
-    default: return state
+      default: return state
+    }
+  } catch (error) {
+    console.error(error)
+
+    return state
   }
 }
 ```
@@ -151,47 +158,53 @@ export const readBar = () => (dispatch, getState) => {
 
 // Reducer
 export default function (state = initialState, { type: actionType, ...action }) {
-  switch (actionType) {
-    case READ_BAR.REQUEST: {
-      return {
-        bar: {
-          ...state.bar,
-          // Reset error, if any.
-          responseHasError: false,
-          // We are waiting for a request now, this could be used for example to show a spinner in a button.
-          requestIsWaiting: true,
-        },
-        ...state
+  try {
+    switch (actionType) {
+      case READ_BAR.REQUEST: {
+        return {
+          bar: {
+            ...state.bar,
+            // Reset error, if any.
+            responseHasError: false,
+            // We are waiting for a request now, this could be used for example to show a spinner in a button.
+            requestIsWaiting: true,
+          },
+          ...state
+        }
       }
-    }
 
-    case READ_BAR.SUCCESS: {
-      return {
-        bar: {
-          ...state.bar,
-          // Waiting for the request ended.
-          requestIsWaiting: false,
-          // Store request data. This also may vary a lot, you may need to use some ES6 function here.
-          data: action.data,
-        },
-        ...state
+      case READ_BAR.SUCCESS: {
+        return {
+          bar: {
+            ...state.bar,
+            // Waiting for the request ended.
+            requestIsWaiting: false,
+            // Store request data. This also may vary a lot, you may need to use some ES6 function here.
+            data: action.data,
+          },
+          ...state
+        }
       }
-    }
 
-    case READ_BAR.FAILURE: {
-      // TODO Do some error handling, using `action.error`.
-      return {
-        bar: {
-          ...state.bar,
-          // Stop waiting for response and turn on the error flag.
-          requestIsWaiting: false,
-          responseHasError: true
-        },
-        ...state
+      case READ_BAR.FAILURE: {
+        // TODO Do some error handling, using `action.error`.
+        return {
+          bar: {
+            ...state.bar,
+            // Stop waiting for response and turn on the error flag.
+            requestIsWaiting: false,
+            responseHasError: true
+          },
+          ...state
+        }
       }
-    }
 
-    default: return state
+      default: return state
+    }
+  } catch (error) {
+    console.error(error)
+
+    return state
   }
 }
 ```
