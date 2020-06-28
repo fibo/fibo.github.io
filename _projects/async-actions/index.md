@@ -32,3 +32,7 @@ function myReducer (state, action) {
   }
 }
 ```
+
+## License
+
+[MIT](http://g14n.info/mit-license)
