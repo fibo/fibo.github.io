@@ -44,7 +44,7 @@ I will use this utility function: `listToKeyValues`.
  *
  * ['a', 'b'] ---> { a: 'a', b: 'b' }
  */
-export default function listToKeyValues<T extends string> (list: readonly T[]) {
+ export default function listToKeyValues<T extends string> (list: readonly T[]): {[key: string]: T} {
   return list.reduce((obj: {[key: string]: T}, key: T) => ({...obj, [key]: key}), {})
 }
 ```
@@ -73,3 +73,8 @@ const myField = 'starDate'
 ```
 
 The `field` and `fields` are **readonly** and can be used in several ways in a code base.
+For example, just to mention one use case, I often use them in field labels translations.
+
+<div class="paper warning">
+Please notice that to lint the code above you need to configure your ESLint adding <code>"parser": "@typescript-eslint/parser"</code>.
+</div>
