@@ -85,6 +85,7 @@ Split window and open another file: `:split path/to/file`.
 Split window and open current directory: `:split .`
 
 Split window to a file relative to current open file. This will expand to current file directory: `:split %:p:h` <kbd>TAB</kbd>.
+You can also add this map to your config `map ,s :split <C-R>=expand("%:p:h") . "/" <CR>` (credits here[https://stackoverflow.com/a/1708936]).
 
 ## Tabs
 

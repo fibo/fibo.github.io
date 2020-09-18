@@ -19,7 +19,7 @@ description: >
 [vim.wikia.com][2]
 : Vim Tips wiki
 
-[VIM adventures](http://vim-adventures.com/)
+[Vim adventures](http://vim-adventures.com/)
 : Learn Vim while playing a game
 
 [Vimdoc](http://vimdoc.sourceforge.net/)
