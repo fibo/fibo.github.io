@@ -44,7 +44,7 @@ I will use this utility function: `listToKeyValues`.
  *
  * ['a', 'b'] ---> { a: 'a', b: 'b' }
  */
- export default function listToKeyValues<T extends string> (list: readonly T[]): {[key: string]: T} {
+ export function listToKeyValues<T extends string> (list: readonly T[]): {[key: string]: T} {
   return list.reduce((obj: {[key: string]: T}, key: T) => ({...obj, [key]: key}), {})
 }
 ```
