@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "npm run browserify; npm run cp; npm run readmes; npm run data",
-    "browserify": "browserify -e src/index.js",
+    "browserify": "browserify -e src/index.js -o js/bundle.js",
     "cp": "npm run cp:metadata",
     "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
@@ -37,12 +37,12 @@
   },
   "dependencies": {
     "anchor-js": "^4.2.2",
-    "load-html": "^1.0.2"
+    "load-html": "^1.2.0"
   },
   "devDependencies": {
-    "browserify": "^14.3.0",
+    "browserify": "^16.5.2",
     "dot-editorconfig": "^1.0.1",
     "pre-commit": "^1.2.2",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.7.2"
   }
 }
