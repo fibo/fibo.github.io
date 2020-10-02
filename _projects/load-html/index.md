@@ -18,6 +18,7 @@ npm: true
 * Can be used to load Web Components, as an alternative to HTML imports: see [Web Components Template example](https://github.com/fibo/load-html/tree/master/examples/webcomponents-template).
 * Supports IE 10.
 * Since it uses `innerHTML` it will **not** execute *script* tags.
+* Can be used on modern browsers to load <em>WebComponents</em>, see [WebComponents example folder](https://github.com/fibo/load-html/tree/master/examples/web-components)
 
 ## Usage
 
@@ -150,13 +151,14 @@ Fetch the HTML content for each node.
         if (loader.status == 200) {
           node.innerHTML = loader.responseText;
         }
-        node.setAttribute('loaded', true);
 ```
 
-Keep track of number of DOM nodes loaded, then try to repeat recursively. Invoke *callback*, if any.
+Keep track of number of DOM nodes loaded, then try to repeat recursively. When done, invoke *callback*, if any.
 
 ```javascript
+        node.setAttribute('data-loaded', true);
         toBeLoaded--;
+
         if (toBeLoaded == 0) {
           if (typeof callback == 'function') {
             callback(nodes)
@@ -174,13 +176,13 @@ Send request to fetch content.
       loader.send();
 ```
 
-Store error, mark include as loaded.
+Store error, mark node as loaded.
 
 ```javascript
-    } catch (e) {
-      console.error(e);
-      node.setAttribute('error', e);
-      node.setAttribute('loaded', true);
+    } catch (error) {
+      console.error(error);
+      node.setAttribute('data-error', error.message);
+      node.setAttribute('data-loaded', true);
     }
   })
 }
