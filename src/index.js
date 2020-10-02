@@ -6,5 +6,3 @@ window.addEventListener('load', function() {
   scrollHandler()
   loadHtml()
 })
-
-require('./anchor.js')
