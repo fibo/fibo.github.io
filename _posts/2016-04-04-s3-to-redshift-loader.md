@@ -190,8 +190,8 @@ Where *test_event.json* contains a copy of the test event configured on AWS. Som
           "size": 1024
         },
         "bucket": {
-          "arn": "arn:aws:s3:::s3.beintoo.net",
-          "name": "s3.beintoo.net",
+          "arn": "arn:aws:s3:::s3.my-bucket.net",
+          "name": "s3.my-bucket.net",
           "ownerIdentity": {
             "principalId": "EXAMPLE"
           }
