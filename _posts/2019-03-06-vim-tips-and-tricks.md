@@ -10,11 +10,11 @@ description: >
 
 Just hit `ZZ`.
 
-## Undo redo
+## Undo | redo
 
 Un-do with `u`. Re-do with <kbd>CTRL</kbd> <kbd>r</kbd>.
 
-Jut type `.` in command mode to repeat last executed command.
+Type `.` in command mode to repeat last executed command.
 
 ## Moving faster
 
