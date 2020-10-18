@@ -9,7 +9,6 @@ permalink: ./:year/:month/:title/
 exclude:
   - _projects/_readmes
   - _projects/**/index.yaml
-  - bower.json
   - Gemfile
   - Gemfile.lock
   - npm-debug.log
@@ -81,13 +80,20 @@ google-site-verification: sL7WzWB8YUQPFoN0Rq_lGfM5JDdQ3r6PMj3_vhBHLwM
 disqus:
   shortname: g14n
 
-clusters:
-  - Perl
+tags:
+  - AWS
   - Git
+  - Go
+  - Javascript
+  - Mac
+  - Math
   - Node
-  - Netezza
+  - Perl
+  - React
+  - Software
+  - SQL
+  - Unix
+  - Vim
   - Web
   - Windows
-  - IWTBF
-  - Unix
 

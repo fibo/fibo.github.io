@@ -9,7 +9,7 @@ layout: null
 Mathematician + Coder : Casati Gianluca
 Site                  : g14n.info
 Contact               : casati_gianluca {at|chiocciola|arroba} yàh0Oo° dot IT`
-Location              : Milan, Italy
+Location              : Genoa, Italy
 
 /* THANKS */
 
