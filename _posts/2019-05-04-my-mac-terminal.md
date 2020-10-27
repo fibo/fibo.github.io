@@ -98,6 +98,12 @@ alias ns='npm start'
 alias nt='npm test'
 ```
 
+Run also the following commands to set *git aliases*:
+
+```bash
+git config --global alias.conflicts "diff --name-only --diff-filter=U"
+```
+
 ## Auto completion
 
 Create a *~/.bash/completion* folder and copy there files [npm](https://github.com/fibo/home/blob/home/.bash/completion/npm) and [git-completion.bash](https://github.com/fibo/home/blob/home/.bash/completion/git-completion.bash) then add these lines to your *.bash_profile*.
