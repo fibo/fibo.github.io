@@ -36,7 +36,6 @@
     "url": "https://github.com/fibo/fibo.github.io/issues"
   },
   "dependencies": {
-    "anchor-js": "^4.2.2",
     "load-html": "^1.2.0"
   },
   "devDependencies": {
