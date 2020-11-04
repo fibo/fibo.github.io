@@ -53,6 +53,8 @@ Select the lines you want to sort, for example do:
 
 Then sort lines with <kbd>:</kbd> <kbd>sort</kbd>.
 
+To sort and remove duplicates to <kbd>:</kbd> <kbd>sort u</kbd>.
+
 ## Registers
 
 Hey, multiple clipboards are available: to see them type <kbd>ESC</kbd> `:reg`.
