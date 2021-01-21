@@ -8,7 +8,7 @@
     "login": "fibo",
     "id": 176730,
     "node_id": "MDQ6VXNlcjE3NjczMA==",
-    "avatar_url": "https://avatars3.githubusercontent.com/u/176730?v=4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/176730?v=4",
     "gravatar_id": "",
     "url": "https://api.github.com/users/fibo",
     "html_url": "https://github.com/fibo",
@@ -108,5 +108,5 @@
   "allow_rebase_merge": true,
   "delete_branch_on_merge": false,
   "network_count": 0,
-  "subscribers_count": 1
+  "subscribers_count": 2
 }
