@@ -9,11 +9,11 @@ description: >
 
 ## Goal
 
-I have two user emails created on my *Google Workspace*, for example *bob@mycompany.com* and *alice@mycompany.com*. Both are in the *administration@mycompany.com* group. We are going to achieve that they can recieve and reply to emails as *administration@mycompany.com*
+I have two user emails created on my *Google Workspace*, for example *bob at mycompany.com* and *alice at mycompany.com*. Both are in the *administration at mycompany.com* group. We are going to achieve that they can recieve and reply to emails as *administration at mycompany.com*
 
 ## Instructions
 
-Login to [Admin console](https://admin.google.com). Go to *Groups* and create a group email, for example, *Administration* with email *administration@mycompany.com*, then add the users.
+Login to [Admin console](https://admin.google.com). Go to *Groups* and create a group email, for example, *Administration* with email *administration at mycompany.com*, then add the users.
 
 In order to be able to recieve emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
 
