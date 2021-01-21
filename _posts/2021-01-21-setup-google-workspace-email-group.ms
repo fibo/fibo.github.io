@@ -9,18 +9,19 @@ description: >
 
 ## Goal
 
-I have two user emails created on my *Google Workspace*, for example *bob@mycompany.com* and *alice@mycompany.com*. Both are in the *administration@mycompany.com* group. We are going to achieve that they can recieve and reply to emails as *administration*mycompany.com*
+I have two user emails created on my *Google Workspace*, for example *bob@mycompany.com* and *alice@mycompany.com*. Both are in the *administration@mycompany.com* group. We are going to achieve that they can recieve and reply to emails as *administration@mycompany.com*
 
 ## Instructions
 
-1. Login to [Admin console](https://admin.google.com)
-2. Go to *Groups* and create a group email, for example, *Administration* with email *administration@mycompany.com*, then add the users.
-3. In order to be able to recieve emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
-4. Then every member need to configure his/her settings to enable **send mail as** feature.
+Login to [Admin console](https://admin.google.com). Go to *Groups* and create a group email, for example, *Administration* with email *administration@mycompany.com*, then add the users.
+
+In order to be able to recieve emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
+
+![Extenal can publish posts](/images{{ page.id }}/external-can-publish-posts.png)
+
+Then every member need to configure his/her settings to enable **send mail as** feature.
 
 ![Add another email](/images{{ page.id }}/gmail-add-another-email.png)
-
-**NOTA BENE**
 
 In the confirmation box (the yellow one) make sure that *Treat as an alias* is **NOT** checked.
 
@@ -31,3 +32,4 @@ Once completed you will be able with your *user email* not only to recieve email
 ## Credits
 
 [Send & Receive Emails From G Suite Groups](https://www.goldyarora.com/g-suite-groups/)
+
