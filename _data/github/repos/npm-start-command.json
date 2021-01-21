@@ -8,7 +8,7 @@
     "login": "fibo",
     "id": 176730,
     "node_id": "MDQ6VXNlcjE3NjczMA==",
-    "avatar_url": "https://avatars3.githubusercontent.com/u/176730?v=4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/176730?v=4",
     "gravatar_id": "",
     "url": "https://api.github.com/users/fibo",
     "html_url": "https://github.com/fibo",
@@ -65,7 +65,7 @@
   "releases_url": "https://api.github.com/repos/fibo/npm-start-command/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/npm-start-command/deployments",
   "created_at": "2017-01-19T09:49:54Z",
-  "updated_at": "2020-05-05T11:08:36Z",
+  "updated_at": "2021-01-13T04:12:11Z",
   "pushed_at": "2020-05-05T11:08:34Z",
   "git_url": "git://github.com/fibo/npm-start-command.git",
   "ssh_url": "git@github.com:fibo/npm-start-command.git",
@@ -73,8 +73,8 @@
   "svn_url": "https://github.com/fibo/npm-start-command",
   "homepage": "http://g14n.info/npm-start-command",
   "size": 8,
-  "stargazers_count": 1,
-  "watchers_count": 1,
+  "stargazers_count": 3,
+  "watchers_count": 3,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
@@ -95,7 +95,7 @@
   },
   "forks": 1,
   "open_issues": 0,
-  "watchers": 1,
+  "watchers": 3,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -108,5 +108,5 @@
   "allow_rebase_merge": true,
   "delete_branch_on_merge": false,
   "network_count": 1,
-  "subscribers_count": 1
+  "subscribers_count": 2
 }
