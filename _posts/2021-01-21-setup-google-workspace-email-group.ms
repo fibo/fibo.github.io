@@ -1,0 +1,33 @@
+---
+title: How to setup Google Workspace group to send and recieve email
+tags:
+  - Google
+  - Marketing
+description: >
+    Follow these complete instructions to create a group Google Workspace to send and recieve email
+---
+
+## Goal
+
+I have two user emails created on my *Google Workspace*, for example *bob@mycompany.com* and *alice@mycompany.com*. Both are in the *administration@mycompany.com* group. We are going to achieve that they can recieve and reply to emails as *administration*mycompany.com*
+
+## Instructions
+
+1. Login to [Admin console](https://admin.google.com)
+2. Go to *Groups* and create a group email, for example, *Administration* with email *administration@mycompany.com*, then add the users.
+3. In order to be able to recieve emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
+4. Then every member need to configure his/her settings to enable **send mail as** feature.
+
+![Add another email](/images{{ page.id }}/gmail-add-another-email.png)
+
+**NOTA BENE**
+
+In the confirmation box (the yellow one) make sure that *Treat as an alias* is **NOT** checked.
+
+Go ahead and complete with email confirmation code as required.
+
+Once completed you will be able with your *user email* not only to recieve emails sent to the *group email* but also to reply them. During email composition, just click on the dropdown icon to choose a group email address.
+
+## Credits
+
+[Send & Receive Emails From G Suite Groups](https://www.goldyarora.com/g-suite-groups/)
