@@ -4,7 +4,7 @@ tags:
   - Google
   - Marketing
 description: >
-    Follow these complete instructions to create a group Google Workspace to send and recieve email
+    Follow these complete instructions to create a group Google Workspace to send and recieve email.
 ---
 
 ## Goal
@@ -28,6 +28,22 @@ In the confirmation box (the yellow one) make sure that *Treat as an alias* is *
 Go ahead and complete with email confirmation code as required.
 
 Once completed you will be able with your *user email* not only to recieve emails sent to the *group email* but also to reply them. During email composition, just click on the dropdown icon to choose a group email address.
+
+## Bonus tip
+
+This is **hot**! You can add a *domain alias* and manage multiple projects with different domains on a single Google Workspace account. Enter the [admin console](https://admin.google.com), go to the *Domains* section and add an alias domain.
+
+Following the instructions, I added a <code>TXT</code> record on my *Route 53* panel at the *AWS* account that manages my alias domain.
+
+Then configured the `MX` records, this is what *Google* provided me
+
+![MX records on Google](/images{{ page.id }}/mx-records-on-google.png)
+
+and this is how I translated the *priorities* into *AWS* console
+
+![MX records on AWS](/images{{ page.id }}/mx-records-on-aws.png)
+
+When DNS propagated I was able to recieve an email to *myuser@my-alias-domain.com* on my *Google Workspace* gmail.
 
 ## Credits
 
