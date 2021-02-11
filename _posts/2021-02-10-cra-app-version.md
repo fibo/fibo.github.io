@@ -1,9 +1,9 @@
 ---
-title: Create React app version
+title: Brand your app version with Create React App
 tags:
   - React
 description: >
-    Write your CRA app version into the HTML. Quick and simple implementation.
+    Write your app version into the HTML. Quick and simple implementation.
 ---
 
 ## Motivation
@@ -25,3 +25,19 @@ Then add the following line to the *public/index.html* file
 ```
 
 And that's it, now your build will generate an *index.html* that contains the app version, as reported in your *package.json* file.
+
+## TypeScript declaration
+
+If you are using *TypeScript*, edit your *src/react-app-env.d.ts* and add something like the following snippet
+
+```typescript
+/// <reference types="react-scripts" />
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: 'development' | 'production' | 'test'
+    PUBLIC_URL: string
+    REACT_APP_VERSION: string
+  }
+}
+```
+
