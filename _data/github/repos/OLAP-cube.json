@@ -81,7 +81,7 @@
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 8,
+  "forks_count": 9,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
@@ -93,7 +93,7 @@
     "url": "https://api.github.com/licenses/mit",
     "node_id": "MDc6TGljZW5zZTEz"
   },
-  "forks": 8,
+  "forks": 9,
   "open_issues": 2,
   "watchers": 18,
   "default_branch": "master",
@@ -107,6 +107,6 @@
   "allow_merge_commit": true,
   "allow_rebase_merge": true,
   "delete_branch_on_merge": false,
-  "network_count": 8,
+  "network_count": 9,
   "subscribers_count": 2
 }
