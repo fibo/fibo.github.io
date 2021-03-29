@@ -108,5 +108,5 @@
   "allow_rebase_merge": true,
   "delete_branch_on_merge": false,
   "network_count": 12,
-  "subscribers_count": 9
+  "subscribers_count": 10
 }
