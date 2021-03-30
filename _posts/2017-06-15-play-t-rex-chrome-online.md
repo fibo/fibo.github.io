@@ -6,11 +6,13 @@ description: >
     If you also like Chrome, you probably also like to play with the T-Rex game but then suddenly the network arrives and the game is over...
 ---
 
-...but there is a way to play also when you are online. Just copy and paste
-the following URL into Chrome
+...but there is a way to play also when you are online.
+
+Just copy and paste the following URL into Chrome `chrome://network-error/-106`.
+Or even better!
 
 ```
-chrome://network-error/-106
+chrome://dino
 ```
 
 I discovered it few minutes ago, and I have just broke my record: see the
