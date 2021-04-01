@@ -13,7 +13,9 @@ I cannot stop using Vim, I tryed many times with several editors. No way.
 
 The result is the best of both *good old* Vim and modern improvements. However, the configuration can take a lot of time scouting and trying plugins and configurations. Let me share what I obtained: a cool environment for web development.
 
-First of all, Neovim configuration entry file is *~/.config/nvim/init.vim*. This is how mine looks like.
+Install vim-plug for Neovim first, [instructions here](https://github.com/junegunn/vim-plug#neovim).
+
+Neovim configuration entry file is *~/.config/nvim/init.vim*. This is how it looks like.
 
 ```vim
 set encoding=UTF-8
@@ -24,30 +26,46 @@ set number
 
 " open terminal in footer
 nnoremap <leader>t :below 10sp term://$SHELL<cr>i
-" hit Escape key to exit from terminal mode
+" hit `Escape` key to exit from terminal mode
 :tnoremap <Esc> <C-\><C-n>
 
 " load plugins
 source ~/.config/nvim/plugins.vim
 ```
 
-I keep plugins in a separate file: *~/.config/nvim/plugins.vim*. Few of the following plugins are a personal choice, for example the *bubblegum* colorscheme.
+I keep plugins in a separate file: *~/.config/nvim/plugins.vim*.
+One of the following plugins is a personal choice, i.e. the *bubblegum* colorscheme (configured as last one).
+Other than that the plugins listed are considered **essentials** to me. There are also few custom configurations.
 
 ```vim
-" vim-plug
+" vim-plug start
 call plug#begin('~/.nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 
-" my favourite colorscheme
-Plug 'baskerville/bubblegum'
-colorscheme bubblegum-256-dark
-let g:airline_theme='bubblegum'
+" git integration
+Plug 'tpope/vim-fugitive'
 
-" Add plugins to &runtimepath
+Plug 'ryanoasis/vim-devicons'
+let g:webdevicons_enable_nerdtree = 1
+
+" files hierarchy tree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" toggle NERDTree with CTRL-n
+map <C-n> :NERDTreeToggle<CR>
+
+" my favourite colorscheme, bubblegum
+Plug 'baskerville/bubblegum'
+
+" vim-plug end, add plugins to &runtimepath
 call plug#end()
 
+" activate bubblegum colorscheme
+colorscheme bubblegum-256-dark
+let g:airline_theme='bubblegum'
 ```
 
+Once *vim-plug* is installed, and both config files are created, open Neovim and run command `: PlugInstall`.
