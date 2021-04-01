@@ -139,16 +139,6 @@ function () {
 }
 ```
 
-## Icons
-
-<span class="badge">Plugin</span>
-
-Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf). Wow, that font name sounds good!
-
-Thanks to vim plugin [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) you will get an awesome result.
-
-![Vim devicons](/images{{ page.id }}/vim-devicons.png)
-
 ## Emmet
 
 <span class="badge">Plugin</span>
