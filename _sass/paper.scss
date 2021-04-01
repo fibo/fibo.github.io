@@ -1,11 +1,11 @@
 .paper {
-  box-shadow: 4px 4px 5px $shadow;
+  box-shadow: 1px 1px 7px $shadow;
   display: block;
   margin-bottom: $margin-bottom;
   padding: 1rem;
   text-align: start;
 
   &:hover {
-    box-shadow: 5px 5px 7px $shadow;
+    box-shadow: 2px 2px 8px $shadow;
   }
 }
