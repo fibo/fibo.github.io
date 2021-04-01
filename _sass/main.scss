@@ -2,13 +2,13 @@ main {
   max-width: 71rem;
   margin: auto;
 
-  margin-top: $nav-height + 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  margin-top: $nav-height + 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
-  @media screen and (min-width: 768px) {
-    margin-top: $nav-height + 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+  @media screen and (max-width: $mobile-break-point) {
+    margin-top: $nav-height + 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }

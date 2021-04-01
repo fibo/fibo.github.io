@@ -13,9 +13,9 @@ I cannot stop using Vim, I tryed many times with several editors. No way.
 
 The result is the best of both *good old* Vim and modern improvements. However, the configuration can take a lot of time scouting and trying plugins and configurations. Let me share what I obtained: a cool environment for web development.
 
-Install vim-plug for Neovim first, [instructions here](https://github.com/junegunn/vim-plug#neovim).
+Install *vim-plug* for *Neovim* first, [instructions here](https://github.com/junegunn/vim-plug#neovim).
 
-Neovim configuration entry file is *~/.config/nvim/init.vim*. This is how it looks like.
+*Neovim* configuration entry file is *~/.config/nvim/init.vim*. This is how it looks like.
 
 ```vim
 " cannot code without the following
@@ -67,7 +67,7 @@ colorscheme bubblegum-256-dark
 let g:airline_theme='bubblegum'
 ```
 
-Once *vim-plug* is installed, and both config files are created, open Neovim and run command `: PlugInstall`.
+Once *vim-plug* is installed, and both config files are created, open *Neovim* and run command `: PlugInstall`.
 
 Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf). Wow, that font name sounds good!
 
