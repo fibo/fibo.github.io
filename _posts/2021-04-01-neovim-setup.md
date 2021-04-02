@@ -25,7 +25,7 @@ set number
 
 " open terminal in footer
 nnoremap <leader>t :below 10sp term://$SHELL<cr>i
-" hit `Escape` key to exit from terminal mode
+" hit <Escape> key to exit from terminal mode
 :tnoremap <Esc> <C-\><C-n>
 
 " load plugins
@@ -46,7 +46,7 @@ Plug 'sheerun/vim-polyglot'
 " files hierarchy tree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" toggle NERDTree with CTRL-n
+" toggle NERDTree with <Control n> hot key
 map <C-n> :NERDTreeToggle<CR>
 
 " cool icons
@@ -67,6 +67,16 @@ let g:airline#extensions#tabline#enabled = 1
 
 " awesome completion tool
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+" use <Tab> key to trigger completion and navigate to the next complete item
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 " insert or delete parenthesis in pair
 Plug 'vim-scripts/auto-pairs-gentle'
