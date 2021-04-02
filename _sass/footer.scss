@@ -6,7 +6,8 @@ footer {
   padding: 1em;
   text-align: center;
 
-  a {
-    color: #8be3ff;
+  a:link,
+  a:visited {
+    color: $white;
   }
 }
