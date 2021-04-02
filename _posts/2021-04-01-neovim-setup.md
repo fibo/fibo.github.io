@@ -40,21 +40,36 @@ Other than that the plugins listed are considered **essentials** to me. There ar
 " vim-plug start
 call plug#begin('~/.nvim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline#extensions#tabline#enabled = 1
-
-" git integration
-Plug 'tpope/vim-fugitive'
-
-Plug 'ryanoasis/vim-devicons'
-let g:webdevicons_enable_nerdtree = 1
+" syntax highlighting
+Plug 'sheerun/vim-polyglot'
 
 " files hierarchy tree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " toggle NERDTree with CTRL-n
 map <C-n> :NERDTreeToggle<CR>
+
+" cool icons
+Plug 'ryanoasis/vim-devicons'
+let g:webdevicons_enable_nerdtree = 1
+
+" editorconfig support
+Plug 'editorconfig/editorconfig-vim'
+
+" git integration
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+
+" awesome completion tool
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" insert or delete parenthesis in pair
+Plug 'vim-scripts/auto-pairs-gentle'
 
 " my favourite colorscheme, bubblegum
 Plug 'baskerville/bubblegum'
@@ -67,7 +82,29 @@ colorscheme bubblegum-256-dark
 let g:airline_theme='bubblegum'
 ```
 
-Once *vim-plug* is installed, and both config files are created, open *Neovim* and run command `: PlugInstall`.
+Once *vim-plug* is installed, and both config files are created, open *Neovim* and run command
+
+```
+:PlugInstall
+```
+
+Use [Conquer of Completion](https://github.com/neoclide/coc.nvim) (a.k.a. *coc.nvim* or simply *coc*) to install plugins. In *Neovim* run once the following command to install extendsions marketplace
+
+```
+:CocInstall coc-marketplace
+```
+
+Now you can:
+
+* List/Install all available extensions with `:CocList marketplace`.
+* Install extensions directly, e.g. `:CocInstall coc-json`
+
+See other *coc.nvim*extensions [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) I recomment at least the following:
+
+* coc-json
+* coc-html
+* coc-css
+* coc-tsserver
 
 Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf). Wow, that font name sounds good!
 
