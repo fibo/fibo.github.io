@@ -6,12 +6,16 @@ description: >
     Neovim is my favourite editor for modern web development with React, TypeScript, etc. Here it is my setup.
 ---
 
+## Why Vim
+
 > I am the Editor thy Vi.
 
 I cannot stop using Vim, I tryed many times with several editors. No way.
 [Neovim](https://neovim.io/) is a great project since it is fully compatible with Vim's editing model but helped a lot moving forward, which was not possible due to retrocompatibility support (yes, Vim works on Amiga too).
 
 The result is the best of both *good old* Vim and modern improvements. However, the configuration can take a lot of time scouting and trying plugins and configurations. Let me share what I obtained: a cool environment for web development.
+
+## Configuration
 
 Install *vim-plug* for *Neovim* first, [instructions here](https://github.com/junegunn/vim-plug#neovim).
 
@@ -81,6 +85,13 @@ inoremap <silent><expr> <Tab>
 " insert or delete parenthesis in pair
 Plug 'vim-scripts/auto-pairs-gentle'
 
+" toggle comments: use `gcc` to comment out a line (takes a count),
+" `gc` in visual mode to comment out the selection, and much more...
+Plugh 'tpope/vim-commentary'
+
+" search tool
+Plug 'mileszs/ack.vim'
+
 " my favourite colorscheme, bubblegum
 Plug 'baskerville/bubblegum'
 
@@ -92,11 +103,15 @@ colorscheme bubblegum-256-dark
 let g:airline_theme='bubblegum'
 ```
 
+## Further steps
+
 Once *vim-plug* is installed, and both config files are created, open *Neovim* and run command
 
 ```
 :PlugInstall
 ```
+
+### CoC
 
 Use [Conquer of Completion](https://github.com/neoclide/coc.nvim) (a.k.a. *coc.nvim* or simply *coc*) to install plugins. In *Neovim* run once the following command to install extendsions marketplace
 
@@ -115,6 +130,43 @@ See other *coc.nvim*extensions [here](https://github.com/neoclide/coc.nvim/wiki/
 * coc-html
 * coc-css
 * coc-tsserver
+
+You may also create a *~/.config/nvim/coc-settings.json* file to configure CoC, for instance start with the following
+
+```json
+{
+  "tsserver.enableJavascript": true,
+  "typescript.suggestionActions.enabled": true
+}
+```
+
+### ack!
+
+> ack is a grep-like source code search tool
+
+You need to install *ack!*, go [beyondgrep](https://beyondgrep.com/). With *brew* just run
+
+```bash
+brew install ack
+```
+
+To speed up, I also create a *~/.ackrc* file like the following
+
+```
+## Ack is awesome: https://beyondgrep.com/
+#
+--smart-case
+# folders I usually do not want to look into
+--ignore-dir=.nyc_output
+--ignore-dir=_site
+--ignore-dir=build
+--ignore-dir=dist
+# files I usually ignore
+--ignore-file=match:/bundle/
+
+```
+
+### NerdFonts
 
 Install a patched font from [NerdFonts](https://www.nerdfonts.com/) for example I downloaded [Fura Code Retina Nerd Font Complete](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf). Wow, that font name sounds good!
 
