@@ -27,10 +27,26 @@ set encoding=UTF-8
 syntax on
 set number
 
+" only vim can do this
+set cursorline
+set cursorcolumn
+
 " open terminal in footer
 nnoremap <leader>t :below 10sp term://$SHELL<cr>i
 " hit <Escape> key to exit from terminal mode
 :tnoremap <Esc> <C-\><C-n>
+
+" use current file directory as a start to find file to edit
+" https://stackoverflow.com/a/1708936
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+
+" it is ok to wrap lines, just use gj or gk to move
+set wrap
+
+" cycle buffers
+:nnoremap gb :bnext<CR>
 
 " load plugins
 source ~/.config/nvim/plugins.vim
@@ -42,34 +58,48 @@ Other than that the plugins listed are considered **essentials** to me. There ar
 
 ```vim
 " vim-plug start
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.nvim/plugged')
 
 " syntax highlighting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'sheerun/vim-polyglot'
 
 " files hierarchy tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" toggle NERDTree with <Control n> hot key
+" toggle NERDTree with <Control M> hot key
 map <C-n> :NERDTreeToggle<CR>
 
 " cool icons
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'ryanoasis/vim-devicons'
 let g:webdevicons_enable_nerdtree = 1
 
 " editorconfig support
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'editorconfig/editorconfig-vim'
 
 " git integration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 
+" emmet (like), essential toolkit for abbreviation expansion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'mattn/emmet-vim'
+" trigger expansion with <Control M> <Comma> keys
+let g:user_emmet_leader_key='<C-M>'
+
 " awesome completion tool
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 function! s:check_back_space() abort
@@ -83,19 +113,25 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 " insert or delete parenthesis in pair
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'vim-scripts/auto-pairs-gentle'
 
-" toggle comments: use `gcc` to comment out a line (takes a count),
+" toggle comments
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use `gcc` to comment out a line (takes a count),
 " `gc` in visual mode to comment out the selection, and much more...
 Plugh 'tpope/vim-commentary'
 
 " search tool
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'mileszs/ack.vim'
 
 " my favourite colorscheme, bubblegum
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'baskerville/bubblegum'
 
 " vim-plug end, add plugins to &runtimepath
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#end()
 
 " activate bubblegum colorscheme
