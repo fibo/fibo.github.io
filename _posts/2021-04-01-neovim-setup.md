@@ -92,12 +92,14 @@ Plug 'sheerun/vim-polyglot'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" toggle NERDTree with <Control M> hot key
+
+" toggle NERDTree with <Control N> hot key
 map <C-n> :NERDTreeToggle<CR>
 
 " cool icons
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'ryanoasis/vim-devicons'
+
 let g:webdevicons_enable_nerdtree = 1
 
 " editorconfig support
@@ -113,23 +115,32 @@ Plug 'airblade/vim-gitgutter'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 let g:airline#extensions#tabline#enabled = 1
 
 " emmet (like), essential toolkit for abbreviation expansion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'mattn/emmet-vim'
-" trigger expansion with <Control M> <Comma> keys
-let g:user_emmet_leader_key='<C-M>'
+
+" trigger expansion with <Comma> <Comma> keys
+let g:user_emmet_leader_key=','
+
+let g:user_emmet_settings = {
+\  'javascript' : {
+\    'extends' : 'jsx',
+\    'quote_char': "'",
+\  },
+\}
 
 " awesome completion tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"
+
+" use <Tab> key to trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
-" use <Tab> key to trigger completion and navigate to the next complete item
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
@@ -194,8 +205,8 @@ You may also create a *~/.config/nvim/coc-settings.json* file to configure CoC, 
 
 ```json
 {
-  "tsserver.enableJavascript": true,
-  "typescript.suggestionActions.enabled": true
+  "tsserver.enableJavascript": false,
+  "typescript.suggestionActions.enabled": false
 }
 ```
 
