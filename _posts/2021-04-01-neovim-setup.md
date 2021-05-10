@@ -164,6 +164,14 @@ Plug 'mileszs/ack.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'baskerville/bubblegum'
 
+" enable repeating supported plugin maps with `.`
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-repeat'
+
+" use CTRL-A/CTRL-X to increment dates, times, and more
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-speeddating'
+
 " vim-plug end, add plugins to &runtimepath
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#end()
