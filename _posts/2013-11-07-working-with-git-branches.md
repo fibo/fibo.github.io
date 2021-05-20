@@ -145,3 +145,12 @@ git push origin :develop
 
 Note that this will not remove your *develop* local branch.
 
+## Cleanup remote branches
+
+Remove local references to remove branches that do not exist anymore.
+This is useful in case the remote branch was removed somewhere else.
+
+```bash
+git remote prune origin
+```
+
