@@ -19,7 +19,14 @@
   }
 
   a {
+    background: blue;
     text-transform: underline;
+  }
+
+  a:link,
+  a:visited {
+    background: blue;
+    color: white;
   }
 
   a:active,
