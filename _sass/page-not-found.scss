@@ -1,6 +1,18 @@
 .page-not-found {
-  font-family: 'Courier New', monospace;
+  font-family: 'W95FA', monospace;
   min-height: 100vh;
-  background: blue;
+  padding: 1em;
+  background: #0827F5;
   color: white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: inherit;
+    text-transform: uppercase;
+  }
 }
+
