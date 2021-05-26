@@ -93,9 +93,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" Exit Vim if NERDTree is the only window left.
+" toggle NERDTree with ctrl-e, similar to vscode
+nmap <C-E> :NERDTreeToggle<CR>
+" exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
