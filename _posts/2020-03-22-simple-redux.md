@@ -7,6 +7,10 @@ description: >
     Let me show you I use Redux with React, a set of snippets that I have polished during the last few years to achieve a simplified and flexible structure that is easy to understand also for beginners.
 ---
 
+<div class="paper warning">
+I was using Redux for many years, now (2021) I realized that a <em>Global State Management</em> does not scale. Every component could be indipendent as an app on its own.
+</div>
+
 I started using React and Redux in 2015 and I immediatly fell in love with those tools. I said
 
 > this is the way I want to develop web apps
@@ -216,9 +220,3 @@ then show an error message using i18n translations.
 It could also happen that backend already provides a proper error message but
 usually it is not a good idea to show it to the user as is.
 
-<div class="paper info">
-This article is a <b>Work in Progress</b>.
-<!-- TODO define api.js, optionally in a separated package, it can be typed and contains endpoints, errors etc. -->
-<!-- TODO containers, i.e. pages and components -->
-<!-- TODO middlewares, reducer actions can be exported, localstorage middleware example -->
-</div>
