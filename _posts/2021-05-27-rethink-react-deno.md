@@ -7,9 +7,18 @@ description: >
     How to setup a Deno server to perform ServerSideRendering with React. The Web is evolving in the right direction.
 ---
 
+<div class="paper warning">This article is just a POC, just a starting point.</div>
+
 ## Deno
 
 Visit [Deno land](https://deno.land/) and follow instruction to install Deno on your platform.
+
+<div class="paper info">
+  <p>
+  If you want to install Deno on a Linux server, I would use the following command to install it for all users
+  </p>
+  <pre><code>curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh</code></pre>
+</div>
 
 In my opinion Deno is the **next big thing**, once every 4 or 5 years I find myself saying
 
@@ -172,5 +181,3 @@ export function HomePage() {
   );
 }
 ```
-
-<div class="paper warning">Work in progress</div>
