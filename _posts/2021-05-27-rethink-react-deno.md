@@ -17,7 +17,7 @@ Visit [Deno land](https://deno.land/) and follow instruction to install Deno on 
   <p>
   If you want to install Deno on a Linux server, I would use the following command to install it for all users
   </p>
-  <pre><code>curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh</code></pre>
+  <code>curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh</code>
 </div>
 
 In my opinion Deno is the **next big thing**, once every 4 or 5 years I find myself saying
