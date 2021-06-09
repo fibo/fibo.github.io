@@ -80,7 +80,7 @@ It uses the experimental `Deno.listen` feature which uses a Rust implementation 
 import React from "react";
 import { renderToString } from "react-dom/server";
 
-import { HomePage } from "./pages/Home.tsx";
+import { HomePage } from "./pages/home-page.tsx";
 
 type HeaderValue = string | null;
 
@@ -165,7 +165,12 @@ Deno.test("isHomePage", () => {
 });
 ```
 
-### pages/Home.tsx
+### pages/home-page.tsx
+
+<div class="paper info">
+Since Deno can import modules via URL, I strongly recommend to use <em>kebab case</em> as a filename convention:
+so <code>home-page.tsx</code> is better than <code>HomePage.tsx</code>.
+</div>
 
 ```jsx
 import React from "react";
