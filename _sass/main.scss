@@ -1,5 +1,5 @@
 main {
-  max-width: 71rem;
+  max-width: min(100vw, 71rem);
   margin: auto;
 
   margin-top: $nav-height + 4rem;
