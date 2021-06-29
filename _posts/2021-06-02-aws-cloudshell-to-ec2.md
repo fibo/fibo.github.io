@@ -1,5 +1,5 @@
 ---
-title: How to connect via SSH from AWS CloudShell to EC2 installce
+title: How to connect via SSH from AWS CloudShell to EC2 instance
 tags:
   - AWS
 description: >
