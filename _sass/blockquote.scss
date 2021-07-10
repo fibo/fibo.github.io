@@ -7,3 +7,7 @@ blockquote {
   margin-bottom: $margin-bottom;
   padding: 0 1em;
 }
+
+blockquote::before {
+  content: open-quote;
+}
