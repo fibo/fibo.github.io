@@ -1,6 +1,6 @@
 blockquote {
+  position: relative;
   color: $gray;
-  border-left: 0.17rem solid $light-gray;
   font-size: 1.17rem;
   margin-left: 0;
   margin-top: 0;
@@ -9,5 +9,9 @@ blockquote {
 }
 
 blockquote::before {
+  position: absolute;
   content: open-quote;
+  font-size: 2rem;
+  left: -5px;
+  top: -17px;
 }
