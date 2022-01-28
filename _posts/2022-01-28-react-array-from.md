@@ -3,10 +3,10 @@ title: React list with Array.from()
 tags:
   - React
 description: >
-     How to render a list of React components using Array.from()
+     How to use Array.from() to render a list of React components, makes me think about how good is React software design.
 ---
 
-React flexibility is one of its better features.
+React flexibility is one of its best features.
 Any JavaScript expression can be used inside brackets in JSX.
 This is a winner choice compared with Angular and Vue. I do not want to learn
 another syntax to create components.
