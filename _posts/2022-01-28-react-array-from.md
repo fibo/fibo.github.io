@@ -9,7 +9,7 @@ description: >
 React flexibility is one of its best features.
 Any JavaScript expression can be used inside brackets in JSX.
 This is a winner choice compared with Angular and Vue. I do not want to learn
-another syntax to create components.
+**yet another syntax** to generare HTML.
 
 On the other hand, learning JavaScript to write JSX is something you can reuse somewhere else.
 
@@ -35,9 +35,13 @@ function NumberList ({ numbers }: Props) {
 }
 ```
 
-With that said, let's howto use another way to render lists: `Array.from()`.
-Suppose you want to render a **ghost component** list as a placeholder while
-you are waiting for an API call to fetch the actual list
+With that said, let's how to use another way to render lists: `Array.from()`.
+
+<div class="paper info">
+Suppose you want to render a <b>ghost component</b> list as a placeholder while
+you are waiting for an API call to fetch the actual list. Such component should
+have a <code>numItems</code> prop, that is the number of items we expect in the list.
+</div>
 
 The first question I asked to my self was:
 
