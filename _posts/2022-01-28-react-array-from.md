@@ -49,6 +49,7 @@ And I found this answer
 const n = 5
 
 Array.from({ length: n }, (_, i)=> i + 1)
+// [1, 2, 3, 4, 5]
 ```
 
 The `Array.from` signature is the following, see [Array.from docs on MDN here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
@@ -61,7 +62,7 @@ Notice the `arrayLike` where something like `{ length: 10 }` will be enough,
 you could use also a `Set` for example. But in particular we are going to take
 advantage of the second argument `mapFn`, that is a **map function**.
 
-So a `GhostList` comopnent, having a `numItems` prop will be something like
+So a `GhostList` component, having a `numItems` prop will be something like
 
 ```tsx
 type Props = {
