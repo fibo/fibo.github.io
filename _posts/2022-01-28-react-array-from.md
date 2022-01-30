@@ -73,7 +73,7 @@ type Props = {
   numItems: number
 }
 
-function PlaceholderList ({ numItems }: Props) {
+function GhostList ({ numItems }: Props) {
   return (
     <ul>
       {Array.from({ length: numItems }, (_, i) => (
