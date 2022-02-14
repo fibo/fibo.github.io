@@ -230,10 +230,13 @@ You may also create a *~/.config/nvim/coc-settings.json* file to configure CoC, 
 
 ```json
 {
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
   "tsserver.enableJavascript": false,
   "typescript.suggestionActions.enabled": false
 }
 ```
+
+See also CoC configuration JSON schema [here](https://github.com/neoclide/coc.nvim/blob/release/data/schema.json).
 
 ### ack!
 
