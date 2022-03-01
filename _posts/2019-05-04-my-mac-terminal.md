@@ -20,64 +20,40 @@ Another default configuration that I suggest to change is:
 
 I often use <kbd>CTRL</kbd> <kbd>D</kbd> to close the shell, and I mean it so no confirmation is required.
 
-## Latest bash
+## Shell
 
-Bash version provided by default on a Mac, at the time of this writing (with Mojave) is still *3.2*. Let's install latest!
-With [brew](https://brew.sh) do
+I like simplicity, and *bash* is ok to me. But now Mac set *zsh* as default shell.
+So, simpler solution wins! I switched to *zsh* too.
 
-```bash
-brew install bash
+I am using the following configuration files:
+
+- *~/.zshenv* which is sourced before and contains environment variables
+- *~/.zshrc* for interactive shell configuration
+
+### Prompt
+
+I could not find a zsh prompt that I like. Probably you will find one, there
+are many that you may like.
+
+I created my own. It is really minimal:
+1. it shows only the current folder path but only its parent and the folder itself, not the complete path.
+2. it shows the git branch if any.
+
+Paste the following in your *~/.zshrc*.
+
+```zsh
+# Shell prompt
+###
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b · '
+setopt PROMPT_SUBST
+PROMPT='${vcs_info_msg_0_}%2~ '
 ```
 
-Edit */etc/shells* and add this line
+### Aliases
 
-```
-/usr/local/bin/bash
-```
-
-For instance you can do something like
-
-```bash
-sudo echo /usr/local/bin/bash >> /etc/shells
-```
-
-Now set it as you default shell
-
-```bash
-chsh -s /usr/local/bin/bash $USER
-```
-
-Now quit Terminal and re-open it! Check if all ok?
-
-```bash
-echo $BASH_VERSION
-```
-
-## Git Aware Prompt
-
-Thanks to [jimeh/git-aware-prompt](https://github.com/jimeh/git-aware-prompt) you can
-
-> Display current Git branch name in your terminal prompt when in a Git working directory.
-
-Install with the following commands
-
-```bash
-mkdir -p ~/.bash
-cd ~/.bash
-git clone git://github.com/jimeh/git-aware-prompt.git
-```
-
-Then configure it adding to your *.bash_profile*
-
-```bash
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
-export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-```
-
-## Aliases
-
-Cannot live without these aliases
+Cannot live without these aliases. Put them, for instance, in your *~/.zshrc*.
 
 ```bash
 alias vi='nvim '
@@ -109,23 +85,6 @@ git config --global alias.conflicts "diff --name-only --diff-filter=U"
 git config --global alias.undo "reset HEAD~1 --mixed"
 ```
 
-## Auto completion
-
-Create a *~/.bash/completion* folder and copy there files [npm](https://github.com/fibo/home/blob/home/.bash/completion/npm) and [git-completion.bash](https://github.com/fibo/home/blob/home/.bash/completion/git-completion.bash) then add these lines to your *.bash_profile*.
-
-```bash
-source ~/.bash/completion/npm
-source ~/.bash/completion/git-completion.bash
-```
-
-## Locale
-
-This tip can prevent many issues, add this to your *.bash_profile* to specify a locale or change it accordingly.
-
-```bash
-export LC_ALL=en_US.UTF-8
-```
-
 ## Other tips
 
 ### Switch language shortcut
@@ -135,7 +94,7 @@ Go to *System Preferences* > *Keyboard* > *Input Sources* and flag **Select the 
 
 ![switch language shortcut](/images{{ page.id }}/switch_language_shortcut.png)
 
-This is a good solution if you needd to switch on two languages, in my case US an IT: the shortcut <kbd>CTRL</kbd> <kbd>SPACE</kbd> will do the trick.
+This is a good solution if you need to switch on two languages, in my case US an IT: the shortcut <kbd>CTRL</kbd> <kbd>SPACE</kbd> will do the trick.
 
 ### Screen recording
 
