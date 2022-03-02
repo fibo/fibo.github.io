@@ -17,16 +17,7 @@ layout: null
       <loc>http://{{ site.domain }}/geohash-neighbours/sitemap.xml</loc>
    </sitemap>
    <sitemap>
-      <loc>http://{{ site.domain }}/dflow/sitemap.xml</loc>
-   </sitemap>
-   <sitemap>
-      <loc>http://{{ site.domain }}/flow-view/sitemap.xml</loc>
-   </sitemap>
-   <sitemap>
       <loc>http://{{ site.domain }}/iper/sitemap.xml</loc>
-   </sitemap>
-   <sitemap>
-      <loc>http://{{ site.domain }}/matrix-calculator/sitemap.xml</loc>
    </sitemap>
    <sitemap>
       <loc>http://{{ site.domain }}/npm-packages/sitemap.xml</loc>
