@@ -128,13 +128,6 @@ Plug 'mattn/emmet-vim'
 " trigger expansion with <Comma> <Comma> keys
 let g:user_emmet_leader_key=','
 
-let g:user_emmet_settings = {
-\  'javascript' : {
-\    'extends' : 'jsx',
-\    'quote_char': "'",
-\  },
-\}
-
 " awesome completion tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -151,7 +144,7 @@ inoremap <silent><expr> <Tab>
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
 
-" Use K to show documentation in preview window.
+" Use <Shift-K> to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -180,14 +173,6 @@ Plug 'mileszs/ack.vim'
 " my favourite colorscheme, bubblegum
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'baskerville/bubblegum'
-
-" enable repeating supported plugin maps with `.`
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'tpope/vim-repeat'
-
-" use CTRL-A/CTRL-X to increment dates, times, and more
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'tpope/vim-speeddating'
 
 " vim-plug end, add plugins to &runtimepath
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -219,20 +204,24 @@ Now you can:
 * List/Install all available extensions with `:CocList marketplace`.
 * Install extensions directly, e.g. `:CocInstall coc-json`
 
-See other *coc.nvim*extensions [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) I recomment at least the following:
+I recomment at least the following:
 
-* coc-json
-* coc-html
 * coc-css
+* coc-html
+* coc-json
+* coc-prettier
 * coc-tsserver
 
-You may also create a *~/.config/nvim/coc-settings.json* file to configure CoC, for instance start with the following
+See other *coc.nvim* extensions [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
+
+You may also want to configure CoC, for instance launch command `:CocConfig`
+(or edit *~/.config/nvim/coc-settings.json* file) and start with the following
 
 ```json
 {
   "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
-  "tsserver.enableJavascript": false,
-  "typescript.suggestionActions.enabled": false
+  "diagnostic.checkCurrentLine": true,
+  "typescript.suggestionActions.enabled": true
 }
 ```
 
@@ -261,7 +250,6 @@ To speed up, I also create a *~/.ackrc* file like the following
 --ignore-dir=dist
 # files I usually ignore
 --ignore-file=match:/bundle/
-
 ```
 
 ### NerdFonts

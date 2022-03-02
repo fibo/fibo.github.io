@@ -51,6 +51,44 @@ setopt PROMPT_SUBST
 PROMPT='${vcs_info_msg_0_}%2~ '
 ```
 
+### Autocompletion
+
+Create a *~/.zsh* folder to contain autocompletion definitions and other zsh stuff
+
+```zsh
+mkdir ~/.zsh
+```
+
+The following code to your *~/.zshrc* will update `$fpath` adding the *~/.zsh* folder
+where, in particular, you can write into.
+
+```zsh
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
+compinit -i
+
+# Small letters will match small and capital letters
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+```
+
+For example on GitHub CLI documentation [here](https://cli.github.com/manual/gh_completion#zsh)
+they say
+
+> Generate a _gh completion script and put it somewhere in your $fpath
+
+In our case this translates to the following command
+
+```zsh
+gh completion -s zsh > ~/.zsh/_gh
+```
+
+Another nice autocompletion feature
+
+```zsh
+# Small letters will match small and capital letters
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+```
+
 ### Aliases
 
 Cannot live without these aliases. Put them, for instance, in your *~/.zshrc*.
@@ -110,3 +148,63 @@ As a *Vim* user I cannot resist to [Map Caps Lock to Escape](https://vim.fandom.
 Open *System Preferences > Keyboard*, click on *Modifier Keys*. Then choose to map *Caps Lock* to *Escape*.
 
 ![map caps lock to escake](/images{{ page.id }}/map_caps_lock_to_escape.png)
+
+## Dev tools
+
+### NVM
+
+I am using [NVM](https://github.com/nvm-sh/nvm) to manage different versions of *Node.JS*.
+
+I also want to switch to *Node.JS* version automatically when I enter a folder
+containing a *.nvmrc* file.
+
+Once installed I add the following to my *~/.zshrc*
+
+```zsh
+# Node Version Manager
+# https://github.com/nvm-sh/nvm
+###
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# invoke `nvm use` automatically in a directory with a .nvmrc file
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use --silent
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    nvm use default --silent
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+```
+
+### direnv
+
+It happens often that different projects need some specific environment variables.
+I found [direnv](https://direnv.net/) the perfect tool to achieve that.
+
+After installing it, for example with homebrew
+
+```bash
+brew install direnv
+```
+
+Add it to your *~/.zshrc*
+
+```zsh
+# direnv
+# https://direnv.net/
+###
+eval "$(direnv hook zsh)"
+```
