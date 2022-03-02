@@ -63,12 +63,11 @@ The following code to your *~/.zshrc* will update `$fpath` adding the *~/.zsh* f
 where, in particular, you can write into.
 
 ```zsh
+# Autocompletion
+###
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -i
-
-# Small letters will match small and capital letters
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ```
 
 For example on GitHub CLI documentation [here](https://cli.github.com/manual/gh_completion#zsh)
@@ -82,12 +81,28 @@ In our case this translates to the following command
 gh completion -s zsh > ~/.zsh/_gh
 ```
 
+To add *git* completion requires the following steps: get the completion scripts (both bash and zsh are required)
+
+```zsh
+curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+```
+
+And add the following to your *~/.zshrc*
+
+```zsh
+# git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+```
+
 Another nice autocompletion feature
 
 ```zsh
 # Small letters will match small and capital letters
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ```
+
+You may also want to take a look to [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/).
 
 ### Aliases
 
