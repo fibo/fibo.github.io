@@ -244,7 +244,7 @@ To speed up, I also create a *~/.ackrc* file like the following
 #
 --smart-case
 # folders I usually do not want to look into
---ignore-dir=.nyc_output
+--ignore-dir=.next
 --ignore-dir=_site
 --ignore-dir=build
 --ignore-dir=dist
