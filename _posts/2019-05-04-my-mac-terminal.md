@@ -56,6 +56,14 @@ I am using the following configuration files:
 - *~/.zshenv* which is sourced before and contains environment variables
 - *~/.zshrc* for interactive shell configuration
 
+### Locale
+
+This tip can prevent many issues, add this to your *~/.zshenv* to specify a locale or change it accordingly.
+
+```zsh
+export LC_ALL=en_US.UTF-8
+```
+
 ### Prompt
 
 I could not find a zsh prompt that I like. Probably you will find one, there
