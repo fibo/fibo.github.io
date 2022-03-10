@@ -66,9 +66,6 @@ where, in particular, you can write into.
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -i
-
-# Small letters will match small and capital letters
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ```
 
 For example on GitHub CLI documentation [here](https://cli.github.com/manual/gh_completion#zsh)
