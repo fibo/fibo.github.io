@@ -219,7 +219,10 @@ You may also want to configure CoC, for instance launch command `:CocConfig`
 
 ```json
 {
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript", "javascriptreact",
+    "typescript", "typescriptreact"
+   ],
   "diagnostic.checkCurrentLine": true,
   "typescript.suggestionActions.enabled": true
 }
@@ -244,7 +247,7 @@ To speed up, I also create a *~/.ackrc* file like the following
 #
 --smart-case
 # folders I usually do not want to look into
---ignore-dir=.nyc_output
+--ignore-dir=.next
 --ignore-dir=_site
 --ignore-dir=build
 --ignore-dir=dist

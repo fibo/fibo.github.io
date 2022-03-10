@@ -20,6 +20,32 @@ Another default configuration that I suggest to change is:
 
 I often use <kbd>CTRL</kbd> <kbd>D</kbd> to close the shell, and I mean it so no confirmation is required.
 
+## Shortcuts
+
+### Switch language
+
+I often need to switch language since the US keyboard is the best layout in my opinion for programming, so it is useful to have a shortcut.
+Go to *System Preferences* > *Keyboard* > *Input Sources* and flag **Select the previous input source**.
+
+![switch language shortcut](/images{{ page.id }}/switch_language_shortcut.png)
+
+This is a good solution if you need to switch on two languages, in my case US an IT: the shortcut <kbd>CTRL</kbd> <kbd>SPACE</kbd> will do the trick.
+
+### Screen recording
+
+When I discover it I said:
+
+> Yes, I ❤  Mac!
+
+On Mojave you have a native screen recorder, invoke it with <kbd>COMMAND</kbd> <kbd>SHIFT</kbd> <kbd>5</kbd>. It also manage screeshots.
+
+### Map Caps Lock to Escape
+
+As a *Vim* user I cannot resist to [Map Caps Lock to Escape](https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_macOS).
+Open *System Preferences > Keyboard*, click on *Modifier Keys*. Then choose to map *Caps Lock* to *Escape*.
+
+![map caps lock to escake](/images{{ page.id }}/map_caps_lock_to_escape.png)
+
 ## Shell
 
 I like simplicity, and *bash* is ok to me. But now Mac set *zsh* as default shell.
@@ -29,6 +55,14 @@ I am using the following configuration files:
 
 - *~/.zshenv* which is sourced before and contains environment variables
 - *~/.zshrc* for interactive shell configuration
+
+### Locale
+
+This tip can prevent many issues, add this to your *~/.zshenv* to specify a locale or change it accordingly.
+
+```zsh
+export LC_ALL=en_US.UTF-8
+```
 
 ### Prompt
 
@@ -63,6 +97,8 @@ The following code to your *~/.zshrc* will update `$fpath` adding the *~/.zsh* f
 where, in particular, you can write into.
 
 ```zsh
+# Autocompletion
+###
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -i
@@ -79,12 +115,28 @@ In our case this translates to the following command
 gh completion -s zsh > ~/.zsh/_gh
 ```
 
+To add *git* completion requires the following steps: get the completion scripts (both bash and zsh are required)
+
+```zsh
+curl -o ~/.zsh/_git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+curl -o ~/.zsh/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+```
+
+And add the following to your *~/.zshrc*
+
+```zsh
+# git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+```
+
 Another nice autocompletion feature
 
 ```zsh
 # Small letters will match small and capital letters
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ```
+
+You may also want to take a look to [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/).
 
 ### Aliases
 
@@ -119,32 +171,6 @@ git config --global alias.conflicts "diff --name-only --diff-filter=U"
 # Reset previous commit, but keep all the changes from that commit in the working directory.
 git config --global alias.undo "reset HEAD~1 --mixed"
 ```
-
-## Other tips
-
-### Switch language shortcut
-
-I often need to switch language since the US keyboard is the best layout in my opinion for programming, so it is useful to have a shortcut.
-Go to *System Preferences* > *Keyboard* > *Input Sources* and flag **Select the previous input source**.
-
-![switch language shortcut](/images{{ page.id }}/switch_language_shortcut.png)
-
-This is a good solution if you need to switch on two languages, in my case US an IT: the shortcut <kbd>CTRL</kbd> <kbd>SPACE</kbd> will do the trick.
-
-### Screen recording
-
-When I discover it I said:
-
-> Yes, I ❤  Mac!
-
-On Mojave you have a native screen recorder, invoke it with <kbd>COMMAND</kbd> <kbd>SHIFT</kbd> <kbd>5</kbd>. It also manage screeshots.
-
-### Map Caps Lock to Escape
-
-As a *Vim* user I cannot resist to [Map Caps Lock to Escape](https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_macOS).
-Open *System Preferences > Keyboard*, click on *Modifier Keys*. Then choose to map *Caps Lock* to *Escape*.
-
-![map caps lock to escake](/images{{ page.id }}/map_caps_lock_to_escape.png)
 
 ## Dev tools
 
