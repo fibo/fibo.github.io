@@ -39,7 +39,7 @@ export type MyField = typeof myFields[number];
 
 export function isMyField(value: unknown): value is MyField {
   if (typeof value !== 'string') return false;
-  return value in myFields;
+  return (myFields as readonly string[]).includes(value);
 }
 ```
 
