@@ -165,7 +165,7 @@ Run also the following commands to set *git aliases*:
 
 ```bash
 # Modify previous commit
-git config --global alias.amend "commit -a --amend"
+git config --global alias.amend "commit --amend"
 # List files with merge conflicts
 git config --global alias.conflicts "diff --name-only --diff-filter=U"
 # Reset previous commit, but keep all the changes from that commit in the working directory.

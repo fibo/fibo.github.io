@@ -2,7 +2,7 @@
 title: Rethink React with Deno
 tags:
   - React
-  - Deno
+  - TypeScript
 description: >
     How to setup a Deno server to perform ServerSideRendering with React. The Web is evolving in the right direction.
 ---

@@ -2,6 +2,8 @@
 title: How to setup Neovim
 tags:
   - Vim
+  - TypeScript
+  - React
 description: >
     Neovim is my favourite editor for modern web development with React, TypeScript, etc. Here it is my setup.
 ---
