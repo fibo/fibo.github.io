@@ -6,9 +6,10 @@ Mac: true
 Node: true
 Perl: true
 React: true
-Software: true
 SQL: true
-Vim: true
+Software: true
+TypeScript: true
 Unix: true
+Vim: true
 Web: true
 Windows: true

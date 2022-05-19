@@ -47,9 +47,8 @@ nnoremap <leader>t :below 10sp term://$SHELL<cr>i
 
 " use current file directory as a start to find file to edit
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
-map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
-map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
 " credits to:
 " https://stackoverflow.com/a/1708936
 
@@ -95,11 +94,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" toggle NERDTree with ctrl-e, similar to vscode
+" toggle NERDTree with ctrl-e, where 'e' stands for 'explorer'
 nmap <C-E> :NERDTreeToggle<CR>
-" exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
 
 " cool icons
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,21 +142,31 @@ inoremap <silent><expr> <Tab>
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
 
-" Use <Shift-K> to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
     call CocActionAsync('doHover')
   else
-    execute '!' . &keywordprg . " " . expand('<cword>')
+    call feedkeys('K', 'in')
   endif
 endfunction
 
-" insert or delete parenthesis in pair
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'vim-scripts/auto-pairs-gentle'
+" Use `d[` and `d]` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> d[ <Plug>(coc-diagnostic-prev)
+nmap <silent> d] <Plug>(coc-diagnostic-next)
+
+" Apply AutoFix to problem on the current line.
+" Use `:CocFix` to get all choices avaliable.
+nmap <leader>fix <Plug>(coc-fix-current)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " toggle comments
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

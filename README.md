@@ -10,10 +10,6 @@ The domain for this site is **g14n.info** registered on [namecheap](https://www.
 thanks to [CloudFlare](https://www.cloudflare.com/) it is a naked domain and has SSL: both *http* and *https* schemes are available.
 However, the default scheme I prefer when linking my site and articles is *http*.
 
-## Pages
-
-See [template page](http://g14n.info/templates/page).
-
 ### Style
 
 Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages], read
@@ -31,7 +27,7 @@ and the [minima] Jekyll theme.
 
 ### Images
 
-When editing post *2000-01-01-template.md*, create a folder *images/2000/01/template*
+When editing post *2000-01-01-post-slug.md*, create a folder *images/2000/01/post-slug*
 which contains all images relative to that post, then you can reference them with
 
 ```markdown
@@ -65,7 +61,7 @@ libs:
 ### Post tags
 
 Every tag can have a [tag](./tag) subfolder names as `{ tag | slugify }`.
-To show it as a link in tag badges, edit `_data/pagetag.yml`; for example
+To show it as a link in tag badges, edit `_data/tagpage.yml`; for example
 if there is only one post tagged with that keywork it does not make sense to list all of its related posts in a page.
 Furthermore, tag could by a typo or tag folder could not exist yet.
 
