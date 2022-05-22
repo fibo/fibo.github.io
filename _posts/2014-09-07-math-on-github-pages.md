@@ -9,6 +9,8 @@ libs:
   katex: true
 ---
 
+<div class="paper warning">This article is deprecated, now <a href="https://github.blog/2022-05-19-math-support-in-markdown/">GitHub supports Math into Markdown</a></div>
+
 ## Goal
 
 I have been searching a process to display math formulas, written in [LaTeX]
