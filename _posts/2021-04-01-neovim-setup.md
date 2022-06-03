@@ -160,13 +160,17 @@ nmap <silent> d] <Plug>(coc-diagnostic-next)
 
 " Apply AutoFix to problem on the current line.
 " Use `:CocFix` to get all choices avaliable.
-nmap <leader>fix <Plug>(coc-fix-current)
+nmap <leader>x <Plug>(coc-fix-current)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" insert or delete parenthesis in pair
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'vim-scripts/auto-pairs-gentle'
 
 " toggle comments
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

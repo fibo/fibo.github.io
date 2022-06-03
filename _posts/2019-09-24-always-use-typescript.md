@@ -7,17 +7,22 @@ description: >
      If you are writing a JavaScript code base you should use TypeScript, even if you are not writing TypeScript code.
 ---
 
+<div class="paper warning">
+Nowadays I cannot think about a React codebase that does not use TypeScript.
+This article was written when TypeScript adoption was still not that widespread. It is still worth to read it: there can be some use cases where this methodology can be applied.
+</div>
+
 ## Motivation
 
-I am using React to create a website, it is an exchange: [BQTX](https://bqtx.com). We opted to not use TypeScript as a language, since my collegue is new to React and start with React + TypeScript and a lot of new stuff to learn could be hard.
+I am using React to create a website, it is an exchange: [BQTX](https://bqtx.com). We opted to not use TypeScript as a language, since my collegue is new to React and starting with React + TypeScript and a lot of new stuff to learn could be hard.
 Yes we are using only JavaScript (transpiled by Babel) but installing TypeScript and configuring it to check types is so easy, it takes no more than ten minutes and has **huge benefits** on our React code base.
 
 ## Dependencies
 
-Of course start installing TypeScript, and few dependencies you will need, in particular if you are using *React* and *React Router*.
+Of course start installing TypeScript, and few dependencies you will need, for example if you are using *React*.
 
 ```bash
-npm install typescript @types/react @types/react-dom @types/react-router-dom --save-dev
+npm install typescript @types/react @types/react-dom --save-dev
 ```
 
 ## Configuration
@@ -101,11 +106,9 @@ You can use [JSDoc](https://jsdoc.app) markup to define types. In particular wit
 import React from 'react'
 
 /**
- * Input with number validation.
- *
  * @typedef {Object} MyButtonProps
  * @prop {React.ReactNode=} children
- * @prop {Boolean=} disabled
+ * @prop {boolean=} disabled
  *
  * @param {MyButtonProps} props
  */
@@ -125,13 +128,10 @@ export default function MyButton ({
 ```
 
 <div class="paper info">
-Yes, the TypeScript compiler can parse JSDocs and will complain if there a type mismatch, or for example some required prop is missing.
+Yes, the TypeScript compiler can parse JSDoc and will complain if there a type mismatch, or for example some required prop is missing.
 </div>
 
-<b>Bonus Tip</b>: if you need shared types definition, you can create a *types.js* cotaining only JSDoc comments. You need to import it in your entry file, for instance *src/index.js*.
-
-You can use both `string` and `String` to define a string type, but I recommend to use type names starting with uppercase letter, even for builtin types: reasone is that `date` is not an allowed type, you need to use `Date`.
-
+<b>Bonus Tip</b>: if you need shared types definition, you can create a *types.js* containing only JSDoc comments. You need to import it in your entry file, for instance *src/index.js*.
 
 ## Benefits
 
