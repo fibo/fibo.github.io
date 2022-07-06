@@ -6,7 +6,7 @@ description: >
     Learn how to perform basic tasks with git local and remote branches.
 ---
 
-<div class="paper info">Launch all the commands in this tutorial, from the first to the last, and you will cover almost all operations on branches.</div>
+<div class="paper info">Launch all the commands in this tutorial, from the first to the last, and you will cover almost all operations on branches. Please notice also that the default branch name is set to <b>main</b>, it may differ according to your settings.</div>
 
 ## Clone a repo
 
@@ -36,7 +36,7 @@ The answer is easy, just launch
 git branch
 ```
 
-Since this is a new repository you should see only the master branch.
+Since this is a new repository you should see only the main branch.
 
 ## Create a local branch
 
@@ -64,10 +64,10 @@ git push origin develop
 
 ## Show differences
 
-Now that you have a branch other than *master* you may want to add some code or do a revision of code in the branch. It can be handy to compare current branch with *master*, to do so launch
+Now that you have a branch other than *main* you may want to add some code or do a revision of code in the branch. It can be handy to compare current branch with *main*, to do so launch
 
 ```bash
-git diff --name-status master
+git diff --name-status main
 ```
 
 To compare any pair of branches
@@ -76,20 +76,27 @@ To compare any pair of branches
 git diff --name-status firstbranch..yourBranchName
 ```
 
-## Change branch
+## Fetch updates
 
-If you want to go back to master branch launch
+If you want to get latest updates
 
 ```bash
-git checkout master
+git fetch
+```
+
+## Change branch
+
+If you want to go back to main branch launch
+
+```bash
+git switch main
 ```
 
 Note that before switching branch, you may need to commit changes, if any.
 
-
 ## Merge two branches
 
-If you want to merge *develop* into master, launch
+If you want to merge *develop* into main, launch
 
 ```bash
 git merge develop
@@ -113,7 +120,7 @@ git branch -r
 
 ## Checkout existing remote branch
 
-When you clone a repo by default `git branch` will show only *master* branch. Suppose you want to work on a remote *develop* branch, launch this to check it out
+When you clone a repo by default `git branch` will show only *main* branch. Suppose you want to work on a remote *develop* branch, launch this to check it out
 
 ```bash
 git checkout -b develop origin/develop
