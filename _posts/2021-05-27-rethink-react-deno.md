@@ -7,7 +7,7 @@ description: >
     How to setup a Deno server to perform ServerSideRendering with React. The Web is evolving in the right direction.
 ---
 
-<div class="paper warning">This article is just a POC, just a starting point.</div>
+<div class="paper warning">This article is just a POC, just a starting point. I am using Deno to develop few packages. Despite I was initially excited about using it with React, I realized it is still not production ready compared with other environments like Next.js, so I learned a lot but also spent a lot of time.</div>
 
 ## Deno
 

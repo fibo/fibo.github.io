@@ -35,7 +35,7 @@ function NumberList ({ numbers }: Props) {
 }
 ```
 
-With that said, let's how to use another way to render lists: `Array.from()`.
+With that said, let's see how to use another way to render lists: `Array.from()`.
 
 <div class="paper info">
 Suppose you want to render a <b>ghost component</b> list as a placeholder while
@@ -56,14 +56,14 @@ Array.from({ length: n }, (_, i)=> i + 1)
 // [1, 2, 3, 4, 5]
 ```
 
-The `Array.from` signature is the following, see [Array.from docs on MDN here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+The `Array.from` signature is the following, see [Array.from docs on MDN as a reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 Array.from(arrayLike, mapFn, thisArg)
 ```
 
-Notice the `arrayLike` where something like `{ length: 10 }` will be enough,
-you could use also a `Set` for example. But in particular we are going to take
+Notice that `arrayLike` means that something like `{ length: 10 }` will be enough,
+or you could use also a `Set` for example. But in particular we are going to take
 advantage of the second argument `mapFn`, that is a **map function**.
 
 So a `GhostList` component, having a `numItems` prop will be something like
