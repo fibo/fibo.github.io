@@ -198,7 +198,7 @@ git branch --merged
 Remove local branches (excluding main branch) that are already merged
 
 ```sh
-git branch --merged | grep -v `basename $(git symbolic-ref refs/remotes/origin/HEAD)` | while read branch; do git branch -d $branch; done
+git switch `basename $(git symbolic-ref refs/remotes/origin/HEAD)`; git branch --merged | grep -v `basename $(git symbolic-ref refs/remotes/origin/HEAD)` | while read branch; do git branch -d $branch; done
 ```
 
 The output of `git branch -v` will label as **[gone]** a branch with no remote reference.
