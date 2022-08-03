@@ -74,6 +74,28 @@ Just push the local branch to remote *origin*.
 git push origin develop
 ```
 
+<div class="paper info">
+ <b>Bonus tip</b>: configure git to set upstream automatically.
+</div>
+
+You could also run just `git push` but you may see this error
+
+```sh
+fatal: The current branch develop has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin develop
+```
+
+Run `git --version` and check that is equal or higher than `2.37`.
+If yes, you can run
+
+```sh
+git config --global push.autoSetupRemote true
+```
+
+With that set, all first-time push on new branches will automatically set the default upstream.
+
 ## Show differences
 
 Now that you have a branch other than *main* you may want to add some code or do a revision of code in the branch. It can be handy to compare current branch with *main*, to do so launch
