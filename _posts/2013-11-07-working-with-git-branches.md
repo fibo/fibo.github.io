@@ -211,7 +211,7 @@ which removes any remote-tracking references that no longer exist on the remote,
 
 ## Cleanup local branches
 
-Show branched that are already merged (be careful, it also shows the main branch)
+Show branches that are already merged (be careful, it also shows the main branch)
 
 ```sh
 git branch --merged
