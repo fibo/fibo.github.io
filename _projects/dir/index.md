@@ -10,19 +10,18 @@ title: dir
 [Annotated source](#annotated-source) |
 [License](#license)
 
-[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](https://fibo.github.io/kiss-literate-programming)
+[![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
 
 ## Installation
 
 Both *zsh* and *bash* shell are supported.
 
-Just copy and paste the `dir` function below in your shell profile or do something like
+Just copy and paste the `dir` function below in your shell profile or (assuming you are using zsh) do something like
 
 ```sh
 mkdir -p ~/.shell
 cd ~/.shell
 git clone https://github.com/fibo/dir.git
-# Assuming you are using zsh
 echo "source ~/.shell/dir/fun.sh" >> ~/.zshrc
 ```
 
@@ -30,20 +29,20 @@ echo "source ~/.shell/dir/fun.sh" >> ~/.zshrc
 
 Simple as
 
-```bash
+```sh
 dir /path/to/my/folder
 ```
 
 Folder `/path/to/my/folder` will be created and you will enter into it.
 You can use an absolute path like the example above or a relative path like
 
-```bash
+```sh
 dir folder/i/want/to/create
 ```
 
 Are folder names with spaces supported? **Yes!**
 
-```bash
+```sh
 dir ~/you can/create folders/with spaces
 ```
 
