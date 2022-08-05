@@ -211,6 +211,10 @@ which removes any remote-tracking references that no longer exist on the remote,
 
 ## Cleanup local branches
 
+<div class="paper info">
+You can do the actions in this section with one single command, checkout <a href="https://fibo.github.io/cleanup_git_branches">cleanup_git_branches</a>.
+</div>
+
 Show branches that are already merged (be careful, it also shows the main branch)
 
 ```sh
