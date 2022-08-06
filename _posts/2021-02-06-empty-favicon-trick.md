@@ -14,7 +14,7 @@ There can be other use cases, like starting an empty project where you do not wa
 ```html
 <html>
   <head>
-    <link rel="icon" href="data:;base64,=">
+    <link rel="icon" href="data:image/x-icon;base64,AA">
   </head>
 </html>
 ```
