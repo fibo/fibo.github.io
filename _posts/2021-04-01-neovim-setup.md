@@ -59,6 +59,11 @@ set wrap
 " console.log hot key: type cll
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " insert mode, puts focus inside parentheses
+"
+" if you are using coc-pairs or any other auto pairs plugin,
+" use this code:
+" imap cll console.log(
+"
 imap cll console.log()<Esc><S-f>(a
 " from visual mode on next line, puts visual selection inside parentheses
 vmap cll yocll<Esc>p
