@@ -1,5 +1,5 @@
 ---
-title: How to setup Neovim
+title: My Neovim setup
 tags:
   - Vim
   - TypeScript
@@ -99,7 +99,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" toggle NERDTree with ctrl-e, where 'e' stands for 'explorer'
+" toggle NERDTree with <Ctrl-e>, where 'e' stands for 'explorer'
 nmap <C-E> :NERDTreeToggle<CR>
 
 " cool icons
@@ -136,8 +136,8 @@ let g:user_emmet_leader_key=','
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " use <Tab> key to trigger completion and navigate to the next complete item;
-" can use also <Ctrl-N> to go to next element
-"              <Shift-Tab> <Ctrl-P> to go to previous element
+" can use also <Ctrl-n> to go to next element
+"              <Shift-Tab> <Ctrl-p> to go to previous element
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -193,6 +193,17 @@ Plugh 'tpope/vim-commentary'
 " search tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'mileszs/ack.vim'
+" This Leader-a shortcut has a Ack! command with bang, which will search
+" but do not jump to the first result automatically.
+" Hit Leader-a and type string to search, or
+" hit Leader-a and then Enter to search for string under cursor.
+nnoremap <Leader>a :Ack!<Space>
+
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.next|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 " my favourite colorscheme, bubblegum
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -233,6 +244,7 @@ I recomment at least the following:
 * coc-css
 * coc-html
 * coc-json
+* coc-pairs
 * coc-prettier
 * coc-tsserver
 
