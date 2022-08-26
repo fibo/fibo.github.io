@@ -82,17 +82,14 @@ source ~/.config/nvim/plugins.vim
 ```
 
 I keep plugins in a separate file: *~/.config/nvim/plugins.vim*.
-One of the following plugins is a personal choice, i.e. the *bubblegum* colorscheme (configured as last one).
-Other than that the plugins listed are considered **essentials** to me. There are also few custom configurations.
+
+The last plugin listed, i.e. the *bubblegum* is my favourite colorscheme.
+Other plugins and configurations are considered **essentials** to me.
 
 ```vim
 " vim-plug start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.nvim/plugged')
-
-" syntax highlighting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'sheerun/vim-polyglot'
 
 " files hierarchy tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,14 +105,16 @@ Plug 'ryanoasis/vim-devicons'
 
 let g:webdevicons_enable_nerdtree = 1
 
+" Git integration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-fugitive'
+
+" Enables :GBrowse from fugitive.vim to open GitHub URLs.
+Plug 'tpope/vim-rhubarb'
+
 " editorconfig support
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'editorconfig/editorconfig-vim'
-
-" git integration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -179,10 +178,6 @@ nmap <leader>r <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-
-" insert or delete parenthesis in pair
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'vim-scripts/auto-pairs-gentle'
 
 " toggle comments
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
