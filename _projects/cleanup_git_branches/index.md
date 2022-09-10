@@ -33,6 +33,15 @@ git clone https://github.com/fibo/cleanup_git_branches.git
 echo "source ~/.shell/cleanup_git_branches/fun.sh" >> ~/.zshrc
 ```
 
+With the setup above, to update run the following
+
+```sh
+cd ~/.shell/cleanup_git_branches
+git pull origin main
+source ~/.zshrc
+cd -
+```
+
 ## Annotated source
 
 Create a `cleanup_git_branches` function
@@ -51,11 +60,13 @@ Remove local branches (excluding main branch) that are already merged
 Remove local branches with no remote reference
 
       git fetch -p
-      for BRANCH_NAME in $(git branch -vv | grep '\[gone\]' | awk '{print $1}')
+      for BRANCH_NAME in $(git branch -v | grep '\[gone\]' | awk '{print $1}')
       	do
       		git branch -D $BRANCH_NAME
       	done
     }
+
+To generate sources, enter this repo folder and run `make`.
 
 ## License
 
