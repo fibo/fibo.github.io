@@ -18,21 +18,20 @@ Type `.` in command mode to repeat last executed command.
 
 ## Moving faster
 
-Move to start of previous paragraph or code block: `{`.
+- Move to start of previous paragraph or code block: `{`.
+- Move to end of next paragraph or code block: `}`.
 
-Move to end of next paragraph or code block: `}`.
+- Move upwards: <kbd>CTRL</kbd> <kbd>U</kbd>.
+- Move downwards: <kbd>CTRL</kbd> <kbd>D</kbd>.
 
-Move forward one screenful: <kbd>CTRL</kbd> <kbd>F</kbd>.
+- Move forward one screenful: <kbd>CTRL</kbd> <kbd>F</kbd>.
+- Move backward one screenful: <kbd>CTRL</kbd> <kbd>B</kbd>.
 
-Move backward one screenful: <kbd>CTRL</kbd> <kbd>B</kbd>.
+- Jump back to the previous (older) location: <kbd>CTRL</kbd> <kbd>O</kbd>.
+- Jump forward to the next (newer) location: <kbd>CTRL</kbd> <kbd>I</kbd>.
 
-Jump back to the previous (older) location: <kbd>CTRL</kbd> <kbd>O</kbd>
-
-Jump forward to the next (newer) location: <kbd>CTRL</kbd> <kbd>I</kbd> or also <kbd>TAB</kbd>.
-
-Move to the first line in a file: `gg`.
-
-Move to the last line in a file: `G`.
+- Move to the first line in a file: `gg`.
+- Move to the last line in a file: `G`.
 
 ## Wrap lines
 
@@ -106,6 +105,26 @@ See listed buffers with `:ls`, the for example to open buffer number 2, do `:b2`
 let you cycle throw buffers with `gb`.
 
 ## Change or delete **inside**
+
+The command logic is, _c(hange)i(inside)x(something)_ or _d(delete)i(inside)x(something)_. For example:
+
+- `ciw` change inside word; `diw` delete inside word.
+- `cip` change inside paragraph; `diw` delete inside paragraph.
+- `cit` change inside tag; `dit` delete inside tag.
+
+Place cursor on a word, then `ciw` to change it or `diw` to delete it.
+
+Place a cursor inside a paragraph, then `cip` to change it or `dip` to delete it.
+
+Place a cursor inside an HTML tag, for example
+
+```html
+<ul>
+  <li>place cursor here</li>
+</ul>
+```
+
+then `cit` to change it or `dit` to delete it.
 
 Move inside single quotes and type `ci'`, for example if you have
 
