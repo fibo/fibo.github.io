@@ -33,6 +33,13 @@ Type `.` in command mode to repeat last executed command.
 - Move to the first line in a file: `gg`.
 - Move to the last line in a file: `G`.
 
+- Move to start of line: `0`.
+- Move to end of line: `$`.
+
+- Move to start of next word: `w`.
+- Move backward to beginning of word: `b`.
+- Move to end of word: `e`.
+
 ## Wrap lines
 
 It is ok to wrap lines, add to your vim config
@@ -67,6 +74,10 @@ Go to mark **a**: `'a`.
 
 Usually I create a mark labeled as **m**: typing `mm` and then `'m` is faster.
 
+Use capital letters to create marks across files, e.g. `mA`.
+
+List marks with command `:marks`.
+
 ## Macros
 
 1. Start recording a macro labeled as **a**: `qa`.
@@ -88,9 +99,9 @@ Split window and open current directory: `:split .`
 Split window to a file relative to current open file. This will expand to current file directory: `:split %:p:h` <kbd>TAB</kbd>.
 You can also add this map to your config `map ,s :split <C-R>=expand("%:p:h") . "/" <CR>` (credits here[https://stackoverflow.com/a/1708936]).
 
-## Tabs
+## Editor Tabs
 
-To open a new tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
+To open a new editor tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
 
 Go to next tab: `gt`.
 
@@ -158,29 +169,3 @@ function () {
 }
 ```
 
-## Emmet
-
-<span class="badge">Plugin</span>
-
-Install [mattn/emmet-vim](https://github.com/mattn/emmet-vim) plugin
-
-> which provides support for expanding abbreviations similar to [emmet](http://emmet.io)
-
-Then add this mapping to your configuration
-
-```
-imap ,, <C-y>,
-```
-
-For example, typing `div` or any other emmet expression, you can expand it to markup with `,,`.
-
-## Markdown
-
-You may want syntax highlighter inside markdown code snippets. I achieve it adding the following lines to my configuration.
-
-```
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown' " requires godlygeek/tabular
-
-let g:vim_markdown_folding_disabled = 1
-```
