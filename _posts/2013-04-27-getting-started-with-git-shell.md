@@ -31,16 +31,20 @@ just hit the *Next* button and trust defaults.
 
 First of all, know your current configuration.
 
-```bash
+```sh
 git config --list
 ```
 
 Add your user *name* and *email*, for instance
 
-```bash
-git config --global user.email "casati_gianluca@yahoo.it"
+```sh
+git config --global user.email "fibo@users.noreply.github.com"
 git config --global user.name "fibo"
 ```
+
+<div class="paper info">
+The email used in the commands is the default email you get from GitHub. Of course you need to set your actual email as well as your name, <b>do not use fibo</b>
+</div>
 
 ### SSH public key based authentication
 
@@ -52,8 +56,8 @@ This step is not required, but, it is really usefull. You can generate an ssh ke
 
 You need an ssh key if you want to authenticate easily on a [web-based hosting service](http://en.wikipedia.org/wiki/Shared_web_hosting_service), like GitHub.
 
-```bash
-ssh-keygen -t rsa -C "casati_gianluca@yahoo.it"
+```sh
+ssh-keygen -t rsa -C "fibo@users.noreply.github.com"
 ```
 
 By now I just hit enter three times, even when prompted for a passphrase.
@@ -64,7 +68,7 @@ For more information about passphrase see: [Working with SSH key passphrases](ht
 
 You need to copy the content of you id_rsa.pub. The easiset way to copy it, if you have the **clip.exe** command is
 
-```bash
+```sh
 clip < $HOME/.ssh/id_rsa.pub
 ```
 
@@ -76,7 +80,7 @@ For example, on GitHub is under the [SSH keys profile settings menu](https://git
 
 You can check your ssh key is working, using `ssh -T`, for instance
 
-```bash
+```sh
 $ ssh -T git@github.com
 The authenticity of host 'github.com (204.232.175.90)' can't be established.
 RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
@@ -89,7 +93,7 @@ cess.
 
 or even
 
-```bash
+```sh
 $ ssh -T git@bitbucket.org
 conq: logged in as fibo.  You can use git or hg to connect to Bitbucket. Shell access is disabled.
 ```
