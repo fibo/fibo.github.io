@@ -21,19 +21,22 @@ Type `.` in command mode to repeat last executed command.
 - Move to start of previous paragraph or code block: `{`.
 - Move to end of next paragraph or code block: `}`.
 
-- Move upwards: <kbd>CTRL</kbd> <kbd>U</kbd>.
-- Move downwards: <kbd>CTRL</kbd> <kbd>D</kbd>.
+- Move upwards: <kbd>CTRL</kbd> <kbd>u</kbd>.
+- Move downwards: <kbd>CTRL</kbd> <kbd>d</kbd>.
 
-- Move forward one screenful: <kbd>CTRL</kbd> <kbd>F</kbd>.
-- Move backward one screenful: <kbd>CTRL</kbd> <kbd>B</kbd>.
+- Move forward one screenful: <kbd>CTRL</kbd> <kbd>f</kbd>.
+- Move backward one screenful: <kbd>CTRL</kbd> <kbd>b</kbd>.
 
-- Jump back to the previous (older) location: <kbd>CTRL</kbd> <kbd>O</kbd>.
-- Jump forward to the next (newer) location: <kbd>CTRL</kbd> <kbd>I</kbd>.
+- Jump back to the previous buffer (file): <kbd>CTRL</kbd> <kbd>^</kbd>.
+
+- Jump back to the previous (older) location: <kbd>CTRL</kbd> <kbd>o</kbd>.
+- Jump forward to the next (newer) location: <kbd>CTRL</kbd> <kbd>i</kbd>.
 
 - Move to the first line in a file: `gg`.
 - Move to the last line in a file: `G`.
 
 - Move to start of line: `0`.
+- Move to first character of line: `^`.
 - Move to end of line: `$`.
 
 - Move to start of next word: `w`.
@@ -99,9 +102,9 @@ Split window and open current directory: `:split .`
 Split window to a file relative to current open file. This will expand to current file directory: `:split %:p:h` <kbd>TAB</kbd>.
 You can also add this map to your config `map ,s :split <C-R>=expand("%:p:h") . "/" <CR>` (credits here[https://stackoverflow.com/a/1708936]).
 
-## Editor Tabs
+## Tabs
 
-To open a new editor tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
+To open a new tab you can do `:tabnew` but it is more common to open a new tab moving the cursor on a file name and pressing `t` (for example with NERDTree or Ack).
 
 Go to next tab: `gt`.
 
