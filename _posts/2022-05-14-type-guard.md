@@ -15,18 +15,41 @@ Check that the argument is an object with attributes.
   if (typeof value !== 'object' || value === null) return false;
 ```
 
-Then it is possible to destructure the value as it were a `Partial` of our type.
+Then it is possible to destructure the value as it were `Maybe` our type.
 
 ```typescript
-  const { foo, bar, quz } = value as Partial<MyType>;
+  const { foo, bar, quz } = value as Maybe<MyType>;
 ```
 
 Now you can check every single field. Some field could be a nested object, for instance here `quz: AnotherType`.
 
+This is `Maybe` implementation.
+
+```ts
+/**
+ * Use `Maybe` generic as a *type guard* helper.
+ *
+ * @example
+ * ```ts
+ * type Foo = { bar: boolean };
+ *
+ * const isFoo = (arg: unknown): arg is Foo => {
+ *   if (!arg || typeof arg !== "object") return false;
+ *   const { bar } = arg as Maybe<Foo>;
+ *   return typeof bar === "boolean";
+ * }
+ * ```
+ */
+export type Maybe<T extends object> = {
+  [K in keyof T]: unknown;
+};
+```
+
 Here it is the sample code.
 
-```typescript
-import { AnotherType, isAnotherType } from './anotherType';
+```ts
+import type { AnotherType, isAnotherType } from "./AnotherType";
+import type { Maybe } from "./Maybe";
 
 export type MyType = {
   foo: string;
@@ -35,13 +58,13 @@ export type MyType = {
 }
 
 export function isMyType(value: unknown): value is MyType {
-  if (typeof value !== 'object' || value === null) return false;
+  if (typeof value !== "object" || value === null) return false;
 
-  const { foo, bar, quz } = value as Partial<MyType>;
+  const { foo, bar, quz } = value as Maybe<MyType>;
 
   return (
-    typeof foo === 'string' &&
-    typeof bar === 'boolean' &&
+    typeof foo === "string" &&
+    typeof bar === "boolean" &&
     isAnotherType(bar)
   );
 }
