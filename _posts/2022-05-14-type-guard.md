@@ -27,7 +27,6 @@ Here it is the sample code.
 
 ```ts
 import type { AnotherType, isAnotherType } from "./AnotherType";
-import type { Maybe } from "./Maybe";
 
 export type MyType = {
   foo: string;
@@ -38,7 +37,7 @@ export type MyType = {
 export function isMyType(value: unknown): value is MyType {
   if (typeof value !== "object" || value === null) return false;
 
-  const { foo, bar, quz } = value as Maybe<MyType>;
+  const { foo, bar, quz } = value as Partial<MyType>;
 
   return (
     typeof foo === "string" &&
@@ -49,34 +48,44 @@ export function isMyType(value: unknown): value is MyType {
 ```
 
 <div class="paper info">
-You can also use a more accurate alternative to `Partial`. The cons is that you need to define a new `Maybe` type and import it in `MyType` implementation.
+You can also use a more accurate alternative to built-in `Partial`. The cons is that you need to define a generic `isMaybeObject` type guard as well as a `objectTypeGuard` helper and import it in `MyType` implementation. The pros is that it correctly type our type attributes as `unknown` and it reduces boilerplate.
 </div>
 
-You can destructure the value as it were a `Maybe` our type.
-
-```ts
-  const { foo, bar, quz } = value as Maybe<MyType>;
-```
-
-This is `Maybe` implementation.
+This is the implementation.
 
 ```ts
 /**
- * Use `Maybe` generic as a *type guard* helper.
+ * Use `isMaybeObject` in a *type guard*.
  *
  * @example
  * ```ts
  * type Foo = { bar: boolean };
  *
  * const isFoo = (arg: unknown): arg is Foo => {
- *   if (!arg || typeof arg !== "object") return false;
- *   const { bar } = arg as Maybe<Foo>;
+ *   if (isMaybeObject<Foo>(arg)) return false;
+ *   const { bar } = arg;
  *   return typeof bar === "boolean";
  * }
  * ```
  */
-export type Maybe<T extends object> = {
+export const isMaybeObject = <T extends object>(
+  arg: unknown
+): arg is {
   [K in keyof T]: unknown;
-};
-```
+} => typeof arg === "object" && arg !== null && Array.isArray(arg);
 
+/**
+ * Use `objectTypeGuard` as a *type guard* helper to reduce boilerplate.
+ *
+ * @example
+ * ```ts
+ * type Foo = { bar: boolean };
+ *
+ * const isFoo = objectTypeGuard<Foo>(({ bar }) => typeof bar === "boolean");
+ * ```
+ */
+export const objectTypeGuard =
+  <T extends object>(check: (obj: { [K in keyof T]: unknown }) => boolean) =>
+  (arg: unknown): arg is T =>
+    isMaybeObject<T>(arg) && check(arg);
+```
