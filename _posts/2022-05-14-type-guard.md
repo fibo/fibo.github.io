@@ -72,7 +72,7 @@ export const isMaybeObject = <T extends object>(
   arg: unknown
 ): arg is {
   [K in keyof T]: unknown;
-} => typeof arg === "object" && arg !== null && Array.isArray(arg);
+} => typeof arg === "object" && arg !== null && !Array.isArray(arg);
 
 /**
  * Use `objectTypeGuard` as a *type guard* helper to reduce boilerplate.
