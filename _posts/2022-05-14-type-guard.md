@@ -1,5 +1,5 @@
 ---
-title: How I implement a TypeScript type guard on an object like type.
+title: How I implement a TypeScript type-guard on an object-like type.
 tags:
   - TypeScript
 description: >
