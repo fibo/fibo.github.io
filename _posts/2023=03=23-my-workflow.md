@@ -24,7 +24,11 @@ Kanban is a method for optimizing the flow of business value through a process t
 
 Kanban allows the Team working on that workflow to reach a sustainable pace that it could be guarantee indefinitely.
 
-### Metadata
+You can use any tool that implement the *Getting things Done* method board. For example Jyra, GitHub projects or Trello.
+
+This is an example on Trello that implements the board described below: https://trello.com/b/DuYFIYag
+
+### Metadata column
 
 Following the principles above, my idea is to create a *Metadata* column that contains all the information needed to manage the board.
 
