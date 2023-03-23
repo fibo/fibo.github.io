@@ -20,7 +20,7 @@ The result is the best of both *good old* Vim and modern improvements. However, 
 ## Configuration
 
 <div class="paper info">
-  This section is highly <b>opinionated</b>. Pleae consider the configurations below as a starting point. To me they are <em>essentials to a joyful developer experience.</em>
+  This section is highly <b>opinionated</b>. Please consider the configurations below as a starting point. To me they are <em>essentials to a joyful developer experience.</em>
 </div>
 
 Install *vim-plug* for *Neovim* first, [instructions here](https://github.com/junegunn/vim-plug#neovim).
@@ -183,7 +183,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use `gcc` to comment out a line (takes a count),
 " `gc` in visual mode to comment out the selection, and much more...
-Plugh 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " search tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

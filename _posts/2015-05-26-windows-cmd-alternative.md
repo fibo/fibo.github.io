@@ -4,7 +4,7 @@ tags:
   - Windows
   - Software
 description: >
-    Tyred of MS/DOS prompt limitations? Try ConEmu.
+    Tired of MS/DOS prompt limitations? Try ConEmu.
 ---
 
 Follow instructions in this article to get the coolest shell experience on Windows.

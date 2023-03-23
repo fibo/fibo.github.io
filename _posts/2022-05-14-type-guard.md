@@ -3,7 +3,7 @@ title: How I implement a TypeScript type-guard on an object-like type.
 tags:
   - TypeScript
 description: >
-     It happens often I need to implement a TypeScript type guard that consumes an object like type, but did not found clear examples in official documentation or articles. This is the solution I found.
+     It happens often I need to implement a TypeScript type-guard that consumes an object-like type, but did not found clear examples in official documentation or articles. This is the solution I found.
 ---
 
 Suppose you have a `MyType` type with fields `foo`, `bar`, `quz`.
