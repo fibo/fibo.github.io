@@ -6,6 +6,11 @@ description: >
      Principles and policies I use to organize my tasks. It also includes my own way to handle a kanban board which uses an interesting approach, the metadata.
 ---
 
+<div class="paper warning">
+If you are a <em>SCRUM master</em> or have some knowledge about <em>Project Management</em> you may found this article <b>naive</b>.
+It is just my personal approach to this topic. Anyway, any feedback is welcome.
+</div>
+
 ## Principles
 
 Let's start with some *principles* I came up with.
@@ -18,6 +23,16 @@ Let's start with some *principles* I came up with.
 
 > Policies definitions should be placed into the system they are describing.
 
+In software development, few years ago it was used to put tests in a *tests/* folder. Recently the best practice is to place tests near the related code. For instance, if code is located in file *Foo.js*, then tests are placed in file *Foo_test.js*. This has several advantages, in particular it makes easier to access test code.
+
+I copied this idea and applied to *Project Management*: defining policies about a board using cards, makes it easier to read and update them.
+
+### Simplicity
+
+A quote from [Leonardo](https://en.wikipedia.org/wiki/Leonardo_da_Vinci) I want to share and add to this set of principles:
+
+> Simplicity is the ultimate sophistication.
+
 ## Kanban board
 
 Kanban is a method for optimizing the flow of business value through a process that uses a visual, work-in-progress limited & pull system.
@@ -26,7 +41,7 @@ Kanban allows the Team working on that workflow to reach a sustainable pace that
 
 You can use any tool that implement the *Getting things Done* method board. For example Jyra, GitHub projects or Trello.
 
-This is an example on Trello that implements the board described below: https://trello.com/b/DuYFIYag
+See [this is an example on Trello](https://trello.com/b/DuYFIYag): it implements the board described below.
 
 ### Metadata column
 
