@@ -125,15 +125,21 @@ Follows an example of cards you can start with.
 
 ### Variants
 
-Card content in the *Metadata* column could be changed or updated.
+Card content in the *Metadata* column could be changed or updated. It will also reflect on the board items and content, of course.
+
+#### Columns
 
 There could be a different set of columns, according to the development stages. For example there could be a *Ready to test* and an *In production* column rather than a single *Done* column.
+
+#### WiP limit
 
 It is also used to set a limit to the number of cards in a column. For example you may use this definition of the *In progress* column.
 
 <ul>
   <li><b>In progress</b>: It contains a limited number of stories, according to capacity. This number is called <abbr title="Work in Progress">Wip</abbr>limit.</li>
 </ul>
+
+#### Labels
 
 There could be additional labels, for example:
 
@@ -142,6 +148,22 @@ There could be additional labels, for example:
 There could be also a different set of labels if the team agrees on that, but I would recommend to keep *Bug* and *Nice to have* labels.
 
 There could be a different set of columns.
+
+#### Blocked stories
+
+Another concept you may need is to highlight blocked stories. This can be done with a *Blocked* column which is usually placed before the *Done* column.
+
+<div class="paper warning">Notice that in the <em>Columns</em> card, the first statement is: read columns from <b>right to left</b></div>.
+
+Yes, from right to left: exactly like a manga! This is because you should first see which stories were done, then which are blocked and then the other cards. Avoid blocks in the flow is one of the main goals of management. It is also a good idea to set a *WiP limit* on the *Blocked* column.
+
+But you could choose to achieve the same goal in a different way. For example there could be a *blocked* label and cards that are *In progress* but blocked could be placed on top. This is a method I never seen in any project but it is more coherent with the principle used by many SCRUM masters:
+
+> Cards should be moved only from one column to a column to the right.
+
+Again, I discovered this policy after few months I was use using SCRUM. It was not written and implicitly assumed by the *SCRUM master*. This is way the *Metadata* column is important. And by the way, that day the SCRUM master was in vacation and the *Product owner* moved a card from left to right telling us that it was an exception and should not be done. LOL!
+
+#### Metadata cards
 
 There could be other cards in the *Metadata* column, for example:
 
