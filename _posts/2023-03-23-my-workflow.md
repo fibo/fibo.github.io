@@ -101,7 +101,7 @@ Follows an example of cards you can start with.
 
     <li><b>To do</b>: contains stories ready to be processed. Stories with higher priority are on top.</li>
 
-    <li><b>In progress</b>: It contains a limited number of stories, according to capacity. This number is called <abbr title="Work in Progress">Wip</abbr>limit.</li>
+    <li><b>In progress</b>: stories that are currently developed.</li>
 
     <li><b>Done</b>: features that are deployed to users. To be observed and measured. Latest releases are on top.</li>
   </ol>
@@ -125,11 +125,15 @@ Follows an example of cards you can start with.
 
 ### Variants
 
-Every team should be able to <em>self-regulate</em> its process according to their needs and tools.
-
 Card content in the *Metadata* column could be changed or updated.
 
 There could be a different set of columns, according to the development stages. For example there could be a *Ready to test* and an *In production* column rather than a single *Done* column.
+
+It is also used to set a limit to the number of cards in a column. For example you may use this definition of the *In progress* column.
+
+<ul>
+  <li><b>In progress</b>: It contains a limited number of stories, according to capacity. This number is called <abbr title="Work in Progress">Wip</abbr>limit.</li>
+</ul>
 
 There could be additional labels, for example:
 
