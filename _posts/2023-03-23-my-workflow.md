@@ -115,8 +115,6 @@ Follows an example of cards you can start with.
   <h3>List of labels</h3>
 
   <ul>
-    <li><b>Needs refinement</b>: the card requires more details or needs to be subdivided into smaller cards. This label may be assigned while the story is in progress if something unexpected happens.</li>
-
     <li><b>Bug</b>: describes a mistake or problem to be solved. Usually they have a higher priority.</li>
 
     <li><b>Nice to have</b>: a story that provides value but it is not critical. Usually they have a higher priority.</li>
