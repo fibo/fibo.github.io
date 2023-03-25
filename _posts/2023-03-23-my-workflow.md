@@ -39,6 +39,8 @@ It happened so many times that I start working on a project, there is some docum
 
 <div class="paper warning">Usually the <em>Backlog</em> (see below) is not a board column. Some SCRUM masters even may hide the backlog to developers and make it accessible only to the <em>Product owner</em>. This could have some pros but I think that the <em>Proximity</em> principle helps a lot. I have seen many projects with a huge and outdated backlog, full of duplicates.</div>
 
+An article that also inspired me and influenced a lot, regarding this principle is <a href="https://tom.preston-werner.com/2010/08/23/readme-driven-development.html">Readme Driven Development</a> by GitHub founder <a href="https://en.wikipedia.org/wiki/Tom_Preston-Werner">Tom Preston-Werner</a>. The *START HERE* card on top of the *Metadata* column described below, could by also named *README*; or on the other hand, the *Metadata* column could be considered as the equivalent of a *Readme.md* file in a git repository.
+
 ## Kanban board
 
 Kanban is a method for optimizing the flow of business value through a process that uses a visual, work-in-progress limited & pull system.
