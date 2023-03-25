@@ -15,6 +15,12 @@ It is just my personal approach to this topic. Anyway, any feedback is welcome.
 
 Let's start with some *principles* I came up with.
 
+### Simplicity
+
+A quote from [Leonardo](https://en.wikipedia.org/wiki/Leonardo_da_Vinci):
+
+> Simplicity is the ultimate sophistication.
+
 ### Self improvement
 
 > A set of *management policies* is successful if it evolves itself effectively.
@@ -25,13 +31,13 @@ Let's start with some *principles* I came up with.
 
 In software development, few years ago it was used to put tests in a *tests/* folder. Recently the best practice is to place tests near the related code. For instance, if code is located in file *Foo.js*, then tests are placed in file *Foo_test.js*. This has several advantages, in particular it makes easier to access test code.
 
+This concept is sometimes also named *co-location*.
+
 I copied this idea and applied to *Project Management*: defining policies about a board using cards, makes it easier to read and update them.
 
-### Simplicity
+It happened so many times that I start working on a project, there is some documentation but many of the links are broken.
 
-A quote from [Leonardo](https://en.wikipedia.org/wiki/Leonardo_da_Vinci) I want to share and add to this set of principles:
-
-> Simplicity is the ultimate sophistication.
+<div class="paper warning">Usually the <em>Backlog</em> (see below) is not a board column. Some SCRUM masters even may hide the backlog to developers and make it accessible only to the <em>Product owner</em>. This could have some pros but I think that the <em>Proximity</em> principle helps a lot. I have seen many projects with a huge and outdated backlog, full of duplicates.</div>
 
 ## Kanban board
 
@@ -95,7 +101,7 @@ Follows an example of cards you can start with.
 
     <li><b>To do</b>: contains stories ready to be processed. Stories with higher priority are on top.</li>
 
-    <li><b>In progress</b>: It contains a limited number of stories, according to capacity. This number is called WiP limit.</li>
+    <li><b>In progress</b>: It contains a limited number of stories, according to capacity. This number is called <abbr title="Work in Progress">Wip</abbr>limit.</li>
 
     <li><b>Done</b>: features that are deployed to users. To be observed and measured. Latest releases are on top.</li>
   </ol>
@@ -115,4 +121,64 @@ Follows an example of cards you can start with.
 
     <li><b>Nice to have</b>: a story that provides value but it is not critical. Usually they have a higher priority.</li>
   </ul>
+</div>
+
+### Variants
+
+Every team should be able to <em>self-regulate</em> its process according to their needs and tools.
+
+Card content in the *Metadata* column could be changed or updated.
+
+There could be a different set of columns, according to the development stages. For example there could be a *Ready to test* and an *In production* column rather than a single *Done* column.
+
+There could be additional labels, for example:
+
+* __Needs refinement__: the card requires more details or needs to be subdivided into smaller cards. This label may be assigned while the story is in progress if something unexpected happens.
+
+There could be also a different set of labels if the team agrees on that, but I would recommend to keep *Bug* and *Nice to have* labels.
+
+There could be a different set of columns.
+
+There could be other cards in the *Metadata* column, for example:
+
+<div class="paper">
+  <h2>Epics</h2>
+
+  <p>An <em>epic</em>i s a card with a <em>check-list</em>. Every item of the list references a card.</p>
+
+  <h3>Epic life-cycle</h3>
+
+  <ol>
+    <li>Add an item for every task to be done.</li>
+
+    <li>Do not move the epic to the <em>In progress</em> column.</li>
+
+    <li>Create a card for every item in the check-list.</li>
+
+    <li>Replace the item text with a link to the card: the card title will be displayed.</li>
+
+    <li>Once the related story is done, flag the related check-list item.</li>
+
+    <li>If all items in the check-list are done, move the epic to done.</li>
+  </ol>
+</div>
+
+I am a big fan of Markdown, and also was humbled to meet in person one of its creators: <a href="http://ingy.net">Ingy döt Net</a>. But many people do not know Markdown. You may want a add at the bottom of *Metadata* column a card like this:
+
+<div class="paper"><h1>Markdown example</h1>
+<pre class="code">
+# Card title
+
+This is a paragraph.
+
+## Section title
+
+This is __bold__. This is *italic*.
+
+- list element 1
+
+- list element 2
+
+- list element 3
+</pre>
 </div>
