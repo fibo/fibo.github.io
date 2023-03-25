@@ -191,7 +191,7 @@ There could be other cards in the *Metadata* column, for example:
 
 I am a big fan of Markdown, and also was humbled to meet in person one of its creators: <a href="http://ingy.net">Ingy döt Net</a>. But many people do not know Markdown. You may want a add at the bottom of *Metadata* column a card like this:
 
-<div class="paper"><h1>Markdown example</h1>
+<div class="paper"><h2>Markdown example</h2>
 <pre class="code">
 # Card title
 
