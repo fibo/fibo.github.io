@@ -34,7 +34,9 @@ It is an function that returns a *Promise* and requires the following parameters
 ## Usage
 
 ```javascript
-const write = require('write-file-utf8')
+import write from 'write-file-utf8'
+// or use CommonJS
+// const write = require('write-file-utf8')
 
 // Nested folders will be created if they do not exist yet.
 const filePath1 = '/tmp/foo/bar.txt'
@@ -68,12 +70,10 @@ example()
 ## See also
 
 * [read-file-utf8]
-* [fs.writeFile]
 
 ## License
 
-[MIT](http://g14n.info/mit-license/)
+[MIT](https://fibo.github.io/mit-license/)
 
-[fs.writeFile]: https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
 [mkdirp]: https://www.npmjs.com/package/mkdirp
-[read-file-utf8]: https://g14n.info/read-file-utf8
+[read-file-utf8]: https://fibo.github.io/read-file-utf8
