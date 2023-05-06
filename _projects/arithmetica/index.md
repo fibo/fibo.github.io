@@ -31,11 +31,13 @@ console.log(add("0.1", "0.2")); // '0.3'
 
 There is no runtime check on types: consumers are responsible to feed inputs
 that are actual `RationalNumber` types, for instance using
-[`isRationalNumber` type-guard](#isrationalnumberarg-unknown-arg-is-rationalnumber).
+[`isRationalNumber` type-guard](#isrationalnumber).
 
 ## API
 
-### `eq(a: RationalNumber, b: RationalNumber): boolean`
+### eq
+
+`eq(a: RationalNumber, b: RationalNumber): boolean`
 
 Implements equality.
 
@@ -44,19 +46,27 @@ eq("1", "2"); // false
 eq("42", "42.0"); // false
 ```
 
-### `add(a: RationalNumber, b: RationalNumber): RationalNumber`
+### add
+
+`add(a: RationalNumber, b: RationalNumber): RationalNumber`
 
 Implements addition.
 
-### `sub(a: RationalNumber, b: RationalNumber): RationalNumber`
+### sub
+
+`sub(a: RationalNumber, b: RationalNumber): RationalNumber`
 
 Implements subtraction.
 
-### `mul(a: RationalNumber, b: RationalNumber): RationalNumber`
+### mul
+
+`mul(a: RationalNumber, b: RationalNumber): RationalNumber`
 
 Implements multiplication.
 
-### `div(a: RationalNumber, b: RationalNumber): RationalNumber`
+### div
+
+`div(a: RationalNumber, b: RationalNumber): RationalNumber`
 
 Implements division. It throws `RangeError` if denominator is zero.
 
@@ -70,7 +80,9 @@ try {
 }
 ```
 
-### `isRationalNumber(arg: unknown): arg is RationalNumber`
+### isRationalNumber
+
+`isRationalNumber(arg: unknown): arg is RationalNumber`
 
 Use `isRationalNumber` type-guard to check if some variable has `RationalNumber` data type.
 
@@ -94,7 +106,9 @@ function timesTen (a) {
 }
 ```
 
-### `rationalNumberToFloat(rationalNumber: RationalNumber, mantissaLength: number): number`
+### rationalNumberToFloat
+
+`rationalNumberToFloat(rationalNumber: RationalNumber, mantissaLength: number): number`
 
 Convert a `RationalNumber` to a floating point number.
 
