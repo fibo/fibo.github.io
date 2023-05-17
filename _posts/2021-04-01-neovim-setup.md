@@ -47,10 +47,10 @@ nnoremap <leader>t :below 10sp term://$SHELL<cr>i
 
 " use current file directory as a start to find file to edit
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" credits to: https://stackoverflow.com/a/1708936
+
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
-" credits to:
-" https://stackoverflow.com/a/1708936
 
 " it is ok to wrap lines, just use gj or gk to move
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,6 +58,8 @@ set wrap
 
 " console.log hot key: type cll
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" credits to: https://gist.github.com/jasongonzales23/6189da1d82ee05a91edfd53403d6941d
+
 " insert mode, puts focus inside parentheses
 "
 " if you are using coc-pairs or any other auto pairs plugin,
@@ -65,18 +67,28 @@ set wrap
 " imap cll console.log(
 "
 imap cll console.log()<Esc><S-f>(a
+
 " from visual mode on next line, puts visual selection inside parentheses
 vmap cll yocll<Esc>p
+
 " from normal mode, wraps word under cursor
 nmap cll yiwocll<Esc>p
-" credits to:
-" https://gist.github.com/jasongonzales23/6189da1d82ee05a91edfd53403d6941d
 
 " cycle buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :nnoremap gb :bnext<CR>
 
-" load plugins
+" move camelCase-wise
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use Shift + arrow keys,
+" source: https://vim.fandom.com/wiki/Moving_through_camel_case_words
+
+nnoremap <silent><S-Left> :<C-u>call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\>\@!\)\<Bar>\%^','bW')<CR>
+nnoremap <silent><S-Right> :<C-u>call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\>\@!\)\<Bar>\%$','W')<CR>
+inoremap <silent><S-Left> <C-o>:call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\>\@!\)\<Bar>\%^','bW')<CR>
+inoremap <silent><S-Right> <C-o>:call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\>\@!\)\<Bar>\%$','W')<CR>
+
+" Finally, load plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.config/nvim/plugins.vim
 ```
