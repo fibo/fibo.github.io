@@ -140,9 +140,13 @@ You may also want to take a look to [zsh-autosuggestions](https://github.com/zsh
 
 ### Aliases
 
-Cannot live without these aliases. Put them, for instance, in your *~/.zshrc*.
+Cannot live without these aliases. Put them, in shared _~/.shell/aliases.sh_ and load them *~/.zshrc* with `source ~/.shell/aliases.sh`.
 
-```bash
+```sh
+# Aliases
+###
+
+# Use `vi` for NeoVim, `vim` for good old `Vim`.
 alias vi='nvim '
 
 alias ls='ls -G'
@@ -155,6 +159,7 @@ alias gc='git commit '
 alias gl='git log --graph'
 alias gpl='git pull '
 alias gps='git push '
+alias gpsf='git push --force-with-lease'
 alias gs='git status'
 
 alias ns='npm start'
@@ -163,7 +168,7 @@ alias nt='npm test'
 
 Run also the following commands to set *git aliases*:
 
-```bash
+```sh
 # Modify previous commit
 git config --global alias.amend "commit --amend"
 # List files with merge conflicts
@@ -219,7 +224,7 @@ I found [direnv](https://direnv.net/) the perfect tool to achieve that.
 
 After installing it, for example with homebrew
 
-```bash
+```sh
 brew install direnv
 ```
 
