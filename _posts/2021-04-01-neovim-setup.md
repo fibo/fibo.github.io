@@ -135,12 +135,20 @@ Plug 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled = 1
 
-" emmet (like), essential toolkit for abbreviation expansion
+" emmet (like), essential toolkit for HTML & CSS abbreviation expansion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quick tutorial.
+"
+" Open or create index.html file.
+"
+" Type ("_" is the cursor position)
+"
+"      html:5_
+"
+" Then type <C-y>, (Ctrl y ,) to trigger expansion.
+"
+" More tutorials here: https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL
 Plug 'mattn/emmet-vim'
-
-" trigger expansion with <Comma> <Comma> keys
-let g:user_emmet_leader_key=','
 
 " awesome completion tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
