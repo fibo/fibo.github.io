@@ -31,7 +31,7 @@ CREATE TABLE sta.elb_log (
 	response_processing_time FLOAT ENCODE BYTEDICT,
 	elb_status_code VARCHAR(3) ENCODE LZO,
 	backend_status_code VARCHAR(3) ENCODE LZO,
-	recieved_bytes BIGINT ENCODE LZO,
+	received_bytes BIGINT ENCODE LZO,
 	sent_bytes BIGINT ENCODE LZO,
 	request VARCHAR(MAX),
 	user_agent VARCHAR(MAX) ENCODE LZO,

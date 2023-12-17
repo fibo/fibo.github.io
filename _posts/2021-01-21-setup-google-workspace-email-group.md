@@ -1,21 +1,21 @@
 ---
-title: How to setup Google Workspace group to send and recieve email
+title: How to setup Google Workspace group to send and receive email
 tags:
   - Google
   - Marketing
 description: >
-    Follow these complete instructions to create a group Google Workspace to send and recieve email.
+    Follow these complete instructions to create a group Google Workspace to send and receive email.
 ---
 
 ## Goal
 
-I have two user emails created on my *Google Workspace*, for example *bob@my-company.com* and *alice@my-company.com*. Both are in the *administration@my-company.com* group. We are going to achieve that they can recieve and reply to emails as *administration@my-company.com*
+I have two user emails created on my *Google Workspace*, for example *bob@my-company.com* and *alice@my-company.com*. Both are in the *administration@my-company.com* group. We are going to achieve that they can receive and reply to emails as *administration@my-company.com*
 
 ## Instructions
 
 Login to [Admin console](https://admin.google.com). Go to *Groups* and create a group email, for example, *Administration* with email *administration@my-company.com*, then add the users.
 
-In order to be able to recieve emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
+In order to be able to receive emails from outside, for example when you register on a website, make sure to check the *External* flag in the **Publish posts** row.
 
 ![Extenal can publish posts](/images{{ page.id }}/external-can-publish-posts.png)
 
@@ -27,7 +27,7 @@ In the confirmation box (the yellow one) make sure that *Treat as an alias* is *
 
 Go ahead and complete with email confirmation code as required.
 
-Once completed you will be able with your *user email* not only to recieve emails sent to the *group email* but also to reply them. During email composition, just click on the dropdown icon to choose a group email address.
+Once completed you will be able with your *user email* not only to receive emails sent to the *group email* but also to reply them. During email composition, just click on the dropdown icon to choose a group email address.
 
 ## Bonus tip
 
@@ -43,7 +43,7 @@ and this is how I translated the *priorities* into *AWS* console
 
 ![MX records on AWS](/images{{ page.id }}/mx-records-on-aws.png)
 
-When DNS propagated I was able to recieve an email to *myuser@my-alias-domain.com* on my *Google Workspace* gmail.
+When DNS propagated I was able to receive an email to *myuser@my-alias-domain.com* on my *Google Workspace* gmail.
 
 ## Credits
 
