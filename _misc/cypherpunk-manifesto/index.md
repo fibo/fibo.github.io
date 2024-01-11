@@ -1,5 +1,6 @@
 ---
 title: A Cypherpunk's Manifesto
+name: cypherpunk-manifesto
 ---
 
 # A Cypherpunk's Manifesto

@@ -37,6 +37,9 @@ collections:
   licenses:
     output: true
     permalink: ./:path.html
+  misc:
+    output: true
+    permalink: ./:path.html
   projects:
     output: true
     permalink: ./:path.html
