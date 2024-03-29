@@ -3,7 +3,7 @@ title: JS Error Handling
 tags:
   - JavaScript
 description: >
-     Is it worth to study Math? Of course, yes!
+     This is my vademecum on error handling in JavaScript
 ---
 
 ## How to define an error
