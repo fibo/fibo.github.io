@@ -41,6 +41,8 @@ export class InternalServerError extends Error {
 
 The constructor need to call `super` first, passing it the error message.
 
+## Testing errors
+
 Error `message` is defined as a _static method_, it can be used to recognize the error in some contexts, for example when testing.
 
 ```ts
@@ -75,6 +77,8 @@ describe("truncateDate", () => {
 });
 ```
 
+## Error info
+
 Optionally add info attributes to the class, for example
 
 ````ts
@@ -82,10 +86,10 @@ Optionally add info attributes to the class, for example
  * Generic HTTP Error.
  *
  * @example
- * 	;```ts
- * 	const response = await fetch(url)
- * 	if (!response.ok) throw new ErrorHTTP(response)
- * 	```
+ *
+ * const response = await fetch(url)
+ * if (!response.ok) throw new ErrorHTTP(response)
+ *
  */
 export class ErrorHTTP extends Error {
 	static errorName = "ErrorHTTP"
@@ -117,7 +121,7 @@ export class ErrorHTTP extends Error {
 		}
 	}
 }
-````
+```
 
 Notice some info could be not defined or `unknown`.
 
@@ -159,6 +163,9 @@ However, using `error instanceof MyError` can be done only if the error instance
 was created in the same JavaScript context that catches it. This could be not
 the case, not only in client-server model but also when using threads (e.g. _Web
 Workers_).
+
+## Serializable errors
+
 An error should also be serializable into JSON, in the following example the
 `toJSON()` method return something that can be serialized; it will be internally called by `JSON.stringify`.
 
