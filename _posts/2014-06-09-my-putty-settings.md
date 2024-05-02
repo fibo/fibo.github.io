@@ -144,4 +144,3 @@ Right click on the *regedit* entry and export, choose the *.reg* format. Then op
   [1]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
   [2]: http://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
   [3]: https://puttytray.goeswhere.com/ "PuttyTray"
-

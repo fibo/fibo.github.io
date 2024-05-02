@@ -23,7 +23,6 @@ Then go to [emoji preview page](http://twitter.github.io/twemoji/preview.html), 
 
  😍 ❤ ♍ 🐘 🎲 💪 🍺 🐧 🐢
 
-
 If you are using Jekyll, is even easier, just add this to your *_config.yaml*
 
 ```yaml
@@ -63,4 +62,3 @@ Yes, you can code with emojis in few programming languages:
 
 * [emojicode](http://www.emojicode.org/)
 * [emojilisp](http://emojilisp.com/)
-

@@ -238,4 +238,3 @@ npm run _delete
 <div class="paper warning">
 Notice that the *_delete* string has an underscore prefix otherwise it is error prone, due to bash completion on npm scripts, in particular when you launch *npm run deploy*.
 </div>
-

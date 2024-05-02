@@ -65,9 +65,9 @@ export NLS_LANG=ITALIAN_ITALY.WE8ISO8859P15
 
 # Set LD_LIBRARY_PATH avoiding a final colon.
 if [ -z "$LD_LIBRARY_PATH" ]; then
-	export LD_LIBRARY_PATH=$ORACLE_HOME
+ export LD_LIBRARY_PATH=$ORACLE_HOME
 else
-	export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
+ export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH
 fi
 ```
 
@@ -222,4 +222,3 @@ __END__
 
 [1]: https://metacpan.org/release/DBD-Oracle
 [2]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %}
-

@@ -76,4 +76,3 @@ Copy the JSON generated, it will be something like
 
 [1]: http://stackoverflow.com/questions/19176926/how-to-make-all-objects-in-aws-s3-bucket-public-by-default "How to make all Objects in AWS S3 bucket public by default?"
 [2]: http://docs.aws.amazon.com/AmazonS3/latest/dev/s3-bucket-user-policy-specifying-principal-intro.html "Specifying a Principal in a Policy"
-

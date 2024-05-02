@@ -59,27 +59,27 @@ query to create the `dim.geoip_country_optimized` SQL table is the following
 ```sql
 INSERT INTO dim.geoip_country_optimized
 SELECT
-	CASE
-		WHEN u.isocode2 = u.prev_isocode2 THEN u.prev_ip_inf
-		ELSE u.ip_inf
-	END AS ip_inf,
-	u.ip_sup,
-	u.isocode2
+ CASE
+  WHEN u.isocode2 = u.prev_isocode2 THEN u.prev_ip_inf
+  ELSE u.ip_inf
+ END AS ip_inf,
+ u.ip_sup,
+ u.isocode2
 FROM (
-	SELECT t.ip_inf, t.ip_sup, t.isocode2,
-	LEAD(t.isocode2) OVER (ORDER BY t.ip_inf) AS next_isocode2,
-	LAG(t.isocode2) OVER (ORDER BY t.ip_inf) AS prev_isocode2,
-	LAG(t.ip_inf) OVER (ORDER BY t.ip_inf) AS prev_ip_inf
-	FROM (
-		SELECT
-			ip_inf,
-			ip_sup,
-			isocode2,
-			LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
-			LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
-		FROM dim.geoip_country
-	) t
-	WHERE t.isocode2 != t.prev OR t.isocode2 != t.next
+ SELECT t.ip_inf, t.ip_sup, t.isocode2,
+ LEAD(t.isocode2) OVER (ORDER BY t.ip_inf) AS next_isocode2,
+ LAG(t.isocode2) OVER (ORDER BY t.ip_inf) AS prev_isocode2,
+ LAG(t.ip_inf) OVER (ORDER BY t.ip_inf) AS prev_ip_inf
+ FROM (
+  SELECT
+   ip_inf,
+   ip_sup,
+   isocode2,
+   LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
+   LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
+  FROM dim.geoip_country
+ ) t
+ WHERE t.isocode2 != t.prev OR t.isocode2 != t.next
 ) u
 WHERE u.isocode2 != u.next_isocode2
 ;
@@ -92,11 +92,11 @@ functions, with the following query
 
 ```sql
 SELECT
-	ip_inf,
-	ip_sup,
-	isocode2,
-	LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
-	LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
+ ip_inf,
+ ip_sup,
+ isocode2,
+ LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
+ LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
 FROM dim.geoip_country
 ORDER BY 1
 ```
@@ -126,13 +126,13 @@ is achieved.
 ```sql
 SELECT t.ip_inf, t.ip_sup, t.isocode2
 FROM (
-	SELECT
-		ip_inf,
-		ip_sup,
-		isocode2,
-		LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
-		LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
-	FROM dim.geoip_country
+ SELECT
+  ip_inf,
+  ip_sup,
+  isocode2,
+  LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
+  LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
+ FROM dim.geoip_country
 ) t
 WHERE t.isocode2 != t.prev OR t.isocode2 != t.next
 ORDER BY 1
@@ -159,17 +159,17 @@ the `next_isocode2`, `prev_isocode2` and `prev_ip_inf` fields.
 ```sql
 SELECT
   t.ip_inf, t.ip_sup, t.isocode2,
-	LEAD(t.isocode2) OVER (ORDER BY t.ip_inf) AS next_isocode2,
-	LAG(t.isocode2) OVER (ORDER BY t.ip_inf) AS prev_isocode2,
-	LAG(t.ip_inf) OVER (ORDER BY t.ip_inf) AS prev_ip_inf
+ LEAD(t.isocode2) OVER (ORDER BY t.ip_inf) AS next_isocode2,
+ LAG(t.isocode2) OVER (ORDER BY t.ip_inf) AS prev_isocode2,
+ LAG(t.ip_inf) OVER (ORDER BY t.ip_inf) AS prev_ip_inf
 FROM (
-	SELECT
-		ip_inf,
-		ip_sup,
-		isocode2,
-		LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
-		LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
-	FROM dim.geoip_country
+ SELECT
+  ip_inf,
+  ip_sup,
+  isocode2,
+  LAG(isocode2) OVER (ORDER BY ip_inf) AS prev,
+  LEAD(isocode2) OVER (ORDER BY ip_inf) AS next
+ FROM dim.geoip_country
 ) t
 WHERE t.isocode2 != t.prev OR t.isocode2 != t.next
 ORDER BY 1

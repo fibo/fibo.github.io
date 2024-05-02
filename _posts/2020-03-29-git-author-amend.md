@@ -72,4 +72,3 @@ git push --force
 ```
 
 Notice that if the commits need to be changed are also on a *git tag*, you need to fetch it and modify it locally, delete it remotely and then push it again.
-

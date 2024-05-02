@@ -186,4 +186,3 @@ addPropertyControls(Button, {
 ## Conclusion
 
 *Framer X* looks really promising, I just started and even if usually I am picky it looks this is an awesome tool and it is worth to spend time learning it.
-

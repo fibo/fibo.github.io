@@ -75,7 +75,7 @@ alias stop_weblogic='/opt/weblogic/mydomain/bin/stopWebLogic.sh'
 then source it
 
 ```bash
-$ source $HOME/.bash_profile
+source $HOME/.bash_profile
 ```
 
 <div class="paper warning">Note that the <em>USER_MEM_ARGS</em> depends on how many RAM your host has. The configuration above worked for me, but, remember that I am a WebLogic newbie.</div>
@@ -121,19 +121,19 @@ login to http://host.example.com:7001/console with *weblogic* user credentials.
 Finally login with another session as *weblogic* Unix user and launch
 
 ```bash
-$ stop_weblogic
+stop_weblogic
 ```
 
 Then try to start it
 
 ```bash
-$ start_weblogic
+start_weblogic
 ```
 
 Check that it starts *RUNNING mode*
 
 ```bash
-$ tail -f $HOME/start_weblogic.nohup
+tail -f $HOME/start_weblogic.nohup
 ```
 
 Press <kbd>CTRL-C</kbd> to exit. Now you can exit your ssh session.
@@ -154,7 +154,5 @@ Create a *log4j.xml* file, for instance */opt/weblogic/domain/config/log4j.xml*,
 export LOG4J_CONFIG_FILE=/opt/weblogic/domain/config/log4j.xml
 ```
 
-
   [1]: http://ant.apache.org/bindownload.cgi "Apache Ant download"
   [2]: http://www.oracle.com/technetwork/indexes/downloads/index.html "Oracle downloads"
-

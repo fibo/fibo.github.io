@@ -13,13 +13,13 @@ description: >
 Instead of using a bare `prove` command to launch your Perl tests, I think it is really useful using
 
 ```bash
-$ prove --state=save
+prove --state=save
 ```
 
 that will run your tests, remembering which ones are failing, and
 
 ```bash
-$ prove --state=failed,save
+prove --state=failed,save
 ```
 
 that will run only those that failed.
@@ -43,7 +43,7 @@ You need a Unix account and Perl, of course.
 Make sure you have [App::Prove][1] installed, just type this in your prompt
 
 ```bash
-$ cpan App::Prove
+cpan App::Prove
 ```
 
 #### Folder structure
@@ -106,7 +106,7 @@ all_pl_files_ok();
 Of course you should install that required module.
 
 ```bash
-$ cpan Test::Compile
+cpan Test::Compile
 ```
 
 And, yes you should add also another test: *t/00_deps.t*.
@@ -134,4 +134,3 @@ Here we go ... we started writing tests for every feature we add.
 Every test you will add in your *~/t* folder will run every hour. [App::Prove][1] remembers failed tests, using *~/.prove* file, and after login you will run only failed tests, so you will know which problems are going on.
 
   [1]: http://search.cpan.org/~ovid/Test-Harness/lib/App/Prove.pm
-

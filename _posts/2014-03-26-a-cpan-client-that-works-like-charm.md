@@ -13,7 +13,6 @@ Perl comes with a builtin CPAN client, named ehm *cpan*.
 
 Be aware that your configuration is stored in the  *~/.cpan/CPAN/MyConfig.pm* file.
 
-
 Do not edit that file, use `o conf` instead from the *cpan* interactive shell, see below.
 
 ### First run
@@ -75,9 +74,9 @@ For example, I use it on [Codio](https://codio.com) and works great: just keep h
 After installation, you need to modify your environment manually. Just launch
 
 ```bash
-$ cd ~/perl5/lib/perl5
-$ perl -Mlocal::lib >> ~/.bash_profile
-$ source ~/.bash_profile # or reconnect
+cd ~/perl5/lib/perl5
+perl -Mlocal::lib >> ~/.bash_profile
+source ~/.bash_profile # or reconnect
 ```
 
 ### Help
@@ -187,7 +186,7 @@ cpan> o conf yaml_module YAML::XS
 Make sure [LWP](http://search.cpan.org/~gaas/libwww-perl/) is installed and up to date
 
 ```bash
-$ install LWP
+install LWP
 ```
 
 so *cpan* will use it to fetch files from Internet.
@@ -278,7 +277,7 @@ Both commands accept a `/regexp/` as argument. See [Help](#help).
 I assuming you already have a working *cpan* client, so to install *cpanminus* just launch
 
 ```
-$ cpan App::cpanminus
+cpan App::cpanminus
 ```
 
 and use `cpanm` instead of `cpan` from now on. It is **light, fast and minimal** CPAN client, but, it has many features too: see [cpanm](http://search.cpan.org/~miyagawa/App-cpanminus/bin/cpanm) or `cpanm -h` to see what *cpanminus* can do.
@@ -290,13 +289,13 @@ You can use [App::cpanoutdated](http://search.cpan.org/dist/App-cpanoutdated/bin
 Install it
 
 ```bash
-$ cpanm App::cpanoutdated
+cpanm App::cpanoutdated
 ```
 
 then update all modules with
 
 ```bash
-$ cpan-outdated | cpanm
+cpan-outdated | cpanm
 ```
 
 Note that also *cpan* has the [upgrade modules feature](#upgrade-modules) but *cpan-outdated* is faster, uses less memory and is integrated with *cpanm*.
@@ -309,4 +308,3 @@ Note that also *cpan* has the [upgrade modules feature](#upgrade-modules) but *c
   [1]: http://www.cpan.org/ "CPAN"
   [2]: http://www.perl.org/ "Perl"
   [3]: https://metacpan.org/pod/CPAN#Configuration-for-individual-distributions-Distroprefs "Distroprefs"
-

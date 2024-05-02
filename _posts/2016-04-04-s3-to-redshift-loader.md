@@ -22,21 +22,21 @@ Create the staging table that will contain the loaded log files
  * http://blogs.aws.amazon.com/bigdata/post/Tx2Z5UY685A20PL/-Using-Amazon-span-class-matches-Redshift-span-to-Analyze-Your-Elastic-Load-Bala
  */
 CREATE TABLE sta.elb_log (
-	request_time DATETIME ENCODE LZO,
-	elb VARCHAR(100) ENCODE LZO,
-	client_port VARCHAR(22) ENCODE LZO,
-	backend_port VARCHAR(22) ENCODE LZO,
-	request_processing_time FLOAT ENCODE BYTEDICT,
-	backend_processing_time FLOAT ENCODE BYTEDICT,
-	response_processing_time FLOAT ENCODE BYTEDICT,
-	elb_status_code VARCHAR(3) ENCODE LZO,
-	backend_status_code VARCHAR(3) ENCODE LZO,
-	received_bytes BIGINT ENCODE LZO,
-	sent_bytes BIGINT ENCODE LZO,
-	request VARCHAR(MAX),
-	user_agent VARCHAR(MAX) ENCODE LZO,
-	ssl_cipher VARCHAR(100),
-	ssl_protocol VARCHAR(100)
+ request_time DATETIME ENCODE LZO,
+ elb VARCHAR(100) ENCODE LZO,
+ client_port VARCHAR(22) ENCODE LZO,
+ backend_port VARCHAR(22) ENCODE LZO,
+ request_processing_time FLOAT ENCODE BYTEDICT,
+ backend_processing_time FLOAT ENCODE BYTEDICT,
+ response_processing_time FLOAT ENCODE BYTEDICT,
+ elb_status_code VARCHAR(3) ENCODE LZO,
+ backend_status_code VARCHAR(3) ENCODE LZO,
+ received_bytes BIGINT ENCODE LZO,
+ sent_bytes BIGINT ENCODE LZO,
+ request VARCHAR(MAX),
+ user_agent VARCHAR(MAX) ENCODE LZO,
+ ssl_cipher VARCHAR(100),
+ ssl_protocol VARCHAR(100)
 )
 SORTKEY(request_time)
 ;

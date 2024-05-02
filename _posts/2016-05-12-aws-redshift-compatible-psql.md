@@ -105,4 +105,3 @@ To display also the database user in the prompt, put the following line in your 
 ```
 
 See also [psql prompting](http://www.postgresql.org/docs/8.4/static/app-psql.html#APP-PSQL-PROMPTING) for more choices.
-

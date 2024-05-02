@@ -50,4 +50,3 @@ const myField: Field = 'starDate'
 // TS will complain with message like:
 // Type 'starDate' is not assignable to 'startDate' | 'endDate' | 'price' | 'quantity'
 ```
-

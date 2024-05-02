@@ -2,6 +2,7 @@
 title: My Mac Terminal configuration
 tags:
   - Mac
+  - Unix
 description: >
      Mac Terminal is the Non Plus Ultra. Let me share my configuration, in particular I want to remember that font! R.I.P. Steve.
 ---
@@ -157,7 +158,7 @@ You may also want to take a look to [zsh-autosuggestions](https://github.com/zsh
 
 ### Aliases
 
-Cannot live without these aliases. Put them, in shared _~/.shell/aliases.sh_ and load them *~/.zshrc* with `source ~/.shell/aliases.sh`.
+Cannot live without these aliases. Put them, in shared *~/.shell/aliases.sh* and load them *~/.zshrc* with `source ~/.shell/aliases.sh`.
 
 ```sh
 # Aliases

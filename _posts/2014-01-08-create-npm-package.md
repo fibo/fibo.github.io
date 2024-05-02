@@ -83,7 +83,6 @@ author
 
 See [npm's package.json specifics](https://docs.npmjs.com/files/package.json) to know about what's required in your *package.json* file, and the meaning of every attribute.
 
-
 ### Do you want to be public?
 
 One important bit you should aware of, is that if you want to be sure that your package will not be published on the npm registry, you should add this to your *package.json* file.
@@ -113,7 +112,7 @@ and I add the following content
 so the command
 
 ```bash
-$ npm test
+npm test
 ```
 
 will run tests using mocha and the [nyan cat](http://www.nyan.cat/), that makes me very happy **:^)**
@@ -167,7 +166,6 @@ docs/
 ## See also
 
 * [npm-developers]
-
 
 [npm]: https://npmjs.org/
 [npm-developers]: https://docs.npmjs.com/misc/developers

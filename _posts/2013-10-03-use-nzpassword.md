@@ -17,21 +17,21 @@ The right and also the **most comfortable** way to perform a Netezza authenticat
 ## Requirements
 
 I assume you are on a Linux host, with Netezza tools like *nzpassword* and *nzsql*, in your path.
-I recommend that Netezza tools are installed by root in the usual path, that is */usr/local/nz*. So, if you don't have nzpassword in your path, just to your *.bash_profile* something like this
+I recommend that Netezza tools are installed by root in the usual path, that is */usr/local/nz*. So, if you don't have nzpassword in your path, just to your *.sh_profile* something like this
 
 ## Set your environment
 
-```bash
-$ export NZ_HOST=netezza-twinfin-1.mycompany.com
-$ export NZ_USER=pippo
-$ export NZ_DATABASE=system
+```sh
+export NZ_HOST=netezza-twinfin-1.mycompany.com
+export NZ_USER=pippo
+export NZ_DATABASE=system
 ```
 
 It is not specify to specify a database to use *nzpassword*, but, it is a good idea, so you can test it immediatly.
 
 Set everything, except `NZ_PASSWORD`. You can check your environment like this
 
-```bash
+```sh
 $ env | grep NZ
 NZ_USER=pippo
 NZ_HOST=netezza-twinfin-1.mycompany.com
@@ -42,7 +42,7 @@ NZ_DATABASE=system
 
 ### List cached passwords
 
-```bash
+```sh
 $ env | grep NZ
 NZ_USER=pippo
 NZ_HOST=netezza-twinfin-1.mycompany.com
@@ -51,23 +51,17 @@ NZ_DATABASE=system
 
 ### Add a cached password
 
-```bash
-$ nzpassword add
-```
-
-### Add a cached password
-
 If you add a cached password you will be prompted to add password once and in a secure way.
 Since the environment is setted properly, it will be as easy as do
 
-```bash
+```sh
 $ nzpassword add
 Password:
 ```
 
 Now you can see the authentication you just cached.
 
-```bash
+```sh
 $ nzpassword
 Host                           User
 ------------------------------ -------
@@ -79,7 +73,7 @@ netezza-twinfin-1.mycompany.com pippo
 
 Since the environment is setted properly, it will be as easy as do
 
-```bash
+```sh
 $ nzsql
 Welcome to nzsql, the Netezza SQL interactive terminal.
 Type:  \h for help with SQL commands
@@ -93,16 +87,15 @@ SYSTEM(PIPPO)=>
 
 When you are done, just to
 
-```bash
-$ nzpassword delete
+```sh
+nzpassword delete
 ```
 
 or even
 
-```bash
-$ nzpassword delete -all
+```sh
+nzpassword delete -all
 ```
 
 You could also keep password cached and avoid writing Netezza users passwords in the config files of your scripts.
 That is the way nerds like it :)
-

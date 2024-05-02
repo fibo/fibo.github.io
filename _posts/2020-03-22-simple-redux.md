@@ -219,4 +219,3 @@ For example you could create classes that extend Error and use a class name as e
 then show an error message using i18n translations.
 It could also happen that backend already provides a proper error message but
 usually it is not a good idea to show it to the user as is.
-

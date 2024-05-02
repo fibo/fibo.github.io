@@ -81,4 +81,3 @@ Now you can push *repobar* commits from your laptop to *gitbox.example.org*
 [2]: https://github.com/ "GitHub"
 [3]: https://github.com/fibo "fibo@github.com"
 [4]: {{ site.repo }} "{{ site.url }}"
-

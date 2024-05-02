@@ -15,16 +15,15 @@ Hey Oracle, you are a really big corporation. Why do you keep *sqlplus* so unusa
 
 By the way, sometimes I need to use *sqlplus*. Here it is a set of tips I always forget.
 
-
 ## How to login
 
-     $ sqlplus schema@sid
+    $ sqlplus schema@sid
 
 where *schema* is your user name and *sid* can be found in the *tnsnames.ora*.
 
 **Do not** show your password around, avoid this syntax
 
-     $ sqlplus schema/password@sid
+    $ sqlplus schema/password@sid
 
 You can also do this
 
@@ -35,11 +34,11 @@ You can also do this
 
 Make sure your env vars are set properly
 
-    $ echo $ORACLE_HOME
+    echo $ORACLE_HOME
 
 Set your `EDITOR` var to enable the `EDIT` command. It is a good idea to set this variable in your *.bash_profile*, cause it is used also by other softwares (like git, subversion, PostgreSQL and many more)
 
-    $ export EDITOR=vim
+    export EDITOR=vim
 
 If you are already logged in sqlplus, you can do
 
@@ -264,7 +263,6 @@ Note that 25 is enough for *parameter* field, in fact
 
 Sometimes it is really useful to launch a SQL that generates a SQL statement. For example in the example [Format query output](#format-query-output) you can run.
 
-
     SQL> SELECT 'COL parameter FOR a' || MAX(LENGTH(parameter)) copyme FROM NLS_DATABASE_PARAMETERS;
 
     COPYME
@@ -301,5 +299,3 @@ in your script or in the *sqlplus* session.
 * [SQL*Plus on Oracle FAQ][1]
 
  [1]: http://www.orafaq.com/wiki/SQL*Plus_FAQ "SQL*Plus on Oracle FAQ"
-
-

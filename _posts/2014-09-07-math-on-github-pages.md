@@ -147,12 +147,10 @@ Now you can include the snippets in your website using [Jekyll][Jekyll] include 
 * `{{ "{% include math/inline/for-any-real.html " }}%}`
 * `{{ "{% include math/display/matrix.html " }}%}`
 
-[algebra]: http://g14n.info/algebra "algebra"
 [LaTeX]: http://www.latex-project.org/ "LaTeX"
 [gh-pages]: https://pages.github.com/ "GitHub Pages"
 [KaTeX]: https://khan.github.io/KaTeX/ "KaTeX"
 [Jekyll]: http://jekyllrb.com/ "Jekyll"
 [npm]: https://www.npmjs.com/ "npm"
 [KaTexUsage]: https://github.com/Khan/KaTeX#usage "KaTex Usage"
-[katex]: https://www.npmjs.com/package/katex "katex cli"
 [MathJax]: https://www.mathjax.org/ "MathJax"

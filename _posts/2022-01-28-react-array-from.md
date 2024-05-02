@@ -83,4 +83,3 @@ function GhostList ({ numItems }: Props) {
   )
 }
 ```
-

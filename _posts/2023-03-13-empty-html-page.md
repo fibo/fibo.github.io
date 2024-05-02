@@ -26,4 +26,3 @@ You want to start a new HTML page from scratch, you want it clean:
 </body>
 </html>
 ```
-

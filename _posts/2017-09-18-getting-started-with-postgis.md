@@ -81,9 +81,9 @@ Create your first table, holding locations in lat/lng format.
 
 ```sql
 CREATE TABLE location (
-	id SERIAL UNIQUE PRIMARY KEY,
-	name VARCHAR(256),
-	geo GEOGRAPHY(POINT)
+ id SERIAL UNIQUE PRIMARY KEY,
+ name VARCHAR(256),
+ geo GEOGRAPHY(POINT)
 )
 ;
 ```

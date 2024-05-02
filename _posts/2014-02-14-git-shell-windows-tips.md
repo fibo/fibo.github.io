@@ -27,7 +27,7 @@ WARNING: terminal is not fully functional
 You can fix it setting the environment variable `TERM=msys`. Make it permanent adding it to your *.bash_profile*, for instance
 
 ```bash
-$ echo export TERM=msys >> $HOME/.bash_profile; source $HOME/.bash_profile
+echo export TERM=msys >> $HOME/.bash_profile; source $HOME/.bash_profile
 ```
 
 ### Better vim colors
@@ -36,14 +36,13 @@ Vim is default editor for git. Every time you commit without a message, it will 
 
 <div class="well">How to fix it?</div>
 
-
 Create a *colors* folder and grab your favourite color scheme, for instance *desert*.
 Then configure vim to use it.
 
 ```bash
-$ mkdir /share/vim/vim73/colors
-$ curl -o /share/vim/vim73/colors/desert.vim https://vim.googlecode.com/hg/runtime/colors/desert.vim
-$ echo colorscheme desert >> $HOME/_vimrc
+mkdir /share/vim/vim73/colors
+curl -o /share/vim/vim73/colors/desert.vim https://vim.googlecode.com/hg/runtime/colors/desert.vim
+echo colorscheme desert >> $HOME/_vimrc
 ```
 
 <div class="paper success">Ok, you are done!</div>
@@ -62,9 +61,9 @@ So I can change colorscheme on my vim74, without the need to update msysgit */sh
 
 I use to create a site.com folder in my $HOME dir, so when I open the git shell I can see a folder structure that tells me in which site the repo is hosted, so for example I have
 
-*   github.com/
-*   bitbucket.org/
-*   code.google.com/
+* github.com/
+* bitbucket.org/
+* code.google.com/
 
 #### GitHub folder
 
@@ -90,7 +89,7 @@ I use to put my repos in `~/github.com/<MY_USER_NAME>` folder.
 Set *github.user* in your git config
 
 ```bash
-$ git config --global github.user "fibo"
+git config --global github.user "fibo"
 ```
 
 Now, if you add this function to your *.bash_profile*
@@ -117,9 +116,8 @@ function clone () {
 
 you will be able to clone repo *foo* and cd into it just launching
 
-
 ```bash
-$ clone foo
+clone foo
 ```
 
 ## Tricks
@@ -141,7 +139,7 @@ $ perl -e 'print join "\n", @INC'
 but it cannot be listed if you launch `ls /`. Anyway, you can enter it even if autocompletion will not work, just launch
 
 ```bash
-$ cd /usr/lib
+cd /usr/lib
 ```
 
 ### Bypass restrictive firewall settings
@@ -178,7 +176,5 @@ For more information see: [Using SSH over the HTTPS port](https://help.github.co
 
 *Git shell* gives you the power of [find](http://en.wikipedia.org/wiki/Find) command-line utility on Windows!
 
-
 [1]: {% post_url 2013-04-27-getting-started-with-git-shell %}
 [2]: https://github.com/
-

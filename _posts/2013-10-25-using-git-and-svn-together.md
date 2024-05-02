@@ -101,4 +101,3 @@ Both git and svn will ignore each other and everything will *just work*.
 Use Git to develop, then commit to a Subversion server and at the end, everyone <sup>[1](#footnote1)</sup> is happy!
 
 <a name="footnote1">1</a>: Everyone means *me* and my *boss* :).
-

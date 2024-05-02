@@ -48,4 +48,3 @@ When DNS propagated I was able to receive an email to *myuser@my-alias-domain.co
 ## Credits
 
 [Send & Receive Emails From G Suite Groups](https://www.goldyarora.com/g-suite-groups/)
-

@@ -14,7 +14,6 @@ This tip can prevent many issues, add this to your *~/.bashrc* to specify a loca
 export LC_ALL=en_US.UTF-8
 ```
 
-
 ## Auto completion
 
 Create a *~/.bash/completion* folder and copy there files [npm](https://github.com/fibo/home/blob/home/.bash/completion/npm) and [git-completion.bash](https://github.com/fibo/home/blob/home/.bash/completion/git-completion.bash) then add these lines to your *~/.bashrc*.

@@ -93,7 +93,6 @@ ALTER GROUP query_hist_readonly ADD USER pluto
 ;
 ```
 
-
 ### List databases that collect history
 
 To know which database are currently collecting history, run this query

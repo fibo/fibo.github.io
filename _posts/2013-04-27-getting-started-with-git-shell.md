@@ -48,11 +48,9 @@ The email used in the commands is the default email you get from GitHub. Of cour
 
 ### SSH public key based authentication
 
-
 This step is not required, but, it is really usefull. You can generate an ssh key to bypass authenitcation prompt, i.e. insert your username and password everytime you push to remote server.
 
 #### Create an ssh key
-
 
 You need an ssh key if you want to authenticate easily on a [web-based hosting service](http://en.wikipedia.org/wiki/Shared_web_hosting_service), like GitHub.
 
@@ -101,4 +99,3 @@ conq: logged in as fibo.  You can use git or hg to connect to Bitbucket. Shell a
 <div class="paper warning">If the check above does not work, probably your <strong>firewall does not allow connections on  port 22</strong>.</div>
 
 Read [Bypass restrictive firewall settings]({% post_url 2014-02-14-git-shell-windows-tips %}#bypass-restrictive-firewall-settings) instructions to work around it.
-

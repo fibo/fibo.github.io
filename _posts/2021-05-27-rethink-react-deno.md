@@ -48,11 +48,11 @@ Just few instructions, how to start the server, run tests and lint the code.
 
 ```
 start:
-	deno run --unstable --importmap=import_map.json --allow-net --allow-read --allow-env server.tsx
+ deno run --unstable --importmap=import_map.json --allow-net --allow-read --allow-env server.tsx
 test:
-	deno test --unstable --importmap=import_map.json
+ deno test --unstable --importmap=import_map.json
 lint:
-	deno lint --unstable
+ deno lint --unstable
 ```
 
 ### import_map.json

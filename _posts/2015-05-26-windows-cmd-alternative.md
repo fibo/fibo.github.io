@@ -68,4 +68,3 @@ In *ConEmu* press <kbd>Win+Alt+P</kbd> or open settings from menu, go to *Startu
 
 [ConEmu]: http://sourceforge.net/projects/conemu/ "ConEmu"
 [Babun]: http://babun.github.io/ "Babun"
-

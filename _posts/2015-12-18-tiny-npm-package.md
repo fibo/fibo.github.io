@@ -12,17 +12,17 @@ I have few *Node.js* packages on [npm] that has a *tiny structure*: my [npm tiny
 By *tiny structure* I mean they follow the *small package philosophy* with a simple
 but robust workflow like this:
 
-1. add a feature: edit [index.js](#index-js) to add functionality, add example in [README.md](#readme-md) and related test in [test.js](#test-js).
+1. add a feature: edit [index.js](#indexjs) to add functionality, add example in [README.md](#readmemd) and related test in [test.js](#testjs).
 2. commit: `git commit -a`
 3. deploy: `npm version minor`
 
 The repository contains the following files:
 
-* [README.md](#readme-md)
+* [README.md](#readmemd)
 * [.gitignore](#gitignore)
-* [package.json](#package-json)
-* [index.js](#index-js)
-* [test.js](#test-js)
+* [package.json](#packagejson)
+* [index.js](#indexjs)
+* [test.js](#testjs)
 
 <div class="paper info">This is just a starting point, it can grows for example adding folders <em>src/</em> and <em>test/</em> or adding services like travis or coveralls.</div>
 
@@ -49,7 +49,7 @@ npm install tap-spec -g
 then run tests with `tape test.js | tap-spec` or `tape test.js | tap-pessimist`.
 
 If you need to use the [Node debugger](https://nodejs.org/api/debugger.html), just add a **debugger** keyword to
-enable a breakpoint in your [index.js](#index-js) and launch tests with
+enable a breakpoint in your [index.js](#indexjs) and launch tests with
 
 ```bash
 node debug test.js
@@ -222,8 +222,8 @@ Use the following template, replacing **<package-name>** and **<package-descript
 
 Put the same description in:
 
-* [package.json](#package-json)
-* [README.md](#readme-md): here you can use markdown to add links and style
+* [package.json](#packagejson)
+* [README.md](#readmemd): here you can use markdown to add links and style
 * GitHub project description
 
 ### Badges
@@ -305,4 +305,3 @@ module.exports = myFooFunction
 ```
 
 [npm]: https://www.npmjs.com/ "npm website"
-[emoji-commits]: https://github.com/nicola/emoji-commits "Emoji Commit Messages"

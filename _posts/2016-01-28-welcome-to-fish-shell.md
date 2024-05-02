@@ -134,4 +134,3 @@ fisher install pure
 
 [1]: http://fishshell.com/ "fish-shell Homepage"
 [2]: http://fisherman.sh/ "fisherman"
-

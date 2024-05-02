@@ -57,7 +57,7 @@ sudo perl -i -p -e 's/Port 22/Port 222/' /etc/ssh/sshd_config
 After this you should not see the failed login attempts warning. Test it with
 
 ```bash
-$ grep failed /var/log/secure | more
+grep failed /var/log/secure | more
 ```
 
 See also [what does it mean “POSSIBLE BREAK-IN ATTEMPT!” in /var/log/secure][1].
@@ -182,4 +182,3 @@ Add this entry to *root* crontab
 [6]: http://www.ipdeny.com/ "IPdeny"
 [7]: https://ubuntu-tutorials.com/2007/09/02/network-security-with-tcpwrappers-hostsallow-and-hostsdeny/ "Network Security with tcpwrappers"
 [8]: http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/ "3 Steps to Perform SSH Login Without Password Using ssh-keygen & ssh-copy-id"
-

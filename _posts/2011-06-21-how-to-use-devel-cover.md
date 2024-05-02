@@ -78,4 +78,3 @@ et voilà
 
 [1]: https://metacpan.org/pod/Devel::Cover "Devel::Cover"
 [2]: https://metacpan.org/pod/Devel::Cover::Tutorial "Devel::Cover::Tutorial"
-

@@ -63,10 +63,10 @@ To let vux know about your modifications, you can do a pull request.
 
 It will arrive a notification to mrvux that will merge your modifications to its master repo.
 Let me add some advice, that can seem trivial but could save a lot of time:
-*   do small modifications, commit often
-*   put some short explicative comment about your commit
-*   comunicate with other contributors, you could discuss about your modification before doing it
-*   please respect conventions, if any :)
+* do small modifications, commit often
+* put some short explicative comment about your commit
+* comunicate with other contributors, you could discuss about your modification before doing it
+* please respect conventions, if any :)
 
 So, suppose your contribution was received and it is now part of the official&nbsp;[mrvux/dx11-vvvv-girlpower](https://github.com/mrvux/dx11-vvvv-girlpower),
 
@@ -97,7 +97,7 @@ origin  https://github.com/fibo/dx11-vvvv-girlpower.git (push)
 Add the vux repo as your **upstream**, so you will get the modifications of all the users back to your local fork. Well, trust me :)
 
 ```bash
-$ git remote add upstream https://github.com/mrvux/dx11-vvvv-girlpower.git
+git remote add upstream https://github.com/mrvux/dx11-vvvv-girlpower.git
 ```
 
 Remember, this is done only once. Now you have your **upstream** set properly
@@ -107,7 +107,7 @@ Remember, this is done only once. Now you have your **upstream** set properly
 So, now you can refresh your local repo with the latest goodies from the vux repo (the **upstream**) just typing
 
 ```bash
-$ git pull upstream master
+git pull upstream master
 ```
 
 pretty easy, just use [the ghost in the shell](https://www.youtube.com/watch?v=ZGJE82p39jI) :)

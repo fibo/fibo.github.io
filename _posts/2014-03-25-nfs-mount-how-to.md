@@ -20,7 +20,6 @@ Of course, the target folder **must** exist on target hosts and it is assumed th
 
 <div class="paper warning">All commands must be run with <strong>root</strong> privileges.</div>
 
-
 ## Source host
 
 Connect to *host1.example.org*, that is our source host.
@@ -32,13 +31,13 @@ Connect to *host1.example.org*, that is our source host.
 First of all, start NFS service
 
 ```bash
-$ /etc/init.d/nfs start
+/etc/init.d/nfs start
 ```
 
 Make sure the NFS service will start at boot.
 
 ```bash
-$ chkconfig nfs on
+chkconfig nfs on
 ```
 
 ### Export it
@@ -52,8 +51,8 @@ Edit file */etc/exports*
 After changing configuration launch
 
 ```bash
-$ exportfs -au
-$ exportfs -a
+exportfs -au
+exportfs -a
 ```
 
 To check you are exporting filesystems, launch
@@ -87,12 +86,13 @@ Export list for host1.example.org:
 Finally you can mount launching
 
 ```bash
-$ mount /nfs/host1.example.org
+mount /nfs/host1.example.org
 ```
+
 or
 
 ```bash
-$ mount host1.example.org:/store
+mount host1.example.org:/store
 ```
 
 Don' t forget a final test, just launch

@@ -20,7 +20,6 @@ or, if you are on Windows
 :e $HOME\_vimrc
 ```
 
-
 This will create your own user configuration file. From now on, you can edit it with
 
 ```
@@ -28,7 +27,6 @@ This will create your own user configuration file. From now on, you can edit it 
 ```
 
 See [Open vimrc file](http://vim.wikia.com/wiki/Open_vimrc_file) as a reference.
-
 
 ### Autosource config on exit
 
@@ -177,7 +175,6 @@ set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
 ```
 
-
 ### No shit around
 
 If I am on a single user on a local host it does not make sense to use swap files.
@@ -212,7 +209,6 @@ let g:netrw_altv = 1 " when navigating a folder,
                      " hitting <v> opens a window at right side (default is left side)
 ```
 
-
 ### Better search
 
 ```vim
@@ -243,9 +239,7 @@ Edit your configuration (see below), launch
 :VundleInstall
 ```
 
-
 and *Vundle* will manage everything!
-
 
 ```vim
 """""""""""""""""""""
@@ -402,4 +396,3 @@ au BufRead,BufNewFile *.coffee.md set filetype=coffee
 
   [1]: #programming-languages
   [2]: https://github.com/gmarik/vundle
-

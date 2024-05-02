@@ -1,0 +1,21 @@
+{
+  "config": {
+    "blanks-around-lists": false,
+    "code-block-style": false,
+    "commands-show-output": false,
+    "fenced-code-language": false,
+    "emphasis-style": false,
+    "line-length": false,
+    "no-bare-urls": false,
+    "no-emphasis-as-heading": false,
+    "no-inline-html": false,
+    "no-trailing-punctuation": false,
+    "reference-links-images": false,
+    "relative-links": true,
+    "ul-style": false,
+  },
+  "customRules": [
+    "markdownlint-rule-github-internal-links",
+    "markdownlint-rule-relative-links"
+  ]
+}

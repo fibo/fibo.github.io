@@ -44,7 +44,7 @@ probabily is not installed. That is a silly choice of some Linux distros, yes I 
 Get root permissions and install it, on Centos just launch
 
 ```bash
-$ yum install perl-ExtUtils-MakeMaker
+yum install perl-ExtUtils-MakeMaker
 ```
 
 If you can't do it, go straight and compile your own Perl: see [dotsoftware](//{{ site.domain }}/dotsoftware).
@@ -54,7 +54,7 @@ If you can't do it, go straight and compile your own Perl: see [dotsoftware](//{
 Create a folder that will be your Perl home. To make it easier, I choose [local::lib][2] default
 
 ```bash
-$ export PERL_BASE=~/perl5
+export PERL_BASE=~/perl5
 ```
 
 ### Get cpanm
@@ -76,21 +76,21 @@ $ chmod +x cpanm
 Now you can install [local::lib][2] locally
 
 ```bash
-$ ./cpanm -l $PERL_BASE local::lib
+./cpanm -l $PERL_BASE local::lib
 ```
 
 Load special environment variables. Note that *~/.perl_profile* file will be overwritten.
 
 ```bash
-$ cd $PERL_BASE/lib/perl5
-$ perl -Mlocal::lib=$PERL_BASE > ~/.perl_profile
-$ source ~/.perl_profile
+cd $PERL_BASE/lib/perl5
+perl -Mlocal::lib=$PERL_BASE > ~/.perl_profile
+source ~/.perl_profile
 ```
 
 Make it permanent, edit your profile. For example you can launch
 
 ```bash
-$ grep 'source ~/.perl_profile' ~/.bash_profile || echo 'source ~/.perl_profile' >> ~/.bash_profile
+grep 'source ~/.perl_profile' ~/.bash_profile || echo 'source ~/.perl_profile' >> ~/.bash_profile
 ```
 
 which will add `source ~/.perl_profile` to your *.bash_profile* only once.
@@ -100,7 +100,6 @@ which will add `source ~/.perl_profile` to your *.bash_profile* only once.
 At this point you have your system Perl with a *cpanm* that can install locally
 
 Give it a try it, install [Perl::Tidy][5]
-
 
 ```bash
 $ cpanm Perl::Tidy
@@ -119,7 +118,7 @@ $ which perltidy
 Now you can choose, to keep *cpanm* or get the official CPAN client
 
 ```bash
-$ cpanm CPAN
+cpanm CPAN
 ```
 
 Then maybe you want [A CPAN client that works like a charm][4].
@@ -129,4 +128,3 @@ Then maybe you want [A CPAN client that works like a charm][4].
   [3]: {% post_url 2014-12-23-the-camel-replicates %} "The camel replicates!"
   [4]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %} "A CPAN client that works like a charm"
   [5]: https://metacpan.org/pod/distribution/Perl-Tidy/lib/Perl/Tidy.pod "Perl::Tidy"
-

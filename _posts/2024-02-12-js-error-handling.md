@@ -12,11 +12,11 @@ Create an error extending the `Error` class.
 
 ```ts
 export class ErrorInvalidArg extends Error {
-	static errorName = "ErrorInvalidArg"
-	static message = "Invalid argument"
-	constructor() {
-		super(ErrorInvalidArg.message)
-	}
+ static errorName = "ErrorInvalidArg"
+ static message = "Invalid argument"
+ constructor() {
+  super(ErrorInvalidArg.message)
+ }
 }
 ```
 
@@ -33,9 +33,9 @@ However break rules when it makes sense, for instance:
 
 ```ts
 export class InternalServerError extends Error {
-	constructor() {
-		super("500")
-	}
+ constructor() {
+  super("500")
+ }
 }
 ```
 
@@ -92,34 +92,34 @@ Optionally add info attributes to the class, for example
  *
  */
 export class ErrorHTTP extends Error {
-	static errorName = "ErrorHTTP"
-	status: Response["status"]
-	statusText: Response["statusText"]
-	url: Response["url"]
-	constructor(response: Response) {
-		super(ErrorHTTP.message(response))
-		this.status = response.status
-		this.statusText = response.statusText
-		const url = new URL(response.url)
-		this.url = `${url.origin}${url.pathname}`
-	}
-	static message({
-		status,
-		statusText,
-		url
-	}: Pick<Response, "status" | "statusText" | "url">) {
-		return `Server responded with status=${status} statusText=${statusText} on URL=${url}`
-	}
-	toJSON() {
-		return {
-			name: ErrorHTTP.errorName,
-			info: {
-				status: this.status,
-				statusText: this.statusText,
-				url: this.url
-			}
-		}
-	}
+ static errorName = "ErrorHTTP"
+ status: Response["status"]
+ statusText: Response["statusText"]
+ url: Response["url"]
+ constructor(response: Response) {
+  super(ErrorHTTP.message(response))
+  this.status = response.status
+  this.statusText = response.statusText
+  const url = new URL(response.url)
+  this.url = `${url.origin}${url.pathname}`
+ }
+ static message({
+  status,
+  statusText,
+  url
+ }: Pick<Response, "status" | "statusText" | "url">) {
+  return `Server responded with status=${status} statusText=${statusText} on URL=${url}`
+ }
+ toJSON() {
+  return {
+   name: ErrorHTTP.errorName,
+   info: {
+    status: this.status,
+    statusText: this.statusText,
+    url: this.url
+   }
+  }
+ }
 }
 ```
 
@@ -127,17 +127,17 @@ Notice some info could be not defined or `unknown`.
 
 ```ts
 export class ErrorItemNotFound extends Error {
-	static errorName = "ErrorItemNotFound"
-	static message(type: ErrorItemNotFound["type"]) {
-		return `${type} not found`
-	}
-	id?: unknown
-	type: "User" | "Project" | "Transaction"
-	constructor({ id, type }) {
-		super(ErrorItemNotFound.message(type))
-		this.id = id
-		this.type = type
-	}
+ static errorName = "ErrorItemNotFound"
+ static message(type: ErrorItemNotFound["type"]) {
+  return `${type} not found`
+ }
+ id?: unknown
+ type: "User" | "Project" | "Transaction"
+ constructor({ id, type }) {
+  super(ErrorItemNotFound.message(type))
+  this.id = id
+  this.type = type
+ }
 }
 ```
 
@@ -148,14 +148,14 @@ Notice also that the correct type for the catched error is `unknown`.
 
 ```ts
 try {
-	// code
-	throw new MyError()
+ // code
+ throw new MyError()
 } catch (error) {
-	if (error instanceof MyError) {
-		// handle it
-	}
-	// otherwise
-	throw error
+ if (error instanceof MyError) {
+  // handle it
+ }
+ // otherwise
+ throw error
 }
 ```
 
@@ -171,44 +171,43 @@ An error should also be serializable into JSON, in the following example the
 
 ```ts
 export class MyError extends Error {
-	readonly bar: boolean
-	readonly quz: number
-	readonly whenCreated: number
+ readonly bar: boolean
+ readonly quz: number
+ readonly whenCreated: number
 
-	static errorName = "MyError"
-	static message() {
-		return "Something went wrong"
-	}
+ static errorName = "MyError"
+ static message() {
+  return "Something went wrong"
+ }
 
-	static isMyErrorData(arg: unknown): arg is MyErrorData {
-		if (!arg || typeof arg !== "object") return false
-		const { bar, whenCreated } = arg as Partial<MyErrorData>
-		return (
-			typeof bar === "boolean" &&
-			typeof whenCreated === "number" &&
-			whenCreated > 0
-		)
-	}
+ static isMyErrorData(arg: unknown): arg is MyErrorData {
+  if (!arg || typeof arg !== "object") return false
+  const { bar, whenCreated } = arg as Partial<MyErrorData>
+  return (
+   typeof bar === "boolean" &&
+   typeof whenCreated === "number" &&
+   whenCreated > 0
+  )
+ }
 
-	constructor({ bar, quz }: Pick<MyError, "bar" | "quz">) {
-		super(MyError.message)
-		this.bar = bar
-		this.quz = quz
-		this.whenCreated = new Date().getTime()
-	}
+ constructor({ bar, quz }: Pick<MyError, "bar" | "quz">) {
+  super(MyError.message)
+  this.bar = bar
+  this.quz = quz
+  this.whenCreated = new Date().getTime()
+ }
 
-	toJSON() {
-		return {
-			name: MyError.errorName,
-			data: {
-				bar: this.bar,
-				quz: this.quz,
-				whenCreated: this.whenCreated
-			}
-		}
-	}
+ toJSON() {
+  return {
+   name: MyError.errorName,
+   data: {
+    bar: this.bar,
+    quz: this.quz,
+    whenCreated: this.whenCreated
+   }
+  }
+ }
 }
 
 export type MyErrorData = Pick<MyError, "bar" | "whenCreated">
 ```
-

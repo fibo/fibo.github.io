@@ -28,4 +28,3 @@ $color: #ff00ff;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="#{$sizePx}" width="#{$sizePx}" viewBox="0 0 #{$size} #{$size}"><circle cx="#{$half-size}" cy="#{$half-size}" r="#{$half-size}" fill="%23#{str-slice(#{$color}, 2)}"></circle></svg>');
 }
 ```
-

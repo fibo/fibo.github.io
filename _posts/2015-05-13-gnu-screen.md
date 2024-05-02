@@ -26,7 +26,7 @@ shell -$SHELL # load shell profile
 To start screen, just launch
 
 ```bash
-$ screen
+screen
 ```
 
 Display help with <kbd>CTRL-a ?</kbd>.
@@ -36,7 +36,7 @@ All screen commands are prefixed by <kbd>CTRL-a</kbd>, written in the help as `^
 You can give a name to the session
 
 ```bash
-$ screen -S mySecondScreenSession
+screen -S mySecondScreenSession
 ```
 
 List running sessions
@@ -54,7 +54,7 @@ Detach from current session with <kbd>CTRL-a d</kbd>.
 Attach to a running session
 
 ```bash
-$ screen -x pst-3
+screen -x pst-3
 ```
 
 ## Use case
@@ -64,8 +64,8 @@ Suppose you need to login as *user1* in some host, then you can switch to user *
 As *user1* start a named screen session and switch to *user2*
 
 ```bash
-$ screen -S user2
-$ su - user2
+screen -S user2
+su - user2
 ```
 
 then detach with <kbd>CTRL-a d</kbd> and you are back to *user1* session.
@@ -76,7 +76,7 @@ You get a screen session for every user. Now you do not need to enter passwords 
 and if the connection is broken you can enter again as *user1* then go to *user2* with
 
 ```bash
-$ screen -x user2
+screen -x user2
 ```
 
 ## Tips
@@ -130,4 +130,3 @@ screen -wipe
 [3]: https://kb.iu.edu/d/acuy "In Unix, what is screen, and how do I use it?"
 [4]: http://www.gnu.org/software/screen/manual/screen.html "Screen User's Manual"
 [5]: https://gist.github.com/ChrisWills/1337178 "A nice default screenrc"
-

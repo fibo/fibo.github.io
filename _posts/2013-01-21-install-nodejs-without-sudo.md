@@ -9,11 +9,9 @@ description: >
 <div class="paper warning">The first and the last installation steps are necessary <strong>only</strong> during first installation.When you wish to upgrade to latest version, just repeat steps
 </div>
 
-
 * [Get it](#get-it)
 * [Build it](#build-it)
 * [Update it](#update-it)
-
 
 ## Prerequisites
 

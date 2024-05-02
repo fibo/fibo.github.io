@@ -32,8 +32,8 @@ So install everything you need with your *cpan* client on *myhost.example.org*. 
 If everything looks ok, I mean **stable**, then launch
 
 ```bash
-$ cd ~/.cpan/sources
-$ tar czf /tmp/cpanSources.tar.gz modules/ authors/
+cd ~/.cpan/sources
+tar czf /tmp/cpanSources.tar.gz modules/ authors/
 ```
 
 Now, transfer *cpanSources.tar.gz* to *host.customer.com* somehow. I usually need to connect opening some VPN, so I do not assume there is a connection between the hosts.
@@ -41,9 +41,9 @@ Now, transfer *cpanSources.tar.gz* to *host.customer.com* somehow. I usually nee
 On *host.customer.com* make sure you have a working *cpan* client too, then
 
 ```bash
-$ mkdir -p /home/unica/.cpan/sources
-$ cd ~/.cpan/sources
-$ tar xzf /path/to/cpanSources.tar.gz
+mkdir -p /home/unica/.cpan/sources
+cd ~/.cpan/sources
+tar xzf /path/to/cpanSources.tar.gz
 ```
 
 and you are done! Your *cpan* client on *host.customer.com* will not fetch sources from CPAN mirrors. In fact, by default, *cpan* uses the *~/.cpan/sources* for caching the sources tarballs, and if the distro is already there it will not try to download it. Hence you can install all dependencies needed by your package even in those hosts that are isolated from Internet, those hosts where probably you work to pay your rent :)
@@ -52,4 +52,3 @@ and you are done! Your *cpan* client on *host.customer.com* will not fetch sourc
 
   [1]: {% post_url 2014-03-26-a-cpan-client-that-works-like-charm %} "A CPAN client that works like a charm"
   [2]: {% post_url 2014-06-18-the-camel-survives %} "The camel survives!"
-
