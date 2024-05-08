@@ -12,7 +12,7 @@ Assuming that you are using the *docs/* folder for GitHub Pages, do
 Then use the includes as usual, for example in *docs/_layouts/page.html*
 
 ```
-{% include common/analytics.html %}
+{% include common/favicon.html %}
 ```
 
 ### Add remote
@@ -38,10 +38,6 @@ git subtree --prefix=docs/_includes/common/ pull common_includes master
 ```
 
 ## Content
-
-### analytics.html
-
-Contains Google Analytics tag.
 
 ### anathema.html
 
