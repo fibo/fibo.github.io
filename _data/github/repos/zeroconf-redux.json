@@ -65,8 +65,8 @@
   "releases_url": "https://api.github.com/repos/fibo/zeroconf-redux/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/zeroconf-redux/deployments",
   "created_at": "2016-04-09T09:17:05Z",
-  "updated_at": "2020-12-08T17:56:56Z",
-  "pushed_at": "2020-12-08T17:56:54Z",
+  "updated_at": "2023-05-21T14:47:04Z",
+  "pushed_at": "2022-06-29T11:36:32Z",
   "git_url": "git://github.com/fibo/zeroconf-redux.git",
   "ssh_url": "git@github.com:fibo/zeroconf-redux.git",
   "clone_url": "https://github.com/fibo/zeroconf-redux.git",
@@ -76,14 +76,15 @@
   "stargazers_count": 7,
   "watchers_count": 7,
   "language": "JavaScript",
-  "has_issues": true,
-  "has_projects": true,
+  "has_issues": false,
+  "has_projects": false,
   "has_downloads": true,
-  "has_wiki": true,
+  "has_wiki": false,
   "has_pages": false,
-  "forks_count": 0,
+  "has_discussions": false,
+  "forks_count": 1,
   "mirror_url": null,
-  "archived": false,
+  "archived": true,
   "disabled": false,
   "open_issues_count": 0,
   "license": {
@@ -95,6 +96,7 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
     "development",
     "productivity",
@@ -102,7 +104,7 @@
     "redux"
   ],
   "visibility": "public",
-  "forks": 0,
+  "forks": 1,
   "open_issues": 0,
   "watchers": 7,
   "default_branch": "main",
@@ -113,13 +115,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 0,
-  "subscribers_count": 2
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "disabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 1,
+  "subscribers_count": 3
 }

@@ -65,27 +65,28 @@
   "releases_url": "https://api.github.com/repos/fibo/dflow/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/dflow/deployments",
   "created_at": "2012-10-13T00:23:45Z",
-  "updated_at": "2022-01-10T18:00:36Z",
-  "pushed_at": "2022-01-28T16:29:21Z",
+  "updated_at": "2024-05-08T11:22:28Z",
+  "pushed_at": "2024-02-15T18:49:02Z",
   "git_url": "git://github.com/fibo/dflow.git",
   "ssh_url": "git@github.com:fibo/dflow.git",
   "clone_url": "https://github.com/fibo/dflow.git",
   "svn_url": "https://github.com/fibo/dflow",
-  "homepage": "http://g14n.info/dflow",
-  "size": 5965,
-  "stargazers_count": 67,
-  "watchers_count": 67,
+  "homepage": "",
+  "size": 6166,
+  "stargazers_count": 73,
+  "watchers_count": 73,
   "language": "TypeScript",
   "has_issues": true,
-  "has_projects": true,
+  "has_projects": false,
   "has_downloads": true,
   "has_wiki": false,
-  "has_pages": true,
-  "forks_count": 11,
+  "has_pages": false,
+  "has_discussions": false,
+  "forks_count": 8,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 23,
+  "open_issues_count": 0,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -95,13 +96,15 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
+    "dataflow",
     "dataflow-programming"
   ],
   "visibility": "public",
-  "forks": 11,
-  "open_issues": 23,
-  "watchers": 67,
+  "forks": 8,
+  "open_issues": 0,
+  "watchers": 73,
   "default_branch": "main",
   "permissions": {
     "admin": true,
@@ -110,13 +113,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 11,
-  "subscribers_count": 8
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "enabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 8,
+  "subscribers_count": 10
 }

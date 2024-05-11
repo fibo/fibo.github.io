@@ -65,7 +65,7 @@
   "releases_url": "https://api.github.com/repos/fibo/three-orbitcontrols/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/three-orbitcontrols/deployments",
   "created_at": "2016-07-14T13:26:30Z",
-  "updated_at": "2021-12-26T17:50:17Z",
+  "updated_at": "2023-11-11T10:41:59Z",
   "pushed_at": "2019-12-11T10:23:09Z",
   "git_url": "git://github.com/fibo/three-orbitcontrols.git",
   "ssh_url": "git@github.com:fibo/three-orbitcontrols.git",
@@ -73,15 +73,16 @@
   "svn_url": "https://github.com/fibo/three-orbitcontrols",
   "homepage": "http://g14n.info/three-orbitcontrols",
   "size": 86,
-  "stargazers_count": 79,
-  "watchers_count": 79,
+  "stargazers_count": 78,
+  "watchers_count": 78,
   "language": "JavaScript",
   "has_issues": false,
   "has_projects": false,
   "has_downloads": true,
   "has_wiki": false,
   "has_pages": false,
-  "forks_count": 79,
+  "has_discussions": false,
+  "forks_count": 81,
   "mirror_url": null,
   "archived": true,
   "disabled": false,
@@ -95,15 +96,16 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
     "camera",
     "orbitcontrols",
     "threejs"
   ],
   "visibility": "public",
-  "forks": 79,
+  "forks": 81,
   "open_issues": 0,
-  "watchers": 79,
+  "watchers": 78,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -112,13 +114,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": false,
-  "allow_merge_commit": false,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 79,
-  "subscribers_count": 3
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "enabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 81,
+  "subscribers_count": 4
 }

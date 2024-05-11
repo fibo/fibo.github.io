@@ -65,7 +65,7 @@
   "releases_url": "https://api.github.com/repos/fibo/markdown2code/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/markdown2code/deployments",
   "created_at": "2017-12-13T09:13:58Z",
-  "updated_at": "2018-09-10T20:08:06Z",
+  "updated_at": "2024-05-08T11:15:05Z",
   "pushed_at": "2018-09-10T20:08:05Z",
   "git_url": "git://github.com/fibo/markdown2code.git",
   "ssh_url": "git@github.com:fibo/markdown2code.git",
@@ -73,14 +73,15 @@
   "svn_url": "https://github.com/fibo/markdown2code",
   "homepage": "http://g14n.info/markdown2code",
   "size": 36,
-  "stargazers_count": 0,
-  "watchers_count": 0,
+  "stargazers_count": 1,
+  "watchers_count": 1,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
+  "has_discussions": false,
   "forks_count": 0,
   "mirror_url": null,
   "archived": false,
@@ -95,13 +96,14 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
 
   ],
   "visibility": "public",
   "forks": 0,
   "open_issues": 0,
-  "watchers": 0,
+  "watchers": 1,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -110,13 +112,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "disabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
   "network_count": 0,
-  "subscribers_count": 2
+  "subscribers_count": 3
 }

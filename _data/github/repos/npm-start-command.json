@@ -65,23 +65,24 @@
   "releases_url": "https://api.github.com/repos/fibo/npm-start-command/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/npm-start-command/deployments",
   "created_at": "2017-01-19T09:49:54Z",
-  "updated_at": "2022-01-02T09:58:19Z",
+  "updated_at": "2024-05-10T11:36:47Z",
   "pushed_at": "2020-05-05T11:08:34Z",
   "git_url": "git://github.com/fibo/npm-start-command.git",
   "ssh_url": "git@github.com:fibo/npm-start-command.git",
   "clone_url": "https://github.com/fibo/npm-start-command.git",
   "svn_url": "https://github.com/fibo/npm-start-command",
-  "homepage": "http://g14n.info/npm-start-command",
+  "homepage": "https://fibo.github.io/npm-start-command",
   "size": 8,
-  "stargazers_count": 2,
-  "watchers_count": 2,
+  "stargazers_count": 1,
+  "watchers_count": 1,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 1,
+  "has_discussions": false,
+  "forks_count": 2,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
@@ -95,15 +96,16 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
     "designerds",
     "development",
     "npm"
   ],
   "visibility": "public",
-  "forks": 1,
+  "forks": 2,
   "open_issues": 0,
-  "watchers": 2,
+  "watchers": 1,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -112,13 +114,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 1,
-  "subscribers_count": 2
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "enabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 2,
+  "subscribers_count": 3
 }

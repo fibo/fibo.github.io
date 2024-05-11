@@ -65,23 +65,24 @@
   "releases_url": "https://api.github.com/repos/fibo/dot-editorconfig/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/dot-editorconfig/deployments",
   "created_at": "2016-07-18T13:41:02Z",
-  "updated_at": "2018-10-11T09:49:02Z",
-  "pushed_at": "2018-10-11T09:49:00Z",
+  "updated_at": "2023-05-20T22:49:12Z",
+  "pushed_at": "2022-09-19T15:11:54Z",
   "git_url": "git://github.com/fibo/dot-editorconfig.git",
   "ssh_url": "git@github.com:fibo/dot-editorconfig.git",
   "clone_url": "https://github.com/fibo/dot-editorconfig.git",
   "svn_url": "https://github.com/fibo/dot-editorconfig",
-  "homepage": "http://g14n.info/dot-editorconfig",
-  "size": 12,
-  "stargazers_count": 0,
-  "watchers_count": 0,
+  "homepage": "https://fibo.github.io/dot-editorconfig",
+  "size": 20,
+  "stargazers_count": 1,
+  "watchers_count": 1,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": true,
   "has_downloads": true,
   "has_wiki": true,
   "has_pages": false,
-  "forks_count": 0,
+  "has_discussions": false,
+  "forks_count": 1,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
@@ -95,14 +96,15 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
     "editorconfig"
   ],
   "visibility": "public",
-  "forks": 0,
+  "forks": 1,
   "open_issues": 0,
-  "watchers": 0,
-  "default_branch": "master",
+  "watchers": 1,
+  "default_branch": "main",
   "permissions": {
     "admin": true,
     "maintain": true,
@@ -110,13 +112,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 0,
-  "subscribers_count": 2
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "disabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 1,
+  "subscribers_count": 3
 }

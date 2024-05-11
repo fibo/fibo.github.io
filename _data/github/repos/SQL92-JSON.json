@@ -65,23 +65,24 @@
   "releases_url": "https://api.github.com/repos/fibo/SQL92-JSON/releases{/id}",
   "deployments_url": "https://api.github.com/repos/fibo/SQL92-JSON/deployments",
   "created_at": "2017-02-07T23:10:52Z",
-  "updated_at": "2021-05-12T14:54:39Z",
-  "pushed_at": "2021-05-12T00:31:42Z",
+  "updated_at": "2023-03-31T12:29:47Z",
+  "pushed_at": "2023-03-31T12:32:55Z",
   "git_url": "git://github.com/fibo/SQL92-JSON.git",
   "ssh_url": "git@github.com:fibo/SQL92-JSON.git",
   "clone_url": "https://github.com/fibo/SQL92-JSON.git",
   "svn_url": "https://github.com/fibo/SQL92-JSON",
-  "homepage": "http://g14n.info/SQL92-JSON",
-  "size": 1003,
-  "stargazers_count": 7,
-  "watchers_count": 7,
+  "homepage": "https://fibo.github.io/SQL92-JSON",
+  "size": 960,
+  "stargazers_count": 8,
+  "watchers_count": 8,
   "language": "JavaScript",
   "has_issues": true,
   "has_projects": false,
   "has_downloads": true,
   "has_wiki": false,
   "has_pages": true,
-  "forks_count": 0,
+  "has_discussions": false,
+  "forks_count": 2,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
@@ -95,6 +96,7 @@
   },
   "allow_forking": true,
   "is_template": false,
+  "web_commit_signoff_required": false,
   "topics": [
     "javascript",
     "json",
@@ -102,9 +104,9 @@
     "sql"
   ],
   "visibility": "public",
-  "forks": 0,
+  "forks": 2,
   "open_issues": 4,
-  "watchers": 7,
+  "watchers": 8,
   "default_branch": "master",
   "permissions": {
     "admin": true,
@@ -113,13 +115,20 @@
     "triage": true,
     "pull": true
   },
-  "temp_clone_token": "",
-  "allow_squash_merge": true,
-  "allow_merge_commit": true,
-  "allow_rebase_merge": true,
-  "allow_auto_merge": false,
-  "delete_branch_on_merge": false,
-  "allow_update_branch": false,
-  "network_count": 0,
-  "subscribers_count": 2
+  "security_and_analysis": {
+    "secret_scanning": {
+      "status": "disabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    },
+    "dependabot_security_updates": {
+      "status": "disabled"
+    },
+    "secret_scanning_validity_checks": {
+      "status": "disabled"
+    }
+  },
+  "network_count": 2,
+  "subscribers_count": 3
 }
