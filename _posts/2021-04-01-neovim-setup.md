@@ -270,10 +270,9 @@ You may also want to configure CoC, for instance launch command `:CocConfig`
 
 ```json
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript", "javascriptreact",
-    "typescript", "typescriptreact"
-   ],
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "coc.preferences.formatOnSave": true
+  },
   "diagnostic.checkCurrentLine": true,
   "typescript.suggestionActions.enabled": true
 }
