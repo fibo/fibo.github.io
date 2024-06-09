@@ -20,7 +20,7 @@ Usually I create in my user home folder, a folder named as the domain hosting th
 
 Now if I want to use a different git config depending on the folder, I edit my *~/.gitconfig* file with something like
 
-```
+```toml
 [includeIf "gitdir:github.com/"]
   path = /Users/myuser/github.com/.gitconfig
 [includeIf "gitdir:.config/"]
@@ -33,10 +33,14 @@ Now if I want to use a different git config depending on the folder, I edit my *
 
 Where my */Users/myuser/github.com/.gitconfig* is something like
 
-```
+```toml
 [user]
   name = my-github-nickname
   email = my-github-email@example.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
 ```
 
 And the */Users/myuser/source.my-customer.com/.gitconfig* is something similar.
@@ -45,7 +49,7 @@ And the */Users/myuser/source.my-customer.com/.gitconfig* is something similar.
 
 I found this script [here at stack overflow](https://stackoverflow.com/a/750182/1217468) that uses `git filter-branch`
 
-```bash
+```sh
 #!/bin/sh
 
 git filter-branch --env-filter '
@@ -67,7 +71,7 @@ fi
 
 Just replace the variables `OLD_EMAIL`, `CORRECT_NAME` and `CORRECT_EMAIL` with the correct values, move to the repository folder and launch it. When it is done, probably you need to force the push
 
-```bash
+```sh
 git push --force
 ```
 
