@@ -158,28 +158,31 @@ You may also want to take a look to [zsh-autosuggestions](https://github.com/zsh
 
 ### Aliases
 
-Cannot live without these aliases. Put them, in shared *~/.shell/aliases.sh* and load them *~/.zshrc* with `source ~/.shell/aliases.sh`.
+Cannot live without these aliases. Put them, in shared *~/.shell/aliases* and load them in *~/.zshrc* with `source ~/.shell/aliases`.
 
 ```sh
 # Aliases
 ###
 
-# Use `vi` for NeoVim, `vim` for good old `Vim`.
-alias vi='nvim '
-
-alias ls='ls -G'
+# Go to up folder
 alias ',,'='cd .. && pwd'
+# List files and folders
 alias ','='ls -Galrth'
 
+# Git
 alias ga='git add .'
+alias gc='git commit'
 alias gd='git diff'
-alias gc='git commit '
 alias gl='git log --graph'
-alias gpl='git pull '
-alias gps='git push '
+alias gpl='git pull'
+alias gps='git push'
 alias gpsf='git push --force-with-lease'
 alias gs='git status'
 
+# Use `vi` for NeoVim, `vim` for good old `Vim`.
+alias vi='nvim '
+
+# npm
 alias ns='npm start'
 alias nt='npm test'
 ```
@@ -191,66 +194,5 @@ Run also the following commands to set *git aliases*:
 git config --global alias.amend "commit --amend"
 # List files with merge conflicts
 git config --global alias.conflicts "diff --name-only --diff-filter=U"
-# Reset previous commit, but keep all the changes from that commit in the working directory.
-git config --global alias.undo "reset HEAD~1 --mixed"
 ```
 
-## Dev tools
-
-### NVM
-
-I am using [NVM](https://github.com/nvm-sh/nvm) to manage different versions of *Node.JS*.
-
-I also want to switch to *Node.JS* version automatically when I enter a folder
-containing a *.nvmrc* file.
-
-Once installed I add the following to my *~/.zshrc*
-
-```zsh
-# Node Version Manager
-# https://github.com/nvm-sh/nvm
-###
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# invoke `nvm use` automatically in a directory with a .nvmrc file
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use --silent
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    nvm use default --silent
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-```
-
-### direnv
-
-It happens often that different projects need some specific environment variables.
-I found [direnv](https://direnv.net/) the perfect tool to achieve that.
-
-After installing it, for example with homebrew
-
-```sh
-brew install direnv
-```
-
-Add it to your *~/.zshrc*
-
-```zsh
-# direnv
-# https://direnv.net/
-###
-eval "$(direnv hook zsh)"
-```
