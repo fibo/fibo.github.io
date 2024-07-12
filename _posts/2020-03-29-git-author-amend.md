@@ -38,9 +38,9 @@ Where my */Users/myuser/github.com/.gitconfig* is something like
   name = my-github-nickname
   email = my-github-email@example.com
 [pull]
-	rebase = true
+  rebase = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 ```
 
 And the */Users/myuser/source.my-customer.com/.gitconfig* is something similar.

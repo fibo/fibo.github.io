@@ -195,4 +195,3 @@ git config --global alias.amend "commit --amend"
 # List files with merge conflicts
 git config --global alias.conflicts "diff --name-only --diff-filter=U"
 ```
-
