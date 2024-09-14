@@ -39,12 +39,6 @@ set number
 set cursorline
 set cursorcolumn
 
-" open terminal
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>t :below 10sp term://$SHELL<cr>i
-" hit <Escape> key to exit from terminal mode
-:tnoremap <Esc> <C-\><C-n>
-
 " use current file directory as a start to find file to edit
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " credits to: https://stackoverflow.com/a/1708936
@@ -134,6 +128,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " emmet (like), essential toolkit for HTML & CSS abbreviation expansion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -214,11 +209,35 @@ Plug 'mileszs/ack.vim'
 " hit Leader-a and then Enter to search for string under cursor.
 nnoremap <Leader>a :Ack!<Space>
 
+" Use ripgrep instead of ack, in particular files in .gitignore are excluded.
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --no-heading'
+endif
+
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|\.next|node_modules)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+" Markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+
+set conceallevel=2
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+
+" JSON
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'neoclide/jsonc.vim'
+
+" Artifical Intelligence helper
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " my favourite colorscheme, bubblegum
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
