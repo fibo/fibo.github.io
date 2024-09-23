@@ -2,7 +2,6 @@
 title: prove imProveD
 tags:
   - Perl
-  - Test
   - Unix
 description: >
     Instructions to get a Perl test suite that checks everything is ok in your home dir.
