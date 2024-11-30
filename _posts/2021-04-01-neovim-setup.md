@@ -211,7 +211,7 @@ nnoremap <Leader>a :Ack!<Space>
 
 " Use ripgrep instead of ack, in particular files in .gitignore are excluded.
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep --no-heading'
+  let g:ackprg = 'rg --vimgrep --smart-case'
 endif
 
 Plug 'ctrlpvim/ctrlp.vim'
