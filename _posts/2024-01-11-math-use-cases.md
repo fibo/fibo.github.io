@@ -18,4 +18,4 @@ There is a huge topic where Mathematics is changing (again) the world we live: p
 
 I am writing this article mainly because I want to share the [Cypherpunk manifesto](/misc/cypherpunk-manifesto.html).
 
-I never imagined when I was studying [Elliplic curves](https://en.wikipedia.org/wiki/Elliptic_curve) at my third year of Univerity that they would become so important!
+I never imagined when I was studying [Elliplic curves](https://en.wikipedia.org/wiki/Elliptic_curve) at my third year of University that they would become so important!
