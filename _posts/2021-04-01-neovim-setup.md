@@ -29,31 +29,28 @@ Install *vim-plug* for *Neovim* first, [instructions here](https://github.com/ju
 
 ```vim
 " cannot code without the following
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=UTF-8
 syntax on
 set number
 
 " only vim can do this
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set cursorline
 set cursorcolumn
 
-" use current file directory as a start to find file to edit
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" credits to: https://stackoverflow.com/a/1708936
+" map leader to Space
+let mapleader = " "
 
+" use current file directory as a start to find file to edit
+" credits to: https://stackoverflow.com/a/1708936
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
 
 " it is ok to wrap lines, just use gj or gk to move
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wrap
 
 " console.log hot key: type cll
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " credits to: https://gist.github.com/jasongonzales23/6189da1d82ee05a91edfd53403d6941d
-
+""""
 " insert mode, puts focus inside parentheses
 "
 " if you are using coc-pairs or any other auto pairs plugin,
@@ -69,11 +66,10 @@ vmap cll yocll<Esc>p
 nmap cll yiwocll<Esc>p
 
 " cycle buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :nnoremap gb :bnext<CR>
 
 " move camelCase-wise
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""
 " Use Shift + arrow keys,
 " source: https://vim.fandom.com/wiki/Moving_through_camel_case_words
 
@@ -83,7 +79,6 @@ inoremap <silent><S-Left> <C-o>:call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\
 inoremap <silent><S-Right> <C-o>:call search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\>\@!\)\<Bar>\%$','W')<CR>
 
 " Finally, load plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.config/nvim/plugins.vim
 ```
 
