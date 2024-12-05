@@ -26,11 +26,11 @@ export declare type FormatjsIntlMessageId =
   | ${translationKeys.map((key) => `'${key}'`).join('\n  | ')}
 
 global {
-	namespace FormatjsIntl {
-		interface Message {
-			ids: FormatjsIntlMessageId;
-		}
-	}
+ namespace FormatjsIntl {
+  interface Message {
+   ids: FormatjsIntlMessageId;
+  }
+ }
 }
 `
 

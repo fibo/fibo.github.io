@@ -13,8 +13,9 @@
     "data": "npm run data:github:repos; npm run data:github:users:fibo",
     "data:github:repos": "token=$(cat .gh-token); cd _data/github/repos/; for repo in $(ls | while read filename; do echo ${filename%.json}; done | grep -v dotsoftware); do curl -u fibo:$token https://api.github.com/repos/fibo/$repo > ${repo}.json; done; curl -s -u fibo:$token https://api.github.com/repos/fibo/.software > dotsoftware.json; cd -",
     "data:github:users:fibo": "curl -u fibo:$(cat .gh-token) https://api.github.com/user > _data/github/users/fibo.json",
-    "lint:markdown": "markdownlint-cli2 '_posts/*.md'",
-    "lint:sass": "stylelint _sass",
+    "markdownlint": "markdownlint-cli2 '_posts/*.md'",
+    "markdownlint--fix": "markdownlint-cli2 --fix '_posts/*.md'",
+    "stylelint": "stylelint _sass",
     "postreadmes": "git add _projects/; git commit -m 'updated project pages'; git push origin master",
     "readmes": "for repo in $(ls -1 _projects/ | grep -v _readmes | grep -v dotsoftware); do wget -nv https://raw.githubusercontent.com/fibo/$repo/master/README.md -O _projects/_readmes/${repo}-readme.md; cat _projects/$repo/index.yaml _projects/_readmes/${repo}-readme.md > _projects/$repo/index.md; done; wget -nv https://raw.githubusercontent.com/fibo/.software/master/README.md -O _projects/_readmes/dotsoftware-readme.md; cat _projects/dotsoftware/index.yaml _projects/_readmes/dotsoftware-readme.md > _projects/dotsoftware/index.md",
     "start": "bundle exec jekyll serve",
@@ -22,8 +23,8 @@
     "worker": "while true; do npm run data; sleep 300; npm run readmes; sleep 300; git pull --rebase origin master; git add . && git commit -m 'updated metadata' && git push origin master; sleep 300; done"
   },
   "pre-commit": [
-    "lint:markdown",
-    "lint:sass"
+    "markdownlint",
+    "stylelint"
   ],
   "repository": {
     "type": "git",

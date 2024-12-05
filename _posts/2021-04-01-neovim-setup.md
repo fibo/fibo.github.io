@@ -215,6 +215,13 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+if executable('rg')
+  let g:ctrlp_user_command = 'rg --files %s'
+  let g:ctrlp_use_caching = 0
+  " Set local working directory, as the nearest ancestor that contains .git
+  let g:ctrlp_working_path_mode = 'r'
+endif
+
 " Markdown
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'godlygeek/tabular'
@@ -294,29 +301,14 @@ You may also want to configure CoC, for instance launch command `:CocConfig`
 
 See also CoC configuration JSON schema [here](https://github.com/neoclide/coc.nvim/blob/release/data/schema.json).
 
-### ack!
+### ripgrep
 
-> ack is a grep-like source code search tool
+> ripgrep recursively searches directories for a regex pattern while respecting your gitignore
 
-You need to install *ack!*, go [beyondgrep](https://beyondgrep.com/). With *brew* just run
+You need to install [ripgrep](https://github.com/BurntSushi/ripgrep). With *brew* just run
 
 ```bash
-brew install ack
-```
-
-To speed up, I also create a *~/.ackrc* file like the following
-
-```
-## Ack is awesome: https://beyondgrep.com/
-#
---smart-case
-# folders I usually do not want to look into
---ignore-dir=.next
---ignore-dir=_site
---ignore-dir=build
---ignore-dir=dist
-# files I usually ignore
---ignore-file=match:/bundle/
+brew install ripgrep
 ```
 
 ### NerdFonts
