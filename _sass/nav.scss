@@ -14,7 +14,6 @@ nav {
     background-color: $transparent-black;
     color: $light-gray;
     outline: 0;
-    text-decoration: underline;
   }
 }
 
@@ -91,17 +90,11 @@ nav ul li:hover ul li {
     display: inline-block;
     position: fixed;
     right: 6px;
-    width: 37px;
+    width: 40px;
     height: 40px;
-    top: 0.9rem;
-    -webkit-transform: rotate(0deg);
-       -moz-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-       -moz-transition: .5s ease-in-out;
-         -o-transition: .5s ease-in-out;
-            transition: .5s ease-in-out;
+    top: 14px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
   }
 
 /* The "responsive" class is added to the nav with JavaScript when the user clicks on the hamburger icon. This class makes the nav look good on small screens */
@@ -132,14 +125,8 @@ nav ul li:hover ul li {
     width: 50%;
     background: $gray;
     opacity: 1;
-    -webkit-transform: rotate(0deg);
-       -moz-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: .17s ease-in-out;
-       -moz-transition: .17s ease-in-out;
-         -o-transition: .17s ease-in-out;
-            transition: .17s ease-in-out;
+    transform: rotate(0deg);
+    transition: .17s ease-in-out;
   }
 
   #hamburgericon span:nth-child(even) {
@@ -164,17 +151,11 @@ nav ul li:hover ul li {
   }
 
   #hamburgericon.open span:nth-child(1), #hamburgericon.open span:nth-child(6) {
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 
   #hamburgericon.open span:nth-child(2), #hamburgericon.open span:nth-child(5) {
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 
   #hamburgericon.open span:nth-child(1) {

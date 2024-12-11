@@ -1,5 +1,5 @@
-/* TODO customize it, stolen from
-https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css#L441
+/*
+Stolen from https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css
 */
 
 kbd {
@@ -13,5 +13,5 @@ kbd {
   border-bottom-color: #959da5;
   border-radius: 5px;
   box-shadow: inset -2px -3px 2px #959da5;
-  @include no-select;
+  user-select: none;
 }
