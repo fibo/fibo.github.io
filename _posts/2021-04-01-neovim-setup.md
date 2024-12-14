@@ -135,10 +135,19 @@ let g:airline_powerline_fonts = 1
 "
 "      html:5_
 "
-" Then type <C-y>, (Ctrl y ,) to trigger expansion.
+" Then type ,, to trigger expansion.
 "
-" More tutorials here: https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL
+" More tutorials here: https://github.com/mattn/emmet-vim/blob/master/TUTORIAL
 Plug 'mattn/emmet-vim'
+"
+" Notice that original trigger is <C-y>, (Ctrl y ,) but emmet leader key is set to comma in the config below.
+" So for example
+"
+"     div,,
+"
+" will generate <div></div>
+
+let g:user_emmet_leader_key=','
 
 " awesome completion tool
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
