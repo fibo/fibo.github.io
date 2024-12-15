@@ -2,10 +2,8 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-/* import variables and mixins first */
+/* import variables first */
 @import "variables";
-@import "mixins";
-
 
 /* HTML tags */
 @import "star";
