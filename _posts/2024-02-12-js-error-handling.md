@@ -81,7 +81,7 @@ describe("truncateDate", () => {
 
 Optionally add info attributes to the class, for example
 
-````ts
+```ts
 /**
  * Generic HTTP Error.
  *
