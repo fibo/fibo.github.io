@@ -10,7 +10,9 @@
 <body>
   {% include nav.html %}
 
-  {% include anathema.html %}
+  {% if page.isAboutPage %}
+    {% include anathema.html %}
+  {% endif %}
 
   <main>{{ content }}</main>
 
