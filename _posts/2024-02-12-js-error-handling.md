@@ -160,7 +160,8 @@ try {
 ```
 
 <div class="paper info">
-Notice that the correct type for the catched error is </code>unknown</code>.
+Notice that the correct type for the catched error should be <code>unknown</code>.
+You can enforce this by setting <a href="https://www.typescriptlang.org/tsconfig/#useUnknownInCatchVariables">useUnknownInCatchVariables</a> in your <em>TSConfig</em>
 </div>
 
 ## Serializable errors
