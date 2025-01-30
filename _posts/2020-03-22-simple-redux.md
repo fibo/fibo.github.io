@@ -105,10 +105,6 @@ export default function asyncActions (NAME) {
 }
 ```
 
-<div class="paper info">
-  I published this tiny helper to create async actions: <a href="http://g14n.info/async-actions">async-actions</a>.
-</div>
-
 Then, let's say we want to create another reducer with an async *READ bar* action.
 
 <div class="paper success">
