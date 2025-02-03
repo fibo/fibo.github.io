@@ -2,6 +2,7 @@
 title: Typing FormatJS translation keys
 tags:
   - React
+  - TypeScript
 description: >
      Generate types for FormatJS translation keys and use them to avoid typos, get autocompletion, etc.
 ---
