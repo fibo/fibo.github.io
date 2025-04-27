@@ -142,7 +142,8 @@ npm run readmes
 
 ## Software
 
-First of all, it is needed to create `.gh-token` file containing a GitHub token
+First of all, create a `.gh-token` file containing a GitHub token.
+You can got to [GitHub settings here](https://github.com/settings/personal-access-tokens): get a token that can access _Public repositories_.
 
 All software I produce is on GitHub, metadata is downloaded via API with
 
