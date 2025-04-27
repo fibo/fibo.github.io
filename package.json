@@ -11,7 +11,6 @@
     "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
     "data": "npm run data:github:repos; npm run data:github:users:fibo",
-    "data:github:repos": "token=$(cat .gh-token); cd _data/github/repos/; for repo in $(ls | while read filename; do echo ${filename%.json}; done | grep -v dotsoftware); do curl -u fibo:$token https://api.github.com/repos/fibo/$repo > ${repo}.json; done; curl -s -u fibo:$token https://api.github.com/repos/fibo/.software > dotsoftware.json; cd -",
     "data:github:users:fibo": "curl -u fibo:$(cat .gh-token) https://api.github.com/user > _data/github/users/fibo.json",
     "markdownlint": "markdownlint-cli2 '_posts/*.md'",
     "markdownlint--fix": "markdownlint-cli2 --fix '_posts/*.md'",
