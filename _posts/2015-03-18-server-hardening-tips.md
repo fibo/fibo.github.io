@@ -106,7 +106,7 @@ $ getcap /path/to/node
 
 Now any user can run a *nodejs* server on port 80. See also [how do I grant permission on port <1024][3], in particular [this quote](http://forums.fedoraforum.org/showpost.php?p=1129664&postcount=7).
 
-<div class="paper warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to <a href="http://g14n.info/dotsoftware">separate user software from system software</a>.
+<div class="paper warning">Note that I used <em>/path/to/node</em> instead of <em>/usr/bin/node</em> cause I highly recommend to separate user software from system software.
 In this particular case, if you update Node using yum you will loose the <em>cap_net_bind_service=ep</em> setting and your server will fail to restart on port 80.</div>
 
 ### Restrict ssh access

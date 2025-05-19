@@ -130,7 +130,7 @@ and I add the following content
 ```json
 "license": [ {
   "type": "MIT",
-  "url": "http://g14n.info/mit-license"
+  "url": "http://fibo.github.io/mit-license"
 } ],
 ```
 
@@ -139,7 +139,7 @@ and I add the following content
 It is also a good idea to add a link to your project homepage, so it will showed by [npm site][npm].
 
 ```json
-"homepage": "http://g14n.info/tris3d",
+"homepage": "http://fibo.github.io/tris3d",
 ```
 
 ## Do your first commit
