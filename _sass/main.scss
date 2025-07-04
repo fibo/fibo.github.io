@@ -1,8 +1,8 @@
 main {
-  max-width: min(100vw, 80ch);
+  max-width: 80ch;
   margin: auto;
 
-  margin-top: $nav-height + 4rem;
+  margin-top: $nav-height + 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
 
