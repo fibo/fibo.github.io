@@ -80,9 +80,6 @@ google-analytics:
 
 google-site-verification: xkOC1mPRjCk-mruQMgxREfjkWxBSPW0mxIlZsvFM3xo
 
-disqus:
-  shortname: g14n
-
 tags:
   - AWS
   - Git
