@@ -1,12 +1,11 @@
 {
   "name": "fibo.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My digital copybook",
-  "homepage": "http://g14n.info",
+  "homepage": "https://fibo.github.io",
   "private": true,
   "scripts": {
-    "build": "npm run browserify; npm run cp; npm run readmes; npm run data",
-    "browserify": "browserify -e src/index.js -o js/bundle.js",
+    "build": "npm run cp; npm run readmes; npm run data",
     "cp": "npm run cp:metadata",
     "cp:metadata": "npm run cp:metadata:package.json",
     "cp:metadata:package.json": "cp package.json _data/",
@@ -31,17 +30,13 @@
   },
   "author": {
     "name": "Gianluca Casati",
-    "url": "http://g14n.info"
+    "url": "https://fibo.github.io"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fibo/fibo.github.io/issues"
-  },
   "dependencies": {
     "load-html": "^1.2.0"
   },
   "devDependencies": {
-    "browserify": "^16.5.2",
     "dot-editorconfig": "^1.0.1",
     "markdownlint-cli2": "^0.13.0",
     "markdownlint-rule-github-internal-links": "^0.1.0",
