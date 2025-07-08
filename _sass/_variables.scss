@@ -1,15 +1,6 @@
-@font-face {
- font-family: "Recursive";
- src: url("/fonts/recursive.woff2") format("woff2-variations");
- font-weight: 300 1000;
- font-display: swap; /* Text using this font should be displayed immediately using a system font. Once the custom font is ready, the system font is swapped out. */
- unicode-range: U+000-5FF; /* Download only latin glyphs */
-}
-
 $font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-mono: "Lucida Console", Monaco, monospace;
-$font-family-heading: "Recursive", $font-family;
-$font-variation-settings: "CASL" 0, "slnt" -5;
+$font-family-heading: "Verdana", $font-family;
 $font-size: 17px;
 
 $mobile-break-point: 680px;
