@@ -3,11 +3,9 @@ title: Blog
 layout: page
 ---
 
-<header>
-  <h1>Blog</h1>
-</header>
+<p class="paper info">
+  <a href="./about-me">Gianluca Casati</a> writes here: this is a random topic <a href="./blog">blog</a> about things he wants to remember, most of all are technical information.
+</p>
 
-<section>
-  {% include posts_list.html %}
-</section>
+{% include posts_list.html limit="8" %}
 
