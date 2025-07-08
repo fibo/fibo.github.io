@@ -48,7 +48,7 @@ export function isMyType(value: unknown): value is MyType {
 ```
 
 <div class="paper info">
-You can also use a more accurate alternative to built-in `Partial`. The cons is that you need to define a generic `isMaybeObject` type guard as well as a `objectTypeGuard` helper and import it in `MyType` implementation. The pros is that it correctly type our type attributes as `unknown` and it reduces boilerplate.
+You can also use a more accurate alternative to built-in <code>Partial</code>. The cons is that you need to define a generic <code>isMaybeObject</code> type guard as well as a <code>objectTypeGuard</code> helper and import it in <code>MyType</code> implementation. The pros is that it correctly type our type attributes as <code>unknown</code> and it reduces boilerplate.
 </div>
 
 This is the implementation.
@@ -58,7 +58,7 @@ This is the implementation.
  * Use `isMaybeObject` in a *type guard*.
  *
  * @example
- * ```ts
+ *
  * type Foo = { bar: boolean };
  *
  * const isFoo = (arg: unknown): arg is Foo => {
@@ -66,7 +66,6 @@ This is the implementation.
  *   const { bar } = arg;
  *   return typeof bar === "boolean";
  * }
- * ```
  */
 export const isMaybeObject = <T extends object>(
   arg: unknown
@@ -78,11 +77,11 @@ export const isMaybeObject = <T extends object>(
  * Use `objectTypeGuard` as a *type guard* helper to reduce boilerplate.
  *
  * @example
- * ```ts
+ *
  * type Foo = { bar: boolean };
  *
  * const isFoo = objectTypeGuard<Foo>(({ bar }) => typeof bar === "boolean");
- * ```
+ *
  */
 export const objectTypeGuard =
   <T extends object>(check: (obj: { [K in keyof T]: unknown }) => boolean) =>
