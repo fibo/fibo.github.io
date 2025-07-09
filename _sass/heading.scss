@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6, .heading {
   padding: 0.5em 0 0.5em;
   font-weight: normal;
   font-family: $font-family-heading;
+  text-wrap: pretty;
 }
 
 h1, .size-1 {

@@ -6,18 +6,8 @@
 
 ### Style
 
-Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages], read
-
-* [Using Sass with Jekyll](http://markdotto.com/2014/09/25/sass-and-jekyll/)
-* [Assets doc page on Jekyll website](https://jekyllrb.com/docs/assets/)
-
-A really good starting point is the [Jekyll] scaffold you obtain launching
-
-```bash
-jekyll new myblog
-```
-
-and the [minima] Jekyll theme.
+Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages].
+See [templates/page](https://fibo.github.io/templates/page) for a showcase of styles used.
 
 ### Images
 

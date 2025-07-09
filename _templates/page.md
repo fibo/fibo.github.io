@@ -111,22 +111,6 @@ Another item
 : description
 ```
 
-## Buttons
-
-<button>Default</button>
-<button class="danger">Danger</button>
-<button class="info">Info</button>
-<button class="success">Success</button>
-<button class="warning">Warning</button>
-
-```
-<button>Default</button>
-<button class="danger">Danger</button>
-<button class="info">Info</button>
-<button class="success">Success</button>
-<button class="warning">Warning</button>
-```
-
 ## Papers
 
 <div class="paper">Default</div>
@@ -169,38 +153,38 @@ Press <kbd>Ctrl-A</kbd> then <kbd>Enter</kbd>
 
 ## Table
 
-| name   | color  | quantity | when eat                   |
-|--------|--------|----------|----------------------------|
-| banana | yellow |    1     | 2016-10-08T16:03:33.514813 |
-| lemon  | yellow |    1     | 2016-10-02T16:05:21.688181 |
-| ananas | yellow |    1     | 2016-09-03T16:05:51.306499 |
-| ananas | yellow |    2     | 2016-10-12T16:04:18.139856 |
-| apple  | red    |    1     | 2016-10-18T16:02:14.134914 |
-| apple  | red    |    1     | 2016-10-15T16:02:40.171544 |
-| lime   | green  |    1     | 2016-10-02T16:06:33.857933 |
-| apple  | green  |    1     | 2016-10-18T16:03:16.466362 |
-| apple  | red    |    1     | 2016-09-13T16:02:50.076339 |
-| banana | yellow |    1     | 2016-09-18T16:03:40.395818 |
-| lemon  | yellow |    1     | 2016-09-05T16:05:33.018904 |
-| lime   | green  |    1     | 2016-09-30T16:06:17.940080 |
-| apple  | red    |    1     | 2016-10-13T16:02:44.429806 |
-| banana | yellow |    4     | 2016-10-14T16:03:54.322192 |
+| name   | color  | quantity | when eat            |
+|--------|--------|----------|---------------------|
+| banana | yellow |    1     | 2016-10-08T16:03:33 |
+| lemon  | yellow |    1     | 2016-10-02T16:05:21 |
+| ananas | yellow |    1     | 2016-09-03T16:05:51 |
+| ananas | yellow |    2     | 2016-10-12T16:04:18 |
+| apple  | red    |    1     | 2016-10-18T16:02:14 |
+| apple  | red    |    1     | 2016-10-15T16:02:40 |
+| lime   | green  |    1     | 2016-10-02T16:06:33 |
+| apple  | green  |    1     | 2016-10-18T16:03:16 |
+| apple  | red    |    1     | 2016-09-13T16:02:50 |
+| banana | yellow |    1     | 2016-09-18T16:03:40 |
+| lemon  | yellow |    1     | 2016-09-05T16:05:33 |
+| lime   | green  |    1     | 2016-09-30T16:06:17 |
+| apple  | red    |    1     | 2016-10-13T16:02:44 |
+| banana | yellow |    4     | 2016-10-14T16:03:54 |
 
 ```
-| name   | color  | quantity | when eat                   |
-|--------|--------|----------|----------------------------|
-| banana | yellow |    1     | 2016-10-08T16:03:33.514813 |
-| lemon  | yellow |    1     | 2016-10-02T16:05:21.688181 |
-| ananas | yellow |    1     | 2016-09-03T16:05:51.306499 |
-| ananas | yellow |    2     | 2016-10-12T16:04:18.139856 |
-| apple  | red    |    1     | 2016-10-18T16:02:14.134914 |
-| apple  | red    |    1     | 2016-10-15T16:02:40.171544 |
-| lime   | green  |    1     | 2016-10-02T16:06:33.857933 |
-| apple  | green  |    1     | 2016-10-18T16:03:16.466362 |
-| apple  | red    |    1     | 2016-09-13T16:02:50.076339 |
-| banana | yellow |    1     | 2016-09-18T16:03:40.395818 |
-| lemon  | yellow |    1     | 2016-09-05T16:05:33.018904 |
-| lime   | green  |    1     | 2016-09-30T16:06:17.940080 |
-| apple  | red    |    1     | 2016-10-13T16:02:44.429806 |
-| banana | yellow |    4     | 2016-10-14T16:03:54.322192 |
+| name   | color  | quantity | when eat            |
+|--------|--------|----------|---------------------|
+| banana | yellow |    1     | 2016-10-08T16:03:33 |
+| lemon  | yellow |    1     | 2016-10-02T16:05:21 |
+| ananas | yellow |    1     | 2016-09-03T16:05:51 |
+| ananas | yellow |    2     | 2016-10-12T16:04:18 |
+| apple  | red    |    1     | 2016-10-18T16:02:14 |
+| apple  | red    |    1     | 2016-10-15T16:02:40 |
+| lime   | green  |    1     | 2016-10-02T16:06:33 |
+| apple  | green  |    1     | 2016-10-18T16:03:16 |
+| apple  | red    |    1     | 2016-09-13T16:02:50 |
+| banana | yellow |    1     | 2016-09-18T16:03:40 |
+| lemon  | yellow |    1     | 2016-09-05T16:05:33 |
+| lime   | green  |    1     | 2016-09-30T16:06:17 |
+| apple  | red    |    1     | 2016-10-13T16:02:44 |
+| banana | yellow |    4     | 2016-10-14T16:03:54 |
 ```
