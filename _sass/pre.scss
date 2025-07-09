@@ -12,10 +12,11 @@
  */
 
 pre {
-  padding: 10px;
-  margin-top: 0;
+  padding: 0.68em;
+  margin-top: $margin-top;
   margin-bottom: $margin-bottom;
   word-wrap: normal;
+  cursor: default;
 
   code {
     background-color: transparent;

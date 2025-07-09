@@ -5,13 +5,3 @@ code {
   font-family: $font-family-mono;
   word-break: break-all;
 }
-
-code::selection {
-  background-color: $semi-transparent;
-  color: $white;
-}
-
-code span::selection {
-  background-color: $semi-transparent;
-  color: $white;
-}
