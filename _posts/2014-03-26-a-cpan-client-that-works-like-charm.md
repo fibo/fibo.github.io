@@ -57,19 +57,11 @@ otherwise read [Troubleshooting](#troubleshooting) if you had problems during in
 
 ### Troubleshooting
 
-<span class="badge danger">ATTENTION</span>
-
-Two things could not work: network *or* permissions.
-
-The quickest workaround is to check your network configuration and launch commands using sudo.
-
-I really recommend to avoid using *cpan* and *perl* provided by your system. See [Install your own Perl with your own CPAN](http://perl-node-interface.blogspot.it/2012/02/install-your-own-perl-with-your-own.html) or [dotsoftware](//{{ site.domain }}/dotsoftware) to know how to install Perl in some location your user owns.
-
 #### local::lib approach
 
-By the way, *cpan* will realize if you have not write permission and will ask what approach do you want: default is [local::lib](http://search.cpan.org/dist/local-lib/lib/local/lib.pm) that is a good idea if you don't want to build your own Perl.
+By the way, *cpan* will realize if you do not have write permission and will ask what approach do you want: default is [local::lib](http://search.cpan.org/dist/local-lib/lib/local/lib.pm) that is a good idea if you don't want to build your own Perl.
 
-For example, I use it on [Codio](https://codio.com) and works great: just keep hitting *enter* and *cpan* will install *local::lib* for you.
+Just keep hitting *enter* and *cpan* will install *local::lib* for you.
 
 After installation, you need to modify your environment manually. Just launch
 

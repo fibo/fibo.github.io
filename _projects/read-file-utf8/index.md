@@ -4,53 +4,37 @@ npm: true
 ---
 # read-file-utf8
 
-> reads content from file using utf-8 encoding
+> reads content from file using utf-8 encoding, also imports JSON files easily
 
-[API](#api) |
-[Usage](#usage) |
-[Examples](#examples) |
-[See also](#see-also) |
-[License](#license)
+## Installation
 
-[![NPM version](https://badge.fury.io/js/read-file-utf8.svg)](http://badge.fury.io/js/read-file-utf8)
-[![No deps](https://img.shields.io/badge/dependencies-none-green.svg)](https://github.com/fibo/read-file-utf8)
+With [npm](https://npmjs.org/) do
 
-## API
-
-### `readFile(filePath: String): Promise<String>`
-
-It is a function that returns a *Promise* and requires one *String* parameter:
-
-* **@param** `{String}` filePath
-* **@returns** `{Promise<String>}` content
+```sh
+npm install read-file-utf8
+```
 
 ## Usage
 
+`read<T = string>(filePath: string): Promise<T>`
+
 Read from a text file.
 
-```javascript
-const readFile = require('read-file-utf8')
+```js
+import read from "read-file-utf8";
 
-const filePath = 'file.txt'
+const filePath = "path/to/file.txt";
 
-// Since read-file-utf8 function will return a Promise,
-// the most comfortable way to run it is inside an async function.
-async function example () {
-  try {
-    // Read file content.
-    ////////////////////
-    const content = await readFile(filePath)
+try {
+  // Read file content.
+  const content = await read(filePath)
 
-    console.log(content)
-  } catch (error) {
-    // In case you do not have read permissions,
-    // you may want to handle it here.
-    console.error(error)
-  }
+  console.log(content)
+} catch (error) {
+  // In case you do not have permissions,
+  // you may want to handle it here.
+  console.error(error)
 }
-
-// Run example.
-example()
 ```
 
 ## Examples
@@ -58,16 +42,37 @@ example()
 ### Import JSON
 
 This makes sense at the time of this writing (2020) since it is not possibile to import JSON using `require` when ES modules are enabled in Node.
-For example to read version from a *package.json* you can do something like the following.
 
-```javascript
-async function showPackageJsonVersion () {
-  const { version } = await readFile('package.json').then(JSON.parse)
+Update (2023): you can use import assertions like `import pkg from "./package.json" assert { type: "json" }` but you can a warning:
 
-  console.log(version)
-}
+```
+ExperimentalWarning: Import assertions are not a stable feature of the JavaScript language. Avoid relying on their current behavior and syntax as those might change in a future version of Node.js.
+```
 
-showPackageJsonVersion()
+So, to get attributes from a *package.json* you can do something like the following.
+
+```js
+// Read version from package.json file.
+// Given the `.json` extension, it is assumed the content is JSON
+// and `JSON.parse` is used to parse it.
+const { version } = await read("./package.json");
+
+console.log(version)
+```
+
+If you are using TypeScript you may need to provide the type of your JSON.
+
+```ts
+const { version } = await read<{ version: string }>("./package.json");
+```
+
+Or you may want to double check the input declaring it as `unknown` and  use a type-guard.
+
+
+```ts
+const pkg = await read<unknown>("./package.json");
+
+if (isPackageJson(pkg)) console.log(pkg.version);
 ```
 
 ### Read SQL files
@@ -78,15 +83,11 @@ in its own *queryFile.sql* good old SQL file, instead then inside *someOtherFile
 Create a *sql/* folder and put there all your queries.
 Add also a *sql/index.js* with the following content
 
-```javascript
-const path = require('path')
-const readFile = require('read-file-utf8')
+```js
+import { join } from "node:path";
 
-function sql (fileName) {
-  return readFile(path.join(__dirname, `${fileName}.sql`))
-}
-
-module.exports = sql
+export const sql (fileName) =>
+  read(path.join(__dirname, `${fileName}.sql`));
 ```
 
 Suppose there is a *sql/count_winners.sql* file with the following content
@@ -99,33 +100,24 @@ WHERE is_winner IS TRUE
 
 Now you are able to do, for example
 
-```javascript
-const pg = require('pg')
+```js
+import { Client } from "pg";
+import sql from "./path/to/sql.js";
 
-const sql = require('./path/to/sql/index.js')
+const client = new Client();
+await client.connect();
 
-const connectionString = '@@@your connection string here@@@'
+const sqlCode = await sql("count_winners");
 
-pg.connect(connectionString, async function (err, client, done) {
-  if (err) return console.error(err)
-
-  const sqlCode = await sql('count_winners')
-
-  client.query(sqlCode, function (err, result) {
-    if (err) return console.error(err)
-
-    console.log(result.rows[0].num)
-  })
-})
+const res = await client.query(sqlCode);
+console.log(res.rows);
 ```
 
 ## See also
 
-* [write-file-utf8](http://g14n.info/write-file-utf8)
-* [fs.readFile][readFile]
+- [write-file-utf8](https://github.com/fibo/write-file-utf8)
 
 ## License
 
-[MIT](http://g14n.info/mit-license/)
+[MIT](https://fibo.github.io/mit-license/)
 
-[readFile]: https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback

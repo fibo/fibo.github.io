@@ -47,8 +47,6 @@ Get root permissions and install it, on Centos just launch
 yum install perl-ExtUtils-MakeMaker
 ```
 
-If you can't do it, go straight and compile your own Perl: see [dotsoftware](//{{ site.domain }}/dotsoftware).
-
 ### Choose your target
 
 Create a folder that will be your Perl home. To make it easier, I choose [local::lib][2] default

@@ -24,10 +24,6 @@
         </div>
 
         {% include post_time.html post=page %}
-
-        {% for tag in page.tags %}
-          {% include tag_badge.html tag=tag %}
-        {% endfor %}
       </header>
 
       {{ content }}
