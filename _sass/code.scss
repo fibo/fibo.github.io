@@ -7,11 +7,11 @@ code {
 }
 
 code::selection {
-  background-color: green;
-  color: lightgreen;
+  background-color: $semi-transparent;
+  color: $white;
 }
 
 code span::selection {
-  background-color: green;
-  color: lightgreen;
+  background-color: $semi-transparent;
+  color: $white;
 }

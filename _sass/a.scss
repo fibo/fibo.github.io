@@ -4,6 +4,7 @@ a {
   transition: color 400ms ease-out;
   padding-left: 0.17em;
   padding-right: 0.17em;
+  outline-color: $link-highlight-color;
 }
 
 a:link,

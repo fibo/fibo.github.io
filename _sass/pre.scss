@@ -29,6 +29,16 @@ pre {
     padding: 0;
     word-wrap: normal;
   }
+
+  code::selection {
+    background-color: green;
+    color: lightgreen;
+  }
+
+  code span::selection {
+    background-color: green;
+    color: lightgreen;
+  }
 }
 
 pre.highlight {
