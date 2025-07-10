@@ -1,9 +1,7 @@
-<div class="post_box paper">
-    <a href="{{ include.post.url }}">
-      <span class="heading size-2">{{ include.post.title }}</span>
+<a class="post_box paper" href="{{ include.post.url }}">
+  <span class="heading size-2">{{ include.post.title }}</span>
 
-      <p class="description">{{ include.post.description }}</p>
-    </a>
+  <p class="description">{{ include.post.description }}</p>
 
   {% include post_time.html post=include.post %}
-</div>
+</a>

@@ -16,4 +16,18 @@ a:active,
 a:hover,
 a:focus {
   color: $link-highlight-color;
+  text-decoration: none;
+}
+
+a.paper {
+  color: $black;
+  text-decoration: none;
+}
+
+a.paper:active,
+a.paper:hover,
+a.paper:focus,
+a.paper:visited {
+  color: $black;
+  text-decoration: none;
 }
