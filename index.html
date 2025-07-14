@@ -24,8 +24,17 @@ description: A random topic blog | My projects aggregator
   </p>
 </header>
 
-<section class="one-column">
-  <h2>Latest blog posts</h2>
-  {% include posts_list.html limit="8" %}
+<ul class="contacts">
+  <li>
+    <a href="https://github.com/fibo"><img src="./svg/logos/github.svg"></a>
+  </li>
+  <li>
+    <a href="https://it.linkedin.com/in/gianlucacasati"><img src="./svg/logos/linkedin.svg"></a>
+  </li>
+</ul>
+
+<section class="related-posts one-column">
+  <div class="related-posts__title">Latest blog posts</div>
+  {% include posts_list.html limit="3" %}
 </section>
 

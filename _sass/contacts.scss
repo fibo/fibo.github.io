@@ -1,0 +1,21 @@
+ul.contacts {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+  margin-left: 420px;
+
+  @media screen and (max-width: $mobile-break-point) {
+    margin: auto;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+ul.contacts li a img {
+  width: 3em;
+}
