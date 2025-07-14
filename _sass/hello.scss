@@ -1,10 +1,20 @@
-.hello__image {
-  float: left;
-  shape-outside: circle(50%);
-  margin-right: 1rem;
-}
+.hello {
+  padding-left: 2em;
+  padding-right: 2em;
 
-.hello__message {
-  margin: 0;
-  font-size: 1.17rem;
+  @media screen and (max-width: $mobile-break-point) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  &__image {
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 1rem;
+  }
+
+  &__message {
+    margin: 0;
+    font-size: 1.17rem;
+  }
 }
