@@ -17,9 +17,6 @@ exclude:
   - package.json
   - src/
 
-include:
-  - _data/repos/.software.json
-
 plugins:
   - jekyll-sitemap
 
