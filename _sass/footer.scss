@@ -1,5 +1,5 @@
 footer {
-  background-image: linear-gradient(rgb(17, 17, 17), rgb(71, 71, 71));
+  background-image: linear-gradient(71deg ,rgb(17, 17, 17) 0%, rgb(71, 71, 71) 100%);
   clear: left;
   color: $white;
   margin-top: 2em;
@@ -10,4 +10,9 @@ footer {
   a:visited {
     color: $white;
   }
+}
+
+footer::selection {
+  background: $white;
+  color: $black;
 }
