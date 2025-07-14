@@ -1,4 +1,8 @@
 .related-posts {
   margin-top: 5em;
   margin-bottom: 5em;
+
+  &__title {
+    font-size: $font-size-2;
+  }
 }

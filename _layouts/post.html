@@ -12,51 +12,52 @@
 </head>
 
 <body>
-  <article>
-    <header>
-      <h1>{{ page.title }}</h1>
+  <div class="post">
+    <article>
+      <header>
+        <h1>{{ page.title }}</h1>
 
-      <p class="description">{{ page.description }}</p>
+        <p class="description">{{ page.description }}</p>
 
-      {% include post_time.html post=page %}
-    </header>
+        {% include post_time.html post=page %}
+      </header>
 
-    <div class="one-column">
-      {{ content }}
-    </div>
-  </article>
+      <div class="one-column">
+        {{ content }}
+      </div>
+    </article>
 
-  {% assign hasRelated = false %}
-  {% for post in site.posts %}
-    {% for tag in post.tags %}
-      {% for myTag in page.tags %}
-        {% if tag == myTag and page.id != post.id %}
-          {% assign hasRelated = true %}
-        {% endif %}
+    {% assign hasRelated = false %}
+    {% for post in site.posts %}
+      {% for tag in post.tags %}
+        {% for myTag in page.tags %}
+          {% if tag == myTag and page.id != post.id %}
+            {% assign hasRelated = true %}
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     {% endfor %}
-  {% endfor %}
 
-  {% if hasRelated == true %}
-    <aside class="related-posts">
-      <span class="size-2">Related posts</span>
+    {% if hasRelated == true %}
+      <aside class="related-posts one-column">
+        <span class="related-posts__title">Related posts</span>
 
-      {% for post in site.posts %}
-        {% assign isRelated = false %}
-        {% for tag in post.tags %}
-          {% for myTag in page.tags %}
-            {% if tag == myTag and page.id != post.id %}
-              {% assign isRelated = true %}
-            {% endif %}
+        {% for post in site.posts %}
+          {% assign isRelated = false %}
+          {% for tag in post.tags %}
+            {% for myTag in page.tags %}
+              {% if tag == myTag and page.id != post.id %}
+                {% assign isRelated = true %}
+              {% endif %}
+            {% endfor %}
           {% endfor %}
+
+          {% if isRelated == true %}
+             {% include post_box.html post=post %}
+          {% endif %}
         {% endfor %}
-
-        {% if isRelated == true %}
-           {% include post_box.html post=post %}
-        {% endif %}
-      {% endfor %}
-    </aside>
-  {% endif %}
-
+      </aside>
+    {% endif %}
+  <div>
 </body>
 </html>
