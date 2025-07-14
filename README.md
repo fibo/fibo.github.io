@@ -41,8 +41,20 @@ Furthermore, tag could by a typo or tag folder could not exist yet.
 
 ### Tricks
 
+#### Escape Liquid tags
+
 To escape Liquid tags, use `{{ "{% this " }}%}`. To escape `{{ this }}`, use `{{ "{{ this " }}}}`.
 Reference: [How to escape liquid tags?](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags).
+
+#### Available gems
+
+To see which gems are available on GitHub Pages, run
+
+```shell
+bundle exec github-pages versions
+```
+
+See also https://github.com/github/pages-gem
 
 ## Collections
 
