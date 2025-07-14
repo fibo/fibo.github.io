@@ -1,0 +1,14 @@
+main {
+  max-width: min(100vw, 80ch);
+  margin: auto;
+
+  margin-top: $nav-height + 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @media screen and (max-width: $mobile-break-point) {
+    margin-top: $nav-height + 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
