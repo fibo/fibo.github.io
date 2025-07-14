@@ -1,5 +1,5 @@
 ---
-layout: common/page
+layout: page
 title: Page
 description: example
 keywords:

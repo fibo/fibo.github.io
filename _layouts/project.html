@@ -5,16 +5,15 @@
   <html lang="en">
 {% endif %}
 <head>
-  {% include common/meta.html %}
-  {% include common/favicon.html %}
-  {% include common/style.html %}
+  {% include meta.html %}
+  {% include favicon.html %}
+  {% include style.html %}
 </head>
 <body>
   {% include project/nav.html %}
 
   <main>{{ content }}</main>
 
-  <load-html src="/common/footer.html"></load-html>
-  {% include common/js-bundle.html %}
+  {% include footer.html %}
 </body>
 </html>

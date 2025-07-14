@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include common/meta.html %}
-  {% include common/favicon.html %}
+  {% include meta.html %}
+  {% include favicon.html %}
   {% include common/fontawesome.html %}
-  {% include common/style.html %}
-  {% include header.html %}
+  {% include style.html %}
 </head>
 <body>
   {% include nav.html %}
 
-  {% if page.isAboutPage %}
-    {% include anathema.html %}
-  {% endif %}
-
   <main>{{ content }}</main>
 
-  <load-html src="/common/footer.html"></load-html>
-  {% include common/js-bundle.html %}
+  {% include footer.html %}
 </body>
 </html>

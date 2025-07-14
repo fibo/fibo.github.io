@@ -10,13 +10,8 @@
 <body>
   {% include nav.html %}
 
-  {% if page.isAboutPage %}
-    {% include anathema.html %}
-  {% endif %}
-
   <main>{{ content }}</main>
 
-  <load-html src="/common/footer.html"></load-html>
-  {% include common/js-bundle.html %}
+  {% include footer.html %}
 </body>
 </html>
