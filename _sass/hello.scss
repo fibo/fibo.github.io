@@ -1,20 +1,37 @@
 .hello {
   padding-left: 2em;
   padding-right: 2em;
+  padding-top: 1em;
+  margin-top: 1em;
 
   @media screen and (max-width: $mobile-break-point) {
+    margin-top: 0.5em;
+    padding-top: 0;
     padding-left: 0.5em;
     padding-right: 0.5em;
+  }
+
+  &__title {
+    max-width: 88vw;
+    fill: #2B292E; /* antracite */
+    stroke: $black;
+    display: block;
+    margin-bottom: -0.71em;
+  }
+
+  &__name {
+    font-size: 1.2em;
   }
 
   &__image {
     float: left;
     shape-outside: circle(50%);
-    margin-right: 1rem;
+    margin-right: 1em;
   }
 
   &__message {
     margin: 0;
+    margin-top: 1em;
     font-size: 1.17rem;
   }
 }

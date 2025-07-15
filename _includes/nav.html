@@ -3,7 +3,7 @@
 
 <nav>
   <ul>
-    <li><a href="/" onclick="toggleNav()">{{ site.name }}</a></li>
+    <li><a href="/" onclick="toggleNav()">{{ site.title }}</a></li>
     {% for item in nav %}
       <li><a href="{{ item[1] }}" onclick="toggleNav()">{{ item[0] }}</a></li>
     {% endfor %}

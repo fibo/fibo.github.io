@@ -7,7 +7,8 @@ description: A random topic blog | My projects aggregator
 {% include anathema.html %}
 
 <header class="hello">
-  <h1>{{ site.name }}</h1>
+  {% include title.html %}
+
   <div class="hello__image">
     <img
       alt="Gianluca Casati"
@@ -17,10 +18,10 @@ description: A random topic blog | My projects aggregator
   </div>
 
   <p class="hello__message">
-    My name is <em>Gianluca Casati</em>.<br>
+    <em class="hello__name">Gianluca Casati</em><br>
     Mathematician working in IT since 2005.<br>
-    ❤ coding and open source!<br>
-    Playing 🎶 guitar and percussions.
+    ❤ coding and OS!<br>
+    🎶 guitar and percussions.
   </p>
 </header>
 
