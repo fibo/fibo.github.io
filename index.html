@@ -4,38 +4,30 @@ title: My Digital Copybook
 description: A random topic blog | My projects aggregator
 ---
 
-{% include anathema.html %}
+<div class="slide" data-slideid="projects">
+  <div class="content">
+    {% include hello.html %}
 
-<header class="hello">
-  {% include title.html %}
+    {% include contacts.html %}
 
-  <div class="hello__image">
-    <img
-      alt="Gianluca Casati"
-      class="circle"
-      src="https://secure.gravatar.com/avatar/e8b1967a7daac7e79352cd9447567e09?s=170"
-    />
+    <div class="one-column">
+      <div class="heading size-2">OS projects</div>
+
+      {% include projects_list.html %}
+    </div>
   </div>
+</div>
 
-  <p class="hello__message">
-    <em class="hello__name">Gianluca Casati</em><br>
-    Mathematician working in IT since 2005.<br>
-    ❤ coding and OS!<br>
-    🎶 guitar and percussions.
-  </p>
-</header>
+<div class="slide" data-slideid="blog">
+  <div class="content">
 
-<ul class="contacts">
-  <li>
-    <a href="https://github.com/fibo"><img src="./svg/logos/github.svg"></a>
-  </li>
-  <li>
-    <a href="https://it.linkedin.com/in/gianlucacasati"><img src="./svg/logos/linkedin.svg"></a>
-  </li>
-</ul>
+    <div class="one-column">
+      <p class="paper info">
+        <em>Gianluca Casati</em> writes here: this is a random topic <em>blog</em> about things he wants to remember, most of all are technical information.
+      </p>
 
-<section class="related-posts one-column">
-  <div class="related-posts__title">Latest blog posts</div>
-  {% include posts_list.html limit="3" %}
-</section>
+      {% include posts_list.html limit="42" %}
+    </div>
 
+  </div>
+</div>

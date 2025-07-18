@@ -6,11 +6,112 @@
   {% include style.html %}
 
   <meta name="google-site-verification" content="{{ site.google-site-verification }}" />
+
+  <style>
+    :root {
+      --nav-height: 40px;
+    }
+
+    html {
+      padding-bottom: var(--nav-height);
+    }
+
+    .swiper {
+      max-height: calc(100vh - var(--nav-height));
+      overflow: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slide {
+      scroll-snap-align: center;
+      min-width: 100%;
+      overflow: auto;
+    }
+
+    /* Hide horyzontal scrollbar. */
+    .swiper::-webkit-scrollbar { display: none; }
+    .swiper {
+      overscroll-behavior: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .content {
+      min-height: 100%;
+    }
+
+    nav {
+      height: var(--nav-height);
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      background-color: #121212;
+    }
+
+    nav button {
+      all: unset;
+      cursor: pointer;
+      color: white;
+    }
+
+    nav button[aria-current="true"] {
+      cursor: default;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  {{ content }}
+  {% include anathema.html %}
 
-  {% include footer.html %}
+  <div class="swiper">
+    {{ content }}
+  </div>
+
+  <nav>
+    <button data-slideid="projects" aria-current="true">
+      Projects
+    </button>
+
+    <button data-slideid="blog" aria-current="false">
+      Blog
+    </button>
+  </nav>
+
+  <script>
+    addEventListener('DocumentLoaded', () => {
+      const projectsButton = document.querySelector('button[data-slideid=projects]');
+      projectsButton.onclick = () => {
+        projectsButton.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      const blogsButton = document.querySelector('button[data-slideid=blog]');
+      blogsButton.onclick = () => {
+        blogsButton.scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (entry of entries) {
+          if (entry.isIntersecting) {
+            const slideid = entry.target.dataset.slideid;
+            document.querySelector('button[aria-current=true]').ariaCurrent = 'false';
+            document.querySelector(`button[data-slideid=${slideid}]`).ariaCurrent = 'true';
+          }
+        }
+      },
+      { threshold: 0.75 }
+    );
+    for (const slide of document.querySelectorAll(".slide")) {
+      observer.observe(slide);
+    }
+  </script>
 </body>
 </html>
