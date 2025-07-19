@@ -1,0 +1,13 @@
+.swiper {
+  max-height: calc(100vh - #{$nav-height});
+  overflow: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  scroll-snap-type: x mandatory;
+
+  /* Hide horyzontal scrollbar. */
+  overscroll-behavior: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}

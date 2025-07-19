@@ -11,6 +11,10 @@
   &:hover {
     box-shadow: 2px 2px 8px $shadow;
   }
+
+  &--white {
+    background-color: $paper-white;
+  }
 }
 
 .paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {

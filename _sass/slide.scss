@@ -1,0 +1,10 @@
+.slide {
+  scroll-snap-align: center;
+  min-width: 100%;
+  overflow: auto;
+
+  &__content {
+    min-height: 100%;
+    padding-bottom: 4rem;
+  }
+}

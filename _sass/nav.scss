@@ -1,192 +1,34 @@
 nav {
-  a {
-    text-align: center;
-  }
-
-  a:link,
-  a:visited {
-    color: $light-gray;
-  }
-
-  a:active,
-  a:focus,
-  a:hover {
-    background-color: $transparent-black;
-    color: $light-gray;
-    outline: 0;
-  }
-}
-
-/* Remove margins and padding from the list */
-
-nav ul {
-  z-index: 10;
   height: $nav-height;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: $transparent-black;
   position: fixed;
-  top: 0;
   width: 100%;
-}
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1.68rem;
+  justify-content: center;
+  background-color: $black;
 
-/* Float the list items side by side */
+  & button {
+    all: unset;
+    cursor: pointer;
+    color: $white;
 
-nav ul li:first-child {
-  float: left;
-}
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-nav ul li {
-  float: right;
-  font-size: 1rem;
-}
+    &[aria-current="true"] {
+      cursor: default;
+      font-weight: bold;
+    }
 
-/* Style the links inside the list items */
-
-nav ul li a {
-  display: inline-block;
-  color: $light-gray;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-}
-
-#hamburgericon {
-  display: none;
-}
-
-/* second level */
-
-nav ul li ul {
-  display: none;
-}
-
-nav ul li:hover ul {
-  z-index: 1000;
-  display: block;
-  background-color: $transparent-black;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-nav ul li:hover ul li {
-  float: left;
-  clear: left;
-}
-
-/* When the screen is less than $mobile-break-point pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.hamburgericon) */
-
-@media screen and (max-width: $mobile-break-point) {
-  nav ul li:not(:first-child) { display: none; }
-
-  #hamburgericon {
-    z-index: 17;
-    cursor: default;
-    display: inline-block;
-    position: fixed;
-    right: 6px;
-    width: 40px;
-    height: 40px;
-    top: 14px;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-  }
-
-/* The "responsive" class is added to the nav with JavaScript when the user clicks on the hamburger icon. This class makes the nav look good on small screens */
-
-  nav ul.responsive {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-  }
-
-  nav ul.responsive li {
-    float: none;
-    display: inline;
-  }
-
-  nav ul.responsive li a {
-    display: block;
-    font-size: 1.7rem;
-  }
-
-  /* Hamburger icon animation */
-
-  #hamburgericon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 50%;
-    background: $gray;
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: .17s ease-in-out;
-  }
-
-  #hamburgericon span:nth-child(even) {
-    left: 50%;
-  }
-
-  #hamburgericon span:nth-child(odd) {
-    left: 0px;
-  }
-
-  #hamburgericon span:nth-child(1), #hamburgericon span:nth-child(2) {
-    top: 0px;
-  }
-
-  #hamburgericon span:nth-child(3), #hamburgericon span:nth-child(4) {
-    top: 9px;
-  }
-
-  #hamburgericon span:nth-child(5), #hamburgericon span:nth-child(6) {
-    display: none;
-    top: 18px;
-  }
-
-  #hamburgericon.open span:nth-child(1), #hamburgericon.open span:nth-child(6) {
-    transform: rotate(45deg);
-  }
-
-  #hamburgericon.open span:nth-child(2), #hamburgericon.open span:nth-child(5) {
-    transform: rotate(-45deg);
-  }
-
-  #hamburgericon.open span:nth-child(1) {
-    left: 5px;
-    top: 4px;
-  }
-
-  #hamburgericon.open span:nth-child(2) {
-    left: calc(50% - 5px);
-    top: 4px;
-  }
-
-  #hamburgericon.open span:nth-child(3) {
-    left: -50%;
-    opacity: 0;
-  }
-
-  #hamburgericon.open span:nth-child(4) {
-    left: 100%;
-    opacity: 0;
-  }
-
-  #hamburgericon.open span:nth-child(5) {
-    display: block;
-    left: 5px;
-    top: 13px;
-  }
-
-  #hamburgericon.open span:nth-child(6) {
-    display: block;
-    left: calc(50% - 5px);
-    top: 13px;
+    /* Icon */
+    & button i {
+      display: inline-grid;
+      width: $nav-height;
+      height: $nav-height;
+      place-content: center;
+    }
   }
 }
