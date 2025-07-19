@@ -1,6 +1,7 @@
 domain: fibo.github.io
 url: https://fibo.github.io
 title: My Digital Copybook
+author: Gianluca Casati
 repo: https://github.com/fibo/fibo.github.io
 
 encoding: utf-8

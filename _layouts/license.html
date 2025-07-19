@@ -6,9 +6,13 @@
   {% include style.html %}
 </head>
 <body>
-  <article class="paper one-column">
-    <header><h1>{{ page.title }}</h1></header>
-    {{ content }}
-  </article>
+  <div class="one-column">
+    <article class="paper">
+      <header><h1>{{ page.title }}</h1></header>
+      {{ content }}
+    </article>
+  </div>
+
+  {% include nav.html %}
 </body>
 </html>

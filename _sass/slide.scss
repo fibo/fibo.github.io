@@ -3,6 +3,10 @@
   min-width: 100%;
   overflow: auto;
 
+  /* Hide vertical scrollbar. */
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+
   &__content {
     min-height: 100%;
     padding-bottom: $page-padding-bottom;

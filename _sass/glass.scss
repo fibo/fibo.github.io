@@ -1,0 +1,16 @@
+.glass {
+  background-color: hsla(0, 0%, 100%, 0.17);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+a.glass:active,
+a.glass:hover,
+a.glass:focus {
+  background-color: $white;
+}

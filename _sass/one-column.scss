@@ -5,6 +5,7 @@
   margin-top: 2em;
   padding-left: 5em;
   padding-right: 5em;
+  padding-bottom: $page-padding-bottom;
 
   @media screen and (max-width: $mobile-break-point) {
     margin-top: 0.5em;

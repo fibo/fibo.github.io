@@ -11,17 +11,6 @@
   &:hover {
     box-shadow: 2px 2px 8px $shadow;
   }
-
-  &--glass {
-    background-color: hsla(0, 0%, 100%, 0.17);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transition: background-color 0.25s ease-in-out;
-
-    &:hover {
-      background-color: $white;
-    }
-  }
 }
 
 .paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
@@ -47,10 +36,4 @@ a.paper:active,
 a.paper:hover,
 a.paper:focus {
   box-shadow: 2px 2px 8px $shadow;
-}
-
-a.paper--glass:active,
-a.paper--glass:hover,
-a.paper--glass:focus {
-  background-color: $white;
 }
