@@ -293,7 +293,7 @@ I recomment at least the following:
 * coc-prettier
 * coc-tsserver
 
-See other *coc.nvim* extensions [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
+See other [*coc.nvim* extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
 
 You may also want to configure CoC, for instance launch command `:CocConfig`
 (or edit *~/.config/nvim/coc-settings.json* file) and start with the following
@@ -308,7 +308,7 @@ You may also want to configure CoC, for instance launch command `:CocConfig`
 }
 ```
 
-See also CoC configuration JSON schema [here](https://github.com/neoclide/coc.nvim/blob/release/data/schema.json).
+See also [CoC configuration JSON schema](https://github.com/neoclide/coc.nvim/blob/release/data/schema.json).
 
 ### ripgrep
 

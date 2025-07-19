@@ -122,8 +122,7 @@ autoload -Uz compinit
 compinit -i
 ```
 
-For example on GitHub CLI documentation [here](https://cli.github.com/manual/gh_completion#zsh)
-they say
+For example on [GitHub CLI documentation](https://cli.github.com/manual/gh_completion#zsh) they say
 
 > Generate a _gh completion script and put it somewhere in your $fpath
 

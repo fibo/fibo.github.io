@@ -13,7 +13,7 @@ description: >
 
 ### Use Oracle Instant Client
 
-I really recommend to use your own Oracle lib, cause if your DBAs upgrade or dismiss or whatever the official Oracle installation, you will need to be warned and to reinstall [DBD::Oracle][1] since it links to the Oracle shared libs. Trust me, use *Oracle Instant Client*, at the time of this writing you can download it from [here](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html) or just [google it](https://www.google.com/?q=Oracle+Instant+Client+download).
+I really recommend to use your own Oracle lib, cause if your DBAs upgrade or dismiss or whatever the official Oracle installation, you will need to be warned and to reinstall [DBD::Oracle][1] since it links to the Oracle shared libs. Trust me, use *Oracle Instant Client*, at the time of this writing you can [download it from here](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html) or just [google it](https://www.google.com/?q=Oracle+Instant+Client+download).
 
 Select your platform, download the files and put them somewhere in your home dir or some other path you can read/write. Check also the right version for your installation: latest is *12.1.0.1* right now, but I had to use an older one, for instance, *10.2.0.5*.
 

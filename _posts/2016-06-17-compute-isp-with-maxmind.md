@@ -18,9 +18,8 @@ I have a *GeoIPISP.csv* file from [MaxMind] with a content like the following
 ...
 ```
 
-where first and second fields are the range of the IPs, and the third one is
-the ISP name. IPs are converted to numbers by expanding them in base 256, as
-documented [here](http://dev.maxmind.com/geoip/legacy/csv/).
+where first and second fields are the range of the IPs, and the third one is the ISP name.
+IPs are converted to numbers by expanding them in base 256, as [documented here](http://dev.maxmind.com/geoip/legacy/csv/).
 
 I need to compute the ISP name of given IP address, and once again, Perl comes to the rescue!
 
