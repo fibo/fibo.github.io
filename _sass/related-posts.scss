@@ -1,0 +1,9 @@
+.related-posts {
+  margin-top: 5em;
+  padding-bottom: $page-padding-bottom;
+
+  &__title {
+    font-size: $font-size-2;
+    margin-bottom: 1em;
+  }
+}

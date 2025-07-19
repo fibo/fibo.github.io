@@ -12,23 +12,53 @@ nav {
   & button {
     all: unset;
     cursor: pointer;
-    color: $white;
+    color: $light-gray;
+
+    font-weight: bold;
 
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0;
 
     &[aria-current="true"] {
+      color: $white;
       cursor: default;
-      font-weight: bold;
+    }
+
+    &:hover {
+      color: $white;
     }
 
     /* Icon */
-    & button i {
+    & i {
       display: inline-grid;
       width: $nav-height;
       height: $nav-height;
       place-content: center;
+
+      & svg {
+        width: calc(#{$nav-height} * 0.6);
+        height: calc(#{$nav-height} * 0.6);
+      }
+    }
+
+    & span {
+      padding-right: 0.5em;
     }
   }
+}
+
+a.nav__link {
+  color: $white;
+
+  & svg {
+    width: $nav-height;
+    height: $nav-height;
+  }
+}
+a:link.nav__link, a:visited.nav__link {
+  color: $light-gray;
+}
+a:hover.nav__link, a:focus.nav__link, a:active.nav__link {
+  color: $white;
 }
