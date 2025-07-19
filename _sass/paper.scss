@@ -12,11 +12,45 @@
     box-shadow: 2px 2px 8px $shadow;
   }
 
-  &--white {
-    background-color: $white;
+  &--glass {
+    background-color: hsla(0, 0%, 100%, 0.17);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $white;
+    }
   }
 }
 
 .paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
   padding: 0;
+}
+
+a.paper {
+  color: $black;
+  text-decoration: none;
+  outline-color: $black;
+}
+
+a.paper:active,
+a.paper:hover,
+a.paper:focus,
+a.paper:visited {
+  color: $black;
+  text-decoration: none;
+  outline-color: none;
+}
+
+a.paper:active,
+a.paper:hover,
+a.paper:focus {
+  box-shadow: 2px 2px 8px $shadow;
+}
+
+a.paper--glass:active,
+a.paper--glass:hover,
+a.paper--glass:focus {
+  background-color: $white;
 }
