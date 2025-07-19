@@ -44,11 +44,11 @@ nav:
 <time datetime="2016-11-21" class="badge">Nov 21 2016</time>
 ```
 
-Lorem ipsum [link to homepage](http://g14n.info). Press <kbd>CTRL-d</kbd> to exit.
+Lorem ipsum [link to 404](https://fibo.github.io/404.html). Press <kbd>CTRL-d</kbd> to exit.
 This is a paragraph, this is **bold** and this *is italic*.
 
 ```
-Lorem ipsum [link to homepage](http://g14n.info). Press <kbd>CTRL-d</kbd> to exit.
+Lorem ipsum [link to 404](http://fibo.github.io/404.html). Press <kbd>CTRL-d</kbd> to exit.
 This is a paragraph, this is **bold** and this *is italic*.
 ```
 

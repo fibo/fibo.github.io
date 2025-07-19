@@ -6,7 +6,7 @@
 
 ### Style
 
-Yes! [Jekyll] supports [Sass], I am using a *style.scss* that imports partials and it is integrated on [GitHub Pages].
+Yes! [Jekyll] supports [Sass], I am using a [style.scss](https://github.com/fibo/fibo.github.io/blob/master/style.scss) that imports partials from the [_sass/ folder](https://github.com/fibo/fibo.github.io/tree/master/_sass) and it is integrated on [GitHub Pages].
 See [templates/page](https://fibo.github.io/templates/page) for a showcase of styles used.
 
 ### Images
@@ -39,7 +39,7 @@ To show it as a link in tag badges, edit `_data/tagpage.yml`; for example
 if there is only one post tagged with that keywork it does not make sense to list all of its related posts in a page.
 Furthermore, tag could by a typo or tag folder could not exist yet.
 
-### Tricks
+### Tips & Tricks
 
 #### Escape Liquid tags
 
@@ -55,36 +55,6 @@ bundle exec github-pages versions
 ```
 
 See also https://github.com/github/pages-gem
-
-## Collections
-
-### Projects
-
-Inspired by Tom Preston's article [Readme driven development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html),
-documentation about my projects that **does not** use [GitHub Pages] is contained in their *README.md* file which is used to generate the project Homepage.
-
-```bash
-npm run readmes
-```
-
-## Software
-
-Create a `.gh-token` file containing a GitHub token.
-You can go to [GitHub settings here](https://github.com/settings/personal-access-tokens): get a token that can access _Public repositories_.
-
-All software I produce is on GitHub, metadata is downloaded via API with
-
-```bash
-npm run data:github:repos
-```
-
-and stored in *_data/github/repos* folder as *.json* files. Data is displayed in [software page](https://fibo.github.io/software).
-
-To add a new repo, *foo* for instance, just add an empty *json* file
-
-```bash
-touch _data/github/repos/foo.json
-```
 
 [Jekyll]: http://jekyllrb.com "Jekyll"
 [GitHub Pages]: https://pages.github.com "GitHub Pages"

@@ -40,6 +40,7 @@
 
     .content {
       min-height: 100%;
+      padding-bottom: 4rem;
     }
 
     nav {
@@ -85,15 +86,17 @@
   </nav>
 
   <script>
-    addEventListener('DocumentLoaded', () => {
+    addEventListener('DOMContentLoaded', () => {
       const projectsButton = document.querySelector('button[data-slideid=projects]');
+      const projectsSlide = document.querySelector('div[data-slideid=projects]');
       projectsButton.onclick = () => {
-        projectsButton.scrollIntoView({ behavior: 'smooth' });
+        projectsSlide.scrollIntoView({ behavior: 'smooth' });
       };
 
-      const blogsButton = document.querySelector('button[data-slideid=blog]');
-      blogsButton.onclick = () => {
-        blogsButton.scrollIntoView({ behavior: 'smooth' });
+      const blogButton = document.querySelector('button[data-slideid=blog]');
+      const blogSlide = document.querySelector('div[data-slideid=blog]');
+      blogButton.onclick = () => {
+        blogSlide.scrollIntoView({ behavior: 'smooth' });
       };
     });
 
@@ -109,7 +112,7 @@
       },
       { threshold: 0.75 }
     );
-    for (const slide of document.querySelectorAll(".slide")) {
+    for (const slide of document.querySelectorAll('div[data-slideid]')) {
       observer.observe(slide);
     }
   </script>
