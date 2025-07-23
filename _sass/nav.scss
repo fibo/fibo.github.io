@@ -8,6 +8,7 @@ nav {
   gap: 1.68rem;
   justify-content: center;
   background-color: $black;
+  transition: height 0.25s ease-in-out;
 
   & button {
     all: unset;

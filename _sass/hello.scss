@@ -1,14 +1,13 @@
 .hello {
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 1em;
-  margin-top: 1em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
 
   @media screen and (max-width: $mobile-break-point) {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     padding-top: 0;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   &__title {
@@ -33,5 +32,6 @@
     margin: 0;
     margin-top: 1em;
     font-size: 1.17rem;
+    line-height: 2;
   }
 }
