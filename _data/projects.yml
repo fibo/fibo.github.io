@@ -7,6 +7,10 @@
   description: "A minimal Dataflow programming engine"
   url: "https://fibo.github.io/dflow/"
 -
+  title: "Games of Life"
+  description: "Create any Game of Life variation"
+  url: "https://fibo.github.io/games-of-life/"
+-
   title: "GitHub Pages Router"
   description: "client side router for GitHub Pages, with transition API"
   url: "https://fibo.github.io/github-pages-router/"
