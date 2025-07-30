@@ -6,14 +6,16 @@
 
   circle {
     stroke-width: 1px;
-    stroke: $light-gray;
+    stroke: transparent;
   }
 
   .circle--1 {
     fill: rgba(0, 0, 0, 0.017);
+    stroke: $light-gray;
   }
   .circle--2 {
     fill: rgba(0, 0, 0, 0.1);
+    stroke: $light-gray;
   }
   .circle--3 {
     fill: rgba(0, 0, 0, 0.2);
