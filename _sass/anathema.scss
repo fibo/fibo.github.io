@@ -7,6 +7,18 @@
   circle {
     stroke-width: 1px;
     stroke: $light-gray;
-    fill: $subtle-shadow;
+  }
+
+  .circle--1 {
+    fill: rgba(0, 0, 0, 0.017);
+  }
+  .circle--2 {
+    fill: rgba(0, 0, 0, 0.1);
+  }
+  .circle--3 {
+    fill: rgba(0, 0, 0, 0.2);
+  }
+  .circle--4 {
+    fill: rgba(0, 0, 0, 0.4);
   }
 }
