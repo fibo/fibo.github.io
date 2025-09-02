@@ -58,6 +58,7 @@ EXIT_CODE=0
 
 git diff --name-only --cached | grep -E '\.(js|ts|tsx)$' | while read FILE
 do
+  [ -f "$FILE" ] || continue
   ./node_modules/.bin/eslint --fix "$FILE"
   git add "$FILE"
   [ $? -ne 0 ] && EXIT_CODE=1
