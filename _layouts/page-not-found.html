@@ -14,8 +14,12 @@
       font-style: normal;
     }
   </style>
+
+  {% include google_tag_manager-head.html %}
 </head>
 <body>
+  {% include google_tag_manager-body.html %}
+
   <div class="page-not-found">
     {{ content }}
   </div>

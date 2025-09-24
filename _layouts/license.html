@@ -4,8 +4,12 @@
   {% include meta.html %}
   {% include favicon.html %}
   {% include style.html %}
+
+  {% include google_tag_manager-head.html %}
 </head>
 <body>
+  {% include google_tag_manager-body.html %}
+
   <div class="one-column">
     <article class="paper">
       <header><h1>{{ page.title }}</h1></header>
@@ -14,5 +18,6 @@
   </div>
 
   {% include nav.html %}
+
 </body>
 </html>

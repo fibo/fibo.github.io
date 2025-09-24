@@ -9,9 +9,12 @@
   {% include favicon.html %}
   {% include style.html %}
   {% include libs.html %}
-</head>
 
+  {% include google_tag_manager-head.html %}
+</head>
 <body>
+  {% include google_tag_manager-body.html %}
+
   <div>
     <article class="one-column">
       <header class="paper" style="view-transition-name: {{ page.slug }};">

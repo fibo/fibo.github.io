@@ -10,8 +10,10 @@
     "no-emphasis-as-heading": false,
     "no-inline-html": false,
     "no-trailing-punctuation": false,
+    "ol-prefix": false,
     "reference-links-images": false,
     "relative-links": true,
+    "ul-indent": false,
     "ul-style": false,
   },
   "customRules": [

@@ -4,8 +4,12 @@
   {% include meta.html %}
   {% include favicon.html %}
   {% include style.html %}
+
+  {% include google_tag_manager-head.html %}
 </head>
 <body>
+  {% include google_tag_manager-body.html %}
+
   <main>{{ content }}</main>
 
   {% include nav.html %}

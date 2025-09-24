@@ -12,7 +12,7 @@ description: >
 Use this `h` function
 
 ```js
-const h=(e,a,...c)=>(e=document.createElement(e),a&&Object.assign(e,a),e.append(...c),e)
+const h=(e,a,c=[])=>(e=document.createElement(e),a&&Object.assign(e,a),e.append(...c),e)
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ This is a first implementation, written in TypeScript and in a comprehensive way
 function h(
   tagName: keyof HTMLElementTagNameMap,
   attributes: Record<string, string> | null = null,
-  ...children: Array<number | string | HTMLElement>
+  children: Array<number | string | HTMLElement> = []
 ): HTMLElementTagNameMap[typeof tagName] {
 
   // Create the element with the given tag name.
@@ -86,7 +86,7 @@ It makes it perfect to copy and paste in a stand alone Web Component and use it 
 Notice that the comments are the same as the previous implementation, so you can spot the analogy between the two.
 
 ```js
-const h = (e, a, ...c) => (
+const h = (e, a, c = []) => (
   // Create the element with the given tag name.
   e = document.createElement(e),
 
