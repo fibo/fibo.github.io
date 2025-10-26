@@ -1,4 +1,8 @@
 -
+  title: "Caesar"
+  description: "Cross-platform encryption desktop app"
+  url: "https://github.com/fibo/Caesar"
+-
   title: "Tris3D"
   description: "Tic tac toe in 3D"
   url: "https://tris3d.inversive.net"
