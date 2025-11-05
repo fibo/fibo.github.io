@@ -93,6 +93,7 @@ const rules ={
       asyncArrow: "always",
       named: "never"
     }],
+    "@stylistic/type-annotation-spacing": "error",
   },
 
   stylisticJsx: {
