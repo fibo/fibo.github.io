@@ -46,11 +46,9 @@ Copy the JSON generated, it will be something like
 
 ```
 {
-  "Id": "Policy1460648957246",
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "Stmt1640468927101",
       "Action": [
         "s3:GetObject"
       ],
@@ -68,11 +66,3 @@ Copy the JSON generated, it will be something like
 2. Select the *pippo* bucket.
 3. Open **Properties > Permissions > Add bucket policy**.
 4. Paste the JSON configuration and click **Save**.
-
-## See also
-
-* [This post][1] on stackoverflow.
-* [Specifying a Principal in a Policy][2]
-
-[1]: http://stackoverflow.com/questions/19176926/how-to-make-all-objects-in-aws-s3-bucket-public-by-default "How to make all Objects in AWS S3 bucket public by default?"
-[2]: http://docs.aws.amazon.com/AmazonS3/latest/dev/s3-bucket-user-policy-specifying-principal-intro.html "Specifying a Principal in a Policy"
