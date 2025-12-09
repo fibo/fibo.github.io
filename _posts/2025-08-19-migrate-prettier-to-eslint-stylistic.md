@@ -88,12 +88,10 @@ const rules ={
     "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
     "@stylistic/semi": ["error", "never"],
     "@stylistic/space-before-blocks": ["error", "always"],
-    "@stylistic/space-before-function-paren": ["error", {
-      anonymous: "always",
-      asyncArrow: "always",
-      named: "never"
-    }],
+    "@stylistic/space-before-function-paren": ["error", { anonymous: "always", asyncArrow: "always", named: "never" }],
+    "@stylistic/space-infix-ops": "error",
     "@stylistic/type-annotation-spacing": "error",
+    "@stylistic/type-generic-spacing": "error",
   },
 
   stylisticJsx: {
@@ -103,11 +101,7 @@ const rules ={
     "@stylistic/jsx-props-no-multi-spaces": "error",
     "@stylistic/jsx-quotes": ["error", "prefer-double"],
     "@stylistic/jsx-self-closing-comp": ["error", { component: true, html: true }],
-    "@stylistic/jsx-tag-spacing": ["error", {
-      afterOpening: "never",
-      beforeSelfClosing: "always",
-      closingSlash: "never"
-    }],
+    "@stylistic/jsx-tag-spacing": ["error", { afterOpening: "never", beforeSelfClosing: "always", closingSlash: "never" }],
   }
 }
 
