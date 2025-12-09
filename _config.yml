@@ -9,8 +9,6 @@ encoding: utf-8
 permalink: ./:year/:month/:title/
 
 exclude:
-  - _projects/_readmes
-  - _projects/**/index.yaml
   - Gemfile
   - Gemfile.lock
   - npm-debug.log
@@ -39,9 +37,6 @@ collections:
   misc:
     output: true
     permalink: ./:path.html
-  projects:
-    output: true
-    permalink: ./:path.html
   templates:
     output: true
     permalink: ./:collection/:path.html
@@ -55,12 +50,6 @@ defaults:
       type: "posts"
     values:
       layout: post
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: project
   -
     scope:
       path: ""

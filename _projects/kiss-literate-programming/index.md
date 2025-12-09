@@ -1,11 +1,8 @@
----
-title: kiss-literate-programming
----
 # KISS-Literate-Programming
 
 > is a minimal literate programming boilerplate
 
-[![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
+[![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
 
 ## Description
 
@@ -36,7 +33,7 @@ It is recommended if you have Node.js installed, in particular you can use tripl
 Add the row below in your markdown file to get a badge
 
 ```
-[![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
+[![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
 ```
 
 ## Usage
