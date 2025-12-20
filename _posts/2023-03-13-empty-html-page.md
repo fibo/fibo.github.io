@@ -14,10 +14,10 @@ You want to start a new HTML page from scratch, you want it clean:
 > ok, show me the code!
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>&lrm;</title>
   <link rel="icon" href="data:image/x-icon;base64,AA">
