@@ -11,7 +11,7 @@ description: >
 These are the steps you need to follow:
 
 1. Enter your CloudShell from your browser by clicking on the CloudShell icon in the AWS console navigation bar.
-2. Get your CloudShell instance IP: run `curl icanhazip.com`
+2. Get your CloudShell instance IP: run `curl checkip.amazonaws.com`
 3. Create or update an inbound rule for your EC2 instance's security group:
   - Type: SSH
   - Source: The output from the command in step 2, e.g., `3.4.5.6/32`.
@@ -41,18 +41,12 @@ But nowadays our attention span is muuuuch lower, so I also want connect to an E
 I will need to know the IP of my CloudShell instance, that is the trick I want to share in this article. Long story short, run this command in CloudShell:
 
 ```shell
-curl icanhazip.com
+curl checkip.amazonaws.com
 ```
 
 The IP is needed because when you create the EC2 Security Group, you want to make sure that the inbound rule allows SSH connections only from your CloudShell instance IP address.
 
-There are also other services online that does the same, for example try
-
-```shell
-curl ifconfig.me
-```
-
-Previously I used `ifconfig.co`, but it seems is not working anymore from AWS CloudShell.
+<div class="paper info">There are many online services that can tell your IP address, like <code>icanhazip.com</code>, <code>ifconfig.me</code> but it makes sense in this context to report the one provided by AWS.</div>
 
 ## Create an SSH key
 
