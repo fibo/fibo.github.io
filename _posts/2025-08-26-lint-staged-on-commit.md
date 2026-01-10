@@ -3,7 +3,7 @@ title: Lint staged files on commit
 tags:
   - JavaScript
 description: >
-     How to run linting on staged files when committing code with no dependency: no (lint-staged | husky | pre-commit) needed.
+     How to run linting on git staged files when committing code with no dependency needed.
 ---
 
 ## Motivation
@@ -12,6 +12,11 @@ On most of my projects I want to run some checks on the code before it is commit
 This is usually done with tools like `lint-staged`, `husky` or `pre-commit`.
 
 You do not need those dependencies, it can be done easily with custom code.
+
+A custom solution can be a valid choice for some projects. In case you want a tool to manage git hooks and commits, it is worth to mention:
+
+- [pre-commit.com](https://pre-commit.com/): used mostly for Python projects
+- [lefthook](https://lefthook.dev/): integrates also with [commitlint](https://commitlint.js.org/)
 
 ## Prepare
 

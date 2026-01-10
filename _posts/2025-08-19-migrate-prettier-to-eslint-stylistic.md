@@ -27,10 +27,12 @@ ESLint Stylistic as any other ESLint plugin has a set of rules that can be confi
 The goal is to configure ESLint Stylistic with a set of rules that are as similar as possible to your previous Prettier configuration but without the hassles.
 </div>
 
+### Quick setup
+
 Assuming you have an ESLint v9 config file _eslint.config.js_ just install the package
 
 ```shell
-npm install @stylistic/eslint-plugin --save-dev
+npm install eslint @stylistic/eslint-plugin --save-dev
 ```
 
 <div class="paper warning">
@@ -54,6 +56,12 @@ export default [
   })
 ]
 ```
+
+<div class="paper info">
+Prettier defaults to double quotes, instead I prefer single quotes. Just edit the <code>quotes</code> attribute accordingly or see the <code>@stylistic/quotes</code> attributes below.
+</div>
+
+### Full setup
 
 If instead you are using TypeScript or you want more control and explicitly list all rules, you can group them in an object to be reused across different configurations in your _eslint.config.js_ file.
 
@@ -121,7 +129,7 @@ export default [
     ignores: [
       "dist/",
     ]
-  }
+  },
 
   // All JavaScript files.
   {
