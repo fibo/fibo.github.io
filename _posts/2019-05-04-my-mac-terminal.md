@@ -191,8 +191,13 @@ Run also the following commands to set *git aliases*:
 ```sh
 # Modify previous commit
 git config --global alias.amend "commit --amend"
+
 # List files with merge conflicts
 git config --global alias.conflicts "diff --name-only --diff-filter=U"
+
 # Undo previous commit
 git config --global alias.undo "reset HEAD~1 --mixed"
+
+# List files in commit
+git config --global alias.files "show --pretty='' --name-only"
 ```
