@@ -43,6 +43,11 @@ Type `.` in command mode to repeat last executed command.
 - Move backward to beginning of word: `b`.
 - Move to end of word: `e`.
 
+Vim maintains a changelist for every document which you can see by invoking `:changes`.
+Jump through the changelist using
+- Go to older change: `g;`
+- Go to newer change: `g,`
+
 ## Wrap lines
 
 It is ok to wrap lines, add to your vim config
@@ -57,16 +62,16 @@ Then just use `gj` or `gk` to move on a wrapped line.
 
 Select the lines you want to sort, for example do:
 
-1. Place cursor on the first line and start selection with <kbd>SHIFT</kbd> <kbd>V</kbd>.
-2. Go down to the last line, for example using <kbd>J</kbd>.
+1. Place cursor on the first line and start selection with <kbd>SHIFT</kbd> <kbd>v</kbd>.
+2. Go down to the last line, for example using `j`.
 
-Then sort lines with <kbd>:</kbd> <kbd>sort</kbd>.
+Then sort lines with `:sort`.
 
-To sort and remove duplicates to <kbd>:</kbd> <kbd>sort u</kbd>.
+To sort and remove duplicates to `:sort u`.
 
 ## Registers
 
-Hey, multiple clipboards are available: to see them type <kbd>ESC</kbd> `:reg`.
+Hey, multiple clipboards are available: to see them do `:reg`.
 Let’s say you want to copy a line into a specific register: `"kyy` will yank the current line into register *"k*. If you later want to paste register *"k* you can do this: `"kp`. Easy, huh?
 
 ## Marks
