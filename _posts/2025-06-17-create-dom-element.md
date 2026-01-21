@@ -80,10 +80,15 @@ function h(
 
 ## Shorter implementation
 
-This is an equivalent implementation, using few tricks to make it shorter.
+This is an (almost) equivalent implementation, using few tricks to make it shorter.
 It makes it perfect to copy and paste in a stand alone Web Component and use it to generate DOM elements.
 
 Notice that the comments are the same as the previous implementation, so you can spot the analogy between the two.
+
+<div class="paper info">
+This shorter implementation does not work with <em>data attributes</em>.
+The previous implementation above supports them cause it uses <code>setAttribute</code> instead of <code>Object.assign</code>.
+</div>
 
 ```js
 const h = (e, a, c = []) => (
