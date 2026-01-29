@@ -31,6 +31,12 @@ Create a div with a class and an attribute:
 const myDiv = h('div', {class: 'foo', id: 'bar'})
 ```
 
+Create a "save" button:
+
+```js
+const myDiv = h('button', {}, ['save'])
+```
+
 Create a list:
 
 ```js
