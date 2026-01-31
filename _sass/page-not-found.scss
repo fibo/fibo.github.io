@@ -1,5 +1,6 @@
 .page-not-found {
   $blue-screen-of-death: #0827F5;
+  $blue-light: #0061ff;
 
   font-family: "W95FA", monospace;
   font-size: 1.7rem;
@@ -8,24 +9,25 @@
   background: $blue-screen-of-death;
   color: white;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1 {
     font-family: inherit;
     text-transform: uppercase;
+    font-size: 7.1rem;
   }
 
   a {
-    background: blue;
+    display: inline-block;
+    background: $blue-light;
+    font-size: 2.5rem;
     text-transform: underline;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    outline: none;
   }
 
   a:link,
   a:visited {
-    background: blue;
+    background: $blue-light;
     color: white;
   }
 
