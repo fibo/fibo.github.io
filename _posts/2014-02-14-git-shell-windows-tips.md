@@ -164,6 +164,27 @@ Host github.com
 
 For more information see: [Using SSH over the HTTPS port](https://help.github.com/articles/using-ssh-over-the-https-port).
 
+### Avoid stuck `git push`
+
+If your `git push` get stuck there could be issues for example with the macOS agent socket due to other SSH configs.
+It is a good idea to override the GitHub config in `$HOME/.ssh/config` like this
+
+```
+Host github.com
+  HostName github.com
+  User git
+  IdentityAgent none
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent no
+```
+
+Of course the `IdentityFile` depends on your setup. You can also put the snippet above in a file like `~/.ssh/github-config` and then do
+
+```
+Include ~/.ssh/github-config
+```
+
 ## Goodies
 
 ### cURL
