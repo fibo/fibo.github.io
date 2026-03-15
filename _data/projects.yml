@@ -1,12 +1,4 @@
 -
-  title: "Caesar"
-  description: "Cross-platform encryption desktop app"
-  url: "https://github.com/fibo/Caesar"
--
-  title: "Tris3D"
-  description: "Tic tac toe in 3D"
-  url: "https://tris3d.inversive.net"
--
   title: "Trunx"
   description: "Super Saiyan React components, son of awesome Bulma"
   url: "https://github.com/fibo/trunx"
@@ -15,9 +7,17 @@
   description: "Minimal Dataflow programming engine"
   url: "https://fibo.github.io/dflow/"
 -
-  title: "FlowView"
+  title: "Flow View"
   description: "Visual editor for Dataflow programming"
   url: "https://fibo.github.io/flow-view/"
+-
+  title: "Caesar"
+  description: "Cross-platform encryption desktop app"
+  url: "https://github.com/fibo/Caesar"
+-
+  title: "Tris3D"
+  description: "Tic tac toe in 3D"
+  url: "https://tris3d.inversive.net"
 -
   title: "Games of Life"
   description: "Create any Game of Life variation"
