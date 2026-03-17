@@ -7,8 +7,6 @@ description: >
    This is a step by step guide to help you getting started with git on Windows.
 ---
 
-![Git logo](http://git-scm.com/images/logo@2x.png)
-
 ## Install the git shell
 
 There is a fresh Github gui for Windows as well as many other graphic interfaces, but, git was designed to be used from a shell: remember that it was the version control system that Linus Torvalds wrote to develop Linux.

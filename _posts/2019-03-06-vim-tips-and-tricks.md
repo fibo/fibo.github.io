@@ -16,6 +16,10 @@ Un-do with `u`. Re-do with <kbd>CTRL</kbd> <kbd>r</kbd>.
 
 Type `.` in command mode to repeat last executed command.
 
+## File navigator
+
+Launch file navigator with `:Explore`.
+
 ## Moving faster
 
 - Move to start of previous paragraph or code block: `{`.

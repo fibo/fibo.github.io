@@ -21,11 +21,9 @@ Usually I create in my user home folder, a folder named as the domain hosting th
 Now if I want to use a different git config depending on the folder, I edit my *~/.gitconfig* file with something like
 
 ```toml
-[includeIf "gitdir:github.com/"]
+[includeIf "gitdir:~/github.com/"]
   path = /Users/myuser/github.com/.gitconfig
-[includeIf "gitdir:.config/"]
-  path = /Users/myuser/github.com/.gitconfig
-[includeIf "gitdir:source.my-customer.com/"]
+[includeIf "gitdir:~/source.my-customer.com/"]
   path = /Users/myuser/source.my-customer.com/.gitconfig
 [github]
   user = my-github-nickname

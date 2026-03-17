@@ -18,14 +18,16 @@ Run all commands in this section to take a tour of basic *screen* usage.
 
 Start with a simple *screen* customization, create a *~/.screenrc* with the following content
 
-```bash
-vbell off     # Turns visual bell off
-shell -$SHELL # load shell profile
+```shell
+vbell off           # Turns visual bell off
+shell -$SHELL       # Load shell profile
+defscrollback 32000 # Set a large scrollback buffer
+defutf8 on          # Always start `screen` with UTF-8 enabled (`screen -U`)
 ```
 
 To start screen, just launch
 
-```bash
+```shell
 screen
 ```
 
@@ -35,13 +37,13 @@ All screen commands are prefixed by <kbd>CTRL-a</kbd>, written in the help as `^
 
 You can give a name to the session
 
-```bash
+```shell
 screen -S mySecondScreenSession
 ```
 
 List running sessions
 
-```bash
+```shell
 $ screen -ls
 There are screens on:
         16704.mySecondScreenSession (Attached)
@@ -53,7 +55,7 @@ Detach from current session with <kbd>CTRL-a d</kbd>.
 
 Attach to a running session
 
-```bash
+```shell
 screen -x pst-3
 ```
 
@@ -63,7 +65,7 @@ Suppose you need to login as *user1* in some host, then you can switch to user *
 
 As *user1* start a named screen session and switch to *user2*
 
-```bash
+```shell
 screen -S user2
 su - user2
 ```
@@ -75,7 +77,7 @@ Repeat the analogous commands for *user3*, till *userN*.
 You get a screen session for every user. Now you do not need to enter passwords again
 and if the connection is broken you can enter again as *user1* then go to *user2* with
 
-```bash
+```shell
 screen -x user2
 ```
 
@@ -91,7 +93,7 @@ screen -x user2
 
 Enter in some screen session or create a new one, for instance
 
-```bash
+```shell
 screen -x multiWindowSession
 ```
 
@@ -111,7 +113,7 @@ This is very useful if you want a separated window where you launch tasks like r
 
 If there are dead screen session you can clean them with
 
-```bash
+```shell
 screen -wipe
 ```
 

@@ -1,191 +1,87 @@
-# KISS-Literate-Programming
+# My digital copybook
 
-> is a minimal literate programming boilerplate
+> This is my web book! Gianluca Casati writes here :)
 
-[![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
+[![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/fibo/my-personal-website)
 
-## Description
+## Dev server
 
-Merge two beautiful concepts: the [KISS principle](https://en.wikipedia.org/wiki/KISS_principle) and the [Literate programming approach](https://en.wikipedia.org/wiki/Literate_programming).
+I am using [Jekyll] to build this website, to run it locally I have something like this in my MacOS `~/.zshrc` shell profile:
 
-The *KISS-Literate-Programming* (from now on, KLP) is defined by the following rules:
-
-* All source code and documentation are contained in a *README.md* text file, which is written using [Markdown syntax](https://daringfireball.net/projects/markdown/syntax).
-* Source code rows embedded in *README.md* start with 4 spaces; code examples can use the backtick syntax and are ignored. See the [readme template](#readme-template) as example.
-* Source code is generated running `make`.
-
-KLP is agnostic about:
-
-* The programming language chosen.
-* Installation instructions.
-
-Most of all: KLP does not need an implementation like the one provided here, you can just edit *Makefile* and *README.md* by hand! Of course you can also use `klp` command, see [installation instructions](#installation)
-
-## ADDENDUM
-
-This KLP implementation uses bash and rely on GNU make which is available on every OS.
-
-For a more advanced, yet tiny, tool please check out [markdown2code](https://fibo.github.io/markdown2code).
-It is recommended if you have Node.js installed, in particular you can use triple backticks and highlight your code.
-
-## Badge
-
-Add the row below in your markdown file to get a badge
-
-```
-[![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
+```sh
+# Ruby
+# for Jekyll, see https://jekyllrb.com/docs/installation/macos/
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.4.1
 ```
 
-## Usage
+Once dependecies are installed with
 
-Suppose you want to create a shell command, for instance *hello-world.sh*. I suppose
-you version it using a *git* repository inside an *hello-world* folder.
-
-```
-mkdir hello-world
-cd hello-world
-klp hello-world.sh
+```sh
+bundle install
+npm install
 ```
 
-Now you have a *README.md* you can edit to add documentation and code. See [this README.md itself](https://raw.githubusercontent.com/fibo/kiss-literate-programming/master/README.md) as example.
+Then to launch the dev server:
 
-## Annotated source
-
-Start a `klp` function
-
-    klp() {
-
-which expects one parameter, otherwise prints its **usage**
-
-    	if [ -z "$1" ]
-    	then
-    		cat <<-MESSAGE
-    		# KISS Literate programming
-    		##
-    		# Installation instructions, source and license available here:
-    		# https://fibo.github.io/kiss-literate-programming
-    		##
-    		USAGE: klp foo
-    		MESSAGE
-
-    		return 1
-    	fi
-
-    	TARGET=$1
-
-Check if *README.md* and *Makefile* already exist, do not overwrite them.
-
-    	if [ -e Makefile ]
-    	then
-    		echo Makefile already exists
-    		return 1
-    	fi
-
-    	if [ -e README.md ]
-    	then
-    		echo README.md already exists
-    		return 1
-    	fi
-
-Generate *README.md*
-
-    	cat <<README > README.md
-
-
-using the following template
-<a name="readme-template"></a>
-
-    <!-- TODO: edit name and description -->
-    # name
-
-    > description
-
-    [![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
-
-    ## Installation
-
-    <!-- TODO: installation instructions here -->
-
-    ## Usage
-
-
-    ## Annotated source
-
-    Documentation here
-
-        your code here
-
-    more documentation
-    more documentation
-
-    ```
-    example code
-    ```
-
-        more code
-        more code more code
-        more code more code more code
-
-    more documentation
-
-    ## License
-
-    <!-- TODO: license here -->
-
-Remember to change *name*, *description* and so on.
-Please keep the *kiss-literate* badge to support the project.
-
-    README
-
-Generate *Makefile*
-
-    	cat <<MAKEFILE > Makefile
-    .PHONY: $TARGET
-
-    $TARGET:
-    	grep '    ' README.md | sed -e 's/    //' > $TARGET
-    MAKEFILE
-
-Clean up
-
-    	unset TARGET
-    }
-
-## Installation
-
-Instructions borrowed from [git-aware-prompt](https://github.com/jimeh/git-aware-prompt#installation).
-
-```
-mkdir -p ~/.bash
-cd ~/.bash
-git clone git://github.com/fibo/kiss-literate-programming.git
+```sh
+npm start
 ```
 
-If you prefer, you can just copy the [klp.sh](https://raw.githubusercontent.com/fibo/kiss-literate-programming/master/klp.sh) somewhere.
+## Style
 
-Edit your *~/.bash_profile* or *~/.profile* and add the following
+Yes! [Jekyll] supports [Sass], I am using a [style.scss](https://github.com/fibo/fibo.github.io/blob/master/style.scss) that imports partials from the [_sass/ folder](https://github.com/fibo/fibo.github.io/tree/master/_sass) and it is integrated on [GitHub Pages].
+See [templates/page](https://fibo.github.io/templates/page) for a showcase of styles used.
+
+## Images
+
+When editing post *2000-01-01-post-slug.md*, create a folder *images/2000/01/post-slug*
+which contains all images relative to that post, then you can reference them with
+
+```markdown
+![image decription](/images{{ page.id }}/image_name.jpg)
+```
+
+If you want the image to be responsive add the `responsive` CSS class
+
+```markdown
+![image decription](http://image/url){:.responsive}
+```
+
+## Link to post
+
+Use the snippet `[linked text]{% post_url yyyy-mm-dd-foo-bar %}`, for example
 
 ```
-source ~/.bash/kiss-literate-programming/klp.sh
+See how to install [AWS Redshift compatible PostgreSQL client]{% post_url 2016-05-12-aws-redshift-compatible-psql %} article.
 ```
 
-## Requirements
+## Post tags
 
-* grep and sed: used for extracting code from *README.md*
-* cat: used to generate *Makefile* and *README.md*.
-* bash
-* make
-* git: optionally used for installation
+Every tag can have a [tag](./tag) subfolder named as `{ tag | slugify }`.
+To show it as a link in tag badges, edit `_data/tagpage.yml`; for example
+if there is only one post tagged with that keywork it does not make sense to list all of its related posts in a page.
+Furthermore, tag could by a typo or tag folder could not exist yet.
 
+## Tips & Tricks
 
-## Examples
+### Escape Liquid tags
 
-Follows a list of examples embracing KLP method:
+To escape Liquid tags, use `{{ "{% this " }}%}`. To escape `{{ this }}`, use `{{ "{{ this " }}}}`.
+Reference: [How to escape liquid tags?](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags).
 
-* [gh-clone](https://github.com/fibo/gh-clone/blob/main/README.md)
-* [fibo's home initializer script](https://github.com/fibo/home/blob/gh-pages/README.md)
+### Available gems
 
-## License
+To see which gems are available on GitHub Pages, run
 
-[MIT](https://fibo.github.io/mit-license)
+```shell
+bundle exec github-pages versions
+```
 
+See also https://github.com/github/pages-gem
+
+[Jekyll]: http://jekyllrb.com "Jekyll"
+[GitHub Pages]: https://pages.github.com "GitHub Pages"
+[Sass]: http://sass-lang.com/ "Sass"
+[minima]: https://github.com/jekyll/minima "minima Jekyll theme"
