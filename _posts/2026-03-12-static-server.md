@@ -30,8 +30,20 @@ import { exec } from 'node:child_process'
 import { createServer } from 'node:http'
 import { readFile } from 'node:fs'
 import { networkInterfaces, platform } from 'node:os'
+import { extname } from 'path'
 
 const port = process.env.PORT
+
+let fileExtensionToMimeTypeMap = new Map()
+  .set('css', 'text/css; charset=UTF-8')
+  .set('html', 'text/html; charset=UTF-8')
+  .set('ico', 'image/vnd.microsoft.icon')
+  .set('jpg', 'image/jpg')
+  .set('js', 'text/javascript; charset=UTF-8')
+  .set('json', 'application/json; charset=UTF-8')
+  .set('png', 'image/png')
+  .set('svg', 'image/svg+xml; charset=UTF-8')
+  .set('woff2', 'font/woff2')
 
 const server = createServer((req, res) => {
   // Ignore URLs like Chrome DevTools
@@ -39,10 +51,20 @@ const server = createServer((req, res) => {
   if (req.url.startsWith('/.well-known'))
     return
 
+  const url = req.url == '/' ? '/index.html' : req.url
+  const fileExtension = extname(url).substring(1).toLowerCase()
+  const mimeType = fileExtensionToMimeTypeMap.get(fileExtension)
+
+  if (!mimeType) {
+    console.error(`Unknown mime type for ${req.url}`)
+    res.writeHead(501).end('Unknown mime type')
+    return
+  }
+
   // Assuming (req.method == 'GET')
-  readFile(
-    `.${req.url == '/' ? '/index.html' : req.url}`,
-    (err, data) => err ? res.writeHead(400).end('Not found') : res.end(data)
+  readFile(`.${url}`, (err, data) => err ?
+    res.writeHead(400).end('Not found') :
+    res.writeHead(200, { 'Content-Type': mimeType }).end(data)
   )
 })
 
@@ -107,9 +129,17 @@ For example, you will see
 
 ```shell
 node server.js
-Server started on http://192.168.1.52:53774/
+Server started on http://192.168.1.52:3000/
 ```
 
 <div class="paper success">
 Your default browser will open automatically. The URL used locally will be always <code>localhost</code> to facilitate development tasks.
 </div>
+
+## About mime types
+
+Notice that `fileExtensionToMimeTypeMap` contains a minimal mapping of common file extensions to its _mime type_. Also it assumes charset is `UTF-8` for every text file.
+
+<div class="paper warning">In case a <em>mime type</em> is unknown, server will print an error and browser will get a <code>501</code> HTTP status code.</div>
+
+If you need to extend the mime types mapping, see [common mime types on MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
