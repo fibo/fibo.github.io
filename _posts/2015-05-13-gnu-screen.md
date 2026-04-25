@@ -19,10 +19,12 @@ Run all commands in this section to take a tour of basic *screen* usage.
 Start with a simple *screen* customization, create a *~/.screenrc* with the following content
 
 ```shell
-vbell off           # Turns visual bell off
 shell -$SHELL       # Load shell profile
-defscrollback 32000 # Set a large scrollback buffer
 defutf8 on          # Always start `screen` with UTF-8 enabled (`screen -U`)
+truecolor on        # Enable colors.
+startup_message off # No welcome message
+vbell off           # Turns visual bell off
+defscrollback 32000 # Set a large scrollback buffer
 ```
 
 To start screen, just launch
@@ -39,7 +41,7 @@ You can give a name to the session
 
 ```shell
 screen -S mySecondScreenSession
-```
+``
 
 List running sessions
 
@@ -99,15 +101,21 @@ screen -x multiWindowSession
 
 Create a new window with <kbd>CTRL-a c</kbd>. Cycle through windows with <kbd>CTRL-a n</kbd> or even better with <kbd>CTRL-a CTRL-a</kbd> i.e. holding <kbd>CTRL</kbd> and hitting <kbd>a</kbd> twice. Close window with <kbd>CTRL-d</kbd>.
 
-### Resize split window
+### Split window
 
 Split window with <kbd>CTRL-a S</kbd>. It creates a new region below.
+You can also do it via a command with <kbd>CTRL-a :</kbd> and then `split`. In command mode you can hit <kbd>TAB</kbd> to autocomplete.
+To split vertically instead do <kbd>CTRL-a |</kbd>.
+
 Go to new region with <kbd>CTRL-a TAB</kbd>.
-The region is empty, create a new window inside it with <kbd>CTRL-a c</kbd>
-Resize region by entering a screen command with <kbd>CTRL-a :</kbd>,
-then type for example `resize -5` to reduce region height by five rows.
+
+The region is empty, create a new window inside it with <kbd>CTRL-a c</kbd>.
+
+Resize region by entering a screen command with <kbd>CTRL-a :</kbd>, then type `resize` and it will prompt for the number of lines. There are other commands like `resize -5` to reduce region height by five rows, see [Resize section on screen online manual](https://www.gnu.org/software/screen/manual/screen.html#Resize).
 
 This is very useful if you want a separated window where you launch tasks like running tests, watch files for changes, tail logs, etc.
+
+Remove region with <kbd>CTRL-a X</kbd>. If there is only one region, this will do nothing. You can close the window with <kbd>CTRL-d</kbd>.
 
 ### Remove dead screens
 
