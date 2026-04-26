@@ -4,7 +4,7 @@ tags:
   - Web
   - TypeScript
 description: >
-     A tiny function to create HTML elements, compatible with JSX
+     A tiny function to create HTML elements, similar to transpiled JSX
 ---
 
 ## TLDR;
@@ -34,7 +34,7 @@ const myDiv = h('div', {class: 'foo', id: 'bar'})
 Create a "save" button:
 
 ```js
-const myDiv = h('button', {}, ['save'])
+const myDiv = h('button', {}, ['Save'])
 ```
 
 Create a list:
@@ -55,6 +55,7 @@ For example event handlers should be managed by Web Component itself, so props c
 ## First implementation
 
 This is a first implementation, written in TypeScript and in a comprehensive way.
+It does not support SVG elements, there is another implementation down below that is aware of `namespaceURI` argument for [createElementNS](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS).
 
 ```ts
 function h(
@@ -92,7 +93,7 @@ It makes it perfect to copy and paste in a stand alone Web Component and use it 
 Notice that the comments are the same as the previous implementation, so you can spot the analogy between the two.
 
 <div class="paper info">
-This shorter implementation does not work with <em>data attributes</em>.
+This shorter implementation does not work with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">data attributes</>.
 The previous implementation above supports them cause it uses <code>setAttribute</code> instead of <code>Object.assign</code>.
 </div>
 
@@ -118,3 +119,68 @@ The arguments are:
 - `c`: the _children_ - are appended into the element with `append` which takes care of handling the argument in case it is an element, string or number.
 
 The last part is a bit tricky: it works because the last expression in an arrow function is returned implicitly.
+
+## Support for SVG elements
+
+If you create an SVG element you cannot use `document.createElement`, you need to do something like this
+
+```js
+const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+```
+
+The idea, similar to _Preact_ implementation, is to assume that if you are inside an `svg` DOM element, than the children are SVG elements. This is always true except for `foreignObject` which will contain HTML elements.
+This logic also works with MathML elements.
+
+Also notice that in addition, you can now pass a child as an array. For example to create an SVG icon.
+
+```js
+h('div', { class: 'icon' }, [
+    [ 'svg', { fill: 'currentColor', viewBox: '0 0 50 50' }, [
+      [ 'path', { d: 'M 10 24 h 28 v 2  h -28 z' } ],
+      [ 'path', { d: 'M 24 10 h 2  v 28 h -2 z' } ]
+    ] ]
+])
+```
+
+There is a fourth argument `namespace` you can ignore. It is used internally to pass the parent namespace to children.
+
+```js
+const h = (tagName, attributes = {}, children = [], namespace) => {
+  let namespaceURI, childNamespace;
+
+  switch(true) {
+    case namespace === 'svg' || tagName === 'svg':
+      childNamespace = 'svg';
+      namespaceURI = 'http://www.w3.org/2000/svg';
+      break;
+    case namespace === 'math' || tagName === 'math':
+      childNamespace = 'math';
+      namespaceURI = 'http://www.w3.org/1998/Math/MathML';
+      break;
+    case tagName === 'foreignObject':
+      childNamespace = 'html';
+      namespaceURI = 'http://www.w3.org/2000/svg';
+      break;
+    case namespace === 'html':
+      childNamespace = 'html';
+      namespaceURI = 'http://www.w3.org/1999/xhtml';
+      break;
+    default: break;
+  }
+
+  const element = namespaceURI ?
+    document.createElementNS(namespaceURI, tagName) :
+    document.createElement(tagName);
+
+  for (const [key, value] of Object.entries(attributes))
+    element.setAttribute(key, value);
+
+  for (const child of children)
+    if (Array.isArray(child))
+      element.append(h(...Object.assign(['', {} , [], childNamespace], child)));
+    else
+      element.append(child);
+
+  return element;
+};
+```
