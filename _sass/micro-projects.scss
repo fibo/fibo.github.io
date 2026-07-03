@@ -1,0 +1,9 @@
+.micro-projects {
+  padding: 1em;
+
+  > .micro-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}

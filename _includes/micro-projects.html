@@ -1,0 +1,11 @@
+<!-- _includes/micro-projects.html start -->
+<div class="micro-projects">
+  <div class="heading size-3">Micro projects</div>
+
+  <div class="micro-projects-list">
+    {% for project in site.data.micro_projects %}
+      {% include micro_project_box.html project=project %}
+    {% endfor %}
+  </div>
+</div>
+<!-- _includes/micro-projects.html end -->

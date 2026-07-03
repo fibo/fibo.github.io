@@ -1,5 +1,5 @@
 <!-- _includes/posts_list.html start -->
-<div class="list-group">
+<div class="posts-list">
   {% for post in site.posts limit:{{include.limit}} %}
     {% include post_box.html post=post %}
   {% endfor %}

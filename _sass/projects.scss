@@ -1,7 +1,7 @@
 .projects {
   padding: 1em;
 
-  & .list-group {
+  & .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 1em;

@@ -5,11 +5,11 @@
 -
   title: "Dflow"
   description: "Minimal Dataflow programming engine"
-  url: "https://fibo.github.io/dflow/"
+  url: "https://fibo.github.io/dflow"
 -
   title: "Flow View"
   description: "Visual editor for Dataflow programming"
-  url: "https://fibo.github.io/flow-view/"
+  url: "https://fibo.github.io/flow-view"
 -
   title: "Caesar"
   description: "Cross-platform encryption desktop app"
@@ -21,4 +21,8 @@
 -
   title: "Games of Life"
   description: "Create any Game of Life variation"
-  url: "https://fibo.github.io/games-of-life/"
+  url: "https://fibo.github.io/games-of-life"
+-
+  title: "haICU"
+  description: "tiny ICU message parser"
+  url: "https://fibo.github.io/haicu"

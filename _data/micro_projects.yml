@@ -1,0 +1,24 @@
+-
+  title: "prime-number"
+  description: "check if a number is prime"
+  url: "https://github.com/fibo/prime-number"
+-
+  title: "arithmetica"
+  description: "arbitrary-precision arithmetic operators for Rational numbers, supporting repeating decimals"
+  url: "https://fibo.github.io/arithmetica"
+-
+  title: "git cleanBranches"
+  description: "Remove unused git branches"
+  url: "https://github.com/fibo/git_cleanBranches"
+-
+  title: "dir"
+  description: "create a folder and enter into it"
+  url: "https://github.com/fibo/dir"
+-
+  title: "SQL-tokenizer"
+  description: "Convert SQL statements into a list of tokens"
+  url: "https://github.com/fibo/SQL-tokenizer"
+-
+  title: "not-defined"
+  description: "checks if foo is not defined, i.e. undefined, null, an empty string, array, object or NaN"
+  url: "https://github.com/fibo/not-defined"
