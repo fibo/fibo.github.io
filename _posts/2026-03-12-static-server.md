@@ -30,11 +30,11 @@ import { exec } from 'node:child_process'
 import { createServer } from 'node:http'
 import { readFile } from 'node:fs'
 import { networkInterfaces, platform } from 'node:os'
-import { extname } from 'path'
+import { extname } from 'node:path'
 
 const port = process.env.PORT
 
-let fileExtensionToMimeTypeMap = new Map()
+const fileExtensionToMimeTypeMap = new Map()
   .set('css', 'text/css; charset=UTF-8')
   .set('html', 'text/html; charset=UTF-8')
   .set('ico', 'image/vnd.microsoft.icon')
