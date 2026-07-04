@@ -26,3 +26,7 @@
   title: "haICU"
   description: "tiny ICU message parser"
   url: "https://fibo.github.io/haicu"
+-
+  title: "Design System"
+  description: "a flexible framework to create a minimal and adaptable UI"
+  url: "https://fibo.github.io/design-system"
