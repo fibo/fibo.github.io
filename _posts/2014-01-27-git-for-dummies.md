@@ -20,7 +20,7 @@ Go to [Creative people using GitHub]({% post_url 2013-08-07-creative-people-usin
 
 <div class="paper danger">If you feel more like a coder and want the power of a shell.</div>
 
-Then read [Getting started with git shell on Windows](http://g14n.info/2013/04/getting-started-with-git-shell).
+Then read [Getting started with git shell on Windows]({% post_url 2013-04-27-getting-started-with-git-shell %}).
 
 ... and continue with the following articles:
 

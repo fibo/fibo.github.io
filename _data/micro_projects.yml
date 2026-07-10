@@ -22,3 +22,19 @@
   title: "not-defined"
   description: "checks if foo is not defined, i.e. undefined, null, an empty string, array, object or NaN"
   url: "https://github.com/fibo/not-defined"
+-
+  title: "graphql-ccxt"
+  description: "wake up bears 🐻 ride bulls 🐂"
+  url: "https://github.com/fibo/graphql-ccxt"
+-
+  title: "OLAP-cube"
+  description: "is an hypercube of data"
+  url: "https://github.com/fibo/OLAP-cube"
+-
+  title: "Design System"
+  description: "a flexible framework to create a minimal and adaptable UI"
+  url: "https://fibo.github.io/design-system"
+-
+  title: "Games of Life"
+  description: "Create any Game of Life variation"
+  url: "https://fibo.github.io/games-of-life"

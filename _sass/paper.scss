@@ -10,10 +10,22 @@
   &:hover {
     box-shadow: 2px 2px 8px $shadow;
   }
+
+  .block {
+    margin-bottom: 1rem;
+  }
 }
 
 .paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
   padding: 0;
+}
+
+header.paper {
+  margin-bottom: 1rem;
+
+  h1 {
+    margin: 0;
+  }
 }
 
 a.paper {
@@ -36,3 +48,4 @@ a.paper:hover,
 a.paper:focus {
   box-shadow: 2px 2px 8px $shadow;
 }
+

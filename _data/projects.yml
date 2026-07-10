@@ -19,14 +19,6 @@
   description: "Tic tac toe in 3D"
   url: "https://tris3d.inversive.net"
 -
-  title: "Games of Life"
-  description: "Create any Game of Life variation"
-  url: "https://fibo.github.io/games-of-life"
--
   title: "haICU"
   description: "tiny ICU message parser"
   url: "https://fibo.github.io/haicu"
--
-  title: "Design System"
-  description: "a flexible framework to create a minimal and adaptable UI"
-  url: "https://fibo.github.io/design-system"
