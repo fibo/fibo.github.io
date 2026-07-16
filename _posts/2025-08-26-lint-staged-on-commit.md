@@ -29,10 +29,15 @@ Let's create a _scripts/prepare.js_ that will create the git hook when you run `
 ```js
 import { chmod, copyFile } from 'node:fs/promises'
 
-// Install Git pre-commit hook.
-const preCommitHook = '.git/hooks/pre-commit'
-await copyFile('scripts/pre-commit.sh', preCommitHook)
-await chmod(preCommitHook, 0o755)
+/* Install Git pre-commit hook. */
+async function installHook () {
+  const preCommitHook = '.git/hooks/pre-commit'
+  await copyFile('scripts/pre-commit.sh', preCommitHook)
+  await chmod(preCommitHook, 0o755)
+}
+
+if (process.NODE_ENV !== 'production')
+  await installHook()
 ```
 
 And add a `prepare` script to your _package.json_:
@@ -44,6 +49,10 @@ And add a `prepare` script to your _package.json_:
   }
 }
 ```
+
+<div class="paper info">
+  Notice there is a check on <code>NODE_ENV</code> environment variable. Usually if it is a production environment you do not need to install the pre-commit hook. You may want instead to customize it, for example checking a <code>CI</code> environemnt variable to skip the installation on _Continuous Integration_ pipelines.
+</div>
 
 ## Pre-commit hook
 

@@ -15,7 +15,6 @@ These are the steps you need to follow:
 3. Create or update an inbound rule for your EC2 instance's security group:
   - Type: SSH
   - Source: The output from the command in step 2, e.g., `3.4.5.6/32`.
-  - For the description, I add: *My IP on AWS CloudShell (run curl ifconfig.co)*
 4. Use the SSH key pair you created: see how to [create an SSH key](#create-an-ssh-key).
 5. Follow the instructions you get when you click the "Connect" button in your EC2 instance dashboard. For example, you need to run `chmod 400` on your SSH key (only once), and you also need to know the IP of your EC2 instance.
 
@@ -28,13 +27,19 @@ I dropped a pint of beer on my Mac. 😢
 Suddenly, I realized how slow I am without my personal computer. I need to be able to develop quickly, anywhere. Of course, nothing can replace my favorite environment, but I want to be able to distribute my development tasks.
 Recently, I read the [AWS CloudShell announcement](https://aws.amazon.com/it/about-aws/whats-new/2020/12/introducing-aws-cloudshell/).
 
+<div class="paper info">
+Another interesting use case. This is an update note from 2026. Right now I am in Thailand. I was not able to connect via SSH to EC2. Probably there are some restrictions, I was not able to figure out the reason but using the AWS CloudShell I am able to connect via SSH. Yeaaaa!
+</div>
+
+## Once upon a time
+
 A few years ago, it was a dream for me to have an SSH shell I could connect to from anywhere, for free! Now it is possible.
 
 Fun fact, almost 20 years ago when I started using Linux I had no connection to the Internet (I was living in a kind of squat apartment, in the "vicoli" area at via Gramsci 1, Genoa, Italy) and I spent almost one month learning on my Slackware distro digging the man until I was able to mount the Floppy Disk 💾.
 
 Yes, and afterwards mounting the Compact Disc was a huge win. In the meanwhile somebody was growing ganja in the darkroom... 😂
 
-But nowadays our attention span is muuuuch lower, so I also want connect to an EC2 instance. How can I do it?
+Nowadays our attention span is muuuuch lower, and I want connect to an EC2 instance now! How can I do it?
 
 ## Know your CloudShell IP
 
@@ -57,6 +62,7 @@ Another tip is to create the SSH key pair in the CloudShell instance itself, so 
 You can create the key pair with a command like:
 
 ```shell
+mkdir -p ~/.ssh
 aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > ~/.ssh/MyKeyPair.pem
 chmod 400 ~/.ssh/MyKeyPair.pem
 ```
@@ -68,7 +74,3 @@ Notice I used the "MyKeyPair" name, of course you can use your own but most impo
 The `chmod 400` command is mandatory, every time you create an SSH key otherwise the `ssh` command will silently fail.
 
 <div class="paper info">Your AWS CloudShell instance has 1GB of disk space available and data in your Home directory is preserved for 120 days from your latest access.</div>
-
-## Home sweet home
-
-If you read this far, you already know how to connect from AWS CloudShell to your EC2 instance. Let me share a last opinionated tip. Probably you want to skip it, it is a tip for the future me. Still it is worth to share it, you may like to do something similar. I have a script I run to setup my Unix home directory every time I start a new machine. You probably want to have your own settings but you may find it an interesting approach. Many other users do the same, basically you have a Git repository with your dotfiles and a script to setup everything. This is my own [fibo/home](https://github.com/fibo/home) 🏠.

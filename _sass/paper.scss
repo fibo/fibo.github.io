@@ -16,16 +16,22 @@
   }
 }
 
-.paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
-  padding: 0;
+article {
+  header.paper {
+    margin-bottom: 1rem;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  div.paper {
+    margin-bottom: 0.68rem;
+  }
 }
 
-header.paper {
-  margin-bottom: 1rem;
-
-  h1 {
-    margin: 0;
-  }
+.paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
+  padding: 0;
 }
 
 a.paper {
