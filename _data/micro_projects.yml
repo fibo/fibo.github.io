@@ -1,4 +1,8 @@
 -
+  title: "codinj"
+  description: "Inject code snippets"
+  url: "https://github.com/fibo/codinj"
+-
   title: "prime-number"
   description: "check if a number is prime"
   url: "https://github.com/fibo/prime-number"
