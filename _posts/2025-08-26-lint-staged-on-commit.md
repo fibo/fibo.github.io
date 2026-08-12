@@ -13,10 +13,14 @@ This is usually done with tools like `lint-staged`, `husky` or `pre-commit`.
 
 You do not need those dependencies, it can be done easily with custom code.
 
-A custom solution can be a valid choice for some projects. In case you want a tool to manage git hooks and commits, it is worth to mention:
+A custom solution can be a valid choice for some small projects. In case you want a tool to manage git hooks and commits, it is worth to mention:
 
-- [pre-commit.com](https://pre-commit.com/): used mostly for Python projects
-- [lefthook](https://lefthook.dev/): integrates also with [commitlint](https://commitlint.js.org/)
+- [pre-commit.com](https://pre-commit.com/): used mostly for Python projects.
+- [lefthook](https://lefthook.dev/): fully featured; supports also git worktrees in git bare repos, integrates with [commitlint](https://commitlint.js.org/).
+
+<div class="paper warning">
+This is a very minimal solution only suitable for small projects. For example it does not consider the case of git worktrees in git bare repos. The recommended solution is to use <b>lefthook</b>.
+</div>
 
 ## Prepare
 
