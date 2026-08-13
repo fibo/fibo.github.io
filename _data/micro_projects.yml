@@ -7,9 +7,13 @@
   description: "check if a number is prime"
   url: "https://github.com/fibo/prime-number"
 -
+  title: "markdown2code"
+  description: "extract code blocks from markdown"
+  url: "https://github.com/fibo/markdown2code"
+-
   title: "arithmetica"
   description: "arbitrary-precision arithmetic operators for Rational numbers, supporting repeating decimals"
-  url: "https://fibo.github.io/arithmetica"
+  url: "https://github.com/fibo/arithmetica"
 -
   title: "git cleanBranches"
   description: "Remove unused git branches"
