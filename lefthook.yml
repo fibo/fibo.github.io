@@ -1,6 +1,12 @@
 pre-commit:
   commands:
 
+    oxfmt:
+      run: ./node_modules/.bin/oxfmt {staged_files}
+      stage_fixed: true
+      glob:
+        - "**/*.{css,json,scss,yml}"
+
     rumdl:
       run: ./node_modules/.bin/rumdl check --fix {staged_files}
       stage_fixed: true
