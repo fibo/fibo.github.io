@@ -1,0 +1,7 @@
+# See https://rumdl.dev/global-settings/
+
+[global]
+exclude = [
+  "node_modules",
+  "_site",
+]

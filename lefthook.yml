@@ -1,0 +1,14 @@
+pre-commit:
+  commands:
+
+    rumdl:
+      run: ./node_modules/.bin/rumdl check --fix {staged_files}
+      stage_fixed: true
+      glob:
+        - "**/*.{md}"
+
+    stylelint:
+      run: ./node_modules/.bin/stylelint --fix {staged_files}
+      stage_fixed: true
+      glob:
+        - "**/*.{css,scss}"
