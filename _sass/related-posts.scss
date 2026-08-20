@@ -1,4 +1,7 @@
 .related-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   margin-top: 5em;
   padding-bottom: $page-padding-bottom;
 
