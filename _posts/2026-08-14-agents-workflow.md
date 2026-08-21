@@ -9,6 +9,10 @@ description: >
 
 At the time of this writing I am using _Claude_. The Company I am working for, [ready2order](https://ready2order.com/) provided me a subscription and I am gradually entering into agentic AI.
 
+## TL;DR
+
+I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [`/git-worktree` skill](https://github.com/fibo/home/tree/main/Agents/git-worktree/SKILL.md) to achieve tasks using git worktrees in _auto mode_. There is also my [`project-manager` sub-agent](https://github.com/fibo/home/blob/main/Agents/project-manager.md) that plans and manages tasks.
+
 ## Principles
 
 ### Modularity
@@ -73,19 +77,29 @@ or
 
 ### Git issues
 
-Notice that there can be some git issues, for example if you do a git commit amend and run `git push --force-with-lease` you can get rejected.
-When you clone a repository with the --bare option, Git disables remote-tracking branches (refs/remotes/origin/*) by default to optimize space.
-One solution is to run this command after you clone the repo.
+Notice that there can be some git issues, related to git bare repositories.
+
+When you clone a repository with the `--bare` option, Git disables features to optimize space, for example:
+
+- remote-tracking branches (refs/remotes/origin/*)
+- git reflogs
+
+If you do a git commit amend and run `git push --force-with-lease` you can get rejected if remote-tracking branches are disabled.
+
+Another issue coming with git bare repositories is that by default they do not track reflogs, so if something happens after a rebase you are not able to restore an orphaned commit.
+
+One solution is to run these commands after you clone the repo.
 
 ```sh
 main_branch=$(git symbolic-ref --short HEAD)
 cd $main_branch
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+git config core.logallrefupdates true
 ```
 
-See also [Git worktree like a boss](https://dev.to/metal3d/git-worktree-like-a-boss-2j1b) article.
+The solutions above are already included in my `/git-worktree` skill.
 
-The solution above is already included in my `/git-worktree` skill.
+Notice that it is actually good that git bare repositories apply those optimizations, however most of the time you will not need them. It is worth to consider to apply exceptions for extra-ordinary projects with particular performance requirements on the git side (i.e. "huge git repos").
 
 ## Tasks
 
@@ -146,7 +160,9 @@ cat path/to/another/project/.tasks/port-prettier-to-oxfmt/README.md | claude
 
 This is an __optional information__ about the workflow and must be reported in the `.tasks/README.md`.
 
-The tasks could be volatile. Just simple folders to temporarily hold and organize tasks. There could be however cases when you need to persist the tasks or imagine different agents instances working on the same project maybe on different computers.
+The tasks tend to be _volatile_: just simple folders to temporarily hold and organize tasks.
+
+There could be however cases when you need to persist the tasks or imagine different agents instances working on the same project maybe on different computers.
 
 The methodology described above works even if the _tasks_ folder is synced remotely, for example using `rsync` to update it on a remote server. Or another way to sync the `.tasks/` folder is using a git repo.
 
@@ -164,6 +180,9 @@ It could be empty or for example contain the Claude session ID.
 Another way to sync tasks could be using a remote service like GitHub issues or Jira. AI clients like _Claude Code_ probably already provide official plugins to connect to those services.
 
 But also, not every task folder needs to be synced remotely. For example I can start working on a Jira story and split it into sub tasks only locally.
+
+It is important here to keep flexible and adapt the workflow as much as possible to the constantly changing needs.
+For example a solution I found useful for me is to create an "orchestrator" sub-agent, that operates in my `~/Documents/AI_tasks/` folder which is synced to iCloud so I can access it on both my MacBook and MacMini, and it also syncs with an Apple Reminder list named "AI tasks", with simple naming conventions file files and folder in order to connect the task list I can control from my macOS computer, iPad, or iPhone to the agents that are working on different project tasks. The idea is similar to the _tasks folder_ described above but it aggregates several projects I am working on.
 
 ## Conclusion
 
