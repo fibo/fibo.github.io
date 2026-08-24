@@ -39,9 +39,9 @@
   description: "is an hypercube of data"
   url: "https://github.com/fibo/OLAP-cube"
 -
-  title: "Design System"
-  description: "a flexible framework to create a minimal and adaptable UI"
-  url: "https://fibo.github.io/design-system"
+  title: "minimal-type-guard-helpers"
+  description: "Helpers to create type guards"
+  url: "https://github.com/fibo/minimal-type-guard-helpers"
 -
   title: "Games of Life"
   description: "Create any Game of Life variation"
