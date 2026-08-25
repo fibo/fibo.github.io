@@ -46,3 +46,7 @@
   title: "Games of Life"
   description: "Create any Game of Life variation"
   url: "https://fibo.github.io/games-of-life"
+-
+  title: "Kiss Literate Programming"
+  description: "Literate programming via Markdown"
+  url: "https://fibo.github.io/kiss-literate-programming/"
