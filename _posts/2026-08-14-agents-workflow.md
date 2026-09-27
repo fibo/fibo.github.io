@@ -11,7 +11,7 @@ At the time of this writing I am using _Claude_. The Company I am working for, [
 
 ## TL;DR
 
-I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [`/git-worktree` skill](https://github.com/fibo/home/tree/main/Agents/git-worktree/SKILL.md) to achieve tasks using git worktrees in _auto mode_. There is also my [`project-manager` sub-agent](https://github.com/fibo/home/blob/main/Agents/project-manager.md) that plans and manages tasks.
+I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [`/task` skill](https://github.com/fibo/home/tree/main/Agents/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
 
 ## Principles
 
@@ -38,7 +38,7 @@ Be also aware of the _AI watermark_ issue, you know if AI generates your content
 
 Anyway, a _Human_ should always be at the last step, reviewing, approving and eventually modifying what AI generated.
 
-There are also AI hallucinations, poor prompt requirements and other situations that in my opinion lead to this conclusion: a _Human_ must always have the __final say__. That is why in my `git-worktree` skill the AI cannot commit code or handle git conflicts.
+There are also AI hallucinations, poor prompt requirements and other situations that in my opinion lead to this conclusion: a _Human_ must always have the __final say__. That is why in my `/task` skill the AI cannot commit code or handle git conflicts.
 
 ## Working folder
 
@@ -61,18 +61,18 @@ git clone git@github.com:user/repo.git --bare .bare.git
 echo 'gitdir: ./.bare.git' > .git
 ```
 
-Then I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [git-worktree skill](https://github.com/fibo/home/tree/main/Agents/git-worktree/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
+Then I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [task skill](https://github.com/fibo/home/tree/main/Agents/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
 
 So to start a task, in a `claude` session:
 
 ```sh
-/git-worktree task-name
+/task task-name
 ```
 
 or
 
 ```sh
-/git-worktree task goal description bla bla
+/task task goal description bla bla
 ```
 
 ### Git issues
@@ -97,7 +97,7 @@ git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git config core.logallrefupdates true
 ```
 
-The solutions above are already included in my `/git-worktree` skill.
+The solutions above are already included in my `/task` skill.
 
 Notice that it is actually good that git bare repositories apply those optimizations, however most of the time you will not need them. It is worth to consider to apply exceptions for extra-ordinary projects with particular performance requirements on the git side (i.e. "huge git repos").
 
@@ -128,7 +128,7 @@ An optional `.tasks/README.md` can contain additional information about how to m
 
 A task README.md (i.e. `.tasks/task-name/README.md`) can link another task, for example if it is a requirement or a blocker, or the task itself is an epic that lists multiple tasks.
 
-The task can be assigned to an AI session, and the `task-name` will be used to create a new git worktree, via the `/git-worktree` skill, where the task README.md will be used as the _goal_ of the task, basically the AI prompt.
+The task can be assigned to an AI session, and the `task-name` will be used to create a new git worktree, via the `/task` skill, where the task README.md will be used as the _goal_ of the task, basically the AI prompt.
 
 There is a `.tasks/.DONE/` folder. Once a task is completed, the task folder is moved there.
 
@@ -141,7 +141,7 @@ rumdl check .tasks/
 
 ### Reuse tasks
 
-Another advantage of using local tasks folder workflow is that it is flexible. For example I may plan a task, for instance to migrate from `prettier` to `oxfmt`. Once the `project-manager` sub-agent or who/what ever creates the task folder, it can be reused as a task in another project.
+Another advantage of using local tasks folder workflow is that it is flexible. For example I may plan a task, for instance to migrate from `prettier` to `oxfmt`. Once an agent or who/what ever creates the task folder, it can be reused as a task in another project.
 
 Just copying the `.tasks/port-prettier-to-oxfmt/` folder into the other project, for example
 
