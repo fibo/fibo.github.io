@@ -6,14 +6,21 @@
 
 ## Dev server
 
-I am using [Jekyll] to build this website, to run it locally I have something like this in my MacOS `~/.zshrc` shell profile:
+I am using [Jekyll] to build this website. To run it locally on macOS, first of all install Ruby with
+
+```sh
+brew install chruby ruby-install
+ruby-install ruby 3.3.4
+```
+
+Then, add something like this to your `~/.zshrc` shell profile:
 
 ```sh
 # Ruby
 # for Jekyll, see https://jekyllrb.com/docs/installation/macos/
 source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.4.1
+chruby ruby-3.3.4
 ```
 
 Once dependecies are installed with
