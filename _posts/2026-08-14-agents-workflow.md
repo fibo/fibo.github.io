@@ -11,7 +11,7 @@ At the time of this writing I am using _Claude_. The Company I am working for, [
 
 ## TL;DR
 
-I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [`/task` skill](https://github.com/fibo/home/tree/main/Agents/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
+I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [`/task` skill](https://github.com/fibo/home/tree/main/Agents/skills/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
 
 ## Principles
 
@@ -61,7 +61,7 @@ git clone git@github.com:user/repo.git --bare .bare.git
 echo 'gitdir: ./.bare.git' > .git
 ```
 
-Then I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [task skill](https://github.com/fibo/home/tree/main/Agents/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
+Then I have [my global CLAUDE.md and settings](https://github.com/fibo/home/tree/main/Claude) that are aware of my [task skill](https://github.com/fibo/home/tree/main/Agents/skills/task/SKILL.md) to achieve tasks using git worktrees in _auto mode_.
 
 So to start a task, in a `claude` session:
 
@@ -103,68 +103,68 @@ Notice that it is actually good that git bare repositories apply those optimizat
 
 ## Tasks
 
-The _tasks folder_ is a hidden `.tasks/` folder and it contains a sort of local _Getting Things Done_ board.
-Every task is a subfolder, for instance `task-name/`, with a README.md that contains instructions. The folder can contain other files, like images or other assets. The instructions can link to other tasks that can even be in some other _tasks folder_ in another project.
+The _tasks folder_ is a `tasks/` folder and it contains a sort of local _Getting Things Done_ board.
+Every task is a subfolder, for instance `task-name/`, with a `task.md` that contains instructions. The folder can contain other files, like images or other assets. The instructions can link to other tasks that can even be in some other _tasks folder_ in another project.
 Yes the _tasks folder_ is not necessarily associated to a git repository, for example you could have a macro project with multiple git repositories
 
     macro_project/
     ├── .envrc
-    └── .tasks/
-    |   ├── README.md
+    └── tasks/
+    |   ├── AGENTS.md
     |   └── task-name/
-    |       └── README.md
+    |       └── task.md
     ├── repo1/
     |   ├── .bare.git/
     |   ├── .git
-    |   └── .tasks/
+    |   └── tasks/
     |       └── another-task-name/
-    |           └── README.md
+    |           └── task.md
     └── repo2/
         ├── .bare.git/
         ├── .envrc
         └── .git
 
-An optional `.tasks/README.md` can contain additional information about how to manage tasks.
+An optional `tasks/AGENTS.md` can contain additional information about how to manage tasks.
 
-A task README.md (i.e. `.tasks/task-name/README.md`) can link another task, for example if it is a requirement or a blocker, or the task itself is an epic that lists multiple tasks.
+A task `task.md` (i.e. `tasks/task-name/task.md`) can link another task, for example if it is a requirement or a blocker, or the task itself is an epic that lists multiple tasks.
 
-The task can be assigned to an AI session, and the `task-name` will be used to create a new git worktree, via the `/task` skill, where the task README.md will be used as the _goal_ of the task, basically the AI prompt.
+The task can be assigned to an AI session, and the `task-name` will be used to create a new git worktree, via the `/task` skill, where the task `task.md` will be used as the _goal_ of the task, basically the AI prompt.
 
-There is a `.tasks/.DONE/` folder. Once a task is completed, the task folder is moved there.
+There is a `tasks/archive/` folder. Once a task is completed, the task folder is moved there.
 
 This workflow works if it is powered by a tool that can check for markdown links: [rumdl](https://rumdl.dev) to the rescue!
 Every time that an AI or a human updates a markdown file, check if there are broken links
 
 ```sh
-rumdl check .tasks/
+rumdl check tasks/
 ```
 
 ### Reuse tasks
 
 Another advantage of using local tasks folder workflow is that it is flexible. For example I may plan a task, for instance to migrate from `prettier` to `oxfmt`. Once an agent or who/what ever creates the task folder, it can be reused as a task in another project.
 
-Just copying the `.tasks/port-prettier-to-oxfmt/` folder into the other project, for example
+Just copying the `tasks/port-prettier-to-oxfmt/` folder into the other project, for example
 
 ```sh
-cp -r path/to/.tasks/port-prettier-to-oxfmt/ path/to/another/project/.tasks/
+cp -r path/to/tasks/port-prettier-to-oxfmt/ path/to/another/project/tasks/
 ```
 
-Or even piping it into `claude`, even if there is no `.tasks/` folder there (which is the common case for an ordinary git repository).
+Or even piping it into `claude`, even if there is no `tasks/` folder there (which is the common case for an ordinary git repository).
 
 ```sh
 cd path/to/current/project/
-cat path/to/another/project/.tasks/port-prettier-to-oxfmt/README.md | claude
+cat path/to/another/project/tasks/port-prettier-to-oxfmt/task.md | claude
 ```
 
 ### Synced tasks
 
-This is an __optional information__ about the workflow and must be reported in the `.tasks/README.md`.
+This is an __optional information__ about the workflow and must be reported in the `tasks/AGENTS.md`.
 
 The tasks tend to be _volatile_: just simple folders to temporarily hold and organize tasks.
 
 There could be however cases when you need to persist the tasks or imagine different agents instances working on the same project maybe on different computers.
 
-The methodology described above works even if the _tasks_ folder is synced remotely, for example using `rsync` to update it on a remote server. Or another way to sync the `.tasks/` folder is using a git repo.
+The methodology described above works even if the _tasks_ folder is synced remotely, for example using `rsync` to update it on a remote server. Or another way to sync the `tasks/` folder is using a git repo.
 
 Imagine you could work on your computer, and at the same time have a remote server you can connect for example using ssh and run AI agent sessions, for example with `screen`.
 
@@ -172,7 +172,7 @@ To sync among processes, use good old IPC: that is create _semaphore files_.
 For example, once an AI session or even a human starts working on a task, a file is created in the task folder:
 
 ```sh
-echo IN_PROGRESS > .tasks/task-name/.status
+echo IN_PROGRESS > tasks/task-name/.status
 ```
 
 It could be empty or for example contain the Claude session ID.
